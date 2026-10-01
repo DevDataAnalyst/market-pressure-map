@@ -177,7 +177,9 @@ const request = {
   output_config: { effort: "medium", format: { type: "json_schema", schema } },
 };
 
-const client = new Anthropic();
+// Keys not scoped to a workspace must name one on every request.
+const workspaceId = process.env.ANTHROPIC_WORKSPACE_ID?.trim();
+const client = new Anthropic(workspaceId ? { defaultHeaders: { "anthropic-workspace-id": workspaceId } } : {});
 let message;
 try {
   message = await client.beta.messages

@@ -126,7 +126,9 @@ export default async function handler(req, res) {
     output_config: { effort: "low" },
   };
 
-  const client = new Anthropic();
+  // Keys not scoped to a workspace must name one on every request.
+  const workspaceId = process.env.ANTHROPIC_WORKSPACE_ID?.trim();
+  const client = new Anthropic(workspaceId ? { defaultHeaders: { "anthropic-workspace-id": workspaceId } } : {});
   let stream = client.beta.messages.stream({ ...params, betas: ["server-side-fallback-2026-07-01"], fallbacks: "default" });
   let started = false;
 

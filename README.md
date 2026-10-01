@@ -18,8 +18,9 @@ The page totals the scores, counting high-confidence calls at 1.0, medium at 0.7
 ## Setup
 
 1. **Add your Anthropic API key:** in the repository on GitHub, go to Settings → Secrets and variables → Actions → New repository secret. Name it `ANTHROPIC_API_KEY`.
-2. **Optional, to change the model:** under the Variables tab, add `SCAN_MODEL` (for example `claude-sonnet-5-5`). The default is `claude-opus-5-5`.
-3. **Run the first scan:** go to Actions → Hourly news scan → Run workflow.
+2. **If your key isn't scoped to a workspace:** the API rejects requests unless they name a workspace. Add a repository variable or secret `ANTHROPIC_WORKSPACE_ID` (it starts with `wrkspc_`; find it in the Claude Console under Settings → Workspaces). Alternatively, create a new API key inside a workspace and use that instead.
+3. **Optional, to change the model:** under the Variables tab, add `SCAN_MODEL` (for example `claude-sonnet-5-5`). The default is `claude-opus-5-5`.
+4. **Run the first scan:** go to Actions → Hourly news scan → Run workflow.
 
 ### Question box ("Ask about the markets")
 
@@ -28,7 +29,7 @@ The page has a question box backed by a Vercel function (`api/ask.js`). It gives
 1. In Vercel, open the project → Settings → Environment Variables and add `ANTHROPIC_API_KEY` for Production.
 2. Redeploy, or wait for the next hourly data commit.
 
-Optional variables: `ASK_MODEL` (default `claude-opus-5-5`) and `ASK_RATE_LIMIT` (questions per visitor per 10 minutes, default 8). The rate limit is best-effort because serverless instances don't share memory. Set a monthly spend limit on your Anthropic key, since anyone who can open the site can ask questions.
+If your key needs a workspace, also add `ANTHROPIC_WORKSPACE_ID` there. Optional variables: `ASK_MODEL` (default `claude-opus-5-5`) and `ASK_RATE_LIMIT` (questions per visitor per 10 minutes, default 8). The rate limit is best-effort because serverless instances don't share memory. Set a monthly spend limit on your Anthropic key, since anyone who can open the site can ask questions.
 
 ### Cost
 
