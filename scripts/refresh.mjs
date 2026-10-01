@@ -47,10 +47,13 @@ const ECONOMIES = {
 };
 const THEMES = ["Energy & geopolitics", "Monetary policy", "Rates & bonds", "Trade", "Growth data", "Tech cycle", "Commodities", "Currencies"];
 const CONF = { high: 1, medium: 0.7, low: 0.4 };
+const fail = (msg) => {
+  console.error(process.env.GITHUB_ACTIONS ? `::error::${msg}` : msg);
+  process.exit(1);
+};
 
 if (!process.env.DRY_RUN && !process.env.ANTHROPIC_API_KEY) {
-  console.error("ANTHROPIC_API_KEY is not set. Add it under Settings → Secrets and variables → Actions.");
-  process.exit(1);
+  fail("ANTHROPIC_API_KEY is not set. Add it under Settings → Secrets and variables → Actions.");
 }
 
 /* ---------- 1. Collect headlines ---------- */
@@ -104,8 +107,7 @@ if (process.env.DRY_RUN) {
   process.exit(0);
 }
 if (headlines.length < 15) {
-  console.error("Too few headlines to scan; keeping the previous scan.");
-  process.exit(1);
+  fail(`Only ${headlines.length} headlines from ${feedsOk} feeds; keeping the previous scan.`);
 }
 
 /* ---------- 2. Ask Claude to select and score ---------- */
@@ -182,13 +184,16 @@ try {
     .stream({ ...request, betas: ["server-side-fallback-2026-07-01"], fallbacks: "default" })
     .finalMessage();
 } catch (err) {
-  if (!(err instanceof Anthropic.BadRequestError)) throw err;
+  if (!(err instanceof Anthropic.BadRequestError)) fail(`Claude API error: ${err.message}`);
   console.warn(`Retrying without refusal fallbacks: ${err.message}`);
-  message = await client.messages.stream(request).finalMessage();
+  try {
+    message = await client.messages.stream(request).finalMessage();
+  } catch (retryErr) {
+    fail(`Claude API error: ${retryErr.message}`);
+  }
 }
 if (message.stop_reason === "refusal" || message.stop_reason === "max_tokens") {
-  console.error(`Scan stopped early (${message.stop_reason}); keeping the previous scan.`);
-  process.exit(1);
+  fail(`Scan stopped early (${message.stop_reason}); keeping the previous scan.`);
 }
 const text = message.content.filter((b) => b.type === "text").map((b) => b.text).join("");
 const parsed = JSON.parse(text);
@@ -221,8 +226,7 @@ const items = (parsed.items ?? [])
   .filter((it) => it.headline && (it.industries.length || it.economies.length));
 
 if (items.length < 6) {
-  console.error(`Only ${items.length} usable stories; keeping the previous scan.`);
-  process.exit(1);
+  fail(`Only ${items.length} usable stories; keeping the previous scan.`);
 }
 
 const dates = items.map((i) => i.date).sort();
