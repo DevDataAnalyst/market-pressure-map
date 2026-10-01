@@ -48,6 +48,11 @@ const ECONOMIES = {
 const THEMES = ["Energy & geopolitics", "Monetary policy", "Rates & bonds", "Trade", "Growth data", "Tech cycle", "Commodities", "Currencies"];
 const CONF = { high: 1, medium: 0.7, low: 0.4 };
 
+if (!process.env.DRY_RUN && !process.env.ANTHROPIC_API_KEY) {
+  console.error("ANTHROPIC_API_KEY is not set. Add it under Settings → Secrets and variables → Actions.");
+  process.exit(1);
+}
+
 /* ---------- 1. Collect headlines ---------- */
 const parser = new XMLParser({ ignoreAttributes: false, attributeNamePrefix: "@_" });
 const txt = (v) => (v == null ? "" : typeof v === "object" ? String(v["#text"] ?? "") : String(v));
