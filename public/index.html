@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Where the latest global headlines push the world's biggest industries and economies, refreshed every hour.">
+<title>Market Pressure Map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,500..800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: a desk sheet — verdict strip, then two pressure gauges (industries | economies), then the story wire that feeds them. */
+:root {
+  --bg: #eef1f4;
+  --surface: #ffffff;
+  --sunk: #e4e8ed;
+  --ink: #15202b;
+  --ink-2: #3d4a57;
+  --muted: #5d6a78;
+  --line: #d3dae2;
+  --accent: #9a5b06;
+  --accent-tint: #f6ead6;
+  --tail: #2a78d6;
+  --tail-tint: #e3eefb;
+  --head: #d13f3e;
+  --head-tint: #fbe6e5;
+  --zero: #c4ccd5;
+  --font-display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-data: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --r: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1419; --surface: #151d25; --sunk: #1c2630; --ink: #e5eaef; --ink-2: #c1cad3; --muted: #93a1ae;
+    --line: #2a3644; --accent: #e3a740; --accent-tint: #33270f; --tail: #4d93ea; --tail-tint: #142a44;
+    --head: #e86a69; --head-tint: #3d1d1e; --zero: #3b4755; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e1419; --surface: #151d25; --sunk: #1c2630; --ink: #e5eaef; --ink-2: #c1cad3; --muted: #93a1ae;
+  --line: #2a3644; --accent: #e3a740; --accent-tint: #33270f; --tail: #4d93ea; --tail-tint: #142a44;
+  --head: #e86a69; --head-tint: #3d1d1e; --zero: #3b4755; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+[hidden] { display: none !important; }
+img { max-width: 100%; }
+body { background: var(--bg); color: var(--ink); font: 400 15px/1.55 var(--font-body); }
+.wrap { max-width: 1180px; margin: 0 auto; padding-inline: 20px; padding-block: 28px 64px; display: grid; gap: 28px; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; line-height: 1.15; margin: 0; }
+p { margin: 0; }
+button, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.eyebrow { font: 500 11.5px/1.3 var(--font-data); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.num { font-family: var(--font-data); font-variant-numeric: tabular-nums; }
+
+/* Header */
+.mast { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 16px 32px; border-bottom: 2px solid var(--ink); padding-bottom: 18px; }
+.mast-title { display: grid; gap: 8px; min-width: 0; }
+.mast h1 { font-size: clamp(2.1rem, 5.2vw, 3.6rem); font-weight: 800; font-stretch: 78%; letter-spacing: -.01em; text-transform: uppercase; }
+.mast .lede { color: var(--ink-2); max-width: 62ch; }
+.stamp { display: grid; gap: 4px; text-align: right; }
+.stamp strong { font: 500 14px/1.3 var(--font-data); }
+@media (max-width: 640px) { .stamp { text-align: left; } }
+
+details.method { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); }
+details.method summary { cursor: pointer; padding: 12px 16px; font-weight: 600; list-style-position: inside; }
+details.method .body { padding: 0 16px 16px; color: var(--ink-2); display: grid; gap: 10px; max-width: 80ch; }
+.scale-key { display: flex; flex-wrap: wrap; gap: 6px; }
+
+/* Verdict strip */
+.verdicts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); }
+.verdict { padding: 14px 16px; display: grid; gap: 6px; align-content: start; min-width: 0; }
+.verdict + .verdict { border-left: 1px solid var(--line); }
+.verdict .who { font: 700 1.15rem/1.2 var(--font-display); font-stretch: 90%; }
+.verdict .val { display: flex; align-items: center; gap: 8px; font: 500 14px var(--font-data); color: var(--ink-2); }
+@media (max-width: 860px) {
+  .verdicts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .verdict:nth-child(3) { border-left: 0; }
+  .verdict:nth-child(n+3) { border-top: 1px solid var(--line); }
+}
+
+/* Pressure gauges */
+.gauges { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+@media (max-width: 900px) { .gauges { grid-template-columns: minmax(0, 1fr); } }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 18px 18px 14px; display: grid; gap: 14px; min-width: 0; }
+.panel-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.panel h2 { font-size: 1.3rem; font-weight: 750; font-stretch: 88%; }
+.legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12.5px; color: var(--muted); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.sw { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+.sw.t { background: var(--tail); } .sw.h { background: var(--head); }
+
+.rows { display: grid; gap: 2px; }
+.row { display: grid; grid-template-columns: minmax(7.5rem, 11rem) minmax(0, 1fr) 3.4rem; align-items: center; gap: 10px; padding: 5px 6px; border-radius: 6px; border: 0; background: transparent; text-align: left; cursor: pointer; width: 100%; }
+.row:hover { background: var(--sunk); }
+.row[aria-pressed="true"] { background: var(--accent-tint); }
+.row .lab { font-weight: 500; font-size: 14px; overflow-wrap: anywhere; }
+.row .v { text-align: right; font: 500 13.5px var(--font-data); font-variant-numeric: tabular-nums; }
+.track { position: relative; height: 18px; }
+.track::before { content: ""; position: absolute; left: 50%; top: -3px; bottom: -3px; width: 1px; background: var(--zero); }
+.bar { position: absolute; top: 2px; height: 14px; }
+.bar.pos { left: calc(50% + 1px); background: var(--tail); border-radius: 0 4px 4px 0; }
+.bar.neg { right: calc(50% + 1px); background: var(--head); border-radius: 4px 0 0 4px; }
+.axis { display: grid; grid-template-columns: minmax(7.5rem, 11rem) minmax(0, 1fr) 3.4rem; gap: 10px; padding: 0 6px; }
+.axis .ticks { display: flex; justify-content: space-between; font: 400 11.5px var(--font-data); color: var(--muted); }
+.axis .ticks span:nth-child(2) { transform: translateX(0); }
+@media (max-width: 520px) {
+  .row, .axis { grid-template-columns: minmax(0, 6.6rem) minmax(0, 1fr) 2.9rem; gap: 8px; }
+  .row .lab { font-size: 13px; line-height: 1.25; }
+  .axis .ticks span:nth-child(2), .axis .ticks span:nth-child(4) { visibility: hidden; }
+  .panel { padding-inline: 12px; }
+}
+.panel-foot { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 12.5px; color: var(--muted); }
+.linkbtn { border: 0; background: none; padding: 0; color: var(--accent); font-weight: 600; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; font-size: 13px; }
+.tablewrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); }
+td.n, th.n { text-align: right; font-family: var(--font-data); font-variant-numeric: tabular-nums; }
+
+.tip { position: fixed; z-index: 10; pointer-events: none; background: var(--ink); color: var(--bg); border-radius: 8px; padding: 10px 12px; font-size: 13px; max-width: 300px; box-shadow: 0 6px 24px rgb(0 0 0 / .25); display: grid; gap: 4px; }
+.tip b { font-family: var(--font-display); font-size: 14.5px; }
+.tip .tn { font-family: var(--font-data); font-size: 12.5px; opacity: .85; }
+
+/* Ask panel */
+.ask { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 20px; }
+@media (max-width: 860px) { .ask { grid-template-columns: minmax(0, 1fr); } }
+.ask h2 { font-size: 1.35rem; font-weight: 750; font-stretch: 88%; }
+.ask .intro { display: grid; gap: 8px; align-content: start; color: var(--ink-2); }
+.ask form { display: grid; gap: 10px; }
+.ask label { font-weight: 600; font-size: 14px; }
+textarea { width: 100%; min-height: 108px; resize: vertical; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--line); background: var(--bg); line-height: 1.5; }
+.ask-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.btn { border-radius: 8px; padding: 9px 16px; font-weight: 600; cursor: pointer; border: 1px solid transparent; }
+.btn.primary { background: var(--ink); color: var(--bg); }
+.btn.primary:disabled { opacity: .55; cursor: progress; }
+.btn.ghost { background: transparent; border-color: var(--line); }
+.examples { display: flex; flex-wrap: wrap; gap: 6px; }
+.ex { border: 1px dashed var(--line); background: transparent; border-radius: 999px; padding: 4px 10px; font-size: 12.5px; cursor: pointer; color: var(--ink-2); }
+.ex:hover { border-color: var(--accent); color: var(--ink); }
+.status { font-size: 13.5px; color: var(--muted); }
+.status.err { color: var(--head); }
+.toggle { display: inline-flex; gap: 8px; align-items: center; font-size: 13.5px; color: var(--ink-2); }
+
+/* Wire */
+.wire-head { display: flex; justify-content: space-between; align-items: end; gap: 12px 20px; flex-wrap: wrap; }
+.wire-head h2 { font-size: 1.6rem; font-weight: 800; font-stretch: 80%; text-transform: uppercase; }
+.filters { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.chipbtn { border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 5px 12px; font-size: 13px; cursor: pointer; }
+.chipbtn[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.active-filter { display: inline-flex; align-items: center; gap: 8px; background: var(--accent-tint); border-radius: 999px; padding: 5px 6px 5px 12px; font-size: 13px; font-weight: 600; }
+.active-filter button { border: 0; background: var(--surface); border-radius: 999px; padding: 2px 9px; cursor: pointer; font-size: 12.5px; }
+
+.feed { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items: start; }
+@media (max-width: 900px) { .feed { grid-template-columns: minmax(0, 1fr); } }
+.story { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 18px; display: grid; gap: 12px; min-width: 0; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; font: 500 11.5px/1.3 var(--font-data); letter-spacing: .05em; text-transform: uppercase; color: var(--muted); }
+.meta .theme { color: var(--accent); }
+.conf { display: inline-flex; gap: 3px; align-items: center; }
+.conf i { width: 6px; height: 6px; border-radius: 50%; background: var(--zero); display: inline-block; }
+.conf i.on { background: var(--ink-2); }
+.story h3 { font-size: 1.18rem; font-weight: 700; font-stretch: 92%; }
+.story .sum { color: var(--ink-2); }
+.why { border-left: 2px solid var(--line); padding-left: 12px; font-size: 14px; color: var(--ink-2); }
+.why b { color: var(--ink); font-weight: 600; }
+.impacts { display: grid; gap: 8px; }
+.impacts .grp { display: grid; gap: 5px; }
+.imp { display: grid; grid-template-columns: 3.1rem minmax(0, 1fr); gap: 10px; align-items: baseline; font-size: 13.5px; }
+.pill { font: 500 12.5px var(--font-data); text-align: center; border-radius: 5px; padding: 1px 0; font-variant-numeric: tabular-nums; }
+.pill.pos { background: var(--tail-tint); color: var(--ink); box-shadow: inset 3px 0 0 var(--tail); }
+.pill.neg { background: var(--head-tint); color: var(--ink); box-shadow: inset 3px 0 0 var(--head); }
+.imp .nm { font-weight: 600; }
+.imp .wh { color: var(--muted); }
+.srcs { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12.5px; }
+.srcs a { color: var(--muted); text-underline-offset: 3px; }
+.story-foot { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+.empty { background: var(--surface); border: 1px dashed var(--line); border-radius: var(--r); padding: 28px; text-align: center; color: var(--ink-2); display: grid; gap: 6px; justify-items: center; }
+.skel { height: 14px; border-radius: 4px; background: var(--sunk); }
+.disclaim { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 14px; max-width: 90ch; }
+@media (prefers-reduced-motion: no-preference) {
+  .bar { transition: width .35s ease; }
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="mast">
+    <div class="mast-title">
+      <span class="eyebrow">Global newsflow · impact desk</span>
+      <h1>Market Pressure Map</h1>
+      <p class="lede">Where the latest global headlines push the world's biggest industries and economies: tailwind or headwind, how hard, and why.</p>
+    </div>
+    <div class="stamp">
+      <span class="eyebrow">Scan window</span>
+      <strong id="scanWindow">Loading…</strong>
+      <span class="eyebrow" id="scanMeta">&nbsp;</span>
+    </div>
+  </header>
+
+  <details class="method">
+    <summary>How the scores work</summary>
+    <div class="body">
+      <p>Each story is scored from <span class="num">−3</span> (strong headwind) to <span class="num">+3</span> (strong tailwind) for every industry and economy it touches. The map adds those scores, counting high-confidence calls at <span class="num">1.0</span>, medium at <span class="num">0.7</span> and low at <span class="num">0.4</span>.</p>
+      <p>Industries are the largest revenue pools in the world economy. Economies are the largest by output, plus the Gulf producers that set energy prices. Stories are written without company names, so the map shows sector-level pressure only.</p>
+      <p>Scores are a structured judgement about direction and size over each story's horizon. They are not price targets or investment advice.</p>
+    </div>
+  </details>
+
+  <section class="verdicts" id="verdicts" aria-label="Headline verdicts">
+    <div class="verdict"><span class="eyebrow">Strongest tailwind</span><div class="skel" style="width:70%"></div></div>
+    <div class="verdict"><span class="eyebrow">Strongest headwind</span><div class="skel" style="width:60%"></div></div>
+    <div class="verdict"><span class="eyebrow">Most supported economy</span><div class="skel" style="width:55%"></div></div>
+    <div class="verdict"><span class="eyebrow">Most exposed economy</span><div class="skel" style="width:65%"></div></div>
+  </section>
+
+  <section class="gauges">
+    <div class="panel" id="indPanel">
+      <div class="panel-head">
+        <h2>Industry pressure</h2>
+        <div class="legend"><span><i class="sw h"></i>Headwind</span><span><i class="sw t"></i>Tailwind</span></div>
+      </div>
+      <div class="rows" id="indRows"></div>
+      <div class="axis" aria-hidden="true"><span></span><div class="ticks" id="indTicks"></div><span></span></div>
+      <div class="panel-foot"><span>Net weighted score · select a row to filter stories</span><button class="linkbtn" type="button" data-table="ind">Show as table</button></div>
+      <div class="tablewrap" id="indTable" hidden></div>
+    </div>
+    <div class="panel" id="ecoPanel">
+      <div class="panel-head">
+        <h2>Economy pressure</h2>
+        <div class="legend"><span><i class="sw h"></i>Headwind</span><span><i class="sw t"></i>Tailwind</span></div>
+      </div>
+      <div class="rows" id="ecoRows"></div>
+      <div class="axis" aria-hidden="true"><span></span><div class="ticks" id="ecoTicks"></div><span></span></div>
+      <div class="panel-foot"><span>Net weighted score · select a row to filter stories</span><button class="linkbtn" type="button" data-table="eco">Show as table</button></div>
+      <div class="tablewrap" id="ecoTable" hidden></div>
+    </div>
+  </section>
+
+
+  <section class="wire" aria-labelledby="wireTitle" style="display:grid;gap:16px">
+    <div class="wire-head">
+      <div style="display:grid;gap:6px">
+        <span class="eyebrow" id="wireCount">Stories</span>
+        <h2 id="wireTitle">The wire</h2>
+      </div>
+      <div class="filters" id="filters"></div>
+    </div>
+    <div class="feed" id="feed">
+      <div class="empty"><strong>Loading the latest scan…</strong><span>Stories and their scores will appear here.</span></div>
+    </div>
+  </section>
+
+  <p class="disclaim">Built hourly from public news feeds and scored by Claude between the dates shown. Figures are as reported at the time and can be revised. This page is an analytical aid, not investment advice.</p>
+</div>
+
+<div class="tip" id="tip" hidden></div>
+
+<script>
+const INDUSTRIES = [
+  { id: "energy", label: "Energy (oil, gas & power)", short: "Energy" },
+  { id: "financials", label: "Banks & financials", short: "Financials" },
+  { id: "tech", label: "Technology & semiconductors", short: "Tech & chips" },
+  { id: "healthcare", label: "Healthcare & pharma", short: "Healthcare" },
+  { id: "autos", label: "Autos & mobility", short: "Autos" },
+  { id: "consumer", label: "Retail & consumer goods", short: "Consumer" },
+  { id: "industrials", label: "Industrials & machinery", short: "Industrials" },
+  { id: "materials", label: "Materials & mining", short: "Materials" },
+  { id: "agrifood", label: "Agriculture & food", short: "Agri & food" },
+  { id: "realestate", label: "Real estate & construction", short: "Real estate" },
+  { id: "transport", label: "Transport & logistics", short: "Transport" }
+];
+const ECONOMIES = [
+  { id: "us", label: "United States", short: "US" },
+  { id: "china", label: "China", short: "China" },
+  { id: "eurozone", label: "Euro area", short: "Euro area" },
+  { id: "japan", label: "Japan", short: "Japan" },
+  { id: "india", label: "India", short: "India" },
+  { id: "uk", label: "United Kingdom", short: "UK" },
+  { id: "gulf", label: "Gulf states", short: "Gulf" }
+];
+const THEMES = ["Energy & geopolitics", "Monetary policy", "Rates & bonds", "Trade", "Growth data", "Tech cycle", "Commodities", "Currencies"];
+const HORIZONS = ["days", "weeks", "months"];
+const CONF = { high: 1, medium: 0.7, low: 0.4 };
+const IND = Object.fromEntries(INDUSTRIES.map(x => [x.id, x]));
+const ECO = Object.fromEntries(ECONOMIES.map(x => [x.id, x]));
+
+const state = { scan: null, history: [], scanStatus: "loading", filter: null, theme: null, tables: { ind: false, eco: false } };
+
+const $ = id => document.getElementById(id);
+function el(tag, attrs, ...kids) {
+  const n = document.createElement(tag);
+  if (attrs) for (const [k, v] of Object.entries(attrs)) {
+    if (v == null || v === false) continue;
+    if (k === "class") n.className = v; else if (k === "text") n.textContent = v; else if (k.startsWith("on")) n.addEventListener(k.slice(2), v); else n.setAttribute(k, v === true ? "" : v);
+  }
+  for (const k of kids.flat()) if (k != null && k !== false) n.append(k.nodeType ? k : document.createTextNode(String(k)));
+  return n;
+}
+const signed = (n, d = 1) => (n > 0 ? "+" : n < 0 ? "−" : "±") + Math.abs(n).toFixed(d);
+function word(net) {
+  if (net >= 3) return "Strong tailwind";
+  if (net >= 1) return "Tailwind";
+  if (net > -1) return "Mixed";
+  if (net > -3) return "Headwind";
+  return "Strong headwind";
+}
+const scoreWord = s => ({ 3: "strong tailwind", 2: "tailwind", 1: "mild tailwind", "-1": "mild headwind", "-2": "headwind", "-3": "strong headwind" })[s] || "neutral";
+function fmtDate(iso) {
+  const d = new Date(iso + (iso.length === 10 ? "T12:00:00Z" : ""));
+  return isNaN(d) ? iso : d.toLocaleDateString(undefined, { day: "numeric", month: "short" });
+}
+
+/* ---------- clean any item (stored data and Claude output are untrusted) ---------- */
+function cleanItem(raw, fallbackId) {
+  if (!raw || typeof raw !== "object") return null;
+  const str = (v, max) => typeof v === "string" ? v.trim().slice(0, max) : "";
+  const clampScore = v => { const n = Math.round(Number(v)); return Number.isFinite(n) ? Math.max(-3, Math.min(3, n)) : 0; };
+  const list = (arr, known) => (Array.isArray(arr) ? arr : [])
+    .filter(x => x && known[x.id])
+    .map(x => ({ id: x.id, score: clampScore(x.score), why: str(x.why, 140) }))
+    .filter((x, i, a) => x.score !== 0 && a.findIndex(y => y.id === x.id) === i);
+  const item = {
+    id: str(raw.id, 60) || fallbackId,
+    date: str(raw.date, 30),
+    theme: THEMES.includes(raw.theme) ? raw.theme : (str(raw.theme, 40) || "General"),
+    headline: str(raw.headline, 220),
+    summary: str(raw.summary, 600),
+    rationale: str(raw.rationale, 600),
+    horizon: HORIZONS.includes(raw.horizon) ? raw.horizon : "weeks",
+    confidence: CONF[raw.confidence] ? raw.confidence : "medium",
+    industries: list(raw.industries, IND),
+    economies: list(raw.economies, ECO),
+    sources: (Array.isArray(raw.sources) ? raw.sources : []).filter(u => typeof u === "string" && /^https:\/\//.test(u)).slice(0, 4)
+  };
+  return item.headline ? item : null;
+}
+
+/* ---------- aggregation ---------- */
+function activeItems() {
+  return state.scan ? state.scan.items : [];
+}
+function totals(items, key, defs) {
+  const t = Object.fromEntries(defs.map(d => [d.id, { id: d.id, net: 0, pos: 0, neg: 0, n: 0, drivers: [] }]));
+  for (const it of items) {
+    const w = CONF[it.confidence] || 0.7;
+    for (const s of it[key]) {
+      const r = t[s.id]; if (!r) continue;
+      const v = s.score * w;
+      r.net += v; r.n++; if (v > 0) r.pos += v; else r.neg += v;
+      r.drivers.push({ v, headline: it.headline });
+    }
+  }
+  for (const r of Object.values(t)) { r.net = Math.round(r.net * 10) / 10; r.drivers.sort((a, b) => Math.abs(b.v) - Math.abs(a.v)); }
+  return Object.values(t);
+}
+function niceMax(rows) {
+  const m = Math.max(1, ...rows.map(r => Math.abs(r.net)));
+  return Math.ceil(m / 2) * 2;
+}
+
+/* ---------- render: verdicts ---------- */
+function renderVerdicts(ind, eco) {
+  const box = $("verdicts"); box.replaceChildren();
+  const has = state.scan && activeItems().length;
+  const byNet = a => [...a].sort((x, y) => y.net - x.net);
+  const iS = byNet(ind), eS = byNet(eco);
+  const cells = [
+    ["Strongest tailwind", iS[0], IND],
+    ["Strongest headwind", iS[iS.length - 1], IND],
+    ["Most supported economy", eS[0], ECO],
+    ["Most exposed economy", eS[eS.length - 1], ECO]
+  ];
+  for (const [lab, r, defs] of cells) {
+    const v = el("div", { class: "verdict" }, el("span", { class: "eyebrow", text: lab }));
+    if (!has || !r) { v.append(el("span", { class: "val", text: "—" })); box.append(v); continue; }
+    v.append(el("span", { class: "who", text: defs[r.id].label }));
+    v.append(el("span", { class: "val" }, el("i", { class: "sw " + (r.net >= 0 ? "t" : "h") }), `${signed(r.net)} · ${word(r.net)}`));
+    box.append(v);
+  }
+}
+
+/* ---------- render: gauges ---------- */
+const tip = $("tip");
+function delta24(kind, id, net) {
+  const h = state.history;
+  if (!h.length || !state.scan) return null;
+  const now = Date.parse(state.scan.scannedAt);
+  let best = null;
+  for (const e of h) {
+    const t = Date.parse(e.at);
+    if (now - t >= 20 * 3600e3 && now - t <= 30 * 3600e3) best = e;
+  }
+  const v = best && best[kind] && best[kind][id];
+  return typeof v === "number" ? Math.round((net - v) * 10) / 10 : null;
+}
+function showTip(e, r, defs) {
+  const d = delta24(defs === IND ? "ind" : "eco", r.id, r.net);
+  tip.replaceChildren(
+    el("b", { text: defs[r.id].label }),
+    el("span", { class: "tn", text: `${signed(r.net)} net · ${word(r.net)}` }),
+    el("span", { class: "tn", text: `${r.n} ${r.n === 1 ? "story" : "stories"} · tailwinds ${signed(r.pos)} · headwinds ${signed(r.neg)}` }),
+    ...(d !== null ? [el("span", { class: "tn", text: `24h change ${signed(d)}` })] : []),
+    ...(r.drivers[0] ? [el("span", { text: "Biggest driver: " + r.drivers[0].headline })] : [])
+  );
+  tip.hidden = false; moveTip(e);
+}
+function moveTip(e) {
+  const pad = 14, w = tip.offsetWidth, h = tip.offsetHeight;
+  let x = e.clientX + pad, y = e.clientY + pad;
+  if (x + w > innerWidth - 8) x = e.clientX - w - pad;
+  if (y + h > innerHeight - 8) y = e.clientY - h - pad;
+  tip.style.left = Math.max(8, x) + "px"; tip.style.top = Math.max(8, y) + "px";
+}
+function renderGauge(kind, rows, defs) {
+  const box = $(kind + "Rows"); box.replaceChildren();
+  const max = niceMax(rows);
+  const sorted = [...rows].sort((a, b) => b.net - a.net);
+  for (const r of sorted) {
+    const pct = Math.min(50, Math.abs(r.net) / max * 50);
+    const pressed = state.filter && state.filter.kind === kind && state.filter.id === r.id;
+    const btn = el("button", {
+      class: "row", type: "button", "aria-pressed": pressed ? "true" : "false",
+      "aria-label": `${defs[r.id].label}: ${signed(r.net)}, ${word(r.net)}, ${r.n} stories. Filter stories.`,
+      onclick: () => { state.filter = pressed ? null : { kind, id: r.id }; renderAll(); if (!pressed) $("wireTitle").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" }); },
+      onmouseenter: e => showTip(e, r, defs), onmousemove: moveTip, onmouseleave: () => { tip.hidden = true; }
+    },
+      el("span", { class: "lab", text: defs[r.id].label }),
+      el("span", { class: "track" }, r.net !== 0 ? el("span", { class: "bar " + (r.net > 0 ? "pos" : "neg"), style: `width:calc(${pct}% - 1px)` }) : null),
+      el("span", { class: "v", text: r.n ? signed(r.net) : "—" })
+    );
+    box.append(btn);
+  }
+  const ticks = $(kind + "Ticks");
+  ticks.replaceChildren(...[-max, -max / 2, 0, max / 2, max].map(v => el("span", { text: v === 0 ? "0" : signed(v, Number.isInteger(v) ? 0 : 1) })));
+  const tw = $(kind + "Table");
+  tw.hidden = !state.tables[kind];
+  if (state.tables[kind]) {
+    tw.replaceChildren(el("table", null,
+      el("thead", null, el("tr", null, el("th", { text: kind === "ind" ? "Industry" : "Economy" }), el("th", { class: "n", text: "Net" }), el("th", { class: "n", text: "Tailwinds" }), el("th", { class: "n", text: "Headwinds" }), el("th", { class: "n", text: "Stories" }), el("th", { class: "n", text: "24h change" }), el("th", { text: "Reading" }))),
+      el("tbody", null, sorted.map(r => el("tr", null, el("td", { text: defs[r.id].label }), el("td", { class: "n", text: signed(r.net) }), el("td", { class: "n", text: signed(r.pos) }), el("td", { class: "n", text: signed(r.neg) }), el("td", { class: "n", text: r.n }), el("td", { class: "n", text: (d => d === null ? "—" : signed(d))(delta24(kind, r.id, r.net)) }), el("td", { text: word(r.net) }))))
+    ));
+  }
+}
+document.querySelectorAll("[data-table]").forEach(b => b.addEventListener("click", () => {
+  const k = b.dataset.table; state.tables[k] = !state.tables[k]; b.textContent = state.tables[k] ? "Hide table" : "Show as table"; renderAll();
+}));
+
+/* ---------- render: wire ---------- */
+function storyCard(it) {
+  const confN = { low: 1, medium: 2, high: 3 }[it.confidence];
+  const impactRow = (s, defs) => el("div", { class: "imp" },
+    el("span", { class: "pill " + (s.score > 0 ? "pos" : "neg"), title: scoreWord(s.score), text: (s.score > 0 ? "+" : "−") + Math.abs(s.score) }),
+    el("span", null, el("span", { class: "nm", text: defs[s.id].short }), s.why ? el("span", { class: "wh", text: " · " + s.why }) : null)
+  );
+  const ordered = (arr) => [...arr].sort((a, b) => Math.abs(b.score) - Math.abs(a.score) || b.score - a.score);
+  const card = el("article", { class: "story" },
+    el("div", { class: "meta" },
+      el("span", { class: "theme", text: it.theme }),
+      it.date ? el("span", { text: fmtDate(it.date) }) : null,
+      el("span", { text: "Horizon: " + it.horizon }),
+      el("span", { class: "conf", title: it.confidence + " confidence" }, "Confidence ", ...[1, 2, 3].map(i => el("i", { class: i <= confN ? "on" : "" })), el("span", { class: "sr", text: "" }))
+    ),
+    el("h3", { text: it.headline }),
+    it.summary ? el("p", { class: "sum", text: it.summary }) : null,
+    it.rationale ? el("p", { class: "why" }, el("b", { text: "Why it matters. " }), it.rationale) : null,
+    el("div", { class: "impacts" },
+      it.industries.length ? el("div", { class: "grp" }, el("span", { class: "eyebrow", text: "Industries" }), ordered(it.industries).map(s => impactRow(s, IND))) : null,
+      it.economies.length ? el("div", { class: "grp" }, el("span", { class: "eyebrow", text: "Economies" }), ordered(it.economies).map(s => impactRow(s, ECO))) : null
+    ),
+    el("div", { class: "story-foot" },
+      it.sources.length ? el("div", { class: "srcs" }, it.sources.map((u, i) => el("a", { href: u, target: "_blank", rel: "noopener noreferrer", text: `Source ${i + 1} ↗` }))) : el("span")
+    )
+  );
+  return card;
+}
+function renderWire() {
+  const feed = $("feed");
+  const filters = $("filters"); filters.replaceChildren();
+  if (state.filter) {
+    const defs = state.filter.kind === "ind" ? IND : ECO;
+    filters.append(el("span", { class: "active-filter" }, "Touching: " + defs[state.filter.id].label, el("button", { type: "button", text: "Clear", onclick: () => { state.filter = null; renderAll(); } })));
+  }
+  const all = (state.scan ? state.scan.items : []);
+  const themes = THEMES.filter(t => all.some(i => i.theme === t));
+  filters.append(el("button", { class: "chipbtn", type: "button", "aria-pressed": state.theme ? "false" : "true", text: "All themes", onclick: () => { state.theme = null; renderAll(); } }));
+  for (const t of themes) filters.append(el("button", { class: "chipbtn", type: "button", "aria-pressed": state.theme === t ? "true" : "false", text: t, onclick: () => { state.theme = state.theme === t ? null : t; renderAll(); } }));
+
+  if (state.scanStatus !== "ready") {
+    const msg = {
+      loading: ["Loading the latest scan…", "Stories and their scores will appear here."],
+      error: ["The latest scan couldn't load.", "Check your connection. The page retries every few minutes."]
+    }[state.scanStatus];
+    feed.replaceChildren(el("div", { class: "empty" }, el("strong", { text: msg[0] }), el("span", { text: msg[1] })));
+    $("wireCount").textContent = "Stories";
+    return;
+  }
+  let items = [...all];
+  if (state.theme) items = items.filter(i => i.theme === state.theme);
+  if (state.filter) {
+    const key = state.filter.kind === "ind" ? "industries" : "economies";
+    const sc = i => (i[key].find(s => s.id === state.filter.id) || { score: 0 }).score;
+    items = items.filter(i => sc(i) !== 0).sort((a, b) => Math.abs(sc(b)) - Math.abs(sc(a)));
+  }
+  $("wireCount").textContent = `${items.length} ${items.length === 1 ? "story" : "stories"}` + (state.filter || state.theme ? " · filtered" : "");
+  feed.replaceChildren(...(items.length ? items.map(storyCard) : [el("div", { class: "empty" }, el("strong", { text: "No stories match these filters." }), el("span", { text: "Clear a filter to see the full wire." }))]));
+}
+
+function renderHeader() {
+  if (state.scanStatus === "ready") {
+    $("scanWindow").textContent = state.scan.window || "Latest";
+    const at = new Date(state.scan.scannedAt);
+    const mins = Math.round((Date.now() - at) / 60000);
+    const ago = isNaN(at) ? "recently" : mins < 1 ? "just now" : mins < 60 ? `${mins} min ago` : mins < 48 * 60 ? `${Math.round(mins / 60)} h ago` : at.toLocaleDateString(undefined, { day: "numeric", month: "short" });
+    $("scanMeta").textContent = `${state.scan.items.length} stories · updated ${ago} · refreshes hourly`;
+  } else {
+    $("scanWindow").textContent = state.scanStatus === "loading" ? "Loading…" : "No scan loaded";
+    $("scanMeta").textContent = " ";
+  }
+}
+
+function renderAll() {
+  const items = activeItems();
+  const ind = totals(items, "industries", INDUSTRIES), eco = totals(items, "economies", ECONOMIES);
+  renderHeader();
+  if (state.scanStatus === "ready") {
+    renderVerdicts(ind, eco); renderGauge("ind", ind, IND); renderGauge("eco", eco, ECO);
+  } else {
+    const note = state.scanStatus === "loading" ? "Loading scores…" : "Scores appear once a scan is loaded.";
+    for (const k of ["ind", "eco"]) $(k + "Rows").replaceChildren(el("p", { class: "status", text: note }));
+  }
+  renderWire();
+}
+
+/* ---------- boot: load the latest scan, re-check every 5 minutes ---------- */
+let lastAt = null;
+async function load() {
+  try {
+    const [scanRes, histRes] = await Promise.all([fetch("data/scan.json", { cache: "no-store" }), fetch("data/history.json", { cache: "no-store" })]);
+    if (!scanRes.ok) throw new Error("scan " + scanRes.status);
+    const d = await scanRes.json();
+    state.history = histRes.ok ? (await histRes.json().catch(() => [])) : [];
+    if (!Array.isArray(state.history)) state.history = [];
+    if (d.scannedAt === lastAt && state.scanStatus === "ready") { renderHeader(); return; }
+    lastAt = d.scannedAt;
+    const items = (Array.isArray(d.items) ? d.items : []).map((x, i) => cleanItem(x, "s" + i)).filter(Boolean);
+    state.scan = { scannedAt: d.scannedAt, window: typeof d.window === "string" ? d.window.slice(0, 60) : "", items };
+    state.scanStatus = "ready";
+  } catch {
+    if (state.scanStatus !== "ready") state.scanStatus = "error";
+  }
+  renderAll();
+}
+renderAll();
+load();
+setInterval(load, 5 * 60 * 1000);
+document.addEventListener("visibilitychange", () => { if (!document.hidden) load(); });
+</script>
+</body>
+</html>

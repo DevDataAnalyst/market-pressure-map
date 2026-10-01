@@ -1,0 +1,17 @@
+{
+  "name": "market-pressure-map",
+  "private": true,
+  "type": "module",
+  "description": "Hourly scan of global news, scored for impact on the largest industries and economies.",
+  "scripts": {
+    "refresh": "node scripts/refresh.mjs",
+    "serve": "npx --yes serve public"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.131.0",
+    "fast-xml-parser": "^5.11.2"
+  }
+}
