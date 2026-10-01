@@ -142,6 +142,14 @@ textarea { width: 100%; min-height: 108px; resize: vertical; padding: 10px 12px;
 .ex:hover { border-color: var(--accent); color: var(--ink); }
 .status { font-size: 13.5px; color: var(--muted); }
 .status.err { color: var(--head); }
+.thread { display: grid; gap: 14px; }
+.turn { display: grid; gap: 8px; }
+.turn .you { justify-self: end; max-width: 90%; background: var(--sunk); border-radius: 10px 10px 2px 10px; padding: 8px 12px; font-weight: 500; overflow-wrap: anywhere; }
+.turn .ans { border-left: 2px solid var(--accent); padding-left: 12px; display: grid; gap: 8px; color: var(--ink); overflow-wrap: anywhere; }
+.turn .ans ul { margin: 0; padding-left: 1.2em; display: grid; gap: 4px; }
+.turn .ans.pending::after { content: "Thinking…"; color: var(--muted); font-size: 13.5px; }
+.turn .srcs { font-size: 12.5px; }
+.ask .note { font-size: 12.5px; color: var(--muted); }
 .toggle { display: inline-flex; gap: 8px; align-items: center; font-size: 13.5px; color: var(--ink-2); }
 
 /* Wire */
@@ -239,6 +247,33 @@ textarea { width: 100%; min-height: 108px; resize: vertical; padding: 10px 12px;
     </div>
   </section>
 
+
+  <section class="ask" aria-labelledby="askTitle">
+    <div class="intro">
+      <span class="eyebrow">Ask the desk</span>
+      <h2 id="askTitle">Ask about the markets</h2>
+      <p>Ask what a story means, where pressure is building, or how one market affects another. Answers draw on this hour's scan and a quick web search.</p>
+      <p class="note">Answers stay at the sector level and are not investment advice.</p>
+    </div>
+    <div style="display:grid;gap:14px;min-width:0">
+      <div class="thread" id="thread" aria-live="polite"></div>
+      <form id="askForm">
+        <label for="askText">Your question</label>
+        <textarea id="askText" maxlength="600" placeholder="e.g. Why is India the most exposed economy right now?"></textarea>
+        <div class="examples" aria-label="Example questions">
+          <button type="button" class="ex">Why is India the most exposed economy right now?</button>
+          <button type="button" class="ex">How do higher bond yields hit real estate?</button>
+          <button type="button" class="ex">Which industries gain if oil falls below $80?</button>
+        </div>
+        <div class="ask-actions">
+          <button class="btn primary" type="submit" id="askBtn">Ask</button>
+          <button class="btn ghost" type="button" id="stopBtn" hidden>Stop</button>
+          <button class="btn ghost" type="button" id="clearBtn" hidden>Clear conversation</button>
+          <span class="status" id="askStatus" role="status"></span>
+        </div>
+      </form>
+    </div>
+  </section>
 
   <section class="wire" aria-labelledby="wireTitle" style="display:grid;gap:16px">
     <div class="wire-head">
@@ -533,6 +568,81 @@ function renderAll() {
   }
   renderWire();
 }
+
+
+/* ---------- ask the desk ---------- */
+const MAX_TURNS = 6;
+let turns = [];
+try { turns = JSON.parse(sessionStorage.getItem("mpm.turns") || "[]").filter(t => t && typeof t.q === "string" && typeof t.a === "string").slice(-MAX_TURNS); } catch { turns = []; }
+const saveTurns = () => { try { sessionStorage.setItem("mpm.turns", JSON.stringify(turns.slice(-MAX_TURNS))); } catch {} };
+function renderAnswer(box, text) {
+  box.replaceChildren();
+  for (const para of text.split(/\n{2,}/)) {
+    const lines = para.split("\n").map(l => l.trim()).filter(Boolean);
+    if (!lines.length) continue;
+    if (lines.every(l => /^[-•*] /.test(l))) box.append(el("ul", null, lines.map(l => el("li", { text: l.replace(/^[-•*] /, "") }))));
+    else box.append(el("p", { text: lines.join(" ") }));
+  }
+}
+function renderThread() {
+  const th = $("thread");
+  th.replaceChildren(...turns.map(t => {
+    const ans = el("div", { class: "ans" + (t.pending && !t.a ? " pending" : "") });
+    renderAnswer(ans, t.a);
+    return el("div", { class: "turn" },
+      el("div", { class: "you", text: t.q }),
+      ans,
+      t.sources && t.sources.length ? el("div", { class: "srcs" }, t.sources.map(s => el("a", { href: s.url, target: "_blank", rel: "noopener noreferrer", text: (s.title || "Source").slice(0, 70) + " ↗" }))) : null
+    );
+  }));
+  $("clearBtn").hidden = !turns.length || !!askCtl;
+}
+let askCtl = null;
+$("askForm").addEventListener("submit", async e => {
+  e.preventDefault();
+  if (askCtl) return;
+  const q = $("askText").value.trim();
+  const st = $("askStatus");
+  if (!q) { st.className = "status err"; st.textContent = "Type a question first."; $("askText").focus(); return; }
+  const history = turns.filter(t => !t.pending && t.a).slice(-3).map(t => ({ q: t.q, a: t.a }));
+  const turn = { q, a: "", pending: true, sources: [] };
+  turns.push(turn); turns = turns.slice(-MAX_TURNS);
+  $("askText").value = "";
+  askCtl = new AbortController();
+  $("askBtn").disabled = true; $("stopBtn").hidden = false; st.className = "status"; st.textContent = "";
+  renderThread();
+  try {
+    const res = await fetch("api/ask", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ question: q, history }), signal: askCtl.signal });
+    if (!res.ok) {
+      const j = await res.json().catch(() => ({}));
+      throw new Error(j.error || "The answer couldn't be generated. Try again.");
+    }
+    const reader = res.body.getReader(); const dec = new TextDecoder(); let buf = "";
+    for (;;) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      buf += dec.decode(value, { stream: true });
+      const cut = buf.indexOf("\u001e");
+      turn.a = cut === -1 ? buf : buf.slice(0, cut);
+      renderThread();
+    }
+    const cut = buf.indexOf("\u001e");
+    if (cut !== -1) { try { turn.sources = (JSON.parse(buf.slice(cut + 1)).sources || []).filter(x => x && /^https:\/\//.test(x.url)); } catch {} }
+    if (!turn.a.trim()) throw new Error("No answer came back. Try rephrasing the question.");
+  } catch (err) {
+    if (err.name === "AbortError") { turn.a = turn.a || "(Stopped.)"; }
+    else { turns = turns.filter(t => t !== turn); st.className = "status err"; st.textContent = err.message; $("askText").value = q; }
+  } finally {
+    turn.pending = false; askCtl = null;
+    $("askBtn").disabled = false; $("stopBtn").hidden = true;
+    saveTurns(); renderThread();
+  }
+});
+$("stopBtn").addEventListener("click", () => askCtl && askCtl.abort());
+$("clearBtn").addEventListener("click", () => { turns = []; saveTurns(); renderThread(); $("askText").focus(); });
+$("askText").addEventListener("keydown", e => { if (e.key === "Enter" && !e.shiftKey && !e.isComposing) { e.preventDefault(); $("askForm").requestSubmit(); } });
+document.querySelectorAll(".ex").forEach(b => b.addEventListener("click", () => { $("askText").value = b.textContent; $("askText").focus(); }));
+renderThread();
 
 /* ---------- boot: load the latest scan, re-check every 5 minutes ---------- */
 let lastAt = null;

@@ -1,9 +1,15 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "",
-  "installCommand": "",
+  "installCommand": "npm ci",
+  "buildCommand": "echo static site, no build",
   "outputDirectory": "public",
   "framework": null,
+  "functions": {
+    "api/ask.js": {
+      "maxDuration": 60,
+      "includeFiles": "public/data/scan.json"
+    }
+  },
   "headers": [
     {
       "source": "/data/(.*)",

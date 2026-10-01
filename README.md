@@ -21,9 +21,18 @@ The page totals the scores, counting high-confidence calls at 1.0, medium at 0.7
 2. **Optional, to change the model:** under the Variables tab, add `SCAN_MODEL` (for example `claude-sonnet-5-5`). The default is `claude-opus-5-5`.
 3. **Run the first scan:** go to Actions → Hourly news scan → Run workflow.
 
+### Question box ("Ask about the markets")
+
+The page has a question box backed by a Vercel function (`api/ask.js`). It gives Claude the latest scan as context, allows up to two web searches per question, and streams the answer back. To switch it on:
+
+1. In Vercel, open the project → Settings → Environment Variables and add `ANTHROPIC_API_KEY` for Production.
+2. Redeploy, or wait for the next hourly data commit.
+
+Optional variables: `ASK_MODEL` (default `claude-opus-5-5`) and `ASK_RATE_LIMIT` (questions per visitor per 10 minutes, default 8). The rate limit is best-effort because serverless instances don't share memory. Set a monthly spend limit on your Anthropic key, since anyone who can open the site can ask questions.
+
 ### Cost
 
-Each run sends about 140 headlines and gets back about 15 scored stories. On the default model that's roughly $0.10–0.25 per run, or about $2.50–6 a day at one run an hour. `claude-sonnet-5-5` costs about half as much. To run less often, change the cron line in the workflow (for example `7 */3 * * *` for every 3 hours).
+Each run sends about 140 headlines and gets back about 15 scored stories. On the default model that's roughly $0.10–0.25 per run, or about $2.50–6 a day at one run an hour. `claude-sonnet-5-5` costs about half as much. Each question in the question box costs roughly $0.02–0.06, including web searches. To run less often, change the cron line in the workflow (for example `7 */3 * * *` for every 3 hours).
 
 ## Local use
 
