@@ -1,0 +1,46 @@
+name: Diagnose API key location (temporary)
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  repository:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check repository secrets and variables
+        env:
+          S_ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          V_ANTHROPIC_API_KEY: ${{ vars.ANTHROPIC_API_KEY }}
+          S_CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
+          S_ANTHROPIC_KEY: ${{ secrets.ANTHROPIC_KEY }}
+          S_ANTHROPIC_API_TOKEN: ${{ secrets.ANTHROPIC_API_TOKEN }}
+          S_API_KEY: ${{ secrets.API_KEY }}
+        run: |
+          for n in S_ANTHROPIC_API_KEY V_ANTHROPIC_API_KEY S_CLAUDE_API_KEY S_ANTHROPIC_KEY S_ANTHROPIC_API_TOKEN S_API_KEY; do
+            if [ -n "${!n}" ]; then echo "::notice::repository ${n} found"; else echo "::notice::repository ${n} missing"; fi
+          done
+
+  production-env:
+    runs-on: ubuntu-latest
+    environment: Production
+    steps:
+      - name: Check Production environment
+        env:
+          S: ${{ secrets.ANTHROPIC_API_KEY }}
+          V: ${{ vars.ANTHROPIC_API_KEY }}
+        run: |
+          [ -n "$S" ] && echo "::notice::Production environment secret found" || echo "::notice::Production environment secret missing"
+          [ -n "$V" ] && echo "::notice::Production environment variable found" || echo "::notice::Production environment variable missing"
+
+  preview-env:
+    runs-on: ubuntu-latest
+    environment: Preview
+    steps:
+      - name: Check Preview environment
+        env:
+          S: ${{ secrets.ANTHROPIC_API_KEY }}
+          V: ${{ vars.ANTHROPIC_API_KEY }}
+        run: |
+          [ -n "$S" ] && echo "::notice::Preview environment secret found" || echo "::notice::Preview environment secret missing"
+          [ -n "$V" ] && echo "::notice::Preview environment variable found" || echo "::notice::Preview environment variable missing"
