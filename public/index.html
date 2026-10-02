@@ -25,6 +25,9 @@
   --head: #d13f3e;
   --head-tint: #fbe6e5;
   --zero: #c4ccd5;
+  --risk-high: #d9622b;
+  --risk-elev: #d99a0b;
+  --risk-watch: #8a97a5;
   --font-display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
   --font-body: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
   --font-data: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
@@ -34,13 +37,13 @@
   :root:not([data-theme="light"]) {
     --bg: #0e1419; --surface: #151d25; --sunk: #1c2630; --ink: #e5eaef; --ink-2: #c1cad3; --muted: #93a1ae;
     --line: #2a3644; --accent: #e3a740; --accent-tint: #33270f; --tail: #4d93ea; --tail-tint: #142a44;
-    --head: #e86a69; --head-tint: #3d1d1e; --zero: #3b4755; color-scheme: dark;
+    --head: #e86a69; --head-tint: #3d1d1e; --zero: #3b4755; --risk-high: #ec835a; --risk-elev: #fab219; --risk-watch: #6b7a89; color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --bg: #0e1419; --surface: #151d25; --sunk: #1c2630; --ink: #e5eaef; --ink-2: #c1cad3; --muted: #93a1ae;
   --line: #2a3644; --accent: #e3a740; --accent-tint: #33270f; --tail: #4d93ea; --tail-tint: #142a44;
-  --head: #e86a69; --head-tint: #3d1d1e; --zero: #3b4755; color-scheme: dark;
+  --head: #e86a69; --head-tint: #3d1d1e; --zero: #3b4755; --risk-high: #ec835a; --risk-elev: #fab219; --risk-watch: #6b7a89; color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
@@ -123,6 +126,67 @@ td.n, th.n { text-align: right; font-family: var(--font-data); font-variant-nume
 .tip { position: fixed; z-index: 10; pointer-events: none; background: var(--ink); color: var(--bg); border-radius: 8px; padding: 10px 12px; font-size: 13px; max-width: 300px; box-shadow: 0 6px 24px rgb(0 0 0 / .25); display: grid; gap: 4px; }
 .tip b { font-family: var(--font-display); font-size: 14.5px; }
 .tip .tn { font-family: var(--font-data); font-size: 12.5px; opacity: .85; }
+
+
+/* Drill-down: rows and verdicts open a details dialog */
+.whobtn { all: unset; cursor: pointer; font: 700 1.15rem/1.2 var(--font-display); font-stretch: 90%; text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 4px; }
+.whobtn:hover { text-decoration-color: var(--accent); }
+.whobtn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+dialog.drill { width: min(760px, calc(100% - 24px)); max-height: calc(100% - 24px); padding: 0; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); color: var(--ink); box-shadow: 0 20px 60px rgb(0 0 0 / .3); }
+dialog.drill::backdrop { background: rgb(8 14 20 / .5); }
+.drill-head { position: sticky; top: 0; z-index: 1; display: flex; justify-content: space-between; align-items: start; gap: 12px; padding: 18px 20px 14px; background: var(--surface); border-bottom: 1px solid var(--line); }
+.drill-head h2 { font-size: 1.5rem; font-weight: 800; font-stretch: 84%; }
+.drill-body { padding: 16px 20px 22px; display: grid; gap: 22px; }
+.drill-sec { display: grid; gap: 10px; min-width: 0; }
+.drill-sec h3 { font-size: 1.02rem; font-weight: 700; font-stretch: 92%; }
+.kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+@media (max-width: 560px) { .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); } .drill-body, .drill-head { padding-inline: 14px; } }
+.kpi { background: var(--sunk); border-radius: 8px; padding: 10px 12px; display: grid; gap: 2px; }
+.kpi b { font: 600 1.15rem var(--font-data); font-variant-numeric: tabular-nums; }
+.kpi span { font-size: 12.5px; color: var(--muted); }
+.spark { width: 100%; height: auto; display: block; }
+.spark text { font: 11px var(--font-data); fill: var(--muted); }
+.mini { display: grid; gap: 2px; }
+.mini .row { grid-template-columns: minmax(6rem, 10rem) minmax(0, 1fr) 3.2rem; }
+.drv { display: grid; grid-template-columns: 3.1rem minmax(0, 1fr); gap: 10px; align-items: baseline; padding: 8px 0; border-top: 1px solid var(--line); }
+.drv:first-child { border-top: 0; }
+.drv h4 { margin: 0; font: 600 14.5px/1.35 var(--font-body); }
+.drv p { font-size: 13px; color: var(--muted); }
+.drill-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+
+/* Exposure matrix */
+.mx { border-collapse: separate; border-spacing: 3px; width: 100%; min-width: 620px; font-size: 13px; }
+.mx th { border: 0; padding: 4px 6px; font-weight: 600; white-space: nowrap; }
+.mx thead th { text-align: center; font: 500 11.5px var(--font-data); letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+.mx tbody th { text-align: left; }
+.mx td { border: 0; padding: 0; }
+.cell { width: 100%; min-height: 34px; border: 0; border-radius: 5px; cursor: pointer; font: 500 12.5px var(--font-data); font-variant-numeric: tabular-nums; color: var(--ink); background: var(--sunk); }
+.cell.none { color: var(--muted); cursor: default; }
+.cell:not(.none):hover { outline: 2px solid var(--ink-2); outline-offset: -2px; }
+
+/* Signals desk */
+.intel { display: grid; gap: 14px; }
+.intel-controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.intel select { font: inherit; font-size: 13.5px; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); }
+.sig-list { display: grid; gap: 10px; }
+.sig { display: grid; grid-template-columns: 4px minmax(0, 1fr); background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
+.sig .stripe { background: var(--risk-watch); }
+.sig.high .stripe { background: var(--risk-high); }
+.sig.elevated .stripe { background: var(--risk-elev); }
+.sig .body { padding: 12px 16px; display: grid; gap: 7px; min-width: 0; }
+.sig h3 { font: 600 15.5px/1.35 var(--font-body); overflow-wrap: anywhere; }
+.sig .note { font-size: 14px; color: var(--ink-2); }
+.risk { display: inline-flex; align-items: center; gap: 5px; font-weight: 600; color: var(--ink); }
+.risk i { width: 8px; height: 8px; border-radius: 2px; background: var(--risk-watch); display: inline-block; }
+.risk.high i { background: var(--risk-high); } .risk.elevated i { background: var(--risk-elev); }
+.chips { display: flex; flex-wrap: wrap; gap: 5px; }
+.chip { border: 1px solid var(--line); background: transparent; border-radius: 999px; padding: 2px 9px; font-size: 12.5px; cursor: pointer; color: var(--ink-2); }
+.chip:hover { border-color: var(--accent); color: var(--ink); }
+.chip b { font: 500 12px var(--font-data); margin-right: 4px; }
+.chip.pos b { color: var(--tail); } .chip.neg b { color: var(--head); }
+.chip.place { cursor: default; border-style: dashed; }
+.sig .foot { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12.5px; color: var(--muted); }
+.sig .foot a { color: var(--muted); text-underline-offset: 3px; }
 
 /* Ask panel */
 .ask { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 20px; }
@@ -232,7 +296,7 @@ textarea { width: 100%; min-height: 108px; resize: vertical; padding: 10px 12px;
       </div>
       <div class="rows" id="indRows"></div>
       <div class="axis" aria-hidden="true"><span></span><div class="ticks" id="indTicks"></div><span></span></div>
-      <div class="panel-foot"><span>Net weighted score · select a row to filter stories</span><button class="linkbtn" type="button" data-table="ind">Show as table</button></div>
+      <div class="panel-foot"><span>Net weighted score · select a row for details</span><button class="linkbtn" type="button" data-table="ind">Show as table</button></div>
       <div class="tablewrap" id="indTable" hidden></div>
     </div>
     <div class="panel" id="ecoPanel">
@@ -242,11 +306,46 @@ textarea { width: 100%; min-height: 108px; resize: vertical; padding: 10px 12px;
       </div>
       <div class="rows" id="ecoRows"></div>
       <div class="axis" aria-hidden="true"><span></span><div class="ticks" id="ecoTicks"></div><span></span></div>
-      <div class="panel-foot"><span>Net weighted score · select a row to filter stories</span><button class="linkbtn" type="button" data-table="eco">Show as table</button></div>
+      <div class="panel-foot"><span>Net weighted score · select a row for details</span><button class="linkbtn" type="button" data-table="eco">Show as table</button></div>
       <div class="tablewrap" id="ecoTable" hidden></div>
     </div>
   </section>
 
+  <section class="panel" aria-labelledby="mxTitle">
+    <div class="panel-head">
+      <div style="display:grid;gap:4px">
+        <span class="eyebrow">Drill down</span>
+        <h2 id="mxTitle">Industry × economy exposure</h2>
+      </div>
+      <div class="legend"><span><i class="sw h"></i>Headwind</span><span><i class="sw t"></i>Tailwind</span></div>
+    </div>
+    <p class="status">Each cell is the industry's net score in stories that also involve that economy. Darker means stronger. Select a cell to see the stories behind it.</p>
+    <div class="tablewrap" id="matrix"><p class="status">Loading scores…</p></div>
+  </section>
+
+  <section class="intel" aria-labelledby="intelTitle">
+    <div class="wire-head">
+      <div style="display:grid;gap:6px">
+        <span class="eyebrow" id="intelMeta">Open-source intelligence</span>
+        <h2 id="intelTitle">Signals desk</h2>
+      </div>
+      <div class="intel-controls">
+        <label class="status" for="intelRisk">Risk</label>
+        <select id="intelRisk">
+          <option value="all">All levels</option>
+          <option value="elevated">Elevated and high</option>
+          <option value="high">High only</option>
+        </select>
+        <label class="status" for="intelRegion">Economy</label>
+        <select id="intelRegion"><option value="all">All economies</option></select>
+      </div>
+    </div>
+    <p class="status" style="max-width:80ch">Geopolitical and economic signals from open sources: conflict trackers, disaster alerts, central banks, international bodies and worldwide media monitoring. Each signal is tagged with the industries and economies it exposes. Signals marked "assessed" have been scored by Claude for market impact.</p>
+    <div class="filters" id="intelCats"></div>
+    <div class="sig-list" id="sigList"><div class="empty"><strong>Loading signals…</strong></div></div>
+    <div><button class="btn ghost" type="button" id="sigMore" hidden>Show more signals</button></div>
+    <p class="status" id="intelSources"></p>
+  </section>
 
   <section class="ask" aria-labelledby="askTitle">
     <div class="intro">
@@ -288,10 +387,22 @@ textarea { width: 100%; min-height: 108px; resize: vertical; padding: 10px 12px;
     </div>
   </section>
 
-  <p class="disclaim">Built hourly from public news feeds and scored by Claude between the dates shown. Figures are as reported at the time and can be revised. This page is an analytical aid, not investment advice.</p>
+  <p class="disclaim">Built hourly from public news feeds and open-source intelligence, scored by Claude between the dates shown. Figures are as reported at the time and can be revised. This page is an analytical aid, not investment advice.</p>
 </div>
 
 <div class="tip" id="tip" hidden></div>
+
+<dialog class="drill" id="drill" aria-labelledby="drillTitle">
+  <div class="drill-head">
+    <div style="display:grid;gap:4px;min-width:0">
+      <span class="eyebrow" id="drillKind"></span>
+      <h2 id="drillTitle"></h2>
+    </div>
+    <button class="btn ghost" type="button" id="drillClose">Close</button>
+  </div>
+  <div class="drill-body" id="drillBody"></div>
+</dialog>
+
 
 <script>
 const INDUSTRIES = [
@@ -322,7 +433,7 @@ const CONF = { high: 1, medium: 0.7, low: 0.4 };
 const IND = Object.fromEntries(INDUSTRIES.map(x => [x.id, x]));
 const ECO = Object.fromEntries(ECONOMIES.map(x => [x.id, x]));
 
-const state = { scan: null, history: [], scanStatus: "loading", filter: null, theme: null, tables: { ind: false, eco: false } };
+const state = { scan: null, history: [], scanStatus: "loading", osint: null, osintStatus: "loading", sig: { cat: null, risk: "all", region: "all", shown: 12 }, filter: null, theme: null, tables: { ind: false, eco: false } };
 
 const $ = id => document.getElementById(id);
 function el(tag, attrs, ...kids) {
@@ -411,7 +522,8 @@ function renderVerdicts(ind, eco) {
   for (const [lab, r, defs] of cells) {
     const v = el("div", { class: "verdict" }, el("span", { class: "eyebrow", text: lab }));
     if (!has || !r) { v.append(el("span", { class: "val", text: "—" })); box.append(v); continue; }
-    v.append(el("span", { class: "who", text: defs[r.id].label }));
+    const kind = defs === IND ? "ind" : "eco";
+    v.append(el("button", { class: "whobtn", type: "button", text: defs[r.id].label, "aria-haspopup": "dialog", onclick: () => openDrill(kind, r.id) }));
     v.append(el("span", { class: "val" }, el("i", { class: "sw " + (r.net >= 0 ? "t" : "h") }), `${signed(r.net)} · ${word(r.net)}`));
     box.append(v);
   }
@@ -455,11 +567,10 @@ function renderGauge(kind, rows, defs) {
   const sorted = [...rows].sort((a, b) => b.net - a.net);
   for (const r of sorted) {
     const pct = Math.min(50, Math.abs(r.net) / max * 50);
-    const pressed = state.filter && state.filter.kind === kind && state.filter.id === r.id;
     const btn = el("button", {
-      class: "row", type: "button", "aria-pressed": pressed ? "true" : "false",
-      "aria-label": `${defs[r.id].label}: ${signed(r.net)}, ${word(r.net)}, ${r.n} stories. Filter stories.`,
-      onclick: () => { state.filter = pressed ? null : { kind, id: r.id }; renderAll(); if (!pressed) $("wireTitle").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" }); },
+      class: "row", type: "button", "aria-haspopup": "dialog",
+      "aria-label": `${defs[r.id].label}: ${signed(r.net)}, ${word(r.net)}, ${r.n} stories. Open details.`,
+      onclick: () => openDrill(kind, r.id),
       onmouseenter: e => showTip(e, r, defs), onmousemove: moveTip, onmouseleave: () => { tip.hidden = true; }
     },
       el("span", { class: "lab", text: defs[r.id].label }),
@@ -566,9 +677,288 @@ function renderAll() {
     const note = state.scanStatus === "loading" ? "Loading scores…" : "Scores appear once a scan is loaded.";
     for (const k of ["ind", "eco"]) $(k + "Rows").replaceChildren(el("p", { class: "status", text: note }));
   }
+  renderMatrix();
+  renderIntel();
   renderWire();
 }
 
+
+/* ---------- shared helpers for drill-down and signals ---------- */
+const KIND = { ind: { defs: IND, key: "industries", noun: "Industry", other: "eco" }, eco: { defs: ECO, key: "economies", noun: "Economy", other: "ind" } };
+const RISK_LABEL = { high: "High", elevated: "Elevated", watch: "Watch" };
+const RISK_RANK = { watch: 0, elevated: 1, high: 2 };
+const reduceMotion = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
+function ago(iso) {
+  const t = Date.parse(iso); if (isNaN(t)) return "";
+  const m = Math.round((Date.now() - t) / 60000);
+  return m < 60 ? `${Math.max(1, m)} min ago` : m < 48 * 60 ? `${Math.round(m / 60)} h ago` : new Date(t).toLocaleDateString(undefined, { day: "numeric", month: "short" });
+}
+const scoreOf = (it, key, id) => (it[key].find(s => s.id === id) || { score: 0 }).score;
+const weight = it => CONF[it.confidence] || 0.7;
+const pill = (score, extra = "") => el("span", { class: "pill " + (score > 0 ? "pos" : "neg") + extra, title: scoreWord(score), text: (score > 0 ? "+" : "−") + Math.abs(score) });
+const svgEl = (tag, attrs) => { const n = document.createElementNS("http://www.w3.org/2000/svg", tag); for (const [k, v] of Object.entries(attrs || {})) n.setAttribute(k, v); return n; };
+
+// Net score of `kind`/`id` restricted to stories that also touch each entity of the other kind.
+function crossExposure(kind, id) {
+  const k = KIND[kind], o = KIND[k.other];
+  const rows = Object.keys(o.defs).map(oid => ({ id: oid, net: 0, n: 0 }));
+  for (const it of activeItems()) {
+    const sc = scoreOf(it, k.key, id); if (!sc) continue;
+    for (const r of rows) if (scoreOf(it, o.key, r.id)) { r.net += sc * weight(it); r.n++; }
+  }
+  return rows.filter(r => r.n).map(r => ({ ...r, net: Math.round(r.net * 10) / 10 })).sort((a, b) => Math.abs(b.net) - Math.abs(a.net));
+}
+
+/* ---------- signals ---------- */
+const sigRisk = s => (s.assessment && s.assessment.risk) || s.severity;
+const sigTitle = s => (s.assessment && s.assessment.headline) || s.title;
+function sigTouches(s, kind, id) {
+  const key = KIND[kind].key;
+  if (s.assessment && s.assessment[key] && s.assessment[key].some(x => x.id === id)) return true;
+  return (s[key] || []).includes(id);
+}
+function cleanSignal(raw) {
+  if (!raw || typeof raw !== "object" || typeof raw.title !== "string" || !/^https?:\/\//.test(raw.link || "")) return null;
+  const ids = (arr, defs) => (Array.isArray(arr) ? arr : []).filter(x => typeof x === "string" && defs[x]);
+  const str = (v, n) => typeof v === "string" ? v.slice(0, n) : "";
+  const imp = (arr, defs) => (Array.isArray(arr) ? arr : []).filter(x => x && defs[x.id]).map(x => ({ id: x.id, score: Math.max(-3, Math.min(3, Math.round(Number(x.score) || 0))), why: str(x.why, 140) })).filter(x => x.score);
+  const a = raw.assessment && typeof raw.assessment === "object" ? {
+    headline: str(raw.assessment.headline, 160), risk: RISK_LABEL[raw.assessment.risk] ? raw.assessment.risk : null, note: str(raw.assessment.note, 300),
+    industries: imp(raw.assessment.industries, IND), economies: imp(raw.assessment.economies, ECO)
+  } : null;
+  return {
+    id: str(raw.id, 80), title: raw.title.slice(0, 220), link: raw.link, source: str(raw.source, 80), sourceType: str(raw.sourceType, 60),
+    published: str(raw.published, 40), category: str(raw.category, 30), places: (Array.isArray(raw.places) ? raw.places : []).filter(x => typeof x === "string").slice(0, 4),
+    industries: ids(raw.industries, IND), economies: ids(raw.economies, ECO), severity: RISK_LABEL[raw.severity] ? raw.severity : "watch",
+    reports: Number(raw.reports) || 1, also: (Array.isArray(raw.also) ? raw.also : []).filter(x => x && /^https?:\/\//.test(x.link || "")).slice(0, 4),
+    assessment: a && (a.headline || a.note) ? a : null
+  };
+}
+function signalCard(s, compact = false) {
+  const risk = sigRisk(s);
+  const cat = (state.osint && state.osint.categories.find(c => c.id === s.category)) || { label: s.category };
+  const chipsFor = (kind) => {
+    const k = KIND[kind];
+    const scored = s.assessment && s.assessment[k.key] && s.assessment[k.key].length ? s.assessment[k.key] : null;
+    const list = scored || s[k.key].map(id => ({ id }));
+    return list.map(x => el("button", { class: "chip" + (x.score > 0 ? " pos" : x.score < 0 ? " neg" : ""), type: "button", title: x.why || `Exposed: ${k.defs[x.id].label}`, onclick: () => openDrill(kind, x.id) },
+      x.score ? el("b", { text: (x.score > 0 ? "+" : "−") + Math.abs(x.score) }) : null, k.defs[x.id].short));
+  };
+  return el("article", { class: "sig " + risk },
+    el("span", { class: "stripe", "aria-hidden": "true" }),
+    el("div", { class: "body" },
+      el("div", { class: "meta" },
+        el("span", { class: "risk " + risk }, el("i", { "aria-hidden": "true" }), RISK_LABEL[risk]),
+        el("span", { class: "theme", text: cat.label }),
+        el("span", { text: `${s.sourceType ? s.sourceType + ": " : ""}${s.source}` }),
+        s.published ? el("span", { text: ago(s.published) }) : null,
+        s.reports > 1 ? el("span", { text: `${s.reports} reports` }) : null,
+        s.assessment ? el("span", { text: "Assessed" }) : null
+      ),
+      el("h3", { text: sigTitle(s) }),
+      !compact && s.assessment && s.assessment.note ? el("p", { class: "note", text: s.assessment.note }) : null,
+      el("div", { class: "chips" }, ...s.places.map(p => el("span", { class: "chip place", text: p })), ...chipsFor("ind"), ...chipsFor("eco")),
+      el("div", { class: "foot" },
+        el("a", { href: s.link, target: "_blank", rel: "noopener noreferrer", text: "Read source ↗" }),
+        ...(compact ? [] : s.also.map(a => el("a", { href: a.link, target: "_blank", rel: "noopener noreferrer", text: `Also: ${a.source} ↗` })))
+      )
+    )
+  );
+}
+function filteredSignals() {
+  const f = state.sig;
+  return (state.osint ? state.osint.signals : []).filter(s =>
+    (!f.cat || s.category === f.cat) &&
+    (f.risk === "all" || RISK_RANK[sigRisk(s)] >= RISK_RANK[f.risk]) &&
+    (f.region === "all" || sigTouches(s, "eco", f.region)));
+}
+function renderIntel() {
+  const list = $("sigList"), cats = $("intelCats");
+  if (!state.osint) {
+    cats.replaceChildren();
+    list.replaceChildren(el("div", { class: "empty" }, el("strong", { text: state.osintStatus === "loading" ? "Loading signals…" : "The signals feed hasn't been published yet." }),
+      state.osintStatus === "loading" ? null : el("span", { text: "It appears after the next hourly run." })));
+    $("sigMore").hidden = true; $("intelSources").textContent = ""; return;
+  }
+  const all = state.osint.signals;
+  cats.replaceChildren(
+    el("button", { class: "chipbtn", type: "button", "aria-pressed": state.sig.cat ? "false" : "true", text: `All (${all.length})`, onclick: () => { state.sig.cat = null; state.sig.shown = 12; renderIntel(); } }),
+    ...state.osint.categories.map(c => ({ c, n: all.filter(s => s.category === c.id).length })).filter(x => x.n).map(({ c, n }) =>
+      el("button", { class: "chipbtn", type: "button", "aria-pressed": state.sig.cat === c.id ? "true" : "false", text: `${c.label} (${n})`, onclick: () => { state.sig.cat = state.sig.cat === c.id ? null : c.id; state.sig.shown = 12; renderIntel(); } }))
+  );
+  const items = filteredSignals();
+  list.replaceChildren(...(items.length ? items.slice(0, state.sig.shown).map(s => signalCard(s)) : [el("div", { class: "empty" }, el("strong", { text: "No signals match these filters." }))]));
+  $("sigMore").hidden = items.length <= state.sig.shown;
+  $("sigMore").textContent = `Show more signals (${items.length - state.sig.shown} more)`;
+  const ok = state.osint.sources.filter(s => s.ok);
+  $("intelMeta").textContent = `Open-source intelligence · updated ${ago(state.osint.updatedAt) || "recently"}`;
+  $("intelSources").textContent = `${ok.length} of ${state.osint.sources.length} sources reporting: ${ok.map(s => s.name).join(", ")}.` + (state.osint.assessedAt ? ` Last assessed ${ago(state.osint.assessedAt)}.` : " Not yet assessed by Claude.");
+}
+(function initIntel() {
+  for (const e of ECONOMIES) $("intelRegion").append(el("option", { value: e.id, text: e.label }));
+  $("intelRisk").addEventListener("change", e => { state.sig.risk = e.target.value; state.sig.shown = 12; renderIntel(); });
+  $("intelRegion").addEventListener("change", e => { state.sig.region = e.target.value; state.sig.shown = 12; renderIntel(); });
+  $("sigMore").addEventListener("click", () => { state.sig.shown += 12; renderIntel(); });
+})();
+
+/* ---------- exposure matrix ---------- */
+function renderMatrix() {
+  const box = $("matrix");
+  if (state.scanStatus !== "ready") { box.replaceChildren(el("p", { class: "status", text: state.scanStatus === "loading" ? "Loading scores…" : "Scores appear once a scan is loaded." })); return; }
+  const grid = INDUSTRIES.map(i => ({ i, cells: crossExposure("ind", i.id) }));
+  const max = Math.max(1, ...grid.flatMap(r => r.cells.map(c => Math.abs(c.net))));
+  box.replaceChildren(el("table", { class: "mx" },
+    el("thead", null, el("tr", null, el("th", { text: "" }), ...ECONOMIES.map(e => el("th", { scope: "col" }, el("button", { class: "linkbtn", type: "button", text: e.short, onclick: () => openDrill("eco", e.id) }))))),
+    el("tbody", null, grid.map(({ i, cells }) => el("tr", null,
+      el("th", { scope: "row" }, el("button", { class: "linkbtn", type: "button", style: "color:var(--ink);font-weight:600", text: i.short, onclick: () => openDrill("ind", i.id) })),
+      ...ECONOMIES.map(e => {
+        const c = cells.find(x => x.id === e.id);
+        if (!c) return el("td", null, el("span", { class: "cell none", style: "display:grid;place-items:center", "aria-label": `${i.label} and ${e.label}: no stories`, text: "·" }));
+        const pct = Math.round(14 + 56 * Math.min(1, Math.abs(c.net) / max));
+        const bg = c.net === 0 ? "var(--sunk)" : `color-mix(in oklab, var(${c.net > 0 ? "--tail" : "--head"}) ${pct}%, var(--surface))`;
+        return el("td", null, el("button", { class: "cell", type: "button", style: `background:${bg}`, title: `${i.label} × ${e.label}: ${signed(c.net)} across ${c.n} ${c.n === 1 ? "story" : "stories"}`,
+          "aria-label": `${i.label} in stories involving ${e.label}: ${signed(c.net)}, ${c.n} stories. Open details.`, onclick: () => openPair(i.id, e.id), text: signed(c.net) }));
+      })
+    )))
+  ));
+}
+
+/* ---------- trend sparkline from hourly history ---------- */
+function sparkline(kind, id) {
+  const pts = state.history.filter(h => h && h[kind] && typeof h[kind][id] === "number" && Date.now() - Date.parse(h.at) < 7 * 864e5).map(h => ({ t: Date.parse(h.at), v: h[kind][id] })).filter(p => !isNaN(p.t));
+  if (pts.length < 2) return el("p", { class: "status", text: "A trend line appears here after a few hourly scans." });
+  const W = innerWidth < 560 ? 360 : 600, H = innerWidth < 560 ? 130 : 150, L = 40, R = 12, T = 12, B = 24;
+  const t0 = pts[0].t, t1 = pts[pts.length - 1].t || t0 + 1;
+  const m = Math.max(1, ...pts.map(p => Math.abs(p.v))); const ymax = Math.ceil(m / 2) * 2;
+  const x = t => L + (W - L - R) * (t1 === t0 ? 1 : (t - t0) / (t1 - t0));
+  const y = v => T + (H - T - B) * (1 - (v + ymax) / (2 * ymax));
+  const svg = svgEl("svg", { viewBox: `0 0 ${W} ${H}`, class: "spark", role: "img", "aria-label": `Net score over the last ${Math.round((t1 - t0) / 36e5)} hours, from ${signed(pts[0].v)} to ${signed(pts[pts.length - 1].v)}` });
+  for (const v of [ymax, 0, -ymax]) {
+    svg.append(svgEl("line", { x1: L, x2: W - R, y1: y(v), y2: y(v), stroke: v === 0 ? "var(--zero)" : "var(--line)", "stroke-width": 1, "stroke-dasharray": v === 0 ? "" : "3 4" }));
+    const tx = svgEl("text", { x: L - 6, y: y(v) + 4, "text-anchor": "end" }); tx.textContent = v === 0 ? "0" : signed(v, 0); svg.append(tx);
+  }
+  const line = pts.map((p, i) => `${i ? "L" : "M"}${x(p.t).toFixed(1)},${y(p.v).toFixed(1)}`).join("");
+  svg.append(svgEl("path", { d: `${line}L${x(t1).toFixed(1)},${y(0)}L${x(t0).toFixed(1)},${y(0)}Z`, fill: "var(--accent)", opacity: ".14" }));
+  svg.append(svgEl("path", { d: line, fill: "none", stroke: "var(--accent)", "stroke-width": 2, "stroke-linejoin": "round" }));
+  const last = pts[pts.length - 1];
+  svg.append(svgEl("circle", { cx: x(last.t), cy: y(last.v), r: 4.5, fill: "var(--accent)", stroke: "var(--surface)", "stroke-width": 2 }));
+  const fmtT = t => new Date(t).toLocaleString(undefined, { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
+  for (const [t, anchor] of [[t0, "start"], [t1, "end"]]) { const tx = svgEl("text", { x: x(t), y: H - 6, "text-anchor": anchor }); tx.textContent = fmtT(t); svg.append(tx); }
+  const guide = svgEl("line", { y1: T, y2: H - B, stroke: "var(--ink-2)", "stroke-width": 1, visibility: "hidden" });
+  const dot = svgEl("circle", { r: 4, fill: "var(--ink)", visibility: "hidden" });
+  svg.append(guide, dot);
+  const hit = svgEl("rect", { x: L, y: 0, width: W - L - R, height: H, fill: "transparent" });
+  hit.addEventListener("mousemove", e => {
+    const box = svg.getBoundingClientRect(); const px = (e.clientX - box.left) / box.width * W;
+    const p = pts.reduce((a, b) => Math.abs(x(b.t) - px) < Math.abs(x(a.t) - px) ? b : a);
+    guide.setAttribute("x1", x(p.t)); guide.setAttribute("x2", x(p.t)); guide.setAttribute("visibility", "visible");
+    dot.setAttribute("cx", x(p.t)); dot.setAttribute("cy", y(p.v)); dot.setAttribute("visibility", "visible");
+    tip.replaceChildren(el("b", { text: fmtT(p.t) }), el("span", { class: "tn", text: `${signed(p.v)} · ${word(p.v)}` })); tip.hidden = false; moveTip(e);
+  });
+  hit.addEventListener("mouseleave", () => { guide.setAttribute("visibility", "hidden"); dot.setAttribute("visibility", "hidden"); tip.hidden = true; });
+  svg.append(hit);
+  return svg;
+}
+
+/* ---------- details dialog ---------- */
+const drill = $("drill");
+function showDialog(eyebrow, title, sections, hash) {
+  tip.hidden = true;
+  $("drillKind").textContent = eyebrow; $("drillTitle").textContent = title;
+  $("drillBody").replaceChildren(...sections.filter(Boolean));
+  $("drillBody").scrollTop = 0;
+  if (!drill.open) drill.showModal();
+  drill.scrollTop = 0;
+  try { history.replaceState(null, "", hash ? "#" + hash : location.pathname + location.search); } catch {}
+}
+drill.addEventListener("close", () => { try { history.replaceState(null, "", location.pathname + location.search); } catch {} });
+drill.addEventListener("click", e => { if (e.target === drill) drill.close(); });
+$("drillClose").addEventListener("click", () => drill.close());
+const sec = (title, ...kids) => el("section", { class: "drill-sec" }, el("h3", { text: title }), ...kids);
+function askAbout(text) {
+  drill.close(); $("askText").value = text;
+  $("askTitle").scrollIntoView({ behavior: reduceMotion() ? "auto" : "smooth", block: "start" });
+  $("askText").focus({ preventScroll: true });
+}
+function showInWire(kind, id) {
+  drill.close(); state.filter = { kind, id }; state.theme = null; renderAll();
+  $("wireTitle").scrollIntoView({ behavior: reduceMotion() ? "auto" : "smooth", block: "start" });
+}
+function driverRow(it, scores) {
+  return el("div", { class: "drv" },
+    el("div", { style: "display:grid;gap:4px" }, ...scores.filter(Boolean).map(s => pill(s))),
+    el("div", { style: "display:grid;gap:3px;min-width:0" },
+      el("h4", { text: it.headline }),
+      el("p", { text: [it.theme, it.date && fmtDate(it.date), `${it.confidence} confidence`].filter(Boolean).join(" · ") }),
+      ...it._whys.filter(Boolean).map(w => el("p", { style: "color:var(--ink-2)", text: w }))));
+}
+function relatedSignals(test) {
+  if (!state.osint) return el("p", { class: "status", text: "The signals feed hasn't loaded yet." });
+  const list = state.osint.signals.filter(test).sort((a, b) => RISK_RANK[sigRisk(b)] - RISK_RANK[sigRisk(a)]).slice(0, 5);
+  return list.length ? el("div", { class: "sig-list" }, ...list.map(s => signalCard(s, true))) : el("p", { class: "status", text: "No current intelligence signals touch this." });
+}
+function openDrill(kind, id) {
+  const k = KIND[kind]; const def = k.defs[id]; if (!def) return;
+  const items = activeItems();
+  const r = totals(items, k.key, kind === "ind" ? INDUSTRIES : ECONOMIES).find(x => x.id === id);
+  const d = delta24(kind, id, r.net);
+  const stories = items.filter(it => scoreOf(it, k.key, id)).sort((a, b) => Math.abs(scoreOf(b, k.key, id) * weight(b)) - Math.abs(scoreOf(a, k.key, id) * weight(a)));
+  const cross = crossExposure(kind, id);
+  const cmax = Math.max(1, ...cross.map(c => Math.abs(c.net)));
+  const o = KIND[k.other];
+  showDialog(`${k.noun} · details`, def.label, [
+    el("div", { class: "kpis" },
+      el("div", { class: "kpi" }, el("b", { text: r.n ? signed(r.net) : "—" }), el("span", { text: word(r.net) })),
+      el("div", { class: "kpi" }, el("b", { text: d === null ? "—" : signed(d) }), el("span", { text: "Change over 24 hours" })),
+      el("div", { class: "kpi" }, el("b", { text: signed(r.pos) }), el("span", { text: "From tailwinds" })),
+      el("div", { class: "kpi" }, el("b", { text: signed(r.neg) }), el("span", { text: "From headwinds" }))),
+    sec("Trend over the last 7 days", sparkline(kind, id)),
+    sec(kind === "ind" ? "Where the pressure lands, by economy" : "Which industries carry it",
+      cross.length ? el("div", { class: "mini" }, ...cross.map(c => {
+        const pct = Math.min(50, Math.abs(c.net) / cmax * 50);
+        const target = kind === "ind" ? () => openPair(id, c.id) : () => openPair(c.id, id);
+        return el("button", { class: "row", type: "button", onclick: target, "aria-label": `${o.defs[c.id].label}: ${signed(c.net)} across ${c.n} stories. Open details.` },
+          el("span", { class: "lab", text: o.defs[c.id].label }),
+          el("span", { class: "track" }, c.net ? el("span", { class: "bar " + (c.net > 0 ? "pos" : "neg"), style: `width:calc(${pct}% - 1px)` }) : null),
+          el("span", { class: "v", text: signed(c.net) }));
+      })) : el("p", { class: "status", text: "No stories link this to a specific economy or industry yet." })),
+    sec(`What's driving it (${stories.length} ${stories.length === 1 ? "story" : "stories"})`,
+      stories.length ? el("div", null, ...stories.map(it => driverRow({ ...it, _whys: [(it[k.key].find(s => s.id === id) || {}).why] }, [scoreOf(it, k.key, id)])))
+        : el("p", { class: "status", text: "No stories in the current scan touch this." })),
+    sec("Related intelligence signals", relatedSignals(s => sigTouches(s, kind, id))),
+    el("div", { class: "drill-actions" },
+      stories.length ? el("button", { class: "btn ghost", type: "button", text: `Show these stories in the wire`, onclick: () => showInWire(kind, id) }) : null,
+      el("button", { class: "btn primary", type: "button", text: `Ask the desk about ${def.short}`, onclick: () => askAbout(`What is driving pressure on ${def.label} right now, and what should I watch next?`) }))
+  ], `${kind}-${id}`);
+}
+function openPair(indId, ecoId) {
+  const i = IND[indId], e = ECO[ecoId]; if (!i || !e) return;
+  const stories = activeItems().filter(it => scoreOf(it, "industries", indId) && scoreOf(it, "economies", ecoId))
+    .sort((a, b) => Math.abs(scoreOf(b, "industries", indId)) - Math.abs(scoreOf(a, "industries", indId)));
+  const net = key => Math.round(stories.reduce((s, it) => s + scoreOf(it, key, key === "industries" ? indId : ecoId) * weight(it), 0) * 10) / 10;
+  const ni = net("industries"), ne = net("economies");
+  showDialog("Exposure pair", `${i.label} × ${e.label}`, [
+    el("div", { class: "kpis" },
+      el("div", { class: "kpi" }, el("b", { text: signed(ni) }), el("span", { text: `${i.short} in these stories` })),
+      el("div", { class: "kpi" }, el("b", { text: signed(ne) }), el("span", { text: `${e.short} in these stories` })),
+      el("div", { class: "kpi" }, el("b", { text: String(stories.length) }), el("span", { text: stories.length === 1 ? "Story" : "Stories" })),
+      el("div", { class: "kpi" }, el("b", { text: word(ni) }), el("span", { text: "Reading for the industry" }))),
+    sec("Stories linking them",
+      stories.length ? el("div", null, ...stories.map(it => driverRow({ ...it, _whys: [
+        `${i.short}: ${(it.industries.find(s => s.id === indId) || {}).why || ""}`, `${e.short}: ${(it.economies.find(s => s.id === ecoId) || {}).why || ""}`] },
+        [scoreOf(it, "industries", indId), scoreOf(it, "economies", ecoId)]))) : el("p", { class: "status", text: "No stories in the current scan link these two." })),
+    sec("Related intelligence signals", relatedSignals(s => sigTouches(s, "ind", indId) && sigTouches(s, "eco", ecoId))),
+    el("div", { class: "drill-actions" },
+      el("button", { class: "btn ghost", type: "button", text: `Open ${i.short}`, onclick: () => openDrill("ind", indId) }),
+      el("button", { class: "btn ghost", type: "button", text: `Open ${e.short}`, onclick: () => openDrill("eco", ecoId) }),
+      el("button", { class: "btn primary", type: "button", text: "Ask the desk", onclick: () => askAbout(`How exposed is ${i.label.toLowerCase()} in ${e.label} to the current news, and what are the main risks?`) }))
+  ], `pair-${indId}-${ecoId}`);
+}
+function openFromHash() {
+  const m = /^#(ind|eco)-([a-z]+)$/.exec(location.hash) || /^#pair-([a-z]+)-([a-z]+)$/.exec(location.hash);
+  if (!m || state.scanStatus !== "ready") return;
+  if (location.hash.startsWith("#pair-")) openPair(m[1], m[2]); else openDrill(m[1], m[2]);
+}
 
 /* ---------- ask the desk ---------- */
 const MAX_TURNS = 6;
@@ -645,24 +1035,50 @@ document.querySelectorAll(".ex").forEach(b => b.addEventListener("click", () => 
 renderThread();
 
 /* ---------- boot: load the latest scan, re-check every 5 minutes ---------- */
-let lastAt = null;
+let lastAt = null, lastOsintAt = null, firstLoad = true;
+async function loadOsint() {
+  try {
+    const res = await fetch("data/osint.json", { cache: "no-store" });
+    if (!res.ok) throw new Error("osint " + res.status);
+    const d = await res.json();
+    if (d.updatedAt === lastOsintAt && d.assessedAt === (state.osint && state.osint.assessedAt)) return false;
+    lastOsintAt = d.updatedAt;
+    state.osint = {
+      updatedAt: typeof d.updatedAt === "string" ? d.updatedAt : "",
+      assessedAt: typeof d.assessedAt === "string" ? d.assessedAt : "",
+      sources: (Array.isArray(d.sources) ? d.sources : []).filter(x => x && typeof x.name === "string").map(x => ({ name: x.name.slice(0, 60), ok: !!x.ok })),
+      categories: (Array.isArray(d.categories) ? d.categories : []).filter(x => x && typeof x.id === "string" && typeof x.label === "string"),
+      signals: (Array.isArray(d.signals) ? d.signals : []).map(cleanSignal).filter(Boolean)
+    };
+    state.osintStatus = "ready";
+  } catch {
+    if (!state.osint) state.osintStatus = "error";
+  }
+  return true;
+}
 async function load() {
+  const osintChanged = loadOsint();
+  let scanChanged = true;
   try {
     const [scanRes, histRes] = await Promise.all([fetch("data/scan.json", { cache: "no-store" }), fetch("data/history.json", { cache: "no-store" })]);
     if (!scanRes.ok) throw new Error("scan " + scanRes.status);
     const d = await scanRes.json();
     state.history = histRes.ok ? (await histRes.json().catch(() => [])) : [];
     if (!Array.isArray(state.history)) state.history = [];
-    if (d.scannedAt === lastAt && state.scanStatus === "ready") { renderHeader(); return; }
-    lastAt = d.scannedAt;
-    const items = (Array.isArray(d.items) ? d.items : []).map((x, i) => cleanItem(x, "s" + i)).filter(Boolean);
-    state.scan = { scannedAt: d.scannedAt, window: typeof d.window === "string" ? d.window.slice(0, 60) : "", items };
-    state.scanStatus = "ready";
+    if (d.scannedAt === lastAt && state.scanStatus === "ready") scanChanged = false;
+    else {
+      lastAt = d.scannedAt;
+      const items = (Array.isArray(d.items) ? d.items : []).map((x, i) => cleanItem(x, "s" + i)).filter(Boolean);
+      state.scan = { scannedAt: d.scannedAt, window: typeof d.window === "string" ? d.window.slice(0, 60) : "", items };
+      state.scanStatus = "ready";
+    }
   } catch {
     if (state.scanStatus !== "ready") state.scanStatus = "error";
   }
-  renderAll();
+  if (scanChanged || (await osintChanged)) renderAll(); else renderHeader();
+  if (firstLoad) { firstLoad = false; openFromHash(); }
 }
+window.addEventListener("hashchange", openFromHash);
 renderAll();
 load();
 setInterval(load, 5 * 60 * 1000);

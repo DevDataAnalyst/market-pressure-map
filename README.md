@@ -13,6 +13,21 @@ Where the latest global headlines push the world's biggest industries and econom
 3. Claude picks the 12–16 most market-moving developments and scores each one from −3 (strong headwind) to +3 (strong tailwind) for every industry and economy it affects. The script checks the output and keeps the previous scan if anything looks wrong.
 4. The job commits `public/data/scan.json` and `public/data/history.json`. Vercel redeploys the static site on every push.
 
+## Open-source intelligence feed
+
+`scripts/osint.mjs` runs first in every hourly job and needs no API key. It collects geopolitical and economic signals from open sources:
+
+- **Media monitoring:** GDELT, which watches world news in many languages, queried for sanctions and trade, conflict, shipping chokepoints and energy supply.
+- **Conflict and humanitarian:** UN News, ReliefWeb and Crisis Group.
+- **Hazards:** GDACS disaster alerts (orange and red only) and USGS significant earthquakes.
+- **Official:** Federal Reserve, ECB, Bank of England, IMF, WTO and the US Energy Information Administration.
+
+Each signal is tagged by rules with a category, the places, industries and economies it exposes, and a severity (watch, elevated or high). Severity rises with intensity words, disaster alert level, earthquake magnitude and how many separate sources report the same thing. Near-duplicate reports are merged. Headlines that name companies are dropped. When the Claude scan runs, it also assesses the top 30 signals with a neutral headline, a market-impact risk level, a short note and signed scores; those signals show as "Assessed". The feed is written to `public/data/osint.json` and is committed even if the Claude scan fails.
+
+## Drill-down
+
+Select any industry or economy (in the bars, the headline verdicts, the exposure grid or a signal's chips) to open its details: net score and 24-hour change, a 7-day trend line, where the pressure lands across the other dimension, the stories driving it, related intelligence signals, and a shortcut to ask the desk about it. The industry × economy grid opens the stories linking any pair. Details have shareable links such as `#ind-energy`, `#eco-india` or `#pair-energy-india`.
+
 The page totals the scores, counting high-confidence calls at 1.0, medium at 0.7 and low at 0.4. It also shows the change over the last 24 hours.
 
 ## Setup
@@ -39,6 +54,7 @@ Each run sends about 140 headlines and gets back about 15 scored stories. On the
 
 ```bash
 npm ci
+node scripts/osint.mjs                  # intelligence feed only, no API key
 DRY_RUN=1 npm run refresh               # fetch headlines only, no API call
 ANTHROPIC_API_KEY=... npm run refresh   # full scan, writes public/data/
 npm run serve                           # view the site locally

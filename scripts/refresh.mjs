@@ -2,14 +2,16 @@
 // market-moving stories, then write public/data/scan.json and append to history.json.
 // On any failure it exits without touching the last good scan.
 import Anthropic from "@anthropic-ai/sdk";
-import { XMLParser } from "fast-xml-parser";
 import { readFile, writeFile } from "node:fs/promises";
+import { CONF, ECONOMIES, INDUSTRIES, THEMES, fail, fetchFeed, titleKey } from "./shared.mjs";
 
 const MODEL = process.env.SCAN_MODEL || "claude-opus-5-5";
 const WINDOW_HOURS = 36;
 const MAX_HEADLINES = 140;
+const MAX_SIGNALS_ASSESSED = 30;
 const SCAN_PATH = new URL("../public/data/scan.json", import.meta.url);
 const HISTORY_PATH = new URL("../public/data/history.json", import.meta.url);
+const OSINT_PATH = new URL("../public/data/osint.json", import.meta.url);
 
 const FEEDS = [
   "https://feeds.bbci.co.uk/news/business/rss.xml",
@@ -28,62 +30,11 @@ const FEEDS = [
   "https://news.google.com/rss/search?q=central+bank+OR+oil+OR+tariffs+OR+inflation+when:1d&hl=en-US&gl=US&ceid=US:en",
 ];
 
-const INDUSTRIES = {
-  energy: "Energy (oil, gas & power)",
-  financials: "Banks & financials",
-  tech: "Technology & semiconductors",
-  healthcare: "Healthcare & pharma",
-  autos: "Autos & mobility",
-  consumer: "Retail & consumer goods",
-  industrials: "Industrials & machinery",
-  materials: "Materials & mining",
-  agrifood: "Agriculture & food",
-  realestate: "Real estate & construction",
-  transport: "Transport & logistics",
-};
-const ECONOMIES = {
-  us: "United States", china: "China", eurozone: "Euro area", japan: "Japan",
-  india: "India", uk: "United Kingdom", gulf: "Gulf states",
-};
-const THEMES = ["Energy & geopolitics", "Monetary policy", "Rates & bonds", "Trade", "Growth data", "Tech cycle", "Commodities", "Currencies"];
-const CONF = { high: 1, medium: 0.7, low: 0.4 };
-const fail = (msg) => {
-  console.error(process.env.GITHUB_ACTIONS ? `::error::${msg}` : msg);
-  process.exit(1);
-};
-
 if (!process.env.DRY_RUN && !process.env.ANTHROPIC_API_KEY) {
   fail("ANTHROPIC_API_KEY is not set. Add it under Settings → Secrets and variables → Actions.");
 }
 
 /* ---------- 1. Collect headlines ---------- */
-const parser = new XMLParser({ ignoreAttributes: false, attributeNamePrefix: "@_" });
-const txt = (v) => (v == null ? "" : typeof v === "object" ? String(v["#text"] ?? "") : String(v));
-const clean = (s) => txt(s).replace(/<[^>]+>/g, " ").replace(/&[a-z#0-9]+;/gi, " ").replace(/\s+/g, " ").trim();
-const linkOf = (it) => {
-  const l = it.link;
-  if (typeof l === "string") return l.trim();
-  if (Array.isArray(l)) return l.map((x) => x["@_href"] || txt(x)).find(Boolean) || "";
-  if (l && typeof l === "object") return l["@_href"] || txt(l);
-  return txt(it.guid);
-};
-
-async function fetchFeed(url) {
-  const res = await fetch(url, {
-    headers: { "user-agent": "Mozilla/5.0 (compatible; market-pressure-map/1.0)" },
-    signal: AbortSignal.timeout(15000),
-  });
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  const doc = parser.parse(await res.text());
-  const raw = doc?.rss?.channel?.item ?? doc?.feed?.entry ?? doc?.["rdf:RDF"]?.item ?? [];
-  return (Array.isArray(raw) ? raw : [raw]).map((it) => ({
-    title: clean(it.title),
-    link: linkOf(it),
-    summary: clean(it.description ?? it.summary ?? it.content).slice(0, 280),
-    published: Date.parse(txt(it.pubDate ?? it.published ?? it.updated ?? it["dc:date"])),
-  }));
-}
-
 const results = await Promise.allSettled(FEEDS.map(fetchFeed));
 results.forEach((r, i) => { if (r.status === "rejected") console.warn(`feed failed: ${FEEDS[i]} (${r.reason?.message})`); });
 const cutoff = Date.now() - WINDOW_HOURS * 3600_000;
@@ -92,7 +43,7 @@ const headlines = results
   .flatMap((r) => (r.status === "fulfilled" ? r.value : []))
   .filter((h) => h.title && /^https?:\/\//.test(h.link) && (Number.isNaN(h.published) || h.published >= cutoff))
   .filter((h) => {
-    const key = h.title.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim().slice(0, 90);
+    const key = titleKey(h.title);
     if (seen.has(key)) return false;
     seen.add(key);
     return true;
@@ -145,10 +96,30 @@ const schema = {
         additionalProperties: false,
       },
     },
+    signals: {
+      type: "array",
+      items: {
+        type: "object",
+        properties: {
+          ref: { type: "integer" },
+          headline: { type: "string" },
+          risk: { type: "string", enum: ["watch", "elevated", "high"] },
+          note: { type: "string" },
+          industries: { type: "array", items: impact(INDUSTRIES) },
+          economies: { type: "array", items: impact(ECONOMIES) },
+        },
+        required: ["ref", "headline", "risk", "note", "industries", "economies"],
+        additionalProperties: false,
+      },
+    },
   },
-  required: ["items"],
+  required: ["items", "signals"],
   additionalProperties: false,
 };
+
+let osint = null;
+try { osint = JSON.parse(await readFile(OSINT_PATH, "utf8")); } catch {}
+const osintSignals = (osint?.signals ?? []).slice(0, MAX_SIGNALS_ASSESSED);
 
 const system = `You are a senior macro strategist writing a market-impact wire for a global audience.
 
@@ -163,17 +134,23 @@ Rules:
 - "headline": a neutral rewrite of at most 110 characters with the key figure in it. "summary": what happened, at most 45 words, with the numbers reported. "rationale": the transmission channel to markets, at most 55 words.
 - "date": the date of the development as YYYY-MM-DD. "id": a short lowercase slug.
 - Be calibrated: use 3 only for large, direct effects, and use "low" confidence for speculative calls.
-- Use only facts present in the headlines. Do not invent figures.`;
+- Use only facts present in the headlines. Do not invent figures.
+
+Open-source intelligence signals:
+After the headlines you may get numbered OSINT signals ([O1], [O2] …) from conflict trackers, disaster alerts, official bodies and media monitoring. Return one entry in "signals" for each signal that could plausibly move markets (skip the rest), with "ref" set to its number. "headline": a neutral rewrite of at most 100 characters with no company names. "risk": watch, elevated or high, judged by likely market impact rather than human severity. "note": at most 30 words on how it reaches markets. Score industries (0 to 4) and economies (0 to 4) with the same -3 to 3 scale. If there are no signals, return an empty array.`;
 
 const today = new Date().toISOString().slice(0, 10);
 const list = headlines
   .map((h, i) => `[${i + 1}] ${Number.isNaN(h.published) ? "" : new Date(h.published).toISOString().slice(0, 16).replace("T", " ") + " UTC · "}${h.title}${h.summary ? ` — ${h.summary}` : ""}`)
   .join("\n");
+const signalList = osintSignals.length
+  ? `\n\nOSINT signals:\n\n${osintSignals.map((s, i) => `[O${i + 1}] ${s.category} · ${s.sourceType}: ${s.source}${s.places.length ? ` · ${s.places.join(", ")}` : ""} · ${s.title}`).join("\n")}`
+  : "";
 const request = {
   model: MODEL,
   max_tokens: 32000,
   system,
-  messages: [{ role: "user", content: `Today is ${today}. Headlines from the last ${WINDOW_HOURS} hours:\n\n${list}` }],
+  messages: [{ role: "user", content: `Today is ${today}. Headlines from the last ${WINDOW_HOURS} hours:\n\n${list}${signalList}` }],
   output_config: { effort: "medium", format: { type: "json_schema", schema } },
 };
 
@@ -253,6 +230,26 @@ let history = [];
 try { history = JSON.parse(await readFile(HISTORY_PATH, "utf8")); } catch {}
 history.push({ at: scan.scannedAt, ind: net("industries", INDUSTRIES), eco: net("economies", ECONOMIES) });
 await writeFile(HISTORY_PATH, JSON.stringify(history.slice(-24 * 14)) + "\n");
+
+if (osint && osintSignals.length) {
+  let assessed = 0;
+  for (const a of parsed.signals ?? []) {
+    const sig = osintSignals[Number(a.ref) - 1];
+    if (!sig) continue;
+    sig.assessment = {
+      headline: String(a.headline ?? "").slice(0, 160),
+      risk: ["watch", "elevated", "high"].includes(a.risk) ? a.risk : sig.severity,
+      note: String(a.note ?? "").slice(0, 300),
+      industries: impacts(a.industries, INDUSTRIES),
+      economies: impacts(a.economies, ECONOMIES),
+      at: scan.scannedAt,
+    };
+    assessed++;
+  }
+  osint.assessedAt = scan.scannedAt;
+  await writeFile(OSINT_PATH, JSON.stringify(osint, null, 1) + "\n");
+  console.log(`Assessed ${assessed} of ${osintSignals.length} OSINT signals.`);
+}
 
 const u = message.usage;
 console.log(`Wrote ${items.length} stories with ${message.model} (input ${u.input_tokens}, output ${u.output_tokens} tokens).`);

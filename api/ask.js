@@ -71,12 +71,21 @@ ${stories}`;
   } catch {
     cachedScan = "The latest scan could not be loaded.";
   }
+  try {
+    const osint = JSON.parse(await readFile(path.join(process.cwd(), "public/data/osint.json"), "utf8"));
+    const lines = (osint.signals ?? []).slice(0, 25).map((s, i) => {
+      const a = s.assessment;
+      const risk = a?.risk || s.severity;
+      return `${i + 1}. [${risk} · ${s.category} · ${s.sourceType}: ${s.source} · ${s.published || "undated"}] ${a?.headline || s.title}${a?.note ? ` — ${a.note}` : ""}${s.places?.length ? ` (places: ${s.places.join(", ")})` : ""}`;
+    });
+    if (lines.length) cachedScan += `\n\nOpen-source intelligence signals (updated ${osint.updatedAt}; unassessed items are raw source headlines tagged by rules):\n${lines.join("\n")}`;
+  } catch {}
   return cachedScan;
 }
 
 const RULES = `You are the market desk assistant on Market Pressure Map, a site that scores global news for its impact on the largest industries and economies. Visitors ask about markets, economies, industries, commodities, currencies and economic policy.
 
-- Ground your answer in the scan below. Use web search for recent facts the scan doesn't cover, and say plainly when neither has the answer.
+- Ground your answer in the scan and the intelligence signals below. Use web search for recent facts the scan doesn't cover, and say plainly when neither has the answer.
 - Never name individual companies, brands or listed firms. Discuss industries and groups instead. If someone asks about a specific company, say the site covers sectors and answer at the industry level. Central banks, governments and bodies such as OPEC+ may be named.
 - Don't give personal investment advice or tell anyone to buy, sell or hold anything. Explain the drivers, scenarios and risks.
 - Keep answers to 80–200 words. Use plain text: short paragraphs, and "- " bullets if a list helps. No headings, tables or bold.

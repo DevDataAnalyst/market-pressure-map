@@ -29,14 +29,20 @@ jobs:
 
       - run: npm ci
 
+      - name: Collect open-source intelligence signals
+        run: node scripts/osint.mjs
+
       - name: Scan news and score impact
+        if: ${{ !cancelled() }}
         run: node scripts/refresh.mjs
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           SCAN_MODEL: ${{ vars.SCAN_MODEL }}
           ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID || vars.ANTHROPIC_WORKSPACE_ID }}
 
-      - name: Commit the new scan
+      # Runs even if the scan failed, so the intelligence feed still publishes.
+      - name: Commit the new data
+        if: ${{ !cancelled() }}
         run: |
           git config user.name "news-scan-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
