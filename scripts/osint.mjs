@@ -31,12 +31,12 @@ const GDELT_QUERIES = [
 ];
 
 const CATEGORIES = [
-  { id: "conflict", label: "Conflict & security", weight: 3, re: /\b(war|missile|airstrike|air strike|drone strike|military|troops|attack|shelling|ceasefire|insurgen|coup|clashes|navy|naval|invasion|hostage|terror)/i, ind: ["energy", "transport", "industrials"] },
+  { id: "conflict", label: "Conflict & security", weight: 2, re: /\b(war|missile|airstrike|air strike|drone strike|military|troops|attack|shelling|ceasefire|insurgen|coup|clashes|navy|naval|invasion|hostage|terror)/i, ind: ["energy", "transport", "industrials"] },
   { id: "shipping", label: "Shipping & chokepoints", weight: 3, re: /\b(strait|shipping|canal|red sea|hormuz|bab el|freight|tanker|container ship|vessel|port closure|blockade|black sea)/i, ind: ["transport", "energy", "consumer"] },
   { id: "sanctions", label: "Sanctions & trade", weight: 2, re: /\b(sanction|embargo|export control|tariff|trade war|trade deal|blacklist|asset freeze|retaliat|anti-dumping|wto)/i, ind: ["industrials", "tech", "autos", "agrifood"] },
   { id: "energy", label: "Energy supply", weight: 2, re: /\b(oil|crude|opec|natural gas|\blng\b|pipeline|refiner|power grid|blackout|electricity|uranium|coal)/i, ind: ["energy", "materials", "transport"] },
-  { id: "policy", label: "Policy & rates", weight: 2, re: /\b(central bank|interest rate|rate hike|rate cut|monetary|inflation|federal reserve|ecb|bank of england|imf|bond yield|devalu|currency|debt|default|fiscal)/i, ind: ["financials", "realestate"] },
-  { id: "hazard", label: "Natural hazards", weight: 2, re: /\b(earthquake|cyclone|typhoon|hurricane|flood|drought|wildfire|volcan|tsunami|heatwave|storm)/i, ind: ["agrifood", "realestate", "transport"] },
+  { id: "policy", label: "Policy & rates", weight: 1, re: /\b(central bank|interest rate|rate hike|rate cut|monetary|inflation|federal reserve|ecb|bank of england|imf|bond yield|devalu|currency|debt|default|fiscal)/i, ind: ["financials", "realestate"] },
+  { id: "hazard", label: "Natural hazards", weight: 1, re: /\b(earthquake|cyclone|typhoon|hurricane|flood|drought|wildfire|volcan|tsunami|heatwave|storm)/i, ind: ["agrifood", "realestate", "transport"] },
   { id: "food", label: "Food & agriculture", weight: 1, re: /\b(wheat|grain|rice|maize|corn|fertili|famine|food price|harvest|food insecurity)/i, ind: ["agrifood", "consumer"] },
   { id: "politics", label: "Politics & unrest", weight: 1, re: /\b(election|protest|unrest|parliament|impeach|referendum|resign|state of emergency|martial law)/i, ind: ["financials"] },
 ];
@@ -69,6 +69,13 @@ const INTENSIFIER = /\b(killed|dead|deaths|escalat|invasion|blockade|seiz|shut|h
 const COMPANY_MARKERS = /\b(Inc|Corp|Corporation|Ltd|LLC|plc|PLC|Holdings|N\.V\.)\b|\$[A-Z]{1,5}\b|\b(NYSE|NASDAQ|Nasdaq):/;
 const STOP = new Set(["about", "after", "against", "amid", "their", "there", "these", "which", "while", "would", "could", "says", "said", "with", "from", "that", "this", "into", "over", "under", "will", "have", "been", "more", "than"]);
 
+// Places whose disruption tends to reach global markets (energy, shipping, chips, grain).
+const MARKET_PLACES = new Set(["Russia", "Ukraine", "Israel", "Lebanon", "Iran", "Iraq", "Yemen", "Taiwan", "North Korea", "South Korea", "Venezuela", "Libya", "Red Sea", "Black Sea", "Strait of Hormuz", "Suez Canal", "Panama Canal", "Taiwan Strait", "Turkey", "Egypt", "Mexico", "Brazil", "Indonesia", "Canada", "Australia"]);
+// Central-bank and official feeds also publish appointments, events and speeches; keep only market business.
+const POLICY_BUSINESS = /\b(rate|inflation|monetary|financial stability|policy statement|fomc|minutes of the monetary|balance sheet|stress test|liquidity|tariff|sanction|trade|outlook|forecast|growth|recession|debt|currency|exchange|oil|gas|energy|supply)/i;
+const DIGEST = /^(world news in brief|news in brief|daily briefing|week in review)/i;
+
+const warn = (msg) => console.warn(process.env.GITHUB_ACTIONS ? `::warning::${msg}` : msg);
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function fetchGdelt() {
@@ -78,8 +85,9 @@ async function fetchGdelt() {
     if (i) await sleep(6000); // GDELT asks for one request every five seconds
     const url = `https://api.gdeltproject.org/api/v2/doc/doc?query=${encodeURIComponent(`${g.q} sourcelang:english`)}&mode=ArtList&maxrecords=50&timespan=24h&sort=HybridRel&format=json`;
     try {
-      const body = await fetchText(url);
-      const data = JSON.parse(body);
+      let body = await fetchText(url).catch(async (err) => { await sleep(10000); return fetchText(url); });
+      let data;
+      try { data = JSON.parse(body); } catch { throw new Error(`not JSON: ${body.replace(/\s+/g, " ").slice(0, 140)}`); }
       ok++;
       for (const a of data.articles ?? []) {
         const m = /^(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})Z$/.exec(a.seendate || "");
@@ -93,7 +101,7 @@ async function fetchGdelt() {
         });
       }
     } catch (err) {
-      console.warn(`GDELT "${g.label}" failed: ${err.message}`);
+      warn(`GDELT "${g.label}" failed: ${err.message}`);
     }
   }
   return { name: "GDELT", type: "Media monitor", ok: ok > 0, count: out.length, items: out };
@@ -113,7 +121,7 @@ async function fetchUsgs() {
     }));
     return { name: "USGS earthquakes", type: "Disaster alerts", ok: true, count: items.length, items };
   } catch (err) {
-    console.warn(`USGS failed: ${err.message}`);
+    warn(`USGS failed: ${err.message}`);
     return { name: "USGS earthquakes", type: "Disaster alerts", ok: false, count: 0, items: [] };
   }
 }
@@ -128,14 +136,19 @@ async function fetchRss(src) {
     const kept = src.name === "GDACS" ? items.filter((i) => i.alert === "orange" || i.alert === "red") : items;
     return { name: src.name, type: src.type, ok: true, count: kept.length, items: kept };
   } catch (err) {
-    console.warn(`${src.name} failed: ${err.message}`);
+    warn(`${src.name} failed: ${err.message}`);
     return { name: src.name, type: src.type, ok: false, count: 0, items: [] };
   }
 }
 
 function tag(item) {
+  if (DIGEST.test(item.title)) return null;
   const text = `${item.title} ${item.summary || ""}`;
-  const cats = CATEGORIES.filter((c) => c.re.test(text));
+  let cats = CATEGORIES.filter((c) => c.re.test(item.title));
+  let penalty = 0;
+  if (!cats.length) { cats = CATEGORIES.filter((c) => c.re.test(item.summary || "")); penalty = 1; }
+  const official = item.sourceType === "Central bank" || item.sourceType === "Official";
+  if (official && !POLICY_BUSINESS.test(item.title)) return null;
   if (item.sourceType === "Disaster alerts" && !cats.some((c) => c.id === "hazard")) cats.unshift(CATEGORIES.find((c) => c.id === "hazard"));
   if (item.sourceType === "Central bank" && !cats.some((c) => c.id === "policy")) cats.unshift(CATEGORIES.find((c) => c.id === "policy"));
   if (!cats.length) return null;
@@ -147,7 +160,15 @@ function tag(item) {
   const economies = ECONOMY_WORDS.filter(([, re]) => re.test(text)).map(([id]) => id);
   const places = PLACES.filter((p) => new RegExp(`\\b${p}\\b`, "i").test(text)).slice(0, 4);
 
-  let score = primary.weight;
+  // Humanitarian and political stories only count when they touch a market-relevant place or economy.
+  const marketPlace = places.some((p) => MARKET_PLACES.has(p));
+  const marketCats = cats.some((c) => ["shipping", "sanctions", "energy", "food", "policy"].includes(c.id));
+  const alerted = item.alert === "red" || item.alert === "orange" || item.magnitude >= 6;
+  if (!marketPlace && !economies.length && !marketCats && !alerted) return null;
+
+  let score = primary.weight - penalty;
+  if (marketPlace) score += 1;
+  if (/\b(rais|hik|cut|lower|hold|keep|leave)\w* (its |the )?(key |policy |benchmark |interest |bank )*rates?\b|rate decision|monetary policy decision|fomc statement/i.test(item.title)) score += 2;
   if (INTENSIFIER.test(text)) score += 1;
   if (cats.length >= 3) score += 1;
   if (economies.length) score += 1;
