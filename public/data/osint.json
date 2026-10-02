@@ -1,0 +1,580 @@
+{
+ "updatedAt": "2026-10-02T09:09:39.377Z",
+ "sources": [
+  {
+   "name": "UN News",
+   "type": "Intergovernmental",
+   "ok": true,
+   "count": 30
+  },
+  {
+   "name": "ReliefWeb",
+   "type": "Humanitarian",
+   "ok": false,
+   "count": 0
+  },
+  {
+   "name": "GDACS",
+   "type": "Disaster alerts",
+   "ok": true,
+   "count": 6
+  },
+  {
+   "name": "Crisis Group",
+   "type": "Conflict tracker",
+   "ok": true,
+   "count": 10
+  },
+  {
+   "name": "IMF",
+   "type": "Official",
+   "ok": false,
+   "count": 0
+  },
+  {
+   "name": "Federal Reserve",
+   "type": "Central bank",
+   "ok": true,
+   "count": 20
+  },
+  {
+   "name": "ECB",
+   "type": "Central bank",
+   "ok": true,
+   "count": 15
+  },
+  {
+   "name": "Bank of England",
+   "type": "Central bank",
+   "ok": true,
+   "count": 50
+  },
+  {
+   "name": "WTO",
+   "type": "Official",
+   "ok": true,
+   "count": 10
+  },
+  {
+   "name": "US EIA",
+   "type": "Official",
+   "ok": true,
+   "count": 20
+  },
+  {
+   "name": "USGS earthquakes",
+   "type": "Disaster alerts",
+   "ok": true,
+   "count": 2
+  },
+  {
+   "name": "GDELT",
+   "type": "Media monitor",
+   "ok": false,
+   "count": 0
+  }
+ ],
+ "categories": [
+  {
+   "id": "conflict",
+   "label": "Conflict & security"
+  },
+  {
+   "id": "shipping",
+   "label": "Shipping & chokepoints"
+  },
+  {
+   "id": "sanctions",
+   "label": "Sanctions & trade"
+  },
+  {
+   "id": "energy",
+   "label": "Energy supply"
+  },
+  {
+   "id": "policy",
+   "label": "Policy & rates"
+  },
+  {
+   "id": "hazard",
+   "label": "Natural hazards"
+  },
+  {
+   "id": "food",
+   "label": "Food & agriculture"
+  },
+  {
+   "id": "politics",
+   "label": "Politics & unrest"
+  }
+ ],
+ "signals": [
+  {
+   "id": "world-news-in-brief-marshall-islands-nuclear-legacy-flydubai",
+   "title": "World News in Brief: Marshall Islands nuclear legacy, FlyDubai attack condemned, Ukraine update, breast cancer treatment expanded in West Bank",
+   "link": "https://news.un.org/feed/view/en/story/2026/10/1168503",
+   "source": "UN News",
+   "sourceType": "Intergovernmental",
+   "published": "2026-10-01T12:00:00.000Z",
+   "category": "conflict",
+   "categories": [
+    "conflict"
+   ],
+   "places": [
+    "Ukraine"
+   ],
+   "industries": [
+    "energy",
+    "transport",
+    "industrials",
+    "financials"
+   ],
+   "economies": [
+    "us"
+   ],
+   "severity": "high",
+   "severityScore": 5,
+   "reports": 1,
+   "also": []
+  },
+  {
+   "id": "the-houthis-advance-to-bab-al-mandab-has-yemen-s-war-returne",
+   "title": "The Houthis’ Advance to Bab al-Mandab: Has Yemen’s War Returned?",
+   "link": "https://www.crisisgroup.org/evt/middle-east-north-africa/yemen-saudi-arabia/houthis-advance-bab-al-mandab-has-yemens-war-returned",
+   "source": "Crisis Group",
+   "sourceType": "Conflict tracker",
+   "published": null,
+   "category": "conflict",
+   "categories": [
+    "conflict"
+   ],
+   "places": [
+    "Yemen"
+   ],
+   "industries": [
+    "energy",
+    "transport",
+    "industrials"
+   ],
+   "economies": [
+    "gulf"
+   ],
+   "severity": "high",
+   "severityScore": 5,
+   "reports": 1,
+   "also": []
+  },
+  {
+   "id": "appointment-of-members-of-the-enforcement-decision-making-co",
+   "title": "Appointment of members of the Enforcement Decision Making Committee (EDMC)",
+   "link": "https://www.bankofengland.co.uk/news/2026/october/appointment-of-members-of-the-edmc",
+   "source": "Bank of England",
+   "sourceType": "Central bank",
+   "published": "2026-10-02T08:00:00.000Z",
+   "category": "policy",
+   "categories": [
+    "policy"
+   ],
+   "places": [],
+   "industries": [
+    "financials",
+    "realestate",
+    "autos"
+   ],
+   "economies": [
+    "uk"
+   ],
+   "severity": "elevated",
+   "severityScore": 4,
+   "reports": 1,
+   "also": []
+  },
+  {
+   "id": "un-member-states-weigh-latest-security-council-veto-this-tim",
+   "title": "UN Member States weigh latest Security Council veto, this time on Iran",
+   "link": "https://news.un.org/feed/view/en/story/2026/10/1168505",
+   "source": "UN News",
+   "sourceType": "Intergovernmental",
+   "published": "2026-10-01T12:00:00.000Z",
+   "category": "sanctions",
+   "categories": [
+    "sanctions"
+   ],
+   "places": [
+    "Russia",
+    "Iran"
+   ],
+   "industries": [
+    "industrials",
+    "tech",
+    "autos",
+    "agrifood"
+   ],
+   "economies": [
+    "us",
+    "china"
+   ],
+   "severity": "elevated",
+   "severityScore": 4,
+   "reports": 1,
+   "also": []
+  },
+  {
+   "id": "financial-policy-committee-record-september-2026",
+   "title": "Financial Policy Committee Record – September 2026",
+   "link": "https://www.bankofengland.co.uk/financial-policy-committee-record/2026/september-2026",
+   "source": "Bank of England",
+   "sourceType": "Central bank",
+   "published": "2026-09-30T09:30:00.000Z",
+   "category": "policy",
+   "categories": [
+    "policy"
+   ],
+   "places": [],
+   "industries": [
+    "financials",
+    "realestate"
+   ],
+   "economies": [
+    "uk"
+   ],
+   "severity": "elevated",
+   "severityScore": 4,
+   "reports": 1,
+   "also": []
+  },
+  {
+   "id": "i-have-not-lost-my-dreams-refugee-education-funding-cuts-thr",
+   "title": "‘I have not lost my dreams’: Refugee education funding cuts threaten millions",
+   "link": "https://news.un.org/feed/view/en/story/2026/10/1168506",
+   "source": "UN News",
+   "sourceType": "Intergovernmental",
+   "published": "2026-10-02T12:00:00.000Z",
+   "category": "conflict",
+   "categories": [
+    "conflict"
+   ],
+   "places": [
+    "Egypt",
+    "Sudan"
+   ],
+   "industries": [
+    "energy",
+    "transport",
+    "industrials"
+   ],
+   "economies": [],
+   "severity": "elevated",
+   "severityScore": 3,
+   "reports": 1,
+   "also": []
+  },
+  {
+   "id": "isabel-schnabel-central-banks-on-chain",
+   "title": "Isabel Schnabel: Central banks on-chain",
+   "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261001_1~a0be67193b.en.pdf",
+   "source": "ECB",
+   "sourceType": "Central bank",
+   "published": "2026-10-01T15:30:00.000Z",
+   "category": "policy",
+   "categories": [
+    "policy"
+   ],
+   "places": [],
+   "industries": [
+    "financials",
+    "realestate"
+   ],
+   "economies": [],
+   "severity": "elevated",
+   "severityScore": 3,
+   "reports": 1,
+   "also": []
+  },
+  {
+   "id": "minutes-of-the-meeting-of-the-court-of-directors-held-on-16-",
+   "title": "Minutes of the Meeting of the Court of Directors held on 16 July 2026",
+   "link": "https://www.bankofengland.co.uk/minutes/2026/july/court-minutes-16-july-2026",
+   "source": "Bank of England",
+   "sourceType": "Central bank",
+   "published": "2026-10-01T13:00:00.000Z",
+   "category": "policy",
+   "categories": [
+    "policy"
+   ],
+   "places": [],
+   "industries": [
+    "financials",
+    "realestate"
+   ],
+   "economies": [],
+   "severity": "elevated",
+   "severityScore": 3,
+   "reports": 1,
+   "also": []
+  },
+  {
+   "id": "nepal-floods-threaten-jobs-and-livelihoods-beyond-disaster-z",
+   "title": "Nepal floods threaten jobs and livelihoods beyond disaster zone: ILO",
+   "link": "https://news.un.org/feed/view/en/story/2026/10/1168500",
+   "source": "UN News",
+   "sourceType": "Intergovernmental",
+   "published": "2026-10-01T12:00:00.000Z",
+   "category": "hazard",
+   "categories": [
+    "hazard"
+   ],
+   "places": [],
+   "industries": [
+    "agrifood",
+    "realestate",
+    "transport"
+   ],
+   "economies": [],
+   "severity": "elevated",
+   "severityScore": 3,
+   "reports": 1,
+   "also": []
+  },
+  {
+   "id": "u-s-electricity-use-for-electric-vehicles-increasing-at-a-sl",
+   "title": "U.S. electricity use for electric vehicles increasing at a slower pace in 2026",
+   "link": "https://www.eia.gov/todayinenergy/detail.php?id=68224",
+   "source": "US EIA",
+   "sourceType": "Official",
+   "published": "2026-09-30T14:00:00.000Z",
+   "category": "energy",
+   "categories": [
+    "energy"
+   ],
+   "places": [],
+   "industries": [
+    "energy",
+    "materials",
+    "transport",
+    "autos"
+   ],
+   "economies": [
+    "us"
+   ],
+   "severity": "elevated",
+   "severityScore": 3,
+   "reports": 1,
+   "also": []
+  },
+  {
+   "id": "federal-reserve-board-finalizes-changes-to-enhance-the-trans",
+   "title": "Federal Reserve Board finalizes changes to enhance the transparency and public accountability of its stress test and reduce volatility in its stress test-related capital requirements",
+   "link": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260930a.htm",
+   "source": "Federal Reserve",
+   "sourceType": "Central bank",
+   "published": "2026-09-30T13:00:00.000Z",
+   "category": "policy",
+   "categories": [
+    "policy"
+   ],
+   "places": [],
+   "industries": [
+    "financials",
+    "realestate"
+   ],
+   "economies": [
+    "us"
+   ],
+   "severity": "elevated",
+   "severityScore": 3,
+   "reports": 1,
+   "also": []
+  },
+  {
+   "id": "world-news-in-brief-storm-clouds-over-gaza-deadly-obstacles-",
+   "title": "World News in Brief: Storm clouds over Gaza, deadly obstacles face Mexican women rights defenders, Latvia booze ban proves lifesaver",
+   "link": "https://news.un.org/feed/view/en/story/2026/09/1168496",
+   "source": "UN News",
+   "sourceType": "Intergovernmental",
+   "published": "2026-09-30T12:00:00.000Z",
+   "category": "hazard",
+   "categories": [
+    "hazard"
+   ],
+   "places": [
+    "Gaza"
+   ],
+   "industries": [
+    "agrifood",
+    "realestate",
+    "transport"
+   ],
+   "economies": [],
+   "severity": "elevated",
+   "severityScore": 3,
+   "reports": 1,
+   "also": []
+  },
+  {
+   "id": "malaysia-un-agency-urges-safeguards-after-refugees-returned-",
+   "title": "Malaysia: UN agency urges safeguards after refugees returned to Myanmar",
+   "link": "https://news.un.org/feed/view/en/story/2026/09/1168491",
+   "source": "UN News",
+   "sourceType": "Intergovernmental",
+   "published": "2026-09-30T12:00:00.000Z",
+   "category": "conflict",
+   "categories": [
+    "conflict"
+   ],
+   "places": [],
+   "industries": [
+    "energy",
+    "transport",
+    "industrials"
+   ],
+   "economies": [],
+   "severity": "elevated",
+   "severityScore": 3,
+   "reports": 1,
+   "also": []
+  },
+  {
+   "id": "arresting-the-dangerous-descent-back-into-war-in-northern-et",
+   "title": "Arresting the Dangerous Descent Back into War in Northern Ethiopia",
+   "link": "https://www.crisisgroup.org/stm/africa/ethiopia-eritrea/arresting-dangerous-descent-back-war-northern-ethiopia",
+   "source": "Crisis Group",
+   "sourceType": "Conflict tracker",
+   "published": null,
+   "category": "conflict",
+   "categories": [
+    "conflict"
+   ],
+   "places": [
+    "Ethiopia"
+   ],
+   "industries": [
+    "energy",
+    "transport",
+    "industrials"
+   ],
+   "economies": [],
+   "severity": "elevated",
+   "severityScore": 3,
+   "reports": 1,
+   "also": []
+  },
+  {
+   "id": "iraq-s-post-coalition-test",
+   "title": "Iraq’s Post-coalition Test",
+   "link": "https://www.crisisgroup.org/vid/middle-east-north-africa/iraq/iraqs-post-coalition-test",
+   "source": "Crisis Group",
+   "sourceType": "Conflict tracker",
+   "published": null,
+   "category": "conflict",
+   "categories": [
+    "conflict",
+    "energy"
+   ],
+   "places": [
+    "Iraq"
+   ],
+   "industries": [
+    "energy",
+    "transport",
+    "industrials"
+   ],
+   "economies": [],
+   "severity": "elevated",
+   "severityScore": 3,
+   "reports": 1,
+   "also": []
+  },
+  {
+   "id": "christine-lagarde-where-ai-risks-meet",
+   "title": "Christine Lagarde: Where AI risks meet",
+   "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261001~cf3c630379.en.html",
+   "source": "ECB",
+   "sourceType": "Central bank",
+   "published": "2026-10-01T13:30:00.000Z",
+   "category": "policy",
+   "categories": [
+    "policy"
+   ],
+   "places": [],
+   "industries": [
+    "financials",
+    "realestate",
+    "tech"
+   ],
+   "economies": [],
+   "severity": "watch",
+   "severityScore": 2,
+   "reports": 1,
+   "also": []
+  },
+  {
+   "id": "director-general-cites-concerns-with-pace-of-negotiations-as",
+   "title": "Director-General cites concerns with pace of negotiations as chairs report on state of play",
+   "link": "https://www.wto.org/english/news_e/news26_e/tnc_01oct26_502_e.htm",
+   "source": "WTO",
+   "sourceType": "Official",
+   "published": "2026-10-01T00:00:00.000Z",
+   "category": "sanctions",
+   "categories": [
+    "sanctions"
+   ],
+   "places": [],
+   "industries": [
+    "industrials",
+    "tech",
+    "autos",
+    "agrifood"
+   ],
+   "economies": [],
+   "severity": "watch",
+   "severityScore": 2,
+   "reports": 1,
+   "also": []
+  },
+  {
+   "id": "christine-lagarde-interview-with-la-croix",
+   "title": "Christine Lagarde: Interview with La Croix",
+   "link": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in260930~10084a5f3d.en.html",
+   "source": "ECB",
+   "sourceType": "Central bank",
+   "published": "2026-09-30T17:00:00.000Z",
+   "category": "policy",
+   "categories": [
+    "policy"
+   ],
+   "places": [],
+   "industries": [
+    "financials",
+    "realestate"
+   ],
+   "economies": [],
+   "severity": "watch",
+   "severityScore": 2,
+   "reports": 1,
+   "also": []
+  },
+  {
+   "id": "isabel-schnabel-monetary-policy-in-a-world-of-overlapping-sh",
+   "title": "Isabel Schnabel: Monetary policy in a world of overlapping shocks",
+   "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp260930_1~7c6c120482.en.html",
+   "source": "ECB",
+   "sourceType": "Central bank",
+   "published": "2026-09-30T15:45:00.000Z",
+   "category": "policy",
+   "categories": [
+    "policy"
+   ],
+   "places": [],
+   "industries": [
+    "financials",
+    "realestate"
+   ],
+   "economies": [],
+   "severity": "watch",
+   "severityScore": 2,
+   "reports": 1,
+   "also": []
+  }
+ ]
+}
