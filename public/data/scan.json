@@ -1,68 +1,61 @@
 {
- "scannedAt": "2026-10-01T06:00:00Z",
- "window": "16 Sep – 1 Oct 2026",
+ "scannedAt": "2026-10-02T11:22:41.819Z",
+ "window": "1 Oct – 2 Oct 2026",
+ "model": "Claude daily routine (claude.ai plan)",
+ "headlinesScanned": null,
+ "feedsOk": null,
  "items": [
   {
-   "id": "hormuz",
-   "date": "2026-09-30",
+   "id": "hormuz-attacks",
+   "date": "2026-10-02",
    "theme": "Energy & geopolitics",
-   "headline": "Strait of Hormuz stays near-closed as four tanker attacks hit in 48 hours",
-   "summary": "Commercial transits are running near 1 a day against a pre-crisis baseline of about 85. Some LNG cargoes crossed in September, but attacks on crude and LNG tankers on 28–29 Sept renewed supply fears.",
-   "rationale": "A prolonged closure keeps energy prices and war-risk insurance high. Energy-importing Asia and Europe take the largest cost shock; the US, a net exporter, is partly cushioned. Gulf exporters lose volume but gain on price.",
-   "horizon": "months",
+   "headline": "Iran steps up attacks on Hormuz shipping as the US weighs naval escorts and a third carrier group",
+   "summary": "Reports count about 40 drone and missile attacks a week on commercial ships in the strait, with three tankers hit and one set ablaze. Tanker freight rates are roughly twenty times pre-war levels; the US says it could escort vessels with a coalition.",
+   "rationale": "Attacks keep war-risk insurance and freight costs extreme even as some flows resume. Energy importers in Asia and Europe pay most; producers outside the Gulf earn more per barrel. Escalation risk is two-sided: escorts could ease flows or widen the conflict.",
+   "horizon": "weeks",
    "confidence": "high",
    "industries": [
     {
      "id": "transport",
      "score": -3,
-     "why": "Rerouting, war-risk premiums and jet-fuel costs"
+     "why": "Freight and war-risk premiums at extreme levels"
     },
     {
      "id": "energy",
      "score": 2,
-     "why": "Higher realised prices for producers outside the Gulf"
-    },
-    {
-     "id": "agrifood",
-     "score": -2,
-     "why": "Fertiliser and feed inputs move through the Gulf"
-    },
-    {
-     "id": "industrials",
-     "score": -1,
-     "why": "Energy and input costs rise"
+     "why": "Supply risk keeps crude prices elevated"
     },
     {
      "id": "consumer",
      "score": -1,
      "why": "Fuel costs squeeze household budgets"
+    },
+    {
+     "id": "industrials",
+     "score": -1,
+     "why": "Energy and shipping inputs cost more"
     }
    ],
    "economies": [
     {
      "id": "india",
-     "score": -3,
-     "why": "Imports most of its crude, much of it via Hormuz"
+     "score": -2,
+     "why": "Large crude importer exposed to Gulf supply"
     },
     {
      "id": "japan",
      "score": -2,
-     "why": "Heavy reliance on Gulf crude and LNG"
+     "why": "Relies on Gulf crude and LNG"
     },
     {
      "id": "eurozone",
-     "score": -2,
-     "why": "LNG and diesel prices pass through to inflation"
-    },
-    {
-     "id": "china",
      "score": -1,
-     "why": "Large importer, partly hedged by stockpiles"
+     "why": "Energy prices feed inflation"
     },
     {
      "id": "gulf",
      "score": -1,
-     "why": "Export volumes capped despite high prices"
+     "why": "Export routes under attack"
     },
     {
      "id": "us",
@@ -71,664 +64,483 @@
     }
    ],
    "sources": [
-    "https://www.euronews.com/2026/09/29/middle-east-oil-exports-rise-as-lng-traffic-through-hormuz-picks-up",
-    "https://straits.live/briefs/2026-09-30"
+    "https://news.google.com/rss/articles/CBMivwFBVV95cUxNZzJOa0xuOEJBQlIwc08tXzlzbnJTYzBEWTlYYWNXVDYzUDNCQ3NvWElaWEN1QS1QRW1BdVdybHV0SGZEUU9WWnRodWV2UzFBOExIYXhOY254NE5zUWxHcXRiWU9UV0lzVkk3R0JBMmQ2XzhaWDRIcXR1U3pnTnpQMl9OaHk3bTdjeXJEWVI5aFlCUXdPemUwclA1TzFOMVpnczlzajFSVnlMcHcwZUNrQUotREQ3eGdNV1VwMkpJNA?oc=5",
+    "https://news.google.com/rss/articles/CBMidkFVX3lxTFBDTTBYVmdGZ0xMWmduY2ozaURqc3E2cHFHVlktdl9QSllqZWVjQ2J2UVlDWjRMcVlzM1pHbGI5Q294cUV5eURuTlZxWEhHRWVVbFZBaTV0dkNjNTVYaWh4bEFkMkh1VWd0ZFVneVJhemNfM29OekE?oc=5",
+    "https://foreignpolicy.com/2026/10/01/oil-strait-hormuz-iran-trump-war-gulf-gas-diesel-prices/"
    ]
   },
   {
-   "id": "oil",
-   "date": "2026-09-30",
+   "id": "hormuz-flows-recover",
+   "date": "2026-10-01",
    "theme": "Commodities",
-   "headline": "Brent holds near $97–103 as global oil inventories fall 400 million barrels this year",
-   "summary": "Brent is up about 49% from a year ago. OPEC+ is expected to keep output targets unchanged, and forecasters raised their 2026 average Brent estimate to about $89.",
-   "rationale": "Oil near triple digits feeds headline inflation and keeps central banks hawkish. Producers benefit; fuel-heavy sectors and oil-importing economies lose.",
+   "headline": "Crude exports through Hormuz near pre-war levels and LNG transits hit a wartime high",
+   "summary": "Gulf crude exports have largely recovered as more tankers transit, and September LNG shipments through the strait were the highest since the war began. Iran's own tanker loadings fell to zero under the US blockade.",
+   "rationale": "Recovering Gulf volumes cap the upside for oil and LNG prices and ease shortages for Asian and European buyers. The recovery is fragile while attacks continue, so prices stay volatile.",
    "horizon": "weeks",
-   "confidence": "high",
+   "confidence": "medium",
    "industries": [
     {
      "id": "energy",
-     "score": 3,
-     "why": "Strong cash flow for producers and oil services"
+     "score": -1,
+     "why": "More supply caps price upside"
     },
     {
      "id": "transport",
-     "score": -2,
-     "why": "Fuel is the largest variable cost"
+     "score": 1,
+     "why": "Tanker traffic rising again"
     },
     {
-     "id": "consumer",
-     "score": -2,
-     "why": "Fuel and goods inflation curbs discretionary spending"
+     "id": "industrials",
+     "score": 1,
+     "why": "Gas supply relief for heavy users"
+    }
+   ],
+   "economies": [
+    {
+     "id": "gulf",
+     "score": 2,
+     "why": "Export volumes recovering"
     },
     {
-     "id": "autos",
+     "id": "japan",
+     "score": 1,
+     "why": "LNG supply improves"
+    },
+    {
+     "id": "india",
+     "score": 1,
+     "why": "Crude availability improves"
+    }
+   ],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMisgFBVV95cUxQcGNCX0VlMWRST1A0YVJxWVlHTGI2VGE2UUtRZXpnTTMwQW0zWmpDakdpTUI3ZFcwd0VLQ0xMemFfRkg1VkdjUGh1YUppeVNTdkZSbFVPX3lhMjZSR3ZITVJObHRJdC0ycklwUmF2d042VU5UeHlWWm1KNVJuVUQ4VW9PNHpfZHVRRW5iMzRiekdxWWhmWE42R011RXF6SjZUZktEdjZQZVdObkJXbVZqSlR3?oc=5",
+    "https://news.google.com/rss/articles/CBMixAFBVV95cUxOV2hrU0N6b3dJbmV3dlJBZVVhbVl5cl9VcC1aNE1TRDhiS2FuZDY0V2xDMGtYUklNQ2MxODZqam5XdVhmek00dllQUnVyUUdNQUx2N0hWREJlUjJ3MWQ5N1hnbGJkdnBKNkJMV2NiT3JpYzhQQVpKOUk2cFF4TEJodnBZUmxfRnMyTHpTTWp6RE10dUdjSHU5eWhOVnNwMkx6VUU0OWJBVGZ0TVR6Tm5hWWVTZlZrU29uR3Y2OVRoMTNxWldU?oc=5",
+    "https://www.bairdmaritime.com/shipping/tankers/oil-prices-drop-to-pre-iran-war-lows-as-tankers-flow-through-hormuz"
+   ]
+  },
+  {
+   "id": "iran-sanctions",
+   "date": "2026-10-01",
+   "theme": "Trade",
+   "headline": "US sanctions Iran's car, rail and metals sectors and a Russia-linked network that moved $17 billion",
+   "summary": "The Treasury targeted Iran's two largest carmakers, its state railway and metals firms, and designated a Russia-linked shadow banking network that processed more than $17 billion for Iran between January 2025 and June 2026.",
+   "rationale": "Pressure shifts from sea to land, cutting Iran's remaining revenue. Secondary-sanction risk rises for banks and traders in China, Russia and the Gulf that handle Iranian flows, adding compliance costs.",
+   "horizon": "months",
+   "confidence": "medium",
+   "industries": [
+    {
+     "id": "financials",
      "score": -1,
-     "why": "Fuel costs dampen demand for larger vehicles"
+     "why": "Secondary-sanction and compliance risk"
     },
     {
      "id": "materials",
      "score": -1,
-     "why": "Energy-intensive smelting and chemicals"
+     "why": "Metals trade routes disrupted"
     }
    ],
    "economies": [
-    {
-     "id": "gulf",
-     "score": 2,
-     "why": "Higher price per barrel exported"
-    },
-    {
-     "id": "us",
-     "score": 1,
-     "why": "Shale output gains; consumers pay more at the pump"
-    },
-    {
-     "id": "india",
-     "score": -2,
-     "why": "Oil import bill weighs on the rupee and the deficit"
-    },
-    {
-     "id": "japan",
-     "score": -2,
-     "why": "Import bill rises with a weak terms of trade"
-    },
-    {
-     "id": "eurozone",
-     "score": -1,
-     "why": "Energy inflation keeps policy tight"
-    },
     {
      "id": "china",
      "score": -1,
-     "why": "Higher input costs for manufacturers"
-    }
-   ],
-   "sources": [
-    "https://fortune.com/article/price-of-oil-09-30-2026/",
-    "https://investing.com/news/commodities-news/analysts-raise-2026-oil-forecasts-on-prolonged-gulf-disruption-reuters-poll-4924959"
-   ]
-  },
-  {
-   "id": "fed",
-   "date": "2026-09-16",
-   "theme": "Monetary policy",
-   "headline": "US Federal Reserve raises rates to 3.75–4.00%, its first hike since 2023",
-   "summary": "The 12–0 decision cited inflation that has been too high for too long, with core PCE near 3.2%. The median projection signals one more quarter-point hike this year.",
-   "rationale": "Tighter US policy lifts borrowing costs worldwide and firms the dollar. Rate-sensitive sectors suffer most; bank lending margins widen, but loan demand and credit quality become risks.",
-   "horizon": "months",
-   "confidence": "high",
-   "industries": [
-    {
-     "id": "realestate",
-     "score": -3,
-     "why": "Mortgage and refinancing costs climb"
-    },
-    {
-     "id": "financials",
-     "score": 1,
-     "why": "Wider net interest margins"
-    },
-    {
-     "id": "tech",
-     "score": -1,
-     "why": "Higher discount rates compress growth valuations"
-    },
-    {
-     "id": "autos",
-     "score": -1,
-     "why": "Costlier vehicle financing"
-    },
-    {
-     "id": "consumer",
-     "score": -1,
-     "why": "Card and loan costs rise"
-    }
-   ],
-   "economies": [
-    {
-     "id": "us",
-     "score": -1,
-     "why": "Slower housing and credit growth"
-    },
-    {
-     "id": "india",
-     "score": -2,
-     "why": "Portfolio outflows pressure the rupee"
+     "why": "Firms exposed to secondary sanctions"
     },
     {
      "id": "gulf",
      "score": -1,
-     "why": "Dollar pegs import tighter US policy"
-    },
-    {
-     "id": "uk",
-     "score": -1,
-     "why": "Imported tightening through gilt yields"
+     "why": "Regional trade hubs face scrutiny"
     }
    ],
    "sources": [
-    "https://www.cnbc.com/2026/09/16/fed-rate-decision-september-2026.html",
-    "https://www.foxbusiness.com/economy/federal-reserve-interest-rate-decision-september-16-2026"
+    "https://www.cnbc.com/2026/10/01/treasury-sanctions-iran-auto-rail.html",
+    "https://thenationalnews.com/business/economy/2026/10/02/us-sanctions-irans-car-makers-and-railway-operators-as-pressure-shifts-from-sea-to-land"
    ]
   },
   {
-   "id": "bonds",
-   "date": "2026-09-28",
-   "theme": "Rates & bonds",
-   "headline": "Global bond selloff pushes the US 30-year yield to 5.53%, highest in over 20 years",
-   "summary": "The US 10-year yield reached 5.22%, a 19-year high. UK 30-year yields trade near 5.74% as energy-driven inflation spreads across developed markets.",
-   "rationale": "Long-term yields set the cost of mortgages, corporate debt and government borrowing. High term premiums hit long-duration assets and leveraged sectors, and expose banks holding long bonds to mark-to-market losses.",
-   "horizon": "months",
-   "confidence": "high",
-   "industries": [
-    {
-     "id": "realestate",
-     "score": -3,
-     "why": "Cap rates and mortgage rates reprice higher"
-    },
-    {
-     "id": "tech",
-     "score": -2,
-     "why": "Long-duration earnings are worth less today"
-    },
-    {
-     "id": "financials",
-     "score": -1,
-     "why": "Unrealised losses on bond portfolios"
-    },
-    {
-     "id": "industrials",
-     "score": -1,
-     "why": "Capex financing costs rise"
-    },
-    {
-     "id": "consumer",
-     "score": -1,
-     "why": "Tighter credit for households"
-    }
-   ],
-   "economies": [
-    {
-     "id": "us",
-     "score": -2,
-     "why": "Deficit financing gets more expensive"
-    },
-    {
-     "id": "uk",
-     "score": -2,
-     "why": "Gilt yields among the highest in the G7"
-    },
-    {
-     "id": "eurozone",
-     "score": -1,
-     "why": "Spreads widen for high-debt members"
-    },
-    {
-     "id": "japan",
-     "score": -1,
-     "why": "Global yields pull on Japanese bond markets"
-    },
-    {
-     "id": "india",
-     "score": -1,
-     "why": "Global yield pull draws funds from local bonds"
-    }
-   ],
-   "sources": [
-    "https://www.schwab.com/learn/story/weekly-traders-outlook",
-    "https://tradingeconomics.com/united-kingdom/government-bond-yield/news/534657"
-   ]
-  },
-  {
-   "id": "ecb",
-   "date": "2026-09-10",
-   "theme": "Monetary policy",
-   "headline": "European Central Bank lifts its deposit rate to 2.50% as the energy shock raises inflation",
-   "summary": "Staff projections see euro-area inflation averaging 3.0% in 2026 and 2.5% in 2027, with conflict in the Middle East the main source of price pressure.",
-   "rationale": "Hiking into an energy shock protects inflation expectations but weighs on credit-dependent growth. European lenders gain margin; housing, autos and household demand cool.",
-   "horizon": "months",
-   "confidence": "high",
-   "industries": [
-    {
-     "id": "financials",
-     "score": 1,
-     "why": "Lenders earn more on deposits and loans"
-    },
-    {
-     "id": "realestate",
-     "score": -2,
-     "why": "Higher mortgage rates slow transactions"
-    },
-    {
-     "id": "consumer",
-     "score": -1,
-     "why": "Households face higher borrowing costs"
-    },
-    {
-     "id": "autos",
-     "score": -1,
-     "why": "Car-loan demand softens"
-    },
-    {
-     "id": "industrials",
-     "score": -1,
-     "why": "Investment plans get deferred"
-    }
-   ],
-   "economies": [
-    {
-     "id": "eurozone",
-     "score": -1,
-     "why": "Slower credit and consumer growth"
-    }
-   ],
-   "sources": [
-    "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260910~314e508016.en.html",
-    "https://www.euronews.com/2026/09/10/ecb-hikes-rates-to-25-as-energy-shock-pushes-eurozone-inflation-higher"
-   ]
-  },
-  {
-   "id": "boe",
-   "date": "2026-09-17",
-   "theme": "Monetary policy",
-   "headline": "Bank of England holds at 3.75% in a split 6–3 vote as UK inflation heads toward 4%",
-   "summary": "UK CPI rose to 3.1% in August and is projected near 3.75% in Q4 and above 4% in early 2027. The Bank set a path of £20 billion a year in active gilt sales.",
-   "rationale": "Holding while peers hike gives UK borrowers short-term relief, but the inflation overshoot keeps a hike likely. Sterling and gilts stay sensitive to every move in energy prices.",
+   "id": "diesel-reserves",
+   "date": "2026-10-01",
+   "theme": "Commodities",
+   "headline": "EU weighs emergency diesel release as the US taps its final 40 million barrels of crude reserves",
+   "summary": "The US asked Europe for a 120 million-barrel diesel drawdown over six months and warned of a possible diesel export ban. The US is releasing the last 40 million barrels of a 172 million-barrel reserve drawdown, with diesel above $6 a gallon.",
+   "rationale": "Reserve releases ease near-term fuel prices but leave thinner buffers if supply shocks worsen. A US export ban would hit European fuel users hard; diesel costs flow straight into freight and farm costs.",
    "horizon": "weeks",
    "confidence": "medium",
    "industries": [
     {
-     "id": "realestate",
-     "score": 1,
-     "why": "Short-term relief on mortgage pricing"
-    },
-    {
-     "id": "consumer",
-     "score": -1,
-     "why": "Energy bills erode real incomes"
-    }
-   ],
-   "economies": [
-    {
-     "id": "uk",
-     "score": -1,
-     "why": "Persistent inflation squeezes real incomes"
-    }
-   ],
-   "sources": [
-    "https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/september-2026",
-    "https://www.cnbc.com/2026/09/17/bank-of-england-interest-rate-decision-fed-rate-hike-uk-inflation.html"
-   ]
-  },
-  {
-   "id": "boj",
-   "date": "2026-09-18",
-   "theme": "Monetary policy",
-   "headline": "Bank of Japan raises its policy rate to 1.25% in a 7–2 vote",
-   "summary": "The quarter-point increase continues Japan's exit from ultra-low rates while inflation stays above target.",
-   "rationale": "Higher Japanese rates support domestic lenders and the yen. A firmer yen trims exporters' overseas earnings when converted home, but it also lowers Japan's energy import bill.",
-   "horizon": "months",
-   "confidence": "medium",
-   "industries": [
-    {
-     "id": "financials",
-     "score": 2,
-     "why": "Domestic lenders earn wider margins"
-    },
-    {
-     "id": "autos",
-     "score": -1,
-     "why": "A firmer yen trims exporters' earnings"
-    },
-    {
-     "id": "realestate",
-     "score": -1,
-     "why": "Higher funding costs for property"
-    }
-   ],
-   "economies": [
-    {
-     "id": "japan",
-     "score": -1,
-     "why": "Tighter financial conditions for a fragile recovery"
-    }
-   ],
-   "sources": [
-    "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260918a.pdf"
-   ]
-  },
-  {
-   "id": "uschina",
-   "date": "2026-09-28",
-   "theme": "Trade",
-   "headline": "US and China cut tariffs on about $30 billion of each other's goods and extend their truce to 10 Jan",
-   "summary": "About 90% of covered products drop to most-favoured-nation rates. US cuts cover toys, appliances, baby and household goods; China's cover farm products, personal care, medical devices and coal.",
-   "rationale": "Lower tariffs cut costs for importers ahead of the holiday season and reopen Chinese demand for US farm goods. The truce lowers near-term trade-war risk, but it expires in January.",
-   "horizon": "weeks",
-   "confidence": "high",
-   "industries": [
-    {
-     "id": "consumer",
-     "score": 2,
-     "why": "Cheaper imported household goods before peak season"
+     "id": "transport",
+     "score": -2,
+     "why": "Diesel is the main fuel cost"
     },
     {
      "id": "agrifood",
-     "score": 2,
-     "why": "Chinese buyers return for US farm products"
+     "score": -1,
+     "why": "Farm machinery and haulage costs"
     },
     {
-     "id": "healthcare",
+     "id": "energy",
      "score": 1,
-     "why": "Lower tariffs on medical devices"
-    },
-    {
-     "id": "materials",
-     "score": 1,
-     "why": "Coal shipments to China resume"
-    },
-    {
-     "id": "transport",
-     "score": 1,
-     "why": "More trans-Pacific cargo"
+     "why": "Refining margins stay wide"
     }
    ],
    "economies": [
     {
-     "id": "china",
-     "score": 2,
-     "why": "Export relief for consumer-goods factories"
+     "id": "eurozone",
+     "score": -2,
+     "why": "Diesel shortage and export-ban risk"
     },
     {
      "id": "us",
-     "score": 1,
-     "why": "Lower import costs and farm export demand"
+     "score": -1,
+     "why": "Reserves near depletion"
     }
    ],
    "sources": [
-    "https://www.cnbc.com/2026/09/28/us-china-lower-tariffs-trump-xi-meeting.html",
-    "https://www.usnews.com/news/top-news/articles/2026-09-26/china-us-agree-to-30-billion-tariff-cut-ai-dialogue-during-xi-visit"
+    "https://www.euronews.com/2026/10/01/releasing-strategic-reserves-is-a-possibility-eu-energy-chief-tells-euronews-as-diesel-squ",
+    "https://qz.com/us-strategic-petroleum-reserve-40-million-barrels-eia-release-093026"
    ]
   },
   {
-   "id": "chinapmi",
-   "date": "2026-09-30",
-   "theme": "Growth data",
-   "headline": "China's factory index returns to growth at 50.1 as new property support lands",
-   "summary": "The manufacturing PMI rose from 49.8, ending two months of contraction, and construction activity expanded for the first time this year. New measures target first-time buyers and cut a policy lending rate to 1.5%.",
-   "rationale": "Steadier Chinese construction supports demand for steel, copper and machinery and helps commodity exporters. The property support is targeted, so the recovery may stay modest.",
-   "horizon": "months",
-   "confidence": "medium",
-   "industries": [
-    {
-     "id": "materials",
-     "score": 2,
-     "why": "Steel and copper demand from construction"
-    },
-    {
-     "id": "realestate",
-     "score": 1,
-     "why": "Targeted relief for first-time buyers in China"
-    },
-    {
-     "id": "industrials",
-     "score": 1,
-     "why": "Machinery orders pick up"
-    }
-   ],
-   "economies": [
-    {
-     "id": "china",
-     "score": 2,
-     "why": "Factories and construction back above 50"
-    },
-    {
-     "id": "japan",
-     "score": 1,
-     "why": "Machinery and component exports to China"
-    },
-    {
-     "id": "eurozone",
-     "score": 1,
-     "why": "Capital-goods exports to China"
-    }
-   ],
-   "sources": [
-    "https://www.business-standard.com/amp/world-news/china-s-factory-activity-rebounds-in-sep-with-stimulus-lifting-outlook-126093000130_1.html",
-    "https://www.bnnbloomberg.ca/business/international/2026/09/29/china-rolls-out-new-measures-to-bolster-its-property-sector-and-economy/"
-   ]
-  },
-  {
-   "id": "chips",
-   "date": "2026-09-30",
-   "theme": "Tech cycle",
-   "headline": "AI server demand drives another round of memory-chip price increases into Q4",
-   "summary": "DRAM contract prices are forecast up 10–15% quarter on quarter and NAND flash up 15–20%. Leading memory producers hold under 10 days of inventory, and global chip sales hit a record $425 billion in Q2.",
-   "rationale": "Chip producers and equipment suppliers hold the pricing power. Device makers, carmakers and consumer electronics face rising component costs that squeeze margins or lift shelf prices.",
+   "id": "ez-inflation",
+   "date": "2026-10-02",
+   "theme": "Monetary policy",
+   "headline": "Euro-area inflation jumps to 3.8%, a three-year high, as energy prices rise 18.8%",
+   "summary": "September flash inflation beat the 3.6% forecast; energy explained close to half of it, and prices rose 0.6% in the month alone.",
+   "rationale": "Raises the odds of another ECB hike after September's move to 2.5%, tightening credit for households and firms. Lenders gain margin; property and consumer spending take the hit.",
    "horizon": "months",
    "confidence": "high",
    "industries": [
     {
+     "id": "realestate",
+     "score": -2,
+     "why": "Higher rate expectations lift mortgage costs"
+    },
+    {
+     "id": "consumer",
+     "score": -2,
+     "why": "Real incomes squeezed by energy"
+    },
+    {
+     "id": "financials",
+     "score": 1,
+     "why": "Wider lending margins"
+    }
+   ],
+   "economies": [
+    {
+     "id": "eurozone",
+     "score": -2,
+     "why": "Inflation shock and tighter policy"
+    }
+   ],
+   "sources": [
+    "https://www.euronews.com/2026/10/02/eurozone-inflation-spikes-to-38-is-your-country-on-the-worst-list"
+   ]
+  },
+  {
+   "id": "us-ism-prices",
+   "date": "2026-10-01",
+   "theme": "Growth data",
+   "headline": "US factory input prices jump to 77.9, their highest since the Iran war began, as activity holds at 54.5",
+   "summary": "The ISM prices index rose 6.8 points while the headline manufacturing index slipped to 54.5. Employment kept expanding; the September jobs report is due on 2 October.",
+   "rationale": "Strong activity plus fast-rising input costs keeps another Fed hike in play, supporting yields and the dollar. Margin pressure grows for manufacturers that can't pass costs on.",
+   "horizon": "weeks",
+   "confidence": "medium",
+   "industries": [
+    {
+     "id": "industrials",
+     "score": -1,
+     "why": "Input costs rising faster than prices"
+    },
+    {
+     "id": "realestate",
+     "score": -1,
+     "why": "Rate-hike odds keep mortgages costly"
+    },
+    {
+     "id": "financials",
+     "score": 1,
+     "why": "Higher-for-longer rates"
+    }
+   ],
+   "economies": [
+    {
+     "id": "us",
+     "score": -1,
+     "why": "Inflation pressure complicates policy"
+    }
+   ],
+   "sources": [
+    "https://qz.com/ism-manufacturing-pmi-prices-september-2026-fed-rates-100126",
+    "https://www.fxstreet.com/news/us-ism-manufacturing-pmi-fell-to-545-in-september-202610011406"
+   ]
+  },
+  {
+   "id": "us-yields",
+   "date": "2026-10-01",
+   "theme": "Rates & bonds",
+   "headline": "US 10-year yield holds near 24-year highs and 30-year near its highest since 2004",
+   "summary": "Stocks edged up at the start of October as yields eased slightly, but long-term borrowing costs remain near multi-decade highs and markets price roughly a two-in-three chance of an October Fed hike.",
+   "rationale": "High long-term yields reprice mortgages, corporate debt and long-duration growth assets, and draw capital toward the dollar, pressuring emerging-market currencies.",
+   "horizon": "months",
+   "confidence": "high",
+   "industries": [
+    {
+     "id": "realestate",
+     "score": -3,
+     "why": "Mortgage and cap rates reprice higher"
+    },
+    {
      "id": "tech",
-     "score": 3,
-     "why": "Record pricing for chips and AI infrastructure"
+     "score": -1,
+     "why": "Long-duration valuations compress"
+    },
+    {
+     "id": "financials",
+     "score": -1,
+     "why": "Losses on bond holdings"
+    }
+   ],
+   "economies": [
+    {
+     "id": "us",
+     "score": -1,
+     "why": "Costlier debt financing"
+    },
+    {
+     "id": "india",
+     "score": -1,
+     "why": "Capital pulled toward dollar assets"
+    }
+   ],
+   "sources": [
+    "https://www.cnbc.com/2026/09/30/stock-market-today-live-updates.html"
+   ]
+  },
+  {
+   "id": "uk-gilts",
+   "date": "2026-10-01",
+   "theme": "Rates & bonds",
+   "headline": "UK 30-year gilt yield breaks 6% for the first time since 1998 ahead of the 28 October budget",
+   "summary": "Long gilts sold off on energy-driven inflation, expected Bank of England tightening, £252 billion of planned issuance and active central-bank gilt sales of about £46 billion a year.",
+   "rationale": "Rising debt-service costs constrain fiscal room before the budget and push up mortgage and corporate borrowing costs. Sterling assets stay sensitive to any fiscal surprise.",
+   "horizon": "weeks",
+   "confidence": "high",
+   "industries": [
+    {
+     "id": "realestate",
+     "score": -2,
+     "why": "Mortgage pricing tracks gilt yields"
+    },
+    {
+     "id": "financials",
+     "score": -1,
+     "why": "Pension and bond-holding stress"
+    }
+   ],
+   "economies": [
+    {
+     "id": "uk",
+     "score": -2,
+     "why": "Higher debt costs and fiscal squeeze"
+    }
+   ],
+   "sources": [
+    "https://uk.finance.yahoo.com/news/uk-borrowing-costs-soar-gilt-081312191.html"
+   ]
+  },
+  {
+   "id": "japan-tankan",
+   "date": "2026-10-01",
+   "theme": "Growth data",
+   "headline": "Japan's big manufacturers report the best sentiment since 2018 on AI and chip demand",
+   "summary": "The Tankan index for large manufacturers rose to +24 from +22, a sixth straight gain, though non-manufacturers slipped to +35. The yen trades near 157 per dollar as US yields above 5.2% offset a narrower rate gap.",
+   "rationale": "Strong factory confidence supports capital spending and gives the Bank of Japan room for further hikes. A weak yen lifts exporters' earnings but raises import costs.",
+   "horizon": "months",
+   "confidence": "medium",
+   "industries": [
+    {
+     "id": "tech",
+     "score": 1,
+     "why": "Chip and AI equipment demand"
     },
     {
      "id": "industrials",
      "score": 1,
-     "why": "Data-centre power and cooling build-out"
-    },
+     "why": "Machinery orders firm"
+    }
+   ],
+   "economies": [
     {
-     "id": "autos",
-     "score": -1,
-     "why": "Higher chip cost per vehicle"
+     "id": "japan",
+     "score": 1,
+     "why": "Factory confidence at a 7-year high"
+    }
+   ],
+   "sources": [
+    "https://www.fxstreet.com/news/japans-tankan-large-manufacturing-index-rises-to-24-in-q3-vs-25-expected-202609302353"
+   ]
+  },
+  {
+   "id": "memory-prices",
+   "date": "2026-10-01",
+   "theme": "Tech cycle",
+   "headline": "Memory chip contract prices set to rise 40–50% this quarter as AI demand absorbs supply",
+   "summary": "Leading producers report memory capacity essentially sold out for 2026, and large cloud buyers are accepting increases of up to 50% while receiving only partial orders.",
+   "rationale": "Chipmakers hold pricing power; device, PC and car makers face rising component costs that squeeze margins or lift shelf prices. Asian chip-producing economies benefit.",
+   "horizon": "months",
+   "confidence": "medium",
+   "industries": [
+    {
+     "id": "tech",
+     "score": 2,
+     "why": "Memory producers' pricing power"
     },
     {
      "id": "consumer",
      "score": -1,
      "why": "Pricier phones, PCs and TVs"
+    },
+    {
+     "id": "autos",
+     "score": -1,
+     "why": "Higher chip cost per vehicle"
     }
    ],
    "economies": [
     {
      "id": "us",
-     "score": 2,
-     "why": "Home to most AI-infrastructure spending"
+     "score": 1,
+     "why": "AI infrastructure build-out"
     },
     {
      "id": "japan",
      "score": 1,
      "why": "Chip equipment and materials suppliers"
-    },
-    {
-     "id": "china",
-     "score": 1,
-     "why": "Domestic AI-chip makers raise prices"
     }
    ],
    "sources": [
-    "https://trendforce.com/presscenter/news/20260930-13258.html",
-    "https://www.tomshardware.com/pc-components/ram/memory-price-surge-begins-to-cool-as-consumers-hit-affordability-limit-ai-demand-still-keeps-dram-and-nand-prices-climbing-through-q3-2026"
+    "https://tech-insider.org/memory-chip-shortage-2026-ai-consumer-electronics/"
    ]
   },
   {
-   "id": "fertiliser",
-   "date": "2026-09-24",
-   "theme": "Commodities",
-   "headline": "Fertiliser costs set to rise more than 30% this year as Gulf shipping disruption tightens supply",
-   "summary": "Urea topped $850 a tonne in April, its highest since 2022. Wheat futures are up about 12% since late February, and fertiliser-intensive crops face the largest cost increases.",
-   "rationale": "Higher input costs squeeze farm margins now and food prices later. Food-importing and subsidy-heavy economies carry the most fiscal and inflation risk.",
-   "horizon": "months",
+   "id": "black-sea",
+   "date": "2026-10-01",
+   "theme": "Energy & geopolitics",
+   "headline": "More than 210 strikes on Black Sea shipping since July make it the most dangerous since Russia's invasion",
+   "summary": "A maritime-risk firm counted over 210 attacks on commercial vessels between July and the end of September, disrupting grain exports, as Japan announced further sanctions on Russia.",
+   "rationale": "Black Sea disruption tightens world grain supply and raises shipping insurance, adding to food inflation already pushed up by fertiliser costs.",
+   "horizon": "weeks",
    "confidence": "medium",
    "industries": [
     {
      "id": "agrifood",
      "score": -2,
-     "why": "Input costs outpace crop prices"
+     "why": "Grain exports disrupted"
     },
     {
-     "id": "consumer",
+     "id": "transport",
      "score": -1,
-     "why": "Food inflation follows with a lag"
-    },
-    {
-     "id": "materials",
-     "score": 1,
-     "why": "Fertiliser producers outside the Gulf gain pricing power"
-    }
-   ],
-   "economies": [
-    {
-     "id": "india",
-     "score": -2,
-     "why": "Bigger fertiliser subsidy bill and food inflation"
-    },
-    {
-     "id": "china",
-     "score": -1,
-     "why": "Higher farm input costs"
-    },
-    {
-     "id": "eurozone",
-     "score": -1,
-     "why": "Food inflation adds to energy pressure"
-    }
-   ],
-   "sources": [
-    "https://www.arabnews.com/node/2645092/business-economy",
-    "https://blogs.worldbank.org/en/opendata/fertilizer-prices-surge-as-strait-of-hormuz-disruptions-tighten-"
-   ]
-  },
-  {
-   "id": "rupee",
-   "date": "2026-09-30",
-   "theme": "Currencies",
-   "headline": "Indian rupee trades near 96 per dollar, down over 8% in a year, as the central bank intervenes",
-   "summary": "Dollar sales and swaps by the Reserve Bank of India have drained nearly $20 billion of rupee liquidity. A firm dollar, high crude and US 10-year yields above 5.2% keep pressure on the currency.",
-   "rationale": "A weaker rupee raises the cost of fuel and component imports but makes India's services and generic-drug exports more competitive. Tighter liquidity lifts local borrowing costs.",
-   "horizon": "weeks",
-   "confidence": "high",
-   "industries": [
-    {
-     "id": "tech",
-     "score": 1,
-     "why": "IT-services exporters earn more per dollar"
-    },
-    {
-     "id": "healthcare",
-     "score": 1,
-     "why": "Generic-drug exporters gain on price"
-    },
-    {
-     "id": "financials",
-     "score": -1,
-     "why": "Tighter rupee liquidity lifts funding costs"
-    }
-   ],
-   "economies": [
-    {
-     "id": "india",
-     "score": -2,
-     "why": "Imported inflation and capital outflows"
-    }
-   ],
-   "sources": [
-    "https://tradingeconomics.com/india/currency",
-    "https://www.whalesbook.com/news/English/economy/Indian-Rupee-Opens-At-9595-Against-USD-RBI-Strategy-In-Focus/6abc87f05aacb956d08599ab"
-   ]
-  },
-  {
-   "id": "germany",
-   "date": "2026-09-25",
-   "theme": "Growth data",
-   "headline": "German business confidence hits its highest since 2023 while consumer sentiment slumps",
-   "summary": "The Ifo index rose to 89.9, its fifth straight increase. The forward-looking consumer climate indicator fell to −30.6 for October.",
-   "rationale": "Factories report recovering orders, but households squeezed by energy costs are cutting back. The split favours exporters and capital goods over retail and services.",
-   "horizon": "weeks",
-   "confidence": "medium",
-   "industries": [
-    {
-     "id": "industrials",
-     "score": 1,
-     "why": "Order books improve for manufacturers"
-    },
-    {
-     "id": "consumer",
-     "score": -2,
-     "why": "Households pull back on spending"
+     "why": "Insurance costs climb"
     }
    ],
    "economies": [
     {
      "id": "eurozone",
-     "score": 1,
-     "why": "The industrial core regains momentum"
-    }
-   ],
-   "sources": [
-    "https://www.troweprice.com/personal-investing/resources/insights/global-markets-weekly-update.html"
-   ]
-  },
-  {
-   "id": "autos",
-   "date": "2026-09-22",
-   "theme": "Trade",
-   "headline": "Japan's carmakers face $14 billion more in US tariff costs as the EU weighs favouring EU-built EVs",
-   "summary": "US tariffs and policy shifts cost Japan's six largest carmakers nearly $28 billion in one fiscal year. A proposed EU industrial law would favour electric vehicles built inside the bloc.",
-   "rationale": "Trade barriers are splitting the global car market into regional blocs. Producers with factories inside each market gain; export-led manufacturers lose margin.",
-   "horizon": "months",
-   "confidence": "medium",
-   "industries": [
-    {
-     "id": "autos",
-     "score": -2,
-     "why": "Tariff costs and fragmented EV rules"
-    }
-   ],
-   "economies": [
-    {
-     "id": "japan",
-     "score": -2,
-     "why": "Car exports are a core earner"
-    },
-    {
-     "id": "china",
      "score": -1,
-     "why": "EV exports face new EU barriers"
-    },
-    {
-     "id": "eurozone",
-     "score": 1,
-     "why": "Local EV production would be favoured"
+     "why": "Food prices and regional risk"
     }
    ],
    "sources": [
-    "https://www.automotivemanufacturingsolutions.com/electrification/us-policy-shifts-cost-japans-carmakers-28bn/2680601",
-    "https://asia.nikkei.com/business/automobiles/electric-vehicles/looming-made-in-eu-bill-threatens-toyota-and-other-japanese-ev-makers"
+    "https://news.google.com/rss/articles/CBMihAFBVV95cUxOZDB6enNFVXJjZ2tIU1IzdUJWdmhiNDc5bTJUeXpRWi1rUFU1UlNhdENxeE50YXdxOVppemlVVDNMaHpIenVHYVJneXN1ZXFFaFB0ZkpZc0tMNV9qOGJzLVhSNFJBdE5nOGhYbEkyNERqRzFFMDF3M2MyY1N2aW1laWxZV1Y?oc=5",
+    "https://news.google.com/rss/articles/CBMifkFVX3lxTFBpb2VMaTVuLW1jcEVhRjVfU05sSXo5Z3ZLc0hKNGxYT216STdnUWhpc0dqV2VVbTd1U0o1QWUyV1FIWENMb25ZM0hyQWdJQ3Vqb0pJZ01FSlVLRDM1NjVwV2stYm5RTVNzekhaUjBuTFhsakJnbUxOSVBoNkozQQ?oc=5"
    ]
   },
   {
-   "id": "gold",
-   "date": "2026-09-30",
+   "id": "opec-meeting",
+   "date": "2026-10-02",
    "theme": "Commodities",
-   "headline": "Gold rebounds to about $4,185 an ounce after weak US data trims rate-hike bets",
-   "summary": "Prices remain well below January's record near $5,590 but rose 1.4% as softer data lowered the odds of further Fed tightening.",
-   "rationale": "Gold is acting as a gauge of rate expectations. The rebound helps miners and signals that markets doubt how far the Fed will go.",
+   "headline": "OPEC+ expected to hold November output targets at its 4 October meeting",
+   "summary": "Eight members are expected to roll over targets, though actual production stays below quota because of wartime disruption.",
+   "rationale": "An unchanged target signals no new supply relief, keeping the market reliant on Hormuz flows and reserve releases.",
    "horizon": "days",
    "confidence": "low",
    "industries": [
     {
-     "id": "materials",
+     "id": "energy",
      "score": 1,
-     "why": "Precious-metal miners' revenue lifts"
+     "why": "No extra supply to cap prices"
     }
    ],
-   "economies": [],
+   "economies": [
+    {
+     "id": "india",
+     "score": -1,
+     "why": "No relief for import bill"
+    }
+   ],
    "sources": [
-    "https://www.riotimesonline.com/gold-silver-precious-metals-wednesday-september-30-2026"
+    "https://www.tokenpost.com/news/investing/25827"
+   ]
+  },
+  {
+   "id": "china-yuan",
+   "date": "2026-10-01",
+   "theme": "Currencies",
+   "headline": "Yuan weakens to 6.71 per dollar on Fed hike bets while China's trade grows 17.6% this year",
+   "summary": "Markets price about a 67% chance of an October Fed hike. China's exports rose 14.6% and imports 22% in the first eight months.",
+   "rationale": "A softer yuan supports exporters, while strong trade growth cushions weak domestic demand and property. Dollar strength still pressures capital flows.",
+   "horizon": "weeks",
+   "confidence": "low",
+   "industries": [
+    {
+     "id": "industrials",
+     "score": 1,
+     "why": "Export demand stays firm"
+    }
+   ],
+   "economies": [
+    {
+     "id": "china",
+     "score": 1,
+     "why": "Exports offset weak home demand"
+    }
+   ],
+   "sources": [
+    "https://tradingeconomics.com/china/currency",
+    "https://www.chinadaily.com.cn/a/202609/08/WS6a9f7353e4b06d4aa055ce72.html"
+   ]
+  },
+  {
+   "id": "india-rbi",
+   "date": "2026-10-02",
+   "theme": "Monetary policy",
+   "headline": "India's central bank meets 5–7 October with crude above $100 and the rupee near 96 per dollar",
+   "summary": "The repo rate has stood at 5.25% for four meetings; inflation of about 4.8%, high crude and a weak rupee raise pressure to tighten or defend the currency.",
+   "rationale": "A hike or tighter liquidity would raise borrowing costs for banks, property and consumers; holding risks further rupee weakness and imported inflation.",
+   "horizon": "days",
+   "confidence": "low",
+   "industries": [
+    {
+     "id": "financials",
+     "score": -1,
+     "why": "Tighter liquidity raises funding costs"
+    },
+    {
+     "id": "realestate",
+     "score": -1,
+     "why": "Rate risk for home loans"
+    }
+   ],
+   "economies": [
+    {
+     "id": "india",
+     "score": -1,
+     "why": "Policy squeeze from oil and the rupee"
+    }
+   ],
+   "sources": [
+    "https://www.gopocket.in/news/rbi-policy-october-2026-repo-rate-inflation-emi-outlook"
    ]
   }
- ],
- "model": "manual seed",
- "headlinesScanned": null
+ ]
 }
