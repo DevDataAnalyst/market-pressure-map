@@ -1,17 +1,16 @@
 // Hourly scan: pull global business/world RSS feeds, have Claude pick and score the
 // market-moving stories, then write public/data/scan.json and append to history.json.
+// Needs API credit; the free daily path is the Claude routine using apply-scan.mjs.
 // On any failure it exits without touching the last good scan.
 import Anthropic from "@anthropic-ai/sdk";
-import { readFile, writeFile } from "node:fs/promises";
-import { CONF, ECONOMIES, INDUSTRIES, THEMES, fail, fetchFeed, titleKey } from "./shared.mjs";
+import { readFile } from "node:fs/promises";
+import { ECONOMIES, INDUSTRIES, THEMES, fail, fetchFeed, titleKey } from "./shared.mjs";
+import { OSINT_PATH, normalizeItems, writeScan } from "./scan-store.mjs";
 
 const MODEL = process.env.SCAN_MODEL || "claude-opus-5-5";
 const WINDOW_HOURS = 36;
 const MAX_HEADLINES = 140;
 const MAX_SIGNALS_ASSESSED = 30;
-const SCAN_PATH = new URL("../public/data/scan.json", import.meta.url);
-const HISTORY_PATH = new URL("../public/data/history.json", import.meta.url);
-const OSINT_PATH = new URL("../public/data/osint.json", import.meta.url);
 
 const FEEDS = [
   "https://feeds.bbci.co.uk/news/business/rss.xml",
@@ -178,78 +177,10 @@ const text = message.content.filter((b) => b.type === "text").map((b) => b.text)
 const parsed = JSON.parse(text);
 
 /* ---------- 3. Validate and write ---------- */
-const clampScore = (v) => Math.max(-3, Math.min(3, Math.round(Number(v) || 0)));
-const impacts = (arr, known) => {
-  const out = [];
-  for (const x of arr ?? []) {
-    if (!known[x.id] || out.some((y) => y.id === x.id)) continue;
-    const score = clampScore(x.score);
-    if (score) out.push({ id: x.id, score, why: String(x.why ?? "").slice(0, 140) });
-  }
-  return out;
-};
-const items = (parsed.items ?? [])
-  .map((it, i) => ({
-    id: String(it.id || `s${i}`).toLowerCase().replace(/[^a-z0-9-]+/g, "-").slice(0, 40) || `s${i}`,
-    date: /^\d{4}-\d{2}-\d{2}$/.test(it.date) ? it.date : today,
-    theme: THEMES.includes(it.theme) ? it.theme : "Growth data",
-    headline: String(it.headline ?? "").slice(0, 200),
-    summary: String(it.summary ?? "").slice(0, 600),
-    rationale: String(it.rationale ?? "").slice(0, 600),
-    horizon: ["days", "weeks", "months"].includes(it.horizon) ? it.horizon : "weeks",
-    confidence: CONF[it.confidence] ? it.confidence : "medium",
-    industries: impacts(it.industries, INDUSTRIES),
-    economies: impacts(it.economies, ECONOMIES),
-    sources: [...new Set((it.refs ?? []).map((n) => headlines[n - 1]?.link).filter(Boolean))].slice(0, 3),
-  }))
-  .filter((it) => it.headline && (it.industries.length || it.economies.length));
-
-if (items.length < 6) {
-  fail(`Only ${items.length} usable stories; keeping the previous scan.`);
-}
-
-const dates = items.map((i) => i.date).sort();
-const fmt = (d) => new Date(d + "T12:00:00Z").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
-const scan = {
-  scannedAt: new Date().toISOString(),
-  window: dates[0] === dates.at(-1) ? fmt(dates[0]) : `${fmt(dates[0]).replace(/ \d{4}$/, "")} – ${fmt(dates.at(-1))}`,
-  model: message.model,
-  headlinesScanned: headlines.length,
-  feedsOk,
-  items,
-};
-await writeFile(SCAN_PATH, JSON.stringify(scan, null, 1) + "\n");
-
-const net = (key, ids) => {
-  const t = Object.fromEntries(Object.keys(ids).map((k) => [k, 0]));
-  for (const it of items) for (const s of it[key]) t[s.id] += s.score * CONF[it.confidence];
-  for (const k in t) t[k] = Math.round(t[k] * 10) / 10;
-  return t;
-};
-let history = [];
-try { history = JSON.parse(await readFile(HISTORY_PATH, "utf8")); } catch {}
-history.push({ at: scan.scannedAt, ind: net("industries", INDUSTRIES), eco: net("economies", ECONOMIES) });
-await writeFile(HISTORY_PATH, JSON.stringify(history.slice(-24 * 14)) + "\n");
-
-if (osint && osintSignals.length) {
-  let assessed = 0;
-  for (const a of parsed.signals ?? []) {
-    const sig = osintSignals[Number(a.ref) - 1];
-    if (!sig) continue;
-    sig.assessment = {
-      headline: String(a.headline ?? "").slice(0, 160),
-      risk: ["watch", "elevated", "high"].includes(a.risk) ? a.risk : sig.severity,
-      note: String(a.note ?? "").slice(0, 300),
-      industries: impacts(a.industries, INDUSTRIES),
-      economies: impacts(a.economies, ECONOMIES),
-      at: scan.scannedAt,
-    };
-    assessed++;
-  }
-  osint.assessedAt = scan.scannedAt;
-  await writeFile(OSINT_PATH, JSON.stringify(osint, null, 1) + "\n");
-  console.log(`Assessed ${assessed} of ${osintSignals.length} OSINT signals.`);
-}
-
+const items = normalizeItems((parsed.items ?? []).map((it) => ({
+  ...it,
+  sources: (it.refs ?? []).map((n) => headlines[n - 1]?.link).filter(Boolean),
+})));
+await writeScan({ items, model: message.model, headlinesScanned: headlines.length, feedsOk, signals: parsed.signals ?? [] });
 const u = message.usage;
-console.log(`Wrote ${items.length} stories with ${message.model} (input ${u.input_tokens}, output ${u.output_tokens} tokens).`);
+console.log(`Used ${message.model} (input ${u.input_tokens}, output ${u.output_tokens} tokens).`);

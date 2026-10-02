@@ -103,12 +103,19 @@ function toMessages(history, question) {
   return messages;
 }
 
+// The question box needs API credit; it stays hidden unless ASK_ENABLED=true.
+const enabled = () => process.env.ASK_ENABLED === "true" && !!process.env.ANTHROPIC_API_KEY;
+
 export default async function handler(req, res) {
+  if (req.method === "GET") {
+    res.setHeader("Cache-Control", "no-store");
+    return res.status(200).json({ enabled: enabled() });
+  }
   if (req.method !== "POST") {
-    res.setHeader("Allow", "POST");
+    res.setHeader("Allow", "GET, POST");
     return res.status(405).json({ error: "Use POST." });
   }
-  if (!process.env.ANTHROPIC_API_KEY) {
+  if (!enabled()) {
     return res.status(503).json({ error: "The question box isn't switched on yet. Check back soon." });
   }
   const ip = String(req.headers["x-forwarded-for"] || "").split(",")[0].trim() || "unknown";

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="Where the latest global headlines push the world's biggest industries and economies, refreshed every hour.">
+<meta name="description" content="Where the latest global headlines push the world's biggest industries and economies, refreshed daily.">
 <title>Market Pressure Map</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -347,11 +347,11 @@ textarea { width: 100%; min-height: 108px; resize: vertical; padding: 10px 12px;
     <p class="status" id="intelSources"></p>
   </section>
 
-  <section class="ask" aria-labelledby="askTitle">
+  <section class="ask" aria-labelledby="askTitle" id="askSection" hidden>
     <div class="intro">
       <span class="eyebrow">Ask the desk</span>
       <h2 id="askTitle">Ask about the markets</h2>
-      <p>Ask what a story means, where pressure is building, or how one market affects another. Answers draw on this hour's scan and a quick web search.</p>
+      <p>Ask what a story means, where pressure is building, or how one market affects another. Answers draw on today's scan, the intelligence signals and a quick web search.</p>
       <p class="note">Answers stay at the sector level and are not investment advice.</p>
     </div>
     <div style="display:grid;gap:14px;min-width:0">
@@ -387,7 +387,7 @@ textarea { width: 100%; min-height: 108px; resize: vertical; padding: 10px 12px;
     </div>
   </section>
 
-  <p class="disclaim">Built hourly from public news feeds and open-source intelligence, scored by Claude between the dates shown. Figures are as reported at the time and can be revised. This page is an analytical aid, not investment advice.</p>
+  <p class="disclaim">Built daily from public news and open-source intelligence, scored by Claude between the dates shown. Figures are as reported at the time and can be revised. This page is an analytical aid, not investment advice.</p>
 </div>
 
 <div class="tip" id="tip" hidden></div>
@@ -660,7 +660,7 @@ function renderHeader() {
     const at = new Date(state.scan.scannedAt);
     const mins = Math.round((Date.now() - at) / 60000);
     const ago = isNaN(at) ? "recently" : mins < 1 ? "just now" : mins < 60 ? `${mins} min ago` : mins < 48 * 60 ? `${Math.round(mins / 60)} h ago` : at.toLocaleDateString(undefined, { day: "numeric", month: "short" });
-    $("scanMeta").textContent = `${state.scan.items.length} stories · updated ${ago} · refreshes hourly`;
+    $("scanMeta").textContent = `${state.scan.items.length} stories · updated ${ago} · refreshes daily`;
   } else {
     $("scanWindow").textContent = state.scanStatus === "loading" ? "Loading…" : "No scan loaded";
     $("scanMeta").textContent = " ";
@@ -777,7 +777,7 @@ function renderIntel() {
   if (!state.osint) {
     cats.replaceChildren();
     list.replaceChildren(el("div", { class: "empty" }, el("strong", { text: state.osintStatus === "loading" ? "Loading signals…" : "The signals feed hasn't been published yet." }),
-      state.osintStatus === "loading" ? null : el("span", { text: "It appears after the next hourly run." })));
+      state.osintStatus === "loading" ? null : el("span", { text: "It appears after the next daily run." })));
     $("sigMore").hidden = true; $("intelSources").textContent = ""; return;
   }
   const all = state.osint.signals;
@@ -823,10 +823,10 @@ function renderMatrix() {
   ));
 }
 
-/* ---------- trend sparkline from hourly history ---------- */
+/* ---------- trend sparkline from scan history ---------- */
 function sparkline(kind, id) {
   const pts = state.history.filter(h => h && h[kind] && typeof h[kind][id] === "number" && Date.now() - Date.parse(h.at) < 7 * 864e5).map(h => ({ t: Date.parse(h.at), v: h[kind][id] })).filter(p => !isNaN(p.t));
-  if (pts.length < 2) return el("p", { class: "status", text: "A trend line appears here after a few hourly scans." });
+  if (pts.length < 2) return el("p", { class: "status", text: "A trend line appears here after a few daily scans." });
   const W = innerWidth < 560 ? 360 : 600, H = innerWidth < 560 ? 130 : 150, L = 40, R = 12, T = 12, B = 24;
   const t0 = pts[0].t, t1 = pts[pts.length - 1].t || t0 + 1;
   const m = Math.max(1, ...pts.map(p => Math.abs(p.v))); const ymax = Math.ceil(m / 2) * 2;
@@ -928,7 +928,7 @@ function openDrill(kind, id) {
     sec("Related intelligence signals", relatedSignals(s => sigTouches(s, kind, id))),
     el("div", { class: "drill-actions" },
       stories.length ? el("button", { class: "btn ghost", type: "button", text: `Show these stories in the wire`, onclick: () => showInWire(kind, id) }) : null,
-      el("button", { class: "btn primary", type: "button", text: `Ask the desk about ${def.short}`, onclick: () => askAbout(`What is driving pressure on ${def.label} right now, and what should I watch next?`) }))
+      askReady && el("button", { class: "btn primary", type: "button", text: `Ask the desk about ${def.short}`, onclick: () => askAbout(`What is driving pressure on ${def.label} right now, and what should I watch next?`) }))
   ], `${kind}-${id}`);
 }
 function openPair(indId, ecoId) {
@@ -951,7 +951,7 @@ function openPair(indId, ecoId) {
     el("div", { class: "drill-actions" },
       el("button", { class: "btn ghost", type: "button", text: `Open ${i.short}`, onclick: () => openDrill("ind", indId) }),
       el("button", { class: "btn ghost", type: "button", text: `Open ${e.short}`, onclick: () => openDrill("eco", ecoId) }),
-      el("button", { class: "btn primary", type: "button", text: "Ask the desk", onclick: () => askAbout(`How exposed is ${i.label.toLowerCase()} in ${e.label} to the current news, and what are the main risks?`) }))
+      askReady && el("button", { class: "btn primary", type: "button", text: "Ask the desk", onclick: () => askAbout(`How exposed is ${i.label.toLowerCase()} in ${e.label} to the current news, and what are the main risks?`) }))
   ], `pair-${indId}-${ecoId}`);
 }
 function openFromHash() {
@@ -1033,6 +1033,12 @@ $("clearBtn").addEventListener("click", () => { turns = []; saveTurns(); renderT
 $("askText").addEventListener("keydown", e => { if (e.key === "Enter" && !e.shiftKey && !e.isComposing) { e.preventDefault(); $("askForm").requestSubmit(); } });
 document.querySelectorAll(".ex").forEach(b => b.addEventListener("click", () => { $("askText").value = b.textContent; $("askText").focus(); }));
 renderThread();
+// The question box needs API credit, so it only shows when the server says it's switched on.
+let askReady = false;
+fetch("api/ask", { cache: "no-store" }).then(r => r.ok ? r.json() : null).then(j => {
+  askReady = !!(j && j.enabled);
+  $("askSection").hidden = !askReady;
+}).catch(() => {});
 
 /* ---------- boot: load the latest scan, re-check every 5 minutes ---------- */
 let lastAt = null, lastOsintAt = null, firstLoad = true;

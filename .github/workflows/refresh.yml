@@ -1,12 +1,15 @@
-name: Hourly news scan
+name: Daily intelligence feed
 
 on:
+  # Once a day, about 25 minutes before the Claude routine that scores the news.
   schedule:
-    - cron: "7 * * * *"
+    - cron: "17 5 * * *"
   workflow_dispatch:
-  # Bot data commits use GITHUB_TOKEN, which never triggers workflows, so no loop.
+  # Code pushes refresh the feed too; data-only commits (the bot and the routine) don't.
   push:
     branches: [main]
+    paths-ignore:
+      - "public/data/**"
 
 permissions:
   contents: write
@@ -32,8 +35,9 @@ jobs:
       - name: Collect open-source intelligence signals
         run: node scripts/osint.mjs
 
-      - name: Scan news and score impact
-        if: ${{ !cancelled() }}
+      # Paid API path, off by default. Set the repository variable SCAN_WITH_API=true to use it.
+      - name: Scan news and score impact (API)
+        if: ${{ !cancelled() && vars.SCAN_WITH_API == 'true' }}
         run: node scripts/refresh.mjs
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -51,6 +55,6 @@ jobs:
             echo "No changes."
             exit 0
           fi
-          git commit -m "data: hourly scan $(date -u +%Y-%m-%dT%H:%MZ)"
+          git commit -m "data: intelligence feed $(date -u +%Y-%m-%dT%H:%MZ)"
           git pull --rebase origin main
           git push origin HEAD:main

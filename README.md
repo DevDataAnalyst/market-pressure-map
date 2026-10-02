@@ -1,6 +1,6 @@
 # Market Pressure Map
 
-Where the latest global headlines push the world's biggest industries and economies: tailwind or headwind, how hard, and why. Refreshed every hour.
+Where the latest global headlines push the world's biggest industries and economies: tailwind or headwind, how hard, and why. Refreshed daily.
 
 - **11 industries:** energy, banks, tech and chips, healthcare, autos, retail and consumer, industrials, materials, agriculture and food, real estate, transport.
 - **7 economies:** United States, China, euro area, Japan, India, United Kingdom, Gulf states.
@@ -8,21 +8,39 @@ Where the latest global headlines push the world's biggest industries and econom
 
 ## How it works
 
-1. A GitHub Actions job (`.github/workflows/refresh.yml`) runs at 7 minutes past every hour.
-2. `scripts/refresh.mjs` pulls about 14 public business and world RSS feeds and keeps the last 36 hours of headlines.
-3. Claude picks the 12–16 most market-moving developments and scores each one from −3 (strong headwind) to +3 (strong tailwind) for every industry and economy it affects. The script checks the output and keeps the previous scan if anything looks wrong.
-4. The job commits `public/data/scan.json` and `public/data/history.json`. Vercel redeploys the static site on every push.
+The site refreshes once a day, with no paid API credit needed:
+
+1. **05:17 UTC, GitHub Actions** (`.github/workflows/refresh.yml`): `scripts/osint.mjs` collects the open-source intelligence feed and commits `public/data/osint.json`. This needs no key.
+2. **05:42 UTC, a Claude Code routine** (scheduled in claude.ai, using the Claude plan rather than API credit): searches the day's market news, picks the 12–16 most market-moving developments, and scores each one from −3 (strong headwind) to +3 (strong tailwind) for every industry and economy it affects. It also assesses the top 30 intelligence signals. It writes a draft, and `node scripts/apply-scan.mjs draft.json` checks it and writes `scan.json`, `history.json` and the signal assessments. The routine then commits and pushes.
+3. **Vercel** redeploys the static site on every push.
+
+### Optional: paid API mode
+
+`scripts/refresh.mjs` does the same scoring through the Anthropic API from inside GitHub Actions, using RSS feeds. It's off by default. To use it, add a repository secret `ANTHROPIC_API_KEY` (from a key created inside a workspace, with credit on the account) and a repository variable `SCAN_WITH_API` = `true`. You can then pause the Claude routine.
+
+### Draft format for `apply-scan.mjs`
+
+```json
+{
+  "items": [{ "id": "hormuz", "date": "2026-10-02", "theme": "Energy & geopolitics", "headline": "…", "summary": "…", "rationale": "…",
+              "horizon": "weeks", "confidence": "high", "industries": [{ "id": "energy", "score": 2, "why": "…" }],
+              "economies": [{ "id": "india", "score": -2, "why": "…" }], "sources": ["https://…"] }],
+  "signals": [{ "id": "<signal id from --list-signals>", "headline": "…", "risk": "high", "note": "…", "industries": [], "economies": [] }]
+}
+```
+
+`node scripts/apply-scan.mjs --list-signals` prints the signals to assess and the allowed ids and themes.
 
 ## Open-source intelligence feed
 
-`scripts/osint.mjs` runs first in every hourly job and needs no API key. It collects geopolitical and economic signals from open sources:
+`scripts/osint.mjs` runs in the daily job and needs no API key. It collects geopolitical and economic signals from open sources:
 
 - **Media monitoring:** Google News topic searches and GDELT (which watches world news in many languages) for sanctions and trade, conflict, shipping chokepoints and energy supply. GDELT often rate-limits GitHub's servers, so Google News is the main media source.
 - **Conflict and humanitarian:** UN News, ReliefWeb and Crisis Group.
 - **Hazards:** GDACS disaster alerts (orange and red only) and USGS significant earthquakes.
 - **Official:** Federal Reserve, ECB, Bank of England, WTO and the US Energy Information Administration.
 
-Each signal is tagged by rules with a category, the places, industries and economies it exposes, and a severity (watch, elevated or high). Severity rises with intensity words, disaster alert level, earthquake magnitude and how many separate sources report the same thing. Near-duplicate reports are merged. Headlines that name companies are dropped. When the Claude scan runs, it also assesses the top 30 signals with a neutral headline, a market-impact risk level, a short note and signed scores; those signals show as "Assessed". The feed is written to `public/data/osint.json` and is committed even if the Claude scan fails.
+Each signal is tagged by rules with a category, the places, industries and economies it exposes, and a severity (watch, elevated or high). Severity rises with intensity words, disaster alert level, earthquake magnitude and how many separate sources report the same thing. Near-duplicate reports are merged. Headlines that name companies are dropped. When the daily Claude routine runs, it also assesses the top 30 signals with a neutral headline, a market-impact risk level, a short note and signed scores; those signals show as "Assessed". The feed is written to `public/data/osint.json` and is published even when the scoring step doesn't run.
 
 ## Drill-down
 
@@ -32,23 +50,22 @@ The page totals the scores, counting high-confidence calls at 1.0, medium at 0.7
 
 ## Setup
 
-1. **Add your Anthropic API key:** in the repository on GitHub, go to Settings → Secrets and variables → Actions → New repository secret. Name it `ANTHROPIC_API_KEY`.
-2. **If your key isn't scoped to a workspace:** the API rejects requests unless they name a workspace. Add a repository variable or secret `ANTHROPIC_WORKSPACE_ID` (it starts with `wrkspc_`; find it in the Claude Console under Settings → Workspaces). Alternatively, create a new API key inside a workspace and use that instead.
-3. **Optional, to change the model:** under the Variables tab, add `SCAN_MODEL` (for example `claude-sonnet-5-5`). The default is `claude-opus-5-5`.
-4. **Run the first scan:** go to Actions → Hourly news scan → Run workflow.
+1. **Daily scoring:** a Claude Code routine named "Market Pressure Map daily scan" runs at 05:42 UTC. You can manage or pause it in claude.ai under Routines.
+2. **Intelligence feed:** runs automatically. To run it by hand, go to Actions → Daily intelligence feed → Run workflow.
+3. **Paid API mode and the question box:** optional; see below.
 
 ### Question box ("Ask about the markets")
 
-The page has a question box backed by a Vercel function (`api/ask.js`). It gives Claude the latest scan as context, allows up to two web searches per question, and streams the answer back. To switch it on:
+The question box answers live, so it needs Anthropic API credit. It stays hidden unless it's switched on. To switch it on, add these in Vercel → Settings → Environment Variables (Production), then redeploy:
 
-1. In Vercel, open the project → Settings → Environment Variables and add `ANTHROPIC_API_KEY` for Production.
-2. Redeploy, or wait for the next hourly data commit.
+- `ANTHROPIC_API_KEY`: a key created inside a workspace, on an account with credit.
+- `ASK_ENABLED` = `true`.
 
-If your key needs a workspace, also add `ANTHROPIC_WORKSPACE_ID` there. Optional variables: `ASK_MODEL` (default `claude-opus-5-5`) and `ASK_RATE_LIMIT` (questions per visitor per 10 minutes, default 8). The rate limit is best-effort because serverless instances don't share memory. Set a monthly spend limit on your Anthropic key, since anyone who can open the site can ask questions.
+Optional variables: `ASK_MODEL` (default `claude-opus-5-5`) and `ASK_RATE_LIMIT` (questions per visitor per 10 minutes, default 8). The rate limit is best-effort because serverless instances don't share memory. Set a monthly spend limit, since anyone who can open the site can ask questions.
 
 ### Cost
 
-Each run sends about 140 headlines and gets back about 15 scored stories. On the default model that's roughly $0.10–0.25 per run, or about $2.50–6 a day at one run an hour. `claude-sonnet-5-5` costs about half as much. Each question in the question box costs roughly $0.02–0.06, including web searches. To run less often, change the cron line in the workflow (for example `7 */3 * * *` for every 3 hours).
+The daily routine and the intelligence feed cost nothing beyond your Claude plan and GitHub's free Actions minutes. The routine counts toward your plan's usage limits. In paid API mode, each scan costs roughly $0.10–0.25 on the default model, and each question-box question about $0.02–0.06.
 
 ## Local use
 

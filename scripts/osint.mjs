@@ -297,11 +297,14 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   if (okCount === 0 || feed.signals.length === 0) fail("No OSINT sources returned usable signals; keeping the previous feed.");
 
   let previous = {};
+  let assessedAt;
   try {
-    for (const s of JSON.parse(await readFile(OSINT_PATH, "utf8")).signals ?? []) if (s.assessment) previous[s.id] = s.assessment;
+    const old = JSON.parse(await readFile(OSINT_PATH, "utf8"));
+    assessedAt = old.assessedAt;
+    for (const s of old.signals ?? []) if (s.assessment) previous[s.id] = s.assessment;
   } catch {}
   for (const s of feed.signals) if (previous[s.id]) s.assessment = previous[s.id];
 
-  await writeFile(OSINT_PATH, JSON.stringify({ updatedAt: new Date().toISOString(), ...feed }, null, 1) + "\n");
+  await writeFile(OSINT_PATH, JSON.stringify({ updatedAt: new Date().toISOString(), assessedAt, ...feed }, null, 1) + "\n");
   for (const s of feed.signals.slice(0, 8)) console.log(`- [${s.severity}] ${s.category} · ${s.source}: ${s.title}`);
 }
