@@ -8,6 +8,7 @@ import { ECONOMIES, INDUSTRIES, fail, fetchFeed, fetchText, titleKey, txt } from
 const OSINT_PATH = new URL("../public/data/osint.json", import.meta.url);
 const WINDOW_HOURS = 48;
 const MAX_SIGNALS = 80;
+const MAX_MEDIA = 45; // media items are plentiful; leave room for official, tracker and hazard sources
 
 const RSS_SOURCES = [
   { name: "UN News", type: "Intergovernmental", url: "https://news.un.org/feed/subscribe/en/news/all/rss.xml" },
@@ -62,6 +63,16 @@ const PLACES = ["Russia", "Ukraine", "Israel", "Gaza", "Lebanon", "Iran", "Iraq"
 const INTENSIFIER = /\b(killed|dead|deaths|escalat|invasion|blockade|seiz|shut|halt|collapse|default|emergency|record|surge|plunge|soar|nuclear|ban|closure|explosion)/i;
 // Raw source headlines can name firms; drop those rather than show company names.
 const COMPANY_MARKERS = /\b(Inc|Corp|Corporation|Ltd|LLC|plc|PLC|Holdings|N\.V\.)\b|\$[A-Z]{1,5}\b|\b(NYSE|NASDAQ|Nasdaq):/;
+// Best effort: the largest firms that most often appear in geopolitical and energy headlines.
+const COMPANY_NAMES = new RegExp("\\b(" + [
+  "Aramco", "Sinopec", "PetroChina", "CNOOC", "Exxon", "ExxonMobil", "Chevron", "Shell", "BP", "TotalEnergies", "Equinor", "Eni", "Repsol", "Petrobras", "Pemex", "ADNOC", "QatarEnergy", "Occidental", "ConocoPhillips", "Halliburton", "Schlumberger", "SLB", "Gazprom", "Rosneft", "Lukoil", "Novatek", "Vitol", "Trafigura", "Glencore", "Gunvor",
+  "Raytheon", "RTX", "Lockheed", "Northrop", "General Dynamics", "Boeing", "Airbus", "BAE Systems", "Rheinmetall", "Thales", "Anduril", "Palantir",
+  "Maersk", "MSC", "CMA CGM", "Hapag-Lloyd", "COSCO", "FedEx", "UPS", "DHL",
+  "Apple", "Microsoft", "Google", "Alphabet", "Meta", "Nvidia", "Intel", "AMD", "Qualcomm", "Broadcom", "TSMC", "Samsung", "SK Hynix", "Micron", "ASML", "Huawei", "SMIC", "Foxconn", "Hon Hai", "Alibaba", "Tencent", "ByteDance", "TikTok", "Xiaomi", "OpenAI", "Anthropic",
+  "Tesla", "Toyota", "Volkswagen", "BYD", "CATL", "Ford", "General Motors", "Stellantis", "Honda", "Nissan", "Hyundai", "Kia", "BMW", "Mercedes-Benz",
+  "JPMorgan", "Goldman Sachs", "Morgan Stanley", "Citigroup", "Citi", "HSBC", "Barclays", "BlackRock", "Berkshire", "Mastercard",
+  "Walmart", "Pfizer", "Moderna", "Novartis", "Roche", "AstraZeneca", "Bayer", "Nestle", "Unilever", "Cargill", "ADM", "Bunge", "BHP", "Rio Tinto", "ArcelorMittal", "Siemens", "Mitsubishi", "Sony", "Reliance", "Tata", "Adani", "Infosys",
+].join("|") + ")\\b");
 const STOP = new Set(["about", "after", "against", "amid", "their", "there", "these", "which", "while", "would", "could", "says", "said", "with", "from", "that", "this", "into", "over", "under", "will", "have", "been", "more", "than"]);
 
 // Places whose disruption tends to reach global markets (energy, shipping, chips, grain).
@@ -113,8 +124,10 @@ async function fetchNewsSearches() {
     const url = `https://news.google.com/rss/search?q=${encodeURIComponent(`${q} when:1d`)}&hl=en-US&gl=US&ceid=US:en`;
     try {
       for (const it of await fetchFeed(url)) {
-        const m = /^(.*) - ([^-]{2,60})$/.exec(it.title);
-        items.push({ ...it, raw: undefined, title: m ? m[1].trim() : it.title, source: m ? m[2].trim() : "Google News", sourceType: "Media monitor (Google News)" });
+        const publisher = txt(it.raw?.source).trim();
+        let title = it.title;
+        if (publisher && title.endsWith(` - ${publisher}`)) title = title.slice(0, -publisher.length - 3).trim();
+        items.push({ ...it, raw: undefined, title, source: publisher || "Google News", sourceType: "Media monitor (Google News)" });
       }
       ok++;
     } catch (err) {
@@ -220,7 +233,7 @@ export async function collectOsint() {
     for (const it of s.items) {
       if (!it.title || !/^https?:\/\//.test(it.link || "")) continue;
       if (!Number.isNaN(it.published) && it.published < cutoff) continue;
-      if (COMPANY_MARKERS.test(it.title)) continue;
+      if (COMPANY_MARKERS.test(it.title) || COMPANY_NAMES.test(it.title)) continue;
       const key = titleKey(it.title);
       if (seen.has(key)) continue;
       seen.add(key);
@@ -257,19 +270,22 @@ export async function collectOsint() {
         places: c.places,
         industries: c.industries,
         economies: c.economies,
-        severity: score >= 5 ? "high" : score >= 3 ? "elevated" : "watch",
+        severity: score >= 6 ? "high" : score >= 4 ? "elevated" : "watch",
         severityScore: score,
         reports: c.reports,
         also: c.also,
       };
     })
-    .sort((a, b) => b.severityScore - a.severityScore || (b.published || "").localeCompare(a.published || ""))
-    .slice(0, MAX_SIGNALS);
+    .sort((a, b) => b.severityScore - a.severityScore || (b.published || "").localeCompare(a.published || ""));
+  const isMedia = (s) => s.sourceType.startsWith("Media monitor");
+  const media = signals.filter(isMedia).slice(0, MAX_MEDIA);
+  const other = signals.filter((s) => !isMedia(s)).slice(0, MAX_SIGNALS - media.length);
+  const selected = [...media, ...other].sort((a, b) => b.severityScore - a.severityScore || (b.published || "").localeCompare(a.published || ""));
 
   return {
     sources: sources.map(({ name, type, ok, count }) => ({ name, type, ok, count })),
     categories: CATEGORIES.map(({ id, label }) => ({ id, label })),
-    signals,
+    signals: selected,
   };
 }
 
