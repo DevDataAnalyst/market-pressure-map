@@ -1,5 +1,5 @@
 // Open-source intelligence feed: geopolitical and economic signals from open sources
-// (GDELT, UN, ReliefWeb, GDACS, USGS, crisis trackers, central banks, IMF, WTO, EIA).
+// (GDELT, Google News topic searches, UN, ReliefWeb, GDACS, USGS, Crisis Group, central banks, WTO, EIA).
 // Rule-based tagging only, so it runs without an API key; the Claude scan adds assessments later.
 // Writes public/data/osint.json, keeping the previous assessments for signals still in the feed.
 import { readFile, writeFile } from "node:fs/promises";
@@ -11,7 +11,7 @@ const MAX_SIGNALS = 80;
 
 const RSS_SOURCES = [
   { name: "UN News", type: "Intergovernmental", url: "https://news.un.org/feed/subscribe/en/news/all/rss.xml" },
-  { name: "ReliefWeb", type: "Humanitarian", url: "https://reliefweb.int/headlines/rss.xml" },
+  { name: "ReliefWeb", type: "Humanitarian", url: "https://reliefweb.int/updates/rss.xml" },
   { name: "GDACS", type: "Disaster alerts", url: "https://www.gdacs.org/xml/rss.xml" },
   { name: "Crisis Group", type: "Conflict tracker", url: "https://www.crisisgroup.org/rss" },
   { name: "Federal Reserve", type: "Central bank", url: "https://www.federalreserve.gov/feeds/press_all.xml" },
@@ -65,7 +65,7 @@ const COMPANY_MARKERS = /\b(Inc|Corp|Corporation|Ltd|LLC|plc|PLC|Holdings|N\.V\.
 const STOP = new Set(["about", "after", "against", "amid", "their", "there", "these", "which", "while", "would", "could", "says", "said", "with", "from", "that", "this", "into", "over", "under", "will", "have", "been", "more", "than"]);
 
 // Places whose disruption tends to reach global markets (energy, shipping, chips, grain).
-const MARKET_PLACES = new Set(["Russia", "Ukraine", "Israel", "Lebanon", "Iran", "Iraq", "Yemen", "Taiwan", "North Korea", "South Korea", "Venezuela", "Libya", "Red Sea", "Black Sea", "Strait of Hormuz", "Suez Canal", "Panama Canal", "Taiwan Strait", "Turkey", "Egypt", "Mexico", "Brazil", "Indonesia", "Canada", "Australia"]);
+const MARKET_PLACES = new Set(["Russia", "Ukraine", "Israel", "Lebanon", "Iran", "Iraq", "Yemen", "Taiwan", "North Korea", "South Korea", "Venezuela", "Libya", "Red Sea", "Black Sea", "Strait of Hormuz", "Suez Canal", "Panama Canal", "Taiwan Strait"]);
 // Central-bank and official feeds also publish appointments, events and speeches; keep only market business.
 const POLICY_BUSINESS = /\b(rate|inflation|monetary|financial stability|policy statement|fomc|minutes of the monetary|balance sheet|stress test|liquidity|tariff|sanction|trade|outlook|forecast|growth|recession|debt|currency|exchange|oil|gas|energy|supply)/i;
 const DIGEST = /^(world news in brief|news in brief|daily briefing|week in review)/i;
@@ -97,6 +97,31 @@ async function fetchGdelt() {
     }
   }
   return { name: "GDELT", type: "Media monitor", ok: false, count: 0, items: [] };
+}
+
+// Google News topic searches as a second media monitor (GDELT often rate-limits CI servers).
+const NEWS_SEARCHES = [
+  'sanctions OR embargo OR "export controls" OR "trade war"',
+  '"Strait of Hormuz" OR "Red Sea" OR "Suez Canal" OR "Taiwan Strait" OR "Black Sea" shipping',
+  'OPEC OR "oil supply" OR "gas supply" OR "pipeline attack" OR "refinery"',
+  'missile OR airstrike OR coup OR "military escalation" OR blockade',
+];
+async function fetchNewsSearches() {
+  const items = [];
+  let ok = 0;
+  for (const q of NEWS_SEARCHES) {
+    const url = `https://news.google.com/rss/search?q=${encodeURIComponent(`${q} when:1d`)}&hl=en-US&gl=US&ceid=US:en`;
+    try {
+      for (const it of await fetchFeed(url)) {
+        const m = /^(.*) - ([^-]{2,60})$/.exec(it.title);
+        items.push({ ...it, raw: undefined, title: m ? m[1].trim() : it.title, source: m ? m[2].trim() : "Google News", sourceType: "Media monitor (Google News)" });
+      }
+      ok++;
+    } catch (err) {
+      warn(`Google News search failed: ${err.message}`);
+    }
+  }
+  return { name: "Google News searches", type: "Media monitor", ok: ok > 0, count: items.length, items };
 }
 
 async function fetchUsgs() {
@@ -187,7 +212,7 @@ function similar(a, b) {
 }
 
 export async function collectOsint() {
-  const sources = await Promise.all([...RSS_SOURCES.map(fetchRss), fetchUsgs(), fetchGdelt()]);
+  const sources = await Promise.all([...RSS_SOURCES.map(fetchRss), fetchUsgs(), fetchNewsSearches(), fetchGdelt()]);
   const cutoff = Date.now() - WINDOW_HOURS * 3600_000;
   const seen = new Set();
   const tagged = [];

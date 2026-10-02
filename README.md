@@ -17,7 +17,7 @@ Where the latest global headlines push the world's biggest industries and econom
 
 `scripts/osint.mjs` runs first in every hourly job and needs no API key. It collects geopolitical and economic signals from open sources:
 
-- **Media monitoring:** GDELT, which watches world news in many languages, queried in one request for sanctions and trade, conflict, shipping chokepoints and energy supply.
+- **Media monitoring:** Google News topic searches and GDELT (which watches world news in many languages) for sanctions and trade, conflict, shipping chokepoints and energy supply. GDELT often rate-limits GitHub's servers, so Google News is the main media source.
 - **Conflict and humanitarian:** UN News, ReliefWeb and Crisis Group.
 - **Hazards:** GDACS disaster alerts (orange and red only) and USGS significant earthquakes.
 - **Official:** Federal Reserve, ECB, Bank of England, WTO and the US Energy Information Administration.
