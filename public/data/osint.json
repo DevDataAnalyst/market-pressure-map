@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-02T09:13:17.913Z",
+ "updatedAt": "2026-10-02T09:15:00.059Z",
  "sources": [
   {
    "name": "UN News",
@@ -24,12 +24,6 @@
    "type": "Conflict tracker",
    "ok": true,
    "count": 10
-  },
-  {
-   "name": "IMF",
-   "type": "Official",
-   "ok": false,
-   "count": 0
   },
   {
    "name": "Federal Reserve",
@@ -70,8 +64,8 @@
   {
    "name": "GDELT",
    "type": "Media monitor",
-   "ok": true,
-   "count": 50
+   "ok": false,
+   "count": 0
   }
  ],
  "categories": [
@@ -137,33 +131,6 @@
    "also": []
   },
   {
-   "id": "man-charged-by-us-with-illegally-shipping-nvidia-chips-to-ch",
-   "title": "Man charged by US with illegally shipping Nvidia chips to China",
-   "link": "https://www.businesstimes.com.sg/companies-markets/man-charged-us-illegally-shipping-nvidia-chips-china",
-   "source": "businesstimes.com.sg",
-   "sourceType": "Media monitor (GDELT)",
-   "published": "2026-10-02T03:00:00.000Z",
-   "category": "shipping",
-   "categories": [
-    "shipping"
-   ],
-   "places": [],
-   "industries": [
-    "transport",
-    "energy",
-    "consumer",
-    "tech"
-   ],
-   "economies": [
-    "us",
-    "china"
-   ],
-   "severity": "elevated",
-   "severityScore": 4,
-   "reports": 1,
-   "also": []
-  },
-  {
    "id": "un-member-states-weigh-latest-security-council-veto-this-tim",
    "title": "UN Member States weigh latest Security Council veto, this time on Iran",
    "link": "https://news.un.org/feed/view/en/story/2026/10/1168505",
@@ -190,83 +157,6 @@
    ],
    "severity": "elevated",
    "severityScore": 4,
-   "reports": 1,
-   "also": []
-  },
-  {
-   "id": "trump-canada-import-bans-on-dairy-and-autos-could-fuel-infla",
-   "title": "Trump Canada import bans on dairy and autos could fuel inflation , expert says",
-   "link": "https://www.foxbusiness.com/politics/expert-reveals-us-business-owners-bear-brunt-canadian-tariff-fallout-trade-war-uncertainty-looms",
-   "source": "foxbusiness.com",
-   "sourceType": "Media monitor (GDELT)",
-   "published": "2026-10-01T19:45:00.000Z",
-   "category": "policy",
-   "categories": [
-    "policy"
-   ],
-   "places": [
-    "Canada"
-   ],
-   "industries": [
-    "financials",
-    "realestate",
-    "autos"
-   ],
-   "economies": [],
-   "severity": "elevated",
-   "severityScore": 3,
-   "reports": 1,
-   "also": []
-  },
-  {
-   "id": "opinion-why-u-s-democrats-cant-stop-trump-tariffs-in-canada",
-   "title": "Opinion : Why U . S . Democrats cant stop Trump tariffs in Canada",
-   "link": "https://www.bnnbloomberg.ca/business/politics/2026/10/01/eric-ham-why-a-democratic-us-midterm-win-wont-guarantee-tariff-relief-for-canada/",
-   "source": "bnnbloomberg.ca",
-   "sourceType": "Media monitor (GDELT)",
-   "published": "2026-10-01T18:00:00.000Z",
-   "category": "sanctions",
-   "categories": [
-    "sanctions"
-   ],
-   "places": [
-    "Canada"
-   ],
-   "industries": [
-    "industrials",
-    "tech",
-    "autos",
-    "agrifood"
-   ],
-   "economies": [],
-   "severity": "elevated",
-   "severityScore": 3,
-   "reports": 1,
-   "also": []
-  },
-  {
-   "id": "canada-is-being-taught-a-little-lesson-in-trade-war-trump-sa",
-   "title": "Canada is being taught a  little lesson  in trade war , Trump says",
-   "link": "https://torontosun.com/news/national/canada-taught-little-lesson-trade-war-trump",
-   "source": "torontosun.com",
-   "sourceType": "Media monitor (GDELT)",
-   "published": "2026-10-01T15:30:00.000Z",
-   "category": "conflict",
-   "categories": [
-    "conflict",
-    "sanctions"
-   ],
-   "places": [
-    "Canada"
-   ],
-   "industries": [
-    "energy",
-    "transport",
-    "industrials"
-   ],
-   "economies": [],
-   "severity": "elevated",
-   "severityScore": 3,
    "reports": 1,
    "also": []
   },
@@ -314,127 +204,6 @@
     "energy",
     "transport",
     "industrials"
-   ],
-   "economies": [],
-   "severity": "watch",
-   "severityScore": 2,
-   "reports": 1,
-   "also": []
-  },
-  {
-   "id": "trump-trade-war-wrecked-industry-he-swore-he-was-defending-e",
-   "title": "Trump trade war wrecked industry he swore he was defending :  Everyone is losing",
-   "link": "https://www.rawstory.com/trump-dairy/",
-   "source": "rawstory.com",
-   "sourceType": "Media monitor (GDELT)",
-   "published": "2026-10-02T04:15:00.000Z",
-   "category": "conflict",
-   "categories": [
-    "conflict",
-    "sanctions"
-   ],
-   "places": [],
-   "industries": [
-    "energy",
-    "transport",
-    "industrials"
-   ],
-   "economies": [],
-   "severity": "watch",
-   "severityScore": 2,
-   "reports": 1,
-   "also": []
-  },
-  {
-   "id": "ct-manufacturers-highlight-trade-wars-as-significant-drag",
-   "title": "CT manufacturers highlight trade wars as significant drag",
-   "link": "https://hartfordbusiness.com/article/ct-manufacturers-highlight-trade-wars-as-significant-drag/",
-   "source": "hartfordbusiness.com",
-   "sourceType": "Media monitor (GDELT)",
-   "published": "2026-10-01T18:30:00.000Z",
-   "category": "conflict",
-   "categories": [
-    "conflict",
-    "sanctions"
-   ],
-   "places": [],
-   "industries": [
-    "energy",
-    "transport",
-    "industrials"
-   ],
-   "economies": [],
-   "severity": "watch",
-   "severityScore": 2,
-   "reports": 1,
-   "also": []
-  },
-  {
-   "id": "u-s-tightens-cuba-embargo-newsradio-wiod",
-   "title": "U - S Tightens Cuba Embargo | NewsRadio WIOD",
-   "link": "https://wiod.iheart.com/featured/florida-news/content/2026-10-01-u-s-tightens-cuba-embargo/",
-   "source": "wiod.iheart.com",
-   "sourceType": "Media monitor (GDELT)",
-   "published": "2026-10-01T18:30:00.000Z",
-   "category": "sanctions",
-   "categories": [
-    "sanctions"
-   ],
-   "places": [],
-   "industries": [
-    "industrials",
-    "tech",
-    "autos",
-    "agrifood"
-   ],
-   "economies": [],
-   "severity": "watch",
-   "severityScore": 2,
-   "reports": 1,
-   "also": []
-  },
-  {
-   "id": "tariff-game-threatens-alcohol-industry-jobs-in-massachusetts",
-   "title": "Tariff  game  threatens alcohol industry jobs in Massachusetts , Treasurer Deb Goldberg says | State",
-   "link": "https://www.berkshireeagle.com/statenews/tariff-game-threatens-alcohol-industry-jobs-in-massachusetts-treasurer-deb-goldberg-says/1361352",
-   "source": "berkshireeagle.com",
-   "sourceType": "Media monitor (GDELT)",
-   "published": "2026-10-01T12:30:00.000Z",
-   "category": "sanctions",
-   "categories": [
-    "sanctions"
-   ],
-   "places": [],
-   "industries": [
-    "industrials",
-    "tech",
-    "autos",
-    "agrifood",
-    "materials"
-   ],
-   "economies": [],
-   "severity": "watch",
-   "severityScore": 2,
-   "reports": 1,
-   "also": []
-  },
-  {
-   "id": "trump-tariffs-are-raising-prices-one-tin-can-at-a-time-las-v",
-   "title": "Trump tariffs are raising prices , one tin can at a time - Las Vegas Sun News",
-   "link": "https://lasvegassun.com/news/2026/oct/01/trumps-tariffs-are-raising-prices-one-tin-can-at-a/",
-   "source": "lasvegassun.com",
-   "sourceType": "Media monitor (GDELT)",
-   "published": "2026-10-01T11:00:00.000Z",
-   "category": "sanctions",
-   "categories": [
-    "sanctions"
-   ],
-   "places": [],
-   "industries": [
-    "industrials",
-    "tech",
-    "autos",
-    "agrifood"
    ],
    "economies": [],
    "severity": "watch",
