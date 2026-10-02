@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-02T09:09:39.377Z",
+ "updatedAt": "2026-10-02T09:13:17.913Z",
  "sources": [
   {
    "name": "UN News",
@@ -70,8 +70,8 @@
   {
    "name": "GDELT",
    "type": "Media monitor",
-   "ok": false,
-   "count": 0
+   "ok": true,
+   "count": 50
   }
  ],
  "categories": [
@@ -110,34 +110,6 @@
  ],
  "signals": [
   {
-   "id": "world-news-in-brief-marshall-islands-nuclear-legacy-flydubai",
-   "title": "World News in Brief: Marshall Islands nuclear legacy, FlyDubai attack condemned, Ukraine update, breast cancer treatment expanded in West Bank",
-   "link": "https://news.un.org/feed/view/en/story/2026/10/1168503",
-   "source": "UN News",
-   "sourceType": "Intergovernmental",
-   "published": "2026-10-01T12:00:00.000Z",
-   "category": "conflict",
-   "categories": [
-    "conflict"
-   ],
-   "places": [
-    "Ukraine"
-   ],
-   "industries": [
-    "energy",
-    "transport",
-    "industrials",
-    "financials"
-   ],
-   "economies": [
-    "us"
-   ],
-   "severity": "high",
-   "severityScore": 5,
-   "reports": 1,
-   "also": []
-  },
-  {
    "id": "the-houthis-advance-to-bab-al-mandab-has-yemen-s-war-returne",
    "title": "The Houthis’ Advance to Bab al-Mandab: Has Yemen’s War Returned?",
    "link": "https://www.crisisgroup.org/evt/middle-east-north-africa/yemen-saudi-arabia/houthis-advance-bab-al-mandab-has-yemens-war-returned",
@@ -165,24 +137,26 @@
    "also": []
   },
   {
-   "id": "appointment-of-members-of-the-enforcement-decision-making-co",
-   "title": "Appointment of members of the Enforcement Decision Making Committee (EDMC)",
-   "link": "https://www.bankofengland.co.uk/news/2026/october/appointment-of-members-of-the-edmc",
-   "source": "Bank of England",
-   "sourceType": "Central bank",
-   "published": "2026-10-02T08:00:00.000Z",
-   "category": "policy",
+   "id": "man-charged-by-us-with-illegally-shipping-nvidia-chips-to-ch",
+   "title": "Man charged by US with illegally shipping Nvidia chips to China",
+   "link": "https://www.businesstimes.com.sg/companies-markets/man-charged-us-illegally-shipping-nvidia-chips-china",
+   "source": "businesstimes.com.sg",
+   "sourceType": "Media monitor (GDELT)",
+   "published": "2026-10-02T03:00:00.000Z",
+   "category": "shipping",
    "categories": [
-    "policy"
+    "shipping"
    ],
    "places": [],
    "industries": [
-    "financials",
-    "realestate",
-    "autos"
+    "transport",
+    "energy",
+    "consumer",
+    "tech"
    ],
    "economies": [
-    "uk"
+    "us",
+    "china"
    ],
    "severity": "elevated",
    "severityScore": 4,
@@ -220,26 +194,104 @@
    "also": []
   },
   {
-   "id": "financial-policy-committee-record-september-2026",
-   "title": "Financial Policy Committee Record – September 2026",
-   "link": "https://www.bankofengland.co.uk/financial-policy-committee-record/2026/september-2026",
-   "source": "Bank of England",
-   "sourceType": "Central bank",
-   "published": "2026-09-30T09:30:00.000Z",
+   "id": "trump-canada-import-bans-on-dairy-and-autos-could-fuel-infla",
+   "title": "Trump Canada import bans on dairy and autos could fuel inflation , expert says",
+   "link": "https://www.foxbusiness.com/politics/expert-reveals-us-business-owners-bear-brunt-canadian-tariff-fallout-trade-war-uncertainty-looms",
+   "source": "foxbusiness.com",
+   "sourceType": "Media monitor (GDELT)",
+   "published": "2026-10-01T19:45:00.000Z",
    "category": "policy",
    "categories": [
     "policy"
    ],
-   "places": [],
+   "places": [
+    "Canada"
+   ],
    "industries": [
     "financials",
-    "realestate"
+    "realestate",
+    "autos"
    ],
-   "economies": [
-    "uk"
-   ],
+   "economies": [],
    "severity": "elevated",
-   "severityScore": 4,
+   "severityScore": 3,
+   "reports": 1,
+   "also": []
+  },
+  {
+   "id": "opinion-why-u-s-democrats-cant-stop-trump-tariffs-in-canada",
+   "title": "Opinion : Why U . S . Democrats cant stop Trump tariffs in Canada",
+   "link": "https://www.bnnbloomberg.ca/business/politics/2026/10/01/eric-ham-why-a-democratic-us-midterm-win-wont-guarantee-tariff-relief-for-canada/",
+   "source": "bnnbloomberg.ca",
+   "sourceType": "Media monitor (GDELT)",
+   "published": "2026-10-01T18:00:00.000Z",
+   "category": "sanctions",
+   "categories": [
+    "sanctions"
+   ],
+   "places": [
+    "Canada"
+   ],
+   "industries": [
+    "industrials",
+    "tech",
+    "autos",
+    "agrifood"
+   ],
+   "economies": [],
+   "severity": "elevated",
+   "severityScore": 3,
+   "reports": 1,
+   "also": []
+  },
+  {
+   "id": "canada-is-being-taught-a-little-lesson-in-trade-war-trump-sa",
+   "title": "Canada is being taught a  little lesson  in trade war , Trump says",
+   "link": "https://torontosun.com/news/national/canada-taught-little-lesson-trade-war-trump",
+   "source": "torontosun.com",
+   "sourceType": "Media monitor (GDELT)",
+   "published": "2026-10-01T15:30:00.000Z",
+   "category": "conflict",
+   "categories": [
+    "conflict",
+    "sanctions"
+   ],
+   "places": [
+    "Canada"
+   ],
+   "industries": [
+    "energy",
+    "transport",
+    "industrials"
+   ],
+   "economies": [],
+   "severity": "elevated",
+   "severityScore": 3,
+   "reports": 1,
+   "also": []
+  },
+  {
+   "id": "iraq-s-post-coalition-test",
+   "title": "Iraq’s Post-coalition Test",
+   "link": "https://www.crisisgroup.org/vid/middle-east-north-africa/iraq/iraqs-post-coalition-test",
+   "source": "Crisis Group",
+   "sourceType": "Conflict tracker",
+   "published": null,
+   "category": "energy",
+   "categories": [
+    "energy"
+   ],
+   "places": [
+    "Iraq"
+   ],
+   "industries": [
+    "energy",
+    "materials",
+    "transport"
+   ],
+   "economies": [],
+   "severity": "elevated",
+   "severityScore": 3,
    "reports": 1,
    "also": []
   },
@@ -264,101 +316,129 @@
     "industrials"
    ],
    "economies": [],
-   "severity": "elevated",
-   "severityScore": 3,
+   "severity": "watch",
+   "severityScore": 2,
    "reports": 1,
    "also": []
   },
   {
-   "id": "isabel-schnabel-central-banks-on-chain",
-   "title": "Isabel Schnabel: Central banks on-chain",
-   "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261001_1~a0be67193b.en.pdf",
-   "source": "ECB",
-   "sourceType": "Central bank",
-   "published": "2026-10-01T15:30:00.000Z",
-   "category": "policy",
+   "id": "trump-trade-war-wrecked-industry-he-swore-he-was-defending-e",
+   "title": "Trump trade war wrecked industry he swore he was defending :  Everyone is losing",
+   "link": "https://www.rawstory.com/trump-dairy/",
+   "source": "rawstory.com",
+   "sourceType": "Media monitor (GDELT)",
+   "published": "2026-10-02T04:15:00.000Z",
+   "category": "conflict",
    "categories": [
-    "policy"
-   ],
-   "places": [],
-   "industries": [
-    "financials",
-    "realestate"
-   ],
-   "economies": [],
-   "severity": "elevated",
-   "severityScore": 3,
-   "reports": 1,
-   "also": []
-  },
-  {
-   "id": "minutes-of-the-meeting-of-the-court-of-directors-held-on-16-",
-   "title": "Minutes of the Meeting of the Court of Directors held on 16 July 2026",
-   "link": "https://www.bankofengland.co.uk/minutes/2026/july/court-minutes-16-july-2026",
-   "source": "Bank of England",
-   "sourceType": "Central bank",
-   "published": "2026-10-01T13:00:00.000Z",
-   "category": "policy",
-   "categories": [
-    "policy"
-   ],
-   "places": [],
-   "industries": [
-    "financials",
-    "realestate"
-   ],
-   "economies": [],
-   "severity": "elevated",
-   "severityScore": 3,
-   "reports": 1,
-   "also": []
-  },
-  {
-   "id": "nepal-floods-threaten-jobs-and-livelihoods-beyond-disaster-z",
-   "title": "Nepal floods threaten jobs and livelihoods beyond disaster zone: ILO",
-   "link": "https://news.un.org/feed/view/en/story/2026/10/1168500",
-   "source": "UN News",
-   "sourceType": "Intergovernmental",
-   "published": "2026-10-01T12:00:00.000Z",
-   "category": "hazard",
-   "categories": [
-    "hazard"
-   ],
-   "places": [],
-   "industries": [
-    "agrifood",
-    "realestate",
-    "transport"
-   ],
-   "economies": [],
-   "severity": "elevated",
-   "severityScore": 3,
-   "reports": 1,
-   "also": []
-  },
-  {
-   "id": "u-s-electricity-use-for-electric-vehicles-increasing-at-a-sl",
-   "title": "U.S. electricity use for electric vehicles increasing at a slower pace in 2026",
-   "link": "https://www.eia.gov/todayinenergy/detail.php?id=68224",
-   "source": "US EIA",
-   "sourceType": "Official",
-   "published": "2026-09-30T14:00:00.000Z",
-   "category": "energy",
-   "categories": [
-    "energy"
+    "conflict",
+    "sanctions"
    ],
    "places": [],
    "industries": [
     "energy",
-    "materials",
     "transport",
-    "autos"
+    "industrials"
    ],
-   "economies": [
-    "us"
+   "economies": [],
+   "severity": "watch",
+   "severityScore": 2,
+   "reports": 1,
+   "also": []
+  },
+  {
+   "id": "ct-manufacturers-highlight-trade-wars-as-significant-drag",
+   "title": "CT manufacturers highlight trade wars as significant drag",
+   "link": "https://hartfordbusiness.com/article/ct-manufacturers-highlight-trade-wars-as-significant-drag/",
+   "source": "hartfordbusiness.com",
+   "sourceType": "Media monitor (GDELT)",
+   "published": "2026-10-01T18:30:00.000Z",
+   "category": "conflict",
+   "categories": [
+    "conflict",
+    "sanctions"
    ],
-   "severity": "elevated",
-   "severityScore": 3,
+   "places": [],
+   "industries": [
+    "energy",
+    "transport",
+    "industrials"
+   ],
+   "economies": [],
+   "severity": "watch",
+   "severityScore": 2,
+   "reports": 1,
+   "also": []
+  },
+  {
+   "id": "u-s-tightens-cuba-embargo-newsradio-wiod",
+   "title": "U - S Tightens Cuba Embargo | NewsRadio WIOD",
+   "link": "https://wiod.iheart.com/featured/florida-news/content/2026-10-01-u-s-tightens-cuba-embargo/",
+   "source": "wiod.iheart.com",
+   "sourceType": "Media monitor (GDELT)",
+   "published": "2026-10-01T18:30:00.000Z",
+   "category": "sanctions",
+   "categories": [
+    "sanctions"
+   ],
+   "places": [],
+   "industries": [
+    "industrials",
+    "tech",
+    "autos",
+    "agrifood"
+   ],
+   "economies": [],
+   "severity": "watch",
+   "severityScore": 2,
+   "reports": 1,
+   "also": []
+  },
+  {
+   "id": "tariff-game-threatens-alcohol-industry-jobs-in-massachusetts",
+   "title": "Tariff  game  threatens alcohol industry jobs in Massachusetts , Treasurer Deb Goldberg says | State",
+   "link": "https://www.berkshireeagle.com/statenews/tariff-game-threatens-alcohol-industry-jobs-in-massachusetts-treasurer-deb-goldberg-says/1361352",
+   "source": "berkshireeagle.com",
+   "sourceType": "Media monitor (GDELT)",
+   "published": "2026-10-01T12:30:00.000Z",
+   "category": "sanctions",
+   "categories": [
+    "sanctions"
+   ],
+   "places": [],
+   "industries": [
+    "industrials",
+    "tech",
+    "autos",
+    "agrifood",
+    "materials"
+   ],
+   "economies": [],
+   "severity": "watch",
+   "severityScore": 2,
+   "reports": 1,
+   "also": []
+  },
+  {
+   "id": "trump-tariffs-are-raising-prices-one-tin-can-at-a-time-las-v",
+   "title": "Trump tariffs are raising prices , one tin can at a time - Las Vegas Sun News",
+   "link": "https://lasvegassun.com/news/2026/oct/01/trumps-tariffs-are-raising-prices-one-tin-can-at-a/",
+   "source": "lasvegassun.com",
+   "sourceType": "Media monitor (GDELT)",
+   "published": "2026-10-01T11:00:00.000Z",
+   "category": "sanctions",
+   "categories": [
+    "sanctions"
+   ],
+   "places": [],
+   "industries": [
+    "industrials",
+    "tech",
+    "autos",
+    "agrifood"
+   ],
+   "economies": [],
+   "severity": "watch",
+   "severityScore": 2,
    "reports": 1,
    "also": []
   },
@@ -381,174 +461,6 @@
    "economies": [
     "us"
    ],
-   "severity": "elevated",
-   "severityScore": 3,
-   "reports": 1,
-   "also": []
-  },
-  {
-   "id": "world-news-in-brief-storm-clouds-over-gaza-deadly-obstacles-",
-   "title": "World News in Brief: Storm clouds over Gaza, deadly obstacles face Mexican women rights defenders, Latvia booze ban proves lifesaver",
-   "link": "https://news.un.org/feed/view/en/story/2026/09/1168496",
-   "source": "UN News",
-   "sourceType": "Intergovernmental",
-   "published": "2026-09-30T12:00:00.000Z",
-   "category": "hazard",
-   "categories": [
-    "hazard"
-   ],
-   "places": [
-    "Gaza"
-   ],
-   "industries": [
-    "agrifood",
-    "realestate",
-    "transport"
-   ],
-   "economies": [],
-   "severity": "elevated",
-   "severityScore": 3,
-   "reports": 1,
-   "also": []
-  },
-  {
-   "id": "malaysia-un-agency-urges-safeguards-after-refugees-returned-",
-   "title": "Malaysia: UN agency urges safeguards after refugees returned to Myanmar",
-   "link": "https://news.un.org/feed/view/en/story/2026/09/1168491",
-   "source": "UN News",
-   "sourceType": "Intergovernmental",
-   "published": "2026-09-30T12:00:00.000Z",
-   "category": "conflict",
-   "categories": [
-    "conflict"
-   ],
-   "places": [],
-   "industries": [
-    "energy",
-    "transport",
-    "industrials"
-   ],
-   "economies": [],
-   "severity": "elevated",
-   "severityScore": 3,
-   "reports": 1,
-   "also": []
-  },
-  {
-   "id": "arresting-the-dangerous-descent-back-into-war-in-northern-et",
-   "title": "Arresting the Dangerous Descent Back into War in Northern Ethiopia",
-   "link": "https://www.crisisgroup.org/stm/africa/ethiopia-eritrea/arresting-dangerous-descent-back-war-northern-ethiopia",
-   "source": "Crisis Group",
-   "sourceType": "Conflict tracker",
-   "published": null,
-   "category": "conflict",
-   "categories": [
-    "conflict"
-   ],
-   "places": [
-    "Ethiopia"
-   ],
-   "industries": [
-    "energy",
-    "transport",
-    "industrials"
-   ],
-   "economies": [],
-   "severity": "elevated",
-   "severityScore": 3,
-   "reports": 1,
-   "also": []
-  },
-  {
-   "id": "iraq-s-post-coalition-test",
-   "title": "Iraq’s Post-coalition Test",
-   "link": "https://www.crisisgroup.org/vid/middle-east-north-africa/iraq/iraqs-post-coalition-test",
-   "source": "Crisis Group",
-   "sourceType": "Conflict tracker",
-   "published": null,
-   "category": "conflict",
-   "categories": [
-    "conflict",
-    "energy"
-   ],
-   "places": [
-    "Iraq"
-   ],
-   "industries": [
-    "energy",
-    "transport",
-    "industrials"
-   ],
-   "economies": [],
-   "severity": "elevated",
-   "severityScore": 3,
-   "reports": 1,
-   "also": []
-  },
-  {
-   "id": "christine-lagarde-where-ai-risks-meet",
-   "title": "Christine Lagarde: Where AI risks meet",
-   "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261001~cf3c630379.en.html",
-   "source": "ECB",
-   "sourceType": "Central bank",
-   "published": "2026-10-01T13:30:00.000Z",
-   "category": "policy",
-   "categories": [
-    "policy"
-   ],
-   "places": [],
-   "industries": [
-    "financials",
-    "realestate",
-    "tech"
-   ],
-   "economies": [],
-   "severity": "watch",
-   "severityScore": 2,
-   "reports": 1,
-   "also": []
-  },
-  {
-   "id": "director-general-cites-concerns-with-pace-of-negotiations-as",
-   "title": "Director-General cites concerns with pace of negotiations as chairs report on state of play",
-   "link": "https://www.wto.org/english/news_e/news26_e/tnc_01oct26_502_e.htm",
-   "source": "WTO",
-   "sourceType": "Official",
-   "published": "2026-10-01T00:00:00.000Z",
-   "category": "sanctions",
-   "categories": [
-    "sanctions"
-   ],
-   "places": [],
-   "industries": [
-    "industrials",
-    "tech",
-    "autos",
-    "agrifood"
-   ],
-   "economies": [],
-   "severity": "watch",
-   "severityScore": 2,
-   "reports": 1,
-   "also": []
-  },
-  {
-   "id": "christine-lagarde-interview-with-la-croix",
-   "title": "Christine Lagarde: Interview with La Croix",
-   "link": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in260930~10084a5f3d.en.html",
-   "source": "ECB",
-   "sourceType": "Central bank",
-   "published": "2026-09-30T17:00:00.000Z",
-   "category": "policy",
-   "categories": [
-    "policy"
-   ],
-   "places": [],
-   "industries": [
-    "financials",
-    "realestate"
-   ],
-   "economies": [],
    "severity": "watch",
    "severityScore": 2,
    "reports": 1,
@@ -572,7 +484,7 @@
    ],
    "economies": [],
    "severity": "watch",
-   "severityScore": 2,
+   "severityScore": 1,
    "reports": 1,
    "also": []
   }
