@@ -14,7 +14,6 @@ const RSS_SOURCES = [
   { name: "ReliefWeb", type: "Humanitarian", url: "https://reliefweb.int/headlines/rss.xml" },
   { name: "GDACS", type: "Disaster alerts", url: "https://www.gdacs.org/xml/rss.xml" },
   { name: "Crisis Group", type: "Conflict tracker", url: "https://www.crisisgroup.org/rss" },
-  { name: "IMF", type: "Official", url: "https://www.imf.org/en/News/RSS?language=eng" },
   { name: "Federal Reserve", type: "Central bank", url: "https://www.federalreserve.gov/feeds/press_all.xml" },
   { name: "ECB", type: "Central bank", url: "https://www.ecb.europa.eu/rss/press.html" },
   { name: "Bank of England", type: "Central bank", url: "https://www.bankofengland.co.uk/rss/news" },
@@ -23,12 +22,8 @@ const RSS_SOURCES = [
 ];
 
 // GDELT monitors world news media in many languages; each query is one open API call.
-const GDELT_QUERIES = [
-  { label: "sanctions & trade", q: '(sanctions OR embargo OR "export controls" OR tariffs OR "trade war")' },
-  { label: "conflict", q: '(missile OR airstrike OR "naval blockade" OR "military escalation" OR ceasefire OR coup)' },
-  { label: "chokepoints", q: '("Strait of Hormuz" OR "Red Sea" OR "Suez Canal" OR "Panama Canal" OR "Taiwan Strait" OR "Black Sea")' },
-  { label: "energy supply", q: '(OPEC OR "oil supply" OR "gas supply" OR "pipeline attack" OR "refinery outage" OR "LNG")' },
-];
+// One combined query: GDELT rate-limits shared CI addresses after the first request.
+const GDELT_QUERY = '(sanctions OR embargo OR "export controls" OR tariffs OR missile OR airstrike OR blockade OR coup OR "Strait of Hormuz" OR "Red Sea" OR "Suez Canal" OR "Taiwan Strait" OR "Black Sea" OR OPEC OR "oil supply" OR "gas supply" OR "pipeline attack")';
 
 const CATEGORIES = [
   { id: "conflict", label: "Conflict & security", weight: 2, re: /\b(war|missile|airstrike|air strike|drone strike|military|troops|attack|shelling|ceasefire|insurgen|coup|clashes|navy|naval|invasion|hostage|terror)/i, ind: ["energy", "transport", "industrials"] },
@@ -79,32 +74,29 @@ const warn = (msg) => console.warn(process.env.GITHUB_ACTIONS ? `::warning::${ms
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function fetchGdelt() {
-  const out = [];
-  let ok = 0;
-  for (const [i, g] of GDELT_QUERIES.entries()) {
-    if (i) await sleep(6000); // GDELT asks for one request every five seconds
-    const url = `https://api.gdeltproject.org/api/v2/doc/doc?query=${encodeURIComponent(`${g.q} sourcelang:english`)}&mode=ArtList&maxrecords=50&timespan=24h&sort=HybridRel&format=json`;
+  const url = `https://api.gdeltproject.org/api/v2/doc/doc?query=${encodeURIComponent(`${GDELT_QUERY} sourcelang:english`)}&mode=ArtList&maxrecords=150&timespan=24h&sort=HybridRel&format=json`;
+  for (let attempt = 0; attempt < 2; attempt++) {
     try {
-      let body = await fetchText(url).catch(async (err) => { await sleep(10000); return fetchText(url); });
+      const body = await fetchText(url);
       let data;
       try { data = JSON.parse(body); } catch { throw new Error(`not JSON: ${body.replace(/\s+/g, " ").slice(0, 140)}`); }
-      ok++;
-      for (const a of data.articles ?? []) {
+      const items = (data.articles ?? []).map((a) => {
         const m = /^(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})Z$/.exec(a.seendate || "");
-        out.push({
+        return {
           title: String(a.title || "").trim(),
           link: a.url,
           published: m ? Date.UTC(+m[1], +m[2] - 1, +m[3], +m[4], +m[5], +m[6]) : NaN,
           source: a.domain || "GDELT",
           sourceType: "Media monitor (GDELT)",
-          origin: a.sourcecountry || "",
-        });
-      }
+        };
+      });
+      return { name: "GDELT", type: "Media monitor", ok: true, count: items.length, items };
     } catch (err) {
-      warn(`GDELT "${g.label}" failed: ${err.message}`);
+      if (attempt === 0 && /429/.test(err.message)) { await sleep(20000); continue; }
+      warn(`GDELT failed: ${err.message}`);
     }
   }
-  return { name: "GDELT", type: "Media monitor", ok: ok > 0, count: out.length, items: out };
+  return { name: "GDELT", type: "Media monitor", ok: false, count: 0, items: [] };
 }
 
 async function fetchUsgs() {

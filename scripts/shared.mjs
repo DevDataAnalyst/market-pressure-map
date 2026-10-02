@@ -39,7 +39,10 @@ const linkOf = (it) => {
 
 export async function fetchText(url) {
   const res = await fetch(url, {
-    headers: { "user-agent": "Mozilla/5.0 (compatible; market-pressure-map/1.0)" },
+    headers: {
+      "user-agent": "Mozilla/5.0 (compatible; market-pressure-map/1.0; +https://github.com/DevDataAnalyst/market-pressure-map)",
+      accept: "application/rss+xml, application/atom+xml, application/xml, text/xml, application/json;q=0.9, */*;q=0.8",
+    },
     signal: AbortSignal.timeout(20000),
   });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);

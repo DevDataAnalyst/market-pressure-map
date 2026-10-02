@@ -17,10 +17,10 @@ Where the latest global headlines push the world's biggest industries and econom
 
 `scripts/osint.mjs` runs first in every hourly job and needs no API key. It collects geopolitical and economic signals from open sources:
 
-- **Media monitoring:** GDELT, which watches world news in many languages, queried for sanctions and trade, conflict, shipping chokepoints and energy supply.
+- **Media monitoring:** GDELT, which watches world news in many languages, queried in one request for sanctions and trade, conflict, shipping chokepoints and energy supply.
 - **Conflict and humanitarian:** UN News, ReliefWeb and Crisis Group.
 - **Hazards:** GDACS disaster alerts (orange and red only) and USGS significant earthquakes.
-- **Official:** Federal Reserve, ECB, Bank of England, IMF, WTO and the US Energy Information Administration.
+- **Official:** Federal Reserve, ECB, Bank of England, WTO and the US Energy Information Administration.
 
 Each signal is tagged by rules with a category, the places, industries and economies it exposes, and a severity (watch, elevated or high). Severity rises with intensity words, disaster alert level, earthquake magnitude and how many separate sources report the same thing. Near-duplicate reports are merged. Headlines that name companies are dropped. When the Claude scan runs, it also assesses the top 30 signals with a neutral headline, a market-impact risk level, a short note and signed scores; those signals show as "Assessed". The feed is written to `public/data/osint.json` and is committed even if the Claude scan fails.
 
