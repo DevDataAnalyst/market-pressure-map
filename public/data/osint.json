@@ -149,34 +149,34 @@
     }
    ],
    "assessment": {
-    "headline": "Three tankers attacked in Hormuz as the US sends a third carrier group",
+    "headline": "Three oil tankers attacked in Hormuz; US sends third carrier group",
     "risk": "high",
-    "note": "Escalation lifts war-risk premiums and crude prices; raises odds of a wider US–Iran clash.",
+    "note": "Direct attacks plus military build-up keep the crude risk premium high.",
     "industries": [
-     {
-      "id": "transport",
-      "score": -3,
-      "why": "Insurance and rerouting costs"
-     },
      {
       "id": "energy",
       "score": 2,
-      "why": "Supply-risk premium"
+      "why": "Risk premium lifts crude"
+     },
+     {
+      "id": "transport",
+      "score": -2,
+      "why": "Insurance costs surge"
      }
     ],
     "economies": [
      {
-      "id": "india",
+      "id": "gulf",
       "score": -2,
-      "why": "Oil import bill"
+      "why": "Escalation in Gulf waters"
      },
      {
-      "id": "japan",
-      "score": -2,
-      "why": "Gulf energy dependence"
+      "id": "india",
+      "score": -1,
+      "why": "Oil import exposure"
      }
     ],
-    "at": "2026-10-02T11:22:41.819Z"
+    "at": "2026-10-03T05:45:25.453Z"
    }
   },
   {
@@ -220,34 +220,34 @@
     }
    ],
    "assessment": {
-    "headline": "Shipping slows after Iran again declares Hormuz shut",
+    "headline": "Shipping slows after Iran says it has again shut Hormuz",
     "risk": "high",
-    "note": "Renewed closure claims reverse the recent recovery in flows; watch tanker transits daily.",
+    "note": "Closure claim slows traffic; volumes at risk despite recent recovery.",
     "industries": [
-     {
-      "id": "transport",
-      "score": -3,
-      "why": "Transits stall"
-     },
      {
       "id": "energy",
       "score": 2,
-      "why": "Tighter supply"
+      "why": "Supply disruption risk"
+     },
+     {
+      "id": "transport",
+      "score": -2,
+      "why": "Transits delayed"
      }
     ],
     "economies": [
      {
-      "id": "gulf",
+      "id": "japan",
       "score": -2,
-      "why": "Exports blocked"
+      "why": "Gulf crude and LNG dependence"
      },
      {
-      "id": "eurozone",
-      "score": -1,
-      "why": "Energy inflation"
+      "id": "gulf",
+      "score": -2,
+      "why": "Exports disrupted"
      }
     ],
-    "at": "2026-10-02T11:22:41.819Z"
+    "at": "2026-10-03T05:45:25.453Z"
    }
   },
   {
@@ -279,14 +279,14 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Oil jumps 5% as attacks on Gulf shipping escalate",
+    "headline": "Oil jumps 5% as Iran escalates attacks on Gulf shipping",
     "risk": "high",
-    "note": "Price spikes feed straight into fuel and freight inflation and keep central banks hawkish.",
+    "note": "Sharp price move feeds global fuel inflation.",
     "industries": [
      {
       "id": "energy",
       "score": 2,
-      "why": "Higher realised prices"
+      "why": "Higher prices"
      },
      {
       "id": "transport",
@@ -298,10 +298,15 @@
      {
       "id": "india",
       "score": -2,
-      "why": "Import bill"
+      "why": "Import bill rises"
+     },
+     {
+      "id": "eurozone",
+      "score": -1,
+      "why": "Energy inflation"
      }
     ],
-    "at": "2026-10-02T11:22:41.819Z"
+    "at": "2026-10-03T05:45:25.453Z"
    }
   },
   {
@@ -395,24 +400,24 @@
     }
    ],
    "assessment": {
-    "headline": "US targets a Russia-linked shadow banking network used by Iran",
+    "headline": "US targets Russian shadow banking network aiding Iran sanctions evasion",
     "risk": "elevated",
-    "note": "Raises compliance and secondary-sanction risk for banks and traders handling Iranian or Russian flows.",
+    "note": "Raises compliance risk for banks handling Russia- and Iran-linked flows.",
     "industries": [
      {
       "id": "financials",
       "score": -1,
-      "why": "Compliance risk"
+      "why": "Secondary-sanction risk"
      }
     ],
     "economies": [
      {
       "id": "china",
       "score": -1,
-      "why": "Secondary-sanction exposure"
+      "why": "Exposure to sanctioned trade"
      }
     ],
-    "at": "2026-10-02T11:22:41.819Z"
+    "at": "2026-10-03T05:45:25.453Z"
    }
   },
   {
@@ -445,24 +450,29 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "September LNG shipments through Hormuz hit a wartime high",
-    "risk": "watch",
-    "note": "Recovering LNG flows ease pressure on gas prices in Asia and Europe.",
+    "headline": "September LNG shipments via Hormuz highest since war began",
+    "risk": "elevated",
+    "note": "Recovering LNG flows ease gas supply fears for Asia and Europe.",
     "industries": [
      {
       "id": "energy",
       "score": -1,
-      "why": "Gas price upside capped"
+      "why": "Caps gas price upside"
      }
     ],
     "economies": [
      {
       "id": "japan",
       "score": 1,
-      "why": "Supply relief"
+      "why": "LNG supply relief"
+     },
+     {
+      "id": "eurozone",
+      "score": 1,
+      "why": "Gas supply relief"
      }
     ],
-    "at": "2026-10-02T11:22:41.819Z"
+    "at": "2026-10-03T05:45:25.453Z"
    }
   },
   {
@@ -493,14 +503,14 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Iran's tanker loadings fall to zero under the US blockade",
-    "risk": "elevated",
-    "note": "Removes Iranian barrels from the market and raises the chance of Iranian retaliation at sea.",
+    "headline": "Iran tanker loadings fall to zero as US blockade halts Kharg exports",
+    "risk": "high",
+    "note": "Iranian barrels removed entirely; tightens supply for independent refiners.",
     "industries": [
      {
       "id": "energy",
       "score": 1,
-      "why": "Less supply"
+      "why": "Less supply supports prices"
      }
     ],
     "economies": [
@@ -510,7 +520,7 @@
       "why": "Loses discounted crude"
      }
     ],
-    "at": "2026-10-02T11:22:41.819Z"
+    "at": "2026-10-03T05:45:25.453Z"
    }
   },
   {
@@ -551,24 +561,24 @@
     }
    ],
    "assessment": {
-    "headline": "Tanker struck and set ablaze in Hormuz",
+    "headline": "Oil tanker struck and set ablaze in Hormuz; crew safe",
     "risk": "high",
-    "note": "Each strike pushes up insurance and freight costs for all Gulf cargoes.",
+    "note": "Another hit raises war-risk insurance premiums for tankers.",
     "industries": [
      {
       "id": "transport",
       "score": -2,
-      "why": "War-risk premiums"
+      "why": "Insurance and crew risk"
      }
     ],
     "economies": [
      {
       "id": "gulf",
       "score": -1,
-      "why": "Shipping risk"
+      "why": "Shipping lane danger"
      }
     ],
-    "at": "2026-10-02T11:22:41.819Z"
+    "at": "2026-10-03T05:45:25.453Z"
    }
   },
   {
@@ -598,7 +608,27 @@
    "severity": "high",
    "severityScore": 6,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Washington faces escalating oil crisis as Iran blocks Hormuz",
+    "risk": "elevated",
+    "note": "Political pressure for intervention adds to volatility.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": 1,
+      "why": "Elevated prices"
+     }
+    ],
+    "economies": [
+     {
+      "id": "us",
+      "score": -1,
+      "why": "Fuel price pressure"
+     }
+    ],
+    "at": "2026-10-03T05:45:25.453Z"
+   }
   },
   {
    "id": "us-navy-could-escort-vessels-in-strait-of-hormuz-with-intern",
@@ -630,24 +660,24 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "US says it could escort Hormuz shipping with an international coalition",
+    "headline": "US Navy could escort Hormuz vessels with coalition, Bessent says",
     "risk": "elevated",
-    "note": "Escorts could restore flows and lower freight costs, but raise the risk of direct naval clashes.",
+    "note": "Escorts could restore flows but raise confrontation risk.",
     "industries": [
      {
       "id": "transport",
       "score": 1,
-      "why": "Safer transits if escorts start"
+      "why": "Safer passage possible"
      }
     ],
     "economies": [
      {
       "id": "gulf",
       "score": 1,
-      "why": "Exports could recover"
+      "why": "Potential flow recovery"
      }
     ],
-    "at": "2026-10-02T11:22:41.819Z"
+    "at": "2026-10-03T05:45:25.453Z"
    }
   },
   {
@@ -685,24 +715,18 @@
     }
    ],
    "assessment": {
-    "headline": "US sanctions Iran's car and rail sectors as the blockade tightens",
+    "headline": "US sanctions target Iran's auto and rail sectors as blockade tightens",
     "risk": "elevated",
-    "note": "Shifts pressure to Iran's land economy; limited direct market effect but signals no near-term de-escalation.",
+    "note": "Broadens economic pressure on Iran; limited direct global market effect.",
     "industries": [
      {
       "id": "financials",
       "score": -1,
-      "why": "Sanctions compliance"
+      "why": "Compliance burden"
      }
     ],
-    "economies": [
-     {
-      "id": "gulf",
-      "score": -1,
-      "why": "Prolonged regional tension"
-     }
-    ],
-    "at": "2026-10-02T11:22:41.819Z"
+    "economies": [],
+    "at": "2026-10-03T05:45:25.453Z"
    }
   },
   {
@@ -734,29 +758,29 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "US strikes mine-laying vessels in Hormuz",
+    "headline": "US targets mine-laying vessels in Hormuz amid blockade",
     "risk": "high",
-    "note": "Mines threaten all traffic and could keep insurers away even after attacks ease.",
+    "note": "Mine threat raises navigation risk and insurance costs.",
     "industries": [
      {
       "id": "transport",
       "score": -2,
-      "why": "Mine risk deters ships"
+      "why": "Mine risk to shipping"
      },
      {
       "id": "energy",
       "score": 1,
-      "why": "Supply-risk premium"
+      "why": "Supply risk premium"
      }
     ],
     "economies": [
      {
-      "id": "india",
+      "id": "gulf",
       "score": -1,
-      "why": "Supply risk"
+      "why": "Navigation hazards"
      }
     ],
-    "at": "2026-10-02T11:22:41.819Z"
+    "at": "2026-10-03T05:45:25.453Z"
    }
   },
   {
@@ -816,24 +840,34 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Gulf crude exports largely back to pre-war levels",
-    "risk": "watch",
-    "note": "Recovering volumes cap oil prices, though attacks make the recovery fragile.",
+    "headline": "Crude exports through Hormuz largely back to pre-war levels",
+    "risk": "elevated",
+    "note": "Volumes recovering, which caps the supply shock.",
     "industries": [
      {
       "id": "energy",
       "score": -1,
       "why": "More supply"
+     },
+     {
+      "id": "transport",
+      "score": 1,
+      "why": "Traffic recovering"
      }
     ],
     "economies": [
      {
-      "id": "gulf",
-      "score": 2,
-      "why": "Exports recover"
+      "id": "india",
+      "score": 1,
+      "why": "Supply relief"
+     },
+     {
+      "id": "japan",
+      "score": 1,
+      "why": "Supply relief"
      }
     ],
-    "at": "2026-10-02T11:22:41.819Z"
+    "at": "2026-10-03T05:45:25.453Z"
    }
   },
   {
@@ -894,24 +928,18 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Japan adds sanctions on Russia over the war in Ukraine",
+    "headline": "Japan announces further sanctions on Russia over Ukraine",
     "risk": "watch",
-    "note": "Small direct effect; keeps Russian energy and commodity trade routes constrained.",
-    "industries": [
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Commodity trade friction"
-     }
-    ],
+    "note": "Incremental measures; limited near-term market impact.",
+    "industries": [],
     "economies": [
      {
       "id": "japan",
       "score": -1,
-      "why": "Energy import options narrow"
+      "why": "Trade frictions with Russia"
      }
     ],
-    "at": "2026-10-02T11:22:41.819Z"
+    "at": "2026-10-03T05:45:25.453Z"
    }
   },
   {
@@ -946,7 +974,32 @@
      "source": "Ships & Ports",
      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFAxaFhVNElyejl3MUNYdWNtSTV4emJCQ3owVWNfWEhPMW45ZjVWdTFRMVlUZFcwRjRWS09KOWM4aU5PTXBiczE1b2QtcVZtRk9GRTQ2N215Q2pHVUhMSFBTdUhITHVxbHFocW13YXQ2dXVYbFpCUzFneE1MT0U?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "Iran launching about 40 attacks a week on Hormuz shipping, NYT reports",
+    "risk": "high",
+    "note": "Sustained attack rate keeps risk premium embedded.",
+    "industries": [
+     {
+      "id": "transport",
+      "score": -2,
+      "why": "Persistent attack risk"
+     },
+     {
+      "id": "energy",
+      "score": 1,
+      "why": "Risk premium"
+     }
+    ],
+    "economies": [
+     {
+      "id": "gulf",
+      "score": -2,
+      "why": "Ongoing threat to exports"
+     }
+    ],
+    "at": "2026-10-03T05:45:25.453Z"
+   }
   },
   {
    "id": "the-black-sea-is-the-most-dangerous-it-s-been-since-the-star",
@@ -977,29 +1030,29 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Black Sea shipping at its most dangerous since the invasion, choking grain",
+    "headline": "Black Sea at most dangerous since war began, choking grain trade",
     "risk": "elevated",
-    "note": "Grain export disruption adds to food inflation and raises freight insurance in the region.",
+    "note": "Over 210 strikes on ships Jul–Sep threaten grain supplies.",
     "industries": [
      {
       "id": "agrifood",
-      "score": -2,
-      "why": "Grain supply"
+      "score": -1,
+      "why": "Grain costs"
      },
      {
       "id": "transport",
       "score": -1,
-      "why": "Insurance costs"
+      "why": "War-risk premiums"
      }
     ],
     "economies": [
      {
       "id": "eurozone",
       "score": -1,
-      "why": "Food prices"
+      "why": "Food inflation risk"
      }
     ],
-    "at": "2026-10-02T11:22:41.819Z"
+    "at": "2026-10-03T05:45:25.453Z"
    }
   },
   {
@@ -1145,7 +1198,15 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Iran urges Iraq to lift flight ban amid US sanctions",
+    "risk": "watch",
+    "note": "Regional diplomatic friction; minor market relevance.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-03T05:45:25.453Z"
+   }
   },
   {
    "id": "hegseth-says-don-t-worry-about-strait-of-hormuz-but-us-needs",
@@ -1174,7 +1235,21 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "US defense secretary says Hormuz response needs time",
+    "risk": "watch",
+    "note": "Suggests prolonged disruption before US counter-measures take hold.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": 1,
+      "why": "Prolonged risk"
+     }
+    ],
+    "economies": [],
+    "at": "2026-10-03T05:45:25.453Z"
+   }
   },
   {
    "id": "oil-flows-are-up-but-iran-is-still-menacing-the-strait-of-ho",
@@ -1203,7 +1278,21 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Oil flows rise but Iran still menacing Hormuz",
+    "risk": "elevated",
+    "note": "Mixed picture: volumes up, risk premium persists.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": 1,
+      "why": "Risk premium persists"
+     }
+    ],
+    "economies": [],
+    "at": "2026-10-03T05:45:25.453Z"
+   }
   },
   {
    "id": "us-third-carrier-scenario-raises-stakes-in-iran-hormuz-stand",
@@ -1232,7 +1321,27 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Third US carrier raises stakes in Iran–Hormuz standoff",
+    "risk": "elevated",
+    "note": "Military build-up raises escalation risk.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": 1,
+      "why": "Escalation risk premium"
+     }
+    ],
+    "economies": [
+     {
+      "id": "gulf",
+      "score": -1,
+      "why": "Conflict risk"
+     }
+    ],
+    "at": "2026-10-03T05:45:25.453Z"
+   }
   },
   {
    "id": "oil-prices-near-103-brent-crude-extends-gains-as-us-iran-ten",
@@ -1261,9 +1370,9 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Brent nears $103 as US–Iran tensions escalate",
+    "headline": "Brent nears $103 as US-Iran tensions escalate",
     "risk": "elevated",
-    "note": "Triple-digit crude keeps headline inflation high and pressures oil importers' currencies.",
+    "note": "Crude near $100 sustains inflation pressure.",
     "industries": [
      {
       "id": "energy",
@@ -1271,19 +1380,19 @@
       "why": "Higher prices"
      },
      {
-      "id": "consumer",
+      "id": "transport",
       "score": -1,
-      "why": "Fuel squeeze"
+      "why": "Fuel costs"
      }
     ],
     "economies": [
      {
       "id": "india",
       "score": -2,
-      "why": "Import bill and rupee"
+      "why": "Import bill"
      }
     ],
-    "at": "2026-10-02T11:22:41.819Z"
+    "at": "2026-10-03T05:45:25.453Z"
    }
   },
   {
@@ -1366,24 +1475,18 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "US says Hormuz traffic is rising meaningfully",
+    "headline": "US energy secretary says Hormuz traffic rising meaningfully",
     "risk": "watch",
-    "note": "Official signals of recovering traffic could ease freight and oil prices if attacks fade.",
+    "note": "Official signals of recovery could temper prices.",
     "industries": [
      {
-      "id": "transport",
-      "score": 1,
-      "why": "More transits"
+      "id": "energy",
+      "score": -1,
+      "why": "Price upside capped"
      }
     ],
-    "economies": [
-     {
-      "id": "gulf",
-      "score": 1,
-      "why": "Exports recover"
-     }
-    ],
-    "at": "2026-10-02T11:22:41.819Z"
+    "economies": [],
+    "at": "2026-10-03T05:45:25.453Z"
    }
   },
   {
@@ -1414,24 +1517,24 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Iran says non-hostile ships can transit Hormuz",
-    "risk": "watch",
-    "note": "A possible opening for de-escalation, but the terms leave Iran deciding who passes.",
+    "headline": "Iran says non-hostile ships can transit Hormuz, FT reports",
+    "risk": "elevated",
+    "note": "Selective passage could ease flows but adds uncertainty.",
     "industries": [
      {
       "id": "transport",
       "score": 1,
-      "why": "Possible easing"
+      "why": "Partial passage possible"
      }
     ],
     "economies": [
      {
       "id": "gulf",
       "score": 1,
-      "why": "Possible export relief"
+      "why": "Some exports move"
      }
     ],
-    "at": "2026-10-02T11:22:41.819Z"
+    "at": "2026-10-03T05:45:25.453Z"
    }
   },
   {
@@ -1997,5 +2100,5 @@
    "also": []
   }
  ],
- "assessedAt": "2026-10-02T11:22:41.819Z"
+ "assessedAt": "2026-10-03T05:45:25.453Z"
 }
