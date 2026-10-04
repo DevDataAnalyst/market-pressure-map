@@ -44,6 +44,12 @@ const SPECULATIVE = /\b(will|could|may|might|expected to|expects?|forecast|predi
 const SKIP = /\?|^\d+ (trends|things|reasons|ways|stocks|charts)\b|\b(opinion|explainer|explained|what to know|what it means|how to|here's why|preview|these \d+ factors|factors to watch|things to watch|live updates|live:|podcast|video|watch:|newsletter|shares of|stock of|'s shares|earnings|quarterly results|q[1-4] results|ipo|ceo|top picks|stocks to buy|stocks? that could|could benefit|black[- ]market|parallel market|informal (currency |exchange |forex )?market|(dow( jones)?|stocks?|stock market|wall street|markets?|sensex|nifty) today)\b|\b\d+\s+[\w.'-]+(\s+[\w.'-]+){0,3}\s+stocks\b/i;
 // Ticker lists ("ORCL, TSLA In Focus") mark single-stock market wraps.
 const TICKERS = /:\s*[A-Z]{2,5}(,\s*[A-Z]{2,5})+\b|\b[A-Z]{3,5}(,\s*[A-Z]{3,5}){3,}\b/;
+// Lead-headline preference: global or official sources over local angles.
+const GLOBAL_BODY = /\b(FAO|IMF|World Bank|WTO|OECD|IEA|OPEC\+?|EIA|UN|United Nations|G-?7|G-?20|BIS|Fed|Federal Reserve|FOMC|ECB|European Central Bank|Bank of England|BoE|Bank of Japan|BoJ|BOJ|RBI|Reserve Bank|PBOC|PBoC|People's Bank|Eurostat|Treasury)\b/;
+const GLOBAL_WORD = /\b(global|world|worldwide|international|benchmark|Brent)\b/i;
+const WIRE = /\b(Reuters|Bloomberg|Financial Times|FT|Associated Press|AP|Wall Street Journal|WSJ|CNBC|BBC|Economist|Nikkei|Al Jazeera|AFP|Barron's|MarketWatch)\b/i;
+const LOCAL = /\b(farmers?|farmer leaders|mandi|MSP|tola|per kg|per quintal|district|province|provincial|state govt|municipal|county|local|village|Punjab|Haryana|Kerala|Karnataka|Sindh|Texas|California)\b|\bRs\.? ?\d/i;
+const leadScore = (h) => (GLOBAL_BODY.test(h.title) ? 2 : 0) + (GLOBAL_WORD.test(h.title) ? 1 : 0) + (WIRE.test(h.source || "") ? 1 : 0) - (LOCAL.test(h.title) ? 3 : 0);
 // Long-range forecasts ("by 2050") aren't news about the next weeks or months.
 const LONG_RANGE = new RegExp(`\\b(by|in|until|through|to) (${Array.from({ length: 70 }, (_, i) => new Date().getUTCFullYear() + 2 + i).join("|")})\\b`, "i");
 
@@ -531,8 +537,9 @@ export function score(headlines, memory = []) {
     let conf = reports >= 5 && outlets.length >= 3 ? "high" : reports >= 2 ? "medium" : "low";
     if (speculative) conf = conf === "high" ? "medium" : "low";
     const bump = !speculative && (reports >= 6 || heads.some((h) => INTENSE.test(h.title)));
-    // Lead with the most corroborated, then most recent, headline.
-    heads.sort((a, b) => (b.reports || 1) - (a.reports || 1) || (b.published || 0) - (a.published || 0));
+    // Lead with the most global headline (official bodies, wires, world-level wording), then the
+    // most corroborated, then the most recent; local and regional angles go last.
+    heads.sort((a, b) => leadScore(b) - leadScore(a) || (b.reports || 1) - (a.reports || 1) || (b.published || 0) - (a.published || 0));
     const lead = heads[0];
     const related = heads.slice(1).find((h) => h.title !== lead.title);
     const latest = Math.max(...heads.map((h) => h.published).filter((p) => !Number.isNaN(p)), 0);
