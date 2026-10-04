@@ -4,14 +4,18 @@
 // matching headlines into stories and writes scan.json and history.json via writeScan.
 //   node scripts/rule-scan.mjs            fetch headlines and write the scan
 //   node scripts/rule-scan.mjs file.json  score headlines from a file ([{title, link, source, published}]) instead
+// Only headlines from the last 24 hours are scored; the story memory (memory.json) from earlier
+// days marks each story as new, ongoing or a reversal and adjusts its confidence and rank.
 // If the Claude routine already wrote a scan in the last 20 hours, this leaves it alone.
 import { readFile } from "node:fs/promises";
 import { fetchFeed, titleKey, txt } from "./shared.mjs";
 import { COMPANY_MARKERS, COMPANY_NAMES } from "./osint.mjs";
-import { OSINT_PATH, SCAN_PATH, normalizeItems, writeScan } from "./scan-store.mjs";
+import { OSINT_PATH, SCAN_PATH, loadMemory, normalizeItems, writeScan } from "./scan-store.mjs";
 
 const MODEL = "Keyword rules (no AI)";
 const MAX_ITEMS = 16;
+const WINDOW_HOURS = 24;
+const CONTEXT_DAYS = 7;
 const warn = (msg) => console.warn(process.env.GITHUB_ACTIONS ? `::warning::${msg}` : msg);
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -47,7 +51,7 @@ const dirOf = (t) => {
 const ECON = [
   ["us", /\b(United States|U\.S\.|US|USA|America(n)?|Washington|Fed|Federal Reserve|FOMC|Treasur(y|ies)|payrolls|Wall Street|dollar)\b/],
   ["china", /\b(China|Chinese|Beijing|PBOC|PBoC|People's Bank|yuan|renminbi|Hong Kong)\b/],
-  ["eurozone", /\b([Ee]uro ?zone|[Ee]uro area|ECB|European Central Bank|EU|European Union|Germany|German|France|French|Italy|Italian|Spain|Spanish|bunds?|euro)\b/],
+  ["eurozone", /\b([Ee]uro[- ]?zone|[Ee]uro[- ]area|ECB|European Central Bank|EU|European Union|Germany|German|France|French|Italy|Italian|Spain|Spanish|bunds?|euro)\b/],
   ["japan", /\b(Japan|Japanese|Tokyo|BoJ|BOJ|Bank of Japan|yen|JGBs?|Nikkei)\b/],
   ["india", /\b(India|Indian|RBI|Reserve Bank of India|rupee|Sensex|Nifty|Delhi|Mumbai)\b/],
   ["uk", /\b(UK|U\.K\.|Britain|British|England|BoE|Bank of England|gilts?|sterling|pound)\b/],
@@ -62,7 +66,7 @@ const RULES = [
   {
     id: "rates", theme: "Monetary policy", horizon: "months", weight: 3, perEconomy: true,
     subject: /\b(Fed|Federal Reserve|FOMC|ECB|European Central Bank|Bank of England|BoE|Bank of Japan|BoJ|BOJ|RBI|Reserve Bank of India|PBOC|PBoC|People's Bank|central bank)\b/,
-    dir: (t) => /\b(hike[sd]?|hiking|rais(e|es|ed|ing) (interest )?rates?|tighten\w*|hawkish)\b/i.test(t) ? (/\b(dims?|dimm\w*|fad(e|es|ed|ing)|pare[sd]?|scal(e|es|ed) back|less likely|unwind\w*|cool(s|ed)?|cut(s)? (the )?odds|lower(s|ed)? (the )?odds)\b/i.test(t) ? -1 : 1) : /\b(cut(s|ting)?|lower(s|ed|ing)? (interest )?rates?|eas(e|es|ed|ing)|dovish|rate reduction)\b/i.test(t) ? -1 : 0,
+    dir: (t) => /\b(hike[sd]?|hiking|rais(e|es|ed|ing) (interest )?rates?|tighten\w*|hawkish)\b/i.test(t) ? (/\b(dims?|dimm\w*|fad(e|es|ed|ing)|fall(s|en)?|fell|drop(s|ped)?|slip\w*|pare[sd]?|scal(e|es|ed) back|less likely|unwind\w*|cool(s|ed)?|cut(s)? (the )?odds|lower(s|ed)? (the )?odds)\b/i.test(t) ? -1 : 1) : /\b(cut(s|ting)?|lower(s|ed|ing)? (interest )?rates?|eas(e|es|ed|ing)|dovish|rate reduction)\b/i.test(t) ? -1 : 0,
     up: {
       label: "tighter monetary policy",
       rationale: "Higher policy rates raise borrowing costs, cool demand and weigh on rate-sensitive sectors such as property and long-duration growth stocks, while lenders' margins widen.",
@@ -269,7 +273,7 @@ const RULES = [
   {
     id: "fx", theme: "Currencies", horizon: "weeks", weight: 2,
     subject: /\b(yen|rupee|yuan|renminbi|dollar|sterling|pound|euro)\b/i,
-    exclude: /\b(trillion|billion|million)[- ]dollar|\$\d|\beuro ?(zone|area)\b/i,
+    exclude: /\b(trillion|billion|million)[- ]dollar|\$\d|\beuro[- ]?(zone|area)\b/i,
     currency: true,
     dir: dirOf,
   },
@@ -387,7 +391,7 @@ const FX = [
   { re: /\brupee\b/i, eco: "india", weakLabel: "a weaker rupee", strongLabel: "a stronger rupee", weak: { ind: { energy: [-1, "Dollar-priced oil costs more"] }, eco: { india: [-1, "Imported inflation and oil bill"] } }, strong: { ind: {}, eco: { india: [1, "Import costs ease"] } } },
   { re: /\b(yuan|renminbi)\b/i, eco: "china", weakLabel: "a weaker yuan", strongLabel: "a stronger yuan", weak: { ind: { materials: [-1, "Commodities costlier for China"] }, eco: { china: [-1, "Signals capital outflow pressure"] } }, strong: { ind: { materials: [1, "Commodity imports cheaper"] }, eco: { china: [1, "Confidence in the currency"] } } },
   { re: /\b(sterling|pound)\b/i, eco: "uk", weakLabel: "a weaker pound", strongLabel: "a stronger pound", weak: { ind: {}, eco: { uk: [-1, "Imported inflation"] } }, strong: { ind: {}, eco: { uk: [1, "Import costs ease"] } } },
-  { re: /\beuro\b/i, eco: "eurozone", weakLabel: "a weaker euro", strongLabel: "a stronger euro", weak: { ind: { industrials: [1, "Exporters gain"] }, eco: { eurozone: [1, "Exporters more competitive"] } }, strong: { ind: { industrials: [-1, "Exporters less competitive"] }, eco: { eurozone: [-1, "Export headwind"] } } },
+  { re: /\beuro\b(?![- ]?(zone|area))/i, eco: "eurozone", weakLabel: "a weaker euro", strongLabel: "a stronger euro", weak: { ind: { industrials: [1, "Exporters gain"] }, eco: { eurozone: [1, "Exporters more competitive"] } }, strong: { ind: { industrials: [-1, "Exporters less competitive"] }, eco: { eurozone: [-1, "Export headwind"] } } },
   { re: /\bdollar\b/i, eco: "us", weakLabel: "a weaker dollar", strongLabel: "a stronger dollar", weak: { ind: { materials: [1, "Dollar-priced commodities cheaper abroad"] }, eco: { india: [1, "Less pressure on emerging currencies"], us: [1, "Exporters gain"] } }, strong: { ind: { materials: [-1, "Commodities dearer for other buyers"] }, eco: { india: [-1, "Pressure on the rupee"], us: [-1, "Exporters less competitive"] } } },
 ];
 
@@ -494,8 +498,8 @@ async function osintHeadlines() {
   }
 }
 
-export function score(headlines) {
-  const cutoff = Date.now() - 48 * 3600_000;
+export function score(headlines, memory = []) {
+  const cutoff = Date.now() - WINDOW_HOURS * 3600_000;
   const seen = new Set();
   const clusters = new Map();
   const signalHits = [];
@@ -563,6 +567,8 @@ export function score(headlines) {
     byPair.set(st.pair, win);
   }
   stories.splice(0, stories.length, ...byPair.values());
+  const past = pastEvents(memory, today);
+  for (const st of stories) addContext(st, past);
   stories.sort((a, b) => b.weight - a.weight);
 
   // Rule-based assessments for intelligence signals the Claude routine hasn't assessed.
@@ -575,6 +581,39 @@ export function score(headlines) {
     economies: toImpacts(ev.eco, ev, false).slice(0, 4),
   }));
   return { items: stories.slice(0, MAX_ITEMS).map((s) => s.item), signals, matched: seen.size };
+}
+
+// ---------- context from earlier days ----------
+// Each earlier day's stories (from the keyword rules or the Claude routine) are re-read with the
+// same rules, so a story counts as ongoing whatever wrote it. Ongoing stories gain rank and,
+// once seen on two or more earlier days, confidence; a reading that flips direction is flagged.
+const fmtDay = (d) => new Date(d + "T12:00:00Z").toLocaleDateString("en-GB", { day: "numeric", month: "short", timeZone: "UTC" });
+function pastEvents(memory, today) {
+  const since = new Date(Date.parse(today + "T00:00:00Z") - CONTEXT_DAYS * 864e5).toISOString().slice(0, 10);
+  return memory.filter((d) => d.day < today && d.day >= since).map((d) => {
+    const keys = new Set(), pairs = new Set();
+    for (const it of d.items ?? []) {
+      keys.add(it.id);
+      for (const e of match(it.headline || "")) { keys.add(e.key); pairs.add(e.pair); }
+    }
+    return { day: d.day, keys, pairs };
+  });
+}
+function addContext(st, past) {
+  const same = past.filter((d) => d.keys.has(st.item.id)).map((d) => d.day);
+  const opposite = past.filter((d) => d.pairs.has(st.pair) && !d.keys.has(st.item.id)).map((d) => d.day);
+  if (opposite.length && (!same.length || opposite.at(-1) > same.at(-1))) {
+    st.item.summary += ` Turn: earlier readings (${fmtDay(opposite.at(-1))}) pointed the other way.`;
+    st.item.confidence = st.item.confidence === "high" ? "medium" : st.item.confidence;
+    return;
+  }
+  if (!same.length) {
+    st.item.summary += " New in the last 24 hours.";
+    return;
+  }
+  st.item.summary += ` Ongoing: also reported on ${same.length} of the previous ${CONTEXT_DAYS} days (first ${fmtDay(same[0])}).`;
+  if (same.length >= 2 && st.item.confidence === "low") st.item.confidence = "medium";
+  st.weight *= 1 + 0.2 * Math.min(same.length, 3);
 }
 
 // ---------- run ----------
@@ -594,7 +633,8 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const intel = await osintHeadlines();
   console.log(`${market.ok}/${SEARCHES.length} market searches ok, ${market.items.length} market headlines, ${intel.length} intelligence signals`);
 
-  const { items, signals, matched } = score([...market.items, ...intel]);
+  const memory = await loadMemory();
+  const { items, signals, matched } = score([...market.items, ...intel], memory);
   console.log(`${matched} unique headlines, ${items.length} stories after rule matching`);
   if (items.length < 6) {
     warn(`Only ${items.length} stories matched the rules; keeping the previous scan.`);

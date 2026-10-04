@@ -1,11 +1,12 @@
 // Entry point for the daily Claude routine, which scores the news on the Claude plan
 // instead of the paid API.
-//   node scripts/apply-scan.mjs --list-signals   prints the top intelligence signals to assess
+//   node scripts/apply-scan.mjs --list-signals   prints the top intelligence signals to assess,
+//                                                plus the stories of the previous 7 days for context
 //   node scripts/apply-scan.mjs draft.json       validates a draft and writes the site data
 // Draft shape: { "items": [story...], "signals": [assessment...] } — see README.
 import { readFile } from "node:fs/promises";
 import { ECONOMIES, INDUSTRIES, THEMES, fail } from "./shared.mjs";
-import { OSINT_PATH, normalizeItems, writeScan } from "./scan-store.mjs";
+import { OSINT_PATH, loadMemory, normalizeItems, writeScan } from "./scan-store.mjs";
 
 const arg = process.argv[2];
 
@@ -14,6 +15,15 @@ if (arg === "--list-signals") {
   console.log(`Feed updated ${osint.updatedAt}. Assess these (use "id"):`);
   for (const s of osint.signals.slice(0, 30)) {
     console.log(JSON.stringify({ id: s.id, severity: s.severity, category: s.category, source: `${s.sourceType}: ${s.source}`, places: s.places, title: s.title }));
+  }
+  const today = new Date().toISOString().slice(0, 10);
+  const recent = (await loadMemory()).filter((d) => d.day < today).slice(-7);
+  if (recent.length) {
+    console.log("\nRecent context (earlier scans; judge whether today's news is new, ongoing, escalating or reversing):");
+    for (const d of recent) {
+      console.log(`${d.day}:`);
+      for (const it of d.items ?? []) console.log(`  - [${it.theme}] ${it.headline}`);
+    }
   }
   console.log(`\nIndustry ids: ${Object.keys(INDUSTRIES).join(", ")}\nEconomy ids: ${Object.keys(ECONOMIES).join(", ")}\nThemes: ${THEMES.join(" | ")}`);
   process.exit(0);

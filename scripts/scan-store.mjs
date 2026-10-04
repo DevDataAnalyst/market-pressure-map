@@ -7,6 +7,19 @@ import { CONF, ECONOMIES, INDUSTRIES, THEMES, fail } from "./shared.mjs";
 export const SCAN_PATH = new URL("../public/data/scan.json", import.meta.url);
 export const HISTORY_PATH = new URL("../public/data/history.json", import.meta.url);
 export const OSINT_PATH = new URL("../public/data/osint.json", import.meta.url);
+export const MEMORY_PATH = new URL("../public/data/memory.json", import.meta.url);
+const MEMORY_DAYS = 14;
+
+// Story memory: one entry per UTC day with that day's stories, so each scan of the last 24 hours
+// can tell new developments from ongoing, escalating or reversing ones.
+export async function loadMemory() {
+  try {
+    const m = JSON.parse(await readFile(MEMORY_PATH, "utf8"));
+    return Array.isArray(m) ? m : [];
+  } catch {
+    return [];
+  }
+}
 
 const COMPANY_HINT = /\b(Inc|Corp|Corporation|Ltd|LLC|plc|PLC|Holdings)\b/;
 const clampScore = (v) => Math.max(-3, Math.min(3, Math.round(Number(v) || 0)));
@@ -69,6 +82,12 @@ export async function writeScan({ items, model, headlinesScanned = null, feedsOk
   if (history.at(-1)?.at?.slice(0, 10) === scan.scannedAt.slice(0, 10)) history.pop();
   history.push({ at: scan.scannedAt, ind: net("industries", INDUSTRIES), eco: net("economies", ECONOMIES) });
   await writeFile(HISTORY_PATH, JSON.stringify(history.slice(-24 * 14)) + "\n");
+
+  const day = scan.scannedAt.slice(0, 10);
+  const memory = (await loadMemory()).filter((d) => d.day !== day);
+  memory.push({ day, model, items: items.map((it) => ({ id: it.id, date: it.date, theme: it.theme, headline: it.headline, confidence: it.confidence })) });
+  memory.sort((a, b) => a.day.localeCompare(b.day));
+  await writeFile(MEMORY_PATH, JSON.stringify(memory.slice(-MEMORY_DAYS), null, 1) + "\n");
 
   // signals: [{ ref (1-based index into osint.json signals) or id, headline, risk, note, industries, economies }]
   let assessed = 0;

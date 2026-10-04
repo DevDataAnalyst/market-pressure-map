@@ -6,7 +6,7 @@ import { readFile, writeFile } from "node:fs/promises";
 import { ECONOMIES, INDUSTRIES, fail, fetchFeed, fetchText, titleKey, txt } from "./shared.mjs";
 
 const OSINT_PATH = new URL("../public/data/osint.json", import.meta.url);
-const WINDOW_HOURS = 48;
+const WINDOW_HOURS = 24;
 const MAX_SIGNALS = 80;
 const MAX_MEDIA = 45; // media items are plentiful; leave room for official, tracker and hazard sources
 

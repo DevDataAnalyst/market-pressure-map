@@ -13,6 +13,7 @@ The site refreshes once a day for free. There's no API key, no AI credit and not
 1. **GitHub Actions** (`.github/workflows/refresh.yml`, "Daily refresh") runs at 05:17 UTC. GitHub sometimes delays or drops scheduled runs, so the job is also scheduled at 08:47, 13:17 and 18:47 UTC; those backup runs stop straight away once today's refresh is done.
    - `scripts/osint.mjs` collects the open-source intelligence feed (`public/data/osint.json`).
    - `scripts/rule-scan.mjs` reads about a dozen Google News market searches plus the intelligence feed, matches each headline to an event rule, groups headlines about the same event into stories and scores them. It writes `scan.json` and `history.json`. Example rules are "oil prices rise", "central bank cuts rates", "new tariffs", "attacks on shipping lanes" and "weaker yen". Each rule carries a reviewed set of industry and economy exposures, and confidence grows with the number of separate reports. Single-firm news, explainers and questions are skipped.
+   - **Data window: the last 24 hours.** Only headlines and intelligence signals published in the past 24 hours are scored. Earlier days still count through the story memory (`public/data/memory.json`, the last 14 days of stories, written by every scan). Each new story is marked "New in the last 24 hours", "Ongoing" (with how many of the previous 7 days it appeared and since when) or "Turn" (earlier readings pointed the other way). Ongoing stories rank higher, and a story seen on two or more earlier days goes from low to medium confidence. A turn lowers high confidence to medium.
    - The job commits the data.
 2. **Vercel** redeploys the static site on every push.
 
@@ -20,7 +21,7 @@ Running it by hand: Actions → Daily refresh → Run workflow.
 
 ### Optional: Claude routine (richer write-ups)
 
-A Claude Code routine named "Market Pressure Map daily scan" can run at 05:42 UTC. It uses your Claude plan's usage, not API credit. It searches the day's news, writes 12–16 stories in its own words and scores them by judgement. It also assesses the top 30 intelligence signals. When it has written a scan in the last 20 hours, the keyword-rule step leaves that scan alone, and history keeps one point per day. To rely on the free rules only, pause the routine in claude.ai under Routines; nothing else changes. The routine writes a draft and runs `node scripts/apply-scan.mjs draft.json`, which checks the draft and writes the site data.
+A Claude Code routine named "Market Pressure Map daily scan" can run at 05:42 UTC. It uses your Claude plan's usage, not API credit. It searches the last 24 hours of news, reads the previous 7 days of stories from the story memory (`--list-signals` prints them) to judge whether each development is new, ongoing, escalating or reversing, writes 8–16 stories in its own words and scores them by judgement. It also assesses the top 30 intelligence signals. When it has written a scan in the last 20 hours, the keyword-rule step leaves that scan alone, and history keeps one point per day. To rely on the free rules only, pause the routine in claude.ai under Routines; nothing else changes. The routine writes a draft and runs `node scripts/apply-scan.mjs draft.json`, which checks the draft and writes the site data.
 
 ### Optional: paid API mode
 
