@@ -1,8 +1,8 @@
 {
- "scannedAt": "2026-10-04T04:27:19.993Z",
+ "scannedAt": "2026-10-04T04:29:15.145Z",
  "window": "3 Oct – 4 Oct 2026",
  "model": "Keyword rules (no AI)",
- "headlinesScanned": 769,
+ "headlinesScanned": 765,
  "feedsOk": 12,
  "items": [
   {
@@ -10,7 +10,7 @@
    "date": "2026-10-04",
    "theme": "Energy & geopolitics",
    "headline": "Five Indians rescued after tanker hit in Strait of Hormuz",
-   "summary": "Signal: shipping chokepoint disruption. 33 reports from Latin Times, EnergyNow.com, t.co and 19 more. Related: “Hegseth says US blockade of Strait of Hormuz ‘ironclad’”.",
+   "summary": "Signal: shipping chokepoint disruption. 33 reports from Latin Times, EnergyNow.com, The Times of Israel and 18 more. Related: “Hegseth says US blockade of Strait of Hormuz ‘ironclad’”.",
    "rationale": "Attacks and blockades on key sea lanes cut oil and gas flows, raise freight and war-risk insurance costs and lengthen voyages, feeding into energy prices and import costs for energy importers.",
    "horizon": "weeks",
    "confidence": "high",
@@ -74,10 +74,10 @@
    "date": "2026-10-04",
    "theme": "Commodities",
    "headline": "Markets are showing signs of weakness amid caution over rising crude oil prices and yen buying.",
-   "summary": "Signal: higher oil prices. 16 reports from ABC News - Breaking News, Latest News and Videos, EnergyNow.com, Stocktwits and 6 more. Related: “US futures mixed with Brent crude bouncing back above $100 a barrel and bond yields soaring”.",
+   "summary": "Signal: higher oil prices. 13 reports from ABC News - Breaking News, Latest News and Videos, EnergyNow.com, Stocktwits and 3 more. Related: “US futures mixed with Brent crude bouncing back above $100 a barrel and bond yields soaring”. Mixed: 13 reports point the other way.",
    "rationale": "Dearer crude lifts producers' revenue but raises fuel and input costs for transport, manufacturing and households, widening trade deficits in big importers.",
    "horizon": "weeks",
-   "confidence": "high",
+   "confidence": "medium",
    "industries": [
     {
      "id": "energy",
@@ -134,111 +134,86 @@
    ]
   },
   {
-   "id": "oil-down",
-   "date": "2026-10-03",
+   "id": "food-up",
+   "date": "2026-10-04",
    "theme": "Commodities",
-   "headline": "Trump Says Iran War Will End \"Very Soon\", Oil Prices Will Plunge",
-   "summary": "Signal: lower oil prices. 13 reports from EnergyNow.com, News Radio 1200 WOAI, Energies Media and 8 more. Related: “Brent crude falls below $100 as Saudi Arabia restarts East-West pipeline after drone attack shutdown”.",
-   "rationale": "Cheaper crude cuts producers' revenue but lowers fuel and input costs, easing inflation and trade deficits in big importers.",
-   "horizon": "weeks",
+   "headline": "Processed Food Prices Surge, Cup Rice Up 25%, Doenjang 19%",
+   "summary": "Signal: higher food and farm prices. 21 reports from PotatoPro, chosun.com, Bioengineer.org and 17 more. Related: “Global Food Prices Climb to Near Four-Year High, FAO Says”.",
+   "rationale": "Dearer staples raise grocery bills and food inflation, hitting import-dependent and lower-income economies, while farm producers earn more.",
+   "horizon": "months",
    "confidence": "high",
    "industries": [
     {
-     "id": "energy",
-     "score": -3,
-     "why": "Lower realised prices"
-    },
-    {
-     "id": "transport",
-     "score": 3,
-     "why": "Fuel bills fall"
+     "id": "agrifood",
+     "score": 1,
+     "why": "Producers earn more, processors squeezed"
     },
     {
      "id": "consumer",
-     "score": 1,
-     "why": "More money for other spending"
-    },
-    {
-     "id": "autos",
-     "score": 1,
-     "why": "Cheaper running costs"
+     "score": -1,
+     "why": "Higher grocery bills"
     }
    ],
    "economies": [
     {
-     "id": "gulf",
-     "score": -3,
-     "why": "Export revenue falls"
-    },
-    {
      "id": "india",
-     "score": 3,
-     "why": "Oil import bill shrinks"
+     "score": -1,
+     "why": "Food is a large share of inflation"
     },
     {
-     "id": "japan",
-     "score": 1,
-     "why": "Lower import bill"
-    },
-    {
-     "id": "eurozone",
-     "score": 1,
-     "why": "Energy costs ease"
+     "id": "gulf",
+     "score": -1,
+     "why": "Imports most of its food"
     },
     {
      "id": "china",
-     "score": 1,
-     "why": "Cheaper crude imports"
+     "score": -1,
+     "why": "Large food importer"
     }
    ],
    "sources": [
-    "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQUXg4RWxLUVhNUk95Y0h4cEJqY1ZZckV2bnp5cjBYRHhXQW0zcGdOQTVkdjJiMXVpcHBwdHhSMnBRY0FTWjFFUzZ3R28yWXRkRnpVVG45REdCdkdYVEFPOTVLeS1Za2hIaTcwU0kzTHROMTlUdGI1VGZDZEhINFpZYTNiTlhRUVR4MDBXWkdxZnRORUViUWRaVERzSkdWZ1h6SE4zMV9lbVNLSHFJLUNuem1wX0pwdHhqOXE2LWZmU05EdmFtcEs4QUJ6OG9EX2RNVWtkbg?oc=5",
-    "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1ENDB0VWZubS1EVlF1MzBIR1lLWkpSdGx6cVBKN2Z4Zll5b0hnWmJpRGlQNzZPYVdFTFc4YmZ3WXl2am1Wa1htczkyTDRmTmZRaFZVR0FTTWk1RXB3N3N3TVFrZXRJdw?oc=5",
-    "https://news.google.com/rss/articles/CBMimgFBVV95cUxOSWlSQ0JySWhtckl3S01IdjNPcndoTTVOUWVSRmRXLWw2b1U3R3hZeTdwcFM4S1pxNnRVa2dPMXV5Vk9SZWNXaEsyWVYtd2hTZkNBXy1SbjRiaFRFT2cxekVUbTZFXzY1LXJEMXA2WkNVdXhMVnBzbGdNSllPdjlmcS1DMzZTQmo1bDl3dGJIWFhDUzhtUDN1bEV3?oc=5"
+    "https://news.google.com/rss/articles/CBMijgFBVV95cUxPNXJvX2pUXy0xaVlrSVAzUmNFbG5vVnZZRnVqZlJ0ZGVGam1NRXdET09nMUswWkkzSk81MHdkQV9xUlpsdmlOc1RUeFZ6eERNal85cDhoRTJLZk1NZlhwQjhiQUctREQxMWp6Ykw2eVFickExQUxnQy0wdVFwbU43QlBjTlQxdVhUZW1SX1FR?oc=5",
+    "https://news.google.com/rss/articles/CBMisAFBVV95cUxOemNZbWwydk1Sek5mVksyRU5oMzBEWm5HdmxyX2tRUUVtTV85QlFfUWVkVkVzMVFka1h0QUQ5WmViTEJCX0ZRcVNXeUhRWUV3NFduZ2NxMFZ6Q3BuYzN4YThyemRvZGlNWVRBcms1TExqUkVMN2lkUUhlSjYtbzBmQ1hYY2x4bFlIMWxaQ05paWNEcTFtV1VvdWJmQzI2UHpKcFJyb3d0bzczbTR1bGp1cQ?oc=5",
+    "https://news.google.com/rss/articles/CBMitAFBVV95cUxPekdTOEx1bl9reEE4QVhwMGE5WHd3RjdfRThJdnpXdXN4M213aGFyanM0dVo2UkFXRTUzZXhxR09mYWtlR0Rwam8tdVJ6Z1hncEd0Um1FSS1UV3JXODRHZ0FxaklhZmFOTS1wUWhSZEpkbDl5aWliUkVsbE1ybUFXbWlmdzJtVml4a3ltZnhzOTdYTzNRSGFDcTN6TDB1dUZlMS1KNmhtaF9HUUZ0SDZ2Y2R1TFo?oc=5"
    ]
   },
   {
-   "id": "rates-up-us",
+   "id": "yields-up-us",
    "date": "2026-10-04",
-   "theme": "Monetary policy",
-   "headline": "Gold Gains As Softer US Inflation Dims October Fed Hike Bets",
-   "summary": "Signal: tighter monetary policy (US). 8 reports from Washington Examiner, Business Standard, parameter.io and 5 more. Related: “Fed, ECB minutes to show inflation fears as near-term rate hike bets fade”.",
-   "rationale": "Higher policy rates raise borrowing costs, cool demand and weigh on rate-sensitive sectors such as property and long-duration growth stocks, while lenders' margins widen.",
-   "horizon": "months",
+   "theme": "Rates & bonds",
+   "headline": "Bessent downplays worries on rising US Treasury yields, AI bubble concerns",
+   "summary": "Signal: rising bond yields (US). 21 reports from Stocktwits, MarketWatch, Investing.com and 14 more. Related: “Bessent says rising Treasury yields reflect global trend, not cause for alarm”.",
+   "rationale": "Higher long-term yields lift mortgage and corporate borrowing costs and lower the value of long-duration assets, though they help lenders' margins.",
+   "horizon": "weeks",
    "confidence": "high",
    "industries": [
     {
      "id": "realestate",
      "score": -3,
-     "why": "Higher mortgage and funding costs"
-    },
-    {
-     "id": "financials",
-     "score": 1,
-     "why": "Wider lending margins"
+     "why": "Mortgage and funding costs rise"
     },
     {
      "id": "tech",
      "score": -1,
-     "why": "Higher discount rates hit valuations"
+     "why": "Valuations compress"
     },
     {
-     "id": "consumer",
-     "score": -1,
-     "why": "Dearer credit squeezes spending"
+     "id": "financials",
+     "score": 1,
+     "why": "Better lending margins"
     }
    ],
    "economies": [
     {
      "id": "us",
      "score": -1,
-     "why": "Tighter policy slows growth"
+     "why": "Tighter financial conditions"
     }
    ],
    "sources": [
-    "https://news.google.com/rss/articles/CBMipwFBVV95cUxOU2xiWHRPb1FBN3MtZTZQanhoZFdhdFpFd05VZGEyWV9mSGhaVTRlcVJjVFJELXRRamc2bGVFNXRuVlRpSm9jZ0RzUHJSYXdSMFhHMWFlcEdhckROSURwc2U4NGlSMWp4RFpuYkJYbTZFaUk1VHk5RVFmX28zemVjZEVLdDBQMzMxaUJSVUd3M0lBYlMxOHRBdzlkMnNKYTg1S2Y2Wkw0SQ?oc=5",
-    "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPNTVSNHNaMWs2WVpvT0FEVk5RczVONVpWUXRxeUpIQU10ckVucVlVVGlyVGN5UjZPLWRPZloyc3BYMXg1TGFzNHdFS0gyWXpwMVhTNUJMdjhCZVMybVNJZWRyMUhLLWs2eEc3ek9YQ0lNNG1vV2JrQnZ2N1FpS2Q2RVdlSjJwWFZPVWlpRjRzY252eFZCRkJSYU9tRWd5SVhKc3FZS0RJaXRTRkFSVmp1V3VuZUlTQ0hsSGdsUkFrMks1RUpGaFJuVWVMVDh1QjZVeWlF0gHYAUFVX3lxTFB4WDZwSlJtaTFSSEVWLWFzVVEtWDhMdTNscHh1RFo5LVUyR0NUZHQ4VVFQUkN1TThKd0t1V0sxQlRVWlZsdDhVdEVjVktlN3NsWkFHaFMxb1JNTmNTWnlFSzMtVEppSEFoRDZfa1NnMDVueTNQZ3JQbUZGUXRkdHVJRks0Qmd1RU9PdGZ1cW9IbHZna1NLWVR5ZVo1dl9lSTRsWFJ4dkpTWkd6bHlDUXVvc3hoRV9FQ3RpcWlrMmpKOUVGYlh1bFJlcmdpWVlHdjdvVVV6UGVRNQ?oc=5",
-    "https://news.google.com/rss/articles/CBMiVEFVX3lxTE4tOVBLcVZZdXQ0ZGxTb2JFSk0ya1dlREwteW9pUnpEM1Z4QjlJQmU3blFlUjdmd25hT0x5NzJtSGE0V0pWbTc0WmxwNW5sSGliaklpTQ?oc=5"
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxNOXAzZ1dVQzRzZFB5cno0VzdnUmsyZURIbENlYjlqTWNEM2lUcGJyS0R3ZjdXblVmYmhRN2lsR3pBdG9reXdneVhCRE9USlh5VDF1T1ptM0NjQ3JDcEhPVzY1c09wNExjaWlZWmczV3h2OUtBZkZaUjgxZlNBWnhwN0MzeGE3Nm5ZSTl0TDJQQXFKMG9VSXhsaGZ1bm9Va3VETGduOVJyd2lRUWdKZW1WeEpqSDN0dEk?oc=5",
+    "https://news.google.com/rss/articles/CBMixwFBVV95cUxQLUtkbjBkRy1KNndxQlFYdGkyMVhDbGVxRG45R2FKUTNldGQ2ZFdNNGpTV0hhNHdGeUR4Nm41alpsMVdPYlM2VllxOFZXdHFMLThabURfc1NNYkt0NHFzRlZjN3R3Y3pfZC1tLWpzWHdrZkpwUENkZzRVV0NSaVVocTBjVk1RbTctMDlSeHFvNmRJVU85NW52WGJLN3lfdUdzZnAtbXhiTHJxNkV3WkpwOXNIVmlzNDlzdHdTb1RWWk5IMlhHYnlZ?oc=5",
+    "https://news.google.com/rss/articles/CBMilwFBVV95cUxQM054c2o2Zm0tSmhxZU1QY3NOZ0V3YzFzYngtOHc3bVdRbFlnenJKZnU1TXdhY1ZIUWRfU0VHOFJpdU5tRXVRdGMxTkVVSVZvQ1Z5UUlielZTeFlBNzQ5R2JuWDRuVEtvdTFwZkloVUtFYzJ5Q2JWTFdrU1U4TDNqRGh3ZkhnZ21kdXJHbHN0RHpjZjNsdl9v?oc=5"
    ]
   },
   {
@@ -278,89 +253,6 @@
     "https://news.google.com/rss/articles/CBMiogFBVV95cUxOYnJ0U084VE5nbDhPNldRaXk0S0FKaGU2LW9fZVJSY0N1dUpqNExHQ2V5MDVzZC0ta2gyYUppRjY4TUpCbmtNTXNaaEtSbnFYNlduX0NOOHIzSWUxVXJqYURUcFo0WU5EaXgwTndRS1NVRXd2YWNfUmQ5YVdpX0liMThuWkRydDdrZFFNVUM4NDctWkc5OUVXVENNaHU4eHJCcEE?oc=5",
     "https://news.google.com/rss/articles/CBMiywFBVV95cUxOdTRDUzB0LVNJSzBNRW9xNXFXQmRYU2lXVy1McEZieFgwVk1qRFhRcVFQOXJxVHVvNjdkX2tOYlpTR1J6NGJVNEVOM2Z6WkpJQ1VQOVF3RUJYTC1jYUZfNHdLWkZPalBETlpfeUhLR2xlX0lHTmNOUDRMSEhKNUNCd2RBZTF2SjVZNkJwQmJ0SHNIblUxcVZqZ05oQmRoZUJWdWIzSWpQQi1qX2ppMlI2T0pKXzM4LW9Mc2E4dlYwaGhHY2ZjdzlReGpYSdIBywFBVV95cUxOdTRDUzB0LVNJSzBNRW9xNXFXQmRYU2lXVy1McEZieFgwVk1qRFhRcVFQOXJxVHVvNjdkX2tOYlpTR1J6NGJVNEVOM2Z6WkpJQ1VQOVF3RUJYTC1jYUZfNHdLWkZPalBETlpfeUhLR2xlX0lHTmNOUDRMSEhKNUNCd2RBZTF2SjVZNkJwQmJ0SHNIblUxcVZqZ05oQmRoZUJWdWIzSWpQQi1qX2ppMlI2T0pKXzM4LW9Mc2E4dlYwaGhHY2ZjdzlReGpYSQ?oc=5",
     "https://news.google.com/rss/articles/CBMioAFBVV95cUxNRWtqMHhuVmQxY25sLTdQNXNOVlRRenpXSloxUWEydnhucHFSeGItd2RsMGxSbk41MmZvcDFaQVRfQ0NpOWRaNUd3OF9tZkcxdUp5S2R2X1k0TkM5cWpzSW5ySG85dllBYW4xQWFqdFZPVzBoZHk5QkZrdGpyQWNCN1U1dEw1R3ZGemozZnNPMks2ZnFubXZkcGZ2U3FPdjJH?oc=5"
-   ]
-  },
-  {
-   "id": "yields-up-us",
-   "date": "2026-10-04",
-   "theme": "Rates & bonds",
-   "headline": "Bessent downplays worries on rising US Treasury yields, AI bubble concerns",
-   "summary": "Signal: rising bond yields (US). 20 reports from MarketWatch, Investing.com, Yahoo Finance and 14 more. Related: “Bessent says rising Treasury yields reflect global trend, not cause for alarm”.",
-   "rationale": "Higher long-term yields lift mortgage and corporate borrowing costs and lower the value of long-duration assets, though they help lenders' margins.",
-   "horizon": "weeks",
-   "confidence": "high",
-   "industries": [
-    {
-     "id": "realestate",
-     "score": -3,
-     "why": "Mortgage and funding costs rise"
-    },
-    {
-     "id": "tech",
-     "score": -1,
-     "why": "Valuations compress"
-    },
-    {
-     "id": "financials",
-     "score": 1,
-     "why": "Better lending margins"
-    }
-   ],
-   "economies": [
-    {
-     "id": "us",
-     "score": -1,
-     "why": "Tighter financial conditions"
-    }
-   ],
-   "sources": [
-    "https://news.google.com/rss/articles/CBMitwFBVV95cUxNOXAzZ1dVQzRzZFB5cno0VzdnUmsyZURIbENlYjlqTWNEM2lUcGJyS0R3ZjdXblVmYmhRN2lsR3pBdG9reXdneVhCRE9USlh5VDF1T1ptM0NjQ3JDcEhPVzY1c09wNExjaWlZWmczV3h2OUtBZkZaUjgxZlNBWnhwN0MzeGE3Nm5ZSTl0TDJQQXFKMG9VSXhsaGZ1bm9Va3VETGduOVJyd2lRUWdKZW1WeEpqSDN0dEk?oc=5",
-    "https://news.google.com/rss/articles/CBMixwFBVV95cUxQLUtkbjBkRy1KNndxQlFYdGkyMVhDbGVxRG45R2FKUTNldGQ2ZFdNNGpTV0hhNHdGeUR4Nm41alpsMVdPYlM2VllxOFZXdHFMLThabURfc1NNYkt0NHFzRlZjN3R3Y3pfZC1tLWpzWHdrZkpwUENkZzRVV0NSaVVocTBjVk1RbTctMDlSeHFvNmRJVU85NW52WGJLN3lfdUdzZnAtbXhiTHJxNkV3WkpwOXNIVmlzNDlzdHdTb1RWWk5IMlhHYnlZ?oc=5",
-    "https://news.google.com/rss/articles/CBMilwFBVV95cUxQM054c2o2Zm0tSmhxZU1QY3NOZ0V3YzFzYngtOHc3bVdRbFlnenJKZnU1TXdhY1ZIUWRfU0VHOFJpdU5tRXVRdGMxTkVVSVZvQ1Z5UUlielZTeFlBNzQ5R2JuWDRuVEtvdTFwZkloVUtFYzJ5Q2JWTFdrU1U4TDNqRGh3ZkhnZ21kdXJHbHN0RHpjZjNsdl9v?oc=5"
-   ]
-  },
-  {
-   "id": "food-up",
-   "date": "2026-10-04",
-   "theme": "Commodities",
-   "headline": "Processed Food Prices Surge, Cup Rice Up 25%, Doenjang 19%",
-   "summary": "Signal: higher food and farm prices. 19 reports from PotatoPro, chosun.com, Bioengineer.org and 15 more. Related: “Global Food Prices Climb to Near Four-Year High, FAO Says”.",
-   "rationale": "Dearer staples raise grocery bills and food inflation, hitting import-dependent and lower-income economies, while farm producers earn more.",
-   "horizon": "months",
-   "confidence": "high",
-   "industries": [
-    {
-     "id": "agrifood",
-     "score": 1,
-     "why": "Producers earn more, processors squeezed"
-    },
-    {
-     "id": "consumer",
-     "score": -1,
-     "why": "Higher grocery bills"
-    }
-   ],
-   "economies": [
-    {
-     "id": "india",
-     "score": -1,
-     "why": "Food is a large share of inflation"
-    },
-    {
-     "id": "gulf",
-     "score": -1,
-     "why": "Imports most of its food"
-    },
-    {
-     "id": "china",
-     "score": -1,
-     "why": "Large food importer"
-    }
-   ],
-   "sources": [
-    "https://news.google.com/rss/articles/CBMijgFBVV95cUxPNXJvX2pUXy0xaVlrSVAzUmNFbG5vVnZZRnVqZlJ0ZGVGam1NRXdET09nMUswWkkzSk81MHdkQV9xUlpsdmlOc1RUeFZ6eERNal85cDhoRTJLZk1NZlhwQjhiQUctREQxMWp6Ykw2eVFickExQUxnQy0wdVFwbU43QlBjTlQxdVhUZW1SX1FR?oc=5",
-    "https://news.google.com/rss/articles/CBMisAFBVV95cUxOemNZbWwydk1Sek5mVksyRU5oMzBEWm5HdmxyX2tRUUVtTV85QlFfUWVkVkVzMVFka1h0QUQ5WmViTEJCX0ZRcVNXeUhRWUV3NFduZ2NxMFZ6Q3BuYzN4YThyemRvZGlNWVRBcms1TExqUkVMN2lkUUhlSjYtbzBmQ1hYY2x4bFlIMWxaQ05paWNEcTFtV1VvdWJmQzI2UHpKcFJyb3d0bzczbTR1bGp1cQ?oc=5",
-    "https://news.google.com/rss/articles/CBMitAFBVV95cUxPekdTOEx1bl9reEE4QVhwMGE5WHd3RjdfRThJdnpXdXN4M213aGFyanM0dVo2UkFXRTUzZXhxR09mYWtlR0Rwam8tdVJ6Z1hncEd0Um1FSS1UV3JXODRHZ0FxaklhZmFOTS1wUWhSZEpkbDl5aWliUkVsbE1ybUFXbWlmdzJtVml4a3ltZnhzOTdYTzNRSGFDcTN6TDB1dUZlMS1KNmhtaF9HUUZ0SDZ2Y2R1TFo?oc=5"
    ]
   },
   {
@@ -413,52 +305,47 @@
    ]
   },
   {
-   "id": "chokepoints-down",
-   "date": "2026-10-03",
-   "theme": "Energy & geopolitics",
-   "headline": "Oil Prices Rise on Doubts US-Iran Peace Talks Will Ease Hormuz Disruption",
-   "summary": "Signal: shipping lanes reopening. 4 reports from EnergyNow.com, The Times of India. Related: “JP Morgan Sees Brent Staying in Low $100s Even if Hormuz Reopens in June”.",
-   "rationale": "Safer passage through key sea lanes restores oil and gas flows and lowers freight and insurance costs.",
-   "horizon": "weeks",
-   "confidence": "medium",
+   "id": "rates-up-us",
+   "date": "2026-10-04",
+   "theme": "Monetary policy",
+   "headline": "Warsh Stays Silent as Fed Officials’ Caution, Soft Inflation Data Cut Odds of an October Rate Hike",
+   "summary": "Signal: tighter monetary policy (US). 4 reports from Washington Examiner, parameter.io, bloomingbit and 1 more. Related: “How Fed hike odds plunged from 70% to 20% in one week”. Mixed: 3 reports point the other way.",
+   "rationale": "Higher policy rates raise borrowing costs, cool demand and weigh on rate-sensitive sectors such as property and long-duration growth stocks, while lenders' margins widen.",
+   "horizon": "months",
+   "confidence": "low",
    "industries": [
     {
-     "id": "energy",
-     "score": -1,
-     "why": "Risk premium in oil fades"
+     "id": "realestate",
+     "score": -3,
+     "why": "Higher mortgage and funding costs"
     },
     {
-     "id": "transport",
-     "score": 2,
-     "why": "Shorter routes, lower insurance"
+     "id": "financials",
+     "score": 1,
+     "why": "Wider lending margins"
+    },
+    {
+     "id": "tech",
+     "score": -1,
+     "why": "Higher discount rates hit valuations"
     },
     {
      "id": "consumer",
-     "score": 1,
-     "why": "Import costs ease"
+     "score": -1,
+     "why": "Dearer credit squeezes spending"
     }
    ],
    "economies": [
     {
-     "id": "india",
-     "score": 1,
-     "why": "Energy import costs ease"
-    },
-    {
-     "id": "gulf",
-     "score": 1,
-     "why": "Export routes restored"
-    },
-    {
-     "id": "eurozone",
-     "score": 1,
-     "why": "Lower energy and freight costs"
+     "id": "us",
+     "score": -1,
+     "why": "Tighter policy slows growth"
     }
    ],
    "sources": [
-    "https://news.google.com/rss/articles/CBMipwFBVV95cUxPQ2h4eFJVTlNTNmxjY3AwaVktZjBKcHgyNEVSUmJTVEVsREdONEtDN1U1V1VqRG0tQXlQdWhBX2ZudG01NnhjQkQxNTBOOUlUYVlvZEN3aTdwX25MVnctV2tvVHZWeFJDMXNIUG5WdUVJWG9kS2JrZk1nQVdILWYyLS1DTjJ0Y2xuZlpHTWpCb3JzUk83amx0YUItemNpT3NZM3EyTEFsRQ?oc=5",
-    "https://news.google.com/rss/articles/CBMipAFBVV95cUxQMzZsdVBYMlNNcVJSSk13TXI2OEtuWmpHc01pRDNKMUU4RkhhOW82UzdpeFVuTnExdGwwNmVvaHR2ZjVIdTZaVmt2TEZzWGV4TXluS1pmM2JxVEpOZjE0ZGwzNC1oXzhBVjRCR2lBMndBd0YxNUl4cTdfdFZhYXhtQTlfYlNrQXFNS2Y4dkxnSU1QUlNFXzY0ck15dkk1bmNnWW1wUw?oc=5",
-    "https://news.google.com/rss/articles/CBMi-gFBVV95cUxQeFdtWHQzaWppVnhES3YyUGIyMUFST3B2LU1fV0x5cFkxcl9WeWk4MHJqOFpSUktUeVJGdlhuZGVSRThPcjlVQzEtRTBLaDJMLV80Q3IwbjcyUnlJTjRkZkdOTU14LV81dGEwUjNCcFQ5QUlOWklQcHJwNjN3VDhmR0cxejVVUWxicmRWOERQSzNJWGNoVmx3VGwzU1kxZjlwb3FwY0llOGhITmtNU0hIeVJDSVZZOUpRWFRLWXBzWGVacGZWbFlINF93SW9jRUYxT0lvclJRRE5jajR6NGpvQ2tEQjRGLWdfRGluckxkd0RDNTRxMlc2Sk1B0gH_AUFVX3lxTE55Y2hELTl5dHZ3bEdFNm5rMXdzV1VPRG5VWG1WRGViMWNwaTFGcHNUT09yNGh6LVlxM2F0VkJYZy04UjBtMkRtbE94Y3VNUDQ3RS1uSmxrUjJ6WFFUSzhYZGxzSi1Qd3lhd0wzTTA2QkozRWxtOFdWOFloNG5OckJEMXlNYzNRYTBmT3djLUdzMmNjTTB0c1B1UUIyMmlDLU4wY2t6Q3ctZDQzTEV4a2czUHFIRVdDVUNWREVIYXQwemZjNWRURmlZa1Y0REZHeWw2Q3NsMUZoYmtFRVpZalV3MWZPOXR0RDRreG1ub09yZ0pNb2s0VmlyODd2TzlIVQ?oc=5"
+    "https://news.google.com/rss/articles/CBMiVEFVX3lxTE4tOVBLcVZZdXQ0ZGxTb2JFSk0ya1dlREwteW9pUnpEM1Z4QjlJQmU3blFlUjdmd25hT0x5NzJtSGE0V0pWbTc0WmxwNW5sSGliaklpTQ?oc=5",
+    "https://news.google.com/rss/articles/CBMipwFBVV95cUxOQmpNcVo2VlRGTXpuY2RPSTZvdlAtcVBycTF1aTRaQWV0X0Jqb1dkVlpIcklUZDByalllMUd1emIzQWU0SENCMWZvcExPTXk2d2U0d25yWXlJanpsWEVJci14YzVZWTFPVUFaNFRtRy0zejJab3lRTGlIekVyclZRQ3JSeUppTy1xN0hoZ1FrMVV2WjJKMmotQ05QOWhfSVRPelJIODdzaw?oc=5",
+    "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOSDV6MU83ak9wclpwNUJZOGVoSmo5SC10LURNOV9tMTlvTng0SkRRQzVpb2ZSc2ViQ1V4QkUyYS0tQUZ1T2tOdDJiRl93SVFfQlY0dXJLUFZYV3BhNElRMmtpSVZEQU5rNzdXczZLdF9VdU51eTkxOFphOG1HSnd3emoxR3FVdHdDX1pRVHJ6dzVrU1dZMmZUaFJtSVZwS0N5VnJfN1lFTjZxd1JMRUpjSzk1VGl0d3I5V01KZ2pwS1Q3TERiVUtvVWZSYzVQd3BXYlVR?oc=5"
    ]
   },
   {
@@ -510,10 +397,10 @@
    "date": "2026-10-03",
    "theme": "Commodities",
    "headline": "Gold price update morning of October 4: Fall, short-term scenario",
-   "summary": "Signal: lower metal prices. 7 reports from MIT Energy Initiative, SlashGear, AD HOC NEWS and 2 more. Related: “Standard Lithium's Arkansas Project Is Contracted to the Hilt — the Bank Talks Are the Only Thing”.",
+   "summary": "Signal: lower metal prices. 8 reports from BW Businessworld, MIT Energy Initiative, SlashGear and 3 more. Related: “Standard Lithium's Arkansas Project Is Contracted to the Hilt — the Bank Talks Are the Only Thing”. Mixed: 5 reports point the other way.",
    "rationale": "Falling metal prices cut miners' revenue, often signalling weaker industrial demand, while easing manufacturers' input costs.",
    "horizon": "weeks",
-   "confidence": "high",
+   "confidence": "medium",
    "industries": [
     {
      "id": "materials",
@@ -563,70 +450,42 @@
    ]
   },
   {
-   "id": "inflation-down-us",
-   "date": "2026-10-03",
-   "theme": "Growth data",
-   "headline": "Gold Set For Monthly Fall As Markets Await US Inflation Data",
-   "summary": "Signal: cooling inflation (US). 5 reports from The Economic Times, BW Businessworld, The Daily Star and 2 more. Related: “Inflation Drives Down US Personal Savings to Lowest Level Since 2022”.",
-   "rationale": "Slower inflation protects real incomes and opens room for rate cuts, helping spending and rate-sensitive sectors.",
-   "horizon": "weeks",
+   "id": "ai-capex-up",
+   "date": "2026-10-04",
+   "theme": "Tech cycle",
+   "headline": "Bond yields, AI spending threaten US stocks",
+   "summary": "Signal: strong AI and chip demand. 5 reports from The Express Tribune, Startup Fortune, Business Insider and 2 more. Related: “Reid Hoffman Says AI Spending Alone Is Keeping the US Out of a Recession”.",
+   "rationale": "Heavy spending on AI data centres drives orders for chips, servers, power equipment and electricity.",
+   "horizon": "months",
    "confidence": "high",
    "industries": [
     {
-     "id": "consumer",
-     "score": 1,
-     "why": "Real incomes recover"
+     "id": "tech",
+     "score": 2,
+     "why": "Chip and server orders rise"
     },
     {
-     "id": "realestate",
+     "id": "energy",
      "score": 1,
-     "why": "Room for rate cuts"
+     "why": "Data centres need more power"
+    },
+    {
+     "id": "industrials",
+     "score": 1,
+     "why": "Power and cooling equipment"
     }
    ],
    "economies": [
     {
      "id": "us",
      "score": 1,
-     "why": "Room for easier policy"
+     "why": "Hub of AI investment"
     }
    ],
    "sources": [
-    "https://news.google.com/rss/articles/CBMipwFBVV95cUxORHJiWWFLRFQ3QVVwRFdUaXNLMHdCdGJwdXdSOE5obkRuN1NwSW11eTFhT0pxYm04RS04Wlg1a2xFRG5CeVh0ZWdCSjRsQWdUYVRKWExaNUhoTF9VR1JhSHNwQkpKVVpLQzhYUzlMd0duZXFQXzNKVDdWUnozd2xLM2VxUXM3NEdNZmJWWVBINWp0WkE2T3UtakJjZlNUZXJMSnBQSE9Qdw?oc=5",
-    "https://news.google.com/rss/articles/CBMidEFVX3lxTE1QM3plMzh4Y21NdkM2UUxIZzdUa0J4eDhWSEFwSDZrLWJQVGNVMy1fcWlaYldyb3RkOWFoLWhZd1FlQjZCdVAwMVdINUZWcURFM0JaSlVPX3VZOS1DTkI0djczQW1NUndPNjAzQ0tfN0RmWFhV?oc=5",
-    "https://news.google.com/rss/articles/CBMirwFBVV95cUxOVVV6YTk1U09JSi1MMVdxRjJreG15QTVCeWp0eDZ0UGgzU2kzVGllSmhtOERkenFDMDNVbG5oOTdmYms0azRRelZVNjVBZEhVV0M5NVZHNTBrN0xkUE5wVk94YXZaX0tjZ1ZrMWZSaXJrZzJkYTl1MzlqQVluRUZpV0dyb2RndWRnajhtYl95aVcyMFFrMkFJUFlQakhNMHoyLVM3dWVzYmx3M24tcTZF?oc=5"
-   ]
-  },
-  {
-   "id": "metals-up",
-   "date": "2026-10-03",
-   "theme": "Commodities",
-   "headline": "3 Trends That Will Push Copper Higher in 2028",
-   "summary": "Signal: higher metal prices. 5 reports from Sada Elbalad English, The Globe and Mail, WXII and 2 more. Related: “Chinese Team Breaks Through Cobalt-Free High-Nickel Cathode Bottleneck: Lithium Battery Charges to Nearly 80% in 3 Minutes”.",
-   "rationale": "Rising metal prices lift miners' and producers' revenue while raising input costs for manufacturers and builders.",
-   "horizon": "weeks",
-   "confidence": "high",
-   "industries": [
-    {
-     "id": "materials",
-     "score": 2,
-     "why": "Higher prices for miners"
-    },
-    {
-     "id": "autos",
-     "score": -1,
-     "why": "Costlier metal inputs"
-    },
-    {
-     "id": "industrials",
-     "score": -1,
-     "why": "Input costs rise"
-    }
-   ],
-   "economies": [],
-   "sources": [
-    "https://news.google.com/rss/articles/CBMiygFBVV95cUxOSmV1MGVSYVpFU3M2Y2d4MGZHbF9wbExnRlFGUmk5NEVfNzc3TzNoM2ZwQm9QSzhJSVlONVNMUXVpTDVoRmNyNGJFdjBLNURTNTk2Qno5ZVpaWExXaW5CbklRSzBWUkh1d2V3WWI0M2hUVEVLYmlidWVjVWVxckpyWGdkNmNPYlVPN2d4TWxZLWplQnM4NnNZMmZPV1lSQ3gzYUk4WDEwc2dJMXpVeU1sbVB6LXFISFZVb0JxSTdjNUlOem96Ry1wQ19B?oc=5",
-    "https://news.google.com/rss/articles/CBMidkFVX3lxTE1JTHVKM2U0cUFTRk1xX2xUc2xjX0ZEcVQ1azROb25HbHN3cGo0aDRIVEEtekJ5emRLSWVTRDNjdFZGVDBTY2pIbUdZNUkyWHdXRVpWb1VSOGFuQmk1X0d2NHNaQjBQSGQ0Z1EtdHRPbmdyMHByOUE?oc=5",
-    "https://news.google.com/rss/articles/CBMilwFBVV95cUxQMV8wdlNmZUZVMmJIbnpLa2hZTTdick5MYkNVNG8yeHVaNFpfNGQ4cE9hR0FSSXhCT1BGYzJPcVc3N2MzTFBlZjE3SE1ONmVtSmpBdXFwTFZKc3l3dldlcGc3UXh2Zk84X3FDNkN1b3JMY3NzZm5pS0ZhWG52S01XbW9RYkczaW5obmJfYmRQWC16cHhzZlBZ?oc=5"
+    "https://news.google.com/rss/articles/CBMihgFBVV95cUxNWVQ4RDhQbVIzajZGM2JGcHc5dTduUGFaYUNiWk1pamthLUdwdjdjM0YxcFFObkh4ZFVycTEwOWVETXRkblhpa0NRc3VkTmdCME5feEdFQjRpS0lXdFhaTkFiQVJNZlRkQm9KX3IwenlVLTkxZjd3X1BudVlPdG81ZjZ4UE85Z9IBjgFBVV95cUxORHlzdnFMYnZCR0hxR0NSWmVXVE1DeVJ0ME1yY3BjTE5UU1dPSGxBaVl4NV9IUGN1UHNwN2U2OXUtTk1zNW1EOVVUQVJDUlh3ZEJmTUZ0U3d2bERNQWpoNkM2b0lWQ0liNDIzd2x4b0dxZFRFUzlZVnpBMEpKaUNKTEhMNFBqbFNpelB2UlJB?oc=5",
+    "https://news.google.com/rss/articles/CBMiogFBVV95cUxPMlRyOTRDc1hSQVBZaHZyZHZfQmJ4S1J1b3RzMzBKWEZkNW5BMzFkcTBSZWwwUnVrZUZoUVpucm41RTl2ZFgzQmh1dzMtSnhxTlpXYkFIaEFyTUdORGtsWUtOMFpIY0dYbG1BdWlsRVlLWFd2T0h1eEkwb2Z1Q0ltU095Y09yUGU1Znp2clFrUDBkR3dtSmFGT2xIRnJ2YlQ5N1E?oc=5",
+    "https://news.google.com/rss/articles/CBMilAFBVV95cUxPLWczZXVNMzhlUDNyVWhQX1VIeGFiZXNOYmdMVjZMVjRJenFRM3VIS2thOVVpQW9QVVFqUXlBelVJbVRXUi01WWJYbDZJdm50S2ZWQ2dtaG9MU2RyZlp2WlRYQjdoRDBOc1d1Mkd3cE1ob0xWbXFNZm1HYkRiX2FSdUpBM2R5ZEJNSHF5UWRfNzBuaE8w?oc=5"
    ]
   },
   {
@@ -709,6 +568,107 @@
    "sources": [
     "https://news.google.com/rss/articles/CBMipgFBVV95cUxPMXgzUEVrc0N3SGpJUkQxNFg5di1aT21BbUtQLUlPNXB4bzhYOGZGQk42cGc3cGI3YWcxYnUzMEJ3TWVabTBxS2VoMUVkZzMzSHRvTjRmb3B3engyQk5UUEowbFBXZVYtaW1PWlRPQ21od2dKTG96WllSWElnNFdlcTR5WnRDRXg1ZGpTbWdmR2pNR3A0WnRhZWRmYk9tU3hRZFRSdER3?oc=5",
     "https://news.google.com/rss/articles/CBMidkFVX3lxTE03eFR5WENxMmd1UEVlc2k1OHJsWk5MLUVfRWpTN2x6UnZHaVJMUWRPeFdyS1RKWGhOUlRselVBOXZZSXl0NGxBd01YQk1DODIyZTBCc0VhdXlOUzN6aGppYW5iM1NmRGpVU2owckhjbllxcndsNXc?oc=5"
+   ]
+  },
+  {
+   "id": "jobs-down-us",
+   "date": "2026-10-03",
+   "theme": "Growth data",
+   "headline": "America In Focus: Unemployment rate climbs, mortgage rate hits nearly 3 year high",
+   "summary": "Signal: weaker labour market (US). 3 reports from The Sunday Guardian, KuCoin, The Economic Times. Related: “Dow Jones Futures Prediction Monday: Index Hits 51,477 as Investors Assess Weak US Jobs Data and Fed Rate Outlook; Check Wall Street Market Outlook, Key Things To Watch”. Mixed: 2 reports point the other way.",
+   "rationale": "Softer hiring or rising unemployment weighs on household income and spending, and raises the odds of rate cuts.",
+   "horizon": "weeks",
+   "confidence": "low",
+   "industries": [
+    {
+     "id": "consumer",
+     "score": -1,
+     "why": "Weaker household income"
+    },
+    {
+     "id": "financials",
+     "score": -1,
+     "why": "Credit quality risk"
+    }
+   ],
+   "economies": [
+    {
+     "id": "us",
+     "score": -1,
+     "why": "Labour market softening"
+    }
+   ],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMi_wFBVV95cUxQOEZ4VzFjNDZyd2gySXp3dGk5TTd3ZHBNMm4yX1BDV05qNmJ1MTQ0NHFJMGFPRXRvcGJzRTA2ZmIxb3dWSlVTQVI2X2VXZlhhTUxweVpVQ192bVlRbVdGd1gyVVpVTHp0M3N6dy1KdlpldXZmbWRwY3BZWXRqRkNXTlJuaV9WdzdmdHNqR3FLd2lSdjdnbUE4XzFXbnNHLTdSaG4yY3JZZzM0TjBxYl9KU3AyYjY2QWN0ZVhINjJTRVNkU0pSa0F3ZFI0Q1pvOEhNUlNSamZWeHBoOTd6YnZUWXJuZE5abGRjNDRqeFhNN2RTcWFTM1c4aHZZR0pHaFnSAf8BQVVfeXFMUDhGeFcxYzQ2cndoMkl6d3RpOU03d2RwTTJuMl9QQ1dOajZidTE0NDRxSTBhT0V0b3Bic0UwNmZiMW93VkpVU0FSNl9lV2ZYYU1McHlaVUNfdm1ZUW1XRndYMlVaVUx6dDNzenctSnZaZXV2Zm1kcGNwWVl0akZDV05SbmlfVnc3ZnRzakdxS3dpUnY3Z21BOF8xV25zRy03UmhuMmNyWWczNE4wcWJfSlNwMmI2NkFjdGVYSDYyU0VTZFNKUmtBd2RSNENabzhITVJTUmpmVnhwaDk3emJ2VFlybmROWmxkYzQ0anhYTTdkU3FhUzNXOGh2WUdKR2hZ?oc=5",
+    "https://news.google.com/rss/articles/CBMivAJBVV95cUxNLU5VUVp6VE9GNHZsSUxMS3h6d05zbW1QS1FzLWxfOEVEVVI2RFEwRVAzMWRfS2g5eGhlVjZ0V1BvUW5vZEpkMk5Bd2RpaWR2LVJZWFFTdXpJcUx2a2FFUHFVbTZzNUNRSTFYeHh4dTUzUVpMb0JJWEQ3ZHdoekpBc1h0d080VjRQMnJQMnptMGlDRFZMYXViX1F0SFg3QXBENVBQZUZ6WlZUM0locFRpVDF3TEdocHNwYzdZWnFmSk50S2c2bGhfTDdiN1k3dWNuY094RTNPb0RXWG5VdENxejM1SlpuSmp0MHFrVXgzXzFDYVk2RmhMcWVJdkJGcjhLNEhMeGZJQWxMaWJ5Zk1IVmQ1eFA2T0RGMEdkZWNTQlpXVWNNNUc2MUdfcVpxTnJQZGFpUVFTWTEzdmdY0gG8AkFVX3lxTE0tTlVRWnpUT0Y0dmxJTExLeHp3TnNtbVBLUXMtbF84RURVUjZEUTBFUDMxZF9LaDl4aGVWNnRXUG9Rbm9kSmQyTkF3ZGlpZHYtUllYUVN1eklxTHZrYUVQcVVtNnM1Q1FJMVh4eHh1NTNRWkxvQklYRDdkd2h6SkFzWHR3TzRWNFAyclAyem0waUNEVkxhdWJfUXRIWDdBcEQ1UFBlRnpaVlQzSWhwVGlUMXdMR2hwc3BjN1lacWZKTnRLZzZsaF9MN2I3WTd1Y25jT3hFM09vRFdYblV0Q3F6MzVKWm5KanQwcWtVeDNfMUNhWTZGaExxZUl2QkZyOEs0SEx4ZklBbExpYnlmTUhWZDV4UDZPREYwR2RlY1NCWldVY001RzYxR19xWnFOclBkYWlRUVNZMTN2Z1g?oc=5",
+    "https://news.google.com/rss/articles/CBMirwFBVV95cUxOVzBlWmIzc2NVS2E3RjVwNEM1MmozbE5qZ2Qxejl4aW5nQjF0V01QRl9kaWhLSVJPRG9pcVdCSmR5aGhkTE9LaXB6WHk3cExOaDN5ckFKVmVPRk96bTg5SFRQT1RBU05BX1F2TVFRVTRMWU9BRXA5LUgybUozWTU5UHp6dWc3b0dOTElCMk5zWEMydHhwcXM3cXNHNHBTV1ZhQ2RiNXZjLUxXcmpCNjR3?oc=5"
+   ]
+  },
+  {
+   "id": "inflation-up-us",
+   "date": "2026-10-03",
+   "theme": "Growth data",
+   "headline": "US inflation rises less than expected in Aug",
+   "summary": "Signal: firmer inflation (US). 3 reports from ABC News - Breaking News, Latest News and Videos, Pluang, Business Recorder. Related: “Fed holds interest rates steady as inflation hits 3-year high”. Mixed: 2 reports point the other way.",
+   "rationale": "Faster inflation erodes real incomes and makes rate cuts less likely or hikes more likely, weighing on spending and rate-sensitive sectors.",
+   "horizon": "weeks",
+   "confidence": "low",
+   "industries": [
+    {
+     "id": "consumer",
+     "score": -1,
+     "why": "Real incomes squeezed"
+    },
+    {
+     "id": "realestate",
+     "score": -1,
+     "why": "Rate cuts pushed back"
+    }
+   ],
+   "economies": [
+    {
+     "id": "us",
+     "score": -1,
+     "why": "Price pressure delays easing"
+    }
+   ],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9CRDRMdmpfZV9Zdi1fckppc1BQekQyempQV1plQTNqZ1ozQ0V3d3hSa0JSVkYxZ2JoeDBBa0hGNHRTNXhjQ1o0NjByTFlCR050NGh4bnd30gFWQVVfeXFMT0JENEx2al9lX1l2LV9ySmlzUFB6RDJ6alBXWmVBM2pnWjNDRXd3eFJrQlJWRjFnYmh4MEFrSEY0dFM1eGNDWjQ2MHJMWUJHTnQ0aHhud3c?oc=5",
+    "https://news.google.com/rss/articles/CBMinwFBVV95cUxObE9meWdub2FOS2dVY0pKYUxReEZrZGJhMnIyNG9JTEJpZlhISXFXMlZGZk1kSjRPWlRPejV6aTdXSHZnWWFkeHBvZVEydk9Sa1dLallzVGtIenB2OV9yR2daTDNrb2psQW5uZ2JSYnlOMUxmYzExZ1NBT1V3OGVlaERaZ1pPaVYwTDUyNVJCR1lJUkpoRFhhMzJha09TOVXSAaQBQVVfeXFMUGc0WHV5TzVaUnlTZjZ2Y1h3RHdSSnc0LWZoTzF3Uzk4WFkyQVByY1kxNkNoeDREX3Z6TDRSOUsyMmFvbHBGUWNlWUlXZGxJZFN6RFB5NWREWWtlRXUyMXJyUUlMTXo0cmh4NlpfT1pMUklyOGJLb1F5SDdteTItMzl5NVQybXk5U2ZQWkRGYmhnU0dJZ2hoTEFjb3FLaktRcjZNbDc?oc=5",
+    "https://news.google.com/rss/articles/CBMilAFBVV95cUxQd3RaSzlBNF9sYWFlbXpnNWNIcVNKa0dtaE9WM0ZERnJHSUJHNjlYQ3hDdGh3azdpell5dWtNV1BlTTdoNW5Sbnl6UUxnWUxaMHdNZXBJeWhIRVhSWFdUZG5mY3pOOTl2Q1VJNFNZa1VqY2RtUFQ5Zkx3eXVmQVFqcW1IVXhtdllXRzg5c2V5WGlYUFVi?oc=5"
+   ]
+  },
+  {
+   "id": "inflation-up-eurozone",
+   "date": "2026-10-03",
+   "theme": "Growth data",
+   "headline": "Hormuz tensions push eurozone inflation to three-year high",
+   "summary": "Signal: firmer inflation (euro area). 2 reports from Philenews, Dunya News. Related: “Cyprus inflation spikes to 5.2% in rapid euro zone climb”.",
+   "rationale": "Faster inflation erodes real incomes and makes rate cuts less likely or hikes more likely, weighing on spending and rate-sensitive sectors.",
+   "horizon": "weeks",
+   "confidence": "medium",
+   "industries": [
+    {
+     "id": "consumer",
+     "score": -1,
+     "why": "Real incomes squeezed"
+    },
+    {
+     "id": "realestate",
+     "score": -1,
+     "why": "Rate cuts pushed back"
+    }
+   ],
+   "economies": [
+    {
+     "id": "eurozone",
+     "score": -1,
+     "why": "Price pressure delays easing"
+    }
+   ],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMimgFBVV95cUxNamw0Q2tsZllOYlIzSG9xVElTMEdOT3hTejkxTDV0QS12WGtPX013TW53Z0pEenhWbDFmcHJaRXo2OHdhcmo5U0FfOFRQSThZeW1Na184R2JtY0lxOUZRVFFVRkRRNHJaR3JVZ08zYmJGUjh5eWdGT1lSaVV4MC1PRG14RENhb1N6YmpHVmwtSHByZ2pfOVZrQUlB0gFWQVVfeXFMTm1uQ3BBSG11a0dvNndPRXdvTnFkQVU1S3lkVEhnbTB2ZnVFYS16TW1sRHk5Qzc1cDZpZm9KV29TWjJ2NVN2UjgzT1h6aVQwbk03NzB0OUE?oc=5",
+    "https://news.google.com/rss/articles/CBMihgFBVV95cUxPcDZfLWg3WE90MVZxUWlfVXM3WFF0dDlyc01reFB2dzgxanRrNzhBTzhVeXJxSnA1WEZBSE50T244RFNHaVRIRjFiTzJGLXp6RkpvUE4zcHh3Y3Z5LUpaOG8tUDdzM0JqNlV5NGY4TzYxN05nUUdSbTVWRDVXZGlGZEh2eUxUZw?oc=5"
    ]
   }
  ]
