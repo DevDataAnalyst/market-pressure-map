@@ -42,6 +42,8 @@ const INTENSE = /\b(surg|soar|plung|tumbl|record|spik|biggest|sharpest|crisis|co
 const SPECULATIVE = /\b(will|could|may|might|expected to|expects?|forecast|predict|outlook|seen|eyes?|weighs?|considers?|mulls?|threatens?|warns?|if )\b/i;
 // Opinion, explainers, how-tos and single-firm news aren't market-wide events.
 const SKIP = /\?|^\d+ (trends|things|reasons|ways|stocks|charts)\b|\b(opinion|explainer|explained|what to know|what it means|how to|here's why|preview|these \d+ factors|factors to watch|things to watch|live updates|live:|podcast|video|watch:|newsletter|shares of|stock of|'s shares|earnings|quarterly results|q[1-4] results|ipo|ceo|top picks|stocks to buy|stocks? that could|could benefit|black[- ]market|parallel market|informal (currency |exchange |forex )?market|(dow( jones)?|stocks?|stock market|wall street|markets?|sensex|nifty) today)\b|\b\d+\s+[\w.'-]+(\s+[\w.'-]+){0,3}\s+stocks\b/i;
+// Ticker lists ("ORCL, TSLA In Focus") mark single-stock market wraps.
+const TICKERS = /:\s*[A-Z]{2,5}(,\s*[A-Z]{2,5})+\b|\b[A-Z]{3,5}(,\s*[A-Z]{3,5}){3,}\b/;
 // Long-range forecasts ("by 2050") aren't news about the next weeks or months.
 const LONG_RANGE = new RegExp(`\\b(by|in|until|through|to) (${Array.from({ length: 70 }, (_, i) => new Date().getUTCFullYear() + 2 + i).join("|")})\\b`, "i");
 
@@ -509,7 +511,7 @@ export function score(headlines, memory = []) {
   for (const h of headlines) {
     if (!h.title || !/^https:\/\//.test(h.link || "")) continue;
     if (!Number.isNaN(h.published) && h.published < cutoff) continue;
-    if (SKIP.test(h.title) || LONG_RANGE.test(h.title) || COMPANY_MARKERS.test(h.title) || COMPANY_NAMES.test(h.title)) continue;
+    if (SKIP.test(h.title) || LONG_RANGE.test(h.title) || TICKERS.test(h.title) || COMPANY_MARKERS.test(h.title) || COMPANY_NAMES.test(h.title)) continue;
     const key = titleKey(h.title);
     if (seen.has(key)) continue;
     seen.add(key);
