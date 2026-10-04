@@ -41,7 +41,9 @@ const DOWN = /\b(fall(s|ing)?|fell|drop(s|ped)?|slid(e|es)?|slump(s|ed)?|plung(e
 const INTENSE = /\b(surg|soar|plung|tumbl|record|spik|biggest|sharpest|crisis|collapse|shock|crash|slump)/i;
 const SPECULATIVE = /\b(will|could|may|might|expected to|expects?|forecast|predict|outlook|seen|eyes?|weighs?|considers?|mulls?|threatens?|warns?|if )\b/i;
 // Opinion, explainers, how-tos and single-firm news aren't market-wide events.
-const SKIP = /\?|^\d+ (trends|things|reasons|ways|stocks|charts)\b|\b(opinion|explainer|what to know|how to|here's why|live updates|live:|podcast|video|watch:|newsletter|shares of|stock of|'s shares|earnings|quarterly results|q[1-4] results|ipo|ceo|top picks|stocks to buy)\b/i;
+const SKIP = /\?|^\d+ (trends|things|reasons|ways|stocks|charts)\b|\b(opinion|explainer|explained|what to know|what it means|how to|here's why|preview|these \d+ factors|factors to watch|things to watch|live updates|live:|podcast|video|watch:|newsletter|shares of|stock of|'s shares|earnings|quarterly results|q[1-4] results|ipo|ceo|top picks|stocks to buy|stocks? that could|could benefit|black[- ]market|parallel market)\b|\b\d+\s+[\w.'-]+(\s+[\w.'-]+){0,3}\s+stocks\b/i;
+// Long-range forecasts ("by 2050") aren't news about the next weeks or months.
+const LONG_RANGE = new RegExp(`\\b(by|in|until|through|to) (${Array.from({ length: 70 }, (_, i) => new Date().getUTCFullYear() + 2 + i).join("|")})\\b`, "i");
 
 const dirOf = (t) => {
   const u = UP.test(t), d = DOWN.test(t);
@@ -507,7 +509,7 @@ export function score(headlines, memory = []) {
   for (const h of headlines) {
     if (!h.title || !/^https:\/\//.test(h.link || "")) continue;
     if (!Number.isNaN(h.published) && h.published < cutoff) continue;
-    if (SKIP.test(h.title) || COMPANY_MARKERS.test(h.title) || COMPANY_NAMES.test(h.title)) continue;
+    if (SKIP.test(h.title) || LONG_RANGE.test(h.title) || COMPANY_MARKERS.test(h.title) || COMPANY_NAMES.test(h.title)) continue;
     const key = titleKey(h.title);
     if (seen.has(key)) continue;
     seen.add(key);
