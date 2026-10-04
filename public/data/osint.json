@@ -1,6 +1,6 @@
 {
  "updatedAt": "2026-10-04T04:30:29.356Z",
- "assessedAt": "2026-10-04T04:30:40.997Z",
+ "assessedAt": "2026-10-04T05:44:47.878Z",
  "sources": [
   {
    "name": "UN News",
@@ -152,54 +152,24 @@
     }
    ],
    "assessment": {
-    "headline": "Hegseth says US blockade of Strait of Hormuz ‘ironclad’",
+    "headline": "US defense secretary calls blockade of Iran in Hormuz 'ironclad'",
     "risk": "high",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "note": "Signals no near-term easing of the blockade on Iranian exports.",
     "industries": [
      {
       "id": "energy",
-      "score": 2,
-      "why": "Supply risk lifts oil and gas prices"
-     },
-     {
-      "id": "transport",
-      "score": -2,
-      "why": "Rerouting, insurance and fuel costs"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Costlier imported goods"
-     },
-     {
-      "id": "industrials",
-      "score": -1,
-      "why": "Delayed parts and higher input costs"
+      "score": 1,
+      "why": "Iranian supply stays offline"
      }
     ],
     "economies": [
      {
-      "id": "india",
-      "score": -2,
-      "why": "Large oil and gas import bill"
-     },
-     {
-      "id": "japan",
+      "id": "gulf",
       "score": -1,
-      "why": "Imports most of its energy"
-     },
-     {
-      "id": "eurozone",
-      "score": -1,
-      "why": "Energy and shipping costs rise"
-     },
-     {
-      "id": "china",
-      "score": -1,
-      "why": "Biggest crude importer"
+      "why": "Prolonged standoff"
      }
     ],
-    "at": "2026-10-04T04:30:40.997Z"
+    "at": "2026-10-04T05:44:47.878Z"
    }
   },
   {
@@ -247,54 +217,24 @@
     }
    ],
    "assessment": {
-    "headline": "Five Indians rescued after tanker hit in Strait of Hormuz",
+    "headline": "Five Indian crew rescued after tanker hit in Hormuz",
     "risk": "high",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "note": "Another strike on a tanker raises war-risk premiums.",
     "industries": [
-     {
-      "id": "energy",
-      "score": 2,
-      "why": "Supply risk lifts oil and gas prices"
-     },
      {
       "id": "transport",
       "score": -2,
-      "why": "Rerouting, insurance and fuel costs"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Costlier imported goods"
-     },
-     {
-      "id": "industrials",
-      "score": -1,
-      "why": "Delayed parts and higher input costs"
+      "why": "Crew and insurance risk"
      }
     ],
     "economies": [
      {
       "id": "india",
-      "score": -2,
-      "why": "Large oil and gas import bill"
-     },
-     {
-      "id": "japan",
       "score": -1,
-      "why": "Imports most of its energy"
-     },
-     {
-      "id": "eurozone",
-      "score": -1,
-      "why": "Energy and shipping costs rise"
-     },
-     {
-      "id": "china",
-      "score": -1,
-      "why": "Biggest crude importer"
+      "why": "Seafarer and energy exposure"
      }
     ],
-    "at": "2026-10-04T04:30:40.997Z"
+    "at": "2026-10-04T05:44:47.878Z"
    }
   },
   {
@@ -326,54 +266,29 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Qatar and UAE LNG shipments through Strait of Hormuz hit highest level since war began",
-    "risk": "high",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "headline": "Qatar and UAE LNG shipments via Hormuz hit wartime high",
+    "risk": "elevated",
+    "note": "19 cargoes in September eases gas supply worries somewhat.",
     "industries": [
      {
       "id": "energy",
-      "score": 2,
-      "why": "Supply risk lifts oil and gas prices"
-     },
-     {
-      "id": "transport",
-      "score": -2,
-      "why": "Rerouting, insurance and fuel costs"
-     },
-     {
-      "id": "consumer",
       "score": -1,
-      "why": "Costlier imported goods"
-     },
-     {
-      "id": "industrials",
-      "score": -1,
-      "why": "Delayed parts and higher input costs"
+      "why": "Caps gas prices"
      }
     ],
     "economies": [
      {
-      "id": "india",
-      "score": -2,
-      "why": "Large oil and gas import bill"
-     },
-     {
       "id": "japan",
-      "score": -1,
-      "why": "Imports most of its energy"
+      "score": 1,
+      "why": "LNG relief"
      },
      {
       "id": "eurozone",
-      "score": -1,
-      "why": "Energy and shipping costs rise"
-     },
-     {
-      "id": "china",
-      "score": -1,
-      "why": "Biggest crude importer"
+      "score": 1,
+      "why": "Gas relief"
      }
     ],
-    "at": "2026-10-04T04:30:40.997Z"
+    "at": "2026-10-04T05:44:47.878Z"
    }
   },
   {
@@ -402,7 +317,21 @@
    "severity": "high",
    "severityScore": 6,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Iranian oil reported moving through Hormuz while Gulf neighbors' exports shut",
+    "risk": "watch",
+    "note": "Report conflicts with blockade data showing zero Iranian loadings; treat cautiously.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": 1,
+      "why": "Uncertain supply picture"
+     }
+    ],
+    "economies": [],
+    "at": "2026-10-04T05:44:47.878Z"
+   }
   },
   {
    "id": "two-oil-tankers-hit-by-unidentified-projectiles-near-strait-",
@@ -441,54 +370,34 @@
     }
    ],
    "assessment": {
-    "headline": "Two Oil Tankers Hit By Unidentified Projectiles Near Strait Of Hormuz",
+    "headline": "Two oil tankers hit by unidentified projectiles near Hormuz",
     "risk": "high",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "note": "Sustained attacks keep freight and crude risk premiums high.",
     "industries": [
-     {
-      "id": "energy",
-      "score": 2,
-      "why": "Supply risk lifts oil and gas prices"
-     },
      {
       "id": "transport",
       "score": -2,
-      "why": "Rerouting, insurance and fuel costs"
+      "why": "Attack risk"
      },
      {
-      "id": "consumer",
-      "score": -1,
-      "why": "Costlier imported goods"
-     },
-     {
-      "id": "industrials",
-      "score": -1,
-      "why": "Delayed parts and higher input costs"
+      "id": "energy",
+      "score": 1,
+      "why": "Risk premium"
      }
     ],
     "economies": [
      {
-      "id": "india",
+      "id": "gulf",
       "score": -2,
-      "why": "Large oil and gas import bill"
+      "why": "Shipping under fire"
      },
      {
-      "id": "japan",
+      "id": "india",
       "score": -1,
-      "why": "Imports most of its energy"
-     },
-     {
-      "id": "eurozone",
-      "score": -1,
-      "why": "Energy and shipping costs rise"
-     },
-     {
-      "id": "china",
-      "score": -1,
-      "why": "Biggest crude importer"
+      "why": "Import exposure"
      }
     ],
-    "at": "2026-10-04T04:30:40.997Z"
+    "at": "2026-10-04T05:44:47.878Z"
    }
   },
   {
@@ -535,34 +444,18 @@
     }
    ],
    "assessment": {
-    "headline": "North Korea tests hypersonic missile amid tensions with South over DMZ blast",
-    "risk": "elevated",
-    "note": "Keyword rules read this as East Asia security tensions.",
-    "industries": [
-     {
-      "id": "tech",
-      "score": -1,
-      "why": "Chip supply concentrated in the region"
-     },
-     {
-      "id": "transport",
-      "score": -1,
-      "why": "Regional shipping risk"
-     }
-    ],
+    "headline": "North Korea tests hypersonic missile amid tensions with South",
+    "risk": "watch",
+    "note": "Regional risk; limited market reaction typically.",
+    "industries": [],
     "economies": [
      {
       "id": "japan",
       "score": -1,
-      "why": "On the front line"
-     },
-     {
-      "id": "china",
-      "score": -1,
-      "why": "Sanctions and trade risk"
+      "why": "Regional security risk"
      }
     ],
-    "at": "2026-10-04T04:30:40.997Z"
+    "at": "2026-10-04T05:44:47.878Z"
    }
   },
   {
@@ -600,7 +493,15 @@
      "source": "Middle East Eye",
      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNazU3R2tOR2RFeEFWdklGZUs3NVlQN3hpUmsxbFFUS3R2Njh4cVpsX0ltSFVac2FZenpBbGVoamw0N3RxbWxqa1hUVGpiRjQwc0FPZFg2aEYyX2lsWEhEaGNYaGZOSVRQM2R2QmNWMkI0V29BVG9obmxTMTRLSFZzblhnUU9FSEVPV0stTGxpY3I2djdnWkZxMlRQbTM1TVBheVZ0eWNQLU40bkVudkpHekNTT2NWVHdPM1F4WS1R?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "Iran says it has adopted new arrangement to counter US sanctions",
+    "risk": "watch",
+    "note": "Unspecified measures; unlikely to restore exports under blockade.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-04T05:44:47.878Z"
+   }
   },
   {
    "id": "never-seen-a-crisis-like-this-three-cubans-on-life-under-the",
@@ -843,54 +744,24 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Iran's Rial Hits Reported Record Low as Blockade Disrupts Oil Exports",
+    "headline": "Iran's rial hits record low as blockade disrupts oil exports",
     "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "note": "Economic collapse raises risk of further escalation at sea.",
     "industries": [
      {
       "id": "energy",
-      "score": 2,
-      "why": "Supply risk lifts oil and gas prices"
-     },
-     {
-      "id": "transport",
-      "score": -2,
-      "why": "Rerouting, insurance and fuel costs"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Costlier imported goods"
-     },
-     {
-      "id": "industrials",
-      "score": -1,
-      "why": "Delayed parts and higher input costs"
+      "score": 1,
+      "why": "Escalation risk premium"
      }
     ],
     "economies": [
      {
-      "id": "india",
-      "score": -2,
-      "why": "Large oil and gas import bill"
-     },
-     {
-      "id": "japan",
+      "id": "gulf",
       "score": -1,
-      "why": "Imports most of its energy"
-     },
-     {
-      "id": "eurozone",
-      "score": -1,
-      "why": "Energy and shipping costs rise"
-     },
-     {
-      "id": "china",
-      "score": -1,
-      "why": "Biggest crude importer"
+      "why": "Instability risk"
      }
     ],
-    "at": "2026-10-04T04:30:40.997Z"
+    "at": "2026-10-04T05:44:47.878Z"
    }
   },
   {
@@ -995,7 +866,32 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Iraq says it moved 2 million barrels of crude through Hormuz",
+    "risk": "elevated",
+    "note": "Some Gulf exports getting through, easing supply concerns.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": -1,
+      "why": "More supply"
+     }
+    ],
+    "economies": [
+     {
+      "id": "gulf",
+      "score": 1,
+      "why": "Exports resume partly"
+     },
+     {
+      "id": "india",
+      "score": 1,
+      "why": "Supply relief"
+     }
+    ],
+    "at": "2026-10-04T05:44:47.878Z"
+   }
   },
   {
    "id": "iran-is-losing-some-of-its-leverage-over-the-strait-of-hormu",
@@ -1068,7 +964,21 @@
      "source": "UA.NEWS",
      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPMmxrNFF6cWtxTEZQVzR2TWZqNXVBNDBDdzktNThQQVVQTmJoLUJ1T3RGV1FZTTNCRHJ5V0VZX1Z0TFREM01jNTBfckFBV2hmdEF3WnlTdXdiUDVNUUQ3cU5fSEZSLVBQWjVpODNfZG5Ga09OY1Z6c2lPZ0hqcWZ6M0hmd1dtSlAycVRwRWlOVm5XVHNLa1dkYmw1ZHZtNkRCVFI3bng2aVY1NG4zSm9VOV9NaEkzblZUaGR4TXNxNnF2RTRlU3c?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "Zelenskyy asks US to sanction Russian and Chinese firms over satellite rival",
+    "risk": "watch",
+    "note": "Request only; potential tech-sanctions friction with China.",
+    "industries": [],
+    "economies": [
+     {
+      "id": "china",
+      "score": -1,
+      "why": "Possible new sanctions"
+     }
+    ],
+    "at": "2026-10-04T05:44:47.878Z"
+   }
   },
   {
    "id": "how-iran-is-seeking-to-cash-in-on-strait-of-hormuz",
@@ -1124,7 +1034,21 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "US energy secretary says Hormuz traffic rising meaningfully",
+    "risk": "watch",
+    "note": "Official signal of recovery could temper prices.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": -1,
+      "why": "Price upside capped"
+     }
+    ],
+    "economies": [],
+    "at": "2026-10-04T05:44:47.878Z"
+   }
   },
   {
    "id": "trump-threatens-more-strikes-on-iran-s-kharg-island-pushes-a",
@@ -1154,54 +1078,24 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Trump Threatens More Strikes on Iran’s Kharg Island, Pushes Allies on Strait of Hormuz",
+    "headline": "Trump threatens more strikes on Kharg Island, presses allies on Hormuz",
     "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "note": "Threats to Iran's main export hub keep escalation risk high.",
     "industries": [
      {
       "id": "energy",
-      "score": 2,
-      "why": "Supply risk lifts oil and gas prices"
-     },
-     {
-      "id": "transport",
-      "score": -2,
-      "why": "Rerouting, insurance and fuel costs"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Costlier imported goods"
-     },
-     {
-      "id": "industrials",
-      "score": -1,
-      "why": "Delayed parts and higher input costs"
+      "score": 1,
+      "why": "Escalation risk premium"
      }
     ],
     "economies": [
      {
-      "id": "india",
-      "score": -2,
-      "why": "Large oil and gas import bill"
-     },
-     {
-      "id": "japan",
+      "id": "gulf",
       "score": -1,
-      "why": "Imports most of its energy"
-     },
-     {
-      "id": "eurozone",
-      "score": -1,
-      "why": "Energy and shipping costs rise"
-     },
-     {
-      "id": "china",
-      "score": -1,
-      "why": "Biggest crude importer"
+      "why": "Conflict risk"
      }
     ],
-    "at": "2026-10-04T04:30:40.997Z"
+    "at": "2026-10-04T05:44:47.878Z"
    }
   },
   {
@@ -1493,44 +1387,24 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "'Most comprehensive plan': Ukraine confirms India playing role in mediating energy truce in Black Sea",
+    "headline": "Ukraine says India's Black Sea energy truce plan is most comprehensive",
     "risk": "elevated",
-    "note": "Keyword rules read this as shipping lanes reopening.",
+    "note": "Truce would cut Black Sea grain and energy shipping risk.",
     "industries": [
      {
-      "id": "energy",
-      "score": -1,
-      "why": "Risk premium in oil fades"
-     },
-     {
-      "id": "transport",
-      "score": 2,
-      "why": "Shorter routes, lower insurance"
-     },
-     {
-      "id": "consumer",
+      "id": "agrifood",
       "score": 1,
-      "why": "Import costs ease"
+      "why": "Grain route risk could fall"
      }
     ],
     "economies": [
      {
-      "id": "india",
-      "score": 1,
-      "why": "Energy import costs ease"
-     },
-     {
-      "id": "gulf",
-      "score": 1,
-      "why": "Export routes restored"
-     },
-     {
       "id": "eurozone",
       "score": 1,
-      "why": "Lower energy and freight costs"
+      "why": "Energy risk eases"
      }
     ],
-    "at": "2026-10-04T04:30:40.997Z"
+    "at": "2026-10-04T05:44:47.878Z"
    }
   },
   {
@@ -1565,54 +1439,29 @@
     }
    ],
    "assessment": {
-    "headline": "Saudis plan assault on Houthis to break Red Sea chokehold",
-    "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "headline": "Saudi Arabia plans offensive to break Houthi hold on Red Sea",
+    "risk": "high",
+    "note": "Fighting at Bab el-Mandeb adds near-term shipping risk.",
     "industries": [
-     {
-      "id": "energy",
-      "score": 2,
-      "why": "Supply risk lifts oil and gas prices"
-     },
      {
       "id": "transport",
       "score": -2,
-      "why": "Rerouting, insurance and fuel costs"
+      "why": "Red Sea route risk"
      },
      {
-      "id": "consumer",
-      "score": -1,
-      "why": "Costlier imported goods"
-     },
-     {
-      "id": "industrials",
-      "score": -1,
-      "why": "Delayed parts and higher input costs"
+      "id": "energy",
+      "score": 1,
+      "why": "Second chokepoint threatened"
      }
     ],
     "economies": [
      {
-      "id": "india",
-      "score": -2,
-      "why": "Large oil and gas import bill"
-     },
-     {
-      "id": "japan",
+      "id": "gulf",
       "score": -1,
-      "why": "Imports most of its energy"
-     },
-     {
-      "id": "eurozone",
-      "score": -1,
-      "why": "Energy and shipping costs rise"
-     },
-     {
-      "id": "china",
-      "score": -1,
-      "why": "Biggest crude importer"
+      "why": "Military escalation"
      }
     ],
-    "at": "2026-10-04T04:30:40.997Z"
+    "at": "2026-10-04T05:44:47.878Z"
    }
   },
   {
@@ -1641,54 +1490,23 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Attack on Ship Flying Liberian Flag in Black Sea Leaves One Dead and Three Injured",
+    "headline": "Attack on ship in Black Sea leaves one dead, three injured",
     "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "note": "Keeps war-risk premiums high for Black Sea trade.",
     "industries": [
      {
-      "id": "energy",
-      "score": 2,
-      "why": "Supply risk lifts oil and gas prices"
-     },
-     {
       "id": "transport",
-      "score": -2,
-      "why": "Rerouting, insurance and fuel costs"
+      "score": -1,
+      "why": "Insurance costs"
      },
      {
-      "id": "consumer",
+      "id": "agrifood",
       "score": -1,
-      "why": "Costlier imported goods"
-     },
-     {
-      "id": "industrials",
-      "score": -1,
-      "why": "Delayed parts and higher input costs"
+      "why": "Grain shipping risk"
      }
     ],
-    "economies": [
-     {
-      "id": "india",
-      "score": -2,
-      "why": "Large oil and gas import bill"
-     },
-     {
-      "id": "japan",
-      "score": -1,
-      "why": "Imports most of its energy"
-     },
-     {
-      "id": "eurozone",
-      "score": -1,
-      "why": "Energy and shipping costs rise"
-     },
-     {
-      "id": "china",
-      "score": -1,
-      "why": "Biggest crude importer"
-     }
-    ],
-    "at": "2026-10-04T04:30:40.997Z"
+    "economies": [],
+    "at": "2026-10-04T05:44:47.878Z"
    }
   },
   {
@@ -1746,7 +1564,15 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "US weighs sanctions over West Bank settler violence, report says",
+    "risk": "watch",
+    "note": "Report only; limited direct market impact.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-04T05:44:47.878Z"
+   }
   },
   {
    "id": "pakistan-calls-for-unrestricted-commercial-shipping-through-",
