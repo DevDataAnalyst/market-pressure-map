@@ -1,5 +1,6 @@
 // Validates a scored scan and writes scan.json, history.json and OSINT assessments.
-// Used by both the API scan (refresh.mjs) and the daily Claude routine (apply-scan.mjs).
+// Used by the keyword-rule scan (rule-scan.mjs), the optional Claude routine (apply-scan.mjs)
+// and the optional API scan (refresh.mjs).
 import { readFile, writeFile } from "node:fs/promises";
 import { CONF, ECONOMIES, INDUSTRIES, THEMES, fail } from "./shared.mjs";
 
@@ -64,6 +65,8 @@ export async function writeScan({ items, model, headlinesScanned = null, feedsOk
   };
   let history = [];
   try { history = JSON.parse(await readFile(HISTORY_PATH, "utf8")); } catch {}
+  // One point per day: a later scan the same UTC day (e.g. Claude after the keyword rules) replaces it.
+  if (history.at(-1)?.at?.slice(0, 10) === scan.scannedAt.slice(0, 10)) history.pop();
   history.push({ at: scan.scannedAt, ind: net("industries", INDUSTRIES), eco: net("economies", ECONOMIES) });
   await writeFile(HISTORY_PATH, JSON.stringify(history.slice(-24 * 14)) + "\n");
 

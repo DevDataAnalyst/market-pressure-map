@@ -277,6 +277,7 @@ textarea { width: 100%; min-height: 108px; resize: vertical; padding: 10px 12px;
     <div class="body">
       <p>Each story is scored from <span class="num">−3</span> (strong headwind) to <span class="num">+3</span> (strong tailwind) for every industry and economy it touches. The map adds those scores, counting high-confidence calls at <span class="num">1.0</span>, medium at <span class="num">0.7</span> and low at <span class="num">0.4</span>.</p>
       <p>Industries are the largest revenue pools in the world economy. Economies are the largest by output, plus the Gulf producers that set energy prices. Stories are written without company names, so the map shows sector-level pressure only.</p>
+      <p>Each day a free job reads the latest market headlines and intelligence signals and matches them to event rules, such as "oil prices rise", "central bank cuts rates" or "new tariffs". Each rule carries a reviewed set of exposures. Headlines on the same event are grouped into one story, and confidence rises with the number of separate reports. When the optional Claude routine runs, Claude writes and scores the stories itself instead.</p>
       <p>Scores are a structured judgement about direction and size over each story's horizon. They are not price targets or investment advice.</p>
     </div>
   </details>
@@ -340,7 +341,7 @@ textarea { width: 100%; min-height: 108px; resize: vertical; padding: 10px 12px;
         <select id="intelRegion"><option value="all">All economies</option></select>
       </div>
     </div>
-    <p class="status" style="max-width:80ch">Geopolitical and economic signals from open sources: conflict trackers, disaster alerts, central banks, international bodies and worldwide media monitoring. Each signal is tagged with the industries and economies it exposes. Signals marked "assessed" have been scored by Claude for market impact.</p>
+    <p class="status" style="max-width:80ch">Geopolitical and economic signals from open sources: conflict trackers, disaster alerts, central banks, international bodies and worldwide media monitoring. Each signal is tagged with the industries and economies it exposes. Signals marked "assessed" have been scored for market impact, by keyword rules or, when the optional Claude routine runs, by Claude.</p>
     <div class="filters" id="intelCats"></div>
     <div class="sig-list" id="sigList"><div class="empty"><strong>Loading signals…</strong></div></div>
     <div><button class="btn ghost" type="button" id="sigMore" hidden>Show more signals</button></div>
@@ -387,7 +388,7 @@ textarea { width: 100%; min-height: 108px; resize: vertical; padding: 10px 12px;
     </div>
   </section>
 
-  <p class="disclaim">Built daily from public news and open-source intelligence, scored by Claude between the dates shown. Figures are as reported at the time and can be revised. This page is an analytical aid, not investment advice.</p>
+  <p class="disclaim">Built daily from public news and open-source intelligence between the dates shown, scored by keyword rules or, when the optional routine runs, by Claude. Figures are as reported at the time and can be revised. This page is an analytical aid, not investment advice.</p>
 </div>
 
 <div class="tip" id="tip" hidden></div>
@@ -660,7 +661,7 @@ function renderHeader() {
     const at = new Date(state.scan.scannedAt);
     const mins = Math.round((Date.now() - at) / 60000);
     const ago = isNaN(at) ? "recently" : mins < 1 ? "just now" : mins < 60 ? `${mins} min ago` : mins < 48 * 60 ? `${Math.round(mins / 60)} h ago` : at.toLocaleDateString(undefined, { day: "numeric", month: "short" });
-    $("scanMeta").textContent = `${state.scan.items.length} stories · updated ${ago} · refreshes daily`;
+    $("scanMeta").textContent = `${state.scan.items.length} stories · updated ${ago} · ${/rule/i.test(state.scan.model) ? "scored by keyword rules" : /claude/i.test(state.scan.model) ? "scored by Claude" : "refreshes daily"}`;
   } else {
     $("scanWindow").textContent = state.scanStatus === "loading" ? "Loading…" : "No scan loaded";
     $("scanMeta").textContent = " ";
@@ -792,7 +793,7 @@ function renderIntel() {
   $("sigMore").textContent = `Show more signals (${items.length - state.sig.shown} more)`;
   const ok = state.osint.sources.filter(s => s.ok);
   $("intelMeta").textContent = `Open-source intelligence · updated ${ago(state.osint.updatedAt) || "recently"}`;
-  $("intelSources").textContent = `${ok.length} of ${state.osint.sources.length} sources reporting: ${ok.map(s => s.name).join(", ")}.` + (state.osint.assessedAt ? ` Last assessed ${ago(state.osint.assessedAt)}.` : " Not yet assessed by Claude.");
+  $("intelSources").textContent = `${ok.length} of ${state.osint.sources.length} sources reporting: ${ok.map(s => s.name).join(", ")}.` + (state.osint.assessedAt ? ` Last assessed ${ago(state.osint.assessedAt)}.` : " Not yet assessed.");
 }
 (function initIntel() {
   for (const e of ECONOMIES) $("intelRegion").append(el("option", { value: e.id, text: e.label }));
@@ -1075,7 +1076,7 @@ async function load() {
     else {
       lastAt = d.scannedAt;
       const items = (Array.isArray(d.items) ? d.items : []).map((x, i) => cleanItem(x, "s" + i)).filter(Boolean);
-      state.scan = { scannedAt: d.scannedAt, window: typeof d.window === "string" ? d.window.slice(0, 60) : "", items };
+      state.scan = { scannedAt: d.scannedAt, model: typeof d.model === "string" ? d.model.slice(0, 60) : "", window: typeof d.window === "string" ? d.window.slice(0, 60) : "", items };
       state.scanStatus = "ready";
     }
   } catch {

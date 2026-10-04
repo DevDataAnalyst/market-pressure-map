@@ -1,6 +1,6 @@
 # Market Pressure Map
 
-Where the latest global headlines push the world's biggest industries and economies: tailwind or headwind, how hard, and why. Refreshed daily.
+Where the latest global headlines push the world's biggest industries and economies: tailwind or headwind, how hard, and why. Refreshed daily for free.
 
 - **11 industries:** energy, banks, tech and chips, healthcare, autos, retail and consumer, industrials, materials, agriculture and food, real estate, transport.
 - **7 economies:** United States, China, euro area, Japan, India, United Kingdom, Gulf states.
@@ -8,11 +8,19 @@ Where the latest global headlines push the world's biggest industries and econom
 
 ## How it works
 
-The site refreshes once a day, with no paid API credit needed:
+The site refreshes once a day for free. There's no API key, no AI credit and nothing to switch on:
 
-1. **05:17 UTC, GitHub Actions** (`.github/workflows/refresh.yml`): `scripts/osint.mjs` collects the open-source intelligence feed and commits `public/data/osint.json`. This needs no key.
-2. **05:42 UTC, a Claude Code routine** (scheduled in claude.ai, using the Claude plan rather than API credit): searches the day's market news, picks the 12–16 most market-moving developments, and scores each one from −3 (strong headwind) to +3 (strong tailwind) for every industry and economy it affects. It also assesses the top 30 intelligence signals. It writes a draft, and `node scripts/apply-scan.mjs draft.json` checks it and writes `scan.json`, `history.json` and the signal assessments. The routine then commits and pushes.
-3. **Vercel** redeploys the static site on every push.
+1. **GitHub Actions** (`.github/workflows/refresh.yml`, "Daily refresh") runs at 05:17 UTC. GitHub sometimes delays or drops scheduled runs, so the job is also scheduled at 08:47, 13:17 and 18:47 UTC; those backup runs stop straight away once today's refresh is done.
+   - `scripts/osint.mjs` collects the open-source intelligence feed (`public/data/osint.json`).
+   - `scripts/rule-scan.mjs` reads about a dozen Google News market searches plus the intelligence feed, matches each headline to an event rule, groups headlines about the same event into stories and scores them. It writes `scan.json` and `history.json`. Example rules are "oil prices rise", "central bank cuts rates", "new tariffs", "attacks on shipping lanes" and "weaker yen". Each rule carries a reviewed set of industry and economy exposures, and confidence grows with the number of separate reports. Single-firm news, explainers and questions are skipped.
+   - The job commits the data.
+2. **Vercel** redeploys the static site on every push.
+
+Running it by hand: Actions → Daily refresh → Run workflow.
+
+### Optional: Claude routine (richer write-ups)
+
+A Claude Code routine named "Market Pressure Map daily scan" can run at 05:42 UTC. It uses your Claude plan's usage, not API credit. It searches the day's news, writes 12–16 stories in its own words and scores them by judgement. It also assesses the top 30 intelligence signals. When it has written a scan in the last 20 hours, the keyword-rule step leaves that scan alone, and history keeps one point per day. To rely on the free rules only, pause the routine in claude.ai under Routines; nothing else changes. The routine writes a draft and runs `node scripts/apply-scan.mjs draft.json`, which checks the draft and writes the site data.
 
 ### Optional: paid API mode
 
@@ -40,7 +48,7 @@ The site refreshes once a day, with no paid API credit needed:
 - **Hazards:** GDACS disaster alerts (orange and red only) and USGS significant earthquakes.
 - **Official:** Federal Reserve, ECB, Bank of England, WTO and the US Energy Information Administration.
 
-Each signal is tagged by rules with a category, the places, industries and economies it exposes, and a severity (watch, elevated or high). Severity rises with intensity words, disaster alert level, earthquake magnitude and how many separate sources report the same thing. Near-duplicate reports are merged. Headlines that name companies are dropped. When the daily Claude routine runs, it also assesses the top 30 signals with a neutral headline, a market-impact risk level, a short note and signed scores; those signals show as "Assessed". The feed is written to `public/data/osint.json` and is published even when the scoring step doesn't run.
+Each signal is tagged by rules with a category, the places, industries and economies it exposes, and a severity (watch, elevated or high). Severity rises with intensity words, disaster alert level, earthquake magnitude and how many separate sources report the same thing. Near-duplicate reports are merged. Headlines that name companies are dropped. The keyword-rule scan gives signals that match an event rule a short note and signed scores. When the optional Claude routine runs, it assesses the top 30 signals with a neutral headline, a market-impact risk level, a note and scores, and those assessments take precedence. Assessed signals show as "Assessed". The feed is written to `public/data/osint.json` and is published even when the scoring step doesn't run.
 
 ## Drill-down
 
@@ -50,8 +58,8 @@ The page totals the scores, counting high-confidence calls at 1.0, medium at 0.7
 
 ## Setup
 
-1. **Daily scoring:** a Claude Code routine named "Market Pressure Map daily scan" runs at 05:42 UTC. You can manage or pause it in claude.ai under Routines.
-2. **Intelligence feed:** runs automatically. To run it by hand, go to Actions → Daily intelligence feed → Run workflow.
+1. **Daily refresh:** runs automatically on GitHub Actions; nothing to set up. To run it by hand, go to Actions → Daily refresh → Run workflow.
+2. **Claude routine:** optional (see above). You can pause or resume it in claude.ai under Routines.
 3. **Paid API mode and the question box:** optional; see below.
 
 ### Question box ("Ask about the markets")
@@ -65,13 +73,14 @@ Optional variables: `ASK_MODEL` (default `claude-opus-5-5`) and `ASK_RATE_LIMIT`
 
 ### Cost
 
-The daily routine and the intelligence feed cost nothing beyond your Claude plan and GitHub's free Actions minutes. The routine counts toward your plan's usage limits. In paid API mode, each scan costs roughly $0.10–0.25 on the default model, and each question-box question about $0.02–0.06.
+The daily refresh runs on GitHub's free Actions minutes and costs nothing. The optional Claude routine counts toward your Claude plan's usage limits. In paid API mode, each scan costs roughly $0.10–0.25 on the default model, and each question-box question about $0.02–0.06.
 
 ## Local use
 
 ```bash
 npm ci
-node scripts/osint.mjs                  # intelligence feed only, no API key
+node scripts/osint.mjs                  # intelligence feed, no API key
+node scripts/rule-scan.mjs              # free keyword-rule scan, no API key
 DRY_RUN=1 npm run refresh               # fetch headlines only, no API call
 ANTHROPIC_API_KEY=... npm run refresh   # full scan, writes public/data/
 npm run serve                           # view the site locally

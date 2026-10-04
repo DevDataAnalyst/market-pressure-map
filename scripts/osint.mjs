@@ -48,7 +48,7 @@ const INDUSTRY_WORDS = [
   ["agrifood", /\b(wheat|grain|crop|fertili|food)/i],
 ];
 
-const ECONOMY_WORDS = [
+export const ECONOMY_WORDS = [
   ["us", /\b(united states|u\.s\.|\bus\b|washington|american|federal reserve|pentagon|white house)/i],
   ["china", /\b(china|chinese|beijing|xi jinping|hong kong)/i],
   ["eurozone", /\b(euro area|eurozone|\becb\b|european union|\beu\b|germany|german|france|french|italy|italian|spain|spanish|netherlands|brussels)/i],
@@ -62,9 +62,9 @@ const PLACES = ["Russia", "Ukraine", "Israel", "Gaza", "Lebanon", "Iran", "Iraq"
 
 const INTENSIFIER = /\b(killed|dead|deaths|escalat|invasion|blockade|seiz|shut|halt|collapse|default|emergency|record|surge|plunge|soar|nuclear|ban|closure|explosion)/i;
 // Raw source headlines can name firms; drop those rather than show company names.
-const COMPANY_MARKERS = /\b(Inc|Corp|Corporation|Ltd|LLC|plc|PLC|Holdings|N\.V\.)\b|\$[A-Z]{1,5}\b|\b(NYSE|NASDAQ|Nasdaq):/;
+export const COMPANY_MARKERS = /\b(Inc|Corp|Corporation|Ltd|LLC|plc|PLC|Holdings|N\.V\.)\b|\$[A-Z]{1,5}\b|\b(NYSE|NASDAQ|Nasdaq):/;
 // Best effort: the largest firms that most often appear in geopolitical and energy headlines.
-const COMPANY_NAMES = new RegExp("\\b(" + [
+export const COMPANY_NAMES = new RegExp("\\b(" + [
   "Aramco", "Sinopec", "PetroChina", "CNOOC", "Exxon", "ExxonMobil", "Chevron", "Shell", "BP", "TotalEnergies", "Equinor", "Eni", "Repsol", "Petrobras", "Pemex", "ADNOC", "QatarEnergy", "Occidental", "ConocoPhillips", "Halliburton", "Schlumberger", "SLB", "Gazprom", "Rosneft", "Lukoil", "Novatek", "Vitol", "Trafigura", "Glencore", "Gunvor",
   "Raytheon", "RTX", "Lockheed", "Northrop", "General Dynamics", "Boeing", "Airbus", "BAE Systems", "Rheinmetall", "Thales", "Anduril", "Palantir",
   "Maersk", "MSC", "CMA CGM", "Hapag-Lloyd", "COSCO", "FedEx", "UPS", "DHL",

@@ -1,9 +1,13 @@
-name: Daily intelligence feed
+name: Daily refresh
 
 on:
-  # Once a day, about 25 minutes before the Claude routine that scores the news.
+  # Once a day. GitHub sometimes delays or drops scheduled runs, so later times act as
+  # backups: each run skips itself if today's refresh is already done.
   schedule:
     - cron: "17 5 * * *"
+    - cron: "47 8 * * *"
+    - cron: "17 13 * * *"
+    - cron: "47 18 * * *"
   workflow_dispatch:
   # Code pushes refresh the feed too; data-only commits (the bot and the routine) don't.
   push:
@@ -30,14 +34,36 @@ jobs:
           node-version: 22
           cache: npm
 
-      - run: npm ci
+      - name: Check whether today's refresh already ran
+        id: due
+        run: |
+          node -e '
+            const today = new Date().toISOString().slice(0, 10);
+            const at = (f, k) => { try { return require(f)[k] || ""; } catch { return ""; } };
+            const done = at("./public/data/osint.json", "updatedAt").startsWith(today) && at("./public/data/scan.json", "scannedAt").startsWith(today);
+            const run = process.env.EVENT !== "schedule" || !done;
+            console.log(run ? "Refreshing." : "Already refreshed today; skipping.");
+            require("fs").appendFileSync(process.env.GITHUB_OUTPUT, `run=${run}\n`);
+          '
+        env:
+          EVENT: ${{ github.event_name }}
+
+      - if: steps.due.outputs.run == 'true'
+        run: npm ci
 
       - name: Collect open-source intelligence signals
+        if: steps.due.outputs.run == 'true'
         run: node scripts/osint.mjs
+
+      # Free scoring with keyword rules: no AI, no API key. Skips itself if the optional
+      # Claude routine already scored the news in the last 20 hours.
+      - name: Score the news with keyword rules
+        if: ${{ !cancelled() && steps.due.outputs.run == 'true' }}
+        run: node scripts/rule-scan.mjs
 
       # Paid API path, off by default. Set the repository variable SCAN_WITH_API=true to use it.
       - name: Scan news and score impact (API)
-        if: ${{ !cancelled() && vars.SCAN_WITH_API == 'true' }}
+        if: ${{ !cancelled() && steps.due.outputs.run == 'true' && vars.SCAN_WITH_API == 'true' }}
         run: node scripts/refresh.mjs
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -46,7 +72,7 @@ jobs:
 
       # Runs even if the scan failed, so the intelligence feed still publishes.
       - name: Commit the new data
-        if: ${{ !cancelled() }}
+        if: ${{ !cancelled() && steps.due.outputs.run == 'true' }}
         run: |
           git config user.name "news-scan-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -55,6 +81,6 @@ jobs:
             echo "No changes."
             exit 0
           fi
-          git commit -m "data: intelligence feed $(date -u +%Y-%m-%dT%H:%MZ)"
+          git commit -m "data: daily refresh $(date -u +%Y-%m-%dT%H:%MZ)"
           git pull --rebase origin main
           git push origin HEAD:main
