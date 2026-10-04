@@ -4,10 +4,11 @@
 // matching headlines into stories and writes scan.json and history.json via writeScan.
 //   node scripts/rule-scan.mjs            fetch headlines and write the scan
 //   node scripts/rule-scan.mjs file.json  score headlines from a file ([{title, link, source, published}]) instead
+//   DRY_RUN=1 prints the stories (and a GitHub run summary) without writing anything
 // Only headlines from the last 24 hours are scored; the story memory (memory.json) from earlier
 // days marks each story as new, ongoing or a reversal and adjusts its confidence and rank.
 // If the Claude routine already wrote a scan in the last 20 hours, this leaves it alone.
-import { readFile } from "node:fs/promises";
+import { appendFile, readFile } from "node:fs/promises";
 import { fetchFeed, titleKey, txt } from "./shared.mjs";
 import { COMPANY_MARKERS, COMPANY_NAMES } from "./osint.mjs";
 import { OSINT_PATH, SCAN_PATH, loadMemory, normalizeItems, writeScan } from "./scan-store.mjs";
@@ -638,6 +639,17 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   console.log(`${matched} unique headlines, ${items.length} stories after rule matching`);
   if (items.length < 6) {
     warn(`Only ${items.length} stories matched the rules; keeping the previous scan.`);
+    process.exit(0);
+  }
+  if (process.env.DRY_RUN) {
+    // Test mode: show the stories and their context labels, write nothing.
+    const label = (it) => it.summary.match(/(New in the last 24 hours|Ongoing:[^.]*|Turn:[^.]*)\./)?.[1] ?? "";
+    for (const it of items) console.log(`- [${it.confidence}] ${it.id}: ${it.headline} | ${label(it)}`);
+    if (process.env.GITHUB_STEP_SUMMARY) {
+      const esc = (t) => String(t).replace(/\|/g, "\\|");
+      const rows = items.map((it) => `| ${it.confidence} | ${esc(it.headline)} | ${esc(label(it))} |`);
+      await appendFile(process.env.GITHUB_STEP_SUMMARY, [`### Keyword-rule test scan (not committed)`, `${market.ok}/${SEARCHES.length} market searches ok, ${matched} unique headlines, ${items.length} stories.`, "", "| Confidence | Story | Context |", "|---|---|---|", ...rows, ""].join("\n"));
+    }
     process.exit(0);
   }
   // Keep Claude's assessments; only fill signals it hasn't assessed.

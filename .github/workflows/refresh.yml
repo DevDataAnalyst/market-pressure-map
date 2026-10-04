@@ -9,6 +9,11 @@ on:
     - cron: "17 13 * * *"
     - cron: "47 18 * * *"
   workflow_dispatch:
+    inputs:
+      test_rule_scan:
+        description: "Test only: score the last 24 hours with the keyword rules and show the stories in the run summary, without committing anything"
+        type: boolean
+        default: false
   # Code pushes refresh the feed too; data-only commits (the bot and the routine) don't.
   push:
     branches: [main]
@@ -34,7 +39,15 @@ jobs:
           node-version: 22
           cache: npm
 
+      - name: Test the keyword-rule scan (no commit)
+        if: ${{ inputs.test_rule_scan }}
+        run: npm ci && node scripts/rule-scan.mjs
+        env:
+          FORCE_RULE_SCAN: "1"
+          DRY_RUN: "1"
+
       - name: Check whether today's refresh already ran
+        if: ${{ !inputs.test_rule_scan }}
         id: due
         run: |
           node -e '
