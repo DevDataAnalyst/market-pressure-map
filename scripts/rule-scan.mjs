@@ -34,9 +34,9 @@ const SEARCHES = [
 const UP = /\b(rise[sn]?|rising|rose|jump(s|ed|ing)?|surg(e|es|ed|ing)|soar(s|ed|ing)?|climb(s|ed|ing)?|gain(s|ed)?|rall(y|ies|ied)|spik(e|es|ed)|higher|highs?|record high|tops?|top(ped)?|accelerat\w*|hotter|stronger|strengthen\w*|beat(s)?|boost(s|ed)?|rebound(s|ed)?|up \d|increase[sd]?|expand(s|ed|ing)?)\b/i;
 const DOWN = /\b(fall(s|ing)?|fell|drop(s|ped)?|slid(e|es)?|slump(s|ed)?|plung(e|es|ed)|tumbl(e|es|ed)|sink(s)?|sank|declin(e|es|ed|ing)|lower|lows?|weak(er|ens?|ened|ening)?|cool(s|ed|ing)?|eas(e|es|ed|ing)|slow(s|ed|ing|down)?|miss(es|ed)?|contract(s|ed|ion)?|shrink(s|ing)?|shr[au]nk|retreat(s|ed)?|down \d|decrease[sd]?|lowest|tumbling|sliding)\b/i;
 const INTENSE = /\b(surg|soar|plung|tumbl|record|spik|biggest|sharpest|crisis|collapse|shock|crash|slump)/i;
-const SPECULATIVE = /\b(could|may|might|expected to|forecast|predict|outlook|seen|eyes?|weighs?|considers?|mulls?|threatens?|warns?|if )\b/i;
+const SPECULATIVE = /\b(will|could|may|might|expected to|expects?|forecast|predict|outlook|seen|eyes?|weighs?|considers?|mulls?|threatens?|warns?|if )\b/i;
 // Opinion, explainers, how-tos and single-firm news aren't market-wide events.
-const SKIP = /\?|\b(opinion|explainer|what to know|how to|here's why|live updates|live:|podcast|video|watch:|newsletter|shares of|stock of|'s shares|earnings|quarterly results|q[1-4] results|ipo|ceo|top picks|stocks to buy)\b/i;
+const SKIP = /\?|^\d+ (trends|things|reasons|ways|stocks|charts)\b|\b(opinion|explainer|what to know|how to|here's why|live updates|live:|podcast|video|watch:|newsletter|shares of|stock of|'s shares|earnings|quarterly results|q[1-4] results|ipo|ceo|top picks|stocks to buy)\b/i;
 
 const dirOf = (t) => {
   const u = UP.test(t), d = DOWN.test(t);
@@ -62,7 +62,7 @@ const RULES = [
   {
     id: "rates", theme: "Monetary policy", horizon: "months", weight: 3, perEconomy: true,
     subject: /\b(Fed|Federal Reserve|FOMC|ECB|European Central Bank|Bank of England|BoE|Bank of Japan|BoJ|BOJ|RBI|Reserve Bank of India|PBOC|PBoC|People's Bank|central bank)\b/,
-    dir: (t) => /\b(hike[sd]?|hiking|rais(e|es|ed|ing) (interest )?rates?|tighten\w*|hawkish)\b/i.test(t) ? 1 : /\b(cut(s|ting)?|lower(s|ed|ing)? (interest )?rates?|eas(e|es|ed|ing)|dovish|rate reduction)\b/i.test(t) ? -1 : 0,
+    dir: (t) => /\b(hike[sd]?|hiking|rais(e|es|ed|ing) (interest )?rates?|tighten\w*|hawkish)\b/i.test(t) ? (/\b(dims?|dimm\w*|fad(e|es|ed|ing)|pare[sd]?|scal(e|es|ed) back|less likely|unwind\w*|cool(s|ed)?)\b/i.test(t) ? -1 : 1) : /\b(cut(s|ting)?|lower(s|ed|ing)? (interest )?rates?|eas(e|es|ed|ing)|dovish|rate reduction)\b/i.test(t) ? -1 : 0,
     up: {
       label: "tighter monetary policy",
       rationale: "Higher policy rates raise borrowing costs, cool demand and weigh on rate-sensitive sectors such as property and long-duration growth stocks, while lenders' margins widen.",
@@ -114,7 +114,7 @@ const RULES = [
     id: "chokepoints", theme: "Energy & geopolitics", horizon: "weeks", weight: 3,
     subject: /\b(Hormuz|Red Sea|Bab el|Bab al|Suez|Black Sea|Houthis?|tankers?|shipping lanes?|blockade)\b/i,
     gate: /\b(attack\w*|hit|struck|strikes?|seiz\w*|blockade|missile|drone|projectile|disrupt\w*|clos(e|ed|ure)|chokehold|threat\w*|war-risk|insurance|reroute\w*|halt\w*|plunge|zero|offensive|reopen\w*|resum\w*|recover\w*|ceasefire|truce|safe passage)\b/i,
-    dir: (t) => /\b(reopen\w*|resum\w*|recover\w*|ceasefire|truce|safe passage|eas(e|es|ed|ing))\b/i.test(t) ? -1 : 1,
+    dir: (t) => /\b(reopen\w*|resum\w*|recover\w*|ceasefire|truce|safe passage|eas(e|es|ed|ing))\b/i.test(t) && !/\b(doubts?|fail\w*|stall\w*|collaps\w*|no sign|despite)\b/i.test(t) ? -1 : 1,
     up: {
       label: "shipping chokepoint disruption",
       rationale: "Attacks and blockades on key sea lanes cut oil and gas flows, raise freight and war-risk insurance costs and lengthen voyages, feeding into energy prices and import costs for energy importers.",
@@ -401,6 +401,7 @@ function fxEvent(t) {
   const side = weak ? fx.weak : fx.strong;
   return {
     key: `fx-${fx.eco}-${weak ? "weak" : "strong"}`,
+    pair: `fx-${fx.eco}`,
     label: weak ? fx.weakLabel : fx.strongLabel,
     rationale: weak
       ? "A weaker currency raises import costs and imported inflation but makes exporters more competitive."
@@ -410,10 +411,14 @@ function fxEvent(t) {
   };
 }
 
-// Match one headline to the first rule that fits; returns one event per affected economy.
+// Match one headline to a rule; returns one event per affected economy. When several rules
+// fit, the one whose subject comes first in the headline wins ("Gold falls as markets await
+// US inflation data" is about gold). `pair` links opposite directions of the same event.
 function match(title) {
-  for (const r of RULES) {
-    if (!r.subject.test(title) || r.exclude?.test(title) || (r.gate && !r.gate.test(title))) continue;
+  const candidates = RULES.map((r, order) => ({ r, order, at: title.search(r.subject) }))
+    .filter(({ r, at }) => at >= 0 && !r.exclude?.test(title) && (!r.gate || r.gate.test(title)))
+    .sort((a, b) => a.at - b.at || a.order - b.order);
+  for (const { r } of candidates) {
     if (r.currency) {
       const e = fxEvent(title);
       if (e) return [{ rule: r, ...e }];
@@ -425,16 +430,17 @@ function match(title) {
     const dirName = d > 0 ? "up" : "down";
     const econs = econsOf(title);
     if (r.needsEconomy && !econs.length) continue;
+    const ev = (suffix, extra) => ({ rule: r, key: `${r.id}-${dirName}${suffix}`, pair: `${r.id}${suffix}`, ...side, ...extra });
     if (r.perEconomy && econs.length) {
       // For central banks, the bank decides which economy is meant.
       const target = r.id === "rates" ? econs.filter((e) => ["us", "eurozone", "uk", "japan", "india", "china"].includes(e)).slice(0, 1) : econs.slice(0, 2);
       if (!target.length) continue;
-      return target.map((e) => ({ rule: r, key: `${r.id}-${dirName}-${e}`, econ: e, ...side }));
+      return target.map((e) => ev(`-${e}`, { econ: e }));
     }
     // Trade rules name the economies involved; others use fixed exposures.
-    if (r.id === "tariffs" && econs.length) return [{ rule: r, key: `${r.id}-${dirName}-${econs.slice(0, 3).join("-")}`, econs: econs.slice(0, 3), ...side }];
+    if (r.id === "tariffs" && econs.length) return [ev(`-${econs.slice(0, 3).join("-")}`, { econs: econs.slice(0, 3) })];
     if (side.eco.$) continue;
-    return [{ rule: r, key: `${r.id}-${dirName}`, ...side }];
+    return [ev("", {})];
   }
   return [];
 }
@@ -525,6 +531,8 @@ export function score(headlines) {
     const where = ev.econ ? ` (${ECO_NAMES[ev.econ]})` : ev.econs ? ` (${ev.econs.map((e) => ECO_NAMES[e]).join(", ")})` : "";
     const sourceList = outlets.slice(0, 3).join(", ") + (outlets.length > 3 ? ` and ${outlets.length - 3} more` : "");
     return {
+      pair: ev.pair,
+      reports,
       weight: ev.rule.weight * Math.log2(1 + reports) * (speculative ? 0.6 : 1),
       item: {
         id: ev.key,
@@ -541,6 +549,20 @@ export function score(headlines) {
       },
     };
   });
+  // Opposite readings of the same event (oil up and oil down): keep the better-supported side
+  // and lower its confidence when the other side is close.
+  const byPair = new Map();
+  for (const st of stories) {
+    const other = byPair.get(st.pair);
+    if (!other) { byPair.set(st.pair, st); continue; }
+    const [win, lose] = st.reports > other.reports ? [st, other] : [other, st];
+    if (lose.reports * 2 >= win.reports) {
+      win.item.confidence = win.item.confidence === "high" ? "medium" : "low";
+      win.item.summary += ` Mixed: ${lose.reports} report${lose.reports === 1 ? " points" : "s point"} the other way.`;
+    }
+    byPair.set(st.pair, win);
+  }
+  stories.splice(0, stories.length, ...byPair.values());
   stories.sort((a, b) => b.weight - a.weight);
 
   // Rule-based assessments for intelligence signals the Claude routine hasn't assessed.
