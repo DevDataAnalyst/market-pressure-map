@@ -14,6 +14,10 @@ on:
         description: "Test only: score the last 24 hours with the keyword rules and show the stories in the run summary, without committing anything"
         type: boolean
         default: false
+      publish_rule_scan:
+        description: "Publish now: refresh the feed and score with the keyword rules, replacing today's scan even if the Claude routine wrote it"
+        type: boolean
+        default: false
   # Code pushes refresh the feed too; data-only commits (the bot and the routine) don't.
   push:
     branches: [main]
@@ -73,6 +77,8 @@ jobs:
       - name: Score the news with keyword rules
         if: ${{ !cancelled() && steps.due.outputs.run == 'true' }}
         run: node scripts/rule-scan.mjs
+        env:
+          FORCE_RULE_SCAN: ${{ inputs.publish_rule_scan && '1' || '' }}
 
       # Paid API path, off by default. Set the repository variable SCAN_WITH_API=true to use it.
       - name: Scan news and score impact (API)

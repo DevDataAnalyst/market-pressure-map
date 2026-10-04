@@ -17,7 +17,7 @@ The site refreshes once a day for free. There's no API key, no AI credit and not
    - The job commits the data.
 2. **Vercel** redeploys the static site on every push.
 
-Running it by hand: Actions → Daily refresh → Run workflow.
+Running it by hand: Actions → Daily refresh → Run workflow. Tick `publish_rule_scan` to replace today's scan with the keyword-rule scan even if the Claude routine wrote it, or `test_rule_scan` to preview the keyword-rule stories in the run summary without committing.
 
 ### Optional: Claude routine (richer write-ups)
 
