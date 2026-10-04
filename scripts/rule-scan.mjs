@@ -62,7 +62,7 @@ const RULES = [
   {
     id: "rates", theme: "Monetary policy", horizon: "months", weight: 3, perEconomy: true,
     subject: /\b(Fed|Federal Reserve|FOMC|ECB|European Central Bank|Bank of England|BoE|Bank of Japan|BoJ|BOJ|RBI|Reserve Bank of India|PBOC|PBoC|People's Bank|central bank)\b/,
-    dir: (t) => /\b(hike[sd]?|hiking|rais(e|es|ed|ing) (interest )?rates?|tighten\w*|hawkish)\b/i.test(t) ? (/\b(dims?|dimm\w*|fad(e|es|ed|ing)|pare[sd]?|scal(e|es|ed) back|less likely|unwind\w*|cool(s|ed)?)\b/i.test(t) ? -1 : 1) : /\b(cut(s|ting)?|lower(s|ed|ing)? (interest )?rates?|eas(e|es|ed|ing)|dovish|rate reduction)\b/i.test(t) ? -1 : 0,
+    dir: (t) => /\b(hike[sd]?|hiking|rais(e|es|ed|ing) (interest )?rates?|tighten\w*|hawkish)\b/i.test(t) ? (/\b(dims?|dimm\w*|fad(e|es|ed|ing)|pare[sd]?|scal(e|es|ed) back|less likely|unwind\w*|cool(s|ed)?|cut(s)? (the )?odds|lower(s|ed)? (the )?odds)\b/i.test(t) ? -1 : 1) : /\b(cut(s|ting)?|lower(s|ed|ing)? (interest )?rates?|eas(e|es|ed|ing)|dovish|rate reduction)\b/i.test(t) ? -1 : 0,
     up: {
       label: "tighter monetary policy",
       rationale: "Higher policy rates raise borrowing costs, cool demand and weigh on rate-sensitive sectors such as property and long-duration growth stocks, while lenders' margins widen.",
@@ -167,7 +167,7 @@ const RULES = [
   {
     id: "inflation", theme: "Growth data", horizon: "weeks", weight: 2, perEconomy: true, needsEconomy: true,
     subject: /\b(inflation|CPI|consumer prices|price growth|core prices)\b/i,
-    dir: (t) => /\b(hotter|above (expectations|forecast)|sticky|unexpectedly (rose|rises|higher))\b/i.test(t) ? 1 : /\b(cooler|below (expectations|forecast)|slow(s|ed)|eas(e|es|ed))\b/i.test(t) ? -1 : dirOf(t),
+    dir: (t) => /\b(hotter|above (expectations|forecast)|sticky|unexpectedly (rose|rises|higher))\b/i.test(t) ? 1 : /\b(cooler|soft(er)?|below (expectations|forecast)|(less|slower) than (expected|forecast)|slow(s|ed)|eas(e|es|ed))\b/i.test(t) ? -1 : dirOf(t),
     up: {
       label: "firmer inflation",
       rationale: "Faster inflation erodes real incomes and makes rate cuts less likely or hikes more likely, weighing on spending and rate-sensitive sectors.",
