@@ -101,5 +101,6 @@ jobs:
             exit 0
           fi
           git commit -m "data: daily refresh $(date -u +%Y-%m-%dT%H:%MZ)"
-          git pull --rebase origin main
+          # Data files are regenerated wholesale; if another run pushed meanwhile, keep this run's newer data.
+          git pull --rebase -X theirs origin main
           git push origin HEAD:main
