@@ -1,638 +1,714 @@
 {
- "scannedAt": "2026-10-03T05:45:25.453Z",
- "window": "1 Oct – 2 Oct 2026",
- "model": "Claude daily routine",
- "headlinesScanned": null,
- "feedsOk": null,
+ "scannedAt": "2026-10-04T04:27:19.993Z",
+ "window": "3 Oct – 4 Oct 2026",
+ "model": "Keyword rules (no AI)",
+ "headlinesScanned": 769,
+ "feedsOk": 12,
  "items": [
   {
-   "id": "us-payrolls",
-   "date": "2026-10-02",
-   "theme": "Growth data",
-   "headline": "US payrolls rise just 29,000 in September; unemployment ticks up to 4.2%",
-   "summary": "September nonfarm payrolls grew 29,000, far below forecasts above 80,000, with the two prior months revised down and unemployment rising to 4.2%.",
-   "rationale": "A cooling labour market eases pressure for more Fed tightening, pulling yields lower and supporting rate-sensitive sectors, while hinting at softer consumer demand ahead.",
-   "horizon": "weeks",
-   "confidence": "high",
-   "industries": [
-    {
-     "id": "realestate",
-     "score": 1,
-     "why": "Lower yields ease mortgage-rate pressure"
-    },
-    {
-     "id": "tech",
-     "score": 1,
-     "why": "Long-duration growth shares gain as yields fall"
-    },
-    {
-     "id": "consumer",
-     "score": -1,
-     "why": "Weaker hiring signals slower spending"
-    },
-    {
-     "id": "financials",
-     "score": -1,
-     "why": "Softer loan demand, flatter rate outlook"
-    }
-   ],
-   "economies": [
-    {
-     "id": "us",
-     "score": -1,
-     "why": "Hiring stalls as labour market cools"
-    }
-   ],
-   "sources": [
-    "https://www.cnbc.com/2026/10/02/fed-rate-hike-odds-decline-after-september-jobs-report.html",
-    "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-02-2026"
-   ]
-  },
-  {
-   "id": "fed-hike-odds",
-   "date": "2026-10-02",
-   "theme": "Monetary policy",
-   "headline": "Odds of an October Fed hike fall to about 17% from near 70% a week earlier",
-   "summary": "After the jobs data, CME FedWatch put an October quarter-point hike at about 17%; prediction markets fell to 18% from almost 70%. A December hike is still priced. The Fed meets October 27–28.",
-   "rationale": "A paused hiking cycle lowers short-term funding costs and supports equities, but December pricing keeps financing conditions tight into year-end.",
-   "horizon": "weeks",
-   "confidence": "medium",
-   "industries": [
-    {
-     "id": "realestate",
-     "score": 1,
-     "why": "Near-term hike risk recedes"
-    },
-    {
-     "id": "tech",
-     "score": 1,
-     "why": "Growth valuations helped by lower rate path"
-    },
-    {
-     "id": "industrials",
-     "score": 1,
-     "why": "Capex financing outlook improves slightly"
-    }
-   ],
-   "economies": [
-    {
-     "id": "us",
-     "score": 1,
-     "why": "Easier near-term policy path"
-    },
-    {
-     "id": "india",
-     "score": 1,
-     "why": "Less pressure from a stronger dollar"
-    }
-   ],
-   "sources": [
-    "https://www.cnbc.com/2026/10/02/fed-rate-hike-odds-decline-after-september-jobs-report.html"
-   ]
-  },
-  {
-   "id": "treasuries-swing",
-   "date": "2026-10-02",
-   "theme": "Rates & bonds",
-   "headline": "US 10-year yield dips to about 5.18% after jobs data before rebounding with oil",
-   "summary": "Treasury yields fell after the weak payrolls report, the 10-year touching about 5.18%, then rose again as oil climbed; the 30-year hovered near 5.63%.",
-   "rationale": "Yields above 5% keep borrowing costs high across mortgages, corporate debt and emerging markets; volatility tied to oil makes the inflation-versus-growth trade-off harder to price.",
-   "horizon": "weeks",
-   "confidence": "medium",
-   "industries": [
-    {
-     "id": "realestate",
-     "score": -2,
-     "why": "Long rates stay above 5%"
-    },
-    {
-     "id": "financials",
-     "score": 1,
-     "why": "Higher yields support lending margins"
-    },
-    {
-     "id": "industrials",
-     "score": -1,
-     "why": "Costly debt weighs on capex"
-    }
-   ],
-   "economies": [
-    {
-     "id": "us",
-     "score": -1,
-     "why": "Tight financial conditions persist"
-    },
-    {
-     "id": "india",
-     "score": -1,
-     "why": "High US yields pressure capital flows"
-    }
-   ],
-   "sources": [
-    "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-02-2026"
-   ]
-  },
-  {
-   "id": "euro-inflation",
-   "date": "2026-10-02",
-   "theme": "Monetary policy",
-   "headline": "Euro-area inflation jumps to 3.8% in September, highest since 2023, on energy costs",
-   "summary": "Eurostat's flash estimate showed inflation at 3.8% from 3.2%, above the 3.6% forecast. Energy prices rose 18.8% on the year; core inflation edged up to 2.5%. The ECB hiked on 10 September.",
-   "rationale": "Energy-led inflation strengthens the case for another ECB hike, raising borrowing costs while squeezing household real incomes and energy-intensive manufacturers.",
-   "horizon": "weeks",
-   "confidence": "high",
-   "industries": [
-    {
-     "id": "consumer",
-     "score": -2,
-     "why": "Energy bills squeeze household budgets"
-    },
-    {
-     "id": "industrials",
-     "score": -1,
-     "why": "Energy costs and higher rates hit factories"
-    },
-    {
-     "id": "realestate",
-     "score": -1,
-     "why": "Further ECB tightening priced in"
-    },
-    {
-     "id": "financials",
-     "score": 1,
-     "why": "Higher rates lift bank margins"
-    }
-   ],
-   "economies": [
-    {
-     "id": "eurozone",
-     "score": -2,
-     "why": "Stagflation risk as energy inflation spikes"
-    }
-   ],
-   "sources": [
-    "https://ec.europa.eu/eurostat/web/products-euro-indicators/w/2-02102026-ap",
-    "https://www.cnbc.com/2026/10/02/eurozone-inflation-ecb.html"
-   ]
-  },
-  {
-   "id": "hormuz-attacks",
-   "date": "2026-10-02",
+   "id": "chokepoints-up",
+   "date": "2026-10-04",
    "theme": "Energy & geopolitics",
-   "headline": "Iran attacks on Hormuz shipping reach about 40 a week; tankers hit, US weighs escorts",
-   "summary": "Reports count roughly 40 drone and missile attacks a week on commercial ships; three tankers were attacked and one set ablaze. Washington says naval escorts with a coalition are possible and is sending a third carrier group.",
-   "rationale": "Attacks raise freight and insurance costs and keep a risk premium in crude and LNG, hurting energy importers while lifting producers outside the Gulf.",
+   "headline": "Five Indians rescued after tanker hit in Strait of Hormuz",
+   "summary": "Signal: shipping chokepoint disruption. 33 reports from Latin Times, EnergyNow.com, t.co and 19 more. Related: “Hegseth says US blockade of Strait of Hormuz ‘ironclad’”.",
+   "rationale": "Attacks and blockades on key sea lanes cut oil and gas flows, raise freight and war-risk insurance costs and lengthen voyages, feeding into energy prices and import costs for energy importers.",
    "horizon": "weeks",
    "confidence": "high",
    "industries": [
     {
      "id": "energy",
-     "score": 2,
-     "why": "Supply risk premium lifts producers"
+     "score": 3,
+     "why": "Supply risk lifts oil and gas prices"
     },
     {
      "id": "transport",
-     "score": -2,
-     "why": "War-risk insurance and rerouting costs"
+     "score": -3,
+     "why": "Rerouting, insurance and fuel costs"
     },
     {
-     "id": "autos",
+     "id": "consumer",
      "score": -1,
-     "why": "Fuel costs dampen demand"
+     "why": "Costlier imported goods"
     },
     {
-     "id": "materials",
+     "id": "industrials",
      "score": -1,
-     "why": "Higher energy inputs for smelters, chemicals"
+     "why": "Delayed parts and higher input costs"
     }
    ],
    "economies": [
     {
-     "id": "gulf",
-     "score": -2,
-     "why": "Shipping lanes under direct attack"
-    },
-    {
      "id": "india",
-     "score": -2,
-     "why": "Large crude importer exposed to Gulf"
+     "score": -3,
+     "why": "Large oil and gas import bill"
     },
     {
      "id": "japan",
-     "score": -2,
-     "why": "Heavy dependence on Gulf oil"
+     "score": -1,
+     "why": "Imports most of its energy"
+    },
+    {
+     "id": "eurozone",
+     "score": -1,
+     "why": "Energy and shipping costs rise"
     },
     {
      "id": "china",
      "score": -1,
-     "why": "Major importer of Gulf crude"
+     "why": "Biggest crude importer"
+    },
+    {
+     "id": "gulf",
+     "score": -1,
+     "why": "Export routes under threat"
     }
    ],
    "sources": [
-    "https://news.google.com/rss/articles/CBMirgFBVV95cUxOekI2Nl9ocmZSZ2JjdzRZQTRlcmpuU3gzdU16VS1SSE1Fd0RvdlY0VlNZNXZDcmtkaVc3YlRqUHg4MlRRN0lOaTFrSG1yLXRkX2h3dFpBa2I3UEdGSmxRLW5yQndfcnM0ei01RUFRMFZLVXB2VllVRnNtN19OWUpHOXJ0V2RxTXlhQlQ4SWpaT0FZemwxd2lBYVRMY2luZXB5bDZJckVUdXM3cm9iNmc?oc=5",
-    "https://news.google.com/rss/articles/CBMidkFVX3lxTFBDTTBYVmdGZ0xMWmduY2ozaURqc3E2cHFHVlktdl9QSllqZWVjQ2J2UVlDWjRMcVlzM1pHbGI5Q294cUV5eURuTlZxWEhHRWVVbFZBaTV0dkNjNTVYaWh4bEFkMkh1VWd0ZFVneVJhemNfM29OekE?oc=5",
-    "https://news.google.com/rss/articles/CBMivAFBVV95cUxPdjlfUFpwQnBfdTBoUFlJR2l3TkdLRmdITnNPRWFTV2N0ek1VSU1NT1E0aTlXYWE1dWFaSFcyZV9HMG1KRkEtUHd1TFRSdEQxT2dFX1pzak83cERRal9oWFhONFpocEJkbkxCdG5UdHlSM2R2akdTQ1c2OU5jVUhfb3llUGpiNFlTbHJNZGdJaHAzeVlObGhCem1PUjF0TTBMV1hMZEJjZXQzOUNmNS1YMW9haENsdU5oeXpIZw?oc=5"
+    "https://news.google.com/rss/articles/CBMioAFBVV95cUxPWXVoSDNTa0NoamRnck9ZU0hxMGlFSFlLSnVqVGVMOUNwc1FrNlp2YktISTVaVElZRWtZQnA0RnR0RDBQT1NETElva3lZYThtT0I3WGhIUDdwSGxLVnNTdDVSRkdLQk9mR1plLXJSODhFUzlNVlVpZTRxUV92dHRRZmtObnltQVY5eFJWZUl1N2JKaGdTTy1tM0VpV3RDS0ta?oc=5",
+    "https://news.google.com/rss/articles/CBMioAFBVV95cUxNVGU4NnBiNEotamlDUDlDZXBiLXBsWnF5S2hxb3RadWxiTjFvWTYtUVJXalI5Wmk2RS0xM3FuRXMxQ2liNy11XzhiN0c3SU5TZDVDUzZrZTJWUEdVU0dKb21kR2tUMkpvcUZBLXp3bEo4MnhzYjJraUthNU5Nb3A3Yk1xQWVsbWx6VnRqWGlILXpkVEFPZ0ZLWUVORjhyVXVE?oc=5",
+    "https://news.google.com/rss/articles/CBMiogFBVV95cUxPWVowV3NGYnh0SkhtMUNvSEpqd2RTN2hrbjF2VndZUjJ1UDZQeEJSS1d2Wlpfc3NTci1ySk9uYTdGSERONVJubWZUTWJMbWk5OElaQll1TDBnLUxjTG9odzJ0NGt2Z1MxRlhSMHMtc19nNUlWSXF1MTNHMzUyOGpwVTJ4Q2gwV21uRmE5N0FRZDlFYVVyeW0xNHFFRWIwbUtseFE?oc=5"
    ]
   },
   {
-   "id": "oil-price",
-   "date": "2026-10-02",
+   "id": "oil-up",
+   "date": "2026-10-04",
    "theme": "Commodities",
-   "headline": "Brent swings between about $100 and $103 a barrel as Gulf tensions persist",
-   "summary": "Brent traded near $103 in the morning before settling around $99.68, down 2.6% on the day, after earlier jumping 5% on escalating attacks on Gulf shipping.",
-   "rationale": "Crude near $100 feeds into fuel, freight and headline inflation, pressuring central banks and importers while supporting producer revenues.",
+   "headline": "Markets are showing signs of weakness amid caution over rising crude oil prices and yen buying.",
+   "summary": "Signal: higher oil prices. 16 reports from ABC News - Breaking News, Latest News and Videos, EnergyNow.com, Stocktwits and 6 more. Related: “US futures mixed with Brent crude bouncing back above $100 a barrel and bond yields soaring”.",
+   "rationale": "Dearer crude lifts producers' revenue but raises fuel and input costs for transport, manufacturing and households, widening trade deficits in big importers.",
    "horizon": "weeks",
-   "confidence": "medium",
+   "confidence": "high",
    "industries": [
     {
      "id": "energy",
-     "score": 2,
-     "why": "Prices near $100 support revenues"
+     "score": 3,
+     "why": "Higher realised prices for producers"
     },
     {
      "id": "transport",
-     "score": -2,
-     "why": "Jet and bunker fuel costs elevated"
+     "score": -3,
+     "why": "Fuel is a top cost for carriers"
+    },
+    {
+     "id": "autos",
+     "score": -1,
+     "why": "Fuel costs dent vehicle demand"
     },
     {
      "id": "consumer",
      "score": -1,
-     "why": "Fuel costs erode spending power"
-    },
-    {
-     "id": "agrifood",
-     "score": -1,
-     "why": "Diesel and fertiliser costs rise"
+     "why": "Less money for other spending"
     }
    ],
    "economies": [
     {
      "id": "gulf",
-     "score": 1,
-     "why": "Higher prices for non-blockaded exporters"
+     "score": 3,
+     "why": "Export revenue rises"
     },
     {
      "id": "india",
-     "score": -2,
-     "why": "Import bill and rupee pressure"
-    },
-    {
-     "id": "eurozone",
-     "score": -1,
-     "why": "Energy inflation already 18.8%"
+     "score": -3,
+     "why": "Imports most of its oil"
     },
     {
      "id": "japan",
      "score": -1,
-     "why": "Imported inflation, weak yen"
-    }
-   ],
-   "sources": [
-    "https://tradingeconomics.com/commodity/brent-crude-oil",
-    "https://fortune.com/article/price-of-oil-10-02-2026/"
-   ]
-  },
-  {
-   "id": "iran-sanctions",
-   "date": "2026-10-02",
-   "theme": "Trade",
-   "headline": "US sanctions Iran's auto, rail and shadow banking networks as oil loadings hit zero",
-   "summary": "The US Treasury's new action targets Iran's auto and rail sectors and a Russia-linked shadow banking network. Iran's tanker loadings fell to zero for the first time in the war under the US blockade at Kharg Island.",
-   "rationale": "Removing Iranian barrels tightens supply further and raises enforcement risk for banks and traders handling sanctioned flows, notably in China.",
-   "horizon": "months",
-   "confidence": "medium",
-   "industries": [
-    {
-     "id": "energy",
-     "score": 1,
-     "why": "Iranian supply removed from market"
-    },
-    {
-     "id": "financials",
-     "score": -1,
-     "why": "Secondary-sanction compliance risk"
-    },
-    {
-     "id": "transport",
-     "score": -1,
-     "why": "Fewer cargoes, shadow-fleet scrutiny"
-    }
-   ],
-   "economies": [
-    {
-     "id": "china",
-     "score": -1,
-     "why": "Main buyer of Iranian crude"
-    },
-    {
-     "id": "gulf",
-     "score": -1,
-     "why": "Regional escalation risk"
-    }
-   ],
-   "sources": [
-    "https://news.google.com/rss/articles/CBMizwFBVV95cUxOMGQ5cWhPbnlFT0hFQU1VME1qVVB2SndmZVROdUpzUU1sVGxRcDZndDN0R1BwdGVXRThreEJhTnV4WWQzZ19xUjlqZ3hqWjBWSEJWQ1JtcExJNVVRTG95UHQ1RjFsc21pbWQ4Q3c3dnhvYWZXUF9uNmQ0UHhWT1pJRXg3Yk42b0dOS0FJVmNsbGJLeFZTQkNKcW5ocVZVSzBlS2tnSnRpM044NEhMZW1FMG94N1U2dW1fUXJkbng1clJZSHpaZVVGLXFyeDBYcXM?oc=5",
-    "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPSUE0T2hudGlRMlZpMGNyNENKTGRMMHVZTWxTOVNmb2NjdTVhSThYTU01eDg1eExOM3ZPelVBWGhCMUJ0ZVBUUzBzeTRsay05VmJaal8xdUNvX0hEaFBaYzMwbzQ4VHBPV01HRzJ4ckRZczlMV2ktTnRWVVJVM2FkYWF5RVhsLV85VUczS1RHMkg4dldxRWJYUjhYcnpOTHF4MTQyMzRKc184bVpCRVk2NWZQUUQ3VTduZ2hEQnVZWGZKWG1CbjZyWFZ0TWhHRXFCMHI5akJOeVd4cy0wNE1sOWlfUUhaZ3o2MXc?oc=5",
-    "https://ofac.treasury.gov/recent-actions"
-   ]
-  },
-  {
-   "id": "hormuz-flows",
-   "date": "2026-10-02",
-   "theme": "Energy & geopolitics",
-   "headline": "September LNG transits through Hormuz hit wartime high; crude exports near pre-war levels",
-   "summary": "LNG shipments through the strait in September were the highest since the US-Iran war began, and crude exports have largely returned to pre-war levels. The US energy secretary says traffic is rising meaningfully.",
-   "rationale": "Recovering volumes cap the supply shock and limit how far prices can spike, offsetting some of the attack-driven risk premium.",
-   "horizon": "weeks",
-   "confidence": "medium",
-   "industries": [
-    {
-     "id": "energy",
-     "score": -1,
-     "why": "More supply caps price upside"
-    },
-    {
-     "id": "materials",
-     "score": 1,
-     "why": "Gas feedstock availability improves"
-    },
-    {
-     "id": "transport",
-     "score": 1,
-     "why": "Tanker traffic recovers"
-    }
-   ],
-   "economies": [
-    {
-     "id": "japan",
-     "score": 1,
-     "why": "LNG supply concerns ease"
-    },
-    {
-     "id": "gulf",
-     "score": 1,
-     "why": "Export volumes recovering"
+     "why": "Higher import bill"
     },
     {
      "id": "eurozone",
-     "score": 1,
-     "why": "Gas supply relief"
-    }
-   ],
-   "sources": [
-    "https://news.google.com/rss/articles/CBMixAFBVV95cUxOV2hrU0N6b3dJbmV3dlJBZVVhbVl5cl9VcC1aNE1TRDhiS2FuZDY0V2xDMGtYUklNQ2MxODZqam5XdVhmek00dllQUnVyUUdNQUx2N0hWREJlUjJ3MWQ5N1hnbGJkdnBKNkJMV2NiT3JpYzhQQVpKOUk2cFF4TEJodnBZUmxfRnMyTHpTTWp6RE10dUdjSHU5eWhOVnNwMkx6VUU0OWJBVGZ0TVR6Tm5hWWVTZlZrU29uR3Y2OVRoMTNxWldU?oc=5",
-    "https://news.google.com/rss/articles/CBMisgFBVV95cUxQcGNCX0VlMWRST1A0YVJxWVlHTGI2VGE2UUtRZXpnTTMwQW0zWmpDakdpTUI3ZFcwd0VLQ0xMemFfRkg1VkdjUGh1YUppeVNTdkZSbFVPX3lhMjZSR3ZITVJObHRJdC0ycklwUmF2d042VU5UeHlWWm1KNVJuVUQ4VW9PNHpfZHVRRW5iMzRiekdxWWhmWE42R011RXF6SjZUZktEdjZQZVdObkJXbVZqSlR3?oc=5",
-    "https://news.google.com/rss/articles/CBMiugFBVV95cUxPSVZ2Qlk5YUt5TmVVMjMwOVhzTy1tdzlTSTcyVlVvMkp3dktodzI0dEpaWm5DSzB6ODY3anFTLXdEeTNOWTcwNmZKc25wYnI4cG9OczNZZ2NfbDJfSUZEbkV1VzFMNmdHYjNfZU9nWURQamw5LVhTYnJlbEJhOS1UOXh0ekVwUEFqc1ViRVN3N3ExeEliSzhvVjNPQUg0a0RBM2tXeFBNbUEyVEV5S1RLRHpZa0p1ejROdEE?oc=5"
-   ]
-  },
-  {
-   "id": "china-package",
-   "date": "2026-10-01",
-   "theme": "Monetary policy",
-   "headline": "China adds rate cuts and 700 billion yuan of extra relending in modest growth package",
-   "summary": "The PBoC and regulators unveiled rate cuts, a 200 billion yuan rise in tech relending to 1.4 trillion and 500 billion more for farm and small-business relending, plus mortgage interest subsidies. Analysts call it modest.",
-   "rationale": "Targeted credit supports infrastructure, computing and property demand at the margin, but its limited size caps the boost to commodity demand and global growth.",
-   "horizon": "months",
-   "confidence": "medium",
-   "industries": [
-    {
-     "id": "materials",
-     "score": 1,
-     "why": "Infrastructure lending supports metals demand"
+     "score": -1,
+     "why": "Energy importer"
     },
-    {
-     "id": "realestate",
-     "score": 1,
-     "why": "Mortgage subsidies aid housing"
-    },
-    {
-     "id": "tech",
-     "score": 1,
-     "why": "Bigger relending quota for technology"
-    }
-   ],
-   "economies": [
     {
      "id": "china",
-     "score": 1,
-     "why": "Incremental support to growth"
+     "score": -1,
+     "why": "Biggest crude importer"
     }
    ],
    "sources": [
-    "https://news.cgtn.com/news/2026-10-01/China-s-new-policy-package-signals-stronger-support-for-growth-1QSScYpCUKs/share_amp.html",
-    "https://finance.yahoo.com/economy/policy/articles/more-aggressive-china-stimulus-unlikely-043351964.html"
+    "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNaGVLZXhjUlBIUm5GaDRGTWRaTEp4M3JsZHkyYWdNY2gxOWFzRzB4UkN5Z0xucHloYzBIUW15UjVHTTVtMHdUNlJhb1AtVi1WNjdkX2lENHVGTllYZzIydFc1VU4yUjJYM3ZuMUNaVGFNbFBPY1ZiUVhzLVpiN1Q3LWdWN3ZyelVUQVpLRnRwbzg3Q3NWcXFwcmpGX19QcUp0LU5MX1kwd280QQ?oc=5",
+    "https://news.google.com/rss/articles/CBMinwFBVV95cUxPQURVSkpXZjYzT2t4SWpXOUpSWmVUS0JqTGFuRmVLZlFOWWl4QjYzY3hDUEI5bEJORjFtc3czRHR0YlpPMnotS19taWt5c2o3RTV1LUJqZG13SGEzRGJEb2ZSeFN3Ml9qaTlzRVJTZDd5anhyR2d0X0F5UzJuOUl0dDhWT25OekdPUm9pdGNjWFFtOXlQa2ZodnRnRW1mZU3SAaQBQVVfeXFMUHpibjI0OE5jQ0lLTHlCSkF6cHlPZWkzZFZxbzN1LWo4X1lTZWJ3ZWNtREo1b3ViSTNFcFFadTluUG9LWmI2Ung0YkY3WExSaVJleldmLWJybFJrQ25QcDFfWW9qb2JsQ3pqMENKd1RrcXZNR0xTWTE0aEhaWGdnQTdMX0h2VlExazlFazl5M1NuVi1MU2NRb1phcjFxMXljcVR0NHE?oc=5",
+    "https://news.google.com/rss/articles/CBMiogFBVV95cUxNUVhJbWVUWWgzNzJUUFBJT3pCZ3U2QzVoSUVVOEZKeTAtY01fSW5UYnhaUEtxaGlXTVFrTkZuWGgzQVFCQkNYbUlDcWpfUXZuamFrWjAzcFYyeGRtYW5kZTVyUC04d0oxYi1CckVkNHA2RnMtTEd3ZHpMaDQ3RUVqeEJ5MXkwczV1TW9PNDVtV2Z3WmF2SnBhNW45d0xMYThKNlHSAacBQVVfeXFMTl9VamxWd3BnM2NYd1VNeHVkbGpMNldFX2s1dllsR2xCZE9SdFdaa0FmZndEQ0xhRjVzWDFEU3VHZlo0WWNTTmYwYm9oSnVzQVExcmdVdFpQc3pxN3ZLbDZoM1RHZjJaUFIzVkpvNi1oci1XaXpCMmhYeUJKNHl6amJUWjFfWGlYc2xtZUNQbTRqRW8zWVJyQ0EwLVh3UTlqSDJXelhpQ1k?oc=5"
    ]
   },
   {
-   "id": "japan-tankan",
-   "date": "2026-10-01",
-   "theme": "Currencies",
-   "headline": "Japan's large-manufacturer Tankan rises to 24 while yen weakens to about 158 per dollar",
-   "summary": "The BoJ Tankan showed large manufacturers' sentiment at 24 from 22, but large non-manufacturers fell to 35 from 37. The yen hovered near 158.3, about four yen weaker than firms budgeted.",
-   "rationale": "Firm sentiment and a weak yen keep another BoJ hike possible, while the softer yen lifts exporters' earnings and raises import costs for energy.",
+   "id": "oil-down",
+   "date": "2026-10-03",
+   "theme": "Commodities",
+   "headline": "Trump Says Iran War Will End \"Very Soon\", Oil Prices Will Plunge",
+   "summary": "Signal: lower oil prices. 13 reports from EnergyNow.com, News Radio 1200 WOAI, Energies Media and 8 more. Related: “Brent crude falls below $100 as Saudi Arabia restarts East-West pipeline after drone attack shutdown”.",
+   "rationale": "Cheaper crude cuts producers' revenue but lowers fuel and input costs, easing inflation and trade deficits in big importers.",
    "horizon": "weeks",
-   "confidence": "medium",
+   "confidence": "high",
    "industries": [
     {
-     "id": "autos",
-     "score": 1,
-     "why": "Weak yen boosts exporters' profits"
+     "id": "energy",
+     "score": -3,
+     "why": "Lower realised prices"
     },
     {
-     "id": "industrials",
-     "score": 1,
-     "why": "Manufacturer confidence improving"
+     "id": "transport",
+     "score": 3,
+     "why": "Fuel bills fall"
     },
     {
      "id": "consumer",
-     "score": -1,
-     "why": "Services sentiment weakens, import costs rise"
+     "score": 1,
+     "why": "More money for other spending"
+    },
+    {
+     "id": "autos",
+     "score": 1,
+     "why": "Cheaper running costs"
     }
    ],
    "economies": [
     {
+     "id": "gulf",
+     "score": -3,
+     "why": "Export revenue falls"
+    },
+    {
+     "id": "india",
+     "score": 3,
+     "why": "Oil import bill shrinks"
+    },
+    {
      "id": "japan",
      "score": 1,
-     "why": "Manufacturing resilient despite rate hike"
+     "why": "Lower import bill"
+    },
+    {
+     "id": "eurozone",
+     "score": 1,
+     "why": "Energy costs ease"
+    },
+    {
+     "id": "china",
+     "score": 1,
+     "why": "Cheaper crude imports"
     }
    ],
    "sources": [
-    "https://www.boj.or.jp/en/statistics/tk/yoshi/tk2609.htm",
-    "https://www.ebc.com/forex/usd-jpy-158-japan-tankan-boj"
+    "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQUXg4RWxLUVhNUk95Y0h4cEJqY1ZZckV2bnp5cjBYRHhXQW0zcGdOQTVkdjJiMXVpcHBwdHhSMnBRY0FTWjFFUzZ3R28yWXRkRnpVVG45REdCdkdYVEFPOTVLeS1Za2hIaTcwU0kzTHROMTlUdGI1VGZDZEhINFpZYTNiTlhRUVR4MDBXWkdxZnRORUViUWRaVERzSkdWZ1h6SE4zMV9lbVNLSHFJLUNuem1wX0pwdHhqOXE2LWZmU05EdmFtcEs4QUJ6OG9EX2RNVWtkbg?oc=5",
+    "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1ENDB0VWZubS1EVlF1MzBIR1lLWkpSdGx6cVBKN2Z4Zll5b0hnWmJpRGlQNzZPYVdFTFc4YmZ3WXl2am1Wa1htczkyTDRmTmZRaFZVR0FTTWk1RXB3N3N3TVFrZXRJdw?oc=5",
+    "https://news.google.com/rss/articles/CBMimgFBVV95cUxOSWlSQ0JySWhtckl3S01IdjNPcndoTTVOUWVSRmRXLWw2b1U3R3hZeTdwcFM4S1pxNnRVa2dPMXV5Vk9SZWNXaEsyWVYtd2hTZkNBXy1SbjRiaFRFT2cxekVUbTZFXzY1LXJEMXA2WkNVdXhMVnBzbGdNSllPdjlmcS1DMzZTQmo1bDl3dGJIWFhDUzhtUDN1bEV3?oc=5"
    ]
   },
   {
-   "id": "rbi-hike",
-   "date": "2026-10-02",
+   "id": "rates-up-us",
+   "date": "2026-10-04",
    "theme": "Monetary policy",
-   "headline": "Economists expect RBI to raise repo rate to 5.5% on October 7 as rupee hovers near 96",
-   "summary": "The RBI policy committee meets October 5–7. Economists expect a 25-basis-point hike from 5.25% after CPI inflation rose to 4.82% in August and the rupee slipped to about 96.1 per dollar.",
-   "rationale": "Higher Indian rates aim to defend the rupee against oil-driven import costs, but raise borrowing costs for households and companies.",
-   "horizon": "weeks",
-   "confidence": "medium",
+   "headline": "Gold Gains As Softer US Inflation Dims October Fed Hike Bets",
+   "summary": "Signal: tighter monetary policy (US). 8 reports from Washington Examiner, Business Standard, parameter.io and 5 more. Related: “Fed, ECB minutes to show inflation fears as near-term rate hike bets fade”.",
+   "rationale": "Higher policy rates raise borrowing costs, cool demand and weigh on rate-sensitive sectors such as property and long-duration growth stocks, while lenders' margins widen.",
+   "horizon": "months",
+   "confidence": "high",
    "industries": [
     {
      "id": "realestate",
-     "score": -1,
-     "why": "Higher home-loan rates"
-    },
-    {
-     "id": "autos",
-     "score": -1,
-     "why": "Costlier vehicle financing"
+     "score": -3,
+     "why": "Higher mortgage and funding costs"
     },
     {
      "id": "financials",
      "score": 1,
      "why": "Wider lending margins"
+    },
+    {
+     "id": "tech",
+     "score": -1,
+     "why": "Higher discount rates hit valuations"
+    },
+    {
+     "id": "consumer",
+     "score": -1,
+     "why": "Dearer credit squeezes spending"
+    }
+   ],
+   "economies": [
+    {
+     "id": "us",
+     "score": -1,
+     "why": "Tighter policy slows growth"
+    }
+   ],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMipwFBVV95cUxOU2xiWHRPb1FBN3MtZTZQanhoZFdhdFpFd05VZGEyWV9mSGhaVTRlcVJjVFJELXRRamc2bGVFNXRuVlRpSm9jZ0RzUHJSYXdSMFhHMWFlcEdhckROSURwc2U4NGlSMWp4RFpuYkJYbTZFaUk1VHk5RVFmX28zemVjZEVLdDBQMzMxaUJSVUd3M0lBYlMxOHRBdzlkMnNKYTg1S2Y2Wkw0SQ?oc=5",
+    "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPNTVSNHNaMWs2WVpvT0FEVk5RczVONVpWUXRxeUpIQU10ckVucVlVVGlyVGN5UjZPLWRPZloyc3BYMXg1TGFzNHdFS0gyWXpwMVhTNUJMdjhCZVMybVNJZWRyMUhLLWs2eEc3ek9YQ0lNNG1vV2JrQnZ2N1FpS2Q2RVdlSjJwWFZPVWlpRjRzY252eFZCRkJSYU9tRWd5SVhKc3FZS0RJaXRTRkFSVmp1V3VuZUlTQ0hsSGdsUkFrMks1RUpGaFJuVWVMVDh1QjZVeWlF0gHYAUFVX3lxTFB4WDZwSlJtaTFSSEVWLWFzVVEtWDhMdTNscHh1RFo5LVUyR0NUZHQ4VVFQUkN1TThKd0t1V0sxQlRVWlZsdDhVdEVjVktlN3NsWkFHaFMxb1JNTmNTWnlFSzMtVEppSEFoRDZfa1NnMDVueTNQZ3JQbUZGUXRkdHVJRks0Qmd1RU9PdGZ1cW9IbHZna1NLWVR5ZVo1dl9lSTRsWFJ4dkpTWkd6bHlDUXVvc3hoRV9FQ3RpcWlrMmpKOUVGYlh1bFJlcmdpWVlHdjdvVVV6UGVRNQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiVEFVX3lxTE4tOVBLcVZZdXQ0ZGxTb2JFSk0ya1dlREwteW9pUnpEM1Z4QjlJQmU3blFlUjdmd25hT0x5NzJtSGE0V0pWbTc0WmxwNW5sSGliaklpTQ?oc=5"
+   ]
+  },
+  {
+   "id": "taiwan-korea-up",
+   "date": "2026-10-04",
+   "theme": "Energy & geopolitics",
+   "headline": "North Korea says intermediate missile’s range bests Tokyo and Seoul estimates",
+   "summary": "Signal: East Asia security tensions. 21 reports from India Today, The Star, The Express Tribune and 10 more. Related: “North Korea tests hypersonic missile amid tensions with South over DMZ blast”.",
+   "rationale": "Military tension around Taiwan and the Korean peninsula threatens the region that makes most advanced chips and electronics, and its sea lanes.",
+   "horizon": "weeks",
+   "confidence": "high",
+   "industries": [
+    {
+     "id": "tech",
+     "score": -1,
+     "why": "Chip supply concentrated in the region"
+    },
+    {
+     "id": "transport",
+     "score": -1,
+     "why": "Regional shipping risk"
+    }
+   ],
+   "economies": [
+    {
+     "id": "japan",
+     "score": -1,
+     "why": "On the front line"
+    },
+    {
+     "id": "china",
+     "score": -1,
+     "why": "Sanctions and trade risk"
+    }
+   ],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMiogFBVV95cUxOYnJ0U084VE5nbDhPNldRaXk0S0FKaGU2LW9fZVJSY0N1dUpqNExHQ2V5MDVzZC0ta2gyYUppRjY4TUpCbmtNTXNaaEtSbnFYNlduX0NOOHIzSWUxVXJqYURUcFo0WU5EaXgwTndRS1NVRXd2YWNfUmQ5YVdpX0liMThuWkRydDdrZFFNVUM4NDctWkc5OUVXVENNaHU4eHJCcEE?oc=5",
+    "https://news.google.com/rss/articles/CBMiywFBVV95cUxOdTRDUzB0LVNJSzBNRW9xNXFXQmRYU2lXVy1McEZieFgwVk1qRFhRcVFQOXJxVHVvNjdkX2tOYlpTR1J6NGJVNEVOM2Z6WkpJQ1VQOVF3RUJYTC1jYUZfNHdLWkZPalBETlpfeUhLR2xlX0lHTmNOUDRMSEhKNUNCd2RBZTF2SjVZNkJwQmJ0SHNIblUxcVZqZ05oQmRoZUJWdWIzSWpQQi1qX2ppMlI2T0pKXzM4LW9Mc2E4dlYwaGhHY2ZjdzlReGpYSdIBywFBVV95cUxOdTRDUzB0LVNJSzBNRW9xNXFXQmRYU2lXVy1McEZieFgwVk1qRFhRcVFQOXJxVHVvNjdkX2tOYlpTR1J6NGJVNEVOM2Z6WkpJQ1VQOVF3RUJYTC1jYUZfNHdLWkZPalBETlpfeUhLR2xlX0lHTmNOUDRMSEhKNUNCd2RBZTF2SjVZNkJwQmJ0SHNIblUxcVZqZ05oQmRoZUJWdWIzSWpQQi1qX2ppMlI2T0pKXzM4LW9Mc2E4dlYwaGhHY2ZjdzlReGpYSQ?oc=5",
+    "https://news.google.com/rss/articles/CBMioAFBVV95cUxNRWtqMHhuVmQxY25sLTdQNXNOVlRRenpXSloxUWEydnhucHFSeGItd2RsMGxSbk41MmZvcDFaQVRfQ0NpOWRaNUd3OF9tZkcxdUp5S2R2X1k0TkM5cWpzSW5ySG85dllBYW4xQWFqdFZPVzBoZHk5QkZrdGpyQWNCN1U1dEw1R3ZGemozZnNPMks2ZnFubXZkcGZ2U3FPdjJH?oc=5"
+   ]
+  },
+  {
+   "id": "yields-up-us",
+   "date": "2026-10-04",
+   "theme": "Rates & bonds",
+   "headline": "Bessent downplays worries on rising US Treasury yields, AI bubble concerns",
+   "summary": "Signal: rising bond yields (US). 20 reports from MarketWatch, Investing.com, Yahoo Finance and 14 more. Related: “Bessent says rising Treasury yields reflect global trend, not cause for alarm”.",
+   "rationale": "Higher long-term yields lift mortgage and corporate borrowing costs and lower the value of long-duration assets, though they help lenders' margins.",
+   "horizon": "weeks",
+   "confidence": "high",
+   "industries": [
+    {
+     "id": "realestate",
+     "score": -3,
+     "why": "Mortgage and funding costs rise"
+    },
+    {
+     "id": "tech",
+     "score": -1,
+     "why": "Valuations compress"
+    },
+    {
+     "id": "financials",
+     "score": 1,
+     "why": "Better lending margins"
+    }
+   ],
+   "economies": [
+    {
+     "id": "us",
+     "score": -1,
+     "why": "Tighter financial conditions"
+    }
+   ],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxNOXAzZ1dVQzRzZFB5cno0VzdnUmsyZURIbENlYjlqTWNEM2lUcGJyS0R3ZjdXblVmYmhRN2lsR3pBdG9reXdneVhCRE9USlh5VDF1T1ptM0NjQ3JDcEhPVzY1c09wNExjaWlZWmczV3h2OUtBZkZaUjgxZlNBWnhwN0MzeGE3Nm5ZSTl0TDJQQXFKMG9VSXhsaGZ1bm9Va3VETGduOVJyd2lRUWdKZW1WeEpqSDN0dEk?oc=5",
+    "https://news.google.com/rss/articles/CBMixwFBVV95cUxQLUtkbjBkRy1KNndxQlFYdGkyMVhDbGVxRG45R2FKUTNldGQ2ZFdNNGpTV0hhNHdGeUR4Nm41alpsMVdPYlM2VllxOFZXdHFMLThabURfc1NNYkt0NHFzRlZjN3R3Y3pfZC1tLWpzWHdrZkpwUENkZzRVV0NSaVVocTBjVk1RbTctMDlSeHFvNmRJVU85NW52WGJLN3lfdUdzZnAtbXhiTHJxNkV3WkpwOXNIVmlzNDlzdHdTb1RWWk5IMlhHYnlZ?oc=5",
+    "https://news.google.com/rss/articles/CBMilwFBVV95cUxQM054c2o2Zm0tSmhxZU1QY3NOZ0V3YzFzYngtOHc3bVdRbFlnenJKZnU1TXdhY1ZIUWRfU0VHOFJpdU5tRXVRdGMxTkVVSVZvQ1Z5UUlielZTeFlBNzQ5R2JuWDRuVEtvdTFwZkloVUtFYzJ5Q2JWTFdrU1U4TDNqRGh3ZkhnZ21kdXJHbHN0RHpjZjNsdl9v?oc=5"
+   ]
+  },
+  {
+   "id": "food-up",
+   "date": "2026-10-04",
+   "theme": "Commodities",
+   "headline": "Processed Food Prices Surge, Cup Rice Up 25%, Doenjang 19%",
+   "summary": "Signal: higher food and farm prices. 19 reports from PotatoPro, chosun.com, Bioengineer.org and 15 more. Related: “Global Food Prices Climb to Near Four-Year High, FAO Says”.",
+   "rationale": "Dearer staples raise grocery bills and food inflation, hitting import-dependent and lower-income economies, while farm producers earn more.",
+   "horizon": "months",
+   "confidence": "high",
+   "industries": [
+    {
+     "id": "agrifood",
+     "score": 1,
+     "why": "Producers earn more, processors squeezed"
+    },
+    {
+     "id": "consumer",
+     "score": -1,
+     "why": "Higher grocery bills"
     }
    ],
    "economies": [
     {
      "id": "india",
      "score": -1,
-     "why": "Tightening amid oil and currency pressure"
-    }
-   ],
-   "sources": [
-    "https://www.business-standard.com/amp/finance/news/rbi-mpc-meeting-october-2026-monetary-policy-repo-rate-hike-retail-inflation-126100200188_1.html"
-   ]
-  },
-  {
-   "id": "gilts",
-   "date": "2026-10-02",
-   "theme": "Rates & bonds",
-   "headline": "UK 10-year gilt yield eases to 5.34% but is up 0.64 points over a year",
-   "summary": "The 10-year gilt yield fell 5 basis points to 5.34% on October 2, but has risen 0.18 points in a month. The BoE plans £20 billion of annual active gilt sales.",
-   "rationale": "Gilt yields above 5% keep UK mortgage and government borrowing costs high, weighing on housing and fiscal room.",
-   "horizon": "months",
-   "confidence": "medium",
-   "industries": [
-    {
-     "id": "realestate",
-     "score": -2,
-     "why": "Mortgage rates tied to high gilt yields"
+     "why": "Food is a large share of inflation"
     },
     {
-     "id": "financials",
-     "score": 1,
-     "why": "Higher yields support bank income"
-    }
-   ],
-   "economies": [
-    {
-     "id": "uk",
+     "id": "gulf",
      "score": -1,
-     "why": "High borrowing costs limit growth"
+     "why": "Imports most of its food"
+    },
+    {
+     "id": "china",
+     "score": -1,
+     "why": "Large food importer"
     }
    ],
    "sources": [
-    "https://tradingeconomics.com/united-kingdom/government-bond-yield",
-    "https://www.bankofengland.co.uk/markets/market-notices/2026/asset-purchase-facility-gilt-sales-market-notice-17-september-2026"
+    "https://news.google.com/rss/articles/CBMijgFBVV95cUxPNXJvX2pUXy0xaVlrSVAzUmNFbG5vVnZZRnVqZlJ0ZGVGam1NRXdET09nMUswWkkzSk81MHdkQV9xUlpsdmlOc1RUeFZ6eERNal85cDhoRTJLZk1NZlhwQjhiQUctREQxMWp6Ykw2eVFickExQUxnQy0wdVFwbU43QlBjTlQxdVhUZW1SX1FR?oc=5",
+    "https://news.google.com/rss/articles/CBMisAFBVV95cUxOemNZbWwydk1Sek5mVksyRU5oMzBEWm5HdmxyX2tRUUVtTV85QlFfUWVkVkVzMVFka1h0QUQ5WmViTEJCX0ZRcVNXeUhRWUV3NFduZ2NxMFZ6Q3BuYzN4YThyemRvZGlNWVRBcms1TExqUkVMN2lkUUhlSjYtbzBmQ1hYY2x4bFlIMWxaQ05paWNEcTFtV1VvdWJmQzI2UHpKcFJyb3d0bzczbTR1bGp1cQ?oc=5",
+    "https://news.google.com/rss/articles/CBMitAFBVV95cUxPekdTOEx1bl9reEE4QVhwMGE5WHd3RjdfRThJdnpXdXN4M213aGFyanM0dVo2UkFXRTUzZXhxR09mYWtlR0Rwam8tdVJ6Z1hncEd0Um1FSS1UV3JXODRHZ0FxaklhZmFOTS1wUWhSZEpkbDl5aWliUkVsbE1ybUFXbWlmdzJtVml4a3ltZnhzOTdYTzNRSGFDcTN6TDB1dUZlMS1KNmhtaF9HUUZ0SDZ2Y2R1TFo?oc=5"
    ]
   },
   {
-   "id": "memory-chips",
-   "date": "2026-10-01",
-   "theme": "Tech cycle",
-   "headline": "Chip stocks rally after a major memory maker says tight supply will last into 2028",
-   "summary": "A leading memory chipmaker reported quarterly earnings per share up more than elevenfold and said memory supply would stay tight at least into 2028. A semiconductor index fund gained 11% in September and 3.6% in two October days.",
-   "rationale": "Prolonged memory shortages lift chipmakers' pricing power and confirm durable AI investment, while raising component costs for device makers.",
+   "id": "tariffs-down-us-india",
+   "date": "2026-10-03",
+   "theme": "Trade",
+   "headline": "India-US Trade Deal Nears End But Agreement Not Imminent: US Official",
+   "summary": "Signal: easing trade barriers (US, India). 6 reports from BW Businessworld, TheWire.in, Siliconindia and 1 more. Related: “Modi, Trump Discuss Trade, Defence As India Pushes For Interim US Trade Deal”.",
+   "rationale": "Tariff cuts, truces or trade deals lower costs and uncertainty for traded-goods sectors and lift trade volumes.",
    "horizon": "months",
    "confidence": "high",
    "industries": [
     {
-     "id": "tech",
-     "score": 2,
-     "why": "AI demand keeps memory supply tight"
+     "id": "autos",
+     "score": 1,
+     "why": "Lower cross-border costs"
+    },
+    {
+     "id": "industrials",
+     "score": 1,
+     "why": "Exports and inputs cheaper"
+    },
+    {
+     "id": "consumer",
+     "score": 1,
+     "why": "Import costs ease"
+    },
+    {
+     "id": "transport",
+     "score": 1,
+     "why": "Higher trade volumes"
     }
    ],
    "economies": [
     {
      "id": "us",
      "score": 1,
-     "why": "Chip and AI investment cycle stays strong"
+     "why": "Party to the trade relief"
     },
     {
-     "id": "china",
-     "score": -1,
-     "why": "Higher memory costs for device assemblers"
+     "id": "india",
+     "score": 1,
+     "why": "Party to the trade relief"
     }
    ],
    "sources": [
-    "https://www.fool.com/investing/2026/10/02/why-the-ishares-semiconductor-etf-gained-11-in-september/"
+    "https://news.google.com/rss/articles/CBMisgFBVV95cUxQMzVJbnJqUmNFRzZDNTJwNGpRaXJGTl96RnFEdmktUmtNa3hhTENpS19DX1d3VnR3UHJNdUhGdVJZOE1VdFdfbm1CRVpBOXkzRFZ2MXZzYWxGcnZTa25wSnYwY0VwcHhtWDRRdkVVanY1NUw5NE8xSWNFTVh6aEhZYTdZMXBWbnBHdVFqQlMwZW1lSWppZUZOVTl0MjZyR1dJeXJ2SHdzaTVKdlRSRUctcllB?oc=5",
+    "https://news.google.com/rss/articles/CBMiugFBVV95cUxPQ2JzVUZvTnFkcUlnNl91cFZjRHUyYVctYjk0X0JMTkNqN3h6STN6dF9hcFNxMjNnTjVESGJRbEU0QkhnN01ZZGFnRUhMUFRsWDI0M21FREk0XzdLc2MtbU5USlRkNlh0X010a2ZLSE5SeGxnU1BKNFVrd2FjMUVuTzJyVndnQ2pEV3piUzlBejFSQndDdzdkb29ScWFBSF9KY2FjTkFnSzZvRUhSM2otTTZQVUZYZFV5RkE?oc=5",
+    "https://news.google.com/rss/articles/CBMie0FVX3lxTFBmZ2pieGk0YWVUUC1RYlBsaXhSY2djdkJILWZTWV9rN3ctUG9STmtsQ1lKSldYelE4aEZEa05qd252SVJDelJiX3o5dGM5Qkw4T1ByaUxaR0pVY0NLcHhjeEZFLTRVakU2NlNnZkFDa0NUdmY0bElBbGFMNNIBe0FVX3lxTFBmZ2pieGk0YWVUUC1RYlBsaXhSY2djdkJILWZTWV9rN3ctUG9STmtsQ1lKSldYelE4aEZEa05qd252SVJDelJiX3o5dGM5Qkw4T1ByaUxaR0pVY0NLcHhjeEZFLTRVakU2NlNnZkFDa0NUdmY0bElBbGFMNA?oc=5"
    ]
   },
   {
-   "id": "gold-dollar",
-   "date": "2026-10-02",
-   "theme": "Currencies",
-   "headline": "Gold slips 0.9% to about $4,140 an ounce as dollar index holds near 2026 highs",
-   "summary": "Gold fell 0.9% to $4,140 an ounce on October 2. The dollar index was about 102, after breaking above its May 2025 high this week, with Treasury yields elevated.",
-   "rationale": "A firm dollar tightens conditions for importers and emerging-market borrowers, and pressures commodity prices priced in dollars.",
+   "id": "chokepoints-down",
+   "date": "2026-10-03",
+   "theme": "Energy & geopolitics",
+   "headline": "Oil Prices Rise on Doubts US-Iran Peace Talks Will Ease Hormuz Disruption",
+   "summary": "Signal: shipping lanes reopening. 4 reports from EnergyNow.com, The Times of India. Related: “JP Morgan Sees Brent Staying in Low $100s Even if Hormuz Reopens in June”.",
+   "rationale": "Safer passage through key sea lanes restores oil and gas flows and lowers freight and insurance costs.",
    "horizon": "weeks",
-   "confidence": "low",
+   "confidence": "medium",
    "industries": [
     {
-     "id": "materials",
+     "id": "energy",
      "score": -1,
-     "why": "Strong dollar weighs on metals"
+     "why": "Risk premium in oil fades"
+    },
+    {
+     "id": "transport",
+     "score": 2,
+     "why": "Shorter routes, lower insurance"
+    },
+    {
+     "id": "consumer",
+     "score": 1,
+     "why": "Import costs ease"
+    }
+   ],
+   "economies": [
+    {
+     "id": "india",
+     "score": 1,
+     "why": "Energy import costs ease"
+    },
+    {
+     "id": "gulf",
+     "score": 1,
+     "why": "Export routes restored"
+    },
+    {
+     "id": "eurozone",
+     "score": 1,
+     "why": "Lower energy and freight costs"
+    }
+   ],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMipwFBVV95cUxPQ2h4eFJVTlNTNmxjY3AwaVktZjBKcHgyNEVSUmJTVEVsREdONEtDN1U1V1VqRG0tQXlQdWhBX2ZudG01NnhjQkQxNTBOOUlUYVlvZEN3aTdwX25MVnctV2tvVHZWeFJDMXNIUG5WdUVJWG9kS2JrZk1nQVdILWYyLS1DTjJ0Y2xuZlpHTWpCb3JzUk83amx0YUItemNpT3NZM3EyTEFsRQ?oc=5",
+    "https://news.google.com/rss/articles/CBMipAFBVV95cUxQMzZsdVBYMlNNcVJSSk13TXI2OEtuWmpHc01pRDNKMUU4RkhhOW82UzdpeFVuTnExdGwwNmVvaHR2ZjVIdTZaVmt2TEZzWGV4TXluS1pmM2JxVEpOZjE0ZGwzNC1oXzhBVjRCR2lBMndBd0YxNUl4cTdfdFZhYXhtQTlfYlNrQXFNS2Y4dkxnSU1QUlNFXzY0ck15dkk1bmNnWW1wUw?oc=5",
+    "https://news.google.com/rss/articles/CBMi-gFBVV95cUxQeFdtWHQzaWppVnhES3YyUGIyMUFST3B2LU1fV0x5cFkxcl9WeWk4MHJqOFpSUktUeVJGdlhuZGVSRThPcjlVQzEtRTBLaDJMLV80Q3IwbjcyUnlJTjRkZkdOTU14LV81dGEwUjNCcFQ5QUlOWklQcHJwNjN3VDhmR0cxejVVUWxicmRWOERQSzNJWGNoVmx3VGwzU1kxZjlwb3FwY0llOGhITmtNU0hIeVJDSVZZOUpRWFRLWXBzWGVacGZWbFlINF93SW9jRUYxT0lvclJRRE5jajR6NGpvQ2tEQjRGLWdfRGluckxkd0RDNTRxMlc2Sk1B0gH_AUFVX3lxTE55Y2hELTl5dHZ3bEdFNm5rMXdzV1VPRG5VWG1WRGViMWNwaTFGcHNUT09yNGh6LVlxM2F0VkJYZy04UjBtMkRtbE94Y3VNUDQ3RS1uSmxrUjJ6WFFUSzhYZGxzSi1Qd3lhd0wzTTA2QkozRWxtOFdWOFloNG5OckJEMXlNYzNRYTBmT3djLUdzMmNjTTB0c1B1UUIyMmlDLU4wY2t6Q3ctZDQzTEV4a2czUHFIRVdDVUNWREVIYXQwemZjNWRURmlZa1Y0REZHeWw2Q3NsMUZoYmtFRVpZalV3MWZPOXR0RDRreG1ub09yZ0pNb2s0VmlyODd2TzlIVQ?oc=5"
+   ]
+  },
+  {
+   "id": "rates-up-india",
+   "date": "2026-10-04",
+   "theme": "Monetary policy",
+   "headline": "MPC meet: Economists expect RBI to begin rate-hiking cycle",
+   "summary": "Signal: tighter monetary policy (India). 4 reports from The Economic Times, ETV Bharat, IANS LIVE and 1 more. Related: “RBI rate hike unlikely to trigger broad-based NBFC asset quality stress: Report”.",
+   "rationale": "Higher policy rates raise borrowing costs, cool demand and weigh on rate-sensitive sectors such as property and long-duration growth stocks, while lenders' margins widen.",
+   "horizon": "months",
+   "confidence": "medium",
+   "industries": [
+    {
+     "id": "realestate",
+     "score": -2,
+     "why": "Higher mortgage and funding costs"
+    },
+    {
+     "id": "financials",
+     "score": 1,
+     "why": "Wider lending margins"
+    },
+    {
+     "id": "tech",
+     "score": -1,
+     "why": "Higher discount rates hit valuations"
+    },
+    {
+     "id": "consumer",
+     "score": -1,
+     "why": "Dearer credit squeezes spending"
     }
    ],
    "economies": [
     {
      "id": "india",
      "score": -1,
-     "why": "Strong dollar adds to rupee weakness"
-    },
-    {
-     "id": "japan",
-     "score": -1,
-     "why": "Yen pressured against dollar"
+     "why": "Tighter policy slows growth"
     }
    ],
    "sources": [
-    "https://tradingeconomics.com/commodity/gold",
-    "https://www.fxempire.com/forecasts/article/gold-forecast-the-usd-index-soars-to-new-2026-highs-1634558"
+    "https://news.google.com/rss/articles/CBMimAFBVV95cUxNVUIyUmtVZUw2WWVDS3phZUZock8tQ3RFYzNlcG52aFBmWU5zWjdPNUNYNUZ1MlduWGQ5Q1cxX0VDVnJRc3JCbzBkZ0R4bXo5eXg2RjlkTm9iZHpaSDd3czI4MEZjb25PM0U5ZVEzTWdDVTJwa3BWMlRfYUd1RTlEWFpuUHU1SjIxeGcwYXVFQzVSNDhwX29qTA?oc=5",
+    "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPd1EyTGUtazQ3Vjk3VWl0VGU2dUFzakFoTmU0NklQVU9pZ2E4U3FxbmpfaExodVI1dnlvN1hFUFp6U2lLSW5XY1YwaWlTSUl2cUNqbTdYOUhmTU8waWNwSl9xOHUwX2lwcldtUkZ1VVI3Z2ZHWEg1R2xzVmVuSG0xaWwySWhncFl2UUhPY3l2cmVrRTZnR21oWnNWY3I1dFNPWXNIUUhYOUVWZUlWdHNIckJCYzZIaGJvSlVvS1FuVkMwc1o3MlR3NHM4azF5RTBSbGlDaC1pb0ZVU2p3WE1ZZmFDdU93N2RZay1TSzU1dE1DQk0zTnA5MNIB_gFBVV95cUxNcXNMOGRhNzhqSC1JYVpKcXVUcHZZcXUyeUNmajJ6djFOZFNBdWpiV0xXQzVfZUhWSkFQcnVrdW51bFE2cldqcVRZRE05eDA3ZE1RQWZSamZMbU02XzdCekZjamRrdmFtb01mZllfY1Z3SWd3aTdLdGx2QmRDZ3ItX3FoUDJJcExuTnRaLTVIZWFTQlFSMnR5ZlBkMy14aHRMSExZVFptZmlsTmZBMGtEbFdPdnh4Zi1FcF9BbW5McEpVRGdpeGZQZVlpRmxrZzlRdGxpSkJqQmlESThMUEZhX0ROWVVCX05HbjM0V1l2Szc4OHpZXzNoMHBORFNYQQ?oc=5",
+    "https://news.google.com/rss/articles/CBMivwFBVV95cUxQRW5Pamh3Y2x2ZThZLTU5ZlpQR2Q1VVF2Q2UwYmR4QUFLMS1LclYyZnl0Z3hSUXpjcGFlUEM0anBTTWUyaV90bHduSFZpSHlBNUxULWhldkY0MWpYQmJLcERmWDg5cDY4LXBOV1VKcXZ2bFE1eXFBeVRmbmxVek9YaUFqMXVHY1BTakpiaC1CQTRYSXIzMkVYTnYyUlV2MVRxaU02RGVGaWw0dklhY0t0T2gxMUZvQTNYNUFXMnZmSdIBxAFBVV95cUxNcEh5cGNzOThQUmJMaGozOVQtVGNCZEY0WnlpLTlZb09TS09La1MzUDlTWnBwcGh1WHBZZEVKenBlUU9ORUFiS1ZyQ2N4WGE4eXZDVmREM2FPZFFFLWhudzVpcmtJRWxBX2hybVF6UjNqNEZxbmxCOXFsemJDVURCZXJ0UHF0c05WdDBuaEdmbmNjem8tNWFvcE14d3N4MlpIUjc4djJ6OHFqQnNXS1Q2cVMwbkRJTThfd2UtalpZbjVDOVd0?oc=5"
    ]
   },
   {
-   "id": "black-sea-grain",
-   "date": "2026-10-02",
+   "id": "metals-down",
+   "date": "2026-10-03",
    "theme": "Commodities",
-   "headline": "More than 210 strikes hit Black Sea commercial ships in July–September, threatening grain",
-   "summary": "A maritime risk firm counted over 210 strikes on commercial vessels in the Black Sea between July and September. Wheat is down 7% over the month but still about 32% higher than a year ago.",
-   "rationale": "Disrupted Black Sea exports keep wheat and freight costs elevated, raising food import bills and food inflation risks.",
-   "horizon": "months",
-   "confidence": "medium",
+   "headline": "Gold price update morning of October 4: Fall, short-term scenario",
+   "summary": "Signal: lower metal prices. 7 reports from MIT Energy Initiative, SlashGear, AD HOC NEWS and 2 more. Related: “Standard Lithium's Arkansas Project Is Contracted to the Hilt — the Bank Talks Are the Only Thing”.",
+   "rationale": "Falling metal prices cut miners' revenue, often signalling weaker industrial demand, while easing manufacturers' input costs.",
+   "horizon": "weeks",
+   "confidence": "high",
    "industries": [
     {
-     "id": "agrifood",
-     "score": -1,
-     "why": "Higher grain input costs for processors"
+     "id": "materials",
+     "score": -3,
+     "why": "Lower prices for miners"
     },
     {
-     "id": "transport",
+     "id": "industrials",
+     "score": 1,
+     "why": "Input costs ease"
+    }
+   ],
+   "economies": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQVzY4aHo0SW5hU1g2bm5KUDE0TWstYm4yb1pSUEUyNzBIZGUxMlBzTjVHRVZVTEFiS2tGTHBnLXlJb2xLYXI1VTFaZXEtWENmREJ4NXcyTUt2RXNTdXIzSVVwZ09tUWd2VGVNeDd4c2I2SV9EczY2LV9IYzdORzBPVHVkUDM5UnB5a2xYY1hmUzNJXzBXZzVqX0hRWmdPUUthbENzZ0FidDNIdw?oc=5",
+    "https://news.google.com/rss/articles/CBMi2gFBVV95cUxObnBINGNlVTlDU2pfZ0I3QUZqSV9KUzVWQ3VMZlhUX0RnbVZveEQ2LXZEX0NyazJQUUl0VXBGeVJ3dkFZTjNVNk03X0I5TTdGWklyWW9TbHh6bFhQS1lmYXo1OTA0WjBMM20yZ0dPS0ViZTE2YWZseUl2SVo4WFFaVmNaOWRHRGQ4cWtLUVBOZ0xvQ2R5RHJIbUdtR2hIS19PRXA4Q21LSU1GNzY2VmhXTWM1bTJWV3BkZTM4bWhHMzhpRjNnNlVXeVhRZ2hjc1owQnhXRTBCTVBGUQ?oc=5",
+    "https://news.google.com/rss/articles/CBMipwFBVV95cUxObm12cjJFdHEtME1SLS1GLWFVVFlPb09GR2p4ZzhNUFVpOHRZWkhsc1Rvb1pfNjRpRTZ0eEsxVnlVeWxWRDRfR1JLN1gxYmNLRExqODJVdnozUDNiUm1LLVhSMnViM2tFMWF4RzFEdU5tRnh3VmVsYnlBYURHX0lHcU5KbEtjeUtCZmhsRmpjR1JHeGdEQ3pIdzB4MlptSTJUWFNrVmRHSQ?oc=5"
+   ]
+  },
+  {
+   "id": "fx-eurozone-strong",
+   "date": "2026-10-04",
+   "theme": "Currencies",
+   "headline": "Currency Exchange in Cuba's Informal Market: Dollar and Euro on the Rise",
+   "summary": "Signal: a stronger euro. 6 reports from شفق نيوز, صحيفة مال, en.cibercuba.com and 1 more. Related: “This is how the informal market closes in Cuba: The dollar and euro end the day on a high note”.",
+   "rationale": "A stronger currency lowers import costs and inflation but makes exporters less competitive.",
+   "horizon": "weeks",
+   "confidence": "high",
+   "industries": [
+    {
+     "id": "industrials",
      "score": -1,
-     "why": "War-risk premiums in Black Sea shipping"
+     "why": "Exporters less competitive"
     }
    ],
    "economies": [
     {
-     "id": "gulf",
-     "score": -1,
-     "why": "Large grain importers face higher bills"
-    },
-    {
      "id": "eurozone",
      "score": -1,
-     "why": "Food and feed costs elevated"
+     "why": "Export headwind"
     }
    ],
    "sources": [
-    "https://news.google.com/rss/articles/CBMihAFBVV95cUxOZDB6enNFVXJjZ2tIU1IzdUJWdmhiNDc5bTJUeXpRWi1rUFU1UlNhdENxeE50YXdxOVppemlVVDNMaHpIenVHYVJneXN1ZXFFaFB0ZkpZc0tMNV9qOGJzLVhSNFJBdE5nOGhYbEkyNERqRzFFMDF3M2MyY1N2aW1laWxZV1Y?oc=5",
-    "https://news.google.com/rss/articles/CBMifkFVX3lxTFBpb2VMaTVuLW1jcEVhRjVfU05sSXo5Z3ZLc0hKNGxYT216STdnUWhpc0dqV2VVbTd1U0o1QWUyV1FIWENMb25ZM0hyQWdJQ3Vqb0pJZ01FSlVLRDM1NjVwV2stYm5RTVNzekhaUjBuTFhsakJnbUxOSVBoNkozQQ?oc=5",
-    "https://tradingeconomics.com/commodity/wheat"
+    "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5CRDd0THNhOS02bUQxQlI0bEV2NHFUTkN2YmRCVkxBa3RrUkl3U1hrVzNKcERJZThsVmhQbVh2REQ2bi1Yam9abS1SalVIOGx6aGsxbzEzYl8?oc=5",
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxNOHQwZEp2QzlPTDJCa3BrdUl1d2RlUmZjbnIwaWp2dXU4UjlRRzhPODF3em5GeWY1UGg3VTV6clBBOUpNbWdHMjdJODFaeHA4ZHNsT29QYWRkYW14NThIZUZtYURqc1p5MUMxell5YjI0U3pLMkhfdTExTXp6ekxTekhnWWx2bVJUaUp5NWZRTm1PNk1INGVaOGdpVWNTaEtJX05tSS1SSHN5ZnpOWnVhWnhkY2FrQnc?oc=5",
+    "https://news.google.com/rss/articles/CBMieEFVX3lxTE1GdG9YS0ZranZIQVRkVnpJLTFOZnhwN2NvdWE3Z2NaMWJOa3ViVUwzd3kyMGs1MUNZY0kwTUkxb3Joa0xJRFh2MkZtWklxbGJqWGRaU0x1Q1J0S0swRk02N1doM2VuYi1pMmpjN2xHMkxBWHVzR2g2NA?oc=5"
+   ]
+  },
+  {
+   "id": "inflation-down-us",
+   "date": "2026-10-03",
+   "theme": "Growth data",
+   "headline": "Gold Set For Monthly Fall As Markets Await US Inflation Data",
+   "summary": "Signal: cooling inflation (US). 5 reports from The Economic Times, BW Businessworld, The Daily Star and 2 more. Related: “Inflation Drives Down US Personal Savings to Lowest Level Since 2022”.",
+   "rationale": "Slower inflation protects real incomes and opens room for rate cuts, helping spending and rate-sensitive sectors.",
+   "horizon": "weeks",
+   "confidence": "high",
+   "industries": [
+    {
+     "id": "consumer",
+     "score": 1,
+     "why": "Real incomes recover"
+    },
+    {
+     "id": "realestate",
+     "score": 1,
+     "why": "Room for rate cuts"
+    }
+   ],
+   "economies": [
+    {
+     "id": "us",
+     "score": 1,
+     "why": "Room for easier policy"
+    }
+   ],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMipwFBVV95cUxORHJiWWFLRFQ3QVVwRFdUaXNLMHdCdGJwdXdSOE5obkRuN1NwSW11eTFhT0pxYm04RS04Wlg1a2xFRG5CeVh0ZWdCSjRsQWdUYVRKWExaNUhoTF9VR1JhSHNwQkpKVVpLQzhYUzlMd0duZXFQXzNKVDdWUnozd2xLM2VxUXM3NEdNZmJWWVBINWp0WkE2T3UtakJjZlNUZXJMSnBQSE9Qdw?oc=5",
+    "https://news.google.com/rss/articles/CBMidEFVX3lxTE1QM3plMzh4Y21NdkM2UUxIZzdUa0J4eDhWSEFwSDZrLWJQVGNVMy1fcWlaYldyb3RkOWFoLWhZd1FlQjZCdVAwMVdINUZWcURFM0JaSlVPX3VZOS1DTkI0djczQW1NUndPNjAzQ0tfN0RmWFhV?oc=5",
+    "https://news.google.com/rss/articles/CBMirwFBVV95cUxOVVV6YTk1U09JSi1MMVdxRjJreG15QTVCeWp0eDZ0UGgzU2kzVGllSmhtOERkenFDMDNVbG5oOTdmYms0azRRelZVNjVBZEhVV0M5NVZHNTBrN0xkUE5wVk94YXZaX0tjZ1ZrMWZSaXJrZzJkYTl1MzlqQVluRUZpV0dyb2RndWRnajhtYl95aVcyMFFrMkFJUFlQakhNMHoyLVM3dWVzYmx3M24tcTZF?oc=5"
+   ]
+  },
+  {
+   "id": "metals-up",
+   "date": "2026-10-03",
+   "theme": "Commodities",
+   "headline": "3 Trends That Will Push Copper Higher in 2028",
+   "summary": "Signal: higher metal prices. 5 reports from Sada Elbalad English, The Globe and Mail, WXII and 2 more. Related: “Chinese Team Breaks Through Cobalt-Free High-Nickel Cathode Bottleneck: Lithium Battery Charges to Nearly 80% in 3 Minutes”.",
+   "rationale": "Rising metal prices lift miners' and producers' revenue while raising input costs for manufacturers and builders.",
+   "horizon": "weeks",
+   "confidence": "high",
+   "industries": [
+    {
+     "id": "materials",
+     "score": 2,
+     "why": "Higher prices for miners"
+    },
+    {
+     "id": "autos",
+     "score": -1,
+     "why": "Costlier metal inputs"
+    },
+    {
+     "id": "industrials",
+     "score": -1,
+     "why": "Input costs rise"
+    }
+   ],
+   "economies": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMiygFBVV95cUxOSmV1MGVSYVpFU3M2Y2d4MGZHbF9wbExnRlFGUmk5NEVfNzc3TzNoM2ZwQm9QSzhJSVlONVNMUXVpTDVoRmNyNGJFdjBLNURTNTk2Qno5ZVpaWExXaW5CbklRSzBWUkh1d2V3WWI0M2hUVEVLYmlidWVjVWVxckpyWGdkNmNPYlVPN2d4TWxZLWplQnM4NnNZMmZPV1lSQ3gzYUk4WDEwc2dJMXpVeU1sbVB6LXFISFZVb0JxSTdjNUlOem96Ry1wQ19B?oc=5",
+    "https://news.google.com/rss/articles/CBMidkFVX3lxTE1JTHVKM2U0cUFTRk1xX2xUc2xjX0ZEcVQ1azROb25HbHN3cGo0aDRIVEEtekJ5emRLSWVTRDNjdFZGVDBTY2pIbUdZNUkyWHdXRVpWb1VSOGFuQmk1X0d2NHNaQjBQSGQ0Z1EtdHRPbmdyMHByOUE?oc=5",
+    "https://news.google.com/rss/articles/CBMilwFBVV95cUxQMV8wdlNmZUZVMmJIbnpLa2hZTTdick5MYkNVNG8yeHVaNFpfNGQ4cE9hR0FSSXhCT1BGYzJPcVc3N2MzTFBlZjE3SE1ONmVtSmpBdXFwTFZKc3l3dldlcGc3UXh2Zk84X3FDNkN1b3JMY3NzZm5pS0ZhWG52S01XbW9RYkczaW5obmJfYmRQWC16cHhzZlBZ?oc=5"
+   ]
+  },
+  {
+   "id": "yields-up-india",
+   "date": "2026-10-03",
+   "theme": "Rates & bonds",
+   "headline": "India insulated from rising US yields, focus must be on sustaining growth: Economists",
+   "summary": "Signal: rising bond yields (India). 5 reports from INDIA New England News, India Tribune - Chicago, The Tribune and 2 more. Related: “India Relatively Insulated from Rising US Yields, Focus Must Be on Sustaining Growth: Economists”.",
+   "rationale": "Higher long-term yields lift mortgage and corporate borrowing costs and lower the value of long-duration assets, though they help lenders' margins.",
+   "horizon": "weeks",
+   "confidence": "high",
+   "industries": [
+    {
+     "id": "realestate",
+     "score": -3,
+     "why": "Mortgage and funding costs rise"
+    },
+    {
+     "id": "tech",
+     "score": -1,
+     "why": "Valuations compress"
+    },
+    {
+     "id": "financials",
+     "score": 1,
+     "why": "Better lending margins"
+    }
+   ],
+   "economies": [
+    {
+     "id": "india",
+     "score": -1,
+     "why": "Tighter financial conditions"
+    }
+   ],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMitgFBVV95cUxNWU80aHBYM1pzYm1uQkkxVmZNQ2VxTi1ZSEZicHFWR19lU0txRVBsQXV4Ym9ueEFCRUQxS2MwcDBncEpuRWpTbTVGNjRGbGxwT0tzZVY0YjRhMlpFRGh2Rk5LdVhxMmRTTkJxUzJfRER3RTJkbG9oUDk2Sm1wU18ybmIyQlY1T2ZOTUtQcW5nN3hWWGppWkwwczBOTlN5Vy1rQ3A5Y2c4bDFkbWVVanpyZHJwaEZodw?oc=5",
+    "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNWVBOOVc4QVBYVGlhX1RvcWd3Wkt5d3B1cFp3OG9yUThCRmVwY3RGakhLZEJ0NkxWTzJVTFNuNU1mQ1hlNmJTT3dpcDNYS3V0bDl4M01aX0xjM0k4V2FKNDMwNXJyazdMSmh0U2pxXzZMcmFrTjA2Wkg2dlFPNUlYa0lkNUYzc0o4QmxhTE9VbmRZRlV3NkpXN3lWOGVzU3BUemFpTDcxaWlqalVSeVQwdWRvS3J1VUIxN0xvQnNTVy0?oc=5",
+    "https://news.google.com/rss/articles/CBMid0FVX3lxTE5FMlFUa3JjREE0aW1NWEpTNEJ3Y0UwR2YtbktkYzZvNTA2c2JRVjdOcVY4c2Vub0NSMEtMWTlrWlZ6Q0lqenA2Uko1Y1lSTktvai1Xek44aVNDTjAyeGZhZTJVSFpTU1E2OXhoSDhVSUFBLW5uRVBN?oc=5"
+   ]
+  },
+  {
+   "id": "tariffs-down-india",
+   "date": "2026-10-03",
+   "theme": "Trade",
+   "headline": "India, Australia push to accelerate comprehensive trade deal",
+   "summary": "Signal: easing trade barriers (India). 2 reports from The Indian Sun, sarkaritel.com. Related: “India-Canada Trade Talks To Resume October 5 For 2026 Deal”.",
+   "rationale": "Tariff cuts, truces or trade deals lower costs and uncertainty for traded-goods sectors and lift trade volumes.",
+   "horizon": "months",
+   "confidence": "medium",
+   "industries": [
+    {
+     "id": "autos",
+     "score": 1,
+     "why": "Lower cross-border costs"
+    },
+    {
+     "id": "industrials",
+     "score": 1,
+     "why": "Exports and inputs cheaper"
+    },
+    {
+     "id": "consumer",
+     "score": 1,
+     "why": "Import costs ease"
+    },
+    {
+     "id": "transport",
+     "score": 1,
+     "why": "Higher trade volumes"
+    }
+   ],
+   "economies": [
+    {
+     "id": "india",
+     "score": 1,
+     "why": "Party to the trade relief"
+    }
+   ],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMipgFBVV95cUxPMXgzUEVrc0N3SGpJUkQxNFg5di1aT21BbUtQLUlPNXB4bzhYOGZGQk42cGc3cGI3YWcxYnUzMEJ3TWVabTBxS2VoMUVkZzMzSHRvTjRmb3B3engyQk5UUEowbFBXZVYtaW1PWlRPQ21od2dKTG96WllSWElnNFdlcTR5WnRDRXg1ZGpTbWdmR2pNR3A0WnRhZWRmYk9tU3hRZFRSdER3?oc=5",
+    "https://news.google.com/rss/articles/CBMidkFVX3lxTE03eFR5WENxMmd1UEVlc2k1OHJsWk5MLUVfRWpTN2x6UnZHaVJMUWRPeFdyS1RKWGhOUlRselVBOXZZSXl0NGxBd01YQk1DODIyZTBCc0VhdXlOUzN6aGppYW5iM1NmRGpVU2owckhjbllxcndsNXc?oc=5"
    ]
   }
  ]
