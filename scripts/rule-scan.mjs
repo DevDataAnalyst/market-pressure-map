@@ -45,7 +45,7 @@ const DOWN = /\b(fall(s|ing)?|fell|drop(s|ped)?|slid(e|es)?|slump(s|ed)?|plung(e
 const INTENSE = /\b(surg|soar|plung|tumbl|record|spik|biggest|sharpest|crisis|collapse|shock|crash|slump)/i;
 const SPECULATIVE = /\b(will|could|may|might|expected to|expects?|forecast|predict|outlook|seen|eyes?|weighs?|considers?|mulls?|threatens?|warns?|if )\b/i;
 // Opinion, explainers, how-tos and single-firm news aren't market-wide events.
-const SKIP = /\?|^\d+\.\s|^(how|why|what|inside|explainer)\b|^\d+ (trends|things|reasons|ways|stocks|charts)\b|\b(opinion|explainer|explained|what to know|what it means|how to|here's why|preview|these \d+ factors|factors to watch|things to watch|live updates|live news|live blog|latest live|live:|week ahead|to test markets|price update|short-term scenario|podcast|video|watch:|newsletter|shares of|stock of|'s shares|earnings|quarterly results|q[1-4] results|ipo|ceo|top picks|stocks to buy|stocks? that could|could benefit|black[- ]market|parallel market|informal (currency |exchange |forex )?market|(dow( jones)?|stocks?|stock market|wall street|markets?|sensex|nifty) today)\b|\b\d+\s+[\w.'-]+(\s+[\w.'-]+){0,3}\s+stocks\b/i;
+const SKIP = /\?|^\d+\.\s|\|.*\||^(how|why|what|inside|explainer)\b|^\d+ (trends|things|reasons|ways|stocks|charts)\b|\b(opinion|explainer|explained|what to know|what it means|how to|here's why|preview|these \d+ factors|factors to watch|things to watch|live updates|live news|live blog|latest live|live:|week ahead|to test markets|price update|short-term scenario|podcast|video|watch:|newsletter|shares of|stock of|'s shares|earnings|quarterly results|q[1-4] results|ipo|ceo|top picks|stocks to buy|stocks? that could|could benefit|black[- ]market|parallel market|informal (currency |exchange |forex )?market|(dow( jones)?|stocks?|stock market|wall street|markets?|sensex|nifty) today)\b|\b\d+\s+[\w.'-]+(\s+[\w.'-]+){0,3}\s+stocks\b/i;
 // Ticker lists ("ORCL, TSLA In Focus") mark single-stock market wraps.
 const TICKERS = /\b[A-Z][\w&.-]+( [A-Z][\w&.-]+){0,3}['’]s( [A-Z][\w-]+){0,2} ([Pp]roject|[Mm]ine|[Pp]lant|[Rr]efinery|[Ff]actory|[Dd]eal|[Bb]id|[Ss]take|[Bb]onds?|[Ss]hares|[Ss]tock|[Rr]esults|[Pp]rofit|[Rr]evenue|CEO)\b|\b[A-Z]{2,6} results\b|:\s*[A-Z]{2,5}(,\s*[A-Z]{2,5})+\b|\b[A-Z]{3,5}(,\s*[A-Z]{3,5}){3,}\b/;
 // Lead-headline preference: global or official sources over local angles.
@@ -88,7 +88,7 @@ const RULES = [
   {
     id: "rates", theme: "Monetary policy", horizon: "months", weight: 3, byEcon: true, needsEconomy: true,
     subject: /\b(Fed|Federal Reserve|FOMC|RBI|Reserve Bank of India|MPC|repo rate)\b/,
-    dir: (t) => /\b(hike[sd]?|hiking|rais(e|es|ed|ing) (the )?(interest |repo )?rates?|tighten\w*|hawkish)\b/i.test(t) ? (/\b(dims?|dimm\w*|fad(e|es|ed|ing)|fall(s|en)?|fell|drop(s|ped)?|slip\w*|pare[sd]?|scal(e|es|ed) back|less likely|unwind\w*|cool(s|ed)?|cut(s)? (the )?odds|lower(s|ed)? (the )?odds)\b/i.test(t) ? -1 : 1) : /\b(cut(s|ting)?|lower(s|ed|ing)? (the )?(interest |repo )?rates?|eas(e|es|ed|ing)|dovish|rate reduction)\b/i.test(t) ? -1 : 0,
+    dir: (t) => /\b(hike[sd]?|hiking|rais(e|es|ed|ing) (the )?(interest |repo )?rates?|tighten\w*|hawkish)\b/i.test(t) ? (/\b(dims?|dimm\w*|fad(e|es|ed|ing)|eas(e|es|ed|ing)|fears? (eas|fad|recede)\w*|fall(s|en)?|fell|drop(s|ped)?|slip\w*|pare[sd]?|scal(e|es|ed) back|less likely|unwind\w*|cool(s|ed)?|cut(s)? (the )?odds|lower(s|ed)? (the )?odds)\b/i.test(t) ? -1 : 1) : /\b(cut(s|ting)?|lower(s|ed|ing)? (the )?(interest |repo )?rates?|eas(e|es|ed|ing)|dovish|rate reduction)\b/i.test(t) ? -1 : 0,
     up: {
       india: {
         label: "RBI tightening",
@@ -118,7 +118,7 @@ const RULES = [
   },
   {
     id: "tariffs", theme: "Trade", horizon: "months", weight: 3, byEcon: true,
-    subject: /\b(tariffs?|trade war|trade deal|trade agreement|trade pact|FTA|trade truce|trade talks|import duty|import duties|export duty|duties on|levies on|anti-dumping)\b/i,
+    subject: /\b(tariffs?|trade war|trade deal|trade agreement|trade pact|pact|FTA|trade truce|trade talks|import duty|import duties|export duty|duties on|levies on|anti-dumping)\b/i,
     dir: (t) => /\b(deal|agreement|pact|truce|cut(s|ting)?|lift(s|ed|ing)?|remov(e|es|ed)|paus(e|es|ed)|exempt\w*|lower(s|ed)?|relief|progress|breakthrough|accelerat\w*)\b/i.test(t) ? -1 : /\b(impos\w*|rais\w*|hike[sd]?|new|threat\w*|slap\w*|retaliat\w*|escalat\w*|double[sd]?|steeper|higher|announce[sd]?|war|probe)\b/i.test(t) ? 1 : 0,
     up: {
       india: {
@@ -437,7 +437,7 @@ const RULES = [
   {
     id: "fx", theme: "Currencies", horizon: "weeks", weight: 2,
     subject: /\b(rupee|dollar index|dollar|DXY|yuan|renminbi)\b/i,
-    exclude: /\b(trillion|billion|million)[- ]dollar|\$\d/i,
+    exclude: /\b(trillion|billion|million)[- ]dollar|\$\d|\b(Australian|Aussie|Canadian|New Zealand|Kiwi|Singapore|Hong Kong|Taiwan(ese)?|Zimbabwe(an)?)[- ]dollar/i,
     currency: true,
     dir: dirOf,
   },
