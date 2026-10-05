@@ -280,6 +280,16 @@ details.rest > summary { cursor: pointer; font-weight: 600; padding: 10px 0; }
 details.rest[open] > summary { margin-bottom: 12px; }
 .story.mine { border-color: color-mix(in oklab, var(--accent) 55%, var(--line)); }
 .story.flash { outline: 2px solid var(--accent); outline-offset: 2px; }
+.lensline { display: grid; gap: 6px; background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: var(--r); padding: 12px 16px; }
+.lensline .head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; }
+.lensline .head b { font: 700 1.1rem/1.2 var(--font-display); font-stretch: 90%; }
+.lensline .head .num { font-weight: 600; }
+.lensline ul { margin: 0; padding-left: 18px; color: var(--ink-2); font-size: 14px; display: grid; gap: 2px; }
+.lensline .fine { font-size: 12.5px; color: var(--muted); }
+.row .lensnote { display: block; font: 500 11px/1.2 var(--font-data); letter-spacing: .03em; color: var(--accent); margin-top: 2px; }
+.lenspill { border-radius: 999px; padding: 1px 8px; font: 600 11.5px var(--font-data); letter-spacing: .02em; text-transform: none; }
+.lenspill.pos { background: var(--tail-tint); color: var(--tail); }
+.lenspill.neg { background: var(--head-tint); color: var(--head); }
 </style>
 </head>
 <body>
@@ -299,6 +309,7 @@ details.rest[open] > summary { margin-bottom: 12px; }
   </header>
 
   <section id="prefs" aria-label="Personalise this page" hidden></section>
+  <section id="lens" aria-label="Your reading" hidden></section>
 
   <details class="method">
     <summary>How the scores work</summary>
@@ -524,6 +535,7 @@ const ROLES = [
   { id: "exporter", label: "Exporter" },
   { id: "importer", label: "Importer" },
   { id: "borrower", label: "Borrower or homebuyer" },
+  { id: "saver", label: "Saver (deposits)" },
   { id: "follower", label: "Following the economy" }
 ];
 const SECTOR_QUESTIONS = {
@@ -544,6 +556,7 @@ const ROLE_QUESTIONS = {
   exporter: "Is the weak rupee a net positive for exporters right now?",
   importer: "How exposed are importers to the rupee and freight costs right now?",
   borrower: "Will loan rates rise if the RBI hikes this week?",
+  saver: "Will deposit rates rise if the RBI hikes this week?",
   follower: "What is driving India's markets this week?"
 };
 const DEFAULT_QUESTIONS = ["Why is the rupee under pressure right now?", "How do higher US yields affect foreign flows into India?", "Which sectors gain if oil falls below $80?"];
@@ -566,7 +579,73 @@ const personal = () => prefs.sectors.length > 0 && !prefs.all;
 const isMine = id => prefs.sectors.includes(id);
 const mineLabel = () => prefs.sectors.map(id => IND[id].short).join(", ");
 // How much a story matters to the chosen sectors: their absolute scores, weighted by confidence.
-const relevance = it => it.industries.reduce((s, x) => s + (isMine(x.id) ? Math.abs(x.score) : 0), 0) * (CONF[it.confidence] || 0.7);
+const sectorRelevance = it => it.industries.reduce((s, x) => s + (isMine(x.id) ? Math.abs(x.score) : 0), 0) * (CONF[it.confidence] || 0.7);
+
+// Role lenses: how much each market gauge (and a few sectors) matters to this kind of user, and in
+// which direction. Gauges are scored "good for Indian markets"; a negative weight reverses one for the
+// role (a weaker rupee is good for an exporter, higher yields are good for a saver).
+const LENSES = {
+  investor: { noun: "an investor", gauges: { equities: 1, flows: 1, bonds: 0.5, rupee: 0.5, inflation: 0.5, fiscal: 0.5, growth: 0.5 }, sectors: {} },
+  exporter: { noun: "an exporter", gauges: { rupee: -1, growth: 1, inflation: 0.5 }, sectors: { transport: 0.5 },
+    notes: { rupee: "Reversed for you: a weaker rupee raises your rupee earnings", growth: "Counts for you: export demand", inflation: "Counts less: input costs" } },
+  importer: { noun: "an importer", gauges: { rupee: 1.5, inflation: 1, fiscal: 0.5, growth: 0.5 }, sectors: { transport: 0.5 },
+    notes: { rupee: "Counts more for you: a weaker rupee raises import costs", inflation: "Counts for you: input and selling prices" } },
+  borrower: { noun: "a borrower", gauges: { bonds: 1.5, inflation: 1, growth: 0.5 }, sectors: {},
+    notes: { bonds: "Counts more for you: falling yields mean cheaper loans", inflation: "Counts for you: easing inflation opens room for rate cuts" } },
+  saver: { noun: "a saver", gauges: { bonds: -1, inflation: 1 }, sectors: {},
+    notes: { bonds: "Reversed for you: higher yields mean better deposit rates", inflation: "Counts for you: easing inflation protects real returns" } },
+  follower: { noun: "someone following the economy", gauges: { equities: 1, rupee: 1, bonds: 1, inflation: 1, fiscal: 1, flows: 1, growth: 1 }, sectors: {} }
+};
+const lens = () => (personal() && prefs.role && LENSES[prefs.role]) || null;
+// Total weight of a lens, so readings are an average per gauge and comparable across roles.
+const lensWeight = L => Object.values(L.gauges).reduce((s, w) => s + Math.abs(w), 0) + Object.values(L.sectors).reduce((s, w) => s + Math.abs(w), 0) + prefs.sectors.length;
+// What a gauge or sector reading means in words, by its sign.
+const STATE_WORDS = {
+  equities: ["weak equities", "firmer equities"], rupee: ["a weaker rupee", "a firmer rupee"], bonds: ["rising bond yields", "falling bond yields"],
+  inflation: ["rising inflation pressure", "easing inflation"], fiscal: ["a wider import bill and deficits", "a better fiscal and trade balance"],
+  flows: ["foreign selling", "foreign buying"], growth: ["a softer growth outlook", "a firmer growth outlook"], transport: ["costlier freight and fuel", "cheaper freight and fuel"]
+};
+// A story's score through the user's lens: their sectors at full weight plus the role's gauge weights.
+function lensScore(it) {
+  const L = lens(); if (!L) return 0;
+  let v = 0;
+  for (const s of it.economies) v += (L.gauges[s.id] || 0) * s.score;
+  for (const s of it.industries) v += (isMine(s.id) ? 1 : 0) * s.score + (L.sectors[s.id] || 0) * s.score;
+  return Math.round(v / lensWeight(L) * 100) / 100;
+}
+const lensWord = v => v >= 0.3 ? "Good for you" : v <= -0.3 ? "Bad for you" : "Mixed for you";
+// How much a story matters to this user: their sectors, plus anything the role lens picks up.
+// Stories the lens moves clearly (|score| >= 0.3 per gauge) count as relevant even without the user's sectors.
+const relevance = it => sectorRelevance(it) + (lens() && Math.abs(lensScore(it)) >= 0.3 ? Math.abs(lensScore(it)) * 3 * (CONF[it.confidence] || 0.7) : 0);
+function lensReading(ind, eco) {
+  const L = lens(); if (!L) return null;
+  const parts = [];
+  for (const r of eco) { const w = L.gauges[r.id]; if (w && r.net) parts.push({ v: w * r.net, text: STATE_WORDS[r.id][r.net > 0 ? 1 : 0] }); }
+  for (const r of ind) {
+    const w = (isMine(r.id) ? 1 : 0) + (L.sectors[r.id] || 0); if (!w || !r.net) continue;
+    parts.push({ v: w * r.net, text: STATE_WORDS[r.id] && !isMine(r.id) ? STATE_WORDS[r.id][r.net > 0 ? 1 : 0] : `${r.net > 0 ? "tailwinds" : "headwinds"} for ${IND[r.id].short}` });
+  }
+  const W = lensWeight(L);
+  for (const p of parts) p.v = Math.round(p.v / W * 100) / 100;
+  const net = Math.round(parts.reduce((s, p) => s + p.v, 0) * 10) / 10;
+  parts.sort((a, b) => Math.abs(b.v) - Math.abs(a.v));
+  return { net, tail: parts.filter(p => p.v > 0).slice(0, 2), head: parts.filter(p => p.v < 0).slice(0, 2) };
+}
+const lensVerdict = v => v >= 1 ? "a strong tailwind" : v >= 0.3 ? "a tailwind" : v > -0.3 ? "mixed" : v > -1 ? "a headwind" : "a strong headwind";
+function renderLens(ind, eco) {
+  const box = $("lens");
+  const R = state.scanStatus === "ready" ? lensReading(ind, eco) : null;
+  if (!R) { box.hidden = true; box.replaceChildren(); return; }
+  const L = lens(), role = ROLES.find(r => r.id === prefs.role);
+  const line = (lab, arr) => arr.length ? el("li", null, el("b", { text: lab + ": " }), arr.map(p => p.text).join(", ")) : null;
+  box.replaceChildren(el("div", { class: "lensline" },
+    el("span", { class: "eyebrow", text: `Your lens · ${role.label}` }),
+    el("div", { class: "head" }, el("b", { text: `For ${L.noun}, today reads ${lensVerdict(R.net)}` }),
+      el("span", { class: "num" }, el("i", { class: "sw " + (R.net >= 0 ? "t" : "h") }), " " + signed(R.net))),
+    el("ul", null, line("Tailwind", R.tail), line("Headwind", R.head)),
+    el("p", { class: "fine", text: `Weighs the market gauges that matter to ${L.noun}${prefs.sectors.length ? ` plus ${mineLabel()}` : ""}. A structured reading, not advice.` })));
+  box.hidden = false;
+}
 const storyDomId = it => "story-" + String(it.id).replace(/[^a-z0-9-]/gi, "-");
 
 function openPicker() {
@@ -749,17 +828,18 @@ function renderGauge(kind, rows, defs) {
   const box = $(kind + "Rows"); box.replaceChildren();
   const max = niceMax(rows);
   const pin = kind === "ind" && personal();
-  box.classList.toggle("focus", pin);
+  const L = kind === "eco" ? lens() : null;
+  box.classList.toggle("focus", pin || !!L);
   const sorted = [...rows].sort((a, b) => (pin ? (isMine(b.id) - isMine(a.id)) : 0) || b.net - a.net);
   for (const r of sorted) {
     const pct = Math.min(50, Math.abs(r.net) / max * 50);
     const btn = el("button", {
-      class: "row" + (pin && isMine(r.id) ? " mine" : ""), type: "button", "aria-haspopup": "dialog",
+      class: "row" + ((pin && isMine(r.id)) || (L && L.gauges[r.id]) ? " mine" : ""), type: "button", "aria-haspopup": "dialog",
       "aria-label": `${defs[r.id].label}: ${signed(r.net)}, ${word(r.net)}, ${r.n} stories. Open details.`,
       onclick: () => openDrill(kind, r.id),
       onmouseenter: e => showTip(e, r, defs), onmousemove: moveTip, onmouseleave: () => { tip.hidden = true; }
     },
-      el("span", { class: "lab", text: defs[r.id].label }),
+      el("span", { class: "lab" }, defs[r.id].label, L && L.notes && L.notes[r.id] ? el("span", { class: "lensnote", text: L.notes[r.id] }) : null),
       el("span", { class: "track" }, r.net !== 0 ? el("span", { class: "bar " + (r.net > 0 ? "pos" : "neg"), style: `width:calc(${pct}% - 1px)` }) : null),
       el("span", { class: "v", text: r.n ? signed(r.net) : "—" })
     );
@@ -791,6 +871,7 @@ function storyCard(it) {
   const card = el("article", { class: "story" + (personal() && relevance(it) > 0 ? " mine" : ""), id: storyDomId(it) },
     el("div", { class: "meta" },
       el("span", { class: "theme", text: it.theme }),
+      lens() && Math.abs(lensScore(it)) >= 0.3 ? el("span", { class: "lenspill " + (lensScore(it) > 0 ? "pos" : "neg"), title: `Through your lens: ${signed(lensScore(it), 2)} per gauge`, text: lensWord(lensScore(it)) }) : null,
       it.date ? el("span", { text: fmtDate(it.date) }) : null,
       el("span", { text: "Horizon: " + it.horizon }),
       el("span", { class: "conf", title: it.confidence + " confidence" }, "Confidence ", ...[1, 2, 3].map(i => el("i", { class: i <= confN ? "on" : "" })), el("span", { class: "sr", text: "" }))
@@ -842,7 +923,7 @@ function renderWire() {
     const rest = items.filter(i => relevance(i) === 0);
     const kids = [];
     kids.push(el("div", { class: "wire-group" },
-      el("h3", { text: forYou.length ? `For you · ${forYou.length} ${forYou.length === 1 ? "story" : "stories"} touching ${mineLabel()}` : `Nothing in this view touches ${mineLabel()}` }),
+      el("h3", { text: forYou.length ? `For you · ${forYou.length} ${forYou.length === 1 ? "story" : "stories"} ${lens() ? "that matter to you" : "touching " + mineLabel()}` : `Nothing in this view touches ${mineLabel()}` }),
       forYou.length ? el("div", { class: "feed" }, forYou.map(storyCard)) : null));
     if (rest.length) {
       const d = el("details", { class: "rest", open: !forYou.length },
@@ -876,7 +957,9 @@ function renderAll() {
   renderHeader();
   if (state.scanStatus === "ready") {
     renderVerdicts(ind, eco); renderGauge("ind", ind, IND); renderGauge("eco", eco, ECO);
-  } else {
+  }
+  renderLens(ind, eco);
+  if (state.scanStatus !== "ready") {
     const note = state.scanStatus === "loading" ? "Loading scores…" : "Scores appear once a scan is loaded.";
     for (const k of ["ind", "eco"]) $(k + "Rows").replaceChildren(el("p", { class: "status", text: note }));
   }
