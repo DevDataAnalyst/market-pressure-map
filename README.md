@@ -5,6 +5,7 @@ Where the last 24 hours of news push Indian markets: tailwind or headwind, how h
 - **11 Indian sectors:** oil, gas and power; banks and NBFCs; IT services; pharma and healthcare; autos; FMCG and consumer; capital goods and infra; metals, cement and chemicals; agri and fertilisers; real estate; aviation, shipping and logistics. (Ids in the data files: energy, financials, tech, healthcare, autos, consumer, industrials, materials, agrifood, realestate, transport.)
 - **7 India market gauges** (stored under `economies`; positive = good for Indian markets): equities (Nifty and Sensex), rupee, bond market (G-Secs), inflation outlook, fiscal and trade balance, foreign investor flows, growth outlook.
 - Stories are written without company names.
+- **Personalised per visitor, no account:** on first visit the page asks which sectors you follow (up to three) and, optionally, what describes you (investor, exporter, importer, borrower, following the economy). It then leads with your sectors, puts the stories that move them first ("For you", with the rest folded below), pins and highlights them in the sector bars, narrows the exposure grid and signals to them, and suggests matching questions. Choices are saved only in the browser (`localStorage`); "Show everything" switches back to the full view.
 
 ## How it works
 
