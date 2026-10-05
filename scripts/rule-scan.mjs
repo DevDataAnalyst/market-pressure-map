@@ -531,8 +531,13 @@ const FX = [
 function fxEvent(t) {
   const fx = FX.find((f) => f.re.test(t));
   if (!fx) return null;
-  // "weaker", "falls" etc. mean the named currency lost value.
-  const d = dirOf(t);
+  // "weaker", "falls" etc. mean the named currency lost value. Read the words right after the
+  // currency first ("rupee set for relief from dip in oil" is about the rupee rising), then the rest.
+  const at = t.search(fx.re);
+  const near = t.slice(at, at + 50);
+  const first = (re) => { const m = near.match(re); return m ? m.index : Infinity; };
+  const up = Math.min(first(UP), first(/\b(relief|recover\w*|firm(s|ed|er)?|steady|steadies)\b/i)), down = first(DOWN);
+  const d = up < down ? 1 : down < up ? -1 : dirOf(t);
   if (!d) return null;
   const weak = d < 0;
   const side = weak ? fx.weak : fx.strong;
