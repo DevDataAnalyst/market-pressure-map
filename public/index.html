@@ -290,6 +290,11 @@ details.rest[open] > summary { margin-bottom: 12px; }
 .lenspill { border-radius: 999px; padding: 1px 8px; font: 600 11.5px var(--font-data); letter-spacing: .02em; text-transform: none; }
 .lenspill.pos { background: var(--tail-tint); color: var(--tail); }
 .lenspill.neg { background: var(--head-tint); color: var(--head); }
+.exposure { background: var(--sunk); border-radius: 8px; padding: 12px 14px; color: var(--ink-2); font-size: 14.5px; }
+.share-row { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; font-size: 13.5px; }
+.share-row a { color: var(--accent); font-weight: 600; }
+.feedlist { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 13px; color: var(--muted); }
+.feedlist a { color: var(--ink-2); }
 </style>
 </head>
 <body>
@@ -428,6 +433,7 @@ details.rest[open] > summary { margin-bottom: 12px; }
     </div>
   </section>
 
+  <nav class="feedlist" aria-label="Sector pages and feeds" id="feedlist"></nav>
   <p class="disclaim">Built daily from public news and open-source intelligence between the dates shown, scored by keyword rules or, when the optional routine runs, by Claude. Figures are as reported at the time and can be revised. This page is an analytical aid, not investment advice.</p>
 </div>
 
@@ -597,6 +603,24 @@ const LENSES = {
   follower: { noun: "someone following the economy", gauges: { equities: 1, rupee: 1, bonds: 1, inflation: 1, fiscal: 1, flows: 1, growth: 1 }, sectors: {} }
 };
 const lens = () => (personal() && prefs.role && LENSES[prefs.role]) || null;
+// Sector links: /sector/<slug> (share page with a preview) and #sector=<slug>; feeds at /feeds/<slug>.xml.
+const SECTOR_SLUGS = { energy: "oil-gas", financials: "banks", tech: "it", healthcare: "pharma", autos: "autos", consumer: "fmcg", industrials: "capital-goods", materials: "metals", agrifood: "agri", realestate: "real-estate", transport: "transport" };
+const SLUG_TO_SECTOR = Object.fromEntries(Object.entries(SECTOR_SLUGS).map(([id, slug]) => [slug, id]));
+// How each sector is exposed, in plain words (written once; no figures, no company names).
+const EXPOSURE = {
+  energy: "India imports most of its crude, so fuel marketers' margins move against oil prices while upstream producers gain from them. City-gas distributors are squeezed by costly LNG, and power demand follows growth and the weather.",
+  financials: "Earnings track credit growth, the RBI's rate path and bond yields, since rising yields cut the value of banks' bond holdings. Foreign investors own large stakes, so foreign selling tends to hit this sector first.",
+  tech: "Most revenue comes from US and European clients, so their technology budgets drive the outlook. A weaker rupee lifts rupee earnings; slow discretionary spending and pricing pressure weigh.",
+  healthcare: "Drug exporters earn in dollars and gain from a weaker rupee. US drug pricing and regulatory actions matter for exporters; domestic demand is steadier.",
+  autos: "Demand depends on loan rates, fuel prices and rural incomes, which follow the monsoon. Steel and aluminium are major costs, and auto-parts makers export to the US and Europe.",
+  consumer: "Rural demand follows the monsoon, farm incomes and food inflation. Crude-linked packaging and edible oils are major costs.",
+  industrials: "Orders depend on government capex, the budget and private investment. Steel prices and interest rates drive margins and project financing.",
+  materials: "Steel and aluminium prices follow China's demand and exports, cement follows construction, and chemicals face crude-linked inputs and cheap Chinese supply.",
+  agrifood: "The monsoon drives output and farm incomes. Fertiliser makers depend on imported gas and government subsidies, and export curbs or duties shift crop prices.",
+  realestate: "Home-loan rates, set by RBI policy and bond yields, drive housing demand. Construction costs follow cement and steel.",
+  transport: "Jet fuel is airlines' biggest cost and is priced in dollars. Shippers and logistics firms face freight, insurance and route risk from the Red Sea and Hormuz."
+};
+const sectorHash = id => "sector=" + SECTOR_SLUGS[id];
 // Total weight of a lens, so readings are an average per gauge and comparable across roles.
 const lensWeight = L => Object.values(L.gauges).reduce((s, w) => s + Math.abs(w), 0) + Object.values(L.sectors).reduce((s, w) => s + Math.abs(w), 0) + prefs.sectors.length;
 // What a gauge or sector reading means in words, by its sign.
@@ -951,6 +975,7 @@ function renderHeader() {
 
 function renderAll() {
   renderPrefs();
+  renderFeedList();
   renderExamples();
   const items = activeItems();
   const ind = totals(items, "industries", INDUSTRIES), eco = totals(items, "economies", ECONOMIES);
@@ -1168,7 +1193,8 @@ function showDialog(eyebrow, title, sections, hash) {
   drill.scrollTop = 0;
   try { history.replaceState(null, "", hash ? "#" + hash : location.pathname + location.search); } catch {}
 }
-drill.addEventListener("close", () => { try { history.replaceState(null, "", location.pathname + location.search); } catch {} });
+const baseTitle = document.title;
+drill.addEventListener("close", () => { document.title = baseTitle; try { history.replaceState(null, "", location.pathname + location.search); } catch {} });
 drill.addEventListener("click", e => { if (e.target === drill) drill.close(); });
 $("drillClose").addEventListener("click", () => drill.close());
 const sec = (title, ...kids) => el("section", { class: "drill-sec" }, el("h3", { text: title }), ...kids);
@@ -1203,7 +1229,10 @@ function openDrill(kind, id) {
   const cross = crossExposure(kind, id);
   const cmax = Math.max(1, ...cross.map(c => Math.abs(c.net)));
   const o = KIND[k.other];
+  const isSector = kind === "ind";
   showDialog(`${k.noun} · details`, def.label, [
+    isSector ? el("p", { class: "exposure" }, el("b", { text: "How this sector is exposed. " }), EXPOSURE[id]) : null,
+    isSector ? shareRow(id) : null,
     el("div", { class: "kpis" },
       el("div", { class: "kpi" }, el("b", { text: r.n ? signed(r.net) : "—" }), el("span", { text: word(r.net) })),
       el("div", { class: "kpi" }, el("b", { text: d === null ? "—" : signed(d) }), el("span", { text: "Change over 24 hours" })),
@@ -1226,7 +1255,27 @@ function openDrill(kind, id) {
     el("div", { class: "drill-actions" },
       stories.length ? el("button", { class: "btn ghost", type: "button", text: `Show these stories in the wire`, onclick: () => showInWire(kind, id) }) : null,
       askReady && el("button", { class: "btn primary", type: "button", text: `Ask the desk about ${def.short}`, onclick: () => askAbout(`What is driving pressure on ${def.label} right now, and what should I watch next?`) }))
-  ], `${kind}-${id}`);
+  ], isSector ? sectorHash(id) : `${kind}-${id}`);
+  document.title = isSector ? `${def.label}: ${word(r.net).toLowerCase()} · Market Pressure Map` : `${def.label} · Market Pressure Map`;
+}
+function shareRow(id) {
+  const slug = SECTOR_SLUGS[id], url = `${location.origin}/sector/${slug}`;
+  const status = el("span", { class: "status", role: "status" });
+  const copy = el("button", { class: "linkbtn", type: "button", text: navigator.share ? "Share this sector" : "Copy link to this sector", onclick: async () => {
+    try {
+      if (navigator.share) await navigator.share({ title: `${IND[id].label} · Market Pressure Map`, url });
+      else { await navigator.clipboard.writeText(url); status.textContent = "Link copied"; }
+    } catch { status.textContent = url; }
+  } });
+  return el("div", { class: "share-row" }, copy,
+    el("a", { href: `/feeds/${slug}.xml`, target: "_blank", rel: "noopener", text: "RSS feed for this sector" }), status);
+}
+function renderFeedList() {
+  const box = $("feedlist"); if (!box) return;
+  box.replaceChildren(el("span", { text: "Sector pages:" }),
+    ...INDUSTRIES.map(d => el("a", { href: "#" + sectorHash(d.id), text: d.short })),
+    el("span", { text: "· RSS:" }), el("a", { href: "/feeds/all.xml", text: "all stories" }),
+    ...prefs.sectors.map(id => el("a", { href: `/feeds/${SECTOR_SLUGS[id]}.xml`, text: IND[id].short })));
 }
 function openPair(indId, ecoId) {
   const i = IND[indId], e = ECO[ecoId]; if (!i || !e) return;
@@ -1252,6 +1301,8 @@ function openPair(indId, ecoId) {
   ], `pair-${indId}-${ecoId}`);
 }
 function openFromHash() {
+  const sm = /^#sector=([a-z-]+)$/.exec(location.hash);
+  if (sm) { const id = SLUG_TO_SECTOR[sm[1]] || (IND[sm[1]] ? sm[1] : null); if (id && state.scanStatus === "ready") openDrill("ind", id); return; }
   const m = /^#(ind|eco)-([a-z]+)$/.exec(location.hash) || /^#pair-([a-z]+)-([a-z]+)$/.exec(location.hash);
   if (!m || state.scanStatus !== "ready") return;
   if (location.hash.startsWith("#pair-")) openPair(m[1], m[2]); else openDrill(m[1], m[2]);

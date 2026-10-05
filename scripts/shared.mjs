@@ -26,6 +26,13 @@ export const ECONOMIES = {
   flows: "Foreign investor flows",
   growth: "Growth outlook",
 };
+// Friendly slugs for sector links (/sector/banks, #sector=banks) and feeds (/feeds/banks.xml).
+export const SECTOR_SLUGS = {
+  energy: "oil-gas", financials: "banks", tech: "it", healthcare: "pharma", autos: "autos", consumer: "fmcg",
+  industrials: "capital-goods", materials: "metals", agrifood: "agri", realestate: "real-estate", transport: "transport",
+};
+// Public address of the site, used for absolute links in feeds and share pages. Set SITE_URL to override.
+export const SITE_URL = (process.env.SITE_URL || "https://market-pressure-map.vercel.app").replace(/\/+$/, "");
 export const THEMES = ["Energy & geopolitics", "Monetary policy", "Rates & bonds", "Trade", "Growth data", "Tech cycle", "Commodities", "Currencies", "Foreign flows", "Fiscal", "Monsoon & farm"];
 export const CONF = { high: 1, medium: 0.7, low: 0.4 };
 

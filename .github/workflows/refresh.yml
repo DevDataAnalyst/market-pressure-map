@@ -79,6 +79,7 @@ jobs:
         run: node scripts/rule-scan.mjs
         env:
           FORCE_RULE_SCAN: ${{ inputs.publish_rule_scan && '1' || '' }}
+          SITE_URL: ${{ vars.SITE_URL }}
 
       # Paid API path, off by default. Set the repository variable SCAN_WITH_API=true to use it.
       - name: Scan news and score impact (API)

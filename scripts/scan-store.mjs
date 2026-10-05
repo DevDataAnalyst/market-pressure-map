@@ -3,6 +3,7 @@
 // and the optional API scan (refresh.mjs).
 import { readFile, writeFile } from "node:fs/promises";
 import { CONF, ECONOMIES, INDUSTRIES, THEMES, fail } from "./shared.mjs";
+import { writeSectorOutputs } from "./sector-outputs.mjs";
 
 export const SCAN_PATH = new URL("../public/data/scan.json", import.meta.url);
 export const HISTORY_PATH = new URL("../public/data/history.json", import.meta.url);
@@ -69,6 +70,7 @@ export async function writeScan({ items, model, headlinesScanned = null, feedsOk
     items,
   };
   await writeFile(SCAN_PATH, JSON.stringify(scan, null, 1) + "\n");
+  await writeSectorOutputs(scan);
 
   const net = (key, ids) => {
     const t = Object.fromEntries(Object.keys(ids).map((k) => [k, 0]));
