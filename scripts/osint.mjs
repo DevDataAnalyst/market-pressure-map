@@ -73,6 +73,8 @@ export const COMPANY_NAMES = new RegExp("\\b(" + [
   "Tesla", "Toyota", "Volkswagen", "BYD", "CATL", "Ford", "General Motors", "Stellantis", "Honda", "Nissan", "Hyundai", "Kia", "BMW", "Mercedes-Benz",
   "JPMorgan", "Goldman Sachs", "Morgan Stanley", "Citigroup", "Citi", "HSBC", "Barclays", "BlackRock", "Berkshire", "Mastercard",
   "Walmart", "Pfizer", "Moderna", "Novartis", "Roche", "AstraZeneca", "Bayer", "Nestle", "Unilever", "Cargill", "ADM", "Bunge", "BHP", "Rio Tinto", "ArcelorMittal", "Siemens", "Mitsubishi", "Sony", "Reliance", "Tata", "TCS", "Adani", "Infosys", "Wipro", "HDFC", "ICICI",
+  "Standard Chartered", "StanChart", "Nomura", "UBS", "Bank of America", "BofA", "Jefferies", "CLSA", "Macquarie", "Deutsche Bank", "BNP Paribas", "Societe Generale", "Wells Fargo", "Bernstein",
+  "Moody's", "Fitch", "S&P Global", "Crisil", "ICRA", "Kotak", "SBI", "State Bank of India", "Axis Bank", "Motilal Oswal", "Nuvama", "Emkay", "Bajaj", "Maruti", "Mahindra", "ONGC", "Coal India", "NTPC", "Larsen", "Hindalco", "JSW", "Vedanta", "Airtel", "Jio", "ITC", "Hindustan Unilever", "Asian Paints", "Sun Pharma", "Cipla", "IndiGo", "Titan", "UltraTech", "HPE",
 ].join("|") + ")\\b");
 const STOP = new Set(["about", "after", "against", "amid", "their", "there", "these", "which", "while", "would", "could", "says", "said", "with", "from", "that", "this", "into", "over", "under", "will", "have", "been", "more", "than"]);
 
