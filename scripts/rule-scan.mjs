@@ -41,11 +41,11 @@ const SEARCHES = [
 
 // ---------- direction words ----------
 const UP = /\b(rise[sn]?|rising|rose|jump(s|ed|ing)?|surg(e|es|ed|ing)|soar(s|ed|ing)?|climb(s|ed|ing)?|gain(s|ed)?|rall(y|ies|ied)|spik(e|es|ed)|higher|highs?|record high|tops?|top(ped)?|accelerat\w*|hotter|stronger|strengthen\w*|beat(s)?|boost(s|ed)?|rebound(s|ed)?|up \d|increase[sd]?|expand(s|ed|ing)?|grow(s|n|ing)?|grew|widen(s|ed|ing)?)\b/i;
-const DOWN = /\b(fall(s|ing)?|fell|drop(s|ped)?|slid(e|es)?|slump(s|ed)?|plung(e|es|ed)|tumbl(e|es|ed)|sink(s)?|sank|declin(e|es|ed|ing)|lower|lows?|weak(er|ens?|ened|ening)?|cool(s|ed|ing)?|eas(e|es|ed|ing)|slow(s|ed|ing|down)?|miss(es|ed)?|contract(s|ed|ion)?|shrink(s|ing)?|shr[au]nk|retreat(s|ed)?|down \d|decrease[sd]?|lowest|tumbling|sliding|narrow(s|ed|ing)?)\b/i;
+const DOWN = /\b(fall(s|ing)?|fell|drop(s|ped)?|slid(e|es)?|slump(s|ed)?|plung(e|es|ed)|tumbl(e|es|ed)|sink(s)?|sank|declin(e|es|ed|ing)|lower|lows?|weak(er|ens?|ened|ening)?|cool(s|ed|ing)?|eas(e|es|ed|ing)|slow(s|ed|ing|down)?|miss(es|ed)?|contract(s|ed|ion)?|shrink(s|ing)?|shr[au]nk|retreat(s|ed)?|down \d|decrease[sd]?|lowest|tumbling|sliding|narrow(s|ed|ing)?|slip(s|ped|ping)?|dip(s|ped)?|soften(s|ed|ing)?)\b/i;
 const INTENSE = /\b(surg|soar|plung|tumbl|record|spik|biggest|sharpest|crisis|collapse|shock|crash|slump)/i;
 const SPECULATIVE = /\b(will|could|may|might|expected to|expects?|forecast|predict|outlook|seen|eyes?|weighs?|considers?|mulls?|threatens?|warns?|if )\b/i;
 // Opinion, explainers, how-tos and single-firm news aren't market-wide events.
-const SKIP = /\?|^\d+\.\s|\|.*\||^(how|why|what|inside|explainer)\b|^\d+ (trends|things|reasons|ways|stocks|charts)\b|\b(opinion|explainer|explained|what to know|what it means|how to|here's why|preview|these \d+ factors|factors to watch|things to watch|live updates|live news|live blog|latest live|live:|week ahead|to test markets|price update|short-term scenario|podcast|video|watch:|newsletter|shares of|stock of|'s shares|earnings|quarterly results|q[1-4] results|ipo|ceo|top picks|stocks to buy|stocks? that could|could benefit|black[- ]market|parallel market|informal (currency |exchange |forex )?market|(dow( jones)?|stocks?|stock market|wall street|markets?|sensex|nifty) today)\b|\b\d+\s+[\w.'-]+(\s+[\w.'-]+){0,3}\s+stocks\b/i;
+const SKIP = /\?|^\d+\.\s|\b(wins?|bags?|secures?|lands?|signs?) (an? )?(\$|rs\.? ?|₹)?[\d.,]+ ?(million|billion|crore|bn|mn|cr)?\b.*\b(deal|order|contract)s?\b|\|.*\||^(how|why|what|inside|explainer)\b|^\d+ (trends|things|reasons|ways|stocks|charts)\b|\b(opinion|explainer|explained|what to know|what it means|how to|here's why|preview|these \d+ factors|factors to watch|things to watch|live updates|live news|live blog|latest live|live:|week ahead|to test markets|price update|short-term scenario|podcast|video|watch:|newsletter|shares of|stock of|'s shares|earnings|quarterly results|q[1-4] results|ipo|ceo|top picks|stocks to buy|stocks? that could|could benefit|black[- ]market|parallel market|informal (currency |exchange |forex )?market|(dow( jones)?|stocks?|stock market|wall street|markets?|sensex|nifty) today)\b|\b\d+\s+[\w.'-]+(\s+[\w.'-]+){0,3}\s+stocks\b/i;
 // Ticker lists ("ORCL, TSLA In Focus") mark single-stock market wraps.
 const TICKERS = /\b[A-Z][\w&.-]+( [A-Z][\w&.-]+){0,3}['’]s( [A-Z][\w-]+){0,2} ([Pp]roject|[Mm]ine|[Pp]lant|[Rr]efinery|[Ff]actory|[Dd]eal|[Bb]id|[Ss]take|[Bb]onds?|[Ss]hares|[Ss]tock|[Rr]esults|[Pp]rofit|[Rr]evenue|CEO)\b|\b[A-Z]{2,6} results\b|:\s*[A-Z]{2,5}(,\s*[A-Z]{2,5})+\b|\b[A-Z]{3,5}(,\s*[A-Z]{3,5}){3,}\b/;
 // Lead-headline preference: global or official sources over local angles.
@@ -638,7 +638,8 @@ export function score(headlines, memory = []) {
   const today = new Date().toISOString().slice(0, 10);
   const stories = [...clusters.values()].map(({ ev, heads }) => {
     const reports = heads.reduce((n, h) => n + (h.reports || 1), 0);
-    const outlets = [...new Set(heads.flatMap((h) => [h.source, ...(h.also ?? []).map((a) => a.source)]))];
+    // Outlets run by listed firms (broker news sites) would put a company name on the page; leave them out of the list.
+    const outlets = [...new Set(heads.flatMap((h) => [h.source, ...(h.also ?? []).map((a) => a.source)]))].filter((o) => !COMPANY_NAMES.test(o) && !COMPANY_MARKERS.test(o));
     const speculative = heads.filter((h) => SPECULATIVE.test(h.title)).length > heads.length / 2;
     let conf = reports >= 5 && outlets.length >= 3 ? "high" : reports >= 2 ? "medium" : "low";
     if (speculative) conf = conf === "high" ? "medium" : "low";
