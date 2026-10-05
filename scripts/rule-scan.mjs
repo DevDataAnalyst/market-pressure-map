@@ -61,6 +61,18 @@ const dirOf = (t) => {
   const u = UP.test(t), d = DOWN.test(t);
   return u === d ? 0 : u ? 1 : -1;
 };
+// Direction from the words right after the subject ("Copper ticks up as Fed bets cool" is about copper
+// rising), falling back to the whole headline.
+const NUDGE_UP = /\b(ticks?|edges?|inch(es)?|moves?|creeps?) (up|higher)\b|\b(relief|recover\w*|firm(s|ed|er)?|steadies)\b/i;
+const NUDGE_DOWN = /\b(ticks?|edges?|inch(es)?|moves?|creeps?) (down|lower)\b/i;
+function dirNear(t, re) {
+  const at = t.search(re);
+  if (at < 0) return dirOf(t);
+  const near = t.slice(at, at + 50);
+  const pos = (r) => { const m = near.match(r); return m ? m.index : Infinity; };
+  const up = Math.min(pos(UP), pos(NUDGE_UP)), down = Math.min(pos(DOWN), pos(NUDGE_DOWN));
+  return up < down ? 1 : down < up ? -1 : dirOf(t);
+}
 
 // ---------- source economies ----------
 // Which economy a headline is about. Only India and the economies whose news reaches Indian
@@ -88,7 +100,7 @@ const RULES = [
   {
     id: "rates", theme: "Monetary policy", horizon: "months", weight: 3, byEcon: true, needsEconomy: true,
     subject: /\b(Fed|Federal Reserve|FOMC|RBI|Reserve Bank of India|MPC|repo rate)\b/,
-    dir: (t) => /\b(hike[sd]?|hiking|rais(e|es|ed|ing) (the )?(interest |repo )?rates?|tighten\w*|hawkish)\b/i.test(t) ? (/\b(dims?|dimm\w*|fad(e|es|ed|ing)|eas(e|es|ed|ing)|fears? (eas|fad|recede)\w*|fall(s|en)?|fell|drop(s|ped)?|slip\w*|pare[sd]?|scal(e|es|ed) back|less likely|unwind\w*|cool(s|ed)?|cut(s)? (the )?odds|lower(s|ed)? (the )?odds)\b/i.test(t) ? -1 : 1) : /\b(cut(s|ting)?|lower(s|ed|ing)? (the )?(interest |repo )?rates?|eas(e|es|ed|ing)|dovish|rate reduction)\b/i.test(t) ? -1 : 0,
+    dir: (t) => /\b(hike[sd]?|hiking|rais(e|es|ed|ing) (the )?(interest |repo )?rates?|tighten\w*|hawkish)\b/i.test(t) ? (/\b(dims?|dimm\w*|fad(e|es|ed|ing)|reduced|lower(ed)? (prospects|odds|bets)|bets cool\w*|eas(e|es|ed|ing)|fears? (eas|fad|recede)\w*|fall(s|en)?|fell|drop(s|ped)?|slip\w*|pare[sd]?|scal(e|es|ed) back|less likely|unwind\w*|cool(s|ed)?|cut(s)? (the )?odds|lower(s|ed)? (the )?odds)\b/i.test(t) ? -1 : 1) : /\b(cut(s|ting)?|lower(s|ed|ing)? (the )?(interest |repo )?rates?|eas(e|es|ed|ing)|dovish|rate reduction)\b/i.test(t) ? -1 : 0,
     up: {
       india: {
         label: "RBI tightening",
@@ -171,7 +183,7 @@ const RULES = [
     id: "oil", theme: "Commodities", horizon: "weeks", weight: 3,
     subject: /\b(oil|crude|brent|wti|opec\+?)\b/i, exclude: /\b(palm|olive|cooking|edible|vegetable)\b/i,
     gate: /\b(prices?|futures|brent|wti|barrels?|output|opec|benchmark)\b/i,
-    dir: (t) => /\b(output (cut|curb)|cut(s)? output|supply cut)/i.test(t) ? 1 : /\b(output (hike|increase|boost)|rais(e|es|ed) output|boost(s|ed)? output|glut|oversupply|fuel release|stock release)\b/i.test(t) ? -1 : dirOf(t),
+    dir: (t) => /\b(output (cut|curb)|cut(s)? output|supply cut)/i.test(t) ? 1 : /\b(output (hike|increase|boost)|rais(e|es|ed) output|boost(s|ed)? output|glut|oversupply|fuel release|stock release)\b/i.test(t) ? -1 : dirNear(t, /\b(oil|crude|brent|wti)\b/i),
     up: {
       label: "higher oil prices",
       rationale: "India imports over 80% of its crude, so dearer oil widens the trade deficit, weakens the rupee, feeds inflation and squeezes fuel marketers, airlines and companies using crude-based inputs.",
@@ -370,7 +382,7 @@ const RULES = [
   {
     id: "gold", theme: "Commodities", horizon: "weeks", weight: 1,
     subject: /\bgold\b/i, exclude: /\bgold loans?\b/i,
-    dir: dirOf,
+    dir: (t) => dirNear(t, /\bgold\b/i),
     up: {
       label: "higher gold prices",
       rationale: "India is one of the largest gold importers, so dearer gold widens the trade deficit and cools jewellery demand, while lifting gold-loan collateral values.",
@@ -387,7 +399,7 @@ const RULES = [
   {
     id: "metals", theme: "Commodities", horizon: "weeks", weight: 2,
     subject: /\b(copper|iron ore|aluminium|aluminum|nickel|zinc|lithium|steel|silver|base metals?|metal prices?)\b/i,
-    dir: dirOf,
+    dir: (t) => dirNear(t, /\b(copper|iron ore|aluminium|aluminum|nickel|zinc|lithium|steel|silver|base metals?|metal prices?)\b/i),
     up: {
       label: "higher metal prices",
       rationale: "Rising metal prices lift Indian steel, aluminium and zinc producers while raising input costs for automakers, builders and capital-goods makers.",
@@ -531,13 +543,9 @@ const FX = [
 function fxEvent(t) {
   const fx = FX.find((f) => f.re.test(t));
   if (!fx) return null;
-  // "weaker", "falls" etc. mean the named currency lost value. Read the words right after the
-  // currency first ("rupee set for relief from dip in oil" is about the rupee rising), then the rest.
-  const at = t.search(fx.re);
-  const near = t.slice(at, at + 50);
-  const first = (re) => { const m = near.match(re); return m ? m.index : Infinity; };
-  const up = Math.min(first(UP), first(/\b(relief|recover\w*|firm(s|ed|er)?|steady|steadies)\b/i)), down = first(DOWN);
-  const d = up < down ? 1 : down < up ? -1 : dirOf(t);
+  // "weaker", "falls" etc. mean the named currency lost value; read the words right after the currency
+  // ("rupee set for relief from dip in oil" is about the rupee rising).
+  const d = dirNear(t, fx.re);
   if (!d) return null;
   const weak = d < 0;
   const side = weak ? fx.weak : fx.strong;
