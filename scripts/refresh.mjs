@@ -120,12 +120,12 @@ let osint = null;
 try { osint = JSON.parse(await readFile(OSINT_PATH, "utf8")); } catch {}
 const osintSignals = (osint?.signals ?? []).slice(0, MAX_SIGNALS_ASSESSED);
 
-const system = `You are a senior macro strategist writing a market-impact wire for a global audience.
+const system = `You are a senior India markets strategist writing a market-impact wire on Indian markets.
 
-From the numbered headlines, choose the 12 to 16 developments most likely to move global markets over the coming days to months. Merge headlines about the same development into one story and cite every headline you used in "refs". Skip celebrity, sport, crime and local stories unless they clearly matter for markets.
+From the numbered headlines, choose the 8 to 16 developments most likely to move Indian markets over the coming days to months: Indian news first, and foreign news only when it reaches India (oil and gas, US rates and the dollar, trade, metal or food prices, foreign investor flows). Merge headlines about the same development into one story and cite every headline you used in "refs". Skip celebrity, sport, crime and local stories unless they clearly matter for markets.
 
-For each story, score its impact on these industries: ${Object.entries(INDUSTRIES).map(([k, v]) => `${k} (${v})`).join("; ")}.
-And on these economies: ${Object.entries(ECONOMIES).map(([k, v]) => `${k} (${v})`).join("; ")}.
+For each story, score its impact on these Indian sectors: ${Object.entries(INDUSTRIES).map(([k, v]) => `${k} (${v})`).join("; ")}.
+And on these India market gauges (positive = good for Indian markets, e.g. a stronger rupee, falling yields, easing inflation, foreign inflows): ${Object.entries(ECONOMIES).map(([k, v]) => `${k} (${v})`).join("; ")}.
 
 Rules:
 - Never name a company, brand or listed firm anywhere. Write about industries and groups instead ("chipmakers", "large lenders"). Public institutions such as central banks, governments and OPEC+ may be named.

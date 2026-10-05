@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="Where the latest global headlines push the world's biggest industries and economies, refreshed daily.">
+<meta name="description" content="Where the last 24 hours of news push Indian market sectors, the rupee, bonds, inflation and foreign flows, refreshed daily.">
 <title>Market Pressure Map</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -261,9 +261,9 @@ textarea { width: 100%; min-height: 108px; resize: vertical; padding: 10px 12px;
 <div class="wrap">
   <header class="mast">
     <div class="mast-title">
-      <span class="eyebrow">Global newsflow · impact desk</span>
+      <span class="eyebrow">Indian markets · impact desk</span>
       <h1>Market Pressure Map</h1>
-      <p class="lede">Where the latest global headlines push the world's biggest industries and economies: tailwind or headwind, how hard, and why.</p>
+      <p class="lede">Where the last 24 hours of Indian and global news push Indian market sectors and the rupee, bonds, inflation and foreign flows: tailwind or headwind, how hard, and why.</p>
     </div>
     <div class="stamp">
       <span class="eyebrow">Scan window</span>
@@ -275,9 +275,9 @@ textarea { width: 100%; min-height: 108px; resize: vertical; padding: 10px 12px;
   <details class="method">
     <summary>How the scores work</summary>
     <div class="body">
-      <p>Each story is scored from <span class="num">−3</span> (strong headwind) to <span class="num">+3</span> (strong tailwind) for every industry and economy it touches. The map adds those scores, counting high-confidence calls at <span class="num">1.0</span>, medium at <span class="num">0.7</span> and low at <span class="num">0.4</span>.</p>
-      <p>Industries are the largest revenue pools in the world economy. Economies are the largest by output, plus the Gulf producers that set energy prices. Stories are written without company names, so the map shows sector-level pressure only.</p>
-      <p>Each day a free job reads the latest market headlines and intelligence signals and matches them to event rules, such as "oil prices rise", "central bank cuts rates" or "new tariffs". Each rule carries a reviewed set of exposures. Headlines on the same event are grouped into one story, and confidence rises with the number of separate reports. When the optional Claude routine runs, Claude writes and scores the stories itself instead.</p>
+      <p>Each story is scored from <span class="num">−3</span> (strong headwind) to <span class="num">+3</span> (strong tailwind) for every sector and market gauge it touches. The map adds those scores, counting high-confidence calls at <span class="num">1.0</span>, medium at <span class="num">0.7</span> and low at <span class="num">0.4</span>.</p>
+      <p>Sectors follow the main Indian market sector groups. Market gauges track how news reaches Indian markets: equities, the rupee, government bond yields, inflation, the fiscal and trade balance, foreign investor flows and growth. A positive gauge score is good for Indian markets: a stronger rupee, falling bond yields, easing inflation, foreign inflows. Foreign news is included only when it reaches India, through oil and gas, US rates and the dollar, trade, metal or food prices. Stories are written without company names, so the map shows sector-level pressure only.</p>
+      <p>Each day a free job reads the latest market headlines and intelligence signals and matches them to event rules, such as "oil prices rise", "RBI cuts rates", "FPIs sell" or "weak monsoon". Each rule carries a reviewed set of exposures. Headlines on the same event are grouped into one story, and confidence rises with the number of separate reports. When the optional Claude routine runs, Claude writes and scores the stories itself instead.</p>
       <p>Scores are a structured judgement about direction and size over each story's horizon. They are not price targets or investment advice.</p>
     </div>
   </details>
@@ -285,14 +285,14 @@ textarea { width: 100%; min-height: 108px; resize: vertical; padding: 10px 12px;
   <section class="verdicts" id="verdicts" aria-label="Headline verdicts">
     <div class="verdict"><span class="eyebrow">Strongest tailwind</span><div class="skel" style="width:70%"></div></div>
     <div class="verdict"><span class="eyebrow">Strongest headwind</span><div class="skel" style="width:60%"></div></div>
-    <div class="verdict"><span class="eyebrow">Most supported economy</span><div class="skel" style="width:55%"></div></div>
-    <div class="verdict"><span class="eyebrow">Most exposed economy</span><div class="skel" style="width:65%"></div></div>
+    <div class="verdict"><span class="eyebrow">Strongest gauge</span><div class="skel" style="width:55%"></div></div>
+    <div class="verdict"><span class="eyebrow">Weakest gauge</span><div class="skel" style="width:65%"></div></div>
   </section>
 
   <section class="gauges">
     <div class="panel" id="indPanel">
       <div class="panel-head">
-        <h2>Industry pressure</h2>
+        <h2>Sector pressure</h2>
         <div class="legend"><span><i class="sw h"></i>Headwind</span><span><i class="sw t"></i>Tailwind</span></div>
       </div>
       <div class="rows" id="indRows"></div>
@@ -302,7 +302,7 @@ textarea { width: 100%; min-height: 108px; resize: vertical; padding: 10px 12px;
     </div>
     <div class="panel" id="ecoPanel">
       <div class="panel-head">
-        <h2>Economy pressure</h2>
+        <h2>Market gauges</h2>
         <div class="legend"><span><i class="sw h"></i>Headwind</span><span><i class="sw t"></i>Tailwind</span></div>
       </div>
       <div class="rows" id="ecoRows"></div>
@@ -316,11 +316,11 @@ textarea { width: 100%; min-height: 108px; resize: vertical; padding: 10px 12px;
     <div class="panel-head">
       <div style="display:grid;gap:4px">
         <span class="eyebrow">Drill down</span>
-        <h2 id="mxTitle">Industry × economy exposure</h2>
+        <h2 id="mxTitle">Sector × gauge exposure</h2>
       </div>
       <div class="legend"><span><i class="sw h"></i>Headwind</span><span><i class="sw t"></i>Tailwind</span></div>
     </div>
-    <p class="status">Each cell is the industry's net score in stories that also involve that economy. Darker means stronger. Select a cell to see the stories behind it.</p>
+    <p class="status">Each cell is the sector's net score in stories that also move that gauge. Darker means stronger. Select a cell to see the stories behind it.</p>
     <div class="tablewrap" id="matrix"><p class="status">Loading scores…</p></div>
   </section>
 
@@ -337,11 +337,11 @@ textarea { width: 100%; min-height: 108px; resize: vertical; padding: 10px 12px;
           <option value="elevated">Elevated and high</option>
           <option value="high">High only</option>
         </select>
-        <label class="status" for="intelRegion">Economy</label>
-        <select id="intelRegion"><option value="all">All economies</option></select>
+        <label class="status" for="intelRegion">Gauge</label>
+        <select id="intelRegion"><option value="all">All gauges</option></select>
       </div>
     </div>
-    <p class="status" style="max-width:80ch">Geopolitical and economic signals from open sources: conflict trackers, disaster alerts, central banks, international bodies and worldwide media monitoring. Each signal is tagged with the industries and economies it exposes. Signals marked "assessed" have been scored for market impact, by keyword rules or, when the optional Claude routine runs, by Claude.</p>
+    <p class="status" style="max-width:80ch">Geopolitical and economic signals from open sources: conflict trackers, disaster alerts, central banks, international bodies and media monitoring, kept only when they reach Indian markets. Each signal is tagged with the industries and economies it exposes. Signals marked "assessed" have been scored for market impact, by keyword rules or, when the optional Claude routine runs, by Claude.</p>
     <div class="filters" id="intelCats"></div>
     <div class="sig-list" id="sigList"><div class="empty"><strong>Loading signals…</strong></div></div>
     <div><button class="btn ghost" type="button" id="sigMore" hidden>Show more signals</button></div>
@@ -359,11 +359,11 @@ textarea { width: 100%; min-height: 108px; resize: vertical; padding: 10px 12px;
       <div class="thread" id="thread" aria-live="polite"></div>
       <form id="askForm">
         <label for="askText">Your question</label>
-        <textarea id="askText" maxlength="600" placeholder="e.g. Why is India the most exposed economy right now?"></textarea>
+        <textarea id="askText" maxlength="600" placeholder="e.g. Why is the rupee under pressure right now?"></textarea>
         <div class="examples" aria-label="Example questions">
-          <button type="button" class="ex">Why is India the most exposed economy right now?</button>
-          <button type="button" class="ex">How do higher bond yields hit real estate?</button>
-          <button type="button" class="ex">Which industries gain if oil falls below $80?</button>
+          <button type="button" class="ex">Why is the rupee under pressure right now?</button>
+          <button type="button" class="ex">How do higher US yields affect foreign flows into India?</button>
+          <button type="button" class="ex">Which sectors gain if oil falls below $80?</button>
         </div>
         <div class="ask-actions">
           <button class="btn primary" type="submit" id="askBtn">Ask</button>
@@ -407,28 +407,29 @@ textarea { width: 100%; min-height: 108px; resize: vertical; padding: 10px 12px;
 
 <script>
 const INDUSTRIES = [
-  { id: "energy", label: "Energy (oil, gas & power)", short: "Energy" },
-  { id: "financials", label: "Banks & financials", short: "Financials" },
-  { id: "tech", label: "Technology & semiconductors", short: "Tech & chips" },
-  { id: "healthcare", label: "Healthcare & pharma", short: "Healthcare" },
-  { id: "autos", label: "Autos & mobility", short: "Autos" },
-  { id: "consumer", label: "Retail & consumer goods", short: "Consumer" },
-  { id: "industrials", label: "Industrials & machinery", short: "Industrials" },
-  { id: "materials", label: "Materials & mining", short: "Materials" },
-  { id: "agrifood", label: "Agriculture & food", short: "Agri & food" },
-  { id: "realestate", label: "Real estate & construction", short: "Real estate" },
-  { id: "transport", label: "Transport & logistics", short: "Transport" }
+  { id: "energy", label: "Oil, gas & power", short: "Oil & gas" },
+  { id: "financials", label: "Banks & NBFCs", short: "Banks" },
+  { id: "tech", label: "IT services", short: "IT" },
+  { id: "healthcare", label: "Pharma & healthcare", short: "Pharma" },
+  { id: "autos", label: "Autos", short: "Autos" },
+  { id: "consumer", label: "FMCG & consumer", short: "FMCG" },
+  { id: "industrials", label: "Capital goods & infra", short: "Cap goods" },
+  { id: "materials", label: "Metals, cement & chemicals", short: "Metals" },
+  { id: "agrifood", label: "Agri & fertilisers", short: "Agri" },
+  { id: "realestate", label: "Real estate", short: "Realty" },
+  { id: "transport", label: "Aviation, shipping & logistics", short: "Transport" }
 ];
+// Positive = good for Indian markets (stronger rupee, falling yields, easing inflation, inflows).
 const ECONOMIES = [
-  { id: "us", label: "United States", short: "US" },
-  { id: "china", label: "China", short: "China" },
-  { id: "eurozone", label: "Euro area", short: "Euro area" },
-  { id: "japan", label: "Japan", short: "Japan" },
-  { id: "india", label: "India", short: "India" },
-  { id: "uk", label: "United Kingdom", short: "UK" },
-  { id: "gulf", label: "Gulf states", short: "Gulf" }
+  { id: "equities", label: "Equities (Nifty & Sensex)", short: "Equities" },
+  { id: "rupee", label: "Rupee", short: "Rupee" },
+  { id: "bonds", label: "Bond market (G-Secs)", short: "Bonds" },
+  { id: "inflation", label: "Inflation outlook", short: "Inflation" },
+  { id: "fiscal", label: "Fiscal & trade balance", short: "Fiscal" },
+  { id: "flows", label: "Foreign investor flows", short: "FPI flows" },
+  { id: "growth", label: "Growth outlook", short: "Growth" }
 ];
-const THEMES = ["Energy & geopolitics", "Monetary policy", "Rates & bonds", "Trade", "Growth data", "Tech cycle", "Commodities", "Currencies"];
+const THEMES = ["Energy & geopolitics", "Monetary policy", "Rates & bonds", "Trade", "Growth data", "Tech cycle", "Commodities", "Currencies", "Foreign flows", "Fiscal", "Monsoon & farm"];
 const HORIZONS = ["days", "weeks", "months"];
 const CONF = { high: 1, medium: 0.7, low: 0.4 };
 const IND = Object.fromEntries(INDUSTRIES.map(x => [x.id, x]));
@@ -517,8 +518,8 @@ function renderVerdicts(ind, eco) {
   const cells = [
     ["Strongest tailwind", iS[0], IND],
     ["Strongest headwind", iS[iS.length - 1], IND],
-    ["Most supported economy", eS[0], ECO],
-    ["Most exposed economy", eS[eS.length - 1], ECO]
+    ["Strongest gauge", eS[0], ECO],
+    ["Weakest gauge", eS[eS.length - 1], ECO]
   ];
   for (const [lab, r, defs] of cells) {
     const v = el("div", { class: "verdict" }, el("span", { class: "eyebrow", text: lab }));
@@ -586,7 +587,7 @@ function renderGauge(kind, rows, defs) {
   tw.hidden = !state.tables[kind];
   if (state.tables[kind]) {
     tw.replaceChildren(el("table", null,
-      el("thead", null, el("tr", null, el("th", { text: kind === "ind" ? "Industry" : "Economy" }), el("th", { class: "n", text: "Net" }), el("th", { class: "n", text: "Tailwinds" }), el("th", { class: "n", text: "Headwinds" }), el("th", { class: "n", text: "Stories" }), el("th", { class: "n", text: "24h change" }), el("th", { text: "Reading" }))),
+      el("thead", null, el("tr", null, el("th", { text: kind === "ind" ? "Sector" : "Gauge" }), el("th", { class: "n", text: "Net" }), el("th", { class: "n", text: "Tailwinds" }), el("th", { class: "n", text: "Headwinds" }), el("th", { class: "n", text: "Stories" }), el("th", { class: "n", text: "24h change" }), el("th", { text: "Reading" }))),
       el("tbody", null, sorted.map(r => el("tr", null, el("td", { text: defs[r.id].label }), el("td", { class: "n", text: signed(r.net) }), el("td", { class: "n", text: signed(r.pos) }), el("td", { class: "n", text: signed(r.neg) }), el("td", { class: "n", text: r.n }), el("td", { class: "n", text: (d => d === null ? "—" : signed(d))(delta24(kind, r.id, r.net)) }), el("td", { text: word(r.net) }))))
     ));
   }
@@ -614,8 +615,8 @@ function storyCard(it) {
     it.summary ? el("p", { class: "sum", text: it.summary }) : null,
     it.rationale ? el("p", { class: "why" }, el("b", { text: "Why it matters. " }), it.rationale) : null,
     el("div", { class: "impacts" },
-      it.industries.length ? el("div", { class: "grp" }, el("span", { class: "eyebrow", text: "Industries" }), ordered(it.industries).map(s => impactRow(s, IND))) : null,
-      it.economies.length ? el("div", { class: "grp" }, el("span", { class: "eyebrow", text: "Economies" }), ordered(it.economies).map(s => impactRow(s, ECO))) : null
+      it.industries.length ? el("div", { class: "grp" }, el("span", { class: "eyebrow", text: "Sectors" }), ordered(it.industries).map(s => impactRow(s, IND))) : null,
+      it.economies.length ? el("div", { class: "grp" }, el("span", { class: "eyebrow", text: "Market gauges" }), ordered(it.economies).map(s => impactRow(s, ECO))) : null
     ),
     el("div", { class: "story-foot" },
       it.sources.length ? el("div", { class: "srcs" }, it.sources.map((u, i) => el("a", { href: u, target: "_blank", rel: "noopener noreferrer", text: `Source ${i + 1} ↗` }))) : el("span")
@@ -685,7 +686,7 @@ function renderAll() {
 
 
 /* ---------- shared helpers for drill-down and signals ---------- */
-const KIND = { ind: { defs: IND, key: "industries", noun: "Industry", other: "eco" }, eco: { defs: ECO, key: "economies", noun: "Economy", other: "ind" } };
+const KIND = { ind: { defs: IND, key: "industries", noun: "Sector", other: "eco" }, eco: { defs: ECO, key: "economies", noun: "Gauge", other: "ind" } };
 const RISK_LABEL = { high: "High", elevated: "Elevated", watch: "Watch" };
 const RISK_RANK = { watch: 0, elevated: 1, high: 2 };
 const reduceMotion = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -914,7 +915,7 @@ function openDrill(kind, id) {
       el("div", { class: "kpi" }, el("b", { text: signed(r.pos) }), el("span", { text: "From tailwinds" })),
       el("div", { class: "kpi" }, el("b", { text: signed(r.neg) }), el("span", { text: "From headwinds" }))),
     sec("Trend over the last 7 days", sparkline(kind, id)),
-    sec(kind === "ind" ? "Where the pressure lands, by economy" : "Which industries carry it",
+    sec(kind === "ind" ? "Where the pressure lands, by gauge" : "Which sectors carry it",
       cross.length ? el("div", { class: "mini" }, ...cross.map(c => {
         const pct = Math.min(50, Math.abs(c.net) / cmax * 50);
         const target = kind === "ind" ? () => openPair(id, c.id) : () => openPair(c.id, id);
@@ -922,7 +923,7 @@ function openDrill(kind, id) {
           el("span", { class: "lab", text: o.defs[c.id].label }),
           el("span", { class: "track" }, c.net ? el("span", { class: "bar " + (c.net > 0 ? "pos" : "neg"), style: `width:calc(${pct}% - 1px)` }) : null),
           el("span", { class: "v", text: signed(c.net) }));
-      })) : el("p", { class: "status", text: "No stories link this to a specific economy or industry yet." })),
+      })) : el("p", { class: "status", text: "No stories link this to a specific gauge or sector yet." })),
     sec(`What's driving it (${stories.length} ${stories.length === 1 ? "story" : "stories"})`,
       stories.length ? el("div", null, ...stories.map(it => driverRow({ ...it, _whys: [(it[k.key].find(s => s.id === id) || {}).why] }, [scoreOf(it, k.key, id)])))
         : el("p", { class: "status", text: "No stories in the current scan touch this." })),
@@ -943,7 +944,7 @@ function openPair(indId, ecoId) {
       el("div", { class: "kpi" }, el("b", { text: signed(ni) }), el("span", { text: `${i.short} in these stories` })),
       el("div", { class: "kpi" }, el("b", { text: signed(ne) }), el("span", { text: `${e.short} in these stories` })),
       el("div", { class: "kpi" }, el("b", { text: String(stories.length) }), el("span", { text: stories.length === 1 ? "Story" : "Stories" })),
-      el("div", { class: "kpi" }, el("b", { text: word(ni) }), el("span", { text: "Reading for the industry" }))),
+      el("div", { class: "kpi" }, el("b", { text: word(ni) }), el("span", { text: "Reading for the sector" }))),
     sec("Stories linking them",
       stories.length ? el("div", null, ...stories.map(it => driverRow({ ...it, _whys: [
         `${i.short}: ${(it.industries.find(s => s.id === indId) || {}).why || ""}`, `${e.short}: ${(it.economies.find(s => s.id === ecoId) || {}).why || ""}`] },

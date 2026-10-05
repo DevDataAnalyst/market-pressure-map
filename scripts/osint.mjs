@@ -1,9 +1,10 @@
 // Open-source intelligence feed: geopolitical and economic signals from open sources
-// (GDELT, Google News topic searches, UN, ReliefWeb, GDACS, USGS, Crisis Group, central banks, WTO, EIA).
+// (GDELT, Google News topic searches, UN, ReliefWeb, GDACS, USGS, Crisis Group, RBI, SEBI, Fed, WTO, EIA),
+// kept only when they reach Indian markets.
 // Rule-based tagging only, so it runs without an API key; the Claude scan adds assessments later.
 // Writes public/data/osint.json, keeping the previous assessments for signals still in the feed.
 import { readFile, writeFile } from "node:fs/promises";
-import { ECONOMIES, INDUSTRIES, fail, fetchFeed, fetchText, titleKey, txt } from "./shared.mjs";
+import { INDUSTRIES, fail, fetchFeed, fetchText, titleKey, txt } from "./shared.mjs";
 
 const OSINT_PATH = new URL("../public/data/osint.json", import.meta.url);
 const WINDOW_HOURS = 24;
@@ -16,8 +17,8 @@ const RSS_SOURCES = [
   { name: "GDACS", type: "Disaster alerts", url: "https://www.gdacs.org/xml/rss.xml" },
   { name: "Crisis Group", type: "Conflict tracker", url: "https://www.crisisgroup.org/rss" },
   { name: "Federal Reserve", type: "Central bank", url: "https://www.federalreserve.gov/feeds/press_all.xml" },
-  { name: "ECB", type: "Central bank", url: "https://www.ecb.europa.eu/rss/press.html" },
-  { name: "Bank of England", type: "Central bank", url: "https://www.bankofengland.co.uk/rss/news" },
+  { name: "RBI", type: "Central bank", url: "https://www.rbi.org.in/pressreleases_rss.xml" },
+  { name: "SEBI", type: "Official", url: "https://www.sebi.gov.in/sebirss.xml" },
   { name: "WTO", type: "Official", url: "https://www.wto.org/library/rss/latest_news_e.xml" },
   { name: "US EIA", type: "Official", url: "https://www.eia.gov/rss/todayinenergy.xml" },
 ];
@@ -53,12 +54,12 @@ export const ECONOMY_WORDS = [
   ["china", /\b(china|chinese|beijing|xi jinping|hong kong)/i],
   ["eurozone", /\b(euro area|eurozone|\becb\b|european union|\beu\b|germany|german|france|french|italy|italian|spain|spanish|netherlands|brussels)/i],
   ["japan", /\b(japan|japanese|tokyo|bank of japan)/i],
-  ["india", /\b(india|indian|delhi|mumbai|rupee|\brbi\b)/i],
+  ["india", /\b(india|indian|delhi|mumbai|rupee|\brbi\b|sebi|sensex|nifty|kashmir|\bloc\b)/i],
   ["uk", /\b(britain|british|\buk\b|united kingdom|london|bank of england)/i],
   ["gulf", /\b(saudi|emirat|\buae\b|qatar|kuwait|oman|bahrain|gulf|hormuz|opec)/i],
 ];
 
-const PLACES = ["Russia", "Ukraine", "Israel", "Gaza", "Lebanon", "Iran", "Iraq", "Syria", "Yemen", "Taiwan", "North Korea", "South Korea", "Venezuela", "Mexico", "Brazil", "Argentina", "Turkey", "Egypt", "Sudan", "Nigeria", "South Africa", "Pakistan", "Indonesia", "Philippines", "Vietnam", "Red Sea", "Black Sea", "Strait of Hormuz", "Suez Canal", "Panama Canal", "Taiwan Strait", "Sahel", "Ethiopia", "Libya", "Canada", "Australia"];
+const PLACES = ["Bangladesh", "Sri Lanka", "Nepal", "Afghanistan", "Myanmar", "Maldives", "Arabian Sea", "Indian Ocean", "Russia", "Ukraine", "Israel", "Gaza", "Lebanon", "Iran", "Iraq", "Syria", "Yemen", "Taiwan", "North Korea", "South Korea", "Venezuela", "Mexico", "Brazil", "Argentina", "Turkey", "Egypt", "Sudan", "Nigeria", "South Africa", "Pakistan", "Indonesia", "Philippines", "Vietnam", "Red Sea", "Black Sea", "Strait of Hormuz", "Suez Canal", "Panama Canal", "Taiwan Strait", "Sahel", "Ethiopia", "Libya", "Canada", "Australia"];
 
 const INTENSIFIER = /\b(killed|dead|deaths|escalat|invasion|blockade|seiz|shut|halt|collapse|default|emergency|record|surge|plunge|soar|nuclear|ban|closure|explosion)/i;
 // Raw source headlines can name firms; drop those rather than show company names.
@@ -75,8 +76,8 @@ export const COMPANY_NAMES = new RegExp("\\b(" + [
 ].join("|") + ")\\b");
 const STOP = new Set(["about", "after", "against", "amid", "their", "there", "these", "which", "while", "would", "could", "says", "said", "with", "from", "that", "this", "into", "over", "under", "will", "have", "been", "more", "than"]);
 
-// Places whose disruption tends to reach global markets (energy, shipping, chips, grain).
-const MARKET_PLACES = new Set(["Russia", "Ukraine", "Israel", "Lebanon", "Iran", "Iraq", "Yemen", "Taiwan", "North Korea", "South Korea", "Venezuela", "Libya", "Red Sea", "Black Sea", "Strait of Hormuz", "Suez Canal", "Panama Canal", "Taiwan Strait"]);
+// Places whose disruption reaches Indian markets: oil and gas routes and suppliers, and neighbours.
+const MARKET_PLACES = new Set(["Russia", "Ukraine", "Israel", "Lebanon", "Iran", "Iraq", "Yemen", "Libya", "Venezuela", "Red Sea", "Black Sea", "Strait of Hormuz", "Suez Canal", "Arabian Sea", "Indian Ocean", "Pakistan", "Bangladesh", "Sri Lanka", "Nepal", "Afghanistan", "Myanmar", "Maldives"]);
 // Central-bank and official feeds also publish appointments, events and speeches; keep only market business.
 const POLICY_BUSINESS = /\b(rate|inflation|monetary|financial stability|policy statement|fomc|minutes of the monetary|balance sheet|stress test|liquidity|tariff|sanction|trade|outlook|forecast|growth|recession|debt|currency|exchange|oil|gas|energy|supply)/i;
 const DIGEST = /^(world news in brief|news in brief|daily briefing|week in review)/i;
@@ -112,16 +113,16 @@ async function fetchGdelt() {
 
 // Google News topic searches as a second media monitor (GDELT often rate-limits CI servers).
 const NEWS_SEARCHES = [
-  'sanctions OR embargo OR "export controls" OR "trade war"',
-  '"Strait of Hormuz" OR "Red Sea" OR "Suez Canal" OR "Taiwan Strait" OR "Black Sea" shipping',
-  'OPEC OR "oil supply" OR "gas supply" OR "pipeline attack" OR "refinery"',
-  'missile OR airstrike OR coup OR "military escalation" OR blockade',
-];
+  'India sanctions OR tariffs OR "export controls" OR "trade war" OR "anti-dumping"',
+  '"Strait of Hormuz" OR "Red Sea" OR "Suez Canal" OR "Black Sea" OR "Arabian Sea" shipping',
+  'OPEC OR "oil supply" OR "Russian oil" OR "gas supply" OR LNG OR refinery India',
+  'India Pakistan OR China border OR LoC OR missile OR airstrike OR blockade OR "military escalation"',
+]
 async function fetchNewsSearches() {
   const items = [];
   let ok = 0;
   for (const q of NEWS_SEARCHES) {
-    const url = `https://news.google.com/rss/search?q=${encodeURIComponent(`${q} when:1d`)}&hl=en-US&gl=US&ceid=US:en`;
+    const url = `https://news.google.com/rss/search?q=${encodeURIComponent(`${q} when:1d`)}&hl=en-IN&gl=IN&ceid=IN:en`;
     try {
       for (const it of await fetchFeed(url)) {
         const publisher = txt(it.raw?.source).trim();
@@ -190,18 +191,20 @@ function tag(item) {
   const economies = ECONOMY_WORDS.filter(([, re]) => re.test(text)).map(([id]) => id);
   const places = PLACES.filter((p) => new RegExp(`\\b${p}\\b`, "i").test(text)).slice(0, 4);
 
-  // Humanitarian and political stories only count when they touch a market-relevant place or economy.
+  // Keep only what reaches Indian markets: anything about India, oil and gas routes and suppliers,
+  // energy, shipping, sanctions and food supply, and US policy (rates and the dollar drive foreign flows).
   const marketPlace = places.some((p) => MARKET_PLACES.has(p));
-  const marketCats = cats.some((c) => ["shipping", "sanctions", "energy", "food", "policy"].includes(c.id));
-  const alerted = item.alert === "red" || item.alert === "orange" || item.magnitude >= 6;
-  if (!marketPlace && !economies.length && !marketCats && !alerted) return null;
+  const india = economies.includes("india");
+  const supplyCats = cats.some((c) => ["shipping", "sanctions", "energy", "food"].includes(c.id));
+  const usPolicy = cats.some((c) => c.id === "policy") && economies.includes("us");
+  if (!india && !marketPlace && !supplyCats && !usPolicy) return null;
 
   let score = primary.weight - penalty;
   if (marketPlace) score += 1;
   if (/\b(rais|hik|cut|lower|hold|keep|leave)\w* (its |the )?(key |policy |benchmark |interest |bank )*rates?\b|rate decision|monetary policy decision|fomc statement/i.test(item.title)) score += 2;
   if (INTENSIFIER.test(text)) score += 1;
   if (cats.length >= 3) score += 1;
-  if (economies.length) score += 1;
+  if (india) score += 2;
   if (item.alert === "red") score += 2;
   else if (item.alert === "orange") score += 1;
   if (item.magnitude >= 7) score += 2;
@@ -211,7 +214,7 @@ function tag(item) {
     category: primary.id,
     categories: cats.map((c) => c.id),
     industries: [...industries].filter((id) => INDUSTRIES[id]).slice(0, 5),
-    economies: economies.slice(0, 5),
+    countries: economies.slice(0, 5),
     places,
     score,
   };
@@ -269,7 +272,8 @@ export async function collectOsint() {
         categories: c.categories,
         places: c.places,
         industries: c.industries,
-        economies: c.economies,
+        countries: c.countries,
+        economies: [],
         severity: score >= 6 ? "high" : score >= 4 ? "elevated" : "watch",
         severityScore: score,
         reports: c.reports,

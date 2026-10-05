@@ -1,24 +1,32 @@
 // Taxonomy and feed helpers shared by the news scan and the intelligence feed.
 import { XMLParser } from "fast-xml-parser";
 
+// Indian market sectors (ids kept from the earlier global version so rules and history line up).
 export const INDUSTRIES = {
-  energy: "Energy (oil, gas & power)",
-  financials: "Banks & financials",
-  tech: "Technology & semiconductors",
-  healthcare: "Healthcare & pharma",
-  autos: "Autos & mobility",
-  consumer: "Retail & consumer goods",
-  industrials: "Industrials & machinery",
-  materials: "Materials & mining",
-  agrifood: "Agriculture & food",
-  realestate: "Real estate & construction",
-  transport: "Transport & logistics",
+  energy: "Oil, gas & power",
+  financials: "Banks & NBFCs",
+  tech: "IT services",
+  healthcare: "Pharma & healthcare",
+  autos: "Autos",
+  consumer: "FMCG & consumer",
+  industrials: "Capital goods & infra",
+  materials: "Metals, cement & chemicals",
+  agrifood: "Agri & fertilisers",
+  realestate: "Real estate",
+  transport: "Aviation, shipping & logistics",
 };
+// India market gauges. Positive = good for Indian markets: stronger rupee, falling bond yields,
+// easing inflation, better fiscal and trade balance, foreign inflows, faster growth.
 export const ECONOMIES = {
-  us: "United States", china: "China", eurozone: "Euro area", japan: "Japan",
-  india: "India", uk: "United Kingdom", gulf: "Gulf states",
+  equities: "Equities (Nifty & Sensex)",
+  rupee: "Rupee",
+  bonds: "Bond market (G-Secs)",
+  inflation: "Inflation outlook",
+  fiscal: "Fiscal & trade balance",
+  flows: "Foreign investor flows",
+  growth: "Growth outlook",
 };
-export const THEMES = ["Energy & geopolitics", "Monetary policy", "Rates & bonds", "Trade", "Growth data", "Tech cycle", "Commodities", "Currencies"];
+export const THEMES = ["Energy & geopolitics", "Monetary policy", "Rates & bonds", "Trade", "Growth data", "Tech cycle", "Commodities", "Currencies", "Foreign flows", "Fiscal", "Monsoon & farm"];
 export const CONF = { high: 1, medium: 0.7, low: 0.4 };
 
 export const fail = (msg) => {

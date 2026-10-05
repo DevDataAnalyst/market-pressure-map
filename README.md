@@ -1,9 +1,9 @@
 # Market Pressure Map
 
-Where the latest global headlines push the world's biggest industries and economies: tailwind or headwind, how hard, and why. Refreshed daily for free.
+Where the last 24 hours of news push Indian markets: tailwind or headwind, how hard, and why. Indian news comes first; foreign news is included only when it reaches Indian markets (oil and gas, US rates and the dollar, trade, metal and food prices, foreign investor flows). Refreshed daily for free.
 
-- **11 industries:** energy, banks, tech and chips, healthcare, autos, retail and consumer, industrials, materials, agriculture and food, real estate, transport.
-- **7 economies:** United States, China, euro area, Japan, India, United Kingdom, Gulf states.
+- **11 Indian sectors:** oil, gas and power; banks and NBFCs; IT services; pharma and healthcare; autos; FMCG and consumer; capital goods and infra; metals, cement and chemicals; agri and fertilisers; real estate; aviation, shipping and logistics. (Ids in the data files: energy, financials, tech, healthcare, autos, consumer, industrials, materials, agrifood, realestate, transport.)
+- **7 India market gauges** (stored under `economies`; positive = good for Indian markets): equities (Nifty and Sensex), rupee, bond market (G-Secs), inflation outlook, fiscal and trade balance, foreign investor flows, growth outlook.
 - Stories are written without company names.
 
 ## How it works
@@ -12,7 +12,7 @@ The site refreshes once a day for free. There's no API key, no AI credit and not
 
 1. **GitHub Actions** (`.github/workflows/refresh.yml`, "Daily refresh") runs at 05:17 UTC. GitHub sometimes delays or drops scheduled runs, so the job is also scheduled at 08:47, 13:17 and 18:47 UTC; those backup runs stop straight away once today's refresh is done.
    - `scripts/osint.mjs` collects the open-source intelligence feed (`public/data/osint.json`).
-   - `scripts/rule-scan.mjs` reads about a dozen Google News market searches plus the intelligence feed, matches each headline to an event rule, groups headlines about the same event into stories and scores them. It writes `scan.json` and `history.json`. Example rules are "oil prices rise", "central bank cuts rates", "new tariffs", "attacks on shipping lanes" and "weaker yen". Each rule carries a reviewed set of industry and economy exposures, and confidence grows with the number of separate reports. Single-firm news, explainers and questions are skipped.
+   - `scripts/rule-scan.mjs` reads about fifteen India-focused Google News searches (Indian edition) plus the intelligence feed, matches each headline to an event rule, groups headlines about the same event into stories and scores them. It writes `scan.json` and `history.json`. Example rules are "oil prices rise", "central bank cuts rates", "new tariffs", "attacks on shipping lanes" and "weaker yen". Each rule carries a reviewed set of industry and economy exposures, and confidence grows with the number of separate reports. Single-firm news, explainers and questions are skipped.
    - **Data window: the last 24 hours.** Only headlines and intelligence signals published in the past 24 hours are scored. Earlier days still count through the story memory (`public/data/memory.json`, the last 14 days of stories, written by every scan). Each new story is marked "New in the last 24 hours", "Ongoing" (with how many of the previous 7 days it appeared and since when) or "Turn" (earlier readings pointed the other way). Ongoing stories rank higher, and a story seen on two or more earlier days goes from low to medium confidence. A turn lowers high confidence to medium.
    - The job commits the data.
 2. **Vercel** redeploys the static site on every push.
@@ -33,7 +33,7 @@ A Claude Code routine named "Market Pressure Map daily scan" can run at 05:42 UT
 {
   "items": [{ "id": "hormuz", "date": "2026-10-02", "theme": "Energy & geopolitics", "headline": "…", "summary": "…", "rationale": "…",
               "horizon": "weeks", "confidence": "high", "industries": [{ "id": "energy", "score": 2, "why": "…" }],
-              "economies": [{ "id": "india", "score": -2, "why": "…" }], "sources": ["https://…"] }],
+              "economies": [{ "id": "rupee", "score": -2, "why": "…" }], "sources": ["https://…"] }],
   "signals": [{ "id": "<signal id from --list-signals>", "headline": "…", "risk": "high", "note": "…", "industries": [], "economies": [] }]
 }
 ```
@@ -47,13 +47,15 @@ A Claude Code routine named "Market Pressure Map daily scan" can run at 05:42 UT
 - **Media monitoring:** Google News topic searches and GDELT (which watches world news in many languages) for sanctions and trade, conflict, shipping chokepoints and energy supply. GDELT often rate-limits GitHub's servers, so Google News is the main media source.
 - **Conflict and humanitarian:** UN News, ReliefWeb and Crisis Group.
 - **Hazards:** GDACS disaster alerts (orange and red only) and USGS significant earthquakes.
-- **Official:** Federal Reserve, ECB, Bank of England, WTO and the US Energy Information Administration.
+- **Official:** RBI, SEBI, Federal Reserve, WTO and the US Energy Information Administration.
 
-Each signal is tagged by rules with a category, the places, industries and economies it exposes, and a severity (watch, elevated or high). Severity rises with intensity words, disaster alert level, earthquake magnitude and how many separate sources report the same thing. Near-duplicate reports are merged. Headlines that name companies are dropped. The keyword-rule scan gives signals that match an event rule a short note and signed scores. When the optional Claude routine runs, it assesses the top 30 signals with a neutral headline, a market-impact risk level, a note and scores, and those assessments take precedence. Assessed signals show as "Assessed". The feed is written to `public/data/osint.json` and is published even when the scoring step doesn't run.
+Signals are kept only when they reach Indian markets: anything about India, oil and gas routes and suppliers (the Gulf, Russia, the Red Sea and Hormuz), India's neighbours, energy, shipping, sanctions and food supply, and US monetary policy.
+
+Each signal is tagged by rules with a category, the places and sectors it exposes, and a severity (watch, elevated or high). Severity rises with intensity words, disaster alert level, earthquake magnitude and how many separate sources report the same thing. Near-duplicate reports are merged. Headlines that name companies are dropped. The keyword-rule scan gives signals that match an event rule a short note and signed scores. When the optional Claude routine runs, it assesses the top 30 signals with a neutral headline, a market-impact risk level, a note and scores, and those assessments take precedence. Assessed signals show as "Assessed". The feed is written to `public/data/osint.json` and is published even when the scoring step doesn't run.
 
 ## Drill-down
 
-Select any industry or economy (in the bars, the headline verdicts, the exposure grid or a signal's chips) to open its details: net score and 24-hour change, a 7-day trend line, where the pressure lands across the other dimension, the stories driving it, related intelligence signals, and a shortcut to ask the desk about it. The industry × economy grid opens the stories linking any pair. Details have shareable links such as `#ind-energy`, `#eco-india` or `#pair-energy-india`.
+Select any sector or gauge (in the bars, the headline verdicts, the exposure grid or a signal's chips) to open its details: net score and 24-hour change, a 7-day trend line, where the pressure lands across the other dimension, the stories driving it, related intelligence signals, and a shortcut to ask the desk about it. The industry × economy grid opens the stories linking any pair. Details have shareable links such as `#ind-energy`, `#eco-india` or `#pair-energy-india`.
 
 The page totals the scores, counting high-confidence calls at 1.0, medium at 0.7 and low at 0.4. It also shows the change over the last 24 hours.
 

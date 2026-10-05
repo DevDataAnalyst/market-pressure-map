@@ -11,14 +11,15 @@ const RATE_LIMIT = Number(process.env.ASK_RATE_LIMIT || 8);
 const END = "\u001e";
 
 const INDUSTRIES = {
-  energy: "Energy", financials: "Banks & financials", tech: "Technology & semiconductors",
-  healthcare: "Healthcare & pharma", autos: "Autos & mobility", consumer: "Retail & consumer goods",
-  industrials: "Industrials & machinery", materials: "Materials & mining", agrifood: "Agriculture & food",
-  realestate: "Real estate & construction", transport: "Transport & logistics",
+  energy: "Oil, gas & power", financials: "Banks & NBFCs", tech: "IT services",
+  healthcare: "Pharma & healthcare", autos: "Autos", consumer: "FMCG & consumer",
+  industrials: "Capital goods & infra", materials: "Metals, cement & chemicals", agrifood: "Agri & fertilisers",
+  realestate: "Real estate", transport: "Aviation, shipping & logistics",
 };
+// India market gauges; positive = good for Indian markets.
 const ECONOMIES = {
-  us: "United States", china: "China", eurozone: "Euro area", japan: "Japan",
-  india: "India", uk: "United Kingdom", gulf: "Gulf states",
+  equities: "Equities (Nifty & Sensex)", rupee: "Rupee", bonds: "Bond market (G-Secs)", inflation: "Inflation outlook",
+  fiscal: "Fiscal & trade balance", flows: "Foreign investor flows", growth: "Growth outlook",
 };
 const CONF = { high: 1, medium: 0.7, low: 0.4 };
 
@@ -58,13 +59,13 @@ async function scanContext() {
         return `${i + 1}. [${it.date} · ${it.theme} · horizon ${it.horizon} · ${it.confidence} confidence] ${it.headline}
    ${it.summary}
    Why it matters: ${it.rationale}
-   Industries: ${imp(it.industries, INDUSTRIES) || "none"}
-   Economies: ${imp(it.economies, ECONOMIES) || "none"}`;
+   Sectors: ${imp(it.industries, INDUSTRIES) || "none"}
+   Market gauges: ${imp(it.economies, ECONOMIES) || "none"}`;
       })
       .join("\n");
     cachedScan = `Latest scan (${scan.window}, scanned ${scan.scannedAt}). Scores run from -3 (strong headwind) to +3 (strong tailwind); totals weight high confidence 1.0, medium 0.7, low 0.4.
-Industry totals: ${totals("industries", INDUSTRIES)}
-Economy totals: ${totals("economies", ECONOMIES)}
+Sector totals: ${totals("industries", INDUSTRIES)}
+Market gauge totals (positive = good for Indian markets): ${totals("economies", ECONOMIES)}
 
 Stories:
 ${stories}`;
@@ -83,10 +84,10 @@ ${stories}`;
   return cachedScan;
 }
 
-const RULES = `You are the market desk assistant on Market Pressure Map, a site that scores global news for its impact on the largest industries and economies. Visitors ask about markets, economies, industries, commodities, currencies and economic policy.
+const RULES = `You are the market desk assistant on Market Pressure Map, a site that scores the last 24 hours of news for its impact on Indian markets: Indian sectors and the rupee, bond yields, inflation, the fiscal and trade balance, foreign investor flows and growth. Foreign news counts only when it reaches India. Visitors ask about Indian markets, sectors, the rupee, rates, commodities and policy.
 
 - Ground your answer in the scan and the intelligence signals below. Use web search for recent facts the scan doesn't cover, and say plainly when neither has the answer.
-- Never name individual companies, brands or listed firms. Discuss industries and groups instead. If someone asks about a specific company, say the site covers sectors and answer at the industry level. Central banks, governments and bodies such as OPEC+ may be named.
+- Never name individual companies, brands or listed firms. Discuss sectors and groups instead. If someone asks about a specific company, say the site covers sectors and answer at the sector level. The RBI, SEBI, other central banks, governments and bodies such as OPEC+ may be named.
 - Don't give personal investment advice or tell anyone to buy, sell or hold anything. Explain the drivers, scenarios and risks.
 - Keep answers to 80–200 words. Use plain text: short paragraphs, and "- " bullets if a list helps. No headings, tables or bold.
 - Give figures with their date. If you are unsure, say so.
