@@ -1,5 +1,5 @@
 {
- "scannedAt": "2026-10-05T04:37:14.422Z",
+ "scannedAt": "2026-10-05T05:44:31.187Z",
  "window": "4 Oct – 5 Oct 2026",
  "model": "Claude daily routine",
  "headlinesScanned": null,
@@ -107,51 +107,149 @@
    ]
   },
   {
-   "id": "rupee-range",
-   "date": "2026-10-04",
+   "id": "rupee-open",
+   "date": "2026-10-05",
    "theme": "Currencies",
-   "headline": "Rupee seen trading 95.30–96.80 per dollar in October as record reserves offset outflows",
-   "summary": "A report sees the rupee broadly sideways in October. Forex reserves at a record $785.71 billion and trade deals support it; global yields and FPI outflows of about $5.9 billion in September weigh. Ongoing pressure near 96.",
-   "rationale": "A rupee near record lows lifts IT and pharma exporters' earnings but raises the cost of oil and other imports; ample reserves let the RBI cap volatility.",
-   "horizon": "weeks",
+   "headline": "Rupee opens 10 paise stronger at 96.22 per dollar as oil eases; October range seen at 95.30–96.80",
+   "summary": "The rupee opened firmer on Monday as crude fell and Fed hike fears eased. A report sees it trading 95.30–96.80 this month, with record forex reserves of $785.71 billion offsetting FPI outflows. Easing after weeks of pressure.",
+   "rationale": "A steadier rupee trims imported inflation and the cost of crude, and reduces currency losses that deter foreign investors, while slightly reducing exporters' rupee gains.",
+   "horizon": "days",
    "confidence": "medium",
    "industries": [
     {
-     "id": "tech",
-     "score": 1,
-     "why": "Exporters earn more in rupees"
-    },
-    {
-     "id": "healthcare",
-     "score": 1,
-     "why": "Pharma exporters gain"
-    },
-    {
      "id": "energy",
-     "score": -1,
-     "why": "Dollar crude costlier"
+     "score": 1,
+     "why": "Crude cheaper in rupee terms"
     },
     {
-     "id": "transport",
+     "id": "tech",
      "score": -1,
-     "why": "Dollar-linked costs high"
+     "why": "Exporters' rupee gains trimmed"
     }
    ],
    "economies": [
     {
      "id": "rupee",
-     "score": -1,
-     "why": "Pressure near record lows, capped by reserves"
+     "score": 1,
+     "why": "Opens stronger near record lows"
     },
     {
      "id": "inflation",
-     "score": -1,
-     "why": "Imported inflation"
+     "score": 1,
+     "why": "Imported inflation eases slightly"
     }
    ],
    "sources": [
-    "https://aninews.in/news/business/rupee-seen-at-9530-9680-in-october-global-yields-fpi-outflows-pose-risk-report20261004114842/",
-    "https://www.tribuneindia.com/news/business/rupee-seen-at-95-30-96-80-in-october-global-yields-fpi-outflows-pose-risk-report"
+    "https://www.whalesbook.com/news/English/economy/Rupee-Opens-10-Paise-Higher-at-9622-Against-Dollar/6ac31b395aacb956d08b8f4a",
+    "https://aninews.in/news/business/rupee-seen-at-9530-9680-in-october-global-yields-fpi-outflows-pose-risk-report20261004114842/"
+   ]
+  },
+  {
+   "id": "market-rebound",
+   "date": "2026-10-05",
+   "theme": "Monetary policy",
+   "headline": "Sensex opens 431 points higher at 72,340.95 as oil falls and Fed hike fears ease after 8 losing weeks",
+   "summary": "The Sensex opened 0.6% higher and the Nifty 0.49% higher at 22,532.40 on Monday, after eight straight weekly losses, as crude eased and US rate-hike fears faded; India VIX dropped nearly 7%. Reversal, for now.",
+   "rationale": "Softer crude and fading Fed hike odds ease pressure on the rupee and foreign flows; whether the bounce holds depends on the RBI decision on October 7 and continued FPI selling.",
+   "horizon": "days",
+   "confidence": "medium",
+   "industries": [
+    {
+     "id": "financials",
+     "score": 1,
+     "why": "Banking stocks lead the rebound"
+    },
+    {
+     "id": "transport",
+     "score": 1,
+     "why": "Cheaper fuel outlook"
+    }
+   ],
+   "economies": [
+    {
+     "id": "equities",
+     "score": 1,
+     "why": "Relief rally after eight losing weeks"
+    },
+    {
+     "id": "flows",
+     "score": 1,
+     "why": "Fed hike fears fade"
+    }
+   ],
+   "sources": [
+    "https://www.outlookmoney.com/invest/sensex-nifty-gap-up-opening-crude-oil-price-us-fed-rate-hike-ease",
+    "https://www.business-standard.com/amp/markets/news/stock-market-live-october-5-nse-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-snapdeal-listing-today-rvnl-share-price-today-ipo-today-126100500057_1.html"
+   ]
+  },
+  {
+   "id": "saudi-osp-cut",
+   "date": "2026-10-05",
+   "theme": "Commodities",
+   "headline": "Saudi Arabia cuts November crude price for Asia by $3 a barrel, widest discount since June 2020",
+   "summary": "Saudi Arabia's state oil producer cut its November Arab Light price for Asia by $3 to $5 below the Oman-Dubai average. Crude fell in Asian trade as Middle East exports recovered and G7 stock releases eased supply fears. Easing.",
+   "rationale": "Cheaper Gulf crude lowers Indian refiners' feedstock costs and the oil import bill, supporting the rupee, fuel marketers' margins and airlines.",
+   "horizon": "weeks",
+   "confidence": "medium",
+   "industries": [
+    {
+     "id": "energy",
+     "score": 1,
+     "why": "Cheaper Gulf feedstock for refiners"
+    },
+    {
+     "id": "transport",
+     "score": 1,
+     "why": "Fuel costs ease"
+    }
+   ],
+   "economies": [
+    {
+     "id": "fiscal",
+     "score": 1,
+     "why": "Lower oil import bill"
+    },
+    {
+     "id": "inflation",
+     "score": 1,
+     "why": "Fuel cost pressure eases"
+    }
+   ],
+   "sources": [
+    "https://www.angelone.in/news/commodities/crude-oil-prices-fall-as-middle-east-exports-recover-october-5-2026"
+   ]
+  },
+  {
+   "id": "gst-council",
+   "date": "2026-10-05",
+   "theme": "Fiscal",
+   "headline": "GST officials begin talks ahead of October 7 Council meeting, first in about a year, on process reforms",
+   "summary": "Officer-level meetings run October 5–6 before the 57th GST Council on October 7. The agenda covers input tax credit, inverted-duty refunds, e-invoicing and registration; no rate changes are expected. New.",
+   "rationale": "Faster refunds and simpler credit rules free working capital for manufacturers and traders, a modest support for capital goods, consumer goods and small businesses.",
+   "horizon": "months",
+   "confidence": "low",
+   "industries": [
+    {
+     "id": "industrials",
+     "score": 1,
+     "why": "Quicker inverted-duty refunds"
+    },
+    {
+     "id": "consumer",
+     "score": 1,
+     "why": "Simpler credit and registration"
+    }
+   ],
+   "economies": [
+    {
+     "id": "growth",
+     "score": 1,
+     "why": "Lower compliance costs"
+    }
+   ],
+   "sources": [
+    "https://www.whalesbook.com/news/English/economy/GST-Council-To-Meet-On-Oct-7-Focus-To-Shift-Toward-Process-Reforms/6aab1ca1ed7f8e81734e2b98",
+    "https://www.careerindia.com/news/gst-council-meeting-october-2026-process-reforms-itc-updates-for-cas-011-66553.html"
    ]
   },
   {
@@ -241,7 +339,7 @@
    "date": "2026-10-04",
    "theme": "Energy & geopolitics",
    "headline": "Iran says Hormuz won't reopen until its conditions are met; tanker struck, five Indian crew rescued",
-   "summary": "Iran said the strait stays closed until its conditions are met. A Kuwait-flagged tanker was struck near Oman, with five Indian seafarers rescued, and explosions were reported near a ship off Yemen. Ongoing for a fifth day.",
+   "summary": "Iran said the strait stays closed until its conditions are met. A Kuwait-flagged tanker was struck near Oman, five Indian seafarers were rescued, and explosions were reported aboard a vessel in the Red Sea, even as oil flows recover. Ongoing.",
    "rationale": "Attacks keep war-risk insurance, freight and crude risk premiums high on India's main oil and LNG routes, and put Indian crews at risk.",
    "horizon": "weeks",
    "confidence": "high",
@@ -277,7 +375,7 @@
    "sources": [
     "https://news.google.com/rss/articles/CBMivgFBVV95cUxNbGl6a1ZkREdlVjJxOTFDSlVkbGtBRlI3djRUc0xwclQzcGFadFB0NVZxdlV6VWlWVHhTNWh4SWZNRVNsWkRhVzk2c3Vsbl9kSGFSbEFtVjh0MHh4enZpV2dEaHdYYVhhbHBlLXFNVHQ0cHNubHVVTHBKTGp5SVRjcXdRcmdER2V6Z3hGNHpVOHZWb25jY2RocF81b0s3czRBTm9pbWFOUE5ROXAxZ0VNNl90Nnc2UDloSTlfQkln?oc=5",
     "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNS2NmdTg0TEZqemJ2YUVIdUxzQzAteTlpRUZYU1FraGFRWHlEN0tzZmMxczdNclgwSldzR0FKVTlyZS1XMHotdlZrbEJKT0R4VWIwZ1NoNzhLbFluWWk5ckROSzhFdFg5b3RQVUpoZlJuMy1vLTFrZDVOS0x0Y0Zqa2p1WXBhOHRwMzFqSjNvc0pKWWZvWkt4ekNvbzlsYnNrZjVYSUVlSG1CREJ3R0R1MXBwU2xwU1ZWU2dQdTNraXJfM0k4QndfM3lrNHBnNkJWQ19qSjZIWDQ?oc=5",
-    "https://news.google.com/rss/articles/CBMiggJBVV95cUxNdVJ0bkZrMlpPT2FkU2lXSEktaF9DM0ZVLVJsR2NqT2xxakNJQzdHWFRiV1VrTmxzd1RwLUVYejhadFhqbHJQMXBIMmUzOF9IMDBTbjVDQXdKNC1DVHVhS0pVX09RMWpIeTh2UEhtUEoxMHlEMFRGSHNyZzE3VTZQaHpqSjE2SGNJY2lKS00xYWZKeUlPbHhJM2pJZDZNZHU0Q21reHVwSGMweWFLWDFxdEd3aHJ5TEJUc1V1el91V0lhUzNEVzdYVmRYS25jeXU0dzBfaVFpSVR0dmNGS3F6c1FXSXZwdWZ5UEFCcGVTZE1vajgweUlEeFFjcFlwREJtcUHSAYcCQVVfeXFMUE1tODBiYS1hMUVfZy1wajBEd0dJcDV1T0Y4bWZ3T1pSUVNseUpnYThScnFnUW45d2U1LWRodndMLTZoUkxfRFZKMXB6aVFPX1I5WUxuRWRpRUItd085b1pEdEFUNDlaRlpqWG9jV2NTSW5NZDJnNHBKMGhqQ1RwMDlBMDBhODROZ1FSNDl0RG05bVd1MWsxempJZWdfM3lFSW41YVg3d3dwZUJ4Y1M1QlEyOVkwRHM1Y0xsQk00S0FzNFNyakM5UHU0aTlZbjhhRHBsVDJBazhFaW1qOG9nQUltZy1XWUR4UU5yRGxzN2Q3dlhmOTdWYm1KZFk2dGh5SVUxRksxY0E?oc=5"
+    "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPOVZoMm4wcUcweGxLTUMyXzRRcDc2bTFiMUR6dFpvMkNNUk0tRmRCbzV1QkVIREZBaVhhSDFUWEs2dzZTTXNFOUYtREw0V01JVm5pb25XZ1Q0bkZjNk1yWER3ZWZMSVZWZm5tV3NFWi1wTFp0blhDTFlQYng4aXRVbW94b0I5cW9ManU2VUlqXzUtdm9YbHpjNXhEQ1hzVGI5WXNCdFJhLWZZVWpINWM4bExDZjM3Y0JTU3dyUXhtMi1lSWFodW5nU2hLbV9MWFZoSWl5WlY5aHlZajVOUHBYTzQzdHp1dThOMUlsUmNtMHNwZHBsRVJZQtIB_gFBVV95cUxPeWI3a2MxTFNtQnNob0ZkQlJaR3NBOWJKdWMxNWRlcGJ1dS1ybHUyT1k5MmdSdnBsMmFzVTVGcjBTX2NlN194UFFPcUNNeHpEeGYxelNEXzB0Rm5hc291dkJVdzFweW5hUzlweUszbEtLaGxQUV82dVgwN2ozd3VibUc0bEE5eDVwbWRZY3pBVU9acVRhM1R0dmJ0MlhaNFR4TVFBdmg0cEZ1S0M5NTcyTmVzMGlOdE90YjdQZTlya0k3NHRGRElwOVU2M2RVaEhhNnVIRU5aVjYxRVVEZ1p2OWpwLTJ1alRTU2hDQWNKWnM1clN0WHpZOUNEU1dwUQ?oc=5"
    ]
   },
   {
