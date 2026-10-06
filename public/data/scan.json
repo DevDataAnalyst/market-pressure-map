@@ -1,34 +1,29 @@
 {
- "scannedAt": "2026-10-05T05:44:31.187Z",
- "window": "4 Oct – 5 Oct 2026",
+ "scannedAt": "2026-10-06T05:45:04.209Z",
+ "window": "5 Oct – 6 Oct 2026",
  "model": "Claude daily routine",
  "headlinesScanned": null,
  "feedsOk": null,
  "items": [
   {
-   "id": "rbi-mpc",
-   "date": "2026-10-05",
+   "id": "rbi-decision-eve",
+   "date": "2026-10-06",
    "theme": "Monetary policy",
-   "headline": "RBI's rate panel begins three-day meeting; 8 of 10 economists expect a hike to 5.50%",
-   "summary": "The MPC meets October 5–7 with the decision due on the 7th. Most economists polled expect a 25-basis-point hike from 5.25%, the first since February 2023. Ongoing: hike expectations have built all week.",
-   "rationale": "A hike lifts loan rates and G-Sec yields, hitting housing, vehicles and consumer credit, while supporting the rupee and lenders' margins at first. Markets have largely priced it; guidance on further hikes matters most.",
+   "headline": "RBI rate panel in day two; decision due October 7 with a 25 bps hike to 5.50% widely expected",
+   "summary": "The MPC concludes tomorrow. Most economists expect the first hike since February 2023, from 5.25%. The 10-year G-Sec yield stood at 7.21% on October 5. Ongoing: expectations unchanged since last week.",
+   "rationale": "A hike is largely priced; the statement on further tightening and the inflation forecast will move bond yields, the rupee and rate-sensitive sectors such as housing and autos.",
    "horizon": "weeks",
    "confidence": "medium",
    "industries": [
     {
      "id": "realestate",
      "score": -2,
-     "why": "Home loans get dearer"
+     "why": "Home loans set to get dearer"
     },
     {
      "id": "autos",
      "score": -1,
-     "why": "Vehicle loans get dearer"
-    },
-    {
-     "id": "consumer",
-     "score": -1,
-     "why": "Dearer credit squeezes spending"
+     "why": "Vehicle loans set to get dearer"
     },
     {
      "id": "financials",
@@ -40,12 +35,7 @@
     {
      "id": "bonds",
      "score": -2,
-     "why": "G-Sec yields price in tightening"
-    },
-    {
-     "id": "equities",
-     "score": -1,
-     "why": "Higher discount rates"
+     "why": "Yields price in tightening"
     },
     {
      "id": "growth",
@@ -60,205 +50,215 @@
    ],
    "sources": [
     "https://www.business-standard.com/finance/news/rbi-mpc-meeting-october-2026-monetary-policy-repo-rate-hike-retail-inflation-126100200188_1.html",
-    "https://www.whalesbook.com/news/English/rbi/RBI-Policy-Meeting-Begins-Oct-5-Rate-Hike-Expectations-Explained/6abf33d65aacb956d08949b9"
+    "https://tradingeconomics.com/india/government-bond-yield"
    ]
   },
   {
-   "id": "fpi-selling",
-   "date": "2026-10-04",
+   "id": "market-close",
+   "date": "2026-10-05",
    "theme": "Foreign flows",
-   "headline": "Foreign investors have pulled over ₹3 lakh crore from Indian equities in 2026; selling continues into October",
-   "summary": "FPI outflows passed ₹3 lakh crore in nine months and continued in October. The Nifty fell 3.1% last week to 22,421.95, an eighth straight weekly loss and the longest losing run in 25 years. Escalating.",
-   "rationale": "Persistent foreign selling hits index heavyweights such as large lenders and oil and gas names, pressures the rupee and keeps valuations under strain until global yields ease.",
+   "headline": "Sensex rises 473 points to 72,382 as domestic funds absorb ₹4,699 crore of foreign selling",
+   "summary": "The Sensex gained 0.66% and the Nifty 0.6% to 22,555.75, ending a four-session losing streak as crude eased and Fed hike fears faded. Foreign investors sold a net ₹4,699 crore; domestic institutions bought ₹5,182 crore. Relief, but foreign selling continues.",
+   "rationale": "Domestic funds are cushioning foreign outflows, which limits downside, but persistent foreign selling keeps pressure on index heavyweights and the rupee.",
+   "horizon": "days",
+   "confidence": "high",
+   "industries": [
+    {
+     "id": "consumer",
+     "score": 1,
+     "why": "Consumer heavyweights led the gains"
+    }
+   ],
+   "economies": [
+    {
+     "id": "equities",
+     "score": 1,
+     "why": "Relief rally ends losing streak"
+    },
+    {
+     "id": "flows",
+     "score": -2,
+     "why": "Foreign selling persists"
+    }
+   ],
+   "sources": [
+    "https://www.business-standard.com/amp/markets/news/stock-market-live-october-5-nse-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-snapdeal-listing-today-rvnl-share-price-today-ipo-today-126100500057_1.html",
+    "https://stockpil.com/india-markets-today-2026-10-05"
+   ]
+  },
+  {
+   "id": "rupee-slips",
+   "date": "2026-10-06",
+   "theme": "Currencies",
+   "headline": "Rupee slips to 96.41 per dollar as oil and US yields rise, reversing Monday's gain",
+   "summary": "The rupee opened flat at 96.31 and weakened to 96.41 as crude firmed and US Treasury yields stayed high. The RBI is expected to smooth volatility. Reverses Monday's 10-paise gain.",
+   "rationale": "A weaker rupee raises the cost of oil and other imports and adds to imported inflation, while lifting IT and pharma exporters' rupee earnings.",
+   "horizon": "days",
+   "confidence": "medium",
+   "industries": [
+    {
+     "id": "tech",
+     "score": 1,
+     "why": "Exporters earn more in rupees"
+    },
+    {
+     "id": "healthcare",
+     "score": 1,
+     "why": "Pharma exporters gain"
+    },
+    {
+     "id": "energy",
+     "score": -1,
+     "why": "Dollar crude costlier"
+    }
+   ],
+   "economies": [
+    {
+     "id": "rupee",
+     "score": -1,
+     "why": "Weakening near record lows"
+    },
+    {
+     "id": "inflation",
+     "score": -1,
+     "why": "Imported inflation"
+    }
+   ],
+   "sources": [
+    "https://www.newsbytesapp.com/news/business/rupee-falls-to-rs9641-against-us-dollar-amid-oil-yields/tldr"
+   ]
+  },
+  {
+   "id": "us-yields-high",
+   "date": "2026-10-05",
+   "theme": "Rates & bonds",
+   "headline": "US 10-year Treasury yield hovers near 5.3%, its highest since 2002",
+   "summary": "The 10-year yield touched a fresh 2002 high to start the week before easing to about 5.26%. It has risen about 0.46 points in a month. Ongoing.",
+   "rationale": "High US yields draw foreign money out of Indian stocks and bonds, weaken the rupee and push up Indian bond yields.",
    "horizon": "weeks",
    "confidence": "high",
    "industries": [
     {
      "id": "financials",
-     "score": -2,
-     "why": "Heaviest foreign selling in lenders"
+     "score": -1,
+     "why": "Foreign selling in lenders"
     },
     {
-     "id": "energy",
+     "id": "realestate",
      "score": -1,
-     "why": "Oil and gas among worst hit"
+     "why": "Funding costs rise"
     }
    ],
    "economies": [
     {
      "id": "flows",
-     "score": -3,
-     "why": "Record outflows this year"
-    },
-    {
-     "id": "equities",
      "score": -2,
-     "why": "Longest losing streak in 25 years"
+     "why": "Money moves to US bonds"
     },
     {
      "id": "rupee",
      "score": -1,
-     "why": "Dollar outflows"
-    }
-   ],
-   "sources": [
-    "https://www.business-standard.com/markets/news/fpi-outflows-top-1-trillion-in-h1fy27-financials-oil-gas-worst-hit-126093000747_1.html",
-    "https://www.goodreturns.in/news/indian-stock-market-outlook-next-week-5-to-9-october-2026-sensex-nifty-may-remain-volatile-fii-crude-1538937.html"
-   ]
-  },
-  {
-   "id": "rupee-open",
-   "date": "2026-10-05",
-   "theme": "Currencies",
-   "headline": "Rupee opens 10 paise stronger at 96.22 per dollar as oil eases; October range seen at 95.30–96.80",
-   "summary": "The rupee opened firmer on Monday as crude fell and Fed hike fears eased. A report sees it trading 95.30–96.80 this month, with record forex reserves of $785.71 billion offsetting FPI outflows. Easing after weeks of pressure.",
-   "rationale": "A steadier rupee trims imported inflation and the cost of crude, and reduces currency losses that deter foreign investors, while slightly reducing exporters' rupee gains.",
-   "horizon": "days",
-   "confidence": "medium",
-   "industries": [
-    {
-     "id": "energy",
-     "score": 1,
-     "why": "Crude cheaper in rupee terms"
+     "why": "Dollar strength"
     },
     {
-     "id": "tech",
+     "id": "bonds",
      "score": -1,
-     "why": "Exporters' rupee gains trimmed"
-    }
-   ],
-   "economies": [
-    {
-     "id": "rupee",
-     "score": 1,
-     "why": "Opens stronger near record lows"
-    },
-    {
-     "id": "inflation",
-     "score": 1,
-     "why": "Imported inflation eases slightly"
+     "why": "Indian yields follow"
     }
    ],
    "sources": [
-    "https://www.whalesbook.com/news/English/economy/Rupee-Opens-10-Paise-Higher-at-9622-Against-Dollar/6ac31b395aacb956d08b8f4a",
-    "https://aninews.in/news/business/rupee-seen-at-9530-9680-in-october-global-yields-fpi-outflows-pose-risk-report20261004114842/"
+    "https://www.cnbc.com/2026/10/05/treasury-yields-bonds-fed-rates.html",
+    "https://tradingeconomics.com/united-states/government-bond-yield"
    ]
   },
   {
-   "id": "market-rebound",
+   "id": "services-pmi",
    "date": "2026-10-05",
-   "theme": "Monetary policy",
-   "headline": "Sensex opens 431 points higher at 72,340.95 as oil falls and Fed hike fears ease after 8 losing weeks",
-   "summary": "The Sensex opened 0.6% higher and the Nifty 0.49% higher at 22,532.40 on Monday, after eight straight weekly losses, as crude eased and US rate-hike fears faded; India VIX dropped nearly 7%. Reversal, for now.",
-   "rationale": "Softer crude and fading Fed hike odds ease pressure on the rupee and foreign flows; whether the bounce holds depends on the RBI decision on October 7 and continued FPI selling.",
-   "horizon": "days",
-   "confidence": "medium",
+   "theme": "Growth data",
+   "headline": "India's services PMI rises to 55.2 in September, a three-month high, as input cost inflation eases",
+   "summary": "The final services PMI was 55.2, up from 54.1 but below the 55.8 flash and 56.2 expected. New business rose fastest in three months; input cost inflation fell to a 10-month low. New.",
+   "rationale": "Firmer services demand supports earnings and jobs, while easing cost pressure helps the inflation outlook ahead of the RBI decision.",
+   "horizon": "weeks",
+   "confidence": "high",
    "industries": [
     {
      "id": "financials",
      "score": 1,
-     "why": "Banking stocks lead the rebound"
-    },
-    {
-     "id": "transport",
-     "score": 1,
-     "why": "Cheaper fuel outlook"
-    }
-   ],
-   "economies": [
-    {
-     "id": "equities",
-     "score": 1,
-     "why": "Relief rally after eight losing weeks"
-    },
-    {
-     "id": "flows",
-     "score": 1,
-     "why": "Fed hike fears fade"
-    }
-   ],
-   "sources": [
-    "https://www.outlookmoney.com/invest/sensex-nifty-gap-up-opening-crude-oil-price-us-fed-rate-hike-ease",
-    "https://www.business-standard.com/amp/markets/news/stock-market-live-october-5-nse-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-snapdeal-listing-today-rvnl-share-price-today-ipo-today-126100500057_1.html"
-   ]
-  },
-  {
-   "id": "saudi-osp-cut",
-   "date": "2026-10-05",
-   "theme": "Commodities",
-   "headline": "Saudi Arabia cuts November crude price for Asia by $3 a barrel, widest discount since June 2020",
-   "summary": "Saudi Arabia's state oil producer cut its November Arab Light price for Asia by $3 to $5 below the Oman-Dubai average. Crude fell in Asian trade as Middle East exports recovered and G7 stock releases eased supply fears. Easing.",
-   "rationale": "Cheaper Gulf crude lowers Indian refiners' feedstock costs and the oil import bill, supporting the rupee, fuel marketers' margins and airlines.",
-   "horizon": "weeks",
-   "confidence": "medium",
-   "industries": [
-    {
-     "id": "energy",
-     "score": 1,
-     "why": "Cheaper Gulf feedstock for refiners"
-    },
-    {
-     "id": "transport",
-     "score": 1,
-     "why": "Fuel costs ease"
-    }
-   ],
-   "economies": [
-    {
-     "id": "fiscal",
-     "score": 1,
-     "why": "Lower oil import bill"
-    },
-    {
-     "id": "inflation",
-     "score": 1,
-     "why": "Fuel cost pressure eases"
-    }
-   ],
-   "sources": [
-    "https://www.angelone.in/news/commodities/crude-oil-prices-fall-as-middle-east-exports-recover-october-5-2026"
-   ]
-  },
-  {
-   "id": "gst-council",
-   "date": "2026-10-05",
-   "theme": "Fiscal",
-   "headline": "GST officials begin talks ahead of October 7 Council meeting, first in about a year, on process reforms",
-   "summary": "Officer-level meetings run October 5–6 before the 57th GST Council on October 7. The agenda covers input tax credit, inverted-duty refunds, e-invoicing and registration; no rate changes are expected. New.",
-   "rationale": "Faster refunds and simpler credit rules free working capital for manufacturers and traders, a modest support for capital goods, consumer goods and small businesses.",
-   "horizon": "months",
-   "confidence": "low",
-   "industries": [
-    {
-     "id": "industrials",
-     "score": 1,
-     "why": "Quicker inverted-duty refunds"
-    },
-    {
-     "id": "consumer",
-     "score": 1,
-     "why": "Simpler credit and registration"
+     "why": "Demand firmer in financial services"
     }
    ],
    "economies": [
     {
      "id": "growth",
      "score": 1,
-     "why": "Lower compliance costs"
+     "why": "Services expanding faster"
+    },
+    {
+     "id": "inflation",
+     "score": 1,
+     "why": "Input cost inflation at 10-month low"
     }
    ],
    "sources": [
-    "https://www.whalesbook.com/news/English/economy/GST-Council-To-Meet-On-Oct-7-Focus-To-Shift-Toward-Process-Reforms/6aab1ca1ed7f8e81734e2b98",
-    "https://www.careerindia.com/news/gst-council-meeting-october-2026-process-reforms-itc-updates-for-cas-011-66553.html"
+    "https://www.thehansindia.com/business/indias-services-growth-hits-3-month-high-as-pmi-rises-to-552-in-september-1129460",
+    "https://www.sahi.com/news/india-september-hsbc-services-pmi-expands-to-55-2-as-composite-reaches-55-9"
    ]
   },
   {
-   "id": "opec-hold",
-   "date": "2026-10-04",
+   "id": "us-trade-plateau",
+   "date": "2026-10-05",
+   "theme": "Trade",
+   "headline": "India–US trade talks have 'reached a plateau', finance minister says; compromise 'very difficult'",
+   "summary": "Sitharaman said further give-and-take would be very difficult, after a US law allowed tariffs of up to 100% on big buyers of Russian oil. Talks continue. Escalating from last week's reports of delays.",
+   "rationale": "A stalled deal keeps US tariff risk hanging over Indian exporters and weighs on foreign investor sentiment and the rupee.",
+   "horizon": "months",
+   "confidence": "medium",
+   "industries": [
+    {
+     "id": "industrials",
+     "score": -1,
+     "why": "Engineering exports exposed"
+    },
+    {
+     "id": "agrifood",
+     "score": -1,
+     "why": "Farm and seafood exports exposed"
+    },
+    {
+     "id": "autos",
+     "score": -1,
+     "why": "Auto-parts exports exposed"
+    }
+   ],
+   "economies": [
+    {
+     "id": "growth",
+     "score": -1,
+     "why": "Export uncertainty"
+    },
+    {
+     "id": "equities",
+     "score": -1,
+     "why": "Risk premium on exporters"
+    },
+    {
+     "id": "rupee",
+     "score": -1,
+     "why": "Weaker export outlook"
+    }
+   ],
+   "sources": [
+    "https://www.businesstoday.in/latest/economy/story/india-us-trade-talks-reached-a-plateau-compromise-difficult-fm-sitharaman-559617-2026-10-05",
+    "https://www.brecorder.com/news/40442686/india-us-have-reached-a-plateau-in-trade-talks-indian-finance-minister-says"
+   ]
+  },
+  {
+   "id": "oil-firms",
+   "date": "2026-10-06",
    "theme": "Commodities",
-   "headline": "OPEC+ holds November output steady; Brent near $101 as supply stays ~5 million bpd below pre-war",
-   "summary": "OPEC+ kept its 31.1 million bpd target for November, extending October's pause. Core members pumped 25 million bpd in August, about 5 million below February. Brent eased 0.9% to $101.31. Ongoing: crude above $100 all week.",
-   "rationale": "No extra supply keeps crude near $100, India's biggest macro headwind: a wider import bill, rupee pressure, fuel inflation and squeezed margins for marketers, airlines and crude-linked manufacturers.",
+   "headline": "Brent firms to $100.84 as Gulf and Red Sea attacks keep a risk premium despite better supply",
+   "summary": "Brent rose 0.5% in Asian trade, reversing Monday's dip, as attacks on shipping near Yemen and Hormuz continued; crew pay near the strait has jumped. Brent is up about 3.8% in a month.",
+   "rationale": "Crude near $100 keeps India's import bill, fuel inflation and rupee pressure high, squeezing airlines, fuel marketers and crude-linked manufacturers.",
    "horizon": "weeks",
    "confidence": "high",
    "industries": [
@@ -275,12 +275,7 @@
     {
      "id": "consumer",
      "score": -1,
-     "why": "Packaging and paint inputs costlier"
-    },
-    {
-     "id": "materials",
-     "score": -1,
-     "why": "Petrochemical inputs costlier"
+     "why": "Packaging inputs costlier"
     }
    ],
    "economies": [
@@ -292,7 +287,7 @@
     {
      "id": "inflation",
      "score": -1,
-     "why": "Fuel costs feed prices"
+     "why": "Fuel costs"
     },
     {
      "id": "rupee",
@@ -301,185 +296,75 @@
     }
    ],
    "sources": [
-    "https://www.cnbc.com/2026/10/04/opec-agrees-to-keep-november-oil-output-targets-steady.html",
-    "https://www.thenationalnews.com/business/energy/2026/10/04/opec-keeps-oil-output-targets-unchanged-for-november/",
-    "https://tradingeconomics.com/commodity/brent-crude-oil"
+    "https://tradingeconomics.com/commodity/brent-crude-oil",
+    "https://news.google.com/rss/articles/CBMiowFBVV95cUxQYmx2c215cHk1UnlLanJNZmtmZmViamhDMTczdFlxclhkX2NCLWdrWmVrRnhTWmlMaDhwdFVUSVlXUG9TMGxlRkxGRURBeTVIR2t0X0JRSklSSGtPQ2daRlFLZnpHSldBTTJ3ZHVCeF90UmUwQnlsZXI1MXlNTjlFWTVzQVZrWnhYUDZyYXNabjEzQXFMQmNfbGdFRHlyV2x0V1U4?oc=5",
+    "https://news.google.com/rss/articles/CBMixwFBVV95cUxNa2tkaEVtTEozQmNWZHZaQkdIcWlmaWhlZW5fLXZkd01CLWk5dWJQSlYzRnVaWFVlMU9XbzQwdkhyUWN2Y09sSXYwZzZaUW0zbGhJM0FpTkJEWmRrSHlNTkxHcTRKVHk2QjZqLWt4dTRrSHZzXzdocVdpVWpnVHlVWVNYalhreDZ2S0thb0hEb013YUJrbk15d1dHQXl4a2hIZmhEaHpqam5nRXRnOHhYdnFBTlZrOTdKNm1EckJGQTJKSTZfOE5R?oc=5"
    ]
   },
   {
-   "id": "crude-imports",
-   "date": "2026-10-04",
+   "id": "lng-imports",
+   "date": "2026-10-05",
    "theme": "Energy & geopolitics",
-   "headline": "India's crude imports hit a 2026 high of 5.26 million bpd as Gulf supply recovers via ship-to-ship transfers",
-   "summary": "September imports reached 5.26 million bpd; Gulf producers supplied 39% and Iraq became the second-largest supplier. Middle East shipments are near 98% of pre-conflict levels. Easing supply risk despite Hormuz attacks.",
-   "rationale": "Secure crude volumes reduce the risk of fuel shortages and emergency buying, supporting refiners' runs, though prices near $100 keep the import bill high.",
-   "horizon": "weeks",
+   "headline": "India's LNG imports fall 14% in September; Oman becomes top supplier with a 27% share",
+   "summary": "India imported 585,000 tonnes of LNG from Oman in September, overtaking the US, now third at 16%. Qatar's share fell after earlier damage at its main export hub. Ongoing supply diversification.",
+   "rationale": "Lower LNG volumes tighten gas for city-gas distributors, fertiliser plants and industry, while diversification reduces dependence on the Hormuz route.",
+   "horizon": "months",
    "confidence": "medium",
    "industries": [
     {
      "id": "energy",
-     "score": 1,
-     "why": "Refiners secure Gulf barrels"
-    }
-   ],
-   "economies": [
-    {
-     "id": "inflation",
-     "score": 1,
-     "why": "Lower risk of fuel shortages"
-    }
-   ],
-   "sources": [
-    "https://news.google.com/rss/articles/CBMizgFBVV95cUxOdjhsTHZhcjJ6SlVmUVNyMzNsWTRrOTRZdml1MjlsdURoaGVOakRvWHFVVVJPVkZkMVRHaVJrcVR3OGlwQ3pDcHk0ckRFQ1QxNkFNVHJ4dmxhTlBMeUJ6YW1uZ3NRaGhOVEh2NllWa2dRNndLbWQ4NDNjVk5CREJLVGdlTHNZZk5Na2xMNzl1cXZkMkkxMDE1UnQwWktKX3JabzRCSnlsR24yNGluckxGSkdLLUpKVTZmSENyRVlyeGhQZ2E4akVzYU5hN1Bld9IB1AFBVV95cUxQU0lndm5hSjBLWUVZcHpZRlJEZ3lKVUt0SktBU2RWbDdMVzJmM1l3LVB4QnUtOGYyRm00Vy1CZlBzcVNaczdqVmpyYV9PYjllZ3FnaG0zUGZvQzY3aFROLVVQMzZIXzR3endTS1dJNnh5cUVNd0NqQ2wyVkJ4cmp5QTh3ZjV1N2cyZ0FGTlpCVjFIVGptS0pWUXFEblZiZkRraGlRdWExSzBrTzdubHRVMlFoelV4WDd0SEhWa2lGcmwyaGhZNHpOUFNkWjZSRUVzTHBPeQ?oc=5",
-    "https://www.whalesbook.com/news/English/energy/India-Crude-Imports-Hit-526-Mbd-Peak-As-Gulf-Supplies-Surge/6ac096745aacb956d08a1223"
-   ]
-  },
-  {
-   "id": "hormuz-attacks",
-   "date": "2026-10-04",
-   "theme": "Energy & geopolitics",
-   "headline": "Iran says Hormuz won't reopen until its conditions are met; tanker struck, five Indian crew rescued",
-   "summary": "Iran said the strait stays closed until its conditions are met. A Kuwait-flagged tanker was struck near Oman, five Indian seafarers were rescued, and explosions were reported aboard a vessel in the Red Sea, even as oil flows recover. Ongoing.",
-   "rationale": "Attacks keep war-risk insurance, freight and crude risk premiums high on India's main oil and LNG routes, and put Indian crews at risk.",
-   "horizon": "weeks",
-   "confidence": "high",
-   "industries": [
-    {
-     "id": "transport",
-     "score": -2,
-     "why": "Freight and insurance costs stay high"
-    },
-    {
-     "id": "energy",
      "score": -1,
-     "why": "Risk premium in crude"
-    }
-   ],
-   "economies": [
-    {
-     "id": "fiscal",
-     "score": -2,
-     "why": "Oil and LNG import bill"
-    },
-    {
-     "id": "rupee",
-     "score": -1,
-     "why": "Importers' dollar demand"
-    },
-    {
-     "id": "inflation",
-     "score": -1,
-     "why": "Fuel and freight costs"
-    }
-   ],
-   "sources": [
-    "https://news.google.com/rss/articles/CBMivgFBVV95cUxNbGl6a1ZkREdlVjJxOTFDSlVkbGtBRlI3djRUc0xwclQzcGFadFB0NVZxdlV6VWlWVHhTNWh4SWZNRVNsWkRhVzk2c3Vsbl9kSGFSbEFtVjh0MHh4enZpV2dEaHdYYVhhbHBlLXFNVHQ0cHNubHVVTHBKTGp5SVRjcXdRcmdER2V6Z3hGNHpVOHZWb25jY2RocF81b0s3czRBTm9pbWFOUE5ROXAxZ0VNNl90Nnc2UDloSTlfQkln?oc=5",
-    "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNS2NmdTg0TEZqemJ2YUVIdUxzQzAteTlpRUZYU1FraGFRWHlEN0tzZmMxczdNclgwSldzR0FKVTlyZS1XMHotdlZrbEJKT0R4VWIwZ1NoNzhLbFluWWk5ckROSzhFdFg5b3RQVUpoZlJuMy1vLTFrZDVOS0x0Y0Zqa2p1WXBhOHRwMzFqSjNvc0pKWWZvWkt4ekNvbzlsYnNrZjVYSUVlSG1CREJ3R0R1MXBwU2xwU1ZWU2dQdTNraXJfM0k4QndfM3lrNHBnNkJWQ19qSjZIWDQ?oc=5",
-    "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPOVZoMm4wcUcweGxLTUMyXzRRcDc2bTFiMUR6dFpvMkNNUk0tRmRCbzV1QkVIREZBaVhhSDFUWEs2dzZTTXNFOUYtREw0V01JVm5pb25XZ1Q0bkZjNk1yWER3ZWZMSVZWZm5tV3NFWi1wTFp0blhDTFlQYng4aXRVbW94b0I5cW9ManU2VUlqXzUtdm9YbHpjNXhEQ1hzVGI5WXNCdFJhLWZZVWpINWM4bExDZjM3Y0JTU3dyUXhtMi1lSWFodW5nU2hLbV9MWFZoSWl5WlY5aHlZajVOUHBYTzQzdHp1dThOMUlsUmNtMHNwZHBsRVJZQtIB_gFBVV95cUxPeWI3a2MxTFNtQnNob0ZkQlJaR3NBOWJKdWMxNWRlcGJ1dS1ybHUyT1k5MmdSdnBsMmFzVTVGcjBTX2NlN194UFFPcUNNeHpEeGYxelNEXzB0Rm5hc291dkJVdzFweW5hUzlweUszbEtLaGxQUV82dVgwN2ozd3VibUc0bEE5eDVwbWRZY3pBVU9acVRhM1R0dmJ0MlhaNFR4TVFBdmg0cEZ1S0M5NTcyTmVzMGlOdE90YjdQZTlya0k3NHRGRElwOVU2M2RVaEhhNnVIRU5aVjYxRVVEZ1p2OWpwLTJ1alRTU2hDQWNKWnM1clN0WHpZOUNEU1dwUQ?oc=5"
-   ]
-  },
-  {
-   "id": "russia-refineries",
-   "date": "2026-10-04",
-   "theme": "Energy & geopolitics",
-   "headline": "Ukraine vows more strikes on Russian refineries, threatening global diesel supply",
-   "summary": "Zelenskyy said Ukraine will step up attacks on Russian refineries after Moscow's new airstrike campaign; Ukraine estimates over 45% of Russia's refining capacity has been knocked out. New escalation.",
-   "rationale": "Less Russian refining tightens global diesel supply: export-oriented Indian refiners can earn wider diesel margins, but higher product prices add to fuel inflation.",
-   "horizon": "weeks",
-   "confidence": "low",
-   "industries": [
-    {
-     "id": "energy",
-     "score": 1,
-     "why": "Wider diesel export margins"
-    },
-    {
-     "id": "transport",
-     "score": -1,
-     "why": "Diesel costs rise"
-    }
-   ],
-   "economies": [
-    {
-     "id": "inflation",
-     "score": -1,
-     "why": "Global diesel prices rise"
-    }
-   ],
-   "sources": [
-    "https://www.cnbc.com/2026/10/03/ukraine-to-hit-refineries-in-response-to-russian-airstrikes-zelenskyy.html",
-    "https://www.japantimes.co.jp/news/2026/10/04/world/ukraine-russian-refineries-response/"
-   ]
-  },
-  {
-   "id": "us-deal-russian-oil",
-   "date": "2026-10-04",
-   "theme": "Trade",
-   "headline": "India–US trade talks still snag on Russian oil as new US law allows tariffs of up to 100%",
-   "summary": "February's interim deal cut US tariffs on Indian goods to 18% in return for halting Russian oil purchases. A US law passed in September authorises tariffs of up to 100% on big buyers of Russian energy. Ongoing risk.",
-   "rationale": "Any lapse on Russian oil risks steep US tariffs on Indian exports, while giving up discounted crude raises the import bill; the uncertainty weighs on exporters and foreign investors.",
-   "horizon": "months",
-   "confidence": "low",
-   "industries": [
-    {
-     "id": "industrials",
-     "score": -1,
-     "why": "Engineering exports exposed to tariffs"
+     "why": "Tighter gas for city-gas firms"
     },
     {
      "id": "agrifood",
      "score": -1,
-     "why": "Seafood and farm exports exposed"
-    },
-    {
-     "id": "energy",
-     "score": -1,
-     "why": "Discounted Russian crude off the table"
+     "why": "Fertiliser plants need gas"
     }
    ],
    "economies": [
     {
-     "id": "growth",
+     "id": "inflation",
      "score": -1,
-     "why": "Export risk"
-    },
-    {
-     "id": "fiscal",
-     "score": -1,
-     "why": "Costlier replacement crude"
+     "why": "Tighter gas supply"
     }
    ],
    "sources": [
-    "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQb2hGdEVtRGdmR25aMXdEMFBEVXBxNkdIUVhOdDlmQlg4Y191a2tGeFgtZkdBRTlRZHZVLXA3YURMYTNQNE5VUFRudUxYZ1FQa3R1S2RtNjdOZFlZTDktajRpNUVIa2FHNTEyenNDQzhfSnAtc09Iel9uR003bnhFWFB2bWpxUG0tS25Lb0YydnE0ZlBvZEgwSlBNbXE1UnpVQUREQjVzUDhtbm1Id2hkLUViaHVnVi1iTU00SGJfY2hQSlA3Z3JiUkl4OXJpOExjLWRpWGR5UdIB3gFBVV95cUxPYkJtRmdkeW16OVZEeXF0ZFdlWlVGTGlRSnhzeVNVdWFCSUZ2b2pIRUVfcEtvVWdQWFhST2lITFZMSHJ3Z2ZWWmI5eGtjR2M4NDZLOU1rSWRkZTRyV1F4TWVibWUzVlpuUEpibmJXZkNWS1Y1UXFrNWhIeVhqVDBTOXpvcFJvUHJtZ245NmxfUzlfRm5YZG5tMC1obDhLYkpJX0NsVjViRlZ0b19IR0tTWG5aRVRYVTkwUHBJdzRXRWpHaEQ4SEpOYjFOVXlzZkpkUzlxVVZGMVpSamZ0cnc?oc=5",
-    "https://www.business-standard.com/amp/economy/news/us-congress-russia-sanctions-bill-india-tariffs-trump-russian-oil-126091700100_1.html"
+    "https://telanganatoday.com/indias-lng-imports-fall-14-per-cent-oman-tops-supplier-list-in-september",
+    "https://www.whalesbook.com/news/English/energy/Oman-Overtakes-US-as-Top-India-LNG-Supplier-Qatar-Share-Dips/6ac362045aacb956d08c088d"
    ]
   },
   {
-   "id": "it-q2",
+   "id": "black-sea",
    "date": "2026-10-05",
-   "theme": "Tech cycle",
-   "headline": "Indian IT majors head into results week expecting their weakest September quarter in three years",
-   "summary": "Large IT services firms are expected to report muted revenue growth with stable margins as clients keep discretionary budgets tight. A global IT bellwether raised its FY27 outlook to 3–6% growth but saw no change in demand. Earnings season starts this week.",
-   "rationale": "Weak growth at index-heavy IT firms limits earnings support for Indian equities, though AI projects and a weak rupee cushion margins.",
+   "theme": "Energy & geopolitics",
+   "headline": "Ship sinks in Black Sea after drone attack, three Indian crew safe; India seeks shipping-safety deal",
+   "summary": "A Turkish-owned cargo ship sank off Romania, killing two; three Indian crew survived. India's foreign minister said New Delhi is talking to Russia and Ukraine on Black Sea shipping safety, grain and energy exports. Escalating.",
+   "rationale": "Black Sea attacks threaten supplies of sunflower oil, grain and fertiliser that India imports; a deal brokered with India's help would ease that risk.",
    "horizon": "weeks",
-   "confidence": "medium",
+   "confidence": "low",
    "industries": [
     {
-     "id": "tech",
+     "id": "agrifood",
      "score": -1,
-     "why": "Weakest September quarter in three years"
+     "why": "Fertiliser and edible oil supply risk"
+    },
+    {
+     "id": "transport",
+     "score": -1,
+     "why": "War-risk premiums"
     }
    ],
    "economies": [
     {
-     "id": "equities",
+     "id": "inflation",
      "score": -1,
-     "why": "Index heavyweights lack earnings support"
+     "why": "Edible oil import risk"
     }
    ],
    "sources": [
-    "https://mintnl.substack.com/p/it-sector-results-q2-2026-27",
-    "https://www.outlookmoney.com/invest/key-factors-set-to-affect-stock-market-next-week-rbi-policy-q2-earnings-and-fii-outflows-in-focus"
+    "https://www.outlookindia.com/international/three-indians-safe-after-cargo-ship-sinks-in-black-sea-off-romania",
+    "https://kyivpost.com/post/86144"
    ]
   }
  ]

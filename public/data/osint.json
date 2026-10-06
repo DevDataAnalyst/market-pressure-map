@@ -1,6 +1,6 @@
 {
  "updatedAt": "2026-10-06T00:23:23.872Z",
- "assessedAt": "2026-10-05T05:44:31.187Z",
+ "assessedAt": "2026-10-06T05:45:04.209Z",
  "sources": [
   {
    "name": "UN News",
@@ -155,7 +155,27 @@
      "source": "UA.NEWS",
      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPYTdPVEoxdVB3ZDNCWWU2dVEtMFdJbmFPR2twcG43anF1OWdOWlNyQzBwNWVSaTZCeFBxMFdCUXFkYlFBNEhvVVJqQTE0ZkpPaTRZZEJaOEtsNFJvSFBkcEppbm1pZmNsVktUd1Ntb1F6dWhLb19PU1diRlFkZGJwdFdUY3lXdjA?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "Drone attack hits Black Sea cargo ship carrying Indian crew; captain killed",
+    "risk": "high",
+    "note": "Black Sea war risk rises for crews and grain, fertiliser and edible oil shipments.",
+    "industries": [
+     {
+      "id": "transport",
+      "score": -1,
+      "why": "War-risk premiums"
+     }
+    ],
+    "economies": [
+     {
+      "id": "inflation",
+      "score": -1,
+      "why": "Edible oil risk"
+     }
+    ],
+    "at": "2026-10-06T05:45:04.209Z"
+   }
   },
   {
    "id": "ship-carrying-indians-sinks-in-black-sea-after-catching-fire",
@@ -233,7 +253,27 @@
      "source": "BW Businessworld",
      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQY0x1M2twZkZvd2dYaVNLUDY0eFg1dkpjYUFXZEtIcXZPYllQNldEdjJVQnNWNHNmcDhkYW1GdlBSUTZXcW1vdklQdXdTck9LVHZNQmdTd2F3TWF5cjh0QkY1cFQwRGM5blRzYXlsSDB2UHl6UHpXWmdhYzNHYlEwQjkyckdLRndSazEwRHc2WFE0WkZ0cXRfeXY5RkgwTEc1OUpVM2JscV8ydFQ2TFE?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "India in talks with Russia and Ukraine to keep Black Sea shipping safe",
+    "risk": "elevated",
+    "note": "A deal would ease supply risk for grain, fertiliser and energy.",
+    "industries": [
+     {
+      "id": "agrifood",
+      "score": 1,
+      "why": "Safer supply routes"
+     }
+    ],
+    "economies": [
+     {
+      "id": "inflation",
+      "score": 1,
+      "why": "Lower food-import risk"
+     }
+    ],
+    "at": "2026-10-06T05:45:04.209Z"
+   }
   },
   {
    "id": "zelensky-russian-drones-carried-out-deadly-attack-on-turkish",
@@ -280,7 +320,21 @@
      "source": "The Telegraph",
      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNX21yZl9uTElYRzBsa3dma2VOODF2VmRRT3Q2VExwVV80TlRIb09HNl9wMGJZVVV2dkFPX3pfand1d2kwLXdVVEZzU3Y1aDVTN08xMnB5U2Zsa2hYcFpJNzdQUU90ZFRjOTBJSnNBdm93UHVIajk3TlFCZ3kwMDRUdVExTVlaWVFZWG9USmwza3pGOE1hNjVFUFgya29KbWhYQXlZdmt3dUcwaDlE?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "Ukraine says Russian drones sank a Turkish grain ship in the Black Sea",
+    "risk": "elevated",
+    "note": "Threatens grain flows; small effect on India's food import costs.",
+    "industries": [
+     {
+      "id": "agrifood",
+      "score": -1,
+      "why": "Grain supply risk"
+     }
+    ],
+    "economies": [],
+    "at": "2026-10-06T05:45:04.209Z"
+   }
   },
   {
    "id": "2-killed-11-rescued-after-drone-strike-sinks-turkish-grain-s",
@@ -359,9 +413,9 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Explosions reported aboard vessel in the Red Sea; Houthi attack suspected",
+    "headline": "Explosions aboard a vessel in the Red Sea; Houthi attack suspected",
     "risk": "high",
-    "note": "Raises risk on India's Suez route for exports to Europe and some crude.",
+    "note": "Raises risk on India's route to Europe and some crude flows.",
     "industries": [
      {
       "id": "transport",
@@ -376,7 +430,7 @@
       "why": "Costlier exports to Europe"
      }
     ],
-    "at": "2026-10-05T05:44:31.187Z"
+    "at": "2026-10-06T05:45:04.209Z"
    }
   },
   {
@@ -417,7 +471,7 @@
    "assessment": {
     "headline": "Hormuz oil flows recover even as tanker attacks raise fresh fears",
     "risk": "elevated",
-    "note": "Volumes back up, which caps the supply shock; attacks keep the risk premium.",
+    "note": "Volumes up cap the shock; attacks keep the risk premium.",
     "industries": [
      {
       "id": "energy",
@@ -432,7 +486,7 @@
       "why": "Supply risk easing"
      }
     ],
-    "at": "2026-10-05T05:44:31.187Z"
+    "at": "2026-10-06T05:45:04.209Z"
    }
   },
   {
@@ -559,7 +613,15 @@
    "severity": "high",
    "severityScore": 6,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "LNG tanker and sanctioned tankers head to Indian ship recyclers",
+    "risk": "watch",
+    "note": "Small boost to ship-recycling; little market effect.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-06T05:45:04.209Z"
+   }
   },
   {
    "id": "india-steps-up-talks-on-restoring-safe-black-sea-grain-shipm",
@@ -649,7 +711,27 @@
    "severity": "high",
    "severityScore": 6,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Yemen escalation and Hormuz attacks threaten vital oil routes",
+    "risk": "high",
+    "note": "Two chokepoints on India's oil and trade routes under threat.",
+    "industries": [
+     {
+      "id": "transport",
+      "score": -2,
+      "why": "Route and insurance risk"
+     }
+    ],
+    "economies": [
+     {
+      "id": "fiscal",
+      "score": -2,
+      "why": "Oil import bill"
+     }
+    ],
+    "at": "2026-10-06T05:45:04.209Z"
+   }
   },
   {
    "id": "5-indians-rescued-after-kuwait-flagged-tanker-mt-kazimah-iii",
@@ -682,7 +764,7 @@
    "assessment": {
     "headline": "Five Indian crew rescued after tanker struck near Hormuz",
     "risk": "high",
-    "note": "Attacks put Indian seafarers at risk and keep war-risk premiums high.",
+    "note": "Keeps war-risk premiums high on India's main oil route.",
     "industries": [
      {
       "id": "transport",
@@ -697,7 +779,7 @@
       "why": "Costlier shipping"
      }
     ],
-    "at": "2026-10-05T05:44:31.187Z"
+    "at": "2026-10-06T05:45:04.209Z"
    }
   },
   {
@@ -732,13 +814,8 @@
    "assessment": {
     "headline": "Iran says Hormuz will not reopen until its conditions are met",
     "risk": "high",
-    "note": "Keeps the crude and freight risk premium on India's main oil route.",
+    "note": "Prolongs the crude and freight risk premium.",
     "industries": [
-     {
-      "id": "transport",
-      "score": -2,
-      "why": "Freight and insurance"
-     },
      {
       "id": "energy",
       "score": -1,
@@ -750,14 +827,9 @@
       "id": "fiscal",
       "score": -2,
       "why": "Oil import bill"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Dollar demand"
      }
     ],
-    "at": "2026-10-05T05:44:31.187Z"
+    "at": "2026-10-06T05:45:04.209Z"
    }
   },
   {
@@ -789,7 +861,27 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Oil shipping near Hormuz gets costlier as crews demand up to $25,000 to sail",
+    "risk": "elevated",
+    "note": "Higher crew and insurance costs add to delivered crude prices.",
+    "industries": [
+     {
+      "id": "transport",
+      "score": -1,
+      "why": "Crew and insurance costs"
+     }
+    ],
+    "economies": [
+     {
+      "id": "fiscal",
+      "score": -1,
+      "why": "Costlier delivered crude"
+     }
+    ],
+    "at": "2026-10-06T05:45:04.209Z"
+   }
   },
   {
    "id": "ukraine-blames-russian-drones-after-fire-sinks-ship-in-black",
@@ -843,7 +935,27 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Product tanker attacked in Red Sea as hostilities escalate",
+    "risk": "elevated",
+    "note": "Raises fuel shipping risk and diesel freight costs.",
+    "industries": [
+     {
+      "id": "transport",
+      "score": -1,
+      "why": "Freight risk"
+     }
+    ],
+    "economies": [
+     {
+      "id": "inflation",
+      "score": -1,
+      "why": "Fuel costs"
+     }
+    ],
+    "at": "2026-10-06T05:45:04.209Z"
+   }
   },
   {
    "id": "two-dead-after-fire-breaks-out-on-sinking-ship-in-black-sea-",
@@ -940,7 +1052,27 @@
      "source": "Open Magazine",
      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOZE9PNTVSZGx1b2VTQzFiR1k5d3YyQnNLb2ZfMDM1WU5DeV9yZHhrb2tPRE1hS0VmNDNjOUFJZ0hsb3BHckx3RnZUVi1ybUpDZTdYZFI2MWRRLUtBNGNUMWk0TjZTUjViMGxYVDhFaVQ0dkxWZnNocFpfVFRVS2U2ZmttZjJBRUgxSWExenFaY3ViVXIxbXQwWU05c1hsT0dUeUhYcy1NdldMN2hSSGxIYTBoR3FvdWM?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "India–US trade deal stuck, finance minister says give-and-take very difficult",
+    "risk": "elevated",
+    "note": "Keeps US tariff risk on Indian exports alive.",
+    "industries": [
+     {
+      "id": "industrials",
+      "score": -1,
+      "why": "Export uncertainty"
+     }
+    ],
+    "economies": [
+     {
+      "id": "growth",
+      "score": -1,
+      "why": "Export risk"
+     }
+    ],
+    "at": "2026-10-06T05:45:04.209Z"
+   }
   },
   {
    "id": "india-sees-qatar-lng-supply-cut-after-iran-strike-energy-new",
@@ -1041,7 +1173,27 @@
      "source": "IDNFinancials",
      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQVTRfVkJIVTFPclRzSFZRZ09TYWdMeHNRX3A4RGtOUUFoaG4xaEgtb3liYWg4MjUwUlNaeXhDdjl6VDBVS2V5V29ZQk9RT0hRV3doaTIzT0k1LU8wVkRXb1FkaXBLWkJiU0I4OE5WUEktaUlma2R6RU1KRHBqR0M1TVU1TVI1aGFsdHVaa2xiX3hZOUxzTDJEVXU4OVhLeGhBcG5hTmh0eXMzQQ?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "Iraq moves 2 million barrels of crude beyond Hormuz in first such operation in a decade",
+    "risk": "elevated",
+    "note": "Iraq is a major supplier to India; alternative routes ease supply risk.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": 1,
+      "why": "Supply secured"
+     }
+    ],
+    "economies": [
+     {
+      "id": "fiscal",
+      "score": 1,
+      "why": "Supply risk easing"
+     }
+    ],
+    "at": "2026-10-06T05:45:04.209Z"
+   }
   },
   {
    "id": "oman-becomes-india-s-top-lng-supplier-overtakes-us-in-septem",
@@ -1086,7 +1238,21 @@
      "source": "Moneycontrol.com",
      "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOc1ZGM0JMODU0VjV0LVJzTTMwWjZDNDFjTkdCV0c1YmpDNXpzYTNISjZzQjhESWZoZWphXy1aS0N3OFdsM2Y1TzB5X2tsdVZxR0J6T1RyTG9hS2w2WjBDRHRXMXRDS3loLTkzMHcxWlh2N2dLR2JCQWRTU2lLc21ZV19vVUFFMF83b2M2M3JWMkl1WnotOUJ0NUhfcWRPWjdFV2JrM2tpUXRiSFNMdG96VGRKZ25nSzAzTFJacU41RTE4QV9JLV9YZnZuZUZaamlyTWwwMGdqMElwQ1dSaXUyN0tXMUNhd9IB6wFBVV95cUxOU1FkVTRFZm9UbEk3N3FyMDZlRGtCelNTcU82aWJCUHVfWHJ4ZEhhSXVvblRrRV9Tc1hyLU96d0hwbGYxem1adWZCOGI0V3ZNSmM5YnhiNnNhbUtXSnBGUC1rQmlhbVJHd3l3UV9GUkFEbExqSEM5bmd5MHlIbld3TG42NXc0WjFnQ3VfN25jMzJsYVRFcGRIc01mTmRxYUFCenEzR0RISzktWG5zTjBDdEhIWnN3SzBVQ0Vzd3FQRHFha1BQN1RpZkxWb3huTG9JRTBFMEJEZ3lLSTNwUWFKOXp0REpKckQ2Z1k4?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "Oman overtakes US as India's top LNG supplier in September",
+    "risk": "elevated",
+    "note": "Diversifies gas supply away from Qatar and the Hormuz route.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": 1,
+      "why": "Diversified gas supply"
+     }
+    ],
+    "economies": [],
+    "at": "2026-10-06T05:45:04.209Z"
+   }
   },
   {
    "id": "multiple-explosions-reported-near-tanker-off-yemen-ukmto-say",
@@ -1112,7 +1278,21 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Multiple explosions near tanker off Yemen, maritime agency says",
+    "risk": "elevated",
+    "note": "Red Sea risk to fuel and trade shipments persists.",
+    "industries": [
+     {
+      "id": "transport",
+      "score": -1,
+      "why": "Route risk"
+     }
+    ],
+    "economies": [],
+    "at": "2026-10-06T05:45:04.209Z"
+   }
   },
   {
    "id": "two-dead-11-rescued-after-fire-on-board-ship-in-black-sea-ro",
