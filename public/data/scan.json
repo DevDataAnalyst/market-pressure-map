@@ -1,110 +1,217 @@
 {
- "scannedAt": "2026-10-12T05:45:23.745Z",
- "window": "11 Oct – 12 Oct 2026",
+ "scannedAt": "2026-10-13T05:44:43.547Z",
+ "window": "12 Oct 2026",
  "model": "Claude daily routine",
  "headlinesScanned": null,
  "feedsOk": null,
  "items": [
   {
-   "id": "rupee-jumps",
+   "id": "cpi-sept",
    "date": "2026-10-12",
-   "theme": "Currencies",
-   "headline": "Rupee opens over 1% stronger at 95.73 per dollar after the RBI's weekend curbs",
-   "summary": "Friday's close was 96.76, near the record low of about 97. Offshore forwards briefly showed 94.17, up 2.7%, before paring. Banks must park 20% of some import contracts' value with the RBI. Reversing the slide.",
-   "rationale": "A firmer rupee cuts the rupee cost of crude and imported inputs and eases imported inflation; exporters' currency gains shrink.",
+   "theme": "Growth data",
+   "headline": "Retail inflation jumps to 5.54% in September from 4.83%, above forecasts; food inflation at 7.74%",
+   "summary": "Above the 5.40% poll estimate. Food inflation rose from 5.97% on onion, ginger and garlic; rural 6.08%, urban 4.88%. Inflation has risen 11 straight months and is above the 4% target for a fourth month. Escalating.",
+   "rationale": "A print well above 5% strengthens the case for more RBI hikes, lifting bond yields and loan rates, while higher food prices squeeze household spending.",
+   "horizon": "months",
+   "confidence": "high",
+   "industries": [
+    {
+     "id": "consumer",
+     "score": -1,
+     "why": "Food costs squeeze spending"
+    },
+    {
+     "id": "realestate",
+     "score": -1,
+     "why": "More hikes lift loan rates"
+    },
+    {
+     "id": "autos",
+     "score": -1,
+     "why": "Dearer vehicle loans"
+    }
+   ],
+   "economies": [
+    {
+     "id": "inflation",
+     "score": -2,
+     "why": "Above forecasts, food at 7.74%"
+    },
+    {
+     "id": "bonds",
+     "score": -1,
+     "why": "Backs further hikes"
+    }
+   ],
+   "sources": [
+    "https://www.cnbc.com/2026/10/12/india-inflation-oil-energy-iran-war.html",
+    "https://www.investing.com/news/economy-news/india-inflation-jumps-to-554-in-september-strengthening-case-for-further-rate-hikes-4943948"
+   ]
+  },
+  {
+   "id": "bond-740",
+   "date": "2026-10-12",
+   "theme": "Rates & bonds",
+   "headline": "10-year G-Sec yield jumps 10 bps to 7.40% as RBI rupee steps drain bank liquidity",
+   "summary": "Up from 7.29% last week and 7.19% before the rate hike. Experts warn tighter liquidity and borrowing costs could slow credit growth. Escalating.",
+   "rationale": "Rupee-defence measures that tie up bank cash push up short and long rates, raising borrowing costs for government, companies and home buyers.",
+   "horizon": "weeks",
+   "confidence": "medium",
+   "industries": [
+    {
+     "id": "financials",
+     "score": -1,
+     "why": "Bond losses, slower credit"
+    },
+    {
+     "id": "realestate",
+     "score": -1,
+     "why": "Funding costs rise"
+    },
+    {
+     "id": "industrials",
+     "score": -1,
+     "why": "Project borrowing dearer"
+    }
+   ],
+   "economies": [
+    {
+     "id": "bonds",
+     "score": -2,
+     "why": "Up 10 bps in a day"
+    },
+    {
+     "id": "growth",
+     "score": -1,
+     "why": "Credit growth at risk"
+    },
+    {
+     "id": "fiscal",
+     "score": -1,
+     "why": "Government borrowing costs"
+    }
+   ],
+   "sources": [
+    "https://www.aninews.in/news/business/indias-10-year-bond-yield-hits-740-experts-see-pressure-on-credit-growth20261012175744/"
+   ]
+  },
+  {
+   "id": "market-close",
+   "date": "2026-10-12",
+   "theme": "Monetary policy",
+   "headline": "Sensex falls 548 points to 71,924.68 and Nifty 0.7% to 22,363.35 as yields rise and oil climbs",
+   "summary": "Stocks opened higher on the rupee rally but reversed on rising bond yields, foreign outflows and Gulf tensions. FMCG and state-run bank indices lagged. Reverses Friday's rebound.",
+   "rationale": "Higher yields and oil outweigh the rupee rally, pressuring rate-sensitive and consumer stocks.",
    "horizon": "days",
    "confidence": "high",
    "industries": [
     {
-     "id": "transport",
-     "score": 1,
-     "why": "Cheaper dollar fuel costs"
-    },
-    {
-     "id": "energy",
-     "score": 1,
-     "why": "Lower rupee cost of crude"
-    },
-    {
-     "id": "tech",
+     "id": "consumer",
      "score": -1,
-     "why": "Smaller currency gain"
+     "why": "FMCG index lagged"
+    },
+    {
+     "id": "financials",
+     "score": -1,
+     "why": "State-run banks lagged"
+    }
+   ],
+   "economies": [
+    {
+     "id": "equities",
+     "score": -1,
+     "why": "Early gains reversed"
+    }
+   ],
+   "sources": [
+    "https://www.business-standard.com/amp/markets/news/stock-market-live-october-12-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-q2-results-today-126101200057_1.html"
+   ]
+  },
+  {
+   "id": "fpi-slow",
+   "date": "2026-10-12",
+   "theme": "Foreign flows",
+   "headline": "Foreign investors sell ₹1,708 crore; domestic funds buy ₹3,045 crore",
+   "summary": "Foreign selling continued but at the slowest pace in over a week, down from ₹3,569 crore on Friday and ₹12,944 crore on Thursday. Easing.",
+   "rationale": "Slower selling eases pressure on heavyweights and the rupee, though the streak continues.",
+   "horizon": "days",
+   "confidence": "medium",
+   "industries": [
+    {
+     "id": "financials",
+     "score": -1,
+     "why": "Selling continues, slower"
+    }
+   ],
+   "economies": [
+    {
+     "id": "flows",
+     "score": -1,
+     "why": "Net selling, smaller"
+    }
+   ],
+   "sources": [
+    "https://www.niftytrader.in/fii-dii-data",
+    "https://trendlyne.com/macro-data/fii-dii/latest/cash-pastmonth/"
+   ]
+  },
+  {
+   "id": "rbi-ndf",
+   "date": "2026-10-12",
+   "theme": "Currencies",
+   "headline": "RBI limits offshore rupee derivatives to hedging and widens 20% cash reserve to banks' own hedges",
+   "summary": "Banks' offshore-centre units and some primary dealers may now offer non-deliverable rupee contracts to non-residents only for hedging. Banks must hold the 20% reserve daily until contracts mature. Analysts expect higher hedging costs. Escalating defence.",
+   "rationale": "Curbing offshore speculation supports the rupee, but costlier hedging may deter foreign investors and drains bank liquidity, adding to bond yield pressure.",
+   "horizon": "weeks",
+   "confidence": "high",
+   "industries": [
+    {
+     "id": "financials",
+     "score": -1,
+     "why": "Reserve ties up bank cash"
     }
    ],
    "economies": [
     {
      "id": "rupee",
-     "score": 2,
-     "why": "Over 1% gain at open"
+     "score": 1,
+     "why": "Less offshore speculation"
     },
     {
-     "id": "inflation",
-     "score": 1,
-     "why": "Lower imported costs"
+     "id": "flows",
+     "score": -1,
+     "why": "Costlier hedging deters investors"
     }
    ],
    "sources": [
-    "https://www.business-standard.com/markets/news/rupee-opens-over-1-higher-at-95-73-on-rbi-measures-to-curb-dollar-demand-126101200114_1.html",
-    "https://www.fxstreet.com/news/usd-inr-opens-higher-as-rbi-steps-up-measures-to-support-indian-rupee-202610120404"
+    "https://www.business-standard.com/amp/finance/news/rbi-tightens-rupee-derivatives-rules-widens-20-cash-reserve-requirement-126101300045_1.html",
+    "https://www.newsbytesapp.com/news/business/rbi-curbs-speculation-and-hikes-cash-reserve-for-rupee-hedges/tldr"
    ]
   },
   {
-   "id": "oil-truce",
+   "id": "oil-rebound",
    "date": "2026-10-12",
    "theme": "Commodities",
-   "headline": "Brent falls 1.5% to about $103 on hopes of a Russia–Ukraine halt to energy strikes",
-   "summary": "The US president said Russia and Ukraine agreed to stop attacking each other's energy facilities; the US had told Ukraine to end refinery strikes. More Hormuz attacks this month limit the fall. Easing from last week's $104–105.",
-   "rationale": "Steadier Russian fuel supply trims crude and diesel prices, easing India's import bill and fuel inflation, but Gulf disruption keeps Brent above $100.",
-   "horizon": "days",
-   "confidence": "medium",
-   "industries": [
-    {
-     "id": "transport",
-     "score": 1,
-     "why": "Fuel costs ease slightly"
-    },
-    {
-     "id": "energy",
-     "score": 1,
-     "why": "Lower crude costs"
-    }
-   ],
-   "economies": [
-    {
-     "id": "fiscal",
-     "score": 1,
-     "why": "Slightly lower oil bill"
-    },
-    {
-     "id": "inflation",
-     "score": 1,
-     "why": "Fuel price relief"
-    }
-   ],
-   "sources": [
-    "https://business-standard.com/markets/commodities/oil-falls-on-hopes-russia-ukraine-energy-ceasefire-will-boost-supplies-126101200047_1.html",
-    "https://news.google.com/rss/articles/CBMixgFBVV95cUxNWW5DZVhrbC10TERLMWpMa2MwV0hJOWhYN0oxaDNtaEFjVWM5UTRWNlVjc1oxR2QwTzE2akxZU0RfYVZ5X2t2dFk0dGNMQkRHVG45cVR4eDI3b3g4ZWZnMEJfdXFPMzdCOWhIeTFQSjZ6QzQtX3RrNC1mRVd3eTNMaVl0Ym9yVkQyZF91dmdrZ3hLc0xuS2xWbWRMYjJfMmdhRHd0eENiZkVkUDZrYm5JRnFYWWVvcURGVENVdmxyVF9BcU8zbkHSAcsBQVVfeXFMTVk0SDBuX0pkZmhpNDFxbktoVElKVG1JSlZfODlvVEJUYUdEWkZWVjJydmxiRXpCSVBkTHhlUnA3OVdwUldZcFBMNnJvR3M1Y2xuSkZPR0gtaXpJRlI0bms3SFhJM1hzUkRJX2VlbklNaWxvVmcyQnZUaENmR3B1ajNiMWE1MFVoalFnQ01RQkF1NWRfQnVQUHVJQkRQbkpLNjFNSXhNcWliR2RyZ3NXN3JtNWYtY3ZmQ0cxVVZhMkJtZ2FyWHJiR3F1VDQ?oc=5"
-   ]
-  },
-  {
-   "id": "hormuz-weekend",
-   "date": "2026-10-11",
-   "theme": "Energy & geopolitics",
-   "headline": "Iran sets a supertanker ablaze after a US jet disables a blockade runner; two Indian seafarers missing",
-   "summary": "Iran's Guard says another tanker struck a mine; the US is targeting mine-laying vessels. October has seen near-daily attacks. India said attacks 'must cease'. Escalating.",
-   "rationale": "Mines and a tit-for-tat blockade raise the risk of a prolonged Hormuz shutdown, keeping freight, insurance and delivered crude and LNG costs high for India.",
+   "headline": "Brent climbs to a near two-week high of about $106 on Houthi attacks on Saudi Arabia",
+   "summary": "A drone hit a tanker near Sohar, Oman, and Houthis can still hit Saudi tankers in the Red Sea. Brent eased to about $105.86 on Tuesday. Reverses Monday morning's dip to $103.",
+   "rationale": "Attacks on Saudi Arabia threaten India's main non-Hormuz crude supplier and its Red Sea route, keeping the import bill and fuel costs high.",
    "horizon": "weeks",
    "confidence": "high",
    "industries": [
     {
      "id": "transport",
      "score": -2,
-     "why": "War-risk insurance and freight"
+     "why": "Jet fuel and freight"
     },
     {
      "id": "energy",
      "score": -1,
-     "why": "Gulf supply squeezed"
+     "why": "Fuel retailers squeezed"
+    },
+    {
+     "id": "materials",
+     "score": -1,
+     "why": "Crude-linked inputs"
     }
    ],
    "economies": [
@@ -116,171 +223,134 @@
     {
      "id": "inflation",
      "score": -1,
-     "why": "Energy costs"
+     "why": "Fuel costs"
+    },
+    {
+     "id": "rupee",
+     "score": -1,
+     "why": "Oil dollar demand"
     }
    ],
    "sources": [
-    "https://news.google.com/rss/articles/CBMisgFBVV95cUxNaEpobHdGeDJGWEtYM2hfQzFFaHJVdnlObTFEMEJ2V3NDSi1ZbHM5YUY5bk5felVWN29FdENYQTAyQXVQdVhEZXZJeFh1LUgtc2dKSWZfU3lZeUZHQ2l4VzRpX0JhQmdzaGFDcnJaZzF4XzBTc29GRzZqcmxnOUZHNmh0Vk5nenh1UjVSQ1MwazhDcFNGZTNtU05MUnRQY3Y4TmxsRnBHZ21DYkdKMnRYZWVn?oc=5",
-    "https://news.google.com/rss/articles/CBMivwFBVV95cUxNTDJ6bkpzYmM1V1ZNYlo4bmRfWmdRdXFzTU83bTFsb2JBemYwSDNKWWpxZk5nWXc0ZzZObnhlVHJNSUxfWE1FclpYdC1ZR0kxZ2xmUEVKWkV3V1hJZnZONndTZnBsVjdaN3dSVC1GU2FkbjY2a21fMlpYalR1YS1QN215bGZEOVJJQjd2aDcyYmpvU3Nqb2xXQk5yNnJPaTZwcDFDZy1BdjFvVlZnN0NOT1RtOXlXSXE3Wm5qWWhwQQ?oc=5",
-    "https://news.google.com/rss/articles/CBMiigJBVV95cUxQZG1XWmZHYU45LXdvQVlmMDJDUnlZclFTMWwzTzROMHltczNLSHdyMWVKVHFNMlJXNkppNkd4WFZPbWl5ZEVWUHZyVEZJbC13U1BCZFJ6T0hKVG9HN2dsOHVEcXdRUzhqcHJnMEthN0dqU285MjhrQlJiQlphZjlONUZPemliUWl4dWJhSDFkOUF0NWNUeFBhM0FrV3JfcVpyb3JxOHBRdEt4Y2tZU2JnZHI2bFdwQk9yQUstM081VGowcndSUjRFeFF0NUVGLVdMVHl6MDkydnBUeVdxMVlQVUFBcXgyMmRUNGtEYjhEVnlPbzI5blNMR3p5STZwTTRwZjNZV2FINVZPd9IBjwJBVV95cUxQbTlRZUE5Z3hJNUJQQkVWREtHT2VYMDE4cC1QTWUzQUs3ZldUck04WHZDZVo5a0VsYWoxWTBvUENNcE43QUhQeUZrSmVoODV4RHdLQkxiZWlPUmluNGk0OElyUUkyWG5Hb2c2YWN3bkdSbVROd1Q1RUtZLUMtQUd1RHE2VG9wSWNCT0R2TzM3ZXQ2RXRrSkJROEh5WjhYdC1jb2lmWi1teGVQV0R6ekhJR0I0RkZxNGZHekRIRk5XSjF3U05PN2MxaWlJY1pyZTI2bWxGQkl1REtuSU10czdiQkRoODlLTGlVLTZGYjRXc2hXMi1oVFoyNHZHZ3FaYl9wYkhHZ0NvTWt0SENIZUdZ?oc=5"
+    "https://www.moroccoworldnews.com/2026/10/341727/oil-prices-rise-to-near-two-week-highs-amid-houthi-attacks-on-saudi-arabia/",
+    "https://www.npr.org/2026/10/12/nx-s1-5998041/deadly-houthi-attacks-on-saudi-arabia-raise-stakes-for-us",
+    "https://tradingeconomics.com/commodity/brent-crude-oil"
    ]
   },
   {
-   "id": "fpi-october",
-   "date": "2026-10-11",
-   "theme": "Foreign flows",
-   "headline": "Foreign investors pull ₹44,166 crore from Indian equities in October; 2026 outflows top ₹3 lakh crore",
-   "summary": "Selling follows ₹35,861 crore in September, with money moving to North Asian markets riding an AI rally. 2026 withdrawals reach ₹3.04 lakh crore. Escalating, though daily selling slowed late last week.",
-   "rationale": "Sustained outflows weigh on large banks and index heavyweights and add dollar demand that the RBI must offset from reserves.",
+   "id": "hormuz-supertanker",
+   "date": "2026-10-12",
+   "theme": "Energy & geopolitics",
+   "headline": "Iran's Guard strikes another supertanker; two ships with 22 Indian crew attacked, two missing",
+   "summary": "Iran warned ships against defying its orders and threatened a US–UAE oil shuttle out of the strait. Sixty countries backed an EU declaration opposing tolls on strait shipping. Escalating.",
+   "rationale": "Repeated strikes and toll threats keep insurance, freight and crude costs high on India's main energy route, and put Indian crews at risk.",
    "horizon": "weeks",
    "confidence": "high",
    "industries": [
     {
-     "id": "financials",
+     "id": "transport",
      "score": -2,
-     "why": "Most-owned by foreigners"
-    }
-   ],
-   "economies": [
-    {
-     "id": "flows",
-     "score": -2,
-     "why": "Record annual outflows"
+     "why": "War-risk insurance and crew pay"
     },
-    {
-     "id": "equities",
-     "score": -1,
-     "why": "Index heavyweights pressured"
-    }
-   ],
-   "sources": [
-    "https://www.business-standard.com/amp/finance/news/fpis-pull-out-44-166-cr-from-equities-in-oct-2026-outflows-cross-3-trn-126101100210_1.html",
-    "https://www.freepressjournal.in/business/fpis-dump-44166-crore-in-october-2026-equity-outflows-cross-3-lakh-crore"
-   ]
-  },
-  {
-   "id": "riyadh-attack",
-   "date": "2026-10-11",
-   "theme": "Energy & geopolitics",
-   "headline": "Houthi strike on a Riyadh airport kills 12; India condemns repeated attacks on civilians",
-   "summary": "The attack widens the Saudi–Houthi conflict after recent Red Sea threats to Saudi crude tankers. Escalating.",
-   "rationale": "Strikes inside Saudi Arabia add risk to India's largest non-Hormuz crude supplier and to remittances from Indian workers in the Gulf.",
-   "horizon": "weeks",
-   "confidence": "low",
-   "industries": [
     {
      "id": "energy",
      "score": -1,
-     "why": "Saudi supply risk"
-    },
-    {
-     "id": "transport",
-     "score": -1,
-     "why": "Gulf air and sea risk"
+     "why": "Gulf supply squeezed"
     }
    ],
    "economies": [
     {
      "id": "fiscal",
      "score": -1,
-     "why": "Crude risk premium"
+     "why": "Costlier delivered crude"
+    },
+    {
+     "id": "inflation",
+     "score": -1,
+     "why": "Energy costs"
     }
    ],
    "sources": [
-    "https://news.google.com/rss/articles/CBMi9wFBVV95cUxQY0UxMEZvaGdiaFRkX0dKaTBWZWEyRUQzOWVhaXc5aHRsM1l2c0Jhc3lUamlqdEVjdjluazZ6OWQ1WHdSNUNIUUk0d096Q2FGdGVDOWNvTXpoRGJkWU83U1lxT3lOR2dMX21rU1MyN0lwOHBDaC1hZDV1ZlN2X1N5SUMzdWVjSXg4ZGNtcV9DeGMxZWZMWHVLVmlFYkQ2MnVVaDI5cEZySTBGMk9zaXFRM0tQWjVsTHBGR0dMbEFqbEtCbXV2a2o5VXZUWmhyNHdxV1FBc3AzTDFZXzBnck5XeDFVQVhZVjdoRWU4cGlzUURHSmtCcEpR0gH8AUFVX3lxTFBlQzFKajJzYm5Vc3FLX2JpQVF2V3RNSF9nNnoxR2VYVXBZeGN1Y3BOWFNYMnNBZUJQbGdQSlcyQ1gyWkNmemtpaUhLTWJ3aFFWRFFJbkl4MjRvQUhsdksxZVplbVlnWjQ0U3NXdF8zdk4waEVaUGVjMnBKU1VJZzJwOUVVV05kaERlenEtMUx6UVJRby1ZXzVUbF9xRm5xSnBVWEJGZVF0VU5NWmRaSENPQ3A5T0hDN1ByeC03dU9XdTJNNmtXVmp6Zm1UQkdMX3MwMnRzSGxkdE90NFNadWJBNXA5NDJrRUMtNjl5UDBEMG5ZSVN0Mk1oSmMzTA?oc=5",
-    "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOMDZjZXpLQ2NhV3E0UHRmVEpnaHhUanRXRmdfNHJEQXliaGlDVll5clJGeUJISGV0cU5zUnVrY1A3NUhCSXJRcmwtVzJ4Qk1QU1FQT0xEUm1CZ2xXNmJmWVJ3RVpkbTF3ajVhMndiNTBUeS1iUndGWlNxZ2oyU3BjenQ1SWVmcGFQa19iQ29KdTN3S1hxN2l5OTRxekN6QmtsY2c5VnRDMDlUNTd5SVBvckZJa2Z1cjBLVTQ5MUs3YWxSZUNCNnF1X05SZE9JME9OTml2UTNR0gHmAUFVX3lxTE55MENHUGtDa01aX2pjVEhWUlhEYm1QNWNXcXJOSG1BdHhmRkRhWlhNc1RYZldmbnBRSGI1ekJmaWhQQ25sZ0I5QmRpdkU1dVF6QXVvODlja09kVXZpSW9hZEp2Y3pnRmlwREdQa0Y5ZTAwc1F1R1BDNWZpTTdZLWZldkVreGVvVnQtc0VkcGc3RExhbVZwb0d4bWQ2eC1CRDg0d2tWNTZGbjk5SWQwQTFCR1laOFZtbHhzdE03OEFHTHJZU2M4djh4dWlJRGpWWkhlUFlPem9uX2hiemRReTJyNmVYTWJ3?oc=5"
+    "https://news.google.com/rss/articles/CBMihAJBVV95cUxNZi1KTzhzMzRuVzIwcE1rbXY2bk5hLWFfLUxKaml2TGdZd3J5ZkNSb0lBTFVXbTRBeEo4YVRSNlAyY2RZVW5qYVFLenN1UkQyVngzeGhtdkY3SmZ5TnEzV0JEUkpTT1JGOWVPUGVzOWFLVFROQTl0TUkxS0JObXcyVGpRMjBhTWc1UWpISjRyOExCcnNtRXp2RkdfUVVvVXJrdm9BRUpUaFZSLTZSMWEwVWZPWFdEU2RYaWhGUnRtc3ZMMlhZNVZZM1pCeE0zeE5EaFFGYUoyZWR3ZktWdmpSNzRIUENGcldHcWRPWnlCd1E2di1hOEtWTEVzTkxJNEpTLTNaQdIBigJBVV95cUxNeF96V2pFeGJJXzFZb0Q0d05qU3g3cjZvRUtTZ20xRGZQUmgzaUFOaUlob19BVEFhb2tSS1VuSmdiOUpud1MycFdxSEhBYWdKaURpNHItOW44aFVqaVljWWhESVNDRDFfQy1jY0t5MnpYajR6LTdDaGxjQnFtUVk5RHpLS3NwMVlfblpsNjlIWkhNOWpZd1Roa2Jqd3FxLWtGM18xVm5QTjZISzM2ZTVxY1FQeC1WY3lMUm9VRGNiLXQxdjI4a3E1aFJHNkx2WTRvMlZXbFFzS21idzllME5jcmk1ZUM3Q1JQc3Fmc2MyTVFsek5LeXV1bHNUY2hJdEJuaVZyZmtmR0lSZw?oc=5",
+    "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQMnVWZl9SeXB3ZHlLaVpfQmh0aUFoRUJvaVFnZmZ1OHBBSzJiTHZOZkFBWEp5LW5jSmhEWnkzcElNUTRYQ2dSWWlTWk1pZmlJbDlZcW5HaXhNZFlfakRsdnRvR3B3UHh2T2MxUzY2eUNPaG0wMzZzc2ZocGoxV0RvRzdZNmlrSmlUVWZpQVpQREVHNGFyUVVaa08wRnBxc2h5TkI5T28zNXdXX2s3b2tRNG5kOHI2UlM2YnNGTUd3eDRGb2QzNV9WOHlGYVRNZXhPOEHSAdcBQVVfeXFMTjNDS1dQUzU5bU5jdF92TFpYN1ljbGtQQmtrQTZmdlprM214RXdhN3FWcGktMDZnaUNOWDk3UklXS2tmVFBTYkpyNDBzY2lyYTI3VEFaT3VzdWJiUjNyNG5hQWhxczZDZVQ4NGw4d1JJLUg3VUtfWWtkYUZoTkQ2cXFiMGdwcHJ5aWhrN0NwN1dmRFJDUml3T2R5Q0I5TlZNQUVxekl2T0k1SExQMUpRdjRIdl83aXpDUVUtX012WkVKbzRhYWoza3RXSE4xb09DWXhIX1A1VXM?oc=5",
+    "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNZ2xpdkpkSmY2cEd0bTIzUE1NQmRBX0Q1RzVQdUNXNk1nMDFuMUxlVGpNR1JLWXRjRTVEVjhFRTBWcEJRZmVhdWRUenNrZHZ5WE1MSkpxX2hRNF9vTmUzTUJKTTNUZ0Rzc09wUXlwUWRDeDRONkczU1F3Uno2WTQ0OHBKb2g3MVUzc3hlaXVxTHdLZW9iOERoM3JwdklHZlRUamlaeVl2YmN6aUNXUGpoZzcxWlo2c28zWWZIOWdZczR2amZfbHdxTU1EZHNXaEtOOHNESUhfdTA5Y3dTUDRFMTJQM2pkX2trdnV6YTlBdnXSAfYBQVVfeXFMTVpVSkVmLVl1SlVuTGl5QWNCeXo3cWtiOXhMemQ3YlFNdkFxYUJSWWdyS1NfbVhSMEtTWC1zczcxVHJodl9aZmYxTUQyY2VTU3J0UGxjalE5NGFpN2Z2a3J6dTVmejR5TWZsUnRPSkhCdnRFMFJ6LWgzT3NnX0hTRlFtOTNhS1VXbURINVlEMVN0TUxYVHRMUkNEYzgwcWtTMjI0NUppMVVGZUk4TGY0LWpWNzZZbHhrOFVhSGYxcHhWS0EzVjFkUEY5NDhyTkdhVDZqbnptWFR5R1h0VlhFdUw4OEtXVlBoWUdiV2ZUWWJyX09URXV3?oc=5"
    ]
   },
   {
-   "id": "black-sea-grain",
+   "id": "lng-cost",
    "date": "2026-10-12",
-   "theme": "Monsoon & farm",
-   "headline": "Black Sea blockade set to cost Ukraine 30 million tonnes of farm exports",
-   "summary": "Shipping attacks are choking grain and oilseed exports. India is already shifting from sunflower to palm oil. Escalating.",
-   "rationale": "Lost Black Sea supply lifts world grain and edible oil prices, raising costs for Indian food makers and food inflation.",
-   "horizon": "months",
+   "theme": "Commodities",
+   "headline": "India's LNG costs surge to $26.4 per mmBtu; government prioritises city gas",
+   "summary": "The Hormuz crisis threatens South Asian LNG supply, and India is directing gas first to city distribution. Follows a cut in Qatari supply. Escalating.",
+   "rationale": "Pricier LNG raises costs for fertiliser plants, ceramics and gas power, adds to the subsidy bill and feeds inflation.",
+   "horizon": "weeks",
    "confidence": "medium",
    "industries": [
     {
-     "id": "consumer",
-     "score": -1,
-     "why": "Edible oil costs"
-    },
-    {
      "id": "agrifood",
      "score": -1,
-     "why": "World food prices up"
+     "why": "Fertiliser plants' gas costs"
+    },
+    {
+     "id": "energy",
+     "score": -1,
+     "why": "Gas distributors' margins"
+    },
+    {
+     "id": "materials",
+     "score": -1,
+     "why": "Gas-using industries"
     }
    ],
    "economies": [
     {
+     "id": "fiscal",
+     "score": -1,
+     "why": "Fertiliser subsidy pressure"
+    },
+    {
      "id": "inflation",
      "score": -1,
-     "why": "Food prices"
+     "why": "Fuel costs"
     }
    ],
    "sources": [
-    "https://news.google.com/rss/articles/CBMirgFBVV95cUxNSktNU3ViRDB2R0RIUkY0ZVROcU0xVlFkS2l1TFE4NnhFWWloOEpld3hVaVpYemxhT3hGVHdlblFfLTFrVm9FZENKczUtTGoyTHJITUZyQmxfUWtwNGxvUHd6cFY2d1R3bXdkRGhkUENJN0M5Rm1uTnd2eUtBV1VjMHktZ3duOG1rbjZ1dm5GRWlQcWQ0VGtnRW5jY0lNdm5VT3JMN28tMTVxb3RZZEE?oc=5"
+    "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPdTBRd1NRbkVnb3k0S2F4Zkp2cWd0c3pMMnFwdG1rSURvYmpOX041UkI4MGxfb2k4MGFiYnZmZU96a0QzRFUwdnZCUTdYckI0SkNQT3hvMm1GNkdwXzI5TktxUjAxc2JuQ3ZmN3NrR2JQWm5MMzBUQkM4dzFlNG92d25VY2lBRVFqVHAwdm9vNDVXLWpxNDc4WW9wVm9CVV8tS3NQeE1jcGFicklwQ2JQZ3A4OVRvbEU5X2ltWmZOeHVUTDdOUFJLekQ3NDVmbEdCajBwNnN3bGF1TGkx0gHiAUFVX3lxTE1XOEJzVFRMS3JDSUM2QUpaVG83UWFvRFg4X3VWaWpYOE8wMnRlczR2b1dsaEx4eENNNldsX042a0xxZldWVnM3Rm5wdTg5Uzh6RmI2dVFVcTRvZkVZd1ZWLVRlTkprYzZqbXdJT29wRFRyWFhkNFRYaEdSTENoOTRyNE05c3kzSjF0c18wUWNMTUNPX2wybW5CQk5rVUlBQ0lwaE5GVlZDaTdCanpfRUJPakFndWxzaVBtTDFIdkt5SFlaT25SX3FlM3BIV2NqbWs2MmVtdVIzcW1JTllEZ2VsZXc?oc=5",
+    "https://news.google.com/rss/articles/CBMimgFBVV95cUxQYlVpdHJ4OHFCMnZEMFI2YUVjM0xfZEEzQndLNFlrMFhjMTI5Y1dvbDZoQUlnMVdMQ1Y2UnViR1FaQWRWXzBZeVVoQS02Y1hYOGwwaF9uSV9CbGcyZmJ6a215SHUwbTh4dWJmd21td0hhLWJVMldxNllzQUFkRmc5NWszNl9tSF8yMGw3QUpReU5nNEZpbW1EbUhR0gGfAUFVX3lxTFB2enVjM2JNSFNKMmVtaFpHRDFaVnhrTThSYTBTNFl1alM0N19pak91ZldsSENZVTA4YV82U3RTY05iR0ttczlIRnpTV2ppdDRNQTVsc1NBVy0tRnZuTEFVTWhORzNGOEIyUERwMm1KbVExbVhOWmJNRV94ZWVhNDR5dGY3VzNfM1BpdmkxWDFlYVBNQUM5VGo2cjdjZWZDdw?oc=5"
    ]
   },
   {
-   "id": "russia-ukraine-talks",
-   "date": "2026-10-11",
+   "id": "black-sea-insurance",
+   "date": "2026-10-12",
    "theme": "Energy & geopolitics",
-   "headline": "Ukraine offers elections if Russia agrees a 60-day ceasefire; US presses both sides on refinery strikes",
-   "summary": "Ukraine's president said Russia must also stop energy strikes. India's three-part truce plan covers energy sites and Black Sea shipping. New signs of de-escalation, unconfirmed by Moscow.",
-   "rationale": "A ceasefire would ease Black Sea grain, fertiliser and edible-oil supply and Russian fuel flows, lowering India's food and fuel import costs.",
+   "headline": "Black Sea oil shipping insurance surges to $2.5 million per voyage; EU adds 1,600 Russia sanctions listings",
+   "summary": "Baltic states urged an EU ban on Russian grain transit as Black Sea shipments fall. Escalating pressure on Russian trade routes.",
+   "rationale": "Higher insurance and wider sanctions raise the delivered cost of Russian crude and add risk to edible oil and fertiliser supply to India.",
    "horizon": "weeks",
-   "confidence": "low",
-   "industries": [
-    {
-     "id": "agrifood",
-     "score": 1,
-     "why": "Safer fertiliser and grain supply"
-    },
-    {
-     "id": "consumer",
-     "score": 1,
-     "why": "Edible oil supply"
-    }
-   ],
-   "economies": [
-    {
-     "id": "inflation",
-     "score": 1,
-     "why": "Lower food and fuel risk"
-    }
-   ],
-   "sources": [
-    "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPbzllVmlZWHU3cjVIN0xOanB1aU4yNENHTkozaThLXzJla0RUd2Z6aHU3eklWcXBYWEJvdHU0SGtSMXQwUU9KblR5dTNDVHh6TTNFQzFOZlNiUUpaVzRVNDZERlN0TXU1a1V0UlAtdmQyekZvSEFLYk9hdTJ4V0tLem1rcm1DbDFZdXUzRDlWeHFWMm9DdGN3cGVkaVhLZF9qTkREcE5uQVE0QThqTnZrZmF5b25VX1lveWFad2ZnZ3haaXdSSl9UTWl0bjZXZzJwRktlUtIB1AFBVV95cUxPbzllVmlZWHU3cjVIN0xOanB1aU4yNENHTkozaThLXzJla0RUd2Z6aHU3eklWcXBYWEJvdHU0SGtSMXQwUU9KblR5dTNDVHh6TTNFQzFOZlNiUUpaVzRVNDZERlN0TXU1a1V0UlAtdmQyekZvSEFLYk9hdTJ4V0tLem1rcm1DbDFZdXUzRDlWeHFWMm9DdGN3cGVkaVhLZF9qTkREcE5uQVE0QThqTnZrZmF5b25VX1lveWFad2ZnZ3haaXdSSl9UTWl0bjZXZzJwRktlUg?oc=5",
-    "https://news.google.com/rss/articles/CBMixgFBVV95cUxNWW5DZVhrbC10TERLMWpMa2MwV0hJOWhYN0oxaDNtaEFjVWM5UTRWNlVjc1oxR2QwTzE2akxZU0RfYVZ5X2t2dFk0dGNMQkRHVG45cVR4eDI3b3g4ZWZnMEJfdXFPMzdCOWhIeTFQSjZ6QzQtX3RrNC1mRVd3eTNMaVl0Ym9yVkQyZF91dmdrZ3hLc0xuS2xWbWRMYjJfMmdhRHd0eENiZkVkUDZrYm5JRnFYWWVvcURGVENVdmxyVF9BcU8zbkHSAcsBQVVfeXFMTVk0SDBuX0pkZmhpNDFxbktoVElKVG1JSlZfODlvVEJUYUdEWkZWVjJydmxiRXpCSVBkTHhlUnA3OVdwUldZcFBMNnJvR3M1Y2xuSkZPR0gtaXpJRlI0bms3SFhJM1hzUkRJX2VlbklNaWxvVmcyQnZUaENmR3B1ajNiMWE1MFVoalFnQ01RQkF1NWRfQnVQUHVJQkRQbkpLNjFNSXhNcWliR2RyZ3NXN3JtNWYtY3ZmQ0cxVVZhMkJtZ2FyWHJiR3F1VDQ?oc=5"
-   ]
-  },
-  {
-   "id": "russia-oil-sanctions",
-   "date": "2026-10-11",
-   "theme": "Trade",
-   "headline": "India says it has options to respond to any US sanctions over Russian oil",
-   "summary": "The remark follows the US deal to buy Russian diesel weeks after penalising India over Russian crude. Ongoing friction.",
-   "rationale": "A tit-for-tat over Russian oil could hit Indian exports to the US and refiners' crude sourcing, adding trade risk.",
-   "horizon": "months",
    "confidence": "low",
    "industries": [
     {
      "id": "energy",
      "score": -1,
-     "why": "Sourcing uncertainty"
+     "why": "Costlier Russian crude"
+    },
+    {
+     "id": "agrifood",
+     "score": -1,
+     "why": "Fertiliser and grain risk"
     }
    ],
    "economies": [
     {
-     "id": "growth",
+     "id": "fiscal",
      "score": -1,
-     "why": "Trade friction risk"
+     "why": "Higher crude freight"
     }
    ],
    "sources": [
-    "https://news.google.com/rss/articles/CBMipwJBVV95cUxQNUVLSFhvWkszR01DMDAweG1DZmhFUDVGZ3ZYNXJNVkYzRG10UHRXVHZUUlgwZVc3LUZaT0hPQ2JrTnNOVXBtWmdkcXljYTVFUzNyTkxocHNlM2hRcTlSRHNCOENuR1NEX1lacmF4RHhFWkpybWYtWTNiUzhvVGpfMWZSa2FMV0hpaXNaZEk2dDcyZldzbDN6ZjJDWVZmRi10V2xwcHVRbHRPUU9adzVCZ05tVXI1bHpFZzNSTU1JX1FidEN6MmwxZkpRZkhHX2FTOGFYLVN6cURPZDRqRDhDcTFLSTNOaHFVUC1lVDVHXzVtY1hkbmp4WEJSNEtqaDRNODdUMXdIRERQN3VwQjBxRzlVQUh6RVpQSmZYZW9kbU1UbUtsTEJJ0gGsAkFVX3lxTE1qazlhMS1PdXNyNnNiOFZrblJIeUFxbV8tdUVSS3QzNjZwWlV5MmE0NTJPQThVRHE1cmx5S3IteVktdHB1SldLcjJEUzBIbzVNcG93UktnTk9IRTJ3WmpDbjgzcGhHaDdmU3c3RUZwaWl1SFFZZEVZb1p5YzUwbC1KbzEyT1ZWdURrNEdoTDJ6WFNrdmdVNnppMXFLVy1RcXN1eXhPNnlSX1lGeVVxYjZGUFFkUWg5LVNKaXM5cXRyQlRfNzhZUFNRX0RUTkRaTmF0MTh5QVlWbU1tM0M1alU5dmxfY3VQajlzUVBNWk80eC12U3lnb2IwTV84Y3NZT1FCNDNDS0tVeHZLM1BPNGpUeDFJbkJ3dkZ3V3RTelJBOE5QRGFLeXd5SjlHZA?oc=5"
+    "https://news.google.com/rss/articles/CBMitAFBVV95cUxQeUx4cUt3Wnd3aFJfMmJNZ3A3SmVSalZrQnlDWi16Vy02QUFwQ3VMZHVtejNTYkdvbHZEM3dCNzhpN0JhWnF4UjBjYWJGQlc3djhCY1RUdzdwa0g0M051ZEVEWFVWS2NSOUlYOFdValhDRS1GVjE0TE9nMEZIdGpCVklJTmVNVVA5enFJRHBCTU5VQTRxNmpqS0lPYkZZYkJQYUNqLW1URkl6MzlXVzlZUUx3VUjSAboBQVVfeXFMTlZmbFZxOEtLYVBqSnYzZDQwWlRxbWNGRDVvbXVza29GNExXRlRtTW4xWGlmcUFaRjhES0Q1MC1PSEZwRi1nR1Mzc3dtVFZZNDhyMlJib3ppU2k0Tk9OaVVIME5kUGFxYmJLYTd0N2NDRkgzU1EyUWtXUm5qMDhYRjRyN2VLTTJLeUR4ZXJuZ2xWX2J0YWlxNWFBQUVsVkN4Ukh5Mm0yenRZU3lsRzVYNThVckRJQnlPMFhn?oc=5",
+    "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOeGlLLVpkLXE5TG5zeDJMTkZLWDRYUzRwZlZJYWdrcnRpeTZNVlJqU0lfVklWZ05iRnp3TDl1aENKR2c0U05Xb19vdlU1N0x6UFZPRUFwamZUektRaUd1emJLZGpFbGZ5WG5hUTJ0azlBUlNkWDlXUW82ZTZFLXU1dXBRZHNZbkVXcHA5dV9JQWhySVpfemowV3llREZyenNiT0U5UXZDY1p1MjdnRkZqVlZIR24tNm13UGlnYkZSc0NLbmNWZGR6NGZtczdWbDlSdlE?oc=5",
+    "https://news.google.com/rss/articles/CBMirgFBVV95cUxQWk1TR21XU1VobUlTTmZqVlhneFNmUW9QR3FoMzE0MlVKdkxtRTJfM2NTdkUzTjRrM3I4Mll5bC1mSk9BMl84c1ZsVjdsbUJWWmpXb1RJSXozNTR0d05hTlY2bGcyZ2NrZmFaMFZUNGxPY3VRS1VFLWNBaG02aHJnSmpGRXhtUDRxRG9md1d6OG5IN05DQzhrS1VleGpzVnNvM29nNmRsWmpjam00UVE?oc=5"
    ]
   }
  ]
