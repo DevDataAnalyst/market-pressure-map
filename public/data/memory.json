@@ -1,116 +1,5 @@
 [
  {
-  "day": "2026-10-01",
-  "model": "manual seed",
-  "items": [
-   {
-    "id": "hormuz",
-    "date": "2026-09-30",
-    "theme": "Energy & geopolitics",
-    "headline": "Strait of Hormuz stays near-closed as four tanker attacks hit in 48 hours",
-    "confidence": "high"
-   },
-   {
-    "id": "oil",
-    "date": "2026-09-30",
-    "theme": "Commodities",
-    "headline": "Brent holds near $97–103 as global oil inventories fall 400 million barrels this year",
-    "confidence": "high"
-   },
-   {
-    "id": "fed",
-    "date": "2026-09-16",
-    "theme": "Monetary policy",
-    "headline": "US Federal Reserve raises rates to 3.75–4.00%, its first hike since 2023",
-    "confidence": "high"
-   },
-   {
-    "id": "bonds",
-    "date": "2026-09-28",
-    "theme": "Rates & bonds",
-    "headline": "Global bond selloff pushes the US 30-year yield to 5.53%, highest in over 20 years",
-    "confidence": "high"
-   },
-   {
-    "id": "ecb",
-    "date": "2026-09-10",
-    "theme": "Monetary policy",
-    "headline": "European Central Bank lifts its deposit rate to 2.50% as the energy shock raises inflation",
-    "confidence": "high"
-   },
-   {
-    "id": "boe",
-    "date": "2026-09-17",
-    "theme": "Monetary policy",
-    "headline": "Bank of England holds at 3.75% in a split 6–3 vote as UK inflation heads toward 4%",
-    "confidence": "medium"
-   },
-   {
-    "id": "boj",
-    "date": "2026-09-18",
-    "theme": "Monetary policy",
-    "headline": "Bank of Japan raises its policy rate to 1.25% in a 7–2 vote",
-    "confidence": "medium"
-   },
-   {
-    "id": "uschina",
-    "date": "2026-09-28",
-    "theme": "Trade",
-    "headline": "US and China cut tariffs on about $30 billion of each other's goods and extend their truce to 10 Jan",
-    "confidence": "high"
-   },
-   {
-    "id": "chinapmi",
-    "date": "2026-09-30",
-    "theme": "Growth data",
-    "headline": "China's factory index returns to growth at 50.1 as new property support lands",
-    "confidence": "medium"
-   },
-   {
-    "id": "chips",
-    "date": "2026-09-30",
-    "theme": "Tech cycle",
-    "headline": "AI server demand drives another round of memory-chip price increases into Q4",
-    "confidence": "high"
-   },
-   {
-    "id": "fertiliser",
-    "date": "2026-09-24",
-    "theme": "Commodities",
-    "headline": "Fertiliser costs set to rise more than 30% this year as Gulf shipping disruption tightens supply",
-    "confidence": "medium"
-   },
-   {
-    "id": "rupee",
-    "date": "2026-09-30",
-    "theme": "Currencies",
-    "headline": "Indian rupee trades near 96 per dollar, down over 8% in a year, as the central bank intervenes",
-    "confidence": "high"
-   },
-   {
-    "id": "germany",
-    "date": "2026-09-25",
-    "theme": "Growth data",
-    "headline": "German business confidence hits its highest since 2023 while consumer sentiment slumps",
-    "confidence": "medium"
-   },
-   {
-    "id": "autos",
-    "date": "2026-09-22",
-    "theme": "Trade",
-    "headline": "Japan's carmakers face $14 billion more in US tariff costs as the EU weighs favouring EU-built EVs",
-    "confidence": "medium"
-   },
-   {
-    "id": "gold",
-    "date": "2026-09-30",
-    "theme": "Commodities",
-    "headline": "Gold rebounds to about $4,185 an ounce after weak US data trims rate-hike bets",
-    "confidence": "low"
-   }
-  ]
- },
- {
   "day": "2026-10-02",
   "model": "Claude daily routine (claude.ai plan)",
   "items": [
@@ -1150,6 +1039,124 @@
     "date": "2026-10-13",
     "theme": "Energy & geopolitics",
     "headline": "Ukraine says it has not struck Russian refineries for two days under the US energy ceasefire",
+    "confidence": "low"
+   }
+  ]
+ },
+ {
+  "day": "2026-10-15",
+  "model": "Keyword rules (no AI)",
+  "items": [
+   {
+    "id": "chokepoints-up",
+    "date": "2026-10-15",
+    "theme": "Energy & geopolitics",
+    "headline": "Ship catches fire in Romania’s waters amid rising attacks in the Black Sea",
+    "confidence": "high"
+   },
+   {
+    "id": "fx-rupee-strong",
+    "date": "2026-10-15",
+    "theme": "Currencies",
+    "headline": "Indian rupee to rise after US yields reverse inflation-led spike, Fed hike bets remain low",
+    "confidence": "high"
+   },
+   {
+    "id": "oil-up",
+    "date": "2026-10-14",
+    "theme": "Commodities",
+    "headline": "Brent jumps 13% as fresh Middle East attacks threaten a fragile oil supply recovery, IEA says",
+    "confidence": "medium"
+   },
+   {
+    "id": "tariffs-down-india",
+    "date": "2026-10-15",
+    "theme": "Trade",
+    "headline": "'Big picture, big framework, big items are done': Sergio Gor says India-US trade deal very close ahead of",
+    "confidence": "medium"
+   },
+   {
+    "id": "fpi-down",
+    "date": "2026-10-15",
+    "theme": "Foreign flows",
+    "headline": "Rs 5 lakh crore worth FII outflows since 2024 capital gains tax hike wreak havoc on Dalal Street. Is a rev",
+    "confidence": "high"
+   },
+   {
+    "id": "rates-up-us",
+    "date": "2026-10-15",
+    "theme": "Monetary policy",
+    "headline": "Watch Hot September CPI Spurs Fed Rate Hike Fears",
+    "confidence": "high"
+   },
+   {
+    "id": "inflation-up-india",
+    "date": "2026-10-15",
+    "theme": "Growth data",
+    "headline": "ENERGY INFLATION: Paper Futures Mask Reality as Indian Oil Import Basket Surges to $122 vs $106 on Brent",
+    "confidence": "high"
+   },
+   {
+    "id": "inflation-down-us",
+    "date": "2026-10-15",
+    "theme": "Growth data",
+    "headline": "Global Markets Fall as Hot CPI Fuels Fed Rate Hike Fears",
+    "confidence": "medium"
+   },
+   {
+    "id": "rates-up-india",
+    "date": "2026-10-14",
+    "theme": "Monetary policy",
+    "headline": "RBI MPC hikes repo rate by 25 bps to 5.5%, near-term cuts 'off the table'",
+    "confidence": "low"
+   },
+   {
+    "id": "sanctions-up",
+    "date": "2026-10-15",
+    "theme": "Energy & geopolitics",
+    "headline": "Trump to take call on Russia sanctions law in 10 days as India awaits clarity: Sergio Gor",
+    "confidence": "high"
+   },
+   {
+    "id": "monsoon-down",
+    "date": "2026-10-15",
+    "theme": "Monsoon & farm",
+    "headline": "Monsoon deficit raises risk of lower Rabi crop acreage",
+    "confidence": "high"
+   },
+   {
+    "id": "fx-dollar-weak",
+    "date": "2026-10-15",
+    "theme": "Currencies",
+    "headline": "Dollar retreats from 18-month high despite hot CPI as Fed officials temper hike bets",
+    "confidence": "medium"
+   },
+   {
+    "id": "food-up-global",
+    "date": "2026-10-15",
+    "theme": "Commodities",
+    "headline": "Wholesale inflation hits series high of 11.4% in September as fuel, food prices surge",
+    "confidence": "medium"
+   },
+   {
+    "id": "yields-up-india",
+    "date": "2026-10-15",
+    "theme": "Rates & bonds",
+    "headline": "Treasury rally could lift India bonds at open, but caution prevails",
+    "confidence": "medium"
+   },
+   {
+    "id": "metals-up",
+    "date": "2026-10-14",
+    "theme": "Commodities",
+    "headline": "‘The world needs to invest in copper’: Anil Agarwal warns of rising supply crunch as AI demand surges",
+    "confidence": "medium"
+   },
+   {
+    "id": "growth-up-india",
+    "date": "2026-10-14",
+    "theme": "Growth data",
+    "headline": "India’s exports to China jump 40%, yet trade deficit widens to $105.93 bn in January-Sept",
     "confidence": "low"
    }
   ]
