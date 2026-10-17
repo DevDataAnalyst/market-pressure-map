@@ -1,6 +1,6 @@
 {
  "updatedAt": "2026-10-17T05:44:05.126Z",
- "assessedAt": "2026-10-17T05:44:19.879Z",
+ "assessedAt": "2026-10-17T05:45:16.595Z",
  "sources": [
   {
    "name": "UN News",
@@ -160,54 +160,24 @@
     }
    ],
    "assessment": {
-    "headline": "US-Iran war latest news: Trump signals Pickaxe Mountain strike, rules out nuclear weapons; 2 tanker carrying 24 Indian sailors hit in Strait of Hormuz",
+    "headline": "US signals strike on Iranian site, rules out nuclear weapons",
     "risk": "high",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "note": "Raises risk of wider war.",
     "industries": [
      {
       "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
       "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
+      "why": "Route risk"
      }
     ],
     "economies": [
      {
       "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
-      "id": "inflation",
       "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
+      "why": "Crude premium"
      }
     ],
-    "at": "2026-10-17T05:44:19.879Z"
+    "at": "2026-10-17T05:45:16.595Z"
    }
   },
   {
@@ -255,7 +225,27 @@
      "source": "Onmanorama",
      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQNEFjdldHSVdidTNaTWkzRjFMOEVLT1E1Y1h3STlKejUwN25BMGRkc09wQW1iU3pvZHllZmVJVEpSZ0w1MTloSjZrTElRSl9FaHpyQXRnZm0zTEFYTndiN0ZrQkQxZlpzUHNzYVJ5YU8wQzNva0JjelpGMWIxcGtkbWw0QUxGRTM5djk3cGhicmVqbzlZZXFYRTJaVGItU1BNVXBuSm43aUx5U2pEYzlXUURGTWZqYkpkUHFVN1l4TEhVcDh3MXc?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "US waives Russia-linked sanctions and tariffs, relief for India",
+    "risk": "high",
+    "note": "Removes 100% tariff threat.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": 2,
+      "why": "Russian crude continues"
+     }
+    ],
+    "economies": [
+     {
+      "id": "growth",
+      "score": 1,
+      "why": "Export relief"
+     }
+    ],
+    "at": "2026-10-17T05:45:16.595Z"
+   }
   },
   {
    "id": "trump-eases-russia-sanctions-tariffs-amid-diesel-price-surge",
@@ -293,7 +283,15 @@
      "source": "NDTV Profit",
      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPYVZvcDdJM0taRk5va3JKZkpkNXVDQXhHQUVxTHYwSDZsazRiRGhxYlpublZFbkdEeVJCa0pjM19QOGJTOC1EbE1OSDRCWGQtakRvSm1iY0REU0xHdzhDU0NYenEyaTdFQmZKcWlNU0dTbl9BZXhOZ21sZkVWZ2NtN3MzVDByOWpmT0xjSk5DaTBEWV9DZE9rUEpua3RsZkxiaGpHanNvRnJyOHBmYkpYaVIxbGlBWkR6dVkzVUFVTdIBxwFBVV95cUxOdDlRN3p1UTM0LVVrTXZoZXhvOHBYMHhGNFJFNDkxQzZDV1h0MEtIbnhCNHgtWHNUSGQ2cDgyZE5ZY0ZvZFhDU2xnQ2dfN3VCYmF2S0czYV9KUkVSazFhYlNXbzZBRmhDTVROZk9NZ1R2MGdLbmtoOEhkYXNvcmVJSkpNcGxoOGpUQm1Bb3ExV0dqcE05WmNXR2o1QUNYcU1tbWVEX3NLRHM2U3RnZVppV2ZyenVTU1dzZGdLcTcta0Nkdk9Sek93?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "US eases Russia sanctions amid diesel price surge",
+    "risk": "high",
+    "note": "Duplicate of waiver.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-17T05:45:16.595Z"
+   }
   },
   {
    "id": "world-news-24-indian-seafarers-safe-after-tanker-incidents-i",
@@ -339,7 +337,15 @@
      "source": "Gulf News",
      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOb1NQX2pxR0xmMjhObWZMX2o5a1U0cmdBRXhHbXNxbXM4QlBlY2RVc3BHbzlxVzFxMnFPbklWMEl3YmpwRk9oWjBKa1hhODRzU1k0LVI1OXVZMUdRakF3aERENzhURUNmcFVSc1k0bW55SS1VeWdCeHQtNFU2aWJTVzBzUnpwZFlIa1Itai15aHBTWVFBMDRxWW9xZExCNGlPMHBFZm5tR3YxV1NtdEJOaXRPT2MwWlcwUi14QzJlb1NOVmEzT0ZWVTNn?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "24 Indian seafarers safe after tanker incidents",
+    "risk": "watch",
+    "note": "Humanitarian.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-17T05:45:16.595Z"
+   }
   },
   {
    "id": "trump-waives-proposed-100-tariff-on-russian-oil-buyers-india",
@@ -377,7 +383,15 @@
      "source": "Moneycontrol.com",
      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPMTE5OVBZZTE2VlEwZmlqand3N0R0XzQ5ak05OTNYcTFjMVd1RlBnQTlnaTc0Zk1lb2xYVHZXSFRENE42clFoQ1lWVTVGeXF3SE1VZFczVlEyVXRrU0hVNjhsZHFtYjRKSEN6NzZ6SlRUNGhfOTlaX1FDUUk0RU9jTDQ4Qm80blZVdDJvVHRaMjV0RE5LajNCSUt0RWtmTU1DNTZaa3FjYlJnU2h2TktPSEYzQ3REUdIBuwFBVV95cUxQQlpMVXFzbnlWSTlWSXMtNWkyci1lOGVNMVNUUnNIRnlVTWlBY2VNWlg5S1JOY3YxN1E1RkQtRkdFU3VCVjBVbmxlM2JMQno2ZG1BNHJEUy1SUHYxVDg3c1JuUWRxMTlZdG1XeXp4WXV5YVNJcTJhOU84eFNuZlpkM2ZmSEtINkk4Q2JkTzUyaEdGa1hDMm91ckp4QUhBMFhSaGpBZ1N2NmVZMXdrMFllMFVWb3otWEFzU1Vr?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "US waives proposed 100% tariff on Russian oil buyers",
+    "risk": "high",
+    "note": "Duplicate of waiver.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-17T05:45:16.595Z"
+   }
   },
   {
    "id": "trump-waives-russia-energy-sanctions-offers-major-oil-tariff",
@@ -417,7 +431,15 @@
      "source": "GujaratSamachar English",
      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOMkN4Mzhya01wckZDQmJVX0dhQVJadFB1amhvVV9yR2hiVHZSSVNrS0hOWmZuOEtEQnZUU3hIT0ZUOHQ5dmUwbjBwMFNuS2hxTkYzck1GQ2lHTUgwSURVbDVhU29mdDdhNXNYaXFJX0QzbC1kNzVnRDNYRHJTYWhZenZ6eFVZM0pBUzI2Smt1ZlB3M0dIZEt5UUd4VWx4bjhXR01CSGpQTS1JYWVKeWdOV3A5NC1iRHZ2bElELThJY2NjSExFbDNTWXhyZWZYalVxOHlZWllZdzJJNkdEeHFucUxjYllvM0RSYldOOXB4R1RxZw?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "US waives Russia energy sanctions; tariff relief for India",
+    "risk": "high",
+    "note": "Duplicate.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-17T05:45:16.595Z"
+   }
   },
   {
    "id": "donald-trump-waives-russia-and-iran-sanctions-under-graham-a",
@@ -457,7 +479,15 @@
      "source": "The Economic Times",
      "link": "https://news.google.com/rss/articles/CBMipAJBVV95cUxQWkJQbUtLbS14d0Q4aGVlY0d3dEZMVVRrWWtZbjQ0cGJmLTA1aUhIMVhDX085aEplRllUTUE4bndfQk5SWWczUG93Q3RaOFduT09EQkphbVZFUmFjNVloZzRFbExqd19RY3NHNHFwcHFpZERWU2dCZmVpLTItaFFOTGVxMG5JTV9qbGh1ZmJzZ1J4d0w3NVFoSmVpQjdBV0lSRWphZDBHQWV6YVpyZVBvZTgtWDBUcmpndFptYUVJTGZPZ1R0MGJJeG1DUDRmWThpN1R5T25ZcXN1aFFGRS1qYWFyVUxhMXg0c1hvRVB1bzRLYmx5ZkR2SjdPbXppb3RqdUlQd3o0ek9EdFZpNWctdl9tMDRCQlNiWklvXzlsRWZmV25f0gGqAkFVX3lxTE1vNWpSVXVmLTliOEI4NElsdl9PdmNiNTdDLVF2SnFqN2J3TVFkTFRTSTBKMDVqcmFXSkNodm9GcG9ORHZKcHNHMUhmMVhnQkV1U3N6WTMxcnd4b19vNkNVR1dTanBLYWo2LUNuQWhmTG1GeEh3bmk1THJkRldxZmE3ZHBsV3J6RF9USngzZnhmTDBkaVV5OVQ3cG5qV1RmU3Nic2doUUFaN05ES3pMWU5oZFJCVXliWllGdTZ6OU5ycVZtWV9rcmg5UzlZbzIwcnBKVVBUcGxTZ29nVlJ0YTRMZ01qdE50UHBvVDd5akhSemxVaTdQOVFDSmxnOXlKQ1dTMXIxdmRicnF5c2lGMEtHN0RJdnMwMktFMi0ydTR6dUNQcW1nRGQ2Q0E?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "US waives Russia and Iran sanctions under sanctions law",
+    "risk": "high",
+    "note": "Duplicate.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-17T05:45:16.595Z"
+   }
   },
   {
    "id": "india-oil-supply-holds-firm-amid-hormuz-red-sea-tensions",
@@ -487,7 +517,21 @@
    "severity": "high",
    "severityScore": 6,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "India's oil supply holds firm amid Hormuz and Red Sea tension",
+    "risk": "elevated",
+    "note": "Supply security, not price relief.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": 1,
+      "why": "Supply security"
+     }
+    ],
+    "economies": [],
+    "at": "2026-10-17T05:45:16.595Z"
+   }
   },
   {
    "id": "oil-tanker-struck-in-strait-of-hormuz-says-indian-ports-mini",
@@ -517,7 +561,21 @@
    "severity": "high",
    "severityScore": 6,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Oil tanker struck in Hormuz, says Indian ports minister",
+    "risk": "high",
+    "note": "Escalation continues.",
+    "industries": [
+     {
+      "id": "transport",
+      "score": -1,
+      "why": "Insurance"
+     }
+    ],
+    "economies": [],
+    "at": "2026-10-17T05:45:16.595Z"
+   }
   },
   {
    "id": "container-ship-attacks-escalate-in-strait-of-hormuz",
@@ -565,54 +623,24 @@
     }
    ],
    "assessment": {
-    "headline": "Container ship attacks escalate in Strait of Hormuz",
+    "headline": "Container ship attacks escalate in Hormuz",
     "risk": "high",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "note": "Trade disruption beyond oil.",
     "industries": [
      {
       "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
       "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
+      "why": "Freight"
      }
     ],
     "economies": [
      {
-      "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
-      "id": "inflation",
+      "id": "growth",
       "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
+      "why": "Trade"
      }
     ],
-    "at": "2026-10-17T05:44:19.879Z"
+    "at": "2026-10-17T05:45:16.595Z"
    }
   },
   {
@@ -655,54 +683,12 @@
     }
    ],
    "assessment": {
-    "headline": "Marco Rubio to Visit Mukesh Ambani’s oil Refinery in India as US Diesel Prices Surge, While Musk-Ambani S",
-    "risk": "high",
-    "note": "Keyword rules read this as higher oil prices.",
-    "industries": [
-     {
-      "id": "transport",
-      "score": -2,
-      "why": "Jet fuel is airlines' biggest cost"
-     },
-     {
-      "id": "energy",
-      "score": -1,
-      "why": "Fuel marketers squeezed; upstream gains"
-     },
-     {
-      "id": "autos",
-      "score": -1,
-      "why": "Running costs dent demand"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Paint and packaging inputs costlier"
-     }
-    ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill and subsidies rise"
-     },
-     {
-      "id": "inflation",
-      "score": -1,
-      "why": "Fuel feeds into prices"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Margin pressure across sectors"
-     }
-    ],
-    "at": "2026-10-17T05:44:19.879Z"
+    "headline": "US Secretary of State to visit Indian refinery as US diesel prices surge",
+    "risk": "elevated",
+    "note": "Energy trade talks.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-17T05:45:16.595Z"
    }
   },
   {
@@ -734,7 +720,15 @@
    "severity": "high",
    "severityScore": 6,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Analysis: why crude stays high as Gulf oil returns",
+    "risk": "watch",
+    "note": "Explainer.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-17T05:45:16.595Z"
+   }
   },
   {
    "id": "can-the-russia-sanctions-bill-waiver-by-donald-trump-bring-m",
@@ -763,7 +757,15 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Analysis: can the waiver lift Indian markets",
+    "risk": "watch",
+    "note": "Opinion.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-17T05:45:16.595Z"
+   }
   },
   {
    "id": "trump-waives-russia-oil-sanctions-what-it-means-for-india-us",
@@ -800,7 +802,15 @@
      "source": "DNA India",
      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPSDFraFN1NFpuM0lpWE1FUWRvdW4xZmpiUXVYaWEybmdWWFRNWVI2b1JkM3dSQVVmNlh3QUJsRUZ3dnRwb3lzQzhOR29Zek15RXhXbWRuT3JyOTgtQUFDT1M0MlRYaVBzaHVKcVp0emJ1bmtGT1ZuYVF5RF9talpZSzNEVklGY05NT3hweE1FUFVZMlpsNm1RQ3VTaVotRkVrMGxtei1fT1NJSEdnWjcyNDJ6WDliWDVybVFndk96Z2Z2NmpxeURSLU5sQ1pRWkw5bU9RVUdoWjfSAd4BQVVfeXFMTTlVNXM5Y21yU2lrUWhJYXZrVnQzVFZ6MGw1TzBUUlFiWjJ4aDlGdElyUXlVSFpRZ2FTUXRyNnBxdnhCckszUGN2WGlBdnQ5UF80ZUxlZXZCTk04cDNZSGlLSjR0QkRsQlEtbkhqY3JvdzBlX0xzUm5lNURHank3ZzhKdWt3Nmd1cHQyZjhNdDdFNHVjUDY3SHRCcnllNmxhbi1RSFRnb1ZiYXZZalpjSjJUMldBdy0tWXVOTEtxRHhUdmt2S0hIb3pQblV5TGF5VDVkLVRyaGMxWktJSFhB?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "What the waiver means for India–US trade deal",
+    "risk": "watch",
+    "note": "Analysis.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-17T05:45:16.595Z"
+   }
   },
   {
    "id": "india-selling-more-to-us-despite-tariffs-but-china-trade-gap",
@@ -838,7 +848,21 @@
      "source": "MillenniumPost",
      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPakpfRzh2VThKbkE0S1RvbTgyLV90WHBCUVBUb1ZiZ2hjVGVINTY5ZzNxNjQ4bXdTaVU2bG1lcmtKemJDRUtvRWZUdGk4aTdhZ0p6aEl5b0ExT2RLNzM0WnN2b1V5MWd1T25IWjZIZVhZREx4bVh6aE9WaUlfV2NBN0k2RU9vaUJmSUNYTE1FOEI5RkVQTEk2ZlUtUFc2WlBCLWVkN09QRnhpUUV6ZnRRb25OVHItclpnaTV2aTBJbWhyMUEx0gHKAUFVX3lxTE1oVlljMnk5YlQ0Y0F3cFFXeEFKS0RibjJrNGdTQmZkd2M5VGZNUjdocmE2NTF1OHFTOFlCYTBidkJLeTYyWkNGZkdxZ3Byc0NqR2tkUjU1RllUb0tiNFNsdTN4UkxQQ3RQanJuWXE5ZkZYNTlvX0FRUEpnY3h1bkJLakxfYjhkUGtWZmNGVlBxcFBneWxfUHNjTk1BdjNsY0JWQnFReEZqRHROQVI1Ymh1OF9yQjFHb0xicUxsdDExR3FFU0dpV2xmaHc?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "India's exports to US rise despite tariffs; China gap widens",
+    "risk": "elevated",
+    "note": "Export resilience.",
+    "industries": [
+     {
+      "id": "industrials",
+      "score": 1,
+      "why": "US demand"
+     }
+    ],
+    "economies": [],
+    "at": "2026-10-17T05:45:16.595Z"
+   }
   },
   {
    "id": "trump-suspends-russia-related-tariff-measures-that-threatene",
@@ -867,7 +891,15 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "US suspends Russia-related tariff measures",
+    "risk": "high",
+    "note": "Duplicate.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-17T05:45:16.595Z"
+   }
   },
   {
    "id": "after-decision-to-purchase-diesel-from-russia-for-us-trump-t",
@@ -984,7 +1016,15 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Pakistan rejects Indian minister's remarks",
+    "risk": "watch",
+    "note": "Rhetoric.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-17T05:45:16.595Z"
+   }
   },
   {
    "id": "trump-waives-major-russia-sanctions-and-tariffs-india-among-",
@@ -1051,7 +1091,21 @@
      "source": "Marine Insight",
      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNLXJBaHB2d01sbXdOcWduZGJiTDFKeDlQWFRaUEZpZllQVkhmRWN4bjNFMGtIMFlvQjlxcHVHN01HTWJWLThNYS1mdGt6aGdrcTcxV21ibFd6QmVrX2FnbngxVEQyRHZEX2F1TFR5OE9ac2N1cG4tNUwtb2pwc3ZibXFQOWViVlNFeWNHSS1NT0N1V01GSXZ2YXJHR1pUMlFkemlMSzlSNVF3UkJtUXcwUw?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "Mine sinks cargo ship in Hormuz",
+    "risk": "high",
+    "note": "Mines prolong disruption.",
+    "industries": [
+     {
+      "id": "transport",
+      "score": -1,
+      "why": "Insurance"
+     }
+    ],
+    "economies": [],
+    "at": "2026-10-17T05:45:16.595Z"
+   }
   },
   {
    "id": "explaining-iran-s-unprecedented-escalation-in-the-strait-of-",
@@ -1081,7 +1135,15 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Explaining Iran's escalation in Hormuz",
+    "risk": "watch",
+    "note": "Explainer.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-17T05:45:16.595Z"
+   }
   },
   {
    "id": "uae-owned-vlcc-hit-in-hormuz-indian-ministry-says",
@@ -1110,54 +1172,24 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "UAE-owned VLCC hit in Hormuz, Indian ministry says",
-    "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "headline": "UAE-owned supertanker hit in Hormuz, India says",
+    "risk": "high",
+    "note": "Crude flows at risk.",
     "industries": [
-     {
-      "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
      {
       "id": "energy",
       "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
+      "why": "Supply risk"
      }
     ],
     "economies": [
      {
       "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
-      "id": "inflation",
       "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
+      "why": "Import bill"
      }
     ],
-    "at": "2026-10-17T05:44:19.879Z"
+    "at": "2026-10-17T05:45:16.595Z"
    }
   },
   {
@@ -1203,52 +1235,10 @@
    "assessment": {
     "headline": "Bulgaria asks NATO to deploy assets after Black Sea attacks",
     "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
-    "industries": [
-     {
-      "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
-      "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
-     }
-    ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
-      "id": "inflation",
-      "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
-     }
-    ],
-    "at": "2026-10-17T05:44:19.879Z"
+    "note": "Escalation risk.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-17T05:45:16.595Z"
    }
   },
   {
@@ -1282,7 +1272,15 @@
      "source": "The News Pakistan",
      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPQk5ZR20wbDE3bzhDVG9wZzZucmprZmFDbHd3T2dsR0pOSmI3SklzOUtPRXpaZXBEV3ZyV291ZUQ0THpHYUxoS090bVpQNE1Kb1FQSDJDMGpFUjFrbEhqOG5tUHJpeXhJcnRiNHphbnNqdUNfbDdBcExqZmtkUkw0WmlyUW5fZXFzTGFTUXdjLWhPUQ?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "Pakistan condemns Indian defence minister's threats",
+    "risk": "watch",
+    "note": "Rhetoric.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-17T05:45:16.595Z"
+   }
   },
   {
    "id": "india-expands-crude-oil-sourcing-to-41-countries-amid-hormuz",
@@ -1310,7 +1308,21 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "India expands crude sourcing to 41 countries",
+    "risk": "elevated",
+    "note": "Lowers shortage risk.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": 1,
+      "why": "Diversified supply"
+     }
+    ],
+    "economies": [],
+    "at": "2026-10-17T05:45:16.595Z"
+   }
   },
   {
    "id": "pakistan-condemns-indian-defence-minister-s-remarks-threaten",
@@ -1370,54 +1382,12 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Houthi Attacks Put Pakistan’s Saudi Defense Commitments and Iran Relations to the Test",
-    "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
-    "industries": [
-     {
-      "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
-      "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
-     }
-    ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
-      "id": "inflation",
-      "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
-     }
-    ],
-    "at": "2026-10-17T05:44:19.879Z"
+    "headline": "Houthi attacks test Pakistan's Saudi defence ties",
+    "risk": "watch",
+    "note": "Regional; little direct effect.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-17T05:45:16.595Z"
    }
   },
   {
@@ -1453,54 +1423,24 @@
     }
    ],
    "assessment": {
-    "headline": "Suspected Russian Drone Strikes in Black Sea Sink Cargo Ships and Escalate Regional Tensions",
-    "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "headline": "Suspected Russian drones sink Black Sea cargo ships",
+    "risk": "high",
+    "note": "Food supply risk.",
     "industries": [
      {
-      "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
+      "id": "agrifood",
       "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
+      "why": "Supply"
      }
     ],
     "economies": [
      {
-      "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
       "id": "inflation",
       "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
+      "why": "Food"
      }
     ],
-    "at": "2026-10-17T05:44:19.879Z"
+    "at": "2026-10-17T05:45:16.595Z"
    }
   },
   {
