@@ -2,7 +2,7 @@ name: Daily refresh
 
 on:
   # Once a day. GitHub sometimes delays or drops scheduled runs, so later times act as
-  # backups: each run skips itself if today's refresh is already done.
+  # backups: each run skips itself if the feed and scan were refreshed in the last 20 hours.
   schedule:
     - cron: "17 5 * * *"
     - cron: "47 8 * * *"
@@ -50,16 +50,19 @@ jobs:
           FORCE_RULE_SCAN: "1"
           DRY_RUN: "1"
 
-      - name: Check whether today's refresh already ran
+      # Judged by age, not calendar date: a delayed run that lands just after midnight
+      # must not count as "today's" refresh and leave the feed a day old by morning.
+      - name: Check whether a refresh ran in the last 20 hours
         if: ${{ !inputs.test_rule_scan }}
         id: due
         run: |
           node -e '
-            const today = new Date().toISOString().slice(0, 10);
+            const FRESH_HOURS = 20;
             const at = (f, k) => { try { return require(f)[k] || ""; } catch { return ""; } };
-            const done = at("./public/data/osint.json", "updatedAt").startsWith(today) && at("./public/data/scan.json", "scannedAt").startsWith(today);
+            const fresh = (t) => t && Date.now() - Date.parse(t) < FRESH_HOURS * 36e5;
+            const done = fresh(at("./public/data/osint.json", "updatedAt")) && fresh(at("./public/data/scan.json", "scannedAt"));
             const run = process.env.EVENT !== "schedule" || !done;
-            console.log(run ? "Refreshing." : "Already refreshed today; skipping.");
+            console.log(run ? "Refreshing." : `Refreshed in the last ${FRESH_HOURS} hours; skipping.`);
             require("fs").appendFileSync(process.env.GITHUB_OUTPUT, `run=${run}\n`);
           '
         env:
