@@ -1,6 +1,6 @@
 {
  "updatedAt": "2026-10-19T07:53:37.184Z",
- "assessedAt": "2026-10-19T07:53:51.290Z",
+ "assessedAt": "2026-10-19T07:55:04.638Z",
  "sources": [
   {
    "name": "UN News",
@@ -155,7 +155,27 @@
      "source": "RTV English",
      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQbmhYb2l3di03cG9EbkY4T0laTmc3QWxFYjBMUV83TzRUcUV2MDZWbWxack1BLXNWRXdjQWpET0hZM253eHhqbzc3YnI5OTFnc1k3RnB1eEZGajNlb2ZnbUxmc05LakJuWndTZDNFc3BaNEtxY1lKSUhjYXdHU0stdmpoNktZUFV0U0Nz?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "US suspends 100% tariff move against India and China",
+    "risk": "high",
+    "note": "Export and crude relief.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": 1,
+      "why": "Russian crude continues"
+     }
+    ],
+    "economies": [
+     {
+      "id": "growth",
+      "score": 1,
+      "why": "Export relief"
+     }
+    ],
+    "at": "2026-10-19T07:55:04.638Z"
+   }
   },
   {
    "id": "india-us-trade-deal-taken-into-account-to-waive-russia-oil-s",
@@ -204,7 +224,27 @@
      "source": "News9live",
      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOQmdKLWZzWU9mczltX3labGFIY2tfQk5YMjk4N050QVZWSktSeFc0WE1lRW5nWXVneXNUcjZZRnhDbHU3Ym5kRk1fRjRxQ0ZRelBJcWQxYXFFZ3F4OXpuSFZNX2kxaG1ZckFTd1VTUjRYVHNuWWxBaFRCajBSZlJtZlpJLTJxUTVBS1FYMUgtLUlnTmd3QXE3YWlSVV93ZFNwQnRQQUtxNlNZUdIBrwFBVV95cUxOLURfd2JEbTlWSWJvQzA5U3JxblRWcWRheXR1cFNxd1BOd1RZb3R0WEhSNmNsS1NpS18wZWRUVGNWZUJuNzh0X2tINzdwWUkwVlczSndncm8xYzFla0NjTnZ2ai0wNHVvTWU0clFtM1AyNVhlb2JwNERqN3EwOHVSWTJKYnVGWl9xcE9icURFSmpkX0hja2hSaXkzUVhUOGwtdnNEUE52RUpOZUFzZkxz?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "Trade deal 'taken into account' in Russia oil waiver",
+    "risk": "high",
+    "note": "Links relief to deal progress.",
+    "industries": [
+     {
+      "id": "industrials",
+      "score": 1,
+      "why": "Trade deal"
+     }
+    ],
+    "economies": [
+     {
+      "id": "growth",
+      "score": 1,
+      "why": "Trade"
+     }
+    ],
+    "at": "2026-10-19T07:55:04.638Z"
+   }
   },
   {
    "id": "ukraine-in-talks-with-turkey-egypt-and-india-to-restore-blac",
@@ -235,7 +275,21 @@
    "severity": "high",
    "severityScore": 6,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Ukraine in talks with Turkey, Egypt and India to restore Black Sea trade",
+    "risk": "elevated",
+    "note": "Possible food supply relief.",
+    "industries": [
+     {
+      "id": "agrifood",
+      "score": 1,
+      "why": "Supply"
+     }
+    ],
+    "economies": [],
+    "at": "2026-10-19T07:55:04.638Z"
+   }
   },
   {
    "id": "ukraine-in-talks-with-india-other-partners-to-open-black-sea",
@@ -271,7 +325,15 @@
      "source": "Briefs Finance",
      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOWllZOElIazFvTW9vVjB0RmFISGZOMHBWeTAwTm53UWM0eTk5bjBORDNYclliR21xY3FGekNqWi10R21zQXMtMmZsZUlrRksyVVZycDlPUjd6SEYtVlJ5Z09VSzh3bG5hSUpLUGlQU2ZocXNJQVVZM3A5VmhkdWdRN01SWjdUbER1aHpGbVNDZGVxdw?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "Ukraine in talks with India on Black Sea grain corridor",
+    "risk": "elevated",
+    "note": "Duplicate.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-19T07:55:04.638Z"
+   }
   },
   {
    "id": "iranian-lpg-jet-fuel-shipments-pass-through-us-blockade",
@@ -300,54 +362,12 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Iranian LPG, jet fuel shipments pass through US blockade",
-    "risk": "high",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
-    "industries": [
-     {
-      "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
-      "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
-     }
-    ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
-      "id": "inflation",
-      "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
-     }
-    ],
-    "at": "2026-10-19T07:53:51.290Z"
+    "headline": "Iranian LPG and jet fuel pass through US blockade",
+    "risk": "watch",
+    "note": "Blockade leaks; little direct India effect.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-19T07:55:04.638Z"
    }
   },
   {
@@ -389,24 +409,18 @@
     }
    ],
    "assessment": {
-    "headline": "US Pauses Russia Sanctions Decision For 60 Days, Weighs Impact On India’s Energy Ties",
+    "headline": "US pauses Russia sanctions decision for 60 days",
     "risk": "high",
-    "note": "Keyword rules read this as tighter energy sanctions.",
+    "note": "Relief with a clock.",
     "industries": [
      {
       "id": "energy",
-      "score": -1,
-      "why": "Refiners lose discounted crude"
+      "score": 1,
+      "why": "Supply"
      }
     ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": -1,
-      "why": "Costlier replacement barrels"
-     }
-    ],
-    "at": "2026-10-19T07:53:51.290Z"
+    "economies": [],
+    "at": "2026-10-19T07:55:04.638Z"
    }
   },
   {
@@ -457,7 +471,21 @@
      "source": "Open Magazine",
      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNZXhFbm1ySVNTMFUtQndTZl9XZjh3cDRNT2U3VEtTdHFYSmNnOEllQUdwTEp0bDN5bTdCd3A5WnlfWlpkQmJMN0FGbWl2TUd6MUh2MlF6VEZBSlU0cFhvZ0xTUmYyT3RzNEVDZ2ZxNnF1QUZuWW1ONERuX2RlaUxLbXBLWFk2MWtWb0dFYzZiMkxOMzNQS3RxQllpRFU1NjRXbDV5Zg?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "US pause; Europe refused to target India and China",
+    "risk": "elevated",
+    "note": "Less Western pressure on India.",
+    "industries": [],
+    "economies": [
+     {
+      "id": "growth",
+      "score": 1,
+      "why": "Lower trade risk"
+     }
+    ],
+    "at": "2026-10-19T07:55:04.638Z"
+   }
   },
   {
    "id": "why-should-the-us-bear-the-burden-treasury-chief-bessent-say",
@@ -505,7 +533,15 @@
      "source": "WION",
      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPRm1EZTdMTzJ6ZDgwblF3ampjcWxXRFBnbEtWT3h2c1ZuREZLYUNpNldxS01kRWhyR1E1SkF0YThTRVg4OWNOZmRSWW9GQ0V1dC0zWm91SnNXZWtDMWs5RFVlUHc4TzlaLVNpRkprMGFUX0VCX25STUEyWVVhREJYQk01VThSU2JVQkVCZ3hIN1NDbVg2S2I00gGcAUFVX3lxTE5YZWQyYjJtdjBVRGVnX1pMYTBLZll4eW5TUFQ4Yk9EV2lLMXNBNFVaZmlQMTRETXptRWJZSmp1dnc3Y0Q2eDNIUV9EVHZxYjlOS2dheGI3b0w0Q0U0bHZrYWl4cUlpb2RnQ3h0ZTdjcmdXZXpFZTlGd1hBOWdyUzM1TnM0SUNTV1pYd0pnRWhqTzhvN0ltaEp6UUtaVA?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "US Treasury chief says Europe refused tariffs on India and China",
+    "risk": "watch",
+    "note": "Political.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-19T07:55:04.638Z"
+   }
   },
   {
    "id": "pak-suspends-border-trade-with-iran-hundreds-of-freight-vehi",
@@ -534,7 +570,15 @@
    "severity": "high",
    "severityScore": 6,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Pakistan suspends border trade with Iran",
+    "risk": "watch",
+    "note": "Regional; no direct India effect.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-19T07:55:04.638Z"
+   }
   },
   {
    "id": "india-s-russian-crude-imports-fall-13-in-september-amid-pric",
@@ -569,7 +613,21 @@
      "source": "Telangana Today",
      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPenJ5ZWlCQ29CTGp3MkExMmpsVDF6ZThRcDViM2JjQXRTTjlkalNpaFpuS2o4SnJHMURkaVhpQk0zd1JqVEJKdTZ4bndaMXlSQnhHdkxVdzZEQ2NFZVk3a2hnakxETTVnX3lyX0tNdDRUaUNScDg1SzB0cnVwNG9wUVYxUE10SmVVQklUZXRNWGRMZlBJbjc4SWtsd1g2ZkgzZXJydnlBVQ?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "India's Russian crude imports fall 13% in September",
+    "risk": "elevated",
+    "note": "Costlier crude mix in September.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": -1,
+      "why": "Costlier mix"
+     }
+    ],
+    "economies": [],
+    "at": "2026-10-19T07:55:04.638Z"
+   }
   },
   {
    "id": "important-ally-and-partner-of-the-us-rubio-defends-trump-s-6",
@@ -610,24 +668,12 @@
     }
    ],
    "assessment": {
-    "headline": "'Important ally and partner of the US': Rubio defends Trump's 60-day waiver on Russia-related sanctions on In",
-    "risk": "high",
-    "note": "Keyword rules read this as easing energy sanctions.",
-    "industries": [
-     {
-      "id": "energy",
-      "score": 1,
-      "why": "Wider access to discounted crude"
-     }
-    ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": 1,
-      "why": "Cheaper crude imports"
-     }
-    ],
-    "at": "2026-10-19T07:53:51.290Z"
+    "headline": "US defends 60-day waiver, calls India important ally",
+    "risk": "watch",
+    "note": "Duplicate.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-19T07:55:04.638Z"
    }
   },
   {
@@ -659,54 +705,24 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Black Sea Shipping Attacks Spread to Romania and Bulgaria, Deepening Wheat Export Crisis",
-    "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "headline": "Black Sea attacks spread to Romania and Bulgaria; wheat crisis deepens",
+    "risk": "high",
+    "note": "World grain prices up.",
     "industries": [
-     {
-      "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
-      "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
      {
       "id": "consumer",
       "score": -1,
-      "why": "Imported inputs costlier"
+      "why": "Food costs"
      }
     ],
     "economies": [
      {
-      "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
       "id": "inflation",
       "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
+      "why": "Food"
      }
     ],
-    "at": "2026-10-19T07:53:51.290Z"
+    "at": "2026-10-19T07:55:04.638Z"
    }
   },
   {
@@ -744,7 +760,27 @@
      "source": "ANI News",
      "link": "https://news.google.com/rss/articles/CBMihwJBVV95cUxQNkF4Rl9GSVY5NVVtc3Y0dUdVQjFpSnpkZ1RnS2xrYXZ4LWNYTDFFb0RzUWdwTXFnUUFCSUtsTjBHVENxVWZaUExUZzR6clY1Vm9wTXkzSWcxaHFtdjdRZThCd0Qwb1o1ekVhOFlVdFdTZ0JMZktGZUF5MTNDc01mdFNuU3FEVm5aTWxRVFhfRnU2S2FSYkhzX3NHUHFoaFpaTDF5T242eTluUVhLVDh4cW9hb2lUdTZJakV6X3hhSElSWVRYSGJpc042MDVMeUpFSEQtMFVqNXNBRXVDd2J0eVJISjZpYWFCLVI4MmtnZFNvcWJjNGVPQkUzRnBzUktrbl91a1gzbw?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "US 'very close' to finalising trade deal with India",
+    "risk": "high",
+    "note": "Export boost if signed.",
+    "industries": [
+     {
+      "id": "industrials",
+      "score": 1,
+      "why": "Tariff relief"
+     }
+    ],
+    "economies": [
+     {
+      "id": "growth",
+      "score": 1,
+      "why": "Exports"
+     }
+    ],
+    "at": "2026-10-19T07:55:04.638Z"
+   }
   },
   {
    "id": "trump-defends-russia-policy-says-he-wants-ukraine-war-to-end",
@@ -773,7 +809,15 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "US defends Russia policy, wants Ukraine war to end",
+    "risk": "watch",
+    "note": "Political.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-19T07:55:04.638Z"
+   }
   },
   {
    "id": "oil-prices-ease-as-trump-waives-russia-sanctions-middle-east",
@@ -804,7 +848,27 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Oil eases as US waives Russia sanctions",
+    "risk": "elevated",
+    "note": "Slight relief for import bill.",
+    "industries": [
+     {
+      "id": "transport",
+      "score": 1,
+      "why": "Fuel costs"
+     }
+    ],
+    "economies": [
+     {
+      "id": "fiscal",
+      "score": 1,
+      "why": "Oil bill"
+     }
+    ],
+    "at": "2026-10-19T07:55:04.638Z"
+   }
   },
   {
    "id": "trump-admin-pauses-russia-sanctions-for-60-days-rubio-says-i",
@@ -833,7 +897,15 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "US pauses Russia sanctions for 60 days, India in focus",
+    "risk": "watch",
+    "note": "Duplicate.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-19T07:55:04.638Z"
+   }
   },
   {
    "id": "2m-barrel-oil-tanker-explodes-in-strait-of-hormuz-after-stri",
@@ -865,12 +937,18 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "2-million-barrel tanker explodes after hitting mine",
+    "headline": "2-million-barrel tanker explodes after mine strike",
     "risk": "elevated",
-    "note": "Duplicate.",
-    "industries": [],
+    "note": "Hormuz risk persists.",
+    "industries": [
+     {
+      "id": "transport",
+      "score": -1,
+      "why": "Insurance"
+     }
+    ],
     "economies": [],
-    "at": "2026-10-18T05:45:02.488Z"
+    "at": "2026-10-19T07:55:04.638Z"
    }
   },
   {
@@ -901,7 +979,27 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Saudi Arabia intercepts missile near Red Sea oil hub",
+    "risk": "high",
+    "note": "Threat to Hormuz bypass route.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": -1,
+      "why": "Supply risk"
+     }
+    ],
+    "economies": [
+     {
+      "id": "fiscal",
+      "score": -1,
+      "why": "Crude premium"
+     }
+    ],
+    "at": "2026-10-19T07:55:04.638Z"
+   }
   },
   {
    "id": "indian-refiners-russian-crude-trade-exposes-eu-sanctions-gap",
@@ -942,24 +1040,18 @@
     }
    ],
    "assessment": {
-    "headline": "Indian Refiners’ Russian Crude Trade Exposes EU Sanctions Gap",
+    "headline": "Indian refiners' Russian crude trade exposes EU sanctions gap",
     "risk": "elevated",
-    "note": "Keyword rules read this as tighter energy sanctions.",
+    "note": "Risk of EU curbs on Indian fuel exports.",
     "industries": [
      {
       "id": "energy",
       "score": -1,
-      "why": "Refiners lose discounted crude"
+      "why": "Export curbs risk"
      }
     ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": -1,
-      "why": "Costlier replacement barrels"
-     }
-    ],
-    "at": "2026-10-19T07:53:51.290Z"
+    "economies": [],
+    "at": "2026-10-19T07:55:04.638Z"
    }
   },
   {
@@ -994,7 +1086,15 @@
      "source": "Rediff",
      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQQndLMEJRUDM5eFp6dG4taVpIaG1kdERoUlhYY29hMGdCRDJXSi1MamxMRjRhOHA2c0hQUklmVXFLcXpjX0ZnWm1NUFBhWTFpZXhWVzFyb0VwZzFjZ01CY0s5RlhlZklQUWM1RUJrMzFQR1JSX1hVQ0V4NmhWV2NYSlRDdjhMOGxaWWV4U25nbGdQUmvSAZYBQVVfeXFMT0lRaDJRUFNhMkN5MFhESmhkc1FtVThRSkM2X29HUGRRVENoN2NpZjdpWUZSclZreThfNXREc1NhZ1FaNy03MzhFU3BNajlqTEZFUjgxN1dFMHRiYUh6TEdZUFZ3UG1qbTZnMGpmNFhiSjZDdl9pWUZDckFMMWVuMjJEa3BIWTZEYXFrQzBCbTBXWHFJeDJn?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "US cites India to defend Russia sanctions pause",
+    "risk": "watch",
+    "note": "Duplicate.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-19T07:55:04.638Z"
+   }
   },
   {
    "id": "trump-signs-oil-deal-with-russia-despite-imposing-sanctions-",
@@ -1025,7 +1125,15 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "US signs Russian oil deal after sanctioning India",
+    "risk": "watch",
+    "note": "Older story.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-19T07:55:04.638Z"
+   }
   },
   {
    "id": "60-day-pause-on-russia-sanctions-to-analyse-global-impact-ru",
@@ -1061,24 +1169,12 @@
     }
    ],
    "assessment": {
-    "headline": "60-day pause on Russia sanctions to analyse global impact: Rubio",
-    "risk": "elevated",
-    "note": "Keyword rules read this as tighter energy sanctions.",
-    "industries": [
-     {
-      "id": "energy",
-      "score": -1,
-      "why": "Refiners lose discounted crude"
-     }
-    ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": -1,
-      "why": "Costlier replacement barrels"
-     }
-    ],
-    "at": "2026-10-19T07:53:51.290Z"
+    "headline": "60-day pause to analyse global impact",
+    "risk": "watch",
+    "note": "Duplicate.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-19T07:55:04.638Z"
    }
   },
   {
@@ -1108,7 +1204,21 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Iranian oil flows through Hormuz as Gulf neighbours' exports shut",
+    "risk": "elevated",
+    "note": "Gulf supply to India squeezed.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": -1,
+      "why": "Gulf supply"
+     }
+    ],
+    "economies": [],
+    "at": "2026-10-19T07:55:04.638Z"
+   }
   },
   {
    "id": "inside-trump-s-russia-sanctions-relief-plan-what-60-day-revi",
@@ -1137,7 +1247,15 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "What the 60-day review means for India",
+    "risk": "watch",
+    "note": "Analysis.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-19T07:55:04.638Z"
+   }
   },
   {
    "id": "us-to-review-russia-sanctions-waiver-within-60-days-as-rubio",
@@ -1172,7 +1290,15 @@
      "source": "IBTimes India",
      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOM0FEMFpFdzZWby1rSlQ3a3VXUXBKdVFhWkxhcjBFRjFNNnk0VTMzMGhhQTV1MXdsRFpXckR1WU1hZVpmTUh6VUNoUjQzTF9GZ3RFaW1ETVVjU0NabnA5dEUyS0xVcndFUGg5MjlKdFQxYXUyMFNlY0dPZWlqeDNDYTZoWmlWbnkzVWFLTTdR?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "US to review waiver within 60 days",
+    "risk": "watch",
+    "note": "Duplicate.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-19T07:55:04.638Z"
+   }
   },
   {
    "id": "us-calls-russia-sanctions-waiver-a-60-day-pause-amid-critici",
@@ -1202,7 +1328,15 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "US calls waiver a 60-day pause",
+    "risk": "watch",
+    "note": "Duplicate.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-19T07:55:04.638Z"
+   }
   },
   {
    "id": "trump-defends-russia-sanctions-pause-as-global-security-conc",
@@ -1233,24 +1367,12 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Trump defends Russia sanctions pause as global security concerns mount",
-    "risk": "elevated",
-    "note": "Keyword rules read this as tighter energy sanctions.",
-    "industries": [
-     {
-      "id": "energy",
-      "score": -1,
-      "why": "Refiners lose discounted crude"
-     }
-    ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": -1,
-      "why": "Costlier replacement barrels"
-     }
-    ],
-    "at": "2026-10-19T07:53:51.290Z"
+    "headline": "US defends sanctions pause",
+    "risk": "watch",
+    "note": "Duplicate.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-19T07:55:04.638Z"
    }
   },
   {
@@ -1279,7 +1401,15 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Opinion on India–Pakistan nuclear risk",
+    "risk": "watch",
+    "note": "Opinion.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-19T07:55:04.638Z"
+   }
   },
   {
    "id": "iran-sets-a-six-day-deadline-to-reopen-the-strait-of-hormuz-",
@@ -1311,44 +1441,24 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Iran sets a six-day deadline to reopen the Strait of Hormuz, awaiting Washington's response.",
+    "headline": "Iran sets six-day timeline to reopen Hormuz if US responds",
     "risk": "elevated",
-    "note": "Keyword rules read this as shipping lanes reopening.",
+    "note": "A deal would ease oil costs.",
     "industries": [
      {
       "id": "transport",
-      "score": 2,
-      "why": "Shorter routes, lower insurance"
-     },
-     {
-      "id": "energy",
       "score": 1,
-      "why": "Marketers' margins recover"
-     },
-     {
-      "id": "consumer",
-      "score": 1,
-      "why": "Input costs ease"
+      "why": "If reopened"
      }
     ],
     "economies": [
      {
       "id": "fiscal",
       "score": 1,
-      "why": "Import bill eases"
-     },
-     {
-      "id": "inflation",
-      "score": 1,
-      "why": "Fuel and freight costs ease"
-     },
-     {
-      "id": "rupee",
-      "score": 1,
-      "why": "Less dollar demand"
+      "why": "If reopened"
      }
     ],
-    "at": "2026-10-19T07:53:51.290Z"
+    "at": "2026-10-19T07:55:04.638Z"
    }
   },
   {
@@ -1381,54 +1491,12 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "US says 97% of ships cross ‘completely open’ Strait of Hormuz as attacks hit record high",
+    "headline": "US says 97% of ships cross open Hormuz as attacks hit record",
     "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
-    "industries": [
-     {
-      "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
-      "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
-     }
-    ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
-      "id": "inflation",
-      "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
-     }
-    ],
-    "at": "2026-10-19T07:53:51.290Z"
+    "note": "Mixed signals on supply.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-19T07:55:04.638Z"
    }
   },
   {
