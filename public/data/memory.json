@@ -1,74 +1,5 @@
 [
  {
-  "day": "2026-10-08",
-  "model": "Claude daily routine",
-  "items": [
-   {
-    "id": "market-close",
-    "date": "2026-10-07",
-    "theme": "Monetary policy",
-    "headline": "Sensex falls 429 points to 72,638.70 and Nifty 0.76% to 22,603.05 after the RBI hike",
-    "confidence": "high"
-   },
-   {
-    "id": "bond-yields",
-    "date": "2026-10-07",
-    "theme": "Rates & bonds",
-    "headline": "10-year G-Sec yield settles at 7.24%, highest since December 2023, as traders price a December hike",
-    "confidence": "high"
-   },
-   {
-    "id": "fpi-selling",
-    "date": "2026-10-07",
-    "theme": "Foreign flows",
-    "headline": "Foreign investors sell ₹6,121 crore on hike day, a fourth straight session; domestic funds buy ₹4,597 crore",
-    "confidence": "high"
-   },
-   {
-    "id": "oil-102",
-    "date": "2026-10-08",
-    "theme": "Commodities",
-    "headline": "Brent climbs over 2% to about $102.50 as Iran steps up attacks on Hormuz tankers",
-    "confidence": "high"
-   },
-   {
-    "id": "hormuz-claim",
-    "date": "2026-10-07",
-    "theme": "Energy & geopolitics",
-    "headline": "Iran's Guard says Hormuz is closed; US Central Command calls it false and says 20 million barrels are moving",
-    "confidence": "medium"
-   },
-   {
-    "id": "venezuela-crude",
-    "date": "2026-10-07",
-    "theme": "Commodities",
-    "headline": "India's Venezuelan crude imports set for about 465,000 barrels a day in October, highest since 2019",
-    "confidence": "medium"
-   },
-   {
-    "id": "us-yields",
-    "date": "2026-10-07",
-    "theme": "Rates & bonds",
-    "headline": "US 10-year yield touches 5.35%, highest since 2002, as Fed minutes show officials expect more hikes",
-    "confidence": "high"
-   },
-   {
-    "id": "it-q2",
-    "date": "2026-10-08",
-    "theme": "Tech cycle",
-    "headline": "IT services Q2 results season opens with previews pointing to flat to 2% quarterly growth",
-    "confidence": "medium"
-   },
-   {
-    "id": "black-sea-truce",
-    "date": "2026-10-07",
-    "theme": "Energy & geopolitics",
-    "headline": "India presses Russia and Ukraine to halt attacks on ships after more Indian crew are hurt in the Black Sea",
-    "confidence": "low"
-   }
-  ]
- },
- {
   "day": "2026-10-09",
   "model": "Claude daily routine",
   "items": [
@@ -934,6 +865,124 @@
     "theme": "Energy & geopolitics",
     "headline": "Pakistan warns India's military doctrine risks nuclear stability in South Asia",
     "confidence": "low"
+   }
+  ]
+ },
+ {
+  "day": "2026-10-22",
+  "model": "Keyword rules (no AI)",
+  "items": [
+   {
+    "id": "tariffs-down-india",
+    "date": "2026-10-22",
+    "theme": "Trade",
+    "headline": "Rubio kicks off India visit with trade deal, Russian oil on agenda",
+    "confidence": "high"
+   },
+   {
+    "id": "chokepoints-up",
+    "date": "2026-10-22",
+    "theme": "Energy & geopolitics",
+    "headline": "Strait of Hormuz: Kuwait-flagged tanker carrying 21 Indians hit by projectile, all safe",
+    "confidence": "high"
+   },
+   {
+    "id": "oil-up",
+    "date": "2026-10-22",
+    "theme": "Commodities",
+    "headline": "Bond yield rises to 7.44% on higher oil prices, global cues",
+    "confidence": "high"
+   },
+   {
+    "id": "rates-up-india",
+    "date": "2026-10-22",
+    "theme": "Monetary policy",
+    "headline": "Indian bonds steady after RBI minutes signal more rate hikes",
+    "confidence": "high"
+   },
+   {
+    "id": "fpi-down",
+    "date": "2026-10-22",
+    "theme": "Foreign flows",
+    "headline": "Domestic investors cannot shield rupee from FPI outflows | Policy Circle",
+    "confidence": "medium"
+   },
+   {
+    "id": "fx-rupee-strong",
+    "date": "2026-10-22",
+    "theme": "Currencies",
+    "headline": "IMF Urges India to Let Rupee Adjust to Oil Shock as Currency Recovers",
+    "confidence": "medium"
+   },
+   {
+    "id": "growth-up-india",
+    "date": "2026-10-22",
+    "theme": "Growth data",
+    "headline": "India’s economy stays resilient at 7.1%, but rising inflation raises a red flag, says RBI's Sanjay Malhotr",
+    "confidence": "high"
+   },
+   {
+    "id": "rates-up-us",
+    "date": "2026-10-22",
+    "theme": "Monetary policy",
+    "headline": "The Inflation Nemesis—More Fed Rate Hikes Are Coming",
+    "confidence": "high"
+   },
+   {
+    "id": "fx-dollar-weak",
+    "date": "2026-10-22",
+    "theme": "Currencies",
+    "headline": "United States Dollar Index falls to near 101.50 due to Fed rate pause bets",
+    "confidence": "high"
+   },
+   {
+    "id": "tariffs-down-global",
+    "date": "2026-10-22",
+    "theme": "Trade",
+    "headline": "A trade deal mired in uncertainty",
+    "confidence": "medium"
+   },
+   {
+    "id": "yields-down-us",
+    "date": "2026-10-22",
+    "theme": "Rates & bonds",
+    "headline": "Treasury yields fall as investors weigh Middle East tensions and await fresh jobs data",
+    "confidence": "high"
+   },
+   {
+    "id": "inflation-up-india",
+    "date": "2026-10-22",
+    "theme": "Growth data",
+    "headline": "IMF Says India Monetary Policy Should Focus on Inflation over Rupee Amid High Oil Prices",
+    "confidence": "high"
+   },
+   {
+    "id": "metals-up",
+    "date": "2026-10-22",
+    "theme": "Commodities",
+    "headline": "India's copper demand rises 12% to 2,100 KT in FY26",
+    "confidence": "high"
+   },
+   {
+    "id": "yields-up-india",
+    "date": "2026-10-22",
+    "theme": "Rates & bonds",
+    "headline": "RBI rejects all bids at govt's T-bill auction as short-term yields surge",
+    "confidence": "medium"
+   },
+   {
+    "id": "gold-down",
+    "date": "2026-10-22",
+    "theme": "Commodities",
+    "headline": "Gold Edges Lower as Traders Weigh Middle East Signals, Fed Rate Path",
+    "confidence": "medium"
+   },
+   {
+    "id": "sanctions-up",
+    "date": "2026-10-21",
+    "theme": "Energy & geopolitics",
+    "headline": "Global media on India-US ties amid Rubio visit as Trump pauses sanctions on Russian oil",
+    "confidence": "medium"
    }
   ]
  }
