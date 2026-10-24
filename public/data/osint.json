@@ -1,6 +1,6 @@
 {
  "updatedAt": "2026-10-24T05:44:09.818Z",
- "assessedAt": "2026-10-24T05:44:24.292Z",
+ "assessedAt": "2026-10-24T05:45:36.752Z",
  "sources": [
   {
    "name": "UN News",
@@ -158,54 +158,24 @@
     }
    ],
    "assessment": {
-    "headline": "Romania blames Russia as drone strike sinks cargo ship in Black Sea; 1 dead, 3 missing",
+    "headline": "Drone strike sinks cargo ship in Black Sea; Romania blames Russia",
     "risk": "high",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "note": "Food supply risk.",
     "industries": [
      {
-      "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
+      "id": "agrifood",
       "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
+      "why": "Supply"
      }
     ],
     "economies": [
      {
-      "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
       "id": "inflation",
       "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
+      "why": "Food"
      }
     ],
-    "at": "2026-10-24T05:44:24.292Z"
+    "at": "2026-10-24T05:45:36.752Z"
    }
   },
   {
@@ -245,7 +215,15 @@
      "source": "The Economic Times",
      "link": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxOQW9sZ0lsS1V2c3BNY0I3UGgzQXhCclFQd3ZUcnNzeGEtSUJhZzNXUXZXY0tEMHExSy1XeVJJczMyMHU4Nnk3dEFUTE5LTzFEVk5QQVVTNXBsMU1zSmRtN0twYnVkaG9KczlwS0l2SG9IaHJyeVFScFFRVmkydElpS1BNSVRkOGN5aDdMMi11QTlLVVRBVG5UOWhSMFdhWFRyeHl4Uy1ZUnpoUVNMTFFnd0RKaFVBOEpEUmpaNC13X1dKUlpiN3ZVdGN3cnVHRTFmQlVKZnVZLTJCRWJrVU1KS3F1NlUwektHcXJfLUZURlotUVc4SE5fc1lqSQ?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "US president claims tariff threat ended India–Pakistan conflict",
+    "risk": "watch",
+    "note": "Rhetoric.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-24T05:45:36.752Z"
+   }
   },
   {
    "id": "ukraine-proposes-turkey-india-egypt-grain-corridor-as-black-",
@@ -278,7 +256,21 @@
    "severity": "high",
    "severityScore": 7,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Ukraine proposes Turkey–India–Egypt grain corridor",
+    "risk": "elevated",
+    "note": "Could ease food prices if agreed.",
+    "industries": [
+     {
+      "id": "agrifood",
+      "score": 1,
+      "why": "Supply"
+     }
+    ],
+    "economies": [],
+    "at": "2026-10-24T05:45:36.752Z"
+   }
   },
   {
    "id": "one-dead-three-missing-after-black-sea-ship-fire",
@@ -323,7 +315,15 @@
      "source": "Al Arabiya English",
      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQTXJiU1NKOUFPRWZGV1BjUDZUUzZVS1lrMmdMRTNraDA0M3JCbWhKLWdMUU1NaFFJNWZzdm9SQ3hMNXlRMTA2WGI0YUxmVWlldFZ5NGFOMUhITG1OMHZhaHU4VlRfblBPRDNpNHUycVE3bTdraVpoLXNlQ3BweW16blhpM2ZnNmlpbFZCUTJvYnlSaXZaNjJUQzVIbjNINjVwZDB1VXVyQXFlWjVzX0NjaFZ6NNIBswFBVV95cUxQTXJiU1NKOUFPRWZGV1BjUDZUUzZVS1lrMmdMRTNraDA0M3JCbWhKLWdMUU1NaFFJNWZzdm9SQ3hMNXlRMTA2WGI0YUxmVWlldFZ5NGFOMUhITG1OMHZhaHU4VlRfblBPRDNpNHUycVE3bTdraVpoLXNlQ3BweW16blhpM2ZnNmlpbFZCUTJvYnlSaXZaNjJUQzVIbjNINjVwZDB1VXVyQXFlWjVzX0NjaFZ6NA?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "One dead, three missing after Black Sea ship fire",
+    "risk": "elevated",
+    "note": "Duplicate.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-24T05:45:36.752Z"
+   }
   },
   {
    "id": "will-put-250-tariffs-trump-reiterates-claim-of-india-pakista",
@@ -361,7 +361,15 @@
      "source": "Moneycontrol.com",
      "link": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPSkhDbFpwZXBBNXhZajNLWUJ5NVpoU1ZjMGx4NFNVXzZ1YklsbFZyUnhIamFNNU5tX2Fhc3BWQ0FadGZhS1JlaDUyQWhHVHUtMjh0aHhsejV5X3JLbE5ENEI5ODQ1VURONmxmY1JlZHRnTEk3cTV5S1ozSU5kWmc5WjZlaTRsZlJnMXcwYi1SWDJmcExsWXNFQXZRUFh1Q1RrdmxLa0o0cWRFc1FFcVlXcWk5b0k3S3dBZGpaLUFRS1p3MklZTFBTUHhjZ1hzOGRvdnlhSExHR0xZMFlfcjh5eFBVVWlUdXF2bnlBalNBQ21PYmMwR2fSAfsBQVVfeXFMTzZqSnNFRS1MRlNKZUZLTTZVUlRtRUJrYkJ2TlJUYlFGeUtVdktfb29RNmZvRXJlUkhmR0NfVUpJMEdDV2lUTHJka2tjOFU1R0dTVDRQWmsyOHhOYmRyRXZja2Jpd1BCTVo3VFZGNVdSbGU2bURCQ1d5R3RQMDBrazh0RVh6alRYSjJHMmJQZ2FCWVJ1c0N5SEUwWEREUkd6OVRNOVdxLWtJNk9EaU5TMFAzUVhGY2tldV8yVGpPdDhCbHdkSXVPVUpIUEJDX1o4LTkxMDFVeWVXaFFNTnQxRHF6WXJNY1IydDViMEFCWVdyS1BuYkhMWWNIVkU?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "US president repeats 250% tariff claim on India–Pakistan",
+    "risk": "watch",
+    "note": "Rhetoric; trade sentiment.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-24T05:45:36.752Z"
+   }
   },
   {
    "id": "iran-escalates-strait-of-hormuz-shipping-attacks-with-new-ta",
@@ -402,54 +410,24 @@
     }
    ],
    "assessment": {
-    "headline": "Iran escalates Strait of Hormuz shipping attacks with new tactics aimed at keeping global oil prices high before US midterm elections",
+    "headline": "Iran escalates Hormuz attacks to keep oil prices high",
     "risk": "high",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "note": "Sustained crude premium.",
     "industries": [
      {
       "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
       "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
+      "why": "Insurance"
      }
     ],
     "economies": [
      {
       "id": "fiscal",
       "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
-      "id": "inflation",
-      "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
+      "why": "Oil bill"
      }
     ],
-    "at": "2026-10-24T05:44:24.292Z"
+    "at": "2026-10-24T05:45:36.752Z"
    }
   },
   {
@@ -478,7 +456,15 @@
    "severity": "high",
    "severityScore": 6,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Analysis: India's role in the Black Sea",
+    "risk": "watch",
+    "note": "Opinion.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-24T05:45:36.752Z"
+   }
   },
   {
    "id": "european-parliament-calls-for-eu-naval-operation-in-black-se",
@@ -518,7 +504,15 @@
      "source": "European Interest",
      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPdzAyWlpnaUs1XzVpaFVPWkhMYWU4WTJUM2xQaDVRTm5IMmMyM3N3MUpsdTFLOUZMSWxMNk9LZU0wTkFoMzdaRFdUeFpJZ2FzQW5pS2Q4VWJsR2hRQ0lRZGFUQURlYURxU3FuZ2N6N0lVQ3R3Nml0QTBSeGlXN2xTdXhIZFdBS1lwbWEtVDZPbW0tRFZHME85Ymw2T1AyS2dkOHVHcw?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "European Parliament calls for EU naval operation in Black Sea",
+    "risk": "elevated",
+    "note": "Could protect grain shipping.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-24T05:45:36.752Z"
+   }
   },
   {
    "id": "trump-claims-he-prevented-india-pakistan-war-by-threatening-",
@@ -552,7 +546,15 @@
      "source": "Dynamite News",
      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQXzhOQjFva0l5RDNqRTNRRUswT2E3SXFyVFZnWlNiTFR5YTJ2QzlBc0puLTVhcHpTWUgtajNUR2htbjF0a1JVT0tNWGxRRnp2ZVdYVjBid0VGc19aUVJMa29VM0g5SDc5QW5zd3llOVYwRWplZ3BNWUhWM3p6Q1NzUUxwckpTZXJpb2NvSUM2R184SVpTQjI0c0xGV2JuRURXWTlVV05VOGtCT3pWTG5zc3NlcXJXdHBkT2xINm15REw4b01HRUZkSU9SRUtkNDl1NUNNWkN30gHbAUFVX3lxTE5fdDBsY2dfVlJFMXJHVjY5NFZmU0tqNkxjT0lQZzVQb1VQZmdUaGpTc2doN056N0dib0t4SFZjdUhTRUlHZEVCOXJPcGUxbExGRERuLVVDMmxZUkdxdU1UQ19nMXNvczF6UGtZWENkc0hYdWdTNUszUnhCWVBBNEpHWU5HV2xaeE84WFBybXNtNHhwaWlXMjA3R1U2Sks5S1E4dGlMZldXWldoYjlmWTF6NTlzcGVfMGV6eUtGMGtOT1B6d0IyeG5rMy1zRHBqOEtDc3JJM0ljU1dTcw?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "US president claims he prevented India–Pakistan war",
+    "risk": "watch",
+    "note": "Duplicate.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-24T05:45:36.752Z"
+   }
   },
   {
    "id": "russia-s-attacks-on-black-sea-shipping-raise-risk-of-global-",
@@ -586,54 +588,18 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Russia’s attacks on Black Sea shipping raise risk of global famine, German FM warns",
+    "headline": "German FM warns Black Sea attacks raise famine risk",
     "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
-    "industries": [
-     {
-      "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
-      "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
-     }
-    ],
+    "note": "Food prices.",
+    "industries": [],
     "economies": [
-     {
-      "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
      {
       "id": "inflation",
       "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
+      "why": "Food"
      }
     ],
-    "at": "2026-10-24T05:44:24.292Z"
+    "at": "2026-10-24T05:45:36.752Z"
    }
   },
   {
@@ -664,54 +630,12 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Emergency Response in Black Sea After Cargo Ship Burns, Capsizes in Alleged Drone Attack",
-    "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
-    "industries": [
-     {
-      "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
-      "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
-     }
-    ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
-      "id": "inflation",
-      "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
-     }
-    ],
-    "at": "2026-10-24T05:44:24.292Z"
+    "headline": "Cargo ship burns and capsizes in Black Sea",
+    "risk": "watch",
+    "note": "Duplicate.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-24T05:45:36.752Z"
    }
   },
   {
@@ -744,54 +668,18 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Oil Slick Threatens Environmental Disaster After Tanker Attack in Strait of Hormuz",
+    "headline": "Oil slick after Hormuz tanker attack",
     "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "note": "Disruption risk.",
     "industries": [
      {
       "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
       "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
+      "why": "Route risk"
      }
     ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
-      "id": "inflation",
-      "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
-     }
-    ],
-    "at": "2026-10-24T05:44:24.292Z"
+    "economies": [],
+    "at": "2026-10-24T05:45:36.752Z"
    }
   },
   {
@@ -819,7 +707,15 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Ship accident in Black Sea kills one",
+    "risk": "watch",
+    "note": "Duplicate.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-24T05:45:36.752Z"
+   }
   },
   {
    "id": "at-least-1-killed-and-3-missing-as-cargo-ship-catches-fire-a",
@@ -848,54 +744,12 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "At least 1 killed and 3 missing as cargo ship catches fire ‘after being struck by drone’ in Black Sea",
-    "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
-    "industries": [
-     {
-      "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
-      "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
-     }
-    ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
-      "id": "inflation",
-      "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
-     }
-    ],
-    "at": "2026-10-24T05:44:24.292Z"
+    "headline": "Cargo ship hit by drone in Black Sea",
+    "risk": "watch",
+    "note": "Duplicate.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-24T05:45:36.752Z"
    }
   },
   {
@@ -929,54 +783,24 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Iran Says 7 Oil Tankers Hit In One Night In Strait Of Hormuz As Fears Of Return To War Grow",
-    "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "headline": "Iran says 7 tankers hit in one night",
+    "risk": "high",
+    "note": "Escalation.",
     "industries": [
      {
       "id": "transport",
       "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
-      "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
+      "why": "Insurance"
      }
     ],
     "economies": [
      {
       "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
-      "id": "inflation",
       "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
+      "why": "Crude premium"
      }
     ],
-    "at": "2026-10-24T05:44:24.292Z"
+    "at": "2026-10-24T05:45:36.752Z"
    }
   },
   {
@@ -1011,54 +835,12 @@
     }
    ],
    "assessment": {
-    "headline": "1 Dead, 3 Missing After Suspected Russian Drone Attack On Ship In Black Sea",
-    "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
-    "industries": [
-     {
-      "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
-      "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
-     }
-    ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
-      "id": "inflation",
-      "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
-     }
-    ],
-    "at": "2026-10-24T05:44:24.292Z"
+    "headline": "Suspected Russian drone attack on Black Sea ship",
+    "risk": "watch",
+    "note": "Duplicate.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-24T05:45:36.752Z"
    }
   },
   {
@@ -1089,54 +871,12 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Romania Accuses Russia Of Escalating Attacks On NATO's Eastern Flank After Ship Sinks In Black Sea; 1 Dead, 3",
-    "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
-    "industries": [
-     {
-      "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
-      "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
-     }
-    ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
-      "id": "inflation",
-      "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
-     }
-    ],
-    "at": "2026-10-24T05:44:24.292Z"
+    "headline": "Romania accuses Russia of escalation",
+    "risk": "watch",
+    "note": "Duplicate.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-24T05:45:36.752Z"
    }
   },
   {
@@ -1167,7 +907,15 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "India barred direct medicine flights from Iran since August",
+    "risk": "watch",
+    "note": "Small trade effect.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-24T05:45:36.752Z"
+   }
   },
   {
    "id": "petronet-lng-gruner-renewable-energy-plan-inr-1-200-crore-cb",
@@ -1210,7 +958,15 @@
      "source": "Trade Brains",
      "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQYTRTeDB5a1d0eEZCNms4dWlZRXpCRzY0YnhncFRnRVVZcEJuSEhKMXdjS1hJcHN1cFkxOGRQazlhbC1uWHF4Y29YMzhNLXBWMnhMbFdkT1lWNXpnOTg0di03SDBORTdha0M0eXRWWkJqNDZ3WXFfdjVMOVJqb05iTHFxMzZ5Sm9sRUFhTy1kbk1aZi1uVkxjcXYxV0J1bFl1RjZNYlpfQWJPWm0xajFKT3E4U0lhT1dGbHNKLUlfbms5Tlg1dG12NmR1SHBpVHZZMGNVc2szRU92VXBqcjUxQ21XaVJKZnpudGcwTjFwVQ?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "Gas importer plans ₹1,200 crore biogas venture",
+    "risk": "watch",
+    "note": "Firm-level news.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-24T05:45:36.752Z"
+   }
   },
   {
    "id": "romania-says-rescue-mission-underway-after-black-sea-ship-fi",
@@ -1236,7 +992,15 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Rescue under way after Black Sea ship fire",
+    "risk": "watch",
+    "note": "Duplicate.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-24T05:45:36.752Z"
+   }
   },
   {
    "id": "nigeria-raises-lng-export-to-india-since-iran-war-report",
@@ -1266,7 +1030,21 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Nigeria raises LNG exports to India",
+    "risk": "elevated",
+    "note": "Supply diversification.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": 1,
+      "why": "Gas supply"
+     }
+    ],
+    "economies": [],
+    "at": "2026-10-24T05:45:36.752Z"
+   }
   },
   {
    "id": "romanian-president-says-latest-black-sea-shipping-incident-i",
@@ -1292,7 +1070,15 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Romania calls Black Sea incident Russian escalation",
+    "risk": "watch",
+    "note": "Duplicate.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-24T05:45:36.752Z"
+   }
   },
   {
    "id": "india-s-new-border-warriors-who-are-the-shaurya-commandos-fa",
@@ -1328,7 +1114,15 @@
      "source": "News18",
      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQcm5iN0RxNE9LYkRadGJLcW5Od3V5YjJVR2JBOXdrc1FHaC1Eb0FOcG9mdkRFYmRwZDVBUG5qaXVIcEdZT21MendlbDk0eXl0WHVMUGdqbXVDMWRxY1Z5bHQ4ODBreDJLYlE2RUhINm9Ua0RXNFpWTXU5X2NHSnU5ZU5nOHJZUXlTUFFWUWR0ZExLMWFpSnN6amxZVm5LVU83bm9mX0FwLXFRYm1EQVVxZHV6VGkyUUMzZEIwTlY0cW5uR0VHYlVhV0hrcnEzU29yb0dVc3J3elB2bGx5bklKQk9WQdIB6AFBVV95cUxPcUFxNmRJWkhkb2dsSXNsNWRobVcyLU5oVzFJcXFBZExBZ0VkeWNkNVVqLUlCeGR3Wlhzb3BHY3pKb0RZMGVNOXlRZllKN3o5QjlEZWM3SmRXSlgzWmFDVVdudFYtNnloVjZ4Q0F5YW12bzR3bnR2cXN3aVJPd3FIekhrOHhFYVZ4XzhpclBnT2hvYzJrMFpQZVpRd2hsOTFfcjlnbVFHc3VYRzlUckxxZ0F5MXNkMGZMQXpBaTJYTTNfWWotTi1sY1ZWUGNraEhnbE8tWFlsSmhKcTJSRFF2cWpFaTd3Mm1H?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "India deploys new commando unit on China border",
+    "risk": "watch",
+    "note": "Defence; little market effect.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-24T05:45:36.752Z"
+   }
   },
   {
    "id": "why-crude-oil-shipping-costs-are-keeping-india-s-fuel-relief",
@@ -1355,7 +1149,27 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Crude shipping costs keep fuel relief away",
+    "risk": "elevated",
+    "note": "Fuel prices stay high.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": -1,
+      "why": "Margins"
+     }
+    ],
+    "economies": [
+     {
+      "id": "inflation",
+      "score": -1,
+      "why": "Fuel"
+     }
+    ],
+    "at": "2026-10-24T05:45:36.752Z"
+   }
   },
   {
    "id": "marco-rubio-opens-up-to-india-on-ukraine-terror-trade-energy",
@@ -1384,7 +1198,15 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "US Secretary of State on trade, energy and H-1B",
+    "risk": "watch",
+    "note": "Interview.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-24T05:45:36.752Z"
+   }
   },
   {
    "id": "ethiopia-intelligence-chief-warns-of-red-sea-militarisation-",
@@ -1412,7 +1234,15 @@
    "severity": "elevated",
    "severityScore": 4,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Ethiopia warns of Red Sea militarisation",
+    "risk": "watch",
+    "note": "Regional.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-24T05:45:36.752Z"
+   }
   },
   {
    "id": "india-s-scotch-whisky-probe-threatens-india-uk-trade-deal-be",
@@ -1440,7 +1270,21 @@
    "severity": "elevated",
    "severityScore": 4,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Indian probe of Scotch whisky imports threatens UK trade deal benefits",
+    "risk": "elevated",
+    "note": "Trade friction with UK.",
+    "industries": [],
+    "economies": [
+     {
+      "id": "growth",
+      "score": -1,
+      "why": "Trade friction"
+     }
+    ],
+    "at": "2026-10-24T05:45:36.752Z"
+   }
   },
   {
    "id": "two-sectors-in-arunachal-s-taksing-remain-sensitive-no-clash",
@@ -1466,7 +1310,15 @@
    "severity": "elevated",
    "severityScore": 4,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Two Arunachal border sectors sensitive, no clashes",
+    "risk": "watch",
+    "note": "Security; little market effect.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-24T05:45:36.752Z"
+   }
   },
   {
    "id": "eight-nation-group-calls-for-free-shipping-and-diplomatic-so",
@@ -1492,7 +1344,15 @@
    "severity": "elevated",
    "severityScore": 4,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Eight-nation group calls for free shipping in Middle East",
+    "risk": "watch",
+    "note": "Diplomatic.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-24T05:45:36.752Z"
+   }
   },
   {
    "id": "hormuz-ship-attacks-hit-record-high-in-october",
@@ -1526,54 +1386,24 @@
     }
    ],
    "assessment": {
-    "headline": "Hormuz Ship Attacks Hit Record High in October",
-    "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "headline": "Hormuz ship attacks hit record in October",
+    "risk": "high",
+    "note": "Persistent risk.",
     "industries": [
      {
       "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
       "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
+      "why": "Insurance"
      }
     ],
     "economies": [
      {
       "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
-      "id": "inflation",
       "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
+      "why": "Import bill"
      }
     ],
-    "at": "2026-10-24T05:44:24.292Z"
+    "at": "2026-10-24T05:45:36.752Z"
    }
   },
   {
