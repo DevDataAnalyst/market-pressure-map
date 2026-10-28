@@ -1,81 +1,5 @@
 [
  {
-  "day": "2026-10-14",
-  "model": "Claude daily routine",
-  "items": [
-   {
-    "id": "it-rally",
-    "date": "2026-10-13",
-    "theme": "Tech cycle",
-    "headline": "Sensex jumps 1,109 points to 73,033.78 as IT index surges 5.2% on strong quarterly results",
-    "confidence": "high"
-   },
-   {
-    "id": "fpi-13",
-    "date": "2026-10-13",
-    "theme": "Foreign flows",
-    "headline": "Foreign investors sell ₹1,305 crore, a 13th straight day; domestic funds buy ₹2,439 crore",
-    "confidence": "medium"
-   },
-   {
-    "id": "bond-ease",
-    "date": "2026-10-13",
-    "theme": "Rates & bonds",
-    "headline": "10-year G-Sec yield eases to 7.35% from 7.38% as value buyers return",
-    "confidence": "medium"
-   },
-   {
-    "id": "wpi-preview",
-    "date": "2026-10-14",
-    "theme": "Growth data",
-    "headline": "Wholesale inflation due today; forecast to cross 10% in September from 9.92%",
-    "confidence": "medium"
-   },
-   {
-    "id": "russian-freight",
-    "date": "2026-10-13",
-    "theme": "Commodities",
-    "headline": "Shipping a cargo of Russian oil to India now costs up to $30 million as freight hits records",
-    "confidence": "medium"
-   },
-   {
-    "id": "us-visit",
-    "date": "2026-10-14",
-    "theme": "Trade",
-    "headline": "US Secretary of State to visit India next week as a US deadline on Russian oil nears",
-    "confidence": "low"
-   },
-   {
-    "id": "hormuz-worst",
-    "date": "2026-10-13",
-    "theme": "Energy & geopolitics",
-    "headline": "Hormuz hit by the worst attacks of the war as flows plunge; US threatens to 'hit Iran hard'",
-    "confidence": "high"
-   },
-   {
-    "id": "black-sea-wheat",
-    "date": "2026-10-13",
-    "theme": "Monsoon & farm",
-    "headline": "Black Sea wheat exports collapse as attacks escalate; two ships hit near Bulgaria, 11 missing",
-    "confidence": "medium"
-   },
-   {
-    "id": "yemen-strikes",
-    "date": "2026-10-13",
-    "theme": "Energy & geopolitics",
-    "headline": "Saudi-led coalition strikes oil facilities near Sanaa as the Red Sea war escalates",
-    "confidence": "low"
-   },
-   {
-    "id": "energy-truce",
-    "date": "2026-10-13",
-    "theme": "Energy & geopolitics",
-    "headline": "Ukraine says it has not struck Russian refineries for two days under the US energy ceasefire",
-    "confidence": "low"
-   }
-  ]
- },
- {
   "day": "2026-10-15",
   "model": "Claude daily routine",
   "items": [
@@ -1011,6 +935,124 @@
     "theme": "Trade",
     "headline": "Suez Canal records its highest monthly ship tonnage since December 2023",
     "confidence": "low"
+   }
+  ]
+ },
+ {
+  "day": "2026-10-28",
+  "model": "Keyword rules (no AI)",
+  "items": [
+   {
+    "id": "tariffs-down-india",
+    "date": "2026-10-28",
+    "theme": "Trade",
+    "headline": "India to emerge as major exporter to China, ASEAN, get edge in US trade pact, says Piyush Goyal",
+    "confidence": "high"
+   },
+   {
+    "id": "chokepoints-up",
+    "date": "2026-10-27",
+    "theme": "Energy & geopolitics",
+    "headline": "Iran claims oil tanker hit mine in Strait of Hormuz, two days after US declared waterway clear",
+    "confidence": "high"
+   },
+   {
+    "id": "rates-up-us",
+    "date": "2026-10-28",
+    "theme": "Monetary policy",
+    "headline": "Fed rate hikes are coming, but not this week: CNBC survey",
+    "confidence": "high"
+   },
+   {
+    "id": "fx-rupee-strong",
+    "date": "2026-10-28",
+    "theme": "Currencies",
+    "headline": "Rupee rises 4 paise to 95.03 against US dollar in early trade; markets eye Federal Reserve policy announcement",
+    "confidence": "medium"
+   },
+   {
+    "id": "oil-up",
+    "date": "2026-10-28",
+    "theme": "Commodities",
+    "headline": "OPEC Sees No Peak Oil Demand as Energy Security Beats Climate",
+    "confidence": "medium"
+   },
+   {
+    "id": "monsoon-down",
+    "date": "2026-10-28",
+    "theme": "Monsoon & farm",
+    "headline": "Weakest monsoon in over a decade: Why the worst drought impacts may lie ahead",
+    "confidence": "high"
+   },
+   {
+    "id": "growth-up-india",
+    "date": "2026-10-27",
+    "theme": "Growth data",
+    "headline": "Bangladesh to top India in GDP per capita in 2026: IMF",
+    "confidence": "high"
+   },
+   {
+    "id": "fpi-down",
+    "date": "2026-10-28",
+    "theme": "Foreign flows",
+    "headline": "Sensex falls nearly 700 points as rising crude prices, FPI outflows weigh on markets",
+    "confidence": "medium"
+   },
+   {
+    "id": "metals-up",
+    "date": "2026-10-28",
+    "theme": "Commodities",
+    "headline": "Steel prices: Rebar extends rally while domestic flat-long spread turns negative",
+    "confidence": "medium"
+   },
+   {
+    "id": "tariffs-down-global",
+    "date": "2026-10-27",
+    "theme": "Trade",
+    "headline": "Business News | Chile Trade Deal Nearing Conclusion; Canada Negotiations Gaining Pace: Piyush Goyal",
+    "confidence": "low"
+   },
+   {
+    "id": "fx-dollar-strong",
+    "date": "2026-10-28",
+    "theme": "Currencies",
+    "headline": "United States Dollar Index strengthens to near 102.50, Fed rate decision looms",
+    "confidence": "medium"
+   },
+   {
+    "id": "yields-up-us",
+    "date": "2026-10-28",
+    "theme": "Rates & bonds",
+    "headline": "French Bond Yields Hit Multiyear Highs, U.S. Treasury Yields Edge Higher",
+    "confidence": "low"
+   },
+   {
+    "id": "inflation-up-india",
+    "date": "2026-10-27",
+    "theme": "Growth data",
+    "headline": "India risks energy crisis, inflation surge if Russian oil imports stop abruptly, warns Shringla",
+    "confidence": "low"
+   },
+   {
+    "id": "gold-up",
+    "date": "2026-10-28",
+    "theme": "Commodities",
+    "headline": "Gold Steadies Above $4,000 With Fed Rate Decision in Focus",
+    "confidence": "medium"
+   },
+   {
+    "id": "stimulus-up-india",
+    "date": "2026-10-27",
+    "theme": "Fiscal",
+    "headline": "Centre Weighs LTCG Tax Cut To Attract Foreign Investors Amid Heavy FPI Outflows",
+    "confidence": "medium"
+   },
+   {
+    "id": "sanctions-down",
+    "date": "2026-10-28",
+    "theme": "Energy & geopolitics",
+    "headline": "US Ramps Up LNG Exports Amid Temporary Russia Sanctions Relief",
+    "confidence": "medium"
    }
   ]
  }
