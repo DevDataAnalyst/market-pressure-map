@@ -1,4 +1,6 @@
 # Market Pressure Map
+https://market-pressure-map.vercel.app/
+<img width="884" height="966" alt="image" src="https://github.com/user-attachments/assets/16a19a45-dd7d-42d2-8097-7e17ff6bc496" />
 
 Where the last 24 hours of news push Indian markets: tailwind or headwind, how hard, and why. Indian news comes first; foreign news is included only when it reaches Indian markets (oil and gas, US rates and the dollar, trade, metal and food prices, foreign investor flows). Refreshed daily for free.
 
