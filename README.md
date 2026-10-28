@@ -1,4 +1,4 @@
-# Market Pressure Map
+# What is this App all about and why you should care, I mean just look at it
 https://market-pressure-map.vercel.app/
 <img width="884" height="966" alt="image" src="https://github.com/user-attachments/assets/16a19a45-dd7d-42d2-8097-7e17ff6bc496" />
 
