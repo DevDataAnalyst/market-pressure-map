@@ -1,6 +1,6 @@
 {
  "updatedAt": "2026-10-29T05:44:12.188Z",
- "assessedAt": "2026-10-29T05:44:28.859Z",
+ "assessedAt": "2026-10-29T05:45:34.110Z",
  "sources": [
   {
    "name": "UN News",
@@ -141,24 +141,18 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Trump Weighs Lifting Russia Fund Sanctions As Diesel Tankers Head To U.S. | Report",
-    "risk": "high",
-    "note": "Keyword rules read this as easing energy sanctions.",
+    "headline": "US weighs lifting Russia fund sanctions as diesel tankers head to US",
+    "risk": "watch",
+    "note": "Could ease Russian oil trade frictions.",
     "industries": [
      {
       "id": "energy",
       "score": 1,
-      "why": "Wider access to discounted crude"
+      "why": "Easier Russian trade"
      }
     ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": 1,
-      "why": "Cheaper crude imports"
-     }
-    ],
-    "at": "2026-10-29T05:44:28.859Z"
+    "economies": [],
+    "at": "2026-10-29T05:45:34.110Z"
    }
   },
   {
@@ -201,7 +195,21 @@
      "source": "Devdiscourse",
      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNdzdieUJWWGhtblQ0TUpiSWJ0dG1yeG1LVHd6eHoySXVNWk91Ym1sckhOQjAtclFjeWRSLWFIaFNTM2lkYmhkclVrQlItRFc1UUVrSnU5bUtWZlJaMWYxOHJ0Wkw1dlN6ZGZoR2RzYjd1aEROMktZaVRVYkVWdzRDMjdRV1dtNjdPSDR1M0F5VExDZXphRm5YVFE5enFDNWE1aDdvTFJ1bmFFbENpbXFaWk1WSGNRdlJpWUlfaU8xcU1qUEFHQlp2ZGxWSTdDcTVlTW130gHTAUFVX3lxTE13N2J5QlZYaG1uVDRNSmJJYnR0bXJ4bUtUd3p4ejJJdU1aT3VibWxySE5CMC1yUWN5ZFItYUhoU1MzaWRiaGRyVWtCUi1EVzVRRWtKdTltS1ZmUloxZjE4cnRaTDV2U3pkZmhHZHNiN3VoRE4yS1lpVFViRVZ3NEMyN1FXV202N09INHUzQXlUTENlemFGblhUUTl6cUM1YTVoN29MUnVuYUVsQ2ltcVpaTVZIY1F2UmlZSV9pTzFxTWpQQUdCWnZkbFZJN0NxNWVNbXc?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "US president repeats claim of ending India–Pakistan conflict with 250% tariff threat",
+    "risk": "elevated",
+    "note": "Trade rhetoric risk.",
+    "industries": [],
+    "economies": [
+     {
+      "id": "growth",
+      "score": -1,
+      "why": "Tariff rhetoric"
+     }
+    ],
+    "at": "2026-10-29T05:45:34.110Z"
+   }
   },
   {
    "id": "pakistan-s-gas-mess-lpg-prices-soar-imported-lng-piles-up-an",
@@ -260,7 +268,21 @@
    "severity": "high",
    "severityScore": 6,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Iran talks could ease Hormuz risk and feedstock costs for India's chemicals",
+    "risk": "elevated",
+    "note": "Relief if talks succeed.",
+    "industries": [
+     {
+      "id": "materials",
+      "score": 1,
+      "why": "Feedstock relief"
+     }
+    ],
+    "economies": [],
+    "at": "2026-10-29T05:45:34.110Z"
+   }
   },
   {
    "id": "bangladesh-moves-to-cut-tariffs-for-long-delayed-solar-proje",
@@ -341,7 +363,15 @@
      "source": "TURDEF",
      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNZlMzNFh1YWZlQ3dYTjF5LW1UQ1dJOGs3YjRId3BaMnNEbzlvVzF5QUdaX0JnZjk2Y2Y4aHVwRWFQc1kzcHFUUHJKQ3hTLUstYUN3c1hNaE9JWEdLZTRyb0VuNFFFQ3E1VjQ0LTFUTjVzY3p5LW41TFU5cEM5U2E2RGFoOGhoakQwWkZNUmlObkNiSk5rWElwVEMwbUE?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "Black Sea talks agree coordination; Türkiye keeps straits shut to warships",
+    "risk": "watch",
+    "note": "Possible easing.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-29T05:45:34.110Z"
+   }
   },
   {
    "id": "new-report-of-attack-on-strait-of-hormuz-shipping-fans-fears",
@@ -373,54 +403,24 @@
    "reports": 2,
    "also": [],
    "assessment": {
-    "headline": "New Report of Attack on Strait of Hormuz Shipping Fans fears of Threats to Oil Supplies",
+    "headline": "New report of attack on Hormuz shipping",
     "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "note": "Keeps risk premium.",
     "industries": [
      {
       "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
       "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
+      "why": "Insurance"
      }
     ],
     "economies": [
      {
       "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
-      "id": "inflation",
       "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
+      "why": "Oil bill"
      }
     ],
-    "at": "2026-10-29T05:44:28.859Z"
+    "at": "2026-10-29T05:45:34.110Z"
    }
   },
   {
@@ -447,7 +447,27 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "India expects record 2.8 million tonnes of LNG imports in October",
+    "risk": "elevated",
+    "note": "Strong gas demand at high prices.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": 1,
+      "why": "Gas volumes"
+     }
+    ],
+    "economies": [
+     {
+      "id": "fiscal",
+      "score": -1,
+      "why": "Import bill"
+     }
+    ],
+    "at": "2026-10-29T05:45:34.110Z"
+   }
   },
   {
    "id": "india-s-record-lng-buying-meets-record-high-prices",
@@ -473,7 +493,27 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "India's record LNG buying meets record-high prices",
+    "risk": "elevated",
+    "note": "Costly imports.",
+    "industries": [
+     {
+      "id": "agrifood",
+      "score": -1,
+      "why": "Fertiliser feedstock cost"
+     }
+    ],
+    "economies": [
+     {
+      "id": "fiscal",
+      "score": -1,
+      "why": "Import bill"
+     }
+    ],
+    "at": "2026-10-29T05:45:34.110Z"
+   }
   },
   {
    "id": "india-sees-qatar-lng-supply-cut-after-iran-strike-energy-new",
@@ -502,7 +542,21 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "India sees Qatar LNG supply cut after Iran strike",
+    "risk": "elevated",
+    "note": "Gas supply risk.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": -1,
+      "why": "Gas supply"
+     }
+    ],
+    "economies": [],
+    "at": "2026-10-29T05:45:34.110Z"
+   }
   },
   {
    "id": "impossible-to-block-these-transactions-putin-touts-russia-s-",
@@ -583,7 +637,27 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "India seeks cheaper US energy, expects Russian oil waiver to continue",
+    "risk": "elevated",
+    "note": "Lowers tariff risk.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": 1,
+      "why": "Sourcing options"
+     }
+    ],
+    "economies": [
+     {
+      "id": "growth",
+      "score": 1,
+      "why": "Less tariff risk"
+     }
+    ],
+    "at": "2026-10-29T05:45:34.110Z"
+   }
   },
   {
    "id": "gail-india-to-invest-63-million-in-heating-unit-at-ratnagiri",
@@ -635,7 +709,7 @@
      }
     ],
     "economies": [],
-    "at": "2026-10-28T05:46:36.046Z"
+    "at": "2026-10-29T05:45:34.110Z"
    }
   },
   {
@@ -832,54 +906,18 @@
     }
    ],
    "assessment": {
-    "headline": "Sea drones cripple containership off Bulgaria as Black Sea attacks escalate",
+    "headline": "Sea drones cripple a container ship off Bulgaria as Black Sea attacks escalate",
     "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "note": "Grain and freight risk.",
     "industries": [
      {
-      "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
+      "id": "agrifood",
       "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
+      "why": "Grain routes"
      }
     ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
-      "id": "inflation",
-      "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
-     }
-    ],
-    "at": "2026-10-29T05:44:28.859Z"
+    "economies": [],
+    "at": "2026-10-29T05:45:34.110Z"
    }
   },
   {
@@ -985,7 +1023,15 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Ex-diplomat says India halted Iranian and Venezuelan oil under US pressure",
+    "risk": "watch",
+    "note": "Background.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-29T05:45:34.110Z"
+   }
   },
   {
    "id": "black-sea-drones-ww3-fears-soar-as-ship-attacked-off-bulgari",
@@ -1100,44 +1146,24 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "100% tariffs on Chinese and Indian furniture imports paused as US suspends Russia sanctions measures",
+    "headline": "US pauses 100% tariffs on Indian and Chinese furniture",
     "risk": "elevated",
-    "note": "Keyword rules read this as trade deal or tariff relief for India (India).",
+    "note": "Relief for exporters.",
     "industries": [
      {
-      "id": "industrials",
+      "id": "consumer",
       "score": 1,
-      "why": "Engineering exports gain access"
-     },
-     {
-      "id": "autos",
-      "score": 1,
-      "why": "Auto-parts exports gain"
-     },
-     {
-      "id": "agrifood",
-      "score": 1,
-      "why": "Farm exports gain access"
+      "why": "Furniture exports"
      }
     ],
     "economies": [
      {
       "id": "growth",
       "score": 1,
-      "why": "Exports pick up"
-     },
-     {
-      "id": "rupee",
-      "score": 1,
-      "why": "Better export earnings"
-     },
-     {
-      "id": "equities",
-      "score": 1,
-      "why": "Exporters re-rated"
+      "why": "Export relief"
      }
     ],
-    "at": "2026-10-29T05:44:28.859Z"
+    "at": "2026-10-29T05:45:34.110Z"
    }
   },
   {
@@ -1193,7 +1219,32 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Crude surges after strike on a Saudi refinery",
+    "risk": "high",
+    "note": "Supply risk.",
+    "industries": [
+     {
+      "id": "transport",
+      "score": -1,
+      "why": "Fuel costs"
+     }
+    ],
+    "economies": [
+     {
+      "id": "fiscal",
+      "score": -1,
+      "why": "Oil bill"
+     },
+     {
+      "id": "inflation",
+      "score": -1,
+      "why": "Fuel"
+     }
+    ],
+    "at": "2026-10-29T05:45:34.110Z"
+   }
   },
   {
    "id": "kazakhstan-military-drill-falsely-linked-to-india-china-bord",
@@ -1249,7 +1300,15 @@
    "severity": "elevated",
    "severityScore": 4,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Türkiye seeks diplomatic solutions on Hormuz and Yemen",
+    "risk": "watch",
+    "note": "Mediation.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-29T05:45:34.110Z"
+   }
   },
   {
    "id": "turkey-threatens-legal-action-over-attacks-on-its-ships-in-b",
@@ -1363,54 +1422,18 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Strait of Hormuz Watch: Vessel Attacks Persist",
+    "headline": "Hormuz vessel attacks persist",
     "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "note": "Freight risk.",
     "industries": [
      {
       "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
       "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
+      "why": "Insurance"
      }
     ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
-      "id": "inflation",
-      "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
-     }
-    ],
-    "at": "2026-10-29T05:44:28.859Z"
+    "economies": [],
+    "at": "2026-10-29T05:45:34.110Z"
    }
   },
   {
@@ -1465,7 +1488,15 @@
    "severity": "elevated",
    "severityScore": 4,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Reports question an India–China troop face-off in Arunachal",
+    "risk": "watch",
+    "note": "Unconfirmed.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-29T05:45:34.110Z"
+   }
   },
   {
    "id": "red-sea-insecurity-highlights-eritrea-s-strategic-value",
@@ -1491,7 +1522,21 @@
    "severity": "elevated",
    "severityScore": 4,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Red Sea insecurity continues",
+    "risk": "watch",
+    "note": "Freight risk.",
+    "industries": [
+     {
+      "id": "transport",
+      "score": -1,
+      "why": "Route costs"
+     }
+    ],
+    "economies": [],
+    "at": "2026-10-29T05:45:34.110Z"
+   }
   },
   {
    "id": "us-and-japan-long-alarmed-by-china-s-aggression-agree-to-est",
