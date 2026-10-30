@@ -1,6 +1,6 @@
 {
  "updatedAt": "2026-10-30T05:44:01.493Z",
- "assessedAt": "2026-10-30T05:44:15.689Z",
+ "assessedAt": "2026-10-30T05:45:35.903Z",
  "sources": [
   {
    "name": "UN News",
@@ -141,54 +141,12 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Iran uses secret global network to evade US blockade, western sanctions: Report",
-    "risk": "high",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
-    "industries": [
-     {
-      "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
-      "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
-     }
-    ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
-      "id": "inflation",
-      "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
-     }
-    ],
-    "at": "2026-10-30T05:44:15.689Z"
+    "headline": "Iran uses a global network to evade the US blockade",
+    "risk": "watch",
+    "note": "Sanctions enforcement background.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-30T05:45:35.903Z"
    }
   },
   {
@@ -231,7 +189,7 @@
      }
     ],
     "economies": [],
-    "at": "2026-10-29T05:45:34.110Z"
+    "at": "2026-10-30T05:45:35.903Z"
    }
   },
   {
@@ -266,7 +224,21 @@
      "source": "India Today",
      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNbTlEMTAtMlhObG81bnozOGI4NFV4LTJwMThhSEtXUHIwVXc5cThvMFRjZ0hraUNMNlYwTXpsSkUxTGJkZE4xWEtZdGlnVHVvYVNnYWRrbmVKZlVialNxaW1BM0QtaDNZZjNGSEgtS3VrNldVcTYxaWk1Rk91cFFJRXloTjNPZU1peGtxZExWRGptbzd6V18wZ3V6S0Rmbll4aHBtT0xMWDdPb1I4alo3ajBPdWROdFhaSm5wWjRJME1HZGU5REw0SXNZTdIBywFBVV95cUxNbTlEMTAtMlhObG81bnozOGI4NFV4LTJwMThhSEtXUHIwVXc5cThvMFRjZ0hraUNMNlYwTXpsSkUxTGJkZE4xWEtZdGlnVHVvYVNnYWRrbmVKZlVialNxaW1BM0QtaDNZZjNGSEgtS3VrNldVcTYxaWk1Rk91cFFJRXloTjNPZU1peGtxZExWRGptbzd6V18wZ3V6S0Rmbll4aHBtT0xMWDdPb1I4alo3ajBPdWROdFhaSm5wWjRJME1HZGU5REw0SXNZTQ?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "Ukraine pauses strikes on Russian refineries",
+    "risk": "elevated",
+    "note": "Eases fuel supply risk.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": 1,
+      "why": "Product supply"
+     }
+    ],
+    "economies": [],
+    "at": "2026-10-30T05:45:35.903Z"
+   }
   },
   {
    "id": "shipping-slows-after-iran-says-it-has-again-shut-the-strait-",
@@ -304,7 +276,27 @@
      "source": "Bol News",
      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOazNBR2NrUDA1NG14eXdLbU93SE95c0dxcUQ0SXlJZEh3MVNQU3VFVjRqM2FBWGI3RUx3Y3hLUERlT1E1N0xVVEt6dWhBeVdGek4xeUZGT18zYnJnMmt1Nm80U1MtZ25NcExweWtxM1hYX19YeV95dXlYT1Z1SXFqeWhER01jT0dXVEVGS21SeEkxNklmR1ZQT3dHQlBXTmNmcDVPMnd3bWo0eXc?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "Shipping slows after Iran again shuts Hormuz",
+    "risk": "high",
+    "note": "Supply shock risk.",
+    "industries": [
+     {
+      "id": "transport",
+      "score": -2,
+      "why": "Route closed"
+     }
+    ],
+    "economies": [
+     {
+      "id": "fiscal",
+      "score": -2,
+      "why": "Oil bill"
+     }
+    ],
+    "at": "2026-10-30T05:45:35.903Z"
+   }
   },
   {
    "id": "iran-declares-strait-of-hormuz-closed-after-oil-tanker-catch",
@@ -346,54 +338,24 @@
     }
    ],
    "assessment": {
-    "headline": "Iran Declares Strait of Hormuz Closed After Oil Tanker Catches Fire in Naval Mine Strike",
+    "headline": "Iran declares Hormuz closed after tanker mine strike",
     "risk": "high",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "note": "Escalation.",
     "industries": [
-     {
-      "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
      {
       "id": "energy",
       "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
+      "why": "Supply risk"
      }
     ],
     "economies": [
      {
-      "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
       "id": "inflation",
       "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
+      "why": "Fuel"
      }
     ],
-    "at": "2026-10-30T05:44:15.689Z"
+    "at": "2026-10-30T05:45:35.903Z"
    }
   },
   {
@@ -423,7 +385,21 @@
    "severity": "high",
    "severityScore": 6,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "22 Indians, including 14 seafarers, killed in the war, says external ministry",
+    "risk": "elevated",
+    "note": "Crew safety risk for Indian shipping.",
+    "industries": [
+     {
+      "id": "transport",
+      "score": -1,
+      "why": "Crew risk"
+     }
+    ],
+    "economies": [],
+    "at": "2026-10-30T05:45:35.903Z"
+   }
   },
   {
    "id": "13-killed-as-russian-drone-strikes-ukraine-railway-station-z",
@@ -499,54 +475,18 @@
     }
    ],
    "assessment": {
-    "headline": "US-Israel-Iran War Latest News: Ship Catches Fire Near Oman After Apparent Attack in Strait of Hormuz; UKMTO Says Crew Status Unknown as Iran Keeps Waterway Clo",
-    "risk": "high",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "headline": "Ship catches fire near Oman amid war",
+    "risk": "elevated",
+    "note": "Shipping risk.",
     "industries": [
      {
       "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
       "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
+      "why": "Insurance"
      }
     ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
-      "id": "inflation",
-      "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
-     }
-    ],
-    "at": "2026-10-30T05:44:15.689Z"
+    "economies": [],
+    "at": "2026-10-30T05:45:35.903Z"
    }
   },
   {
@@ -699,54 +639,24 @@
     }
    ],
    "assessment": {
-    "headline": "Tankers hit by unknown projectiles in Strait of Hormuz as ship attacks escalate",
-    "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "headline": "Tankers hit by projectiles in Hormuz as attacks escalate",
+    "risk": "high",
+    "note": "Risk premium.",
     "industries": [
      {
       "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
       "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
+      "why": "Insurance"
      }
     ],
     "economies": [
      {
       "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
-      "id": "inflation",
       "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
+      "why": "Oil bill"
      }
     ],
-    "at": "2026-10-30T05:44:15.689Z"
+    "at": "2026-10-30T05:45:35.903Z"
    }
   },
   {
@@ -780,16 +690,16 @@
    "assessment": {
     "headline": "India sees Qatar LNG supply cut after Iran strike",
     "risk": "elevated",
-    "note": "Gas supply risk.",
+    "note": "Older; supply now recovering.",
     "industries": [
      {
       "id": "energy",
       "score": -1,
-      "why": "Gas supply"
+      "why": "Gas risk"
      }
     ],
     "economies": [],
-    "at": "2026-10-29T05:45:34.110Z"
+    "at": "2026-10-30T05:45:35.903Z"
    }
   },
   {
@@ -820,54 +730,24 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Black Sea Shipping Blockade Squeezes Wheat Importers in Middle East and Africa",
+    "headline": "Black Sea blockade squeezes wheat importers",
     "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "note": "World grain prices.",
     "industries": [
      {
-      "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
+      "id": "agrifood",
       "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
+      "why": "Grain prices"
      }
     ],
     "economies": [
      {
-      "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
       "id": "inflation",
       "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
+      "why": "Food prices"
      }
     ],
-    "at": "2026-10-30T05:44:15.689Z"
+    "at": "2026-10-30T05:45:35.903Z"
    }
   },
   {
@@ -987,54 +867,18 @@
     }
    ],
    "assessment": {
-    "headline": "Greek Containership Sunk by Naval Drones Off Bulgaria as Black Sea Attacks Escalate",
+    "headline": "Container ship sunk by naval drones off Bulgaria",
     "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "note": "Black Sea freight risk.",
     "industries": [
      {
       "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
       "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
+      "why": "Freight risk"
      }
     ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
-      "id": "inflation",
-      "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
-     }
-    ],
-    "at": "2026-10-30T05:44:15.689Z"
+    "economies": [],
+    "at": "2026-10-30T05:45:35.903Z"
    }
   },
   {
@@ -1155,7 +999,21 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Sudden halt to Russian oil would test Indian refiners",
+    "risk": "elevated",
+    "note": "Supply diversification risk.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": -1,
+      "why": "Supply security"
+     }
+    ],
+    "economies": [],
+    "at": "2026-10-30T05:45:35.903Z"
+   }
   },
   {
    "id": "trump-eases-russia-sanctions-for-diesel-deal-as-obama-accuse",
@@ -1186,24 +1044,12 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Trump Eases Russia Sanctions For Diesel Deal As Obama Accuses Him Of Handing Putin A Lifeline",
-    "risk": "elevated",
-    "note": "Keyword rules read this as easing energy sanctions.",
-    "industries": [
-     {
-      "id": "energy",
-      "score": 1,
-      "why": "Wider access to discounted crude"
-     }
-    ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": 1,
-      "why": "Cheaper crude imports"
-     }
-    ],
-    "at": "2026-10-30T05:44:15.689Z"
+    "headline": "US eases Russia sanctions for a diesel deal",
+    "risk": "watch",
+    "note": "Product market shift.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-30T05:45:35.903Z"
    }
   },
   {
@@ -1234,44 +1080,24 @@
    "reports": 3,
    "also": [],
    "assessment": {
-    "headline": "‘Strong comparative advantage for India, people will celebrate’: Piyush Goyal on US trade deal",
+    "headline": "Commerce minister hails US trade deal advantages",
     "risk": "elevated",
-    "note": "Keyword rules read this as trade deal or tariff relief for India (India).",
+    "note": "Positive trade signal.",
     "industries": [
      {
-      "id": "industrials",
+      "id": "consumer",
       "score": 1,
-      "why": "Engineering exports gain access"
-     },
-     {
-      "id": "autos",
-      "score": 1,
-      "why": "Auto-parts exports gain"
-     },
-     {
-      "id": "agrifood",
-      "score": 1,
-      "why": "Farm exports gain access"
+      "why": "Export access"
      }
     ],
     "economies": [
      {
       "id": "growth",
       "score": 1,
-      "why": "Exports pick up"
-     },
-     {
-      "id": "rupee",
-      "score": 1,
-      "why": "Better export earnings"
-     },
-     {
-      "id": "equities",
-      "score": 1,
-      "why": "Exporters re-rated"
+      "why": "Trade"
      }
     ],
-    "at": "2026-10-30T05:44:15.689Z"
+    "at": "2026-10-30T05:45:35.903Z"
    }
   },
   {
@@ -1424,7 +1250,21 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Iran's Guard blames mines for tanker blasts",
+    "risk": "elevated",
+    "note": "Disputed lanes.",
+    "industries": [
+     {
+      "id": "transport",
+      "score": -1,
+      "why": "Insurance"
+     }
+    ],
+    "economies": [],
+    "at": "2026-10-30T05:45:35.903Z"
+   }
   },
   {
    "id": "how-a-houthi-blockade-in-the-red-sea-tightens-iran-s-grip-on",
@@ -1451,7 +1291,21 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Houthi Red Sea blockade tightens energy supply",
+    "risk": "elevated",
+    "note": "Freight risk.",
+    "industries": [
+     {
+      "id": "transport",
+      "score": -1,
+      "why": "Route risk"
+     }
+    ],
+    "economies": [],
+    "at": "2026-10-30T05:45:35.903Z"
+   }
   },
   {
    "id": "did-india-and-china-troops-exchange-fire-in-arunachal-no-thi",
@@ -1480,7 +1334,15 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Fact check denies India–China exchange of fire in Arunachal",
+    "risk": "watch",
+    "note": "Rumour.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-10-30T05:45:35.903Z"
+   }
   },
   {
    "id": "russia-ukraine-naval-free-fire-zone-turns-the-black-sea-into",
@@ -1541,7 +1403,21 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "India's Qatar LNG imports up nearly 370% in October",
+    "risk": "elevated",
+    "note": "Gas supply recovers.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": 1,
+      "why": "Gas supply"
+     }
+    ],
+    "economies": [],
+    "at": "2026-10-30T05:45:35.903Z"
+   }
   },
   {
    "id": "indian-envoy-urges-review-of-un-sanctions-on-afghanistan",
@@ -1642,54 +1518,18 @@
     }
    ],
    "assessment": {
-    "headline": "Iran Says Four Tankers Struck Mines in Strait of Hormuz on Route U.S. Calls Mine-Free",
+    "headline": "Iran says four tankers struck mines in Hormuz",
     "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "note": "Escalation.",
     "industries": [
      {
       "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
       "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
+      "why": "Insurance"
      }
     ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
-      "id": "inflation",
-      "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
-     }
-    ],
-    "at": "2026-10-30T05:44:15.689Z"
+    "economies": [],
+    "at": "2026-10-30T05:45:35.903Z"
    }
   },
   {
