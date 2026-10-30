@@ -1,74 +1,5 @@
 [
  {
-  "day": "2026-10-16",
-  "model": "Claude daily routine",
-  "items": [
-   {
-    "id": "rally-1534",
-    "date": "2026-10-15",
-    "theme": "Commodities",
-    "headline": "Sensex surges 1,534 points to 74,315.61 and Nifty 1.66% to 22,997.35 as crude dips",
-    "confidence": "high"
-   },
-   {
-    "id": "trade-sept",
-    "date": "2026-10-15",
-    "theme": "Trade",
-    "headline": "September exports jump 23% to $44.4 billion; goods trade deficit at $30.21 billion",
-    "confidence": "high"
-   },
-   {
-    "id": "fpi-15",
-    "date": "2026-10-15",
-    "theme": "Foreign flows",
-    "headline": "Foreign investors sell ₹5,285 crore, a 15th straight session; domestic funds buy ₹3,319 crore",
-    "confidence": "medium"
-   },
-   {
-    "id": "bond-739",
-    "date": "2026-10-15",
-    "theme": "Rates & bonds",
-    "headline": "10-year G-Sec yield eases slightly to 7.39% as US Treasury yields fall",
-    "confidence": "medium"
-   },
-   {
-    "id": "hormuz-flows",
-    "date": "2026-10-15",
-    "theme": "Energy & geopolitics",
-    "headline": "Brent settles at $105.92 as Hormuz oil flows unexpectedly rise despite attacks",
-    "confidence": "medium"
-   },
-   {
-    "id": "energy-truce-ends",
-    "date": "2026-10-16",
-    "theme": "Energy & geopolitics",
-    "headline": "Ukraine ends the energy truce and strikes a Russian refinery, putting it at odds with the US",
-    "confidence": "medium"
-   },
-   {
-    "id": "black-sea-deaths",
-    "date": "2026-10-15",
-    "theme": "Monsoon & farm",
-    "headline": "Attacks on four Black Sea merchant ships kill 8; Romania blames Russia",
-    "confidence": "medium"
-   },
-   {
-    "id": "russia-tariff-decision",
-    "date": "2026-10-15",
-    "theme": "Trade",
-    "headline": "US to decide within days on Russian oil tariffs that could hit India; sanctions law deadline nears",
-    "confidence": "low"
-   },
-   {
-    "id": "shadow-fleet-easing",
-    "date": "2026-10-15",
-    "theme": "Commodities",
-    "headline": "US weighs easing sanctions on shadow-fleet tankers as freight rates soar",
-    "confidence": "low"
-   }
-  ]
- },
- {
   "day": "2026-10-17",
   "model": "Claude daily routine",
   "items": [
@@ -997,6 +928,124 @@
     "theme": "Fiscal",
     "headline": "SEBI member calls for more guardrails in derivatives trading to protect retail investors",
     "confidence": "low"
+   }
+  ]
+ },
+ {
+  "day": "2026-10-30",
+  "model": "Keyword rules (no AI)",
+  "items": [
+   {
+    "id": "tariffs-down-india",
+    "date": "2026-10-30",
+    "theme": "Trade",
+    "headline": "EU chief confirms PM Modi’s December visit to sign India-EU trade deal",
+    "confidence": "high"
+   },
+   {
+    "id": "rates-up-us",
+    "date": "2026-10-30",
+    "theme": "Monetary policy",
+    "headline": "Fed rate hold offers little comfort to Indian markets as two members seek a hike",
+    "confidence": "high"
+   },
+   {
+    "id": "chokepoints-up",
+    "date": "2026-10-30",
+    "theme": "Energy & geopolitics",
+    "headline": "In the Black Sea! Turkish Army Retains Right to Respond to Attacks on Ships ᐉ News from Fakti.bg - World",
+    "confidence": "medium"
+   },
+   {
+    "id": "oil-up",
+    "date": "2026-10-30",
+    "theme": "Commodities",
+    "headline": "OPEC Sees No Peak Oil Demand as Energy Security Beats Climate",
+    "confidence": "high"
+   },
+   {
+    "id": "fx-rupee-strong",
+    "date": "2026-10-30",
+    "theme": "Currencies",
+    "headline": "RBI Likely Intervenes to Support Rupee as High Oil Prices Weigh",
+    "confidence": "medium"
+   },
+   {
+    "id": "growth-up-india",
+    "date": "2026-10-29",
+    "theme": "Growth data",
+    "headline": "India’s economy could grow 7.35% in Q2 FY27: What Finance Ministry model estimates",
+    "confidence": "high"
+   },
+   {
+    "id": "rates-up-india",
+    "date": "2026-10-29",
+    "theme": "Monetary policy",
+    "headline": "Rate hike’s inflation success depends on RBI liquidity steps: Finance Ministry",
+    "confidence": "medium"
+   },
+   {
+    "id": "fpi-down",
+    "date": "2026-10-30",
+    "theme": "Foreign flows",
+    "headline": "US Fed rate pause, slower FPI selling lift sensex by 905 pts",
+    "confidence": "low"
+   },
+   {
+    "id": "gold-down",
+    "date": "2026-10-30",
+    "theme": "Commodities",
+    "headline": "Gold slips as higher oil, US inflation data bolster Fed hike bets",
+    "confidence": "high"
+   },
+   {
+    "id": "inflation-up-us",
+    "date": "2026-10-29",
+    "theme": "Growth data",
+    "headline": "US inflation rises to 3.6% in September, strengthening bets on Fed rate hike in December | Hindustan Times",
+    "confidence": "high"
+   },
+   {
+    "id": "monsoon-down",
+    "date": "2026-10-30",
+    "theme": "Monsoon & farm",
+    "headline": "Rajasthan records rainfall deficit of over 20%, worst in 16 years",
+    "confidence": "low"
+   },
+   {
+    "id": "yields-down-us",
+    "date": "2026-10-30",
+    "theme": "Rates & bonds",
+    "headline": "Bulls return as Fed rate pause, dip in US yields lift sentiment",
+    "confidence": "low"
+   },
+   {
+    "id": "fx-dollar-weak",
+    "date": "2026-10-30",
+    "theme": "Currencies",
+    "headline": "Dollar Tracks Treasury Yields Lower",
+    "confidence": "low"
+   },
+   {
+    "id": "yields-up-india",
+    "date": "2026-10-29",
+    "theme": "Rates & bonds",
+    "headline": "Indian bonds track US Treasuries higher amid oil-price relief",
+    "confidence": "medium"
+   },
+   {
+    "id": "food-up-india",
+    "date": "2026-10-29",
+    "theme": "Commodities",
+    "headline": "Onion prices surge 108% as food inflation bites harder in rural India",
+    "confidence": "medium"
+   },
+   {
+    "id": "inflation-up-india",
+    "date": "2026-10-29",
+    "theme": "Growth data",
+    "headline": "India’s inflation risks rise as crude oil, shipping costs threaten to push up prices",
+    "confidence": "medium"
    }
   ]
  }
