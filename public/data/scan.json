@@ -1,689 +1,293 @@
 {
- "scannedAt": "2026-11-02T05:43:45.453Z",
+ "scannedAt": "2026-11-02T05:45:03.136Z",
  "window": "1 Nov – 2 Nov 2026",
- "model": "Keyword rules (no AI)",
- "headlinesScanned": 423,
- "feedsOk": 15,
+ "model": "Claude daily routine",
+ "headlinesScanned": null,
+ "feedsOk": null,
  "items": [
   {
-   "id": "chokepoints-up",
-   "date": "2026-11-02",
-   "theme": "Energy & geopolitics",
-   "headline": "The Red Sea is one of the world's most important trade routes. A growing Saudi-UAE rivalry and rising threats to shipping are making it an increasingly contested region. #dwgeopolitics",
-   "summary": "Signal: shipping chokepoint disruption. 14 reports from Times Kuwait, The Siasat Daily, Fakti.bg and 11 more. Related: “Iran claims two oil tankers struck mines in Strait of Hormuz as UK issues fresh shipping alert”. Ongoing: also reported on 5 of the previous 7 days (first 26 Oct).",
-   "rationale": "India imports most of its crude and much of its LNG through Hormuz and the Red Sea; disruption lifts oil, freight and insurance costs, widening the import bill and pressuring the rupee.",
-   "horizon": "weeks",
+   "id": "gst-oct",
+   "date": "2026-11-01",
+   "theme": "Fiscal",
+   "headline": "GST collections jump 22.9% to ₹2.31 lakh crore in October, fastest growth in over four years",
+   "summary": "Domestic GST rose 15.8% to ₹1.59 lakh crore and import GST was ₹72,246 crore; net collections rose about 26% to ₹2.03 lakh crore. Fourth straight month above ₹2 lakh crore. Strengthening.",
+   "rationale": "Strong festive consumption and higher import values lift tax revenue, offsetting part of the subsidy-driven widening of the fiscal deficit.",
+   "horizon": "months",
    "confidence": "high",
    "industries": [
-    {
-     "id": "transport",
-     "score": -3,
-     "why": "Freight, insurance and fuel costs rise"
-    },
-    {
-     "id": "energy",
-     "score": -1,
-     "why": "Fuel marketers' margins squeezed"
-    },
-    {
-     "id": "materials",
-     "score": -1,
-     "why": "Crude-linked inputs costlier"
-    },
     {
      "id": "consumer",
-     "score": -1,
-     "why": "Imported inputs costlier"
-    }
-   ],
-   "economies": [
-    {
-     "id": "fiscal",
-     "score": -3,
-     "why": "Oil import bill swells"
-    },
-    {
-     "id": "inflation",
-     "score": -1,
-     "why": "Fuel and freight costs"
-    },
-    {
-     "id": "rupee",
-     "score": -1,
-     "why": "Importers' dollar demand rises"
-    },
-    {
-     "id": "equities",
-     "score": -1,
-     "why": "Risk premium on Indian assets"
-    }
-   ],
-   "sources": [
-    "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQTTVGSXgxTnBEUDJ5RzFvRzhScnVXejFaTlV3MWw4OEpNMEV5aU9laXRtS1doSnY3NGZZc29PTWl1UGZ0VnNwOHlyOTNTUTlWLU1WUDRlUlBQWlE3OVJ5Tm9XUVNOMmw3eGd6UzRzTjQ0eGJrN2lYNm5TOTdnc3FUYUJqTFFyVVdoeU5BdXlkMjdrdmNPTXV3ZGJpd3dXQnc2MXA2aVNFTnBBU3hSTlljNXN0SjNXMDhGeGVjckNwTnI2Nzk4SVZEaHhLUndrXzJHajZOOC1aZjNra3NIdXhaTA?oc=5",
-    "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOZVUzYmNNdkNDV3FyM1dIYTM2blBVM3RKZU1WaUR6bHFpRjEzTDU1WmRub3d0OEhJaHJrcVpJNW4zb2NPQTI3dVl3UTdsN2t0ejk0YWR3RlBOcENuekxkVGxmejhRTHluMGxUUWNDU2RBN1R1SWttbkp4OGhTNEVEa1o1MlA0aG5UVTdDYTlwMmJtUGFiQlBSM2Q3akVoTGkzdndSaHRiZnVFa0lNZVA2NDVMVXFHcW03NzluTWhBSGJpSUlva3h0QktnZkZTSHRQYzFsRVAtQmtsaElhTnE4cmgyWmJmQdIB6wFBVV95cUxPa1c4WGUyQ1NuWnZueFVwNC13b2o1RHRWRndUQUZ4d2Y5ZGNuQnA2UWJtNGtZVGhwQ1lEN1pRZlJKenVnbUpfVV82clJObEpuakl1LWxVNlpHTVoyX3QtY1QzQUhjUVoyTVF4cHU3TU9kVFRrNXBrcDFhdndhQTVibldaQmxCdWE0LXhpZU9yc2p3M3pRQ2QzWkRHYnF5MmYtR1BYNlJIVWdlS0hyYUJWYUhEN2lqNWRZVlZYTnROOTNNb3ZyY05iZF9jYkJzdS1ZdmY2VmJZMjJ2VDlqS2F6UjdPUGlKSXpmTWpV?oc=5",
-    "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPQUI0ZGdoejhmekh1ZjVfYVRTUGdleXNLMGg4ZGM4TkZFRnBxSU8yWEtnX1dHaTBjeDRZXzZHTDFmQUhsMlJZUElueGNReDdYUW5TWUxmQlN6SGN2U3psWmxFdFFVOVlwY3NPS3dxS2xpLXN6cTZJY0t1bmJHUVlCT212ZkNIUjkwa1dXRElibW84cmZGM3ptQlRxSWt2RXdYVmx1MFhCUzJwcUNrZUFqc1F3a2pxUC1YZXJLUEFFNlrSAcABQVVfeXFMT0FCNGRnaHo4ZnpIdWY1X2FUU1BnZXlzSzBoOGRjOE5GRUZwcUlPMlhLZ19XR2kwY3g0WV82R0wxZkFIbDJSWVBJbnhjUXg3WFFuU1lMZkJTekhjdlN6bFpsRXRRVTlZcGNzT0t3cUtsaS1zenE2SWNLdW5iR1FZQk9tdmZDSFI5MGtXV0RJYm1vOHJmRjN6bUJUcUlrdkV3WFZsdTBYQlMycHFDa2VBanNRd2tqcVAtWGVyS1BBRTZa?oc=5"
-   ]
-  },
-  {
-   "id": "fpi-down",
-   "date": "2026-11-02",
-   "theme": "Foreign flows",
-   "headline": "FPIs pull out of G-Secs for third straight month",
-   "summary": "Signal: foreign investor selling. 9 reports from The Financial Express, The Hans India, The Hindu and 6 more. Related: “FPIs Withdraw Rs 34,843 Crore From Indian Equities In October Amid Global Market Uncertainty”. Ongoing: also reported on 5 of the previous 7 days (first 26 Oct).",
-   "rationale": "Foreign portfolio outflows weigh on Indian equities, especially large lenders and index heavyweights, and pressure the rupee.",
-   "horizon": "weeks",
-   "confidence": "high",
-   "industries": [
-    {
-     "id": "financials",
-     "score": -1,
-     "why": "Foreign selling hits large lenders"
-    }
-   ],
-   "economies": [
-    {
-     "id": "flows",
-     "score": -3,
-     "why": "Foreign investors selling"
-    },
-    {
-     "id": "equities",
-     "score": -1,
-     "why": "Index heavyweights under pressure"
-    },
-    {
-     "id": "rupee",
-     "score": -1,
-     "why": "Dollar outflows"
-    }
-   ],
-   "sources": [
-    "https://news.google.com/rss/articles/CBMipAFBVV95cUxPZDA2Y3VpbF83Tkl6eS1GRDh3Sl94WjlMQlRfazZZbFRvOHFxRk1zNEtGWlZwM1lMclR0ZDN4S0ZVMFlGbFZpcDV2Z0o1SktDREpGMUhQcVNUZG9MWV9jN1haMVhTUXpRNzU4RE1LV2puTERJc2NxVlVMb0M2R0Y3TjhhcDV6WVp4d1NzV1VURlFyZWc4UDdoMGVFQmdNOTZrcVVKRdIBpAFBVV95cUxPZDA2Y3VpbF83Tkl6eS1GRDh3Sl94WjlMQlRfazZZbFRvOHFxRk1zNEtGWlZwM1lMclR0ZDN4S0ZVMFlGbFZpcDV2Z0o1SktDREpGMUhQcVNUZG9MWV9jN1haMVhTUXpRNzU4RE1LV2puTERJc2NxVlVMb0M2R0Y3TjhhcDV6WVp4d1NzV1VURlFyZWc4UDdoMGVFQmdNOTZrcVVKRQ?oc=5",
-    "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNa1p2blM3ZC1UVW1MRTRxZEgxZjdFSUdfT2JmSW9SMHpQNjV3MHg3LXNZcmhla3ZENzhzdk43X09jcGZoQm1kV3JYdXVkSkxndlc0Y2tPbTJxNXFzZTdnMkZ1R2VrclUtQzU1WlFHZFI5M3pYeFNEQi0xZ293aU1pRzhuNXRCYjk0aG5IbnVxaW02N1dSbjRhYm5COThRVWt1SWJmTHd3bkVMR0NLZDdqYk5jeEpWME9sVTF2bjdXdHo1QUNwcWE1VnVhXzV1TS1j0gHQAUFVX3lxTE1rWnZuUzdkLVRVbUxFNHFkSDFmN0VJR19PYmZJb1IwelA2NXcweDctc1lyaGVrdkQ3OHN2TjdfT2NwZmhCbWRXclh1dWRKTGd2VzRja09tMnE1cXNlN2cyRnVHZWtyVS1DNTVaUUdkUjkzelh4U0RCLTFnb3dpTWlHOG41dEJiOTRobkhudXFpbTY3V1JuNGFibkI5OFFVa3VJYmZMd3duRUxHQ0tkN2piTmN4SlYwT2xVMXZuN1d0ejVBQ3BxYTVWdWFfNXVNLWM?oc=5",
-    "https://news.google.com/rss/articles/CBMiygFBVV95cUxNMWJDMXFja0VkakVUekprbWNFY2ZEZElLbVVMZUxnUldBZkZxZTJtTE9tdUo1cHQtaG91M29rU0lSbjJkcm50WTNaU1VYaVd3RGN2ak5fM2UtS2ZRaE5iMGFrd1JHVjlodzhrV1M4TlczSUtSOXYtR2JIQXIwWlhuNlRKM21GTFFWMFBKeUI2c1BJNWZhVmNlaHdZY0FOeHNMTmZMeUF2UV9JSXJNRFRMR2pqUl9iWTJiV2MxM3dob016MXlwX0JGYmJR0gHKAUFVX3lxTE0xYkMxcWNrRWRqRVR6SmttY0VjZkRkSUttVUxlTGdSV0FmRnFlMm1MT211SjVwdC1ob3Uzb2tTSVJuMmRybnRZM1pTVVhpV3dEY3ZqTl8zZS1LZlFoTmIwYWt3UkdWOWh3OGtXUzhOVzNJS1I5di1HYkhBcjBaWG42VEozbUZMUVYwUEp5QjZzUEk1ZmFWY2Vod1ljQU54c0xOZkx5QXZRX0lJck1EVExHampSX2JZMmJXYzEzd2hvTXoxeXBfQkZiYlE?oc=5"
-   ]
-  },
-  {
-   "id": "rates-up-us",
-   "date": "2026-11-02",
-   "theme": "Monetary policy",
-   "headline": "Warsh Signals Further Fed Rate Hikes as Inflation Persists",
-   "summary": "Signal: tighter US monetary policy (US). 3 reports from صحيفة مال, BigGo Finance, SuaraGarut.ID. Related: “US Federal Reserve Officials Justify Interest Rate Hikes Amid Persistent Inflation Concerns”. Mixed: 3 reports point the other way. Ongoing: also reported on 3 of the previous 7 days (first 26 Oct).",
-   "rationale": "Higher US rates and yields pull foreign money out of emerging markets, weaken the rupee and push up Indian bond yields.",
-   "horizon": "months",
-   "confidence": "medium",
-   "industries": [
-    {
-     "id": "financials",
-     "score": -1,
-     "why": "Foreign selling in heavyweight lenders"
-    },
-    {
-     "id": "realestate",
-     "score": -1,
-     "why": "Funding costs rise"
-    }
-   ],
-   "economies": [
-    {
-     "id": "flows",
-     "score": -2,
-     "why": "Foreign investors move money to the US"
-    },
-    {
-     "id": "rupee",
-     "score": -1,
-     "why": "Dollar strengthens"
-    },
-    {
-     "id": "bonds",
-     "score": -1,
-     "why": "Indian yields follow US yields up"
-    },
-    {
-     "id": "equities",
-     "score": -1,
-     "why": "Risk appetite falls"
-    }
-   ],
-   "sources": [
-    "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1sUVo3Q3JpRno1enBWNFdIcS1XeVBqcm91MWpnNmxNdnItRllHSFJMLTJlNHloaVZBUGlOalF0REc2S3pkT3FhcXlQbDQ0bnVoUXZ6MU9mX3c0MkFtUUxYaGdvazQ?oc=5",
-    "https://news.google.com/rss/articles/CBMibEFVX3lxTE1GbU1Udkd3eUd4Rzd4UTcwcDhmV1dkSnYyTUx2UkJDM25BczdOSVBVU25YXy1jM1d6Y0gxVkgtMlF0VWcxZnkxNHFEcXN3MHE1QUxMQnVtNWN2Y1JxdE5RU09IWXA5MURWMnZhWA?oc=5",
-    "https://news.google.com/rss/articles/CBMidkFVX3lxTFBiUlVZRmEyWHF1andZbE5mUUV6TmFIX1VZZkVQd0RkbDJDRTlqMGVGRzg5ZV90QjV4dWU2Z012eWhpYkxyYkE3UDdJSFZWcXhnSjMyek5ycVViRVNQZmNtMGh5MF9VQmpTWGhXd1RCUUNGejZ3M0E?oc=5"
-   ]
-  },
-  {
-   "id": "india-fiscal-up-india",
-   "date": "2026-11-02",
-   "theme": "Fiscal",
-   "headline": "GST collections jump 22.9% to Rs 2.31 lakh crore in October as festive demand beats high inflation and int",
-   "summary": "Signal: stronger fiscal or trade position (India). 18 reports from The Economic Times, cfo.economictimes.indiatimes.com, Swarajya and 13 more. Related: “October GST collections grow 23% to 6-month high of Rs 2.3 lakh crore”. New in the last 24 hours.",
-   "rationale": "Better tax collections or narrower deficits mean less government borrowing and a steadier rupee, easing pressure on bond yields.",
-   "horizon": "months",
-   "confidence": "high",
-   "industries": [],
-   "economies": [
-    {
-     "id": "fiscal",
-     "score": 3,
-     "why": "Fiscal or trade balance improving"
-    },
-    {
-     "id": "bonds",
      "score": 1,
-     "why": "Less borrowing pressure"
-    },
-    {
-     "id": "rupee",
-     "score": 1,
-     "why": "Steadier external position"
-    }
-   ],
-   "sources": [
-    "https://news.google.com/rss/articles/CBMinwJBVV95cUxOZE1fSGhNYy1wRmFlZnZjUXVxS1JiT3ZCcFhEamdJN215N1hHOGxCQkh3b1hGVXYtc3phSWg5M0dPRmJfMGNLeHBPNkwxRGlhQzVjRmpsTWxuOUdKVndUQ0VzZ3Jza3hfSXlOZFVUSjlwTl9GbWxTODE2UzdiZXk1T2h5eVlFa1NwN0ZrWnRNS1pBYTVUNy04eDU5NnZkREhCZGhwUS1tdHdEUEg5djFia0FyWGhST3l5MUJSNDNVV1BBVjJDSF9HUEZQTXJzdTZPUG9vaFJzdVhlZHo2RTlxLUQ4VGJGa19OendTNnNTUk13SndLVzlET2N3NTFiazJvMHNJbnhKNTYyX1owNXB1aVpWZHdsakZiZDVZa2lzTdIBpAJBVV95cUxOeEktSm1lZHVUMi1PdGlfamM5UUoxeHZfaFhtQV85clFHVW4tRWNDdnlfeUo2Y0dJMzY2ME9jX2pfWUdERUhuODJ5NUVPNTdJWlQyQkR1RDJWcl9PVXo3VUp5Q3Z6RFhjYUFpdS1CWWpKSGYzM25pU2tWajFpYnNNWFJlNXFXRUFUZ09weGdUVzlqU3l4aDZ0VmdkcV9FZWdLYmI4cVpkTkVCLWgxcHpnZUNMS1M5OURkZjFzRFBveWlMSUdram9Tbm1hZnlWR3dEc1ByQUNwbEF4dG85Y28xVmx0MHprZU9uSllOYTdtN05ySlhkOVVUM0RfSC1LR1dWYkpQaUhJTzBFVlJDYnlScl9CMzR1YU1RSVR1RFI1Y3NqbGta?oc=5",
-    "https://news.google.com/rss/articles/CBMiwwFBVV95cUxObVFBR3k5MFpaMUxzRzJLb0h2eHdoRkdXTWdmaExSaThMbHlvLUlUQWZYTVRWVTZOYUlpM05DVDd1ZDNnd0pzVVV4VWEyMDc4SG1ZUHppZDE1bndCUXJRX25EUFlaa2JJeEtnVnBocDhTTmtFZmpnR1RBbVpmQ2dSanNYT2hTdmZ5YUJBY29CTy1pMEsxa1JENXpnNHdqalVCSEYzbUlWbHZGOGM1dXN5bmRJazl5RnNxRWVOUXlnLXFEbE3SAcoBQVVfeXFMT1dkLU16RjNhcGRkeHV5TkZnVHJYd1d6VEg0ZThiN2wzVnkyeDJ3aWFfdW1Ycks0R1BBQzFuQjFJRTRUQXgzTnFQSXdZNlVUNnRocFNEbjhjZ1NiVm9kaDFVdmh0WkhnNUJlRWNRYTJMUXQ0MmFTUHJ2WWJZbWFQYmgwN3ByTkREcUJDblo2N1NyVlUwMTBtaWtocHhFQ0VwZExIS0Fkem84S1FadDZrVTFPbHlGUVNRZnN5UDl6WUxJS2JPR0t2dmJGdw?oc=5",
-    "https://news.google.com/rss/articles/CBMizgFBVV95cUxOQmNPSHVqZE55b0Z1aWM2dFZvZHE0dFdmN2J6aVMwaUhIYUYzY1VKOVNOejhZX2VPVnFzTDJRVVloSFRwaFNZQmRuVHB4cUhOenVLSGFJbHZsSGpmd0sxRW44TEVnbmpCLW5JN1ZsbGRfUGZQSHZQYk0zbWFURXdGTVFnTk82cElXb2RvdGJlSDVEX0dTNS0wWl80WGk5SmtSZHhEZjVvT2NPa1YwLU54Q3JsZGU0X3h5eFptWmdudzlDc21rbVBDWWZVd2JBd9IB0wFBVV95cUxNcUx5SndibkkwSmctOVFfWnJDTmhQYzBmSElPbGY0Z2tleS1jeHRfczZRanlKWVMwYlIxUHlLWU01NEZScGpJcVNmdml6X2VZZWdNVi1iLXNIRHFDdUEwdHlCM3h4SVBZS0UwajNRR2t1VE5rLUhJTzhNZXNreG1VQjNiT2U2STV0MkJld3oxLVFaM005RE1nMEZERjVmSUdTVXBxSnRORS13Uk1fMG9YaUNkeGNwZ0E0NThoTkIySXVZYUJ4MjFtMVZWYjZzRkJJck9N?oc=5"
-   ]
-  },
-  {
-   "id": "oil-down",
-   "date": "2026-11-02",
-   "theme": "Commodities",
-   "headline": "Indian Stocks Open Higher as Oil Prices Fall Below Recent Peaks By Investing.com",
-   "summary": "Signal: lower oil prices. 2 reports from Investing.com India, Sahi. Related: “Oil Prices Fall Over 1% On Iran-Qatar Talks To End Conflict”. Mixed: 1 report points the other way. Ongoing: also reported on 4 of the previous 7 days (first 26 Oct).",
-   "rationale": "Cheaper crude shrinks India's import bill, supports the rupee, eases inflation and lifts margins for fuel marketers, airlines and crude-linked manufacturers.",
-   "horizon": "weeks",
-   "confidence": "medium",
-   "industries": [
-    {
-     "id": "transport",
-     "score": 2,
-     "why": "Jet fuel costs fall"
-    },
-    {
-     "id": "energy",
-     "score": 1,
-     "why": "Fuel marketers' margins recover"
+     "why": "Festive spending strong"
     },
     {
      "id": "autos",
      "score": 1,
-     "why": "Cheaper running costs"
-    },
-    {
-     "id": "consumer",
-     "score": 1,
-     "why": "Input costs ease"
-    },
-    {
-     "id": "materials",
-     "score": 1,
-     "why": "Petrochemical inputs cheaper"
+     "why": "Vehicle demand"
     }
    ],
    "economies": [
     {
      "id": "fiscal",
      "score": 2,
-     "why": "Oil import bill shrinks"
+     "why": "Tax receipts surge"
+    },
+    {
+     "id": "growth",
+     "score": 1,
+     "why": "Consumption strength"
+    }
+   ],
+   "sources": [
+    "https://www.zeebiz.com/economy-infra/news-gst-collection-october-2026-gross-revenue-rises-23-to-rs-231-lakh-crore-net-collection-up-256-404894",
+    "https://english.bombaysamachar.com/business/gst-collections-october-2026-rise-23-percent/"
+   ]
+  },
+  {
+   "id": "pmi-oct",
+   "date": "2026-11-02",
+   "theme": "Growth data",
+   "headline": "Manufacturing PMI eases to 54.7 in October from 55.1, below the 54.9 flash; export orders at six-month high",
+   "summary": "Output and new orders growth slowed, finished-goods stocks rose at a record pace and selling-price inflation neared a four-year low. Composite flash was a four-month high. Steady, slightly slower.",
+   "rationale": "Still-solid expansion and easing price pressure support earnings and the inflation outlook, while record inventories hint at softer production ahead.",
+   "horizon": "weeks",
+   "confidence": "high",
+   "industries": [
+    {
+     "id": "industrials",
+     "score": -1,
+     "why": "Capital goods hiring cut"
+    },
+    {
+     "id": "consumer",
+     "score": 1,
+     "why": "Price pressures easing"
+    }
+   ],
+   "economies": [
+    {
+     "id": "growth",
+     "score": -1,
+     "why": "Slower factory growth"
     },
     {
      "id": "inflation",
      "score": 1,
-     "why": "Fuel prices ease"
-    },
-    {
-     "id": "rupee",
-     "score": 1,
-     "why": "Less dollar demand"
-    },
-    {
-     "id": "equities",
-     "score": 1,
-     "why": "Margins improve"
+     "why": "Output prices cooling"
     }
    ],
    "sources": [
-    "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNZUhlR3NWR19xS3JZZ19udnhzOVVXaDJFQThCa2o1cE1BVTVra0ZLbWpZbzE4dUhaQy1RZ0VkMi10bW0wMmhhR0ZZUS0xLU55ZkpZcjhkQ2RycVBwNko5d1hHcTVJWGVBSnczNnZhLXF6b2VHbUdYQVo1RFUxbGd5emlYWDI3VnNiQXV4VEpZbWx2djh4UGI0LVhlMVM1S2szRkxzbllNbk1CLURicHJJeGZPQVAwZ2ozbWRZ?oc=5",
-    "https://news.google.com/rss/articles/CBMijAFBVV95cUxPVDdtMW5pQ3NKV19BRnl2RnpUVG9saHRCOURZRkd5YXg3X21ZTDY5enVXSmRYS0duVzdadVRvdklxXzdreGVST1dvcm1HMW9DUVI1WlhKQWtLVjlzRk45YlFhUnhhZkVrNHYzT2pOSTdPdlU4Y1hjM2lJTHpuVmduR1kxNDZhVV84RzVnMQ?oc=5"
+    "https://www.business-standard.com/economy/news/manufacturing-pmi-eases-to-54-7-in-october-despite-strong-export-demand-126110200290_1.html",
+    "https://www.tradingview.com/news/te_news:594486:0-india-manufacturing-growth-slightly-eases/"
    ]
   },
   {
-   "id": "fx-rupee-weak",
+   "id": "pv-record",
+   "date": "2026-11-01",
+   "theme": "Growth data",
+   "headline": "Passenger vehicle dispatches cross a record 5 lakh in October, up about 12–15% from 4.6 lakh",
+   "summary": "Festive demand, tax changes and lower borrowing costs drove dispatches; the market leader grew 20%. Retail registrations may shift into November. New record.",
+   "rationale": "Record vehicle demand supports automakers, component makers and auto lenders and signals resilient urban consumption despite high fuel prices.",
+   "horizon": "weeks",
+   "confidence": "medium",
+   "industries": [
+    {
+     "id": "autos",
+     "score": 2,
+     "why": "Record dispatches"
+    },
+    {
+     "id": "financials",
+     "score": 1,
+     "why": "Vehicle loan demand"
+    }
+   ],
+   "economies": [
+    {
+     "id": "growth",
+     "score": 1,
+     "why": "Consumer demand"
+    }
+   ],
+   "sources": [
+    "https://telanganatoday.com/indias-passenger-vehicle-wholesales-cross-record-5-lakh-mark-in-october",
+    "https://indianopinion.org/indian-passenger-vehicle-wholesales-hit-record-5-lakh-in-october/"
+   ]
+  },
+  {
+   "id": "oil-mon",
+   "date": "2026-11-02",
+   "theme": "Commodities",
+   "headline": "Brent falls up to 3% to about $110–112 in Asia as Iran–Qatar talks continue; OPEC+ holds December output",
+   "summary": "No new escalation over the weekend after Friday's $117.64 six-month high. OPEC+ kept targets unchanged. Easing after an October surge.",
+   "rationale": "A pullback trims India's import bill and inflation risk, but prices above $110 and post-election strike risk keep pressure high.",
+   "horizon": "days",
+   "confidence": "medium",
+   "industries": [
+    {
+     "id": "transport",
+     "score": 1,
+     "why": "Fuel costs ease"
+    },
+    {
+     "id": "energy",
+     "score": 1,
+     "why": "Lower crude costs"
+    }
+   ],
+   "economies": [
+    {
+     "id": "fiscal",
+     "score": 1,
+     "why": "Import bill eases"
+    },
+    {
+     "id": "inflation",
+     "score": 1,
+     "why": "Fuel relief"
+    }
+   ],
+   "sources": [
+    "https://www.newsbytesapp.com/news/business/oil-prices-dip-as-iran-qatar-hold-peace-talks/tldr",
+    "https://finimize.com/content/oil-prices-ease-as-iran-qatar-talks-continue",
+    "https://www.thenationalnews.com/business/energy/2026/11/01/opec-holds-december-oil-output-targets-steady-as-iran-war-disrupts-supply/"
+   ]
+  },
+  {
+   "id": "iran-midterm",
+   "date": "2026-11-01",
+   "theme": "Energy & geopolitics",
+   "headline": "US says no decision on Iran strikes before the 3 November vote; Israel reportedly urges strikes right after",
+   "summary": "The US president says there is no hurry or timetable for a deal; talks continue via Qatari mediators and Iran's two-day reopening plan. Strike risk rises after Tuesday.",
+   "rationale": "The days after the US vote are a key oil risk window for India: strikes would lift crude, hurt the rupee and equities; a deal would bring relief.",
+   "horizon": "days",
+   "confidence": "low",
+   "industries": [
+    {
+     "id": "transport",
+     "score": -1,
+     "why": "Strike risk"
+    },
+    {
+     "id": "energy",
+     "score": -1,
+     "why": "Supply shock risk"
+    }
+   ],
+   "economies": [
+    {
+     "id": "equities",
+     "score": -1,
+     "why": "Event risk"
+    },
+    {
+     "id": "fiscal",
+     "score": -1,
+     "why": "Oil spike risk"
+    }
+   ],
+   "sources": [
+    "https://www.foxnews.com/live-news/iran-war-news-trump-us-israel-november-1",
+    "https://english.aaj.tv/news/330478954/netanyahu-urges-trump-to-strike-iran-after-us-midterms-report"
+   ]
+  },
+  {
+   "id": "rupee-nov2",
    "date": "2026-11-02",
    "theme": "Currencies",
-   "headline": "Rupee Slips 21 Paise to 94.97 Against US Dollar in Early Trade",
-   "summary": "Signal: a weaker rupee. 7 reports from Deccan Chronicle, TradingView, APAC Media and 4 more. Related: “Rupee Falls 21 Paise To 94.97 Against US Dollar In Early Trade”. Mixed: 5 reports point the other way. Turn: earlier readings (31 Oct) pointed the other way.",
-   "rationale": "A weaker rupee raises the cost of oil and other imports and imported inflation, but lifts IT and pharma exporters' rupee earnings.",
+   "headline": "Rupee slips 21 paise to 94.97 per dollar in early trade as the dollar strengthens",
+   "summary": "It opened at 94.90; falling crude limited losses. An analyst sees a 94.40–95.60 range after October's best month since February. Pause after gains.",
+   "rationale": "A firm dollar offsets oil relief; a stable rupee near 95 keeps imported inflation contained.",
+   "horizon": "days",
+   "confidence": "medium",
+   "industries": [
+    {
+     "id": "energy",
+     "score": -1,
+     "why": "Costlier imports"
+    }
+   ],
+   "economies": [
+    {
+     "id": "rupee",
+     "score": -1,
+     "why": "Dollar strength"
+    }
+   ],
+   "sources": [
+    "https://www.freepressjournal.in/business/rupee-falls-21-paise-to-9497-against-us-dollar-strong-greenback-weighs-despite-falling-crude-oil-prices",
+    "https://www.etvbharat.com/en/business/rupee-against-us-dollar-update-today-november-2-monday-enn26110201048"
+   ]
+  },
+  {
+   "id": "lng-tanker-indians",
+   "date": "2026-11-01",
+   "theme": "Energy & geopolitics",
+   "headline": "Qatari LNG tanker with six Indians aboard attacked near Hormuz; crew safe",
+   "summary": "The Pakistan-bound carrier was hit despite reported Iranian approval; Iran also claims two more tankers hit mines. First attack on LNG shipping in this round. Escalating.",
+   "rationale": "Attacks on LNG carriers threaten India's recovering Qatari gas supply, raising costs for power, fertiliser and city gas.",
    "horizon": "weeks",
    "confidence": "medium",
    "industries": [
     {
-     "id": "tech",
-     "score": 3,
-     "why": "IT exporters earn more in rupees"
-    },
-    {
-     "id": "healthcare",
-     "score": 1,
-     "why": "Pharma exporters gain"
-    },
-    {
      "id": "energy",
      "score": -1,
-     "why": "Crude imports costlier"
+     "why": "LNG supply risk"
+    },
+    {
+     "id": "agrifood",
+     "score": -1,
+     "why": "Fertiliser feedstock"
     },
     {
      "id": "transport",
      "score": -1,
-     "why": "Dollar-linked costs rise"
-    }
-   ],
-   "economies": [
-    {
-     "id": "rupee",
-     "score": -3,
-     "why": "Rupee weakening"
-    },
-    {
-     "id": "inflation",
-     "score": -1,
-     "why": "Imported inflation"
-    },
-    {
-     "id": "flows",
-     "score": -1,
-     "why": "Currency losses deter foreign investors"
-    }
-   ],
-   "sources": [
-    "https://news.google.com/rss/articles/CBMifEFVX3lxTE0tRHZjQ0k0eWg4cUNlLVpMTF9na3RmTXMxMzdob2pTbk50SGUtZEV5M1VPWk12ZHAtdlRlZkdxbXlydDlyN1ZQTFJnQ0dubExxRVhmdV9qS3QxRlBQVE15X3FleGV4bUdrSGd5OFJwTjNNVVJ2elI4TGlNSm0?oc=5",
-    "https://news.google.com/rss/articles/CBMivAFBVV95cUxPY295dW1iOFBXVUk0a0tNWW9KTllIbUpGRlg5WXVhVlMtb2N6WFJ1cElDNUhxekF3QmktNXdKVU02a2w1eFF1SjRjQjdjeHJ5RkVUdHhxUFBmakZwX0p1VmlqelUxXzVySVgzWTBwZ0JBbzVEUVVSa19leU1keTFEMWFPdDU0SVM5ZXJ2YW1lUmNsMzludFQzVzR5NWlKSU1ja2N0YnBBZ21kbTBSX0I1UEZ5QmVPTEg2dzNVVNIBwgFBVV95cUxPekQtMkdWOE54WlpZMVNGeThmbm16ZkpvNkt0QnI1ZGJYU1N0QWNDMHFsY1l3VXh3YXdITS1WR0xyZDllaU0wMzhMMlZ0OWNxNFFQS1QzNUV5TlRteXF2bnRxanYyWWYzRHdjMmhvWnFyZUpoa2prQXBoM3lUTzM4aEZROUZudTZ2ZGxpQjVCcTBpMFVvNE9qQjlqbkJET0l4TG1aMjFBeFpCbUpTanZ2SzNIbEttcFFLU0VLbk5jb2NDZw?oc=5",
-    "https://news.google.com/rss/articles/CBMixwFBVV95cUxQTVNNSVJRUTBwN3l3OWloRER5dnZwLW83VTVtQ2Rrcl8wZ2hSTHVZbnNUeXZIUnhUVE1VUjR2b2g1Q0FXU2xnRnFyNWNUMks3a2N3X2x1UUcxc25vSENoUkFra0lqbnZLUl82TzJIdEpRdDBZa19hV21KTnRFcDZlLXlTV2MxTU1hdUFoSE5tMkpKYXFZSDRwdXNHRDdlNmU3Y01vYks0UDhLWjFXYmJRZkhCRmRaZDFsamR6Smc5ZktUaWJ5UkFr?oc=5"
-   ]
-  },
-  {
-   "id": "tariffs-up-india",
-   "date": "2026-11-02",
-   "theme": "Trade",
-   "headline": "China’s 5,000-Ton Digging Machines Are a Trade War Risk to India",
-   "summary": "Signal: higher trade barriers on Indian goods (India). 2 reports from Bloomberg, NewsBytes. Related: “Indian government can intervene in airline tariffs under new rules”. Mixed: 1 report points the other way. Turn: earlier readings (30 Oct) pointed the other way.",
-   "rationale": "Tariffs on Indian exports hit engineering goods, auto parts, farm and seafood shipments, widening the trade gap and weighing on the rupee and growth.",
-   "horizon": "months",
-   "confidence": "low",
-   "industries": [
-    {
-     "id": "industrials",
-     "score": -1,
-     "why": "Engineering exports taxed"
-    },
-    {
-     "id": "autos",
-     "score": -1,
-     "why": "Auto-parts exports exposed"
-    },
-    {
-     "id": "agrifood",
-     "score": -1,
-     "why": "Farm and seafood exports exposed"
-    }
-   ],
-   "economies": [
-    {
-     "id": "growth",
-     "score": -1,
-     "why": "Exports slow"
-    },
-    {
-     "id": "rupee",
-     "score": -1,
-     "why": "Weaker export earnings"
-    },
-    {
-     "id": "fiscal",
-     "score": -1,
-     "why": "Trade deficit widens"
-    },
-    {
-     "id": "equities",
-     "score": -1,
-     "why": "Exporters de-rated"
-    }
-   ],
-   "sources": [
-    "https://news.google.com/rss/articles/CBMitgFBVV95cUxOOTd2YzlxNEVRbFZDZU95azllUlVZQ1pSZmpEODdKSl9DS2I3bWhsbWtjcjE5WjRlVG03VnBDY3lyN3hESVluM2RRaXdaX216Q2dzcEVpR0o3UWVZVlFIUFQxRE5qRTdaeHZ3Z0xydEkwX0FBdXRCZFJMaXVwdEdUaERNOXQ5VWNReXJSbGdHQkh6WEU3ZWNCOHl6bHJaV2kzN0c1SEs2Y1IwdEFyaFd6cWpEeVlYdw?oc=5",
-    "https://news.google.com/rss/articles/CBMisgFBVV95cUxNdXlDYlJPQzk3dFZCX0J1Sm55TFlHVDNUUTM0SzMwYnBsdjdYc2hCTkwyQmRFWkctbTUycGx3WWtZMnJtNXpxMlg4ZGVFa0M4UnRHSFRpWFc5aktxU0tUSDZEazFuWDM4c2JIRGVyNjhNZlc1ek5CWHEzdnI5dndrbl9HVVA4NGVTQTIwa3F2R3pFUDVGRXZrbGxPSHlXdlV1dG9SUlhDX0dXRi1mMUxJbjJB?oc=5"
-   ]
-  },
-  {
-   "id": "monsoon-down",
-   "date": "2026-11-02",
-   "theme": "Monsoon & farm",
-   "headline": "NBFCs brace for rural loan stress as drought and weak monsoon hit farm incomes",
-   "summary": "Signal: weak monsoon or sowing. 2 reports from bfsi.economictimes.indiatimes.com, Prudent Media Goa. Related: “Goa Faces 37% Rainfall Deficit in First 1.5 Months of Monsoon”. New in the last 24 hours.",
-   "rationale": "Poor rains hurt harvests and rural incomes, weighing on rural demand and raising food inflation.",
-   "horizon": "months",
-   "confidence": "medium",
-   "industries": [
-    {
-     "id": "agrifood",
-     "score": -2,
-     "why": "Crop output at risk"
-    },
-    {
-     "id": "consumer",
-     "score": -1,
-     "why": "Rural demand weakens"
-    },
-    {
-     "id": "autos",
-     "score": -1,
-     "why": "Tractor and two-wheeler demand"
-    }
-   ],
-   "economies": [
-    {
-     "id": "inflation",
-     "score": -1,
-     "why": "Food prices may rise"
-    },
-    {
-     "id": "growth",
-     "score": -1,
-     "why": "Rural economy hit"
-    }
-   ],
-   "sources": [
-    "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOZEJrS0dMZXVzVzY3U2Eyd3BqdnpzTk5CTnNJRzluNXdnQ1FSSk5FZUtZNmQxdmJXR2pLWTkwRnRzdlZhQThodUw1YU9mYXRuZll1cWRxOEc1dVYxUXFzSFlpWG1uMTBfYm9UTXBxRWNKb3VuZHdlaDJLb1F5b3dTZzU5aVp3SEdqWlZPMEtfWVBNdWpCd3lCVVc5alg2dW5aeF9BQXE1OThwdFlfSzB0UnpSXzdjNHVXeDRkRnFOc3FmcXduV1pQN2gxR09CSzRNVUNwSU9B0gHbAUFVX3lxTE1KTm1zNml3bk1YaTFOeHc3TmE0YnNTNExyYy12eWhtdFhEZFltSjROV0ZBaWdDdjFCRlF3cFVPSlJSVWpLSmI4TnNYT0kwblROV2Y2QXp6OUdfcDRDWmxwY0RfclZUQ3JxV3Y2bGlCeDdvT1FyVnBfQ3BhblFVbW9DSHV1SjBTem03c1ZXZS1xTU5udmtUdWVwUEh1RmdaLWZtdzFDRWJtSS1jbXlLTTdjSU00UXA1Wnc3SjJVcHdHdXk4MGY2b3hvLUNSOXo2Z29zVnFTajk5MzBJSQ?oc=5",
-    "https://news.google.com/rss/articles/CBMipAFBVV95cUxOampPeG9BVlJBdkNIUzgwZzdXeWFSQnQ2U0NXaERuVVlhVmZKNWg1QmdrUE04VFo4RlVTZEh1YVFDWU5mc0tHaEVSUnVWb2hlUmhmQVhqc0hUaTFPU3o5QWdNT0VtQ2JwdGdWcF9IbDBYZV8xd3VJU3hIZ2ViOUVFTnE2cmZDVHhNcDZlYWlFaDZnckI4Mk1VRF9vbVVSS3g1d1VpZQ?oc=5"
-   ]
-  },
-  {
-   "id": "metals-down",
-   "date": "2026-11-02",
-   "theme": "Commodities",
-   "headline": "Silver Falls As Sticky US Inflation And Resilient Growth Lift New Rate Hike Bets By Kedia Advisory",
-   "summary": "Signal: lower metal prices. 2 reports from Investing.com India, BigMint. Related: “India steel index drops for third straight week as long steel prices see sharp correction”. New in the last 24 hours.",
-   "rationale": "Falling metal prices cut Indian producers' realisations, often on weak Chinese demand, while easing input costs for manufacturers.",
-   "horizon": "weeks",
-   "confidence": "medium",
-   "industries": [
-    {
-     "id": "materials",
-     "score": -2,
-     "why": "Lower realisations for producers"
-    },
-    {
-     "id": "autos",
-     "score": 1,
-     "why": "Cheaper inputs"
-    },
-    {
-     "id": "industrials",
-     "score": 1,
-     "why": "Input costs ease"
-    }
-   ],
-   "economies": [],
-   "sources": [
-    "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPSnZBZk1WeUdXYkxPZXM0dFc0czFWbVhLWkJFbkxvMGUwaXFBN3l1LTk5OHNBYkJRbHlSWDdHXzI2NmFRZ0lWcHlWcUZkNktndndnLXN2TVlGWFczZlQ4eEUxWkd0ZExZZTJtd2J1dlotbkp0STcwT2lxR3ZucXhHQVRFR01Pd2ZQUmFUMkMtcEVpTHlCbEU1WVQteTRDVkFsUnZ5aUgzUFBERzJxR001Y2N2SWlvSVNQejcxMmk5YmI0OWlXNUJvbmwydElwNlpX?oc=5",
-    "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOOWF1SzBCZGNaTjZ5LWxTb2NVYnFUUU9CUUJCWUZvdWI0c3dvSkVORy0zdXhSc2Vlc3V5OEpvSm0wX3dNNnd0V0tGWi1qbVE5QkROZEhvTDR5RzhqNTdUZFB3ZUpGZVc1THFDYi10TUVmMFZQUWxzTlF6WDNtR2NCUkM1dGVxeDQ3Vkd2UVBZMHg2OXpsLVBkSjJQd2RySmtIQ04yWGs3aGNhMXlzSFpUSy03dDhJSURqMVZzVkNKSmVPckdGRkJ6MExRdUdkYS1q?oc=5"
-   ]
-  },
-  {
-   "id": "tariffs-down-global",
-   "date": "2026-11-02",
-   "theme": "Trade",
-   "headline": "Trump says US-Canada trade deal concept includes Keystone XL pipeline",
-   "summary": "Signal: easing global trade barriers (global). 1 report from India Today. New in the last 24 hours.",
-   "rationale": "Trade truces between major economies support world trade and demand for Indian exports.",
-   "horizon": "months",
-   "confidence": "low",
-   "industries": [
-    {
-     "id": "industrials",
-     "score": 1,
-     "why": "World trade recovers"
-    }
-   ],
-   "economies": [
-    {
-     "id": "growth",
-     "score": 1,
-     "why": "Better global demand"
-    }
-   ],
-   "sources": [
-    "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQMDlKNkNtVHIxRUxnRDF1U05aWjhsSFJWUTZ5LVQ0TEZBX3F2Y09pY1lNWHpjQUxJaVphalladkJVTFlTa3JERWwyR2JmYWtrajNkWGM1TlRNNjVzdllnRHlBd3dpUEFOWGFkcVh2WEk2R3ZPTmFMM00yZGpjcWZMT0FuUkdsUXBKdXFiRk9XSzlobUxyM0p6Y0pTVk5MaHh2M2piN0ktMFo5YVI2cHowTnFUa21oZjZUdzhoZEo5STXSAcABQVVfeXFMUDA5SjZDbVRyMUVMZ0QxdVNOWlo4bEhSVlE2eS1UNExGQV9xdmNPaWNZTVh6Y0FMSWlaYWpZWnZCVUxZU2tyREVsMkdiZmFra2ozZFhjNU5UTTY1c3ZZZ0R5QXd3aVBBTlhhZHFYdlhJNkd2T05hTDNNMmRqY3FmTE9BblJHbFFwSnVxYkZPV0s5aG1McjNKemNKU1ZOTGh4djNqYjdJLTBaOWFSNnB6ME5xVGttaGY2VHc4aGRKOUk1?oc=5"
-   ]
-  },
-  {
-   "id": "gold-down",
-   "date": "2026-11-02",
-   "theme": "Commodities",
-   "headline": "Gold lingers near one-year low as Fed hike expectations firm",
-   "summary": "Signal: lower gold prices. 4 reports from The Economic Times, Free Press Journal, The Sunday Guardian. Related: “Gold Prices Crash ₹3,200 To ₹1.42 Lakh, Silver Plunges ₹4,200 Amid Fed Rate Fears”. Mixed: 2 reports point the other way. New in the last 24 hours.",
-   "rationale": "Cheaper gold trims India's import bill and supports jewellery demand.",
-   "horizon": "weeks",
-   "confidence": "low",
-   "industries": [
-    {
-     "id": "consumer",
-     "score": 1,
-     "why": "Jewellery demand improves"
-    },
-    {
-     "id": "financials",
-     "score": -1,
-     "why": "Gold-loan collateral worth less"
+     "why": "Crew risk"
     }
    ],
    "economies": [
     {
      "id": "fiscal",
-     "score": 1,
-     "why": "Smaller gold import bill"
+     "score": -1,
+     "why": "Gas costs"
     }
    ],
    "sources": [
-    "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNc0stQmRaZjlXeEZEQVUzNG0yU3NOY3NvVVZkSjlYc3NMM0t2MGhHY0VZR1YyR1dJN1ZxRVdsUEczZGVuMXJuUE1xRjlfa203djY1NWp4dWgyd0xKbGwtODlJbmU5WGtBWDhTUVF4a3J4TTZIQkNzb3ZCOHYyUHNxY1JDeFJ5QS1xOXNpVFBHeTZXcGNIaVk5RC1iRlB3S2RyZkxnMkVFdl9pY2ZLdzE5NTJjeEV1UkxpdFB0LUswbzM5T0pNdTlnR3lINUlaak53a2loejJR0gHbAUFVX3lxTE1wX1V1VVc4LU8ta182b3h2RWdHSC1FamZvaF9kQThGRU4yQUtpR0VIRTI5aFBjV3I0cng4X3BiRkl5Q3RGRERQOHQ4ek1ONWhvVm9uZDFCNHg3c09ERjZtc3JMYVZ0ei0zaTdISlNidTl2a1lJRnltUkw4a1RxMnE0TFFaX1hzWEVTOVgyc1d0RmNKaUhHdXA1OEdPT0REeTBOSEEwRGN1MEstN25zdUpfNE5IRTROczdiMXFVQjByNzRaMUU0NzdHaEhuVDhrSDltY01UX1U4R1VNQQ?oc=5",
-    "https://news.google.com/rss/articles/CBMitgFBVV95cUxPQU5La0M5U2h1bmJ5Tl9ibEl3WmZhd2Z6bFhWMExDU0FORUxTSE1XQXkwTEhIN2VTRE1fTmJPenJuTGF3Ul9rV0EwZFBYQnI5aFh0X0d5T09meHBfUkxsZG4xNXo3MmFJQWJkTWJYRDFGbkZONXRzc2dDdm9qYWE1dVZJMVg1RXFaeFV1TFl3cXFldFVwXzFTR0NBdmV2dFRsSjZzWVROeDVxTG0xejdSbnZ3WGEzUdIBuwFBVV95cUxNQXl0X1RDdktOaE9sVDFGZVVnT2loTnFzNjB4ODdmM3d5d1AzSVlNa01HNGNmUnJzWVU3T1VGUkpvZDVnSlF0WDQ2WFdBOFplX2dFbXljdEN2Q0h0S3k3TldYaDRrWW1jdzh4VXZpVXRDUkRVRFFWTUl6dkg1SkdsMmNMRjgxYnZpVllEelFTSmFVbmdiay1PaGhwcGpxNU5TRURBTlVQQ3lST3pNbndXaHJkZHVQR1BiUWhv?oc=5",
-    "https://news.google.com/rss/articles/CBMisgJBVV95cUxOZm0wUUlYbHJqTGVZZEFqcVN3MWVPYzNST21JTGdubW42eWF1cFBxM2FpUW5LbUZNVmUyNGJkdUpKcEpuYjZOS2o5eGpqMzVic2txUlBaYmdIQXMzUjZyRFh1dlZGbHkzQV9QZ283Y3NPUktHNHpPUFJvU0R3OF96cEZfM3ZjMmxxdTVWNkkwSFNUTTk5WEFnUDBHLWdLdUJwaTA5ckdyOHhmQmZ5b2hUei1QRkdtT1I5eW1qcE1ZMGhvekhIZGY4QjE3akoxNGcweVV6SjNyNFlRaVlOR01IOHkyVTlMX3BtTHNiM3NaTzJpcHRSTXhKd0dGYjVRVU41V2RZMlp0eDgtdEtlQ3hqMVZLMkhrWHN3MkxSWDJGMDdpQXJ0Smc2bF8tUG5RTWFCY2fSAbcCQVVfeXFMUEt5YjYyRkwtVV9aV2Z2emY0dDNIMV9WZ0g2VlNRTVNXdHNjc2g4TFpiZVZfNHVqX1ZYbEFFbE52SWN5dllHT0REQWY1V24wRzl6dGMwUlNjTHQ5OUliNWs4a1ZPcGl6aEtFdFlRZ09pbS1WbGRjVTc5cTBDQXVCRmxMSXBHRGtWc040ZFZtRV9tQlpRSmR0azZ4U3ByRUlPM21Rc2xMaUQ1U1kyMDFqSGp0RUVCd21QVDJaeVFPdUxydW9YSEJiUlZHaFdfWkxISGVYYWlSNlhUVFRKeHRrdGhsRVVkRzl1Z0ViUXJWQjM2MFBublN6SklIaldnSTJKa2Z2Y0tJRVB4QXg5NDU2UXc0RXliUlRDOXJZUWVUZ0RXcE9SdW40V3VxVWFEM192YThhU08zQU0?oc=5"
+    "https://news.google.com/rss/articles/CBMikAFBVV95cUxQa0JjYkp2VXFOYmU5ejJ0WUxMb1R4SVljeFBRWXhEV2pYeG1yRWdXRkhYVWlfeVJLWXZTTTRTZl9Lb0EtTTZpaW1HSTRERThxZmdZYmlsWWJvNnhZeHQtS0VmQnJxaDZMajVNNmRxcE1wZDRkd3RZMXYzM3diX2VfMUhCUHo2VzdHcVlYYU5nUEPSAZABQVVfeXFMUGtCY2JKdlVxTmJlOXoydFlMTG9UeElZY3hQUVl4RFdqWHhtckVnV0ZIWFVpX3lSS1l2U000U2ZfS29BLU02aWltR0k0REU4cWZnWWJpbFlibzZ4WXh0LUtFZkJycWg2TGo1TTZkcXBNcGQ0ZHd0WTF2MzN3Yl9lXzFIQlB6Nlc3R3FZWGFOZ1BD?oc=5",
+    "https://news.google.com/rss/articles/CBMijwFBVV95cUxOQldwUV9ITEdTSU1TUkVhUWNtak44X2JQZ0t3ekE4cDlNeFlUcW43aUVCdjRpVmZhczgzclg1ZC1HMFVRN0p3WThjLWNleVNYQ0Rhc1dGM3VKWTRxQ1MwSWRHTHY2T0JxSVZNSVNRRnBuUzR6NEVuX0xkeldodEtaWHFseHpjbUNtZEpGM2xoUQ?oc=5"
    ]
   },
   {
-   "id": "food-down-global",
-   "date": "2026-11-02",
-   "theme": "Commodities",
-   "headline": "In fertiliser sales dip, a lesson for policymakers",
-   "summary": "Signal: lower global food prices (global). 1 report from The Indian Express. New in the last 24 hours.",
-   "rationale": "Cheaper world food, edible oil and fertiliser ease India's import costs and food inflation.",
-   "horizon": "months",
-   "confidence": "low",
-   "industries": [
-    {
-     "id": "consumer",
-     "score": 1,
-     "why": "Edible oil and food cheaper"
-    }
-   ],
-   "economies": [
-    {
-     "id": "inflation",
-     "score": 1,
-     "why": "Imported food costs ease"
-    },
-    {
-     "id": "fiscal",
-     "score": 1,
-     "why": "Smaller import bill"
-    }
-   ],
-   "sources": [
-    "https://news.google.com/rss/articles/CBMirAFBVV95cUxQcG5TbkRoZXNOUUdSb0JQcDZwN2RfSjRoZTE3SDBNMC1hMFJfZEhwbDd6c1h4TlhPZkJGMWtLZkNaTTc5a2gwOG5KckJjX1c1dlVlQjFqQ0RIQ2lPOHZILUg2ZWxPRUZyV2xLcWxnbXNxSndQSFhBQWJnSlBrZXIzbnd5SVVPMTNFTzQ1cFItYTdFSURTbm5JbUxXMzdNZnBidW1JYXpyZDI1dFI30gGzAUFVX3lxTFBLa2xORldoZU5hSGJKbGJOaFN6SERVV0g0SWxDS0pHNEFLZ0pkcWtpOF9zMGh1MFlzV1lhMVVzZlJZN0IzUEx1OGlQcFNsSHE3bFN6TEdUR1AtMi05YmNiOEtrUFhEcnotQWo5S2Q1NVFkV2ZDcjFyd2xmMVIwRjM1UVVlNUZMMnBKSVZvY19jemdvRkhHNDdiWC1taVpNTUwxWmozNWVONlpOZE9fbHVWU1VJ?oc=5"
-   ]
-  },
-  {
-   "id": "growth-down-india",
-   "date": "2026-11-02",
-   "theme": "Growth data",
-   "headline": "India manufacturing PMI eases in October on weaker demand",
-   "summary": "Signal: weaker Indian growth data (India). 1 report from Investing.com. Mixed: 1 report points the other way. New in the last 24 hours.",
-   "rationale": "Softer activity data points to weaker demand, orders and credit growth, weighing on cyclical sectors.",
-   "horizon": "weeks",
-   "confidence": "low",
-   "industries": [
-    {
-     "id": "industrials",
-     "score": -1,
-     "why": "Orders soften"
-    },
-    {
-     "id": "consumer",
-     "score": -1,
-     "why": "Demand softening"
-    },
-    {
-     "id": "financials",
-     "score": -1,
-     "why": "Credit demand slows"
-    }
-   ],
-   "economies": [
-    {
-     "id": "growth",
-     "score": -2,
-     "why": "Activity slowing"
-    },
-    {
-     "id": "equities",
-     "score": -1,
-     "why": "Earnings outlook dims"
-    }
-   ],
-   "sources": [
-    "https://news.google.com/rss/articles/CBMitwFBVV95cUxOMlpwcGFLamFuTDFFU0lnNHlNVFVzR0hfNzhjQzdmZEw5UGdyOFdWYjQ1b0ZHQ2Fpd01TTjNmaGVXVGh2RVlsMXhkM2lUdzFlc2F1a0lLYjVhdnRYMUl6b2xSbXJfd1lXN2dsUGdmUkREZElGMmNJWjhrZ3BMeHdQQm1iUGFpbFRtbFdlSk5OQ0VObF9XSjJpdE1jZ2VueWNaQXYzc1BuUGNSLUJ2SkRUNHJITkFaQkk?oc=5"
-   ]
-  },
-  {
-   "id": "inflation-up-us",
+   "id": "oil-imports-56",
    "date": "2026-11-01",
-   "theme": "Growth data",
-   "headline": "Bitcoin price swings spike more around U.S. jobs and inflation reports than Fed rate decisions",
-   "summary": "Signal: hotter US inflation (US). 1 report from Pluang. New in the last 24 hours.",
-   "rationale": "Sticky US inflation keeps the Fed tight, strengthening the dollar and drawing money out of Indian assets.",
+   "theme": "Commodities",
+   "headline": "India's oil imports hit a record 5.6 million barrels a day",
+   "summary": "Strong refinery runs and flexible buying between Gulf and Russian grades. Follows record October LNG imports. Ongoing.",
+   "rationale": "Record volumes at high prices swell the import bill and dollar demand, though strong runs support fuel exports.",
    "horizon": "weeks",
-   "confidence": "low",
-   "industries": [
-    {
-     "id": "financials",
-     "score": -1,
-     "why": "Foreign selling in lenders"
-    }
-   ],
-   "economies": [
-    {
-     "id": "flows",
-     "score": -1,
-     "why": "Higher US rates for longer"
-    },
-    {
-     "id": "rupee",
-     "score": -1,
-     "why": "Dollar strengthens"
-    },
-    {
-     "id": "bonds",
-     "score": -1,
-     "why": "US yields lift Indian yields"
-    }
-   ],
-   "sources": [
-    "https://news.google.com/rss/articles/CBMiowFBVV95cUxPVnc1VXRuaDBvVmdnQjhZX2dkLU9nVWZxWmhVb3VnZVlOVXlDbllZMWx0aXpJZGFwUElXVG9FdmliMDA3QlhZTlpINkhlbUFQWU9tOFdEVGNRd00zZ3JIX0hraW4wR0djYk12NWRqbVZpT056UVd6UDhyV0dvUjhkSnpTLUwxbURHa0NkdEQtMllneldmZ0F6Vlh3cVJacjd0OXlv?oc=5"
-   ]
-  },
-  {
-   "id": "rates-up-india",
-   "date": "2026-11-01",
-   "theme": "Monetary policy",
-   "headline": "RBI Rate Hike Alert: Home, Car and Personal Loan EMIs May Increase, Research Report Revealed",
-   "summary": "Signal: RBI tightening (India). 1 report from Times Bull. New in the last 24 hours.",
-   "rationale": "A higher repo rate lifts loan rates for homes, vehicles and businesses and pushes up bond yields, though it supports the rupee and lenders' margins at first.",
-   "horizon": "months",
-   "confidence": "low",
-   "industries": [
-    {
-     "id": "realestate",
-     "score": -2,
-     "why": "Home loans get dearer"
-    },
-    {
-     "id": "autos",
-     "score": -1,
-     "why": "Vehicle loans get dearer"
-    },
-    {
-     "id": "consumer",
-     "score": -1,
-     "why": "Dearer credit squeezes spending"
-    },
-    {
-     "id": "financials",
-     "score": 1,
-     "why": "Lending margins widen at first"
-    }
-   ],
-   "economies": [
-    {
-     "id": "bonds",
-     "score": -2,
-     "why": "G-Sec yields rise"
-    },
-    {
-     "id": "equities",
-     "score": -1,
-     "why": "Higher discount rates"
-    },
-    {
-     "id": "growth",
-     "score": -1,
-     "why": "Credit growth slows"
-    },
-    {
-     "id": "rupee",
-     "score": 1,
-     "why": "Wider rate gap supports the rupee"
-    }
-   ],
-   "sources": [
-    "https://news.google.com/rss/articles/CBMitwFBVV95cUxPc2l1Ti1zSWxvX2VHTmtVbUFWVTBudWFqRWJQUjdCSWxFZEZYX0NPbVhUZldlSFVncWVGUU1Lc19TZS03TE9WRlp2U0VacUZLandESnB3dzJiczJBZlYwV0E2eWJjQ0lMV1FfMTJybUFSeXZaM3VFSHRBNUpOeFJBYnI4eDd2cWJqVnlRdk8zMDRFdFM2U0UxbG1mR0dsZkphUlZCNnB0NS1xS1JBbXdIc0luUEFtWGfSAbwBQVVfeXFMUFBWeVF0Nnp4Z0xnU2tKdnAtYWE0Y0l3R3ZEemRMUTVLZTJNNG9ZWkNwRWFuUUwyQlFObENNWlRDcnlhWVhBN0hCbVdGaGVlbk1wck9yYWVxMDdTcmdBY2FqbE40RnY3amZJWDhZT2lJbjI1U3doUFRraFpYWW42QUpOR0lIUFRMN1RhcGc0Z0xkRGdhRkZxZTFvaGo2MVprMWFZNEZVNGdvckdtcVVLX0VOUVJzRFBJbkI0ekc?oc=5"
-   ]
-  },
-  {
-   "id": "ai-capex-up",
-   "date": "2026-11-02",
-   "theme": "Tech cycle",
-   "headline": "BMO Economist Says Slower AI Spending Could Ease Fed Inflation Pressure",
-   "summary": "Signal: strong tech and AI spending. 2 reports from www.tokenpost.com, Siliconindia. Related: “Gulf Investors Target India's AI Infrastructure and Space Technology Amid Cautious Investment Sentiment”. New in the last 24 hours.",
-   "rationale": "Rising global tech and AI budgets add deals for Indian IT services firms and power demand for data centres.",
-   "horizon": "months",
    "confidence": "medium",
    "industries": [
-    {
-     "id": "tech",
-     "score": 1,
-     "why": "More digital and AI deals"
-    },
     {
      "id": "energy",
      "score": 1,
-     "why": "Data-centre power demand"
+     "why": "High refinery runs"
     }
    ],
-   "economies": [],
+   "economies": [
+    {
+     "id": "fiscal",
+     "score": -1,
+     "why": "Import bill"
+    },
+    {
+     "id": "rupee",
+     "score": -1,
+     "why": "Dollar demand"
+    }
+   ],
    "sources": [
-    "https://news.google.com/rss/articles/CBMiWkFVX3lxTFAwYThmSUd3MmNIQ2R4dUZEcXBFTUZRbnhDNDVXbll0NDN3WnNVN0ZTNG5FUXVGeTBnWW54bGZ4dHBvTDJOai1RTmFKNjlmMW9xVHJiQm56STNuUQ?oc=5",
-    "https://news.google.com/rss/articles/CBMi-gFBVV95cUxORW1xRjBZTE5PaWprZG16XzN0UXUyUy1OTFRNVGhiQlhFU1loWTZycU5vY0Rma2QybHJNS3lxVk5zWktGa1lqRnEwS2lhSEpwVUEyNUxjQlVKNHhWcmFpY2dhRGR1NkN6THZobm1SREp2OEl4NWlNa1pvSUdRQ2hGUVM3c2JWcmtVTEtyU05ScWZ5OGdOcDZJVnpwbktVZ0dlYWxZSUpCUWY3T0Mtb1hYbXJrSUNDdVZuUHJSeTgyeWk1bDV1OU5Fa1NuZnA3aUZVTXZkWnBxQ1ZmVnUtWFlSOWJSX3NKUGlobE5MZ2RWWmdoRFVZYkJsYlBB?oc=5"
+    "https://news.google.com/rss/articles/CBMilgFBVV95cUxNRnlYVnV3bmFlSmNKenB5Y0REenpRbjROSjZhamN0WDM0UmRNb19MMC1wT1h5a19mT3JfazZrLW8yNkxoYWRBOFMwTXVYMExOdjlONFlpRlRYdF9Naks0eTZLSzZkUHZCYzBBNmN4bl9zVEhsVVlpTmhfLXZhR1Fkand4RTRRN0RpMVZjOGRCeFk0bU44OEE?oc=5",
+    "https://news.google.com/rss/articles/CBMixwFBVV95cUxPRWxRU3dOLUxheEpWeG04OUR1WmFVV3R2X2JBdEg3UmoyQUhCRUN0cEFoSDdwcWdSU3FLZThWOVFscmh3dUxQNWhYYTVLVnktUEZtQVE4cTQxV2xsaGtTV3J4YkNrTlp6aFpRWnRGaU5oVEcwVWVxWTRrU1ZqOHBzQllITUtwYnFrb2dHdlRqYkFGMXRSbUxlVS04NVJhTEhXdXh3Nl9YRVVUTWFnOE5xem1BaEZPOEEtMzBBeks2NElsckRrZWxN0gHHAUFVX3lxTE9FbFFTd04tTGF4SlZ4bTg5RHVaYVVXdHZfYkF0SDdSajJBSEJFQ3RwQWhIN3BxZ1JTcUtlOFY5UWxyaHd1TFA1aFhhNUtWeS1QRm1BUThxNDFXbGxoa1NXcnhiQ2tOWnpoWlFadEZpTmhURzBVZXFZNGtTVmo4cHNCWUhNS3BicWtvZ0d2VGpiQUYxdFJtTGVVLTg1UmFMSFd1eHc2X1hFVVRNYWc4TnF6bUFoRk84QS0zMEF6SzY0SWxyRGtlbE0?oc=5"
    ]
   }
  ]
