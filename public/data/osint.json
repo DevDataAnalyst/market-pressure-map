@@ -1,6 +1,6 @@
 {
  "updatedAt": "2026-11-03T05:44:28.595Z",
- "assessedAt": "2026-11-03T05:44:43.716Z",
+ "assessedAt": "2026-11-03T05:45:46.627Z",
  "sources": [
   {
    "name": "UN News",
@@ -138,7 +138,21 @@
    "severity": "high",
    "severityScore": 7,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Indian sailor killed in ship attack off Oman; 13 rescued",
+    "risk": "high",
+    "note": "Crew risk.",
+    "industries": [
+     {
+      "id": "transport",
+      "score": -2,
+      "why": "Crew safety"
+     }
+    ],
+    "economies": [],
+    "at": "2026-11-03T05:45:46.627Z"
+   }
   },
   {
    "id": "india-secures-70-of-crude-oil-imports-outside-strait-of-horm",
@@ -168,7 +182,21 @@
    "severity": "high",
    "severityScore": 6,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "India sources 70% of crude outside Hormuz",
+    "risk": "elevated",
+    "note": "Supply security.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": 1,
+      "why": "Diversified supply"
+     }
+    ],
+    "economies": [],
+    "at": "2026-11-03T05:45:46.627Z"
+   }
   },
   {
    "id": "massive-fire-breaks-out-after-explosion-at-refinery-in-india",
@@ -211,7 +239,21 @@
      "source": "Al-Bawaba",
      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNZzZUd2NOOXVXM3VndnZqSGxUNDB0eGZpQnhTamI1a3c0RmZTSVd1c25PZlh5amtDVGVqUXlaMGRONjlYZmdvdFlpX3RIMWJFTnJqalZCMllZemV6RjVHNk1SQUtMeHNjZGhrTXlyTXhxM3pQZHlPVDRuZ1llZm56SkhhVFdqYXJJeTVxSzN3?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "Fire after explosion at a state refinery in Visakhapatnam",
+    "risk": "elevated",
+    "note": "Outage risk.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": -1,
+      "why": "Output loss"
+     }
+    ],
+    "economies": [],
+    "at": "2026-11-03T05:45:46.627Z"
+   }
   },
   {
    "id": "fire-at-hpcl-oil-refinery-in-visakhapatnam-india-after-repor",
@@ -254,7 +296,21 @@
      "source": "Hindustan Times",
      "link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPdDJYSU40ZENoYkR4LV9ob3R0N2xtUVI3bkRsM3dzVmNudHFlSjJnaDRjMjF0WlczRjY3SlhoSko3RzFQelRqRktUMHVWTlgxQWVRN202blgyY2tYR2NpN0pHZldfOUcwRElkaU5temw4OWo1alJyUWtHUWNjLVF6X1ZOdXBsaEV2S1k2X3JSZEV3WXM0YVJGSkVGQTdncjhvWTNEOGtSTnZRRVFiLUpqM1NOeWhhdXdDemU3T1pMeWVtQ0V1UWVxdmR0Y1BYbmhOSjBvcUZCVThZSDl4RmNySHR6bUZOcXM1R0RuMWdfYmFzejdRUnZn0gH8AUFVX3lxTE55Q0ctWW14ZURjWVVlMnByM29HY0YxVndzWERPWTYxUXdPeXpHLWZqQVVRQTlmT2FPelJlRWgxVHhXRW1YUi1NSDA4OGN2NzJTNEVFeGpyejlST2VMdi1uZVRHWVNwOWU2RGxJQW1BRG1CLWlkZmVEbUpXWDJna2dUckdhUFVfX044dTkwb2xvSUcyOWtDXzRjX1lOa1k2S0NwUzFxTjhrSGFiTE1La3VKMHRyUVdGZWNoYjFhYTNiU3dBaEhTTmRlSjFNNzJHTzJZN3hSV1ZHSVhpU1FmZVZjSGZvS2tkcXhuTDJQR01LNHVLbjJpRjQwQ3lPSA?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "Refinery fire in Visakhapatnam after reported explosion",
+    "risk": "elevated",
+    "note": "Duplicate.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": -1,
+      "why": "Outage"
+     }
+    ],
+    "economies": [],
+    "at": "2026-11-03T05:45:46.627Z"
+   }
   },
   {
    "id": "hpcl-s-visakhapatnam-refinery-hit-by-major-fire-near-oil-tan",
@@ -289,7 +345,15 @@
      "source": "News9live",
      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNU1huZnl5amJVX21BQkpPTzAxZnVBY2hXZEFCMlNEVDlsSTdxTE42SXVncmVnX25zdy1sTzQ0WVlyZlVNdi1Mbk5kbUNDRXRCa1ZnVFIzU25LYU91SXRlU3RwU2hxdUZCZjlxZVNFVElGc0lCNHFXUHlFWkUxTzk4OGUyQ3JfMzFncnFLaHhESnViWW9IOVg4X3lWMNIBoAFBVV95cUxNZElxdUZ1V1doUHA2QkpyLVVhd2Y4VXhRNXl3ZXRrQlF3ZW9lUVdrRFVhRmpuZHhNVURUYTNublVLbld2bDRxRlh2Rl9xNVFFZ3BoTWZBWW9NRk9iSnhzTzE1elRvQ3NMekNOZ3BUWlhWQWJvU2RrZGJnSE5fWlZTcXQ2cE9ZR1lpLVJZLTdoUkxZc3E3THVaMTVscE9GZ09k?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "Visakhapatnam refinery hit by major fire near oil tank",
+    "risk": "elevated",
+    "note": "Duplicate.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-11-03T05:45:46.627Z"
+   }
   },
   {
    "id": "blast-at-visakhapatnam-oil-refinery-sends-flames-soaring-thi",
@@ -324,7 +388,15 @@
      "source": "Asianet Newsable",
      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPaWNMZlFYbUU3VnByZ3BndGFPYVpYczFTMUpBWVlxZ1ZmcVFSLU1BSjg4Z2VoaU96YjF1czduT1lzTnFiYkZZbkJLT2t3bFY4eHJDZXcyYU5nSlB4bDNLVTdNQ1l2T2ozem95ODd0SXFNWURUbF9ZRnY3cFJxTWlBM1JZalFjTkg4cmtNc3JuLUdMN0pjRUpFRTRyVXNpczlQemNPM3VueVM1cVdGUVRyemxRazRMT29xM2k0NXFsMGdtM2Nj0gHKAUFVX3lxTE1QMWFzaDhaMTlaWU9NMmRtcFVRaWdyOVpZWW9ZTy1WdVlJZE5ETENoNjIzeTYzSFI1NDE0cGE0Q3lqdnJoVFZUanZTeURObHRJUjdhSlVVSlU5V3I3NHdUVnBfQU9mWXEyTWwwUTR1bnE2QlJlTGllU3dyTXBPbVAwV2dQNm95UUlnRWdTcTY2ZTBLWEFCNlRCV0p2c090cl9IaUFISEVZcVA0bXhNV3Zkb2hBd09JVDlfb0ZKNHlLamF0VXE0MW9KTEE?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "Blast at Visakhapatnam refinery; thick smoke",
+    "risk": "elevated",
+    "note": "Duplicate.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-11-03T05:45:46.627Z"
+   }
   },
   {
    "id": "black-sea-shipping-crisis-india-offers-solutions-as-us-revie",
@@ -353,7 +425,21 @@
    "severity": "high",
    "severityScore": 6,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "India offers Black Sea shipping solutions as US reviews proposals",
+    "risk": "watch",
+    "note": "Grain corridor.",
+    "industries": [
+     {
+      "id": "agrifood",
+      "score": 1,
+      "why": "Grain"
+     }
+    ],
+    "economies": [],
+    "at": "2026-11-03T05:45:46.627Z"
+   }
   },
   {
    "id": "us-has-conducted-defensive-strikes-on-iranian-targets-in-the",
@@ -393,54 +479,24 @@
     }
    ],
    "assessment": {
-    "headline": "US Has Conducted Defensive Strikes on Iranian Targets in the Strait of Hormuz, US Official Says",
-    "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "headline": "US conducts defensive strikes on Iranian targets in Hormuz",
+    "risk": "high",
+    "note": "Escalation risk.",
     "industries": [
      {
       "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
       "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
+      "why": "Route risk"
      }
     ],
     "economies": [
      {
       "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
-      "id": "inflation",
       "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
+      "why": "Oil risk"
      }
     ],
-    "at": "2026-11-03T05:44:43.716Z"
+    "at": "2026-11-03T05:45:46.627Z"
    }
   },
   {
@@ -544,7 +600,21 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "State refiner advances a 9-million-tonne Andhra refinery",
+    "risk": "watch",
+    "note": "Long-term capex.",
+    "industries": [
+     {
+      "id": "industrials",
+      "score": 1,
+      "why": "Project orders"
+     }
+    ],
+    "economies": [],
+    "at": "2026-11-03T05:45:46.627Z"
+   }
   },
   {
    "id": "china-imposes-export-controls-on-construction-equipment-impa",
@@ -582,7 +652,21 @@
      "source": "https://streamlinefeed.co.ke/",
      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPQWExaVkzcXlpd3o3cXY2ZDE2clZFdXRwZDlmUEtpeTVHT21IZjM3R3pqRjJadkdjbHdRem9EaG81U1JISmVlQ0JmZF9VQkZtcncxM3VBblV3aU11bFBid1BfVUFYbTZOZUp1ZlQ4TGJSSExtNkNVSnBSTjlHa1FhcllqZFN6bHZUWGM1T3FWX0N3bHJyZGl0aFktelk5dk9CZ25UaUU0RWYydkRYZldsV1lpeDZMRmJfMW94V3FaUQ?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "China curbs construction equipment exports; Indian projects exposed",
+    "risk": "elevated",
+    "note": "Infra delays.",
+    "industries": [
+     {
+      "id": "industrials",
+      "score": -1,
+      "why": "Equipment supply"
+     }
+    ],
+    "economies": [],
+    "at": "2026-11-03T05:45:46.627Z"
+   }
   },
   {
    "id": "h-1b-visas-tariffs-russian-oil-five-ways-us-midterm-election",
@@ -618,7 +702,21 @@
      "source": "Moneycontrol.com",
      "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOZU9tRFJvN1lVbm9GTDdaaW5EcGs4UnI0M2dXVHFEbV9NV19saFFLNlc0dWtRb2ZIUW9IWkdsY1JhNlZDeXJxX2luc0JSVmI2blAyRGV6Y00tSkZ5WW1ieE1CcnVEd3ZzTEtTZXlEVW5JaFBCSk51V09WWUpiR1JxSi14OXIzVF9WSER0ZUsyNktCR2RzcGg1ZzNPZEdfd1F3TUpvdzZEN25RQ01taW5fLThFaWhPSWJaNkNnTlIteTZWZWpuY1d6QlFOaVFNQnZfUWJsdXExeE9kR1hReG05SDVxUTRCQdIB6wFBVV95cUxONlR6ZWc4MVctVzVrZlFqQmxxUmh1R0RnRW1mU0xYWHp2QjRQbXFsN0xQRzg0WW9OSlJJWXU1UjBNWUFzcjhnekJsMjhsRzdaSVBxc3kweUpjQ2pJZExvWDctVGtPb1JfcFd5YWV4X3NMbE45Z29YMFBSSTR1WGVBMDQ1M3RDR3ZiVVhTZTN0Y2cwOGdFYlZsSjBEUmd0Zl95R0c0cnhqZm0yQWs0a3pyUGpBN2wtdGtzbDRkbXRxSlE5aTh0Vk1QRU9FUzZaSTdBYXoyODQtTUxaYVhLMkVMbGYtOUV2OXFVdVBn?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "US midterms could affect India via visas, tariffs, Russian oil",
+    "risk": "watch",
+    "note": "Explainer.",
+    "industries": [
+     {
+      "id": "tech",
+      "score": -1,
+      "why": "Visa risk"
+     }
+    ],
+    "economies": [],
+    "at": "2026-11-03T05:45:46.627Z"
+   }
   },
   {
    "id": "exclusive-india-assures-commitment-to-lower-scotch-tariffs-i",
@@ -655,7 +753,21 @@
      "source": "Business Standard",
      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOaEJLZEJ6ZlphaXhSU1poNG1DMXMxNTVPXzh4c3JDdmVPNzlaMDdGT0NKcTVSbWw0NjA3UUdRWlM1UzJUY011bEFJTG9WVFA5LXlMaG5OMVNIMWUtdHZPMGg2MkZURWFrbWIzcEJzWkctM2dqdHFVMmx5S3JFZ0ZDZ2YyU2huY2lDb1M0N3RoWWlFc0tTZzBDZ19TbGVzUl9TbHBBQUNXbDJqcFlwbktWVEtyVThJa1dzVXlpX3ZUZXlKeEhuWlNXaElQbGRqQmlp0gHWAUFVX3lxTE5ZNUxrOUduSlBOektObGxLMjdfVWF6RENYaHYyOTYwS1RhRmczMlNtN05uakJ5MmVUMm9WUFVFUFcwdHBycVp1SXdpN25sb2RhVFRvNFZHMzNWSnVwN1lvNll5WVRGRlRoYTdfbktQRXVXcWVzZ29mb2R2TWV4eENqa2VIcVZYWmNnMzU4dkE4OFZzdXgtWWt3VTA0NVRFRTlraXdib2llQnNMVVpQaUJzc3E0R1BOYTg3NklUOXJ4ZXFDTFd5WGtCQXc3ZHFBU3lRMy1ZZVE?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "India assures lower Scotch tariffs under the UK pact",
+    "risk": "watch",
+    "note": "Trade deal on track.",
+    "industries": [],
+    "economies": [
+     {
+      "id": "growth",
+      "score": 1,
+      "why": "Trade deal"
+     }
+    ],
+    "at": "2026-11-03T05:45:46.627Z"
+   }
   },
   {
    "id": "massive-fire-at-hpcl-refinery-in-visakhapatnam",
@@ -716,7 +828,21 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Record crude imports support chemicals outlook",
+    "risk": "watch",
+    "note": "Refinery runs.",
+    "industries": [
+     {
+      "id": "materials",
+      "score": 1,
+      "why": "Feedstock"
+     }
+    ],
+    "economies": [],
+    "at": "2026-11-03T05:45:46.627Z"
+   }
   },
   {
    "id": "iran-has-a-2-day-plan-to-reopen-strait-resume-nuclear-talks-",
@@ -779,7 +905,27 @@
      "source": "The New York Times",
      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQVGZTblZsbjZNdDJDekcwZEpYeXN6V0k5dnl2RnRzNzJuQkNsb2UwYzlyRUFzbXpTX01VREdNRnVGcG5UNDBzeE1VRWdTUkhJTFF3dWlzZjBFZVNHLThzQ08zRmVGVnB5Qkt0V084UzUtbzc0SC1QbmNuV09UaTgwQmVMUlJGTlFka2Yw?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "Iran proposes two-day plan to reopen Hormuz",
+    "risk": "elevated",
+    "note": "Possible relief.",
+    "industries": [
+     {
+      "id": "transport",
+      "score": 1,
+      "why": "Route"
+     }
+    ],
+    "economies": [
+     {
+      "id": "fiscal",
+      "score": 1,
+      "why": "Oil"
+     }
+    ],
+    "at": "2026-11-03T05:45:46.627Z"
+   }
   },
   {
    "id": "black-sea-reopening-pressures-wheat-and-soybean-oil",
@@ -810,44 +956,29 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Black Sea Reopening Pressures Wheat and Soybean Oil",
+    "headline": "Black Sea reopening hopes pressure wheat and soybean oil prices",
     "risk": "elevated",
-    "note": "Keyword rules read this as shipping lanes reopening.",
+    "note": "Food price relief.",
     "industries": [
      {
-      "id": "transport",
-      "score": 2,
-      "why": "Shorter routes, lower insurance"
-     },
-     {
-      "id": "energy",
+      "id": "agrifood",
       "score": 1,
-      "why": "Marketers' margins recover"
+      "why": "Cheaper inputs"
      },
      {
       "id": "consumer",
       "score": 1,
-      "why": "Input costs ease"
+      "why": "Edible oil"
      }
     ],
     "economies": [
      {
-      "id": "fiscal",
-      "score": 1,
-      "why": "Import bill eases"
-     },
-     {
       "id": "inflation",
       "score": 1,
-      "why": "Fuel and freight costs ease"
-     },
-     {
-      "id": "rupee",
-      "score": 1,
-      "why": "Less dollar demand"
+      "why": "Food"
      }
     ],
-    "at": "2026-11-03T05:44:43.716Z"
+    "at": "2026-11-03T05:45:46.627Z"
    }
   },
   {
@@ -921,44 +1052,12 @@
     }
    ],
    "assessment": {
-    "headline": "Washington Explores Black Sea Ceasefire for Grain, Energy",
-    "risk": "elevated",
-    "note": "Keyword rules read this as shipping lanes reopening.",
-    "industries": [
-     {
-      "id": "transport",
-      "score": 2,
-      "why": "Shorter routes, lower insurance"
-     },
-     {
-      "id": "energy",
-      "score": 1,
-      "why": "Marketers' margins recover"
-     },
-     {
-      "id": "consumer",
-      "score": 1,
-      "why": "Input costs ease"
-     }
-    ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": 1,
-      "why": "Import bill eases"
-     },
-     {
-      "id": "inflation",
-      "score": 1,
-      "why": "Fuel and freight costs ease"
-     },
-     {
-      "id": "rupee",
-      "score": 1,
-      "why": "Less dollar demand"
-     }
-    ],
-    "at": "2026-11-03T05:44:43.716Z"
+    "headline": "US explores Black Sea ceasefire for grain and energy",
+    "risk": "watch",
+    "note": "Possible easing.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-11-03T05:45:46.627Z"
    }
   },
   {
@@ -994,7 +1093,21 @@
      "source": "Free Press Journal",
      "link": "https://news.google.com/rss/articles/CBMihAJBVV95cUxOand0Um55cE1fWEhuSHdhaF9COFdqWktPdm0tbFgyUlBwbnltd0c3RTc0T0dRNWl1WUZ1MWtnN2ZBXzIxdWF1VXVmam5ZOU1VMExHZERfYzNyenp4dE9DUnAwaEVuejhMeUl5ZnpFRUpVNnJMSkI5d3V2VjVSaFNDOTQwNXNZSmFNcVNDX1ZCWThpQ0dwLTQwUFh4czJTa243ZUk1cXdBc1hTRjBwdVJMN0tXZm11UDg1Sl9BT0xiRDItSmMteTJaN1c2T0JITjJsTlA3OXFPcU5kb3FBTjlFd3Azek5ocXBLbC1YeFp2QjJ3dzFmTklCeXFXcWpVQk8xRkMzcNIBigJBVV95cUxNSXN4Um5Gc1hCeURiekRSWl9NYlBlQU9CZEE1RTFGYTAxRHRpN29VQXpUMkZEMlZFX3YtRjU1TXUwZF9WM3NzMXFTQnBncF9yR1N1ZWc5eC15MVlzbkNfUzJVVXBpa0dkanJRMGNQQ1N0dVhaYTE4X0xuY3RBbmdySnFRN2V2ZnpDTWNYWnoteGVWQlFtaUlPR051OWxNSUxTZUl4eFJmM0JUUnd4a0pRVVVnSUU4MDduZTA2aWQwR2xvQ0QzUGtrNDRoZnRWSlZ1bVdnZGhWSU1BZ0lzb0pldlp4U1V1eU9ZUzdJMkRTbkJzNjNmQ0ZuaDRKQUtRSkxpZlBhVkVEMTdwZw?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "Large LNG importer's profit up 54% despite supply disruption",
+    "risk": "watch",
+    "note": "Company result.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": 1,
+      "why": "Gas margins"
+     }
+    ],
+    "economies": [],
+    "at": "2026-11-03T05:45:46.627Z"
+   }
   },
   {
    "id": "china-hits-middle-east-with-diplomatic-blitz-over-strait-of-",
@@ -1023,7 +1136,15 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "China launches diplomatic push over Hormuz",
+    "risk": "watch",
+    "note": "Diplomacy.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-11-03T05:45:46.627Z"
+   }
   },
   {
    "id": "new-wave-of-attacks-hits-tankers-and-lng-carrier-in-strait-o",
@@ -1061,54 +1182,24 @@
     }
    ],
    "assessment": {
-    "headline": "New Wave of Attacks Hits Tankers and LNG Carrier in Strait of Hormuz and Persian Gulf",
-    "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "headline": "New wave of attacks hits tankers and an LNG carrier",
+    "risk": "high",
+    "note": "Escalation.",
     "industries": [
      {
       "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
       "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
+      "why": "Insurance"
      }
     ],
     "economies": [
      {
       "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
-      "id": "inflation",
       "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
+      "why": "Energy costs"
      }
     ],
-    "at": "2026-11-03T05:44:43.716Z"
+    "at": "2026-11-03T05:45:46.627Z"
    }
   },
   {
@@ -1300,44 +1391,18 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Iran’s Foreign Ministry Says Strait Of Hormuz Won’t Reopen Until US Ends Naval Blockade: 16 outlets compared",
+    "headline": "Iran says Hormuz stays shut until US ends blockade",
     "risk": "elevated",
-    "note": "Keyword rules read this as shipping lanes reopening.",
+    "note": "Condition for reopening.",
     "industries": [
      {
       "id": "transport",
-      "score": 2,
-      "why": "Shorter routes, lower insurance"
-     },
-     {
-      "id": "energy",
-      "score": 1,
-      "why": "Marketers' margins recover"
-     },
-     {
-      "id": "consumer",
-      "score": 1,
-      "why": "Input costs ease"
+      "score": -1,
+      "why": "Route closed"
      }
     ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": 1,
-      "why": "Import bill eases"
-     },
-     {
-      "id": "inflation",
-      "score": 1,
-      "why": "Fuel and freight costs ease"
-     },
-     {
-      "id": "rupee",
-      "score": 1,
-      "why": "Less dollar demand"
-     }
-    ],
-    "at": "2026-11-03T05:44:43.716Z"
+    "economies": [],
+    "at": "2026-11-03T05:45:46.627Z"
    }
   },
   {
@@ -1425,7 +1490,21 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "US waives Russia-linked tariffs, boosting India–US trade",
+    "risk": "elevated",
+    "note": "Tariff relief.",
+    "industries": [],
+    "economies": [
+     {
+      "id": "growth",
+      "score": 1,
+      "why": "Trade"
+     }
+    ],
+    "at": "2026-11-03T05:45:46.627Z"
+   }
   },
   {
    "id": "ukraine-resumes-attacks-on-russian-oil-refineries-amid-tensi",
@@ -1454,7 +1533,21 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Ukraine resumes attacks on Russian refineries",
+    "risk": "elevated",
+    "note": "Diesel tightness.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": 1,
+      "why": "Product cracks"
+     }
+    ],
+    "economies": [],
+    "at": "2026-11-03T05:45:46.627Z"
+   }
   },
   {
    "id": "pakistan-lng-cargo-attacked-hours-after-iran-cleared-its-hor",
