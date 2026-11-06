@@ -1,336 +1,711 @@
 {
- "scannedAt": "2026-11-05T05:45:49.301Z",
- "window": "4 Nov 2026",
- "model": "Claude daily routine",
- "headlinesScanned": null,
- "feedsOk": null,
+ "scannedAt": "2026-11-06T05:44:06.763Z",
+ "window": "5 Nov – 6 Nov 2026",
+ "model": "Keyword rules (no AI)",
+ "headlinesScanned": 549,
+ "feedsOk": 15,
  "items": [
   {
-   "id": "mkt-nov4",
-   "date": "2026-11-04",
-   "theme": "Foreign flows",
-   "headline": "Sensex rises 384 points to 77,301.40 and Nifty to 23,960.60, a fifth straight gain; smallcaps jump 2%",
-   "summary": "Midcaps rose 1.3%; media, metals, FMCG and realty outperformed while IT was the only losing sector. Rally broadening after four strong sessions.",
-   "rationale": "Cheaper oil, US election relief and heavy foreign buying are lifting domestic-facing stocks; IT lags as the rupee firms.",
-   "horizon": "days",
+   "id": "fx-rupee-strong",
+   "date": "2026-11-06",
+   "theme": "Currencies",
+   "headline": "Indian rupee rises nearly 1% to 94.47 after RBI actions",
+   "summary": "Signal: a stronger rupee. 25 reports from Moneycontrol.com, NewsBytes, News On AIR and 19 more. Related: “Rupee flat at 94.49 against dollar after hitting two-week high”. Ongoing: also reported on 4 of the previous 7 days (first 30 Oct).",
+   "rationale": "A stronger rupee lowers import costs and inflation but trims IT and pharma exporters' rupee earnings.",
+   "horizon": "weeks",
    "confidence": "high",
    "industries": [
-    {
-     "id": "materials",
-     "score": 1,
-     "why": "Metals outperform"
-    },
-    {
-     "id": "realestate",
-     "score": 1,
-     "why": "Realty gains"
-    },
     {
      "id": "tech",
      "score": -1,
-     "why": "Only losing sector"
+     "why": "Exporters' rupee earnings shrink"
+    },
+    {
+     "id": "energy",
+     "score": 1,
+     "why": "Crude imports cheaper"
+    },
+    {
+     "id": "transport",
+     "score": 1,
+     "why": "Dollar costs ease"
     }
    ],
    "economies": [
     {
-     "id": "equities",
+     "id": "rupee",
+     "score": 3,
+     "why": "Rupee strengthening"
+    },
+    {
+     "id": "inflation",
      "score": 1,
-     "why": "Fifth straight gain"
+     "why": "Imported inflation eases"
+    },
+    {
+     "id": "flows",
+     "score": 1,
+     "why": "Currency gains attract investors"
     }
    ],
    "sources": [
-    "https://www.business-standard.com/amp/markets/news/stock-market-live-november-4-nse-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-q2-results-ipo-today-126110400107_1.html"
+    "https://news.google.com/rss/articles/CBMiowFBVV95cUxPRWFCTk9IM08zZDZMZ3JvaWsyX2Iyd2VSdXY5NzRwZml5V2haNmZzdUxMbWlieWxXa20yeDIwWXNEVjdOSUFqSjFnN2ZjZUF1OTR4ZnZuNnlnakNDYnN0eXhlNUNJRUtkNERKRDQ5TmRnd09OUWhJVVJGQU54enJTMllBVGgwNXY0MHdkYmV1NUgtcl9CS2txcDdDeWJmQ04xZ0hZ?oc=5",
+    "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNX1Z6bDZMWWQzdmExVE4yWFF1WlB3Y0ViUWdsbHdfN05PQ2ktSkJ3QWJmRkxtbU9kQlNtMWUwMFdNTWhoVUprazAyVFd1aV9DQ1FFMU5nUG0yd2xuWHNYQVpPdFlIdTJqc0xKcUR1Q0pFendjdjJRZHkwQzUyZHN0d2t2dUxfTUlSQW8wTWVoMm1DakxtZmp5TjVYZTc0ZEg5N28tZTVNa3ZZQVnSAbABQVVfeXFMTmlYbDZDY3pDZTE2MlZsT1F4WS14ZmZxUHozaFllTW1jODhoekVFRDVzM2JIbjU3ZlB2MURGUExleVBxUlVCcTlMQ3EyVldSUVFYRTV0OEhENE9pa0J4TUdWMnBYQnZsb2NBcHo4cUdiQmhPZXRTYms2dGhFc1VpcjhMemw5YlZ6TW5wX05sTDAtc3l0MF9na1h0Wnh4bEJ6QjZEbVVTb3MzYlRBMU5JTno?oc=5",
+    "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPSGpueU9pUmxoemlIV0hBVGtLRHV1VVJScHBLNzFKcUo4SVNKcFVlNGVHM2VTWlVtU014OVNOVzZmQTNxOXg1bGRfYnpWZ2tZSjc2WURJdmQ4VDNBaGhBT3JWNEl4YWtXa2JGN2h2dVR6UU13WnUwRDJrbVgwd1ZXenhzSmo4TXd2SjE0UGJlS2FUQlBJbkY5WUZMa1RiMlQ2dThVUW1WZkh1LXlIRnZ5WnZFUmFMSURnRGdWMjFBd19PUEl0djRSbW5yTklUN1RSSkHSAdcBQVVfeXFMTmxpRTZ5bGtTazdLLTZJQzhvU0JaOEl6WUdTUE1tM1NucGl6cFFIX2RDODlIanRlQXVmb2NNcDR0SUNoYTExZ3RWN2JfT3gzMHJoV2JEUVIzZ1FpUmlNN0hRWFRXTjdoR2Z6cS03TXVldXllaFhjaG1mVmFYVVFvb2RkRGM0N1d5cEpyU2RjNEE4YWRGbzlhM3Axbi15WVVnMmVOSjBuMWVYWXFfZ0RTVFVLZVhpSXQ2VG9qT19EbkZ3VmxRUHdWUXFjMVBjUzZCQ01GOHRIRUk?oc=5"
    ]
   },
   {
-   "id": "oil-crash-nov4",
-   "date": "2026-11-04",
-   "theme": "Commodities",
-   "headline": "Brent crashes about 8.7% to near $94.6, a two-month low, as the White House ties midterm losses to the war",
-   "summary": "Fourth straight fall from $117.64 on 30 October; slipped toward $93 on Thursday after the US ruled out immediate strikes. Hormuz crossings reportedly near pre-war levels. Sharp reversal.",
-   "rationale": "A $23 drop in a week sharply cuts India's import bill, fuel-subsidy burden and inflation risk, easing pressure on the rupee and bonds.",
+   "id": "chokepoints-up",
+   "date": "2026-11-06",
+   "theme": "Energy & geopolitics",
+   "headline": "More Ships Change Course in the Red Sea After Houthi Threats, Shipping Data Shows",
+   "summary": "Signal: shipping chokepoint disruption. 6 reports from Crude Oil Prices Today | OilPrice.com, UNITED24 Media, gCaptain and 3 more. Related: “France Extends Stay of Black Sea Patrol Plane After Deadly Russian Attacks on Shipping”. Ongoing: also reported on 6 of the previous 7 days (first 30 Oct).",
+   "rationale": "India imports most of its crude and much of its LNG through Hormuz and the Red Sea; disruption lifts oil, freight and insurance costs, widening the import bill and pressuring the rupee.",
    "horizon": "weeks",
    "confidence": "high",
    "industries": [
     {
      "id": "transport",
-     "score": 2,
-     "why": "Fuel costs fall"
+     "score": -3,
+     "why": "Freight, insurance and fuel costs rise"
     },
     {
      "id": "energy",
-     "score": 1,
-     "why": "Cheaper crude"
+     "score": -1,
+     "why": "Fuel marketers' margins squeezed"
     },
     {
      "id": "materials",
-     "score": 1,
-     "why": "Input costs ease"
+     "score": -1,
+     "why": "Crude-linked inputs costlier"
     },
     {
-     "id": "agrifood",
-     "score": 1,
-     "why": "Fertiliser costs ease"
+     "id": "consumer",
+     "score": -1,
+     "why": "Imported inputs costlier"
     }
    ],
    "economies": [
     {
      "id": "fiscal",
-     "score": 2,
-     "why": "Import bill falls"
+     "score": -3,
+     "why": "Oil import bill swells"
     },
     {
      "id": "inflation",
-     "score": 2,
-     "why": "Fuel prices ease"
+     "score": -1,
+     "why": "Fuel and freight costs"
+    },
+    {
+     "id": "rupee",
+     "score": -1,
+     "why": "Importers' dollar demand rises"
+    },
+    {
+     "id": "equities",
+     "score": -1,
+     "why": "Risk premium on Indian assets"
     }
    ],
    "sources": [
-    "https://oilprice.com/Latest-Energy-News/World-News/Oil-Crashes-9-as-Trump-and-Vance-Blame-Iran-War-for-Midterm-Rout.html",
-    "https://gulfnews.com/world/mena/trump-weighs-iran-strikes-or-deal-after-midterm-loss-as-vance-urges-agreement-qatar-mediates-brent-oil-falls-to-93-1.500736556",
-    "https://www.regionalmedianews.com/news/national/business/oil-falls-for-a-fourth-day-on-expectations-for-lower-risk-of-iran-war-escalation/"
+    "https://news.google.com/rss/articles/CBMisAFBVV95cUxNNm4xcEVDa201dEJsd2R6VFdHRWhIVU9TOWlIZFVWQWtZaHJmdmIzRTgzTFhSV0RuM0RHdXE0ekpQYk96dlMtUnZvdWVqdFRVODBWajAtcE4tV2pBQVUxUHdjWm50dE1Hb0FibWF2aTNsVEdOR3VTUm03Q3o2NDRGc295d1l6eUNpLVFhMHl5SHBHNjdMT1hNbzNINXdmOW84ZnA3Wm5UdmdfUEg0MlVTUQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNOEhqNkpMQnhnV184STVQQ2w3ekU5NzlhNnpkNXFTd08zeVg1WnZsRVB0cFNCSHlCeVY2R0p2SmphZUotWWJKNlVFSWYzSU9SNWlibnQ0X2ltSUdFODNCOFZvYlctTmp1eWllOEtwUjhabk9GdmhRZ1NQdnZIdldhdzY5aHZIYnJBQ2JRZjVycHhrODJGVWt5NmhqemhITkVkSnZhZUdlemFoU0hEMHlwbGQtZnh6MmdUdnBFR3hXLVVzQQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcEhLcXhyaEwzclJBZ3dWQXVMT0ZfeWJxNmNLTzBjTzB5R2V2U1RIeTRQMFRDbmdXTE9QWXE0U1hhMDc3T3N0TUpqdzZvcmFubkI2UTdYT1pQOHNMOXFpeFFYTE1nRUNCeEExeFlka0oxakpGanhPMlJaNGYzSXRZVC0wN1FWRVdtZjBkb2FVNlZuSTB0YWU3RHpnMXAySkt3S0VNMzVSUG9EUlptd05Wc2Z0WFhvVFV6OUE?oc=5"
    ]
   },
   {
-   "id": "iran-india-exempt",
-   "date": "2026-11-04",
-   "theme": "Energy & geopolitics",
-   "headline": "Iran's government confirms Indian ships are exempt from Hormuz restrictions, citing medicine imports",
-   "summary": "China, Iraq and Qatar are also exempt; India pays no transit fee. Confirms yesterday's lawmaker report; Iran links it to India's political support. Upgraded from unverified.",
-   "rationale": "Free passage for Indian-flagged and India-bound ships cuts supply and freight risk for oil and LNG importers, a direct relief for refiners and gas users.",
-   "horizon": "weeks",
-   "confidence": "medium",
-   "industries": [
-    {
-     "id": "energy",
-     "score": 2,
-     "why": "Secure crude and LNG flows"
-    },
-    {
-     "id": "transport",
-     "score": 1,
-     "why": "Safer passage"
-    },
-    {
-     "id": "agrifood",
-     "score": 1,
-     "why": "Fertiliser feedstock"
-    }
-   ],
-   "economies": [
-    {
-     "id": "fiscal",
-     "score": 1,
-     "why": "Lower energy risk"
-    },
-    {
-     "id": "inflation",
-     "score": 1,
-     "why": "Supply relief"
-    }
-   ],
-   "sources": [
-    "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOei1QZDlva3hvNEpiWnpMc1pzTk12enM2bVF1UzR3c1ppS1cyZDNFcW5DOWdoSm9iVS12VTAzb2p1b3ROc0Z0T0ZWVWlWUWxTeWpWOXRJWnY3c2xiTVQ4ZjNfSGZHUTJxY0xtQmF1c1ZDSWZDQlhfWE1USGkzRDJsb2EtYzItWmhOa2RDbFR5VWxLUFVUNUY1SzdKVlJhNzg1Z1lRNEkzOENtelBkNlY5MGZ1NFBKMkpHN3pmM2tJdnVrRWhIM2t1Y041MVFZSHQzUm56a0ZCaDVwLTFp0gHcAUFVX3lxTE56LVBkOW9reG80SmJaekxzWnNOTXZ6czZtUXVTNHdzWmlLVzJkM0VxbkM5Z2hKb2JVLXZVMDNvanVvdE5zRnRPRlZVaVZRbFN5alY5dEladjdzbGJNVDhmM19IZkdRMnFjTG1CYXVzVkNJZkNCWF9YTVRIaTNEMmxvYS1jMi1aaE5rZENsVHlVbEtQVVQ1RjVLN0pWUmE3ODVnWVE0STM4Q216UGQ2VjkwZnU0UEoySkc3emYza0l2dWtFaEgza3VjTjUxUVlIdDNSbnprRkJoNXAtMWk?oc=5",
-    "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNN1RwV1RlYVRUaTFuQUdzU1hQOXU0Y0tLWkh1eFQ1NndnV3VtUEllMUhWMFFWOHZIbnVTUkkwa3BBOWJ6SmlsUG5oT01PY1hiUEZyNkRnbElKUUtESy1VelBiT0FKbmRDcjNndVJwVGNkRTJheWdPUjBvNzlTY3QtUVpZVGFlZ095dUpuQTZnbnN5bmJyczd2N2tWODc3a0E2RW14U3hYZ0hDNGFsQ0l3eEY3SkRSb21GakhwdzE0dXcxcVhTNDhOaHRoZTJ0akdVcG1ETURUaElDVVgxc3NHTHRnNNIB6AFBVV95cUxOMDg4aEJCM1FuNnJrX0cxWmF0MW5Ga3MxNmJnZDJqUjc3OXdHbGgxY1lYbjRhcVhxMldlT0dpcFZYRWRCOXN2bl92aXVySlgtb2JnVjNXbWpfTVhXYWtHR0NmczV5b3VUTmJYai1oOVJwVTNJVVJNT0hZQXpqMWg1ckhEN0JiYS1fSW1URFFZME52WEhpZ3F1TGdSMUJSUkFvbnZOOHd4OFJkZGswQ1Z0SjRPWHgxWXJvVE54MlpfLVlHbmRsNFg4V0FOQm14dFIybEw3dDkyNFdnRkxDNThkNk5BM3FQQmpT?oc=5",
-    "https://news.google.com/rss/articles/CBMijgFBVV95cUxNUTBQREIxOHFhRzBwNWF5QUM3QkcwZVBGQXh2ZC1tcE9RQ2hJNWR1cTBVQ2xILUdJMHZEdjJ3Z2FLVWFzeXhmOGhOcFhYWDRlaHBfZ0QyVFNUc096ZDhQTmdURUFJc3VYTmlON2c2TUt2aFJ6MktueDFiSDRmbjUwSmpteHItWDV5M0loazNR?oc=5"
-   ]
-  },
-  {
-   "id": "us-sanctions-india-network",
-   "date": "2026-11-04",
+   "id": "tariffs-down-india",
+   "date": "2026-11-05",
    "theme": "Trade",
-   "headline": "US sanctions an India-based shipping network accused of helping Iran evade oil restrictions",
-   "summary": "An Indian couple and their firms, plus a Turkish company, are named over fake ship flags and shadow-fleet support. Expanding US crackdown; new.",
-   "rationale": "Wider sanctions raise compliance risk for Indian shippers, traders and lenders handling Gulf oil, and could complicate trade talks as Iran grants India favourable passage.",
-   "horizon": "weeks",
+   "headline": "US tariff relief unlikely for Indian auto parts makers despite Democrats’ Congress sweep",
+   "summary": "Signal: trade deal or tariff relief for India (India). 17 reports from BusinessLine, The Economic Times, ANI News and 12 more. Related: “India-ASEAN Summit unlikely to break deadlock on trade pact review”. Ongoing: also reported on 2 of the previous 7 days (first 30 Oct).",
+   "rationale": "Lower tariffs or a trade deal open markets for Indian exporters and attract investment into export manufacturing.",
+   "horizon": "months",
    "confidence": "medium",
    "industries": [
     {
-     "id": "transport",
-     "score": -1,
-     "why": "Sanctions compliance risk"
+     "id": "industrials",
+     "score": 1,
+     "why": "Engineering exports gain access"
     },
     {
-     "id": "financials",
-     "score": -1,
-     "why": "Compliance exposure"
+     "id": "autos",
+     "score": 1,
+     "why": "Auto-parts exports gain"
+    },
+    {
+     "id": "agrifood",
+     "score": 1,
+     "why": "Farm exports gain access"
     }
    ],
    "economies": [
     {
      "id": "growth",
-     "score": -1,
-     "why": "Trade-talk friction risk"
+     "score": 1,
+     "why": "Exports pick up"
+    },
+    {
+     "id": "rupee",
+     "score": 1,
+     "why": "Better export earnings"
+    },
+    {
+     "id": "equities",
+     "score": 1,
+     "why": "Exporters re-rated"
     }
    ],
    "sources": [
-    "https://news.google.com/rss/articles/CBMilgFBVV95cUxPSExrck15NjVKS1drSFprbV96aGlBYkh0X1JUOG0wckVkSy1Ic0pzMXRlckpQU0tUdm9HUk16MGFzaFBhcmVkVllFdmk4ZjNRLWNjOGJYTTEzcjZueVZtX1EwdFJEdUNuWFl5VDdtSFZYUjFlbWpkQ0x4dzlNOFV0NVVLTWYteHNrcE9OX0YtNW81T1BZbXc?oc=5",
-    "https://news.google.com/rss/articles/CBMidkFVX3lxTE1qX1ZiZTNNeTJ1SUZJUFdJa3JSWk5XU3dranVCaEg0akVfOG9EYUlBa1d5ZlFMZWdRdDN0QmNKV2dkam5KeXJiXzJ6enpTVlZQbHNDUURhbVRMRU1VeDFrM250TnA5RE1PdkZsa1pOeHFXYlgyV1E?oc=5"
+    "https://news.google.com/rss/articles/CBMi-AFBVV95cUxOdk9SLUxBMkxpZ2tHZDA1SDJVUHp1RmpNdzZWajlwTDhwZXFvcjN4bG1saVd4b01NaFo5LVRoQkV5Sy1FVTVHaVUyMlF4TXhET0NRWXk3cGVXaE8wcURjeUUtbmhuRjdUcUhXU0xmbm94N0tuUGc0VDFCclYwak0zcW84cGNmNDFaU295cFlnYnBMWWlmV3ZhQW8xY2R3eHdZODZteGc0SHpDQ0pHR0pQdzYzMzBReW9weXVaRDhlMDRMeTZxU3hCUDBuaHNCQl9hVnQ4aG5FU21XZk10cUxpSjh6b0pKakRURzdSRkFLdGU1VjkxXzJlRA?oc=5",
+    "https://news.google.com/rss/articles/CBMiywFBVV95cUxOVlhnN1RvN1FEbm1hVlFCMjBKLVp5S24zQ2hMU2JrV09VdGRLM2JZVkhURnRLdjFYREttNWZXQVQ1OGpMV2JCWV9WOVN2WU80ZDNyV2tUSW4zQTBtd2F6R3R4bHJEWDQ2R1hpQ0VuMnFZRlA2TUV0TGRJbVc0SG1sTzUxQzZxbkRBQ3hSZnF1TmZDRFlyMXNSV1pzYnp0Q2pMcmhuMnRjbG1VaUFRZ3AycFlWNFF1MGh2cGtWRm5vaVdXWklHNzJ1MlBjb9IB0gFBVV95cUxPVlFEeDhpZmhzbVFMZTRkUVIxUWQ1ckFWZ2RwN1dFZU1way1od2h3Z3cwczFpeHNpcWEwaEZYOXNHeXVDT0tnMWdWWjFIdGc4OW5mMW14N2RobXVybnJQTUtYTUZXWEdjQVhSQldVMXpmYkkxcjZNTkFLOFRvRENTal9nVkZ0Q2YzUE9FbVQwN1VRVHBZd1NpMjcxRnFDVll2eXlNMUtvU1dsYnB0ZEVBdmpXdmt1dXFwWEg3YTkzQzlJQlQxd3JVYjR6WUJsTTBnb2c?oc=5",
+    "https://news.google.com/rss/articles/CBMi_AFBVV95cUxQRThTdE13UTRQbzhCTDltcHBESG5ycXo4RW9MSE5qSExtbXAzTU5Ea3MwVnFOVldUVDlLOFZkcVdNdnhRa2YwM3Y1RTNucGtzT3ZpWGJfTXZvSjVSdFNvdzc4UW9qckJkS21BZGJLY0dJRGJSQWtieTNoU2NnVjJJMzhzUEJSLUREckJHQll4YTBKZUdYdU44amhlSnpUV0FOMzM3ckZnclRxMENXUnlJaVI2M0kzM0NZZGI2X1FDZEdPMmhfSExFdGRtMUZBZDJ5NmJMdnhxTW9qYTZtb0JHWWs0WXdnYWlWTWdSQVlWRzZFTl9HYmt1enI2dDHSAYICQVVfeXFMTnFuU3dxbUNiaUU2dGhHYnJsTGl0UU54XzZNWGtaNVFvMldsMnl2WHowZThYcGstQWlsVmR2Z2RYOUItNE5XVVRSVzlQckkyZV8xNk8ySHJYOEJDLV9PdGlTTmlfVG5FVk8tbEVtT1dSdFhOTEVnUF84QmVENXY4a1lJMFJlblZwcHQtNFRTRzRaNndfbFVBSWljaVo2Y2dnTU44ODV5QUhoeFNnb3ZQODVQTFUwdnFReXRjNTItaGhtX3BNSkRoS08yamNjWDlMWDVHNzBkOEFtQWwxUUVaRXZpNHRUZXBDTElTNEttQTBhM0lvZHNueWRtbjd4TG9MOUl3?oc=5"
    ]
   },
   {
-   "id": "fii-nov4",
-   "date": "2026-11-04",
-   "theme": "Foreign flows",
-   "headline": "Foreign investors buy a net ₹7,284 crore, fourth day running; domestic funds sell ₹3,712 crore (provisional)",
-   "summary": "November foreign buying now exceeds ₹17,000 crore after October's ₹52,100 crore exit. Strong reversal.",
-   "rationale": "Heavy foreign inflows lift large caps and the rupee; domestic profit-taking signals some valuation caution.",
-   "horizon": "days",
+   "id": "oil-up",
+   "date": "2026-11-06",
+   "theme": "Commodities",
+   "headline": "OPEC Sees No Peak Oil Demand as Energy Security Beats Climate",
+   "summary": "Signal: higher oil prices. 6 reports from The Economic Times, Investing.com India, DD India and 3 more. Related: “Crude oil futures rise tracking global trends”. Mixed: 5 reports point the other way. Turn: earlier readings (5 Nov) pointed the other way.",
+   "rationale": "India imports over 80% of its crude, so dearer oil widens the trade deficit, weakens the rupee, feeds inflation and squeezes fuel marketers, airlines and companies using crude-based inputs.",
+   "horizon": "weeks",
    "confidence": "medium",
    "industries": [
     {
+     "id": "transport",
+     "score": -3,
+     "why": "Jet fuel is airlines' biggest cost"
+    },
+    {
+     "id": "energy",
+     "score": -1,
+     "why": "Fuel marketers squeezed; upstream gains"
+    },
+    {
+     "id": "autos",
+     "score": -1,
+     "why": "Running costs dent demand"
+    },
+    {
+     "id": "consumer",
+     "score": -1,
+     "why": "Paint and packaging inputs costlier"
+    },
+    {
+     "id": "materials",
+     "score": -1,
+     "why": "Petrochemical inputs costlier"
+    }
+   ],
+   "economies": [
+    {
+     "id": "fiscal",
+     "score": -3,
+     "why": "Oil import bill and subsidies rise"
+    },
+    {
+     "id": "inflation",
+     "score": -1,
+     "why": "Fuel feeds into prices"
+    },
+    {
+     "id": "rupee",
+     "score": -1,
+     "why": "Importers' dollar demand rises"
+    },
+    {
+     "id": "equities",
+     "score": -1,
+     "why": "Margin pressure across sectors"
+    }
+   ],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMilwFBVV95cUxNZ1FFeG5nSXJ1cXN6N3drQ3RPZFRsUFd6VzlJNXltT204bW9obVlQWEFvOHQ4WDBhSC02NXUtS29CNlZzS2lNRWh6WGM1TFBpUS1MS3hjYVRuMFVaRkZxclFEbmtiaHdYZV9MUHNfVmFpNUtYX3N3R3ZqR3c2Vlc4ZFE5TENWQjBGcnFaLUZjU29VeVNYcU1v?oc=5",
+    "https://news.google.com/rss/articles/CBMiggFBVV95cUxQak5VbGItSHQtcEZnb3BYVFBzR19mQnJPVkNpLXZnYURybmFsQVpzaTE4YlFLZDhCY2Y3MGJ0eEpGcFpycEJ3aDYxdGxNcWZlMEM4ZV9zMkZCSXk3aXFDLW1hX09NRnRNcHdVWlUyUndrVnFNNHFicWxudS1kTjQ5VHJR?oc=5",
+    "https://news.google.com/rss/articles/CBMixwFBVV95cUxPa0lVMEJnaXF3NEJkdjZrZjNhQlJtVWJQdEItOGd6Z200bmlHVkxucGNWeERaZUxLcHNaY1JFMzA3U3QzVVZxZFRaMjB5bEViNDcwUi1vZnFkYWNTUTBTN1VRUFpyN1FDVTZGeDRwNzJZWFRkRjdxRWVtX1VCRktzRllIUzFVTFA2UEFqV2QxVl9Oc0JfcVppWGtuYzVtNzUwcEx4Y3ZZc3g2MjkwLUxwUDk0VkQ5NjBHOHVjaGxoalB3RENwOEo00gHMAUFVX3lxTE0xNUVnZ3BhY2pCdlFTdHRuVGV5M2s0b1lXQnJvbF96YTkyZU9XZUpZX2oyVEpJNFc1SG8xY2F3X1lJNzJmVU9hZ0FtVVlSc19Rc092TUFGbkJXX2t6ME5mdEtVUEIzZzh3cXV3Nkltem9QYjQteTlKR2lCZGxnT2VKMWdqam9GMGN0bjdfcFdBWFczX2ZuQlYtbWswMDZ1RmlURkh6WkppREZRc1hmV2NlSXlMcnZmS29CWlBwTWVYMHJhRFlXbVM0czFaRQ?oc=5"
+   ]
+  },
+  {
+   "id": "rates-up-us",
+   "date": "2026-11-05",
+   "theme": "Monetary policy",
+   "headline": "Fed's Hammack, Barkin favor gradual rate-hike path to lower inflation",
+   "summary": "Signal: tighter US monetary policy (US). 6 reports from Reuters, FXStreet, www.tmgm.com and 3 more. Related: “Cleveland Fed President: \"Further Tightening Needed to Curb Inflation\"”. New in the last 24 hours.",
+   "rationale": "Higher US rates and yields pull foreign money out of emerging markets, weaken the rupee and push up Indian bond yields.",
+   "horizon": "months",
+   "confidence": "high",
+   "industries": [
+    {
      "id": "financials",
-     "score": 2,
-     "why": "Foreign buying"
+     "score": -1,
+     "why": "Foreign selling in heavyweight lenders"
+    },
+    {
+     "id": "realestate",
+     "score": -1,
+     "why": "Funding costs rise"
     }
    ],
    "economies": [
     {
      "id": "flows",
-     "score": 2,
-     "why": "Fourth day of inflows"
+     "score": -3,
+     "why": "Foreign investors move money to the US"
     },
     {
      "id": "rupee",
-     "score": 1,
-     "why": "Dollar supply"
+     "score": -1,
+     "why": "Dollar strengthens"
+    },
+    {
+     "id": "bonds",
+     "score": -1,
+     "why": "Indian yields follow US yields up"
+    },
+    {
+     "id": "equities",
+     "score": -1,
+     "why": "Risk appetite falls"
     }
    ],
    "sources": [
-    "https://www.quantsapp.com/fii-dii",
-    "https://trendlyne.com/macro-data/fii-dii/latest/snapshot-pastmonth/"
+    "https://news.google.com/rss/articles/CBMipgFBVV95cUxPTDI4cDU1ODdtRUFrTlZiTjZUbUlKNjZicWpjOHp0YnhONENvNEhMemJ3bWNyR1Rpd0d5akp3Yk1FVElzaDlBenRLRkttdjFvOXFZaGt6dm05WWdZZXpqcU5vazJSY2p3UEx6dkFtM18tNU5nVFZEb0dFY3NHUkRGZlAxS2xJVHZPWWFYOWNUd1lsU2VnbEliTXZDYnp1Um5aX2M1a3Fn?oc=5",
+    "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5LYndQdGpYOTJlUnhxOC1veUNycW9henRXa25kODRtM3BkMjFCdGpFT29odGVCTlBtS1dPelk4YXFhekY2SkZsUTF4Y1E0ZXhLc2FwSnhaVG13ekhoVk5xMmhnM3M?oc=5",
+    "https://news.google.com/rss/articles/CBMiowFBVV95cUxQNmhPQlgweTZPa3U4azZNZXIxZEFjcHEzalVNb1RUOHFnVUtrOVpGejVabFFnQmJoOC13MEp5end6VUVPckhseUN6R2E0cTQ1ZWh2aGpUc3hQZFhvbUtrbWR0VlpCaWtvMWY2dmFVMllucnZHX2pDaURUY2ExTnI5NWJSN0tXZGw0bEpScjZOR18ydnZzTGxxMEVyb3Z4ZkliRXI0?oc=5"
    ]
   },
   {
-   "id": "rupee-9458",
-   "date": "2026-11-04",
-   "theme": "Currencies",
-   "headline": "Rupee gains 17 paise to 94.58 per dollar on easing crude, a weaker dollar and foreign inflows",
-   "summary": "It traded between 94.50 and 94.87; second straight gain. Strengthening.",
-   "rationale": "A firmer rupee lowers imported inflation and oil costs; exporters' rupee earnings dip slightly.",
-   "horizon": "days",
-   "confidence": "medium",
+   "id": "rates-up-india",
+   "date": "2026-11-06",
+   "theme": "Monetary policy",
+   "headline": "RBI tightens cyber oversight of non-bank payment system operators",
+   "summary": "Signal: RBI tightening (India). 3 reports from bfsi.economictimes.indiatimes.com, Business Standard, Livemint. Related: “Sebi tightens rupee derivative norms to align with RBI's $5 million threshold”. Mixed: 2 reports point the other way. New in the last 24 hours.",
+   "rationale": "A higher repo rate lifts loan rates for homes, vehicles and businesses and pushes up bond yields, though it supports the rupee and lenders' margins at first.",
+   "horizon": "months",
+   "confidence": "low",
    "industries": [
     {
-     "id": "energy",
-     "score": 1,
-     "why": "Cheaper imports"
+     "id": "realestate",
+     "score": -2,
+     "why": "Home loans get dearer"
     },
     {
-     "id": "tech",
+     "id": "autos",
      "score": -1,
-     "why": "Lower rupee earnings"
+     "why": "Vehicle loans get dearer"
+    },
+    {
+     "id": "consumer",
+     "score": -1,
+     "why": "Dearer credit squeezes spending"
+    },
+    {
+     "id": "financials",
+     "score": 1,
+     "why": "Lending margins widen at first"
     }
    ],
    "economies": [
     {
+     "id": "bonds",
+     "score": -2,
+     "why": "G-Sec yields rise"
+    },
+    {
+     "id": "equities",
+     "score": -1,
+     "why": "Higher discount rates"
+    },
+    {
+     "id": "growth",
+     "score": -1,
+     "why": "Credit growth slows"
+    },
+    {
      "id": "rupee",
      "score": 1,
-     "why": "Second straight gain"
+     "why": "Wider rate gap supports the rupee"
     }
    ],
    "sources": [
-    "https://thesentimes.com/rupee-gains-17-paise-to-settle-at-94-58-against-us-dollar/",
-    "https://telanganatoday.com/rupee-rises-to-94-58-as-foreign-investor-inflows-support-local-currency"
+    "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQR2lPUDBvbjFwZk1yN1BiV3hMTUxaTnZVbU8ya0l3NTdVNVh2dEl0b2FBcjlTaVNPTW9PUXZLY29nR21RVjVfUzJtREJ6akNoSnhqNndNckVBN2Q4cUM3Q1ZzZ3RMUHd2cjhvcVVyQlZSN1NLbnUxbzQ1YXpBcTR1Y19qdXpWWDNiZ2tjbmZTYkJpUUtxTlNuUW55VVlRVHFuWm9qV0RDZEFpSXpkbmFsTTNmNV9FSl94d1lVUHJrYlh6WW1xeWNpY0FlSzRtSGpLUndYcUtyMlR0RlRDblVz0gHkAUFVX3lxTE4tVXpGS2sxVUdUZkJwS1dCZmJ3SWFGaTcwMVZOSXE3cDl5ald1UnFYRmRwWWJ2UVJUaENmLWZGd2J4QU9SV0d4azl5WFplNjJyMG41dkJpbmp5VmR2Tm5nYUJjOWZQU0N5SUhlVU53N0ZrQnU1T3dTREVMM2hLUDJoMmVwQWEtZ1BZWG0wQWJ1VzgwX3RXbmVObVhOVDh0ekxnakRnXzBwQ0pwZDh2UmJnbWw3eWNOWjJVQkdFWS1GQmZTV1VnUlRpNXVEdEk5bk45ZEo1VWo2SjV4dkk5SHhWZkNfNg?oc=5",
+    "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQZlNacnRiZXNoNTFGcm9uTFZNaHZzUEtKRk5IVWdUcnMzNXV5b2NxZVZHUXhHVll5Wm9MTFF5bkZkQUx1NkN4TExacUVmSlROLVpVc00zVVlGbkg3Q2NKTVFqa2tvS3hGdUxPRzN4R2VrYndnNTRuY0U4SDBBVE5NZXdOV2R1aFJpUG1zbFBqcXE2TXdvOTFlN3hpVy0tdjhvZ09mMkY1SUhtbTh4YW9BVUNHamRfaE54cGZXWVV1MzBqUWfSAcgBQVVfeXFMTjZrSEZxUzVwaVRTY01ScDBPeFpfdUp5Z3o4a2Z6aWM2Rzl6QlZtUkdDLXF1SmhCd25ySmlCWk5fNnVZNXY4azIzZ0lESmZEcEw3SEFlWnFESnpwNUZkRmZpYUhGNjZ4MjdBYzJzeXV4ZTFNVV9EMHItamVDSlQ1SXhMaGhxdHNaRVhCbEJCSHhCeFNhRnBVNjFhMXJwQVBDYkdYdFFzSmFnLWh6OXM2bjY1UnZUbFg2d3pTYkY3ZURXU0pKOWpMZTk?oc=5",
+    "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNelhTWWFOYmc2eVFiM0ZfVkwwUWpuOG1fYkhJTHJndGx1WTBYMDZub1dCWUtaTlJGTzBhWV96U0ZVNnNsaHNGRzNZUUNfZUlfQno4MFhzY3RYYmNTVHVqTDhTajRONzN1Tjl0TDhYZXMza2V3RHIydzlaUDJTZlZQSW8ydnU3VVlDXzNyaUI5M3NvUFpLNmVTSW9ZMDVjSWM3d2NMaWJvY2E4b1VUNWhQU3hwNzd1bHRYOHFyY0ZJWmZNSDByYTNMWnRCZEFYWXNyTHN6dXRRamFSY050eTlHUlRqNlFzQWVtVlJ2ZkhGUGVpblXSAfgBQVVfeXFMTUNCSWl6Y2FBdU4tOFNMN2F2UlF4NEJ0NFZybFFHcW1jYzJiaHl4SmoxOXk5eF9kUmoyUHdsaVRmUGxqcUpqenRqSXNZQ3Rjc2t2NkpHSWhSVnR4UTR2b3hNQXpJeV9tM1B1N0ZRdjcxMXNKQlltVExoUG9KSFRxZEFpQWU5LUpVQjIyd21YRnRUc3AyOFlmUTY3c1V5NXowZUxjbGZ6VGs1b3oyc3p5VTdUbWo1RGJsUFpmZmFqN2ZCRzBwNURuUUJ5Rm5JckdCTFRaaDU0MEpvNlNDUHVuMjFBNFNjN25jenQ0VjRiRXJwU1o0emkwMk0?oc=5"
    ]
   },
   {
-   "id": "gsec-726",
-   "date": "2026-11-04",
-   "theme": "Rates & bonds",
-   "headline": "10-year G-Sec yield falls to about 7.26% as oil cools; 5- and 30-year yields drop 7 bps",
-   "summary": "Extends Monday's 10 bp fall from near 7.48% last week. A lender's research team still sees 7.25–7.35% through November on tight liquidity. Easing.",
-   "rationale": "Lower yields reduce borrowing costs and lift banks' bond books; tight liquidity may cap further gains.",
+   "id": "fpi-up",
+   "date": "2026-11-06",
+   "theme": "Foreign flows",
+   "headline": "FIIs stage biggest single-day buying in over a year, net purchase Rs 15,000 crore on November 5",
+   "summary": "Signal: foreign investor buying. 3 reports from Gujarat Samachar, Moneycontrol.com, News18. Related: “Foreign Investors Pump ₹15,350 Crore into Dalal Street in Biggest Single-Day Buying Spree Since Dec 2020”. Turn: earlier readings (5 Nov) pointed the other way.",
+   "rationale": "Foreign portfolio inflows lift Indian equities, especially large lenders and index heavyweights, and support the rupee.",
    "horizon": "weeks",
    "confidence": "medium",
    "industries": [
     {
      "id": "financials",
      "score": 1,
-     "why": "Bond gains"
+     "why": "Foreign buying favours large lenders"
+    }
+   ],
+   "economies": [
+    {
+     "id": "flows",
+     "score": 3,
+     "why": "Foreign investors buying"
+    },
+    {
+     "id": "equities",
+     "score": 1,
+     "why": "Index heavyweights supported"
+    },
+    {
+     "id": "rupee",
+     "score": 1,
+     "why": "Dollar inflows"
+    }
+   ],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPTl9STzg5ZHZQV29uR0tONjJXel9EdnBxX2pSenVYRVdhQkx1Y3pjXzhpOVU3ci12MmhUQW5xdkU0TEE5ZGhlb19jZjRZWl9Ca3d0TWZlSGdzTXEzUmlnRDNHa1A2V2Nya0Z4MkVzUDNzWHhubWZPVUpfV3l2eVJrVDNWMEMwcjdyOV96dE12MXI2cE11Wm82Z25ZcS04MkRZaGx3Q2R3ckx6RFp5cURORmhjWF9PQTdfN2tRUVB2TzcyNDJUSVBMbFFUMGgzcVUwNm1JdjN1bm5ha3pDbG5nWmxKRmJzd9IB6wFBVV95cUxPQ2hsdXlXY1Zwb3p5TEFCNHJNb2NMYksyeUNaWmQ5M3hJMW9QRnI5TGYxOUx4dExyM3czaXhLZFk4UWxYXzBialpObml0RDg3TXdBa2xLalhMVWNnT3ZhUzVGbmtuS2ZIM2tGQXNPcVJlTnBJaFFmcllKQnFIOTR0LTFMSUxjUUprUU15TGVCRjd4dzZOSm81aThubWt3YWxBUnpRVnJla29ZTmxHcmVRTS1RX2RiZkRhUHhzamZsODdka0V6dGI5MlBBbDE3N2lRWGdaNXRnY2FuNGZPZnlGUENPdjVCbUVieDNN?oc=5",
+    "https://news.google.com/rss/articles/CBMihwJBVV95cUxOX1B6bUxJbXFJbmM5Z25taElYSVFycm1TMEpDZldNOFEzU1VGX01DY2xfMXhTdHBZOUQ1YmxyNXlFQnotdTVFTkxwRlJpY0hiNjBEWGNmb2JCb3dHa2U0Qm00WkdTekxFZF83Szc2M3pBeXZoNUZ4Z0NmZmhIZmFBOUxIR2VFazM0Vi1mMmZFTzh0NVVZTVpDWnRmUEpTNU5DQkxlTXBGU3FlSHE1VktZbnExQ0xsUkg3Q2I3S0VOYkkxX0o5LXZkRHNmeWJFV1FVbzBDMVZDcXFiaVh6dVBsblk1TC05V3hlMllITE4teVN2cHlDMjRleHJLVVgwUElzWHEzZUY2SQ?oc=5",
+    "https://news.google.com/rss/articles/CBMihwJBVV95cUxNT29BUDN0MmJEVThDek5QczllTDdsci1EWmJUV1UydFhQVTdJZlZEdm5qeWRIWkMtVE9uSFBFT1NoT2NKb0lHa1RWQUFTaG9YRHNUc3RETGhLel9ZVTZ5R2hJT1hmTUVRSlJQa2tTRzdSeFFiOW9OU3pFdHdJTFZtaEZHdGViekVYMXY3Y2dwX3ZqR3V0N2hGSDJCcndxVkY4ZGNtcVI5dGNvYmk1bmlwUkhnYjFHbTFBRk9EdGxsd253QmZqUTBSUTNsYkJjdl83dVRkc1o1NC1nUTNsNkw1NTVidk9vZUdySTdheENob3Q2RHJhd2x1MkRhN3Q4QTJRVWtMZV9xRdIBhwJBVV95cUxNT29BUDN0MmJEVThDek5QczllTDdsci1EWmJUV1UydFhQVTdJZlZEdm5qeWRIWkMtVE9uSFBFT1NoT2NKb0lHa1RWQUFTaG9YRHNUc3RETGhLel9ZVTZ5R2hJT1hmTUVRSlJQa2tTRzdSeFFiOW9OU3pFdHdJTFZtaEZHdGViekVYMXY3Y2dwX3ZqR3V0N2hGSDJCcndxVkY4ZGNtcVI5dGNvYmk1bmlwUkhnYjFHbTFBRk9EdGxsd253QmZqUTBSUTNsYkJjdl83dVRkc1o1NC1nUTNsNkw1NTVidk9vZUdySTdheENob3Q2RHJhd2x1MkRhN3Q4QTJRVWtMZV9xRQ?oc=5"
+   ]
+  },
+  {
+   "id": "yields-down-us",
+   "date": "2026-11-05",
+   "theme": "Rates & bonds",
+   "headline": "Treasury, European Bond Yields Tumble as Markets Lifted by U.S. Democrats’ Victory",
+   "summary": "Signal: falling US Treasury yields (US). 7 reports from CNBC, WSJ, Moomoo and 4 more. Related: “10-year Treasury yield falls as traders exit tech stocks, look ahead to jobs data”. New in the last 24 hours.",
+   "rationale": "Lower US rates and yields send foreign money back to emerging markets, supporting the rupee, Indian bonds and equities.",
+   "horizon": "weeks",
+   "confidence": "high",
+   "industries": [
+    {
+     "id": "financials",
+     "score": 1,
+     "why": "Foreign buying in lenders"
     },
     {
      "id": "realestate",
      "score": 1,
-     "why": "Cheaper funding"
+     "why": "Funding costs ease"
+    }
+   ],
+   "economies": [
+    {
+     "id": "flows",
+     "score": 3,
+     "why": "Money returns to emerging markets"
+    },
+    {
+     "id": "rupee",
+     "score": 1,
+     "why": "Dollar softens"
+    },
+    {
+     "id": "bonds",
+     "score": 1,
+     "why": "Indian yields follow"
+    },
+    {
+     "id": "equities",
+     "score": 1,
+     "why": "Risk appetite improves"
+    }
+   ],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOdld4SERJUnFrU2lIQ2NMNTJkZy1mVGZUbUFRaEtBQllGTHdQODM2WkhrV1lwd0tCaEd0UUJWclh4M2t6Y0RxMEZWTTBGRHRvNkpMaUV6YkZweVR5MlFwVThma29VWEI4dzdPMTNaSGR1Y28wRnBDWGZQWk02SnhXbnNQbWkycmo0QU50Wm9MNnFGa2lLR2czVU5Vd0thSTNkUEZyTGZDVHR6dWd2RkhoQ18zdnl3b1k0U3QxdWs1Qk5kQQ?oc=5",
+    "https://news.google.com/rss/articles/CBMifkFVX3lxTFBwRFU3SzVLNDJOd1p3SDRNMkE0QjBMRms2d1RJaDZEMlZaSGQzUUN1Qjc4eW90Z2NDTmZITmh0QnZIbU1uc3hlUFRZV2NvYTRkQ2I1eHZ3dGpJSVFQRUpWZ1YycWJZYy1iZnZzdTNiQ0x2Wi1WQ2RkNmpuUm1vd9IBgwFBVV95cUxNNHdYYnNDYV9CX1JxUEl4bGJBSmtGSXNGTWN0NURsdkpHRHZqcVBmUGhHWUxlZ19ab0VfdjFiTjIwZkpCX3ZZaWVSNXdLUWY3eU43ekw1N0Z2WC1qWVYxUHFKZ3Z1Y01ON1B6N1Y5RlVoNUJWbmZ6YjZQN1B0ZTk1RjNhQQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQUUVpOXYyRzc1SFJQQVZSMFIyNlFkTHRJZ04zczdyNVRLeDRqa2o0NEg2S0lIRGNsb3BHOE5tTGh3d08xR3UwSVdHbkRBWlpGT2xTTDJSZ1JpcG5hWXNPcVlUNFlfQ1FXU0dZRWY5RWVoOUVLR195alJzbWpLbGp2eXlVaXRORW5Edm5WSDhwMzJoeVBzSkRxNnN2X1l0Y3A5SDVSVmxZb2M?oc=5"
+   ]
+  },
+  {
+   "id": "sanctions-up",
+   "date": "2026-11-05",
+   "theme": "Energy & geopolitics",
+   "headline": "US sanctions Indian, Turkish firms and people for allegedly aiding Iran’s shadow fleet",
+   "summary": "Signal: tighter energy sanctions. 7 reports from MyIndMakers, thecradle.co, Al Jazeera and 3 more. Related: “US sanctions Indian couple behind fake flag empire serving Iran’s shadow fleet”. New in the last 24 hours.",
+   "rationale": "Indian refiners buy discounted Russian crude; tighter sanctions shrink that discount and force costlier replacement barrels.",
+   "horizon": "months",
+   "confidence": "high",
+   "industries": [
+    {
+     "id": "energy",
+     "score": -1,
+     "why": "Refiners lose discounted crude"
+    }
+   ],
+   "economies": [
+    {
+     "id": "fiscal",
+     "score": -1,
+     "why": "Costlier replacement barrels"
+    }
+   ],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNRXAzN0tjNUxFczdPRV80djhvMUJkejJRcXpqTHdGUU9oVkpuNDgyTXlmN3FDRTdFTGtlNVJPOXpqR0p5Y19ySzQ3cm1KQTBNMzVySjl2U1hrZWNkbDBfTG1Fa21FdzRPWnI2bTdYUVN1QV9LS01nMkZoOUVfTmJpMk5IbmhuSGdqSlU3bGVEdXV0cnpOSHZ3dEUzeVFZWnJzSmwwdmFnZG5SZEtMdTVGV3lqckpNZTJGSGFz?oc=5",
+    "https://news.google.com/rss/articles/CBMiogFBVV95cUxNaG10NHVYc25JNnIwdXZabC1nZFZ4cFlmb3ZjUGVuTDFPeFd0UC1XVXBMczEyckdnT05CeGpiRThHUC1qMHVJN3lDd2EtbUJMdnBfbnlTS1NqamNmeVJkaFlublZmX2QteUFNc1dOT0EzeFNOdVliMVA4Z3REQVhhTzNDOGR6UU1oUEZhZ1Nxd0lwemZ0ZkRMSFpoUVA0dkI2a3c?oc=5"
+   ]
+  },
+  {
+   "id": "fx-dollar-weak",
+   "date": "2026-11-05",
+   "theme": "Currencies",
+   "headline": "Dollar slides as US election drives oil and Treasury yields lower; sterling gains",
+   "summary": "Signal: a weaker dollar. 5 reports from www.tmgm.com, KuCoin, Investing.com Australia and 1 more. Related: “Dollar slides as US election drives oil and Treasury yields lower; sterling gains By Reuters”. Mixed: 4 reports point the other way. New in the last 24 hours.",
+   "rationale": "A softer dollar eases pressure on the rupee and draws foreign money back to emerging markets.",
+   "horizon": "weeks",
+   "confidence": "medium",
+   "industries": [
+    {
+     "id": "tech",
+     "score": -1,
+     "why": "Dollar earnings worth less"
+    }
+   ],
+   "economies": [
+    {
+     "id": "rupee",
+     "score": 1,
+     "why": "Less pressure on the rupee"
+    },
+    {
+     "id": "flows",
+     "score": 1,
+     "why": "Money flows to emerging markets"
+    }
+   ],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1Pd3JkZEpNSmppQ2E4WUlGOXpiUTZlcUMyTkp2aWY3QlljcFlVM1c2bVVURWhRNng4SlN1UTd3SkNhb01sRmZWQ2tBUzFEeDA?oc=5",
+    "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPY080X04wVnJ3WS1Zam41dm1MblRfeXh1a2k3eXZIUU5ZeDBnak5YNWUtUkFPclRLMjNnR1hkRnJZcGNkcGhyRDJVTnpVbmVpWG5DOGY2VVZPZmpKN0o0eGxubElWR2Rfam5ZZE1wNGpxNDhQYUt0bWFwNDVUaG5MZGhPU3NPTWFkQXpIaEVoQ3BZYV8zWmtoQzM5aUFJRUVfTENCRjNoMXpOd1drOVRpa1lxNnFyQ0VxLTg0OWlvYmJORmlNOVBzcg?oc=5",
+    "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQRlBHNS1VN28zN1JpeEVRbWpnWXljTmZsLUhFTFhadDlzTUVFbU9iNHZyRm9jNmVXZlByVFgwcFhjeUFXNFh1RWNLVVdYVUszSy1tMW90T0VrNFNYazQydDR6WktmM2trMkFYdUlYd3RWRnBNOEJvZHVCZGN3T3BNZjZfZVowOVVHRXFTNW5IMTZqZTdTWHNZUG5Ebi1JS3QxS0FKWmdrdWR6bEY1UlNaM0RPQi1EcmwtM2FBM3VZRzNhVXdmSWYxdGtpc3QyRzBtZVdJakpsVF9MSUYwSTZIc0pTOHBZaExtTDM0?oc=5"
+   ]
+  },
+  {
+   "id": "tariffs-down-global",
+   "date": "2026-11-05",
+   "theme": "Trade",
+   "headline": "Democratic takeover of US Congress unlikely to impede interim trade deal: Officials",
+   "summary": "Signal: easing global trade barriers (global). 2 reports from India Today, The Financial Express. Related: “IPL: CSK and SRH in 4-player trade deal, swap Liam Livingstone and Khaleel Ahmed”. New in the last 24 hours.",
+   "rationale": "Trade truces between major economies support world trade and demand for Indian exports.",
+   "horizon": "months",
+   "confidence": "medium",
+   "industries": [
+    {
+     "id": "industrials",
+     "score": 1,
+     "why": "World trade recovers"
+    }
+   ],
+   "economies": [
+    {
+     "id": "growth",
+     "score": 1,
+     "why": "Better global demand"
+    }
+   ],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQU2FyNGdVay1Cb0tDUDE4b0lPWUdSR3o4ZFhCdkU4OEZMZE1wMzBlMUFqNEdmZG5OMjh2OVZrNjJxeWMtM016NXNEMDF1UjZscnR4U1FJWXpZUG9JTkVzSmxDZnQ0d01YMGF3VS1SMHBTTnBuanlUazFnNWRwcmxVZzctY3cwV0hZQURScVdjeXRaNmFBdDdNSFlpSW9hc2pjVEgzamZWNmRORDI1N1MzNjJMT2xEaTBUUHR5ZXdhdjZMSk1FdFJ2anAtM1d4Zk5BTEthaGhn0gHcAUFVX3lxTE1WbmRoZFZ4T1l2T1lyWjgyMWFMSVBvNHJXUFRzT3drRnhrV2x1X09jaHdTb2xzWUM4MjdMT25oRDJRNUdmWlZNcXNVQlFxZnRtd0VSellLc2lFaE9FVFFZWWtydUQzaGxGOElBUTdEUUpBNTNTVEJUaDZYNW0zd2ZwT3ZsN2kwa0JYam9pQW1qTmhzTGpiUXBtUWFPamxWYVlNbVJlLWplVDlmbjF0N2tIQ1RJQ2lhOWJZQnRJeFdHS3QxN01OR0I3Mjd2RU1qcnIzQzlMMTRGWmRDakM?oc=5",
+    "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOMzlucTM2Q09IaWEyOFVfNVE2RG1ySXBKVHQ4THB0ZUNkVFdFVm01MzVVdEtTTUtMUTRFN0ZuYXJnd2IzYU0zZlZzdnRHTWRzc3gwdlYzblI2Z2w1Uk5aMGMtbG5LVjlob2NzR0NNbWlpWl93VU9UQUN0Qnh2TE1sOFhNQ1RWajRCNVZqX213NzdUZThjNnA4WXpnTExjM3IyRkZhZEFGRl9jSVVnRXQ5MWhxREVWcXpPM2c2Vy1fcmhIeGNydXhWdlpDd2dtRlZGUE9UTFlBMNIB3AFBVV95cUxPVGpWYzlEU0RTd0FDdTlBR2JON3JJWmxWM2dmbmc2NGtqTG9hNjBDangwUTVFR2pRMy1HejM1YVZpdklMQ1dhWXl6S2ZmODhWdnlBSnJNNVk4X25nMjBaNksweDJRS1NoNTctY1ZfZ1NSTFNkUE01TkhqV2lNUUNENkFJb2pvc3hzZnllWF9GOTA1R0NYSDBtcnhXMEh6NTloWk9VSERDam1Gck14S24wRzhCM25iTVlUNy1Kcm9qYUVKc3lOT1JTNzY2TWQ3OUZmZWRVTFN0Y2UtOWta?oc=5"
+   ]
+  },
+  {
+   "id": "growth-up-india",
+   "date": "2026-11-05",
+   "theme": "Growth data",
+   "headline": "World Bank cuts global growth forecast to 2.5%; India remains fastest-growing major economy",
+   "summary": "Signal: stronger Indian growth data (India). 4 reports from LinkedIn, Daily Sun, DD News and 1 more. Related: “Clean Air A Luxury Not All Delhiites Can Afford As toxic smog blankets Delhi-NCR, air purifier sales are soaring. Pollution cost India $260 billion in 2024 — nearly 6% of GDP. Yet, clean air remains a luxury many in the capital cannot afford. Shivani Bazaz repo”. New in the last 24 hours.",
+   "rationale": "Better activity data points to firmer demand, orders and credit growth, supporting earnings across cyclical sectors.",
+   "horizon": "weeks",
+   "confidence": "medium",
+   "industries": [
+    {
+     "id": "industrials",
+     "score": 1,
+     "why": "Orders and capex firm"
+    },
+    {
+     "id": "consumer",
+     "score": 1,
+     "why": "Demand holding up"
+    },
+    {
+     "id": "financials",
+     "score": 1,
+     "why": "Credit demand rises"
+    }
+   ],
+   "economies": [
+    {
+     "id": "growth",
+     "score": 3,
+     "why": "Activity picking up"
+    },
+    {
+     "id": "equities",
+     "score": 1,
+     "why": "Earnings outlook improves"
+    }
+   ],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMitgFBVV95cUxNQ2tRaWZTLXdpNnFYSzkybXdIbHk5dkdfRmh1VnFsZlBCY0pwVXd2dUJ2TTZrOFV3aFpYWXRfaVpQbzN3RnBzNDV2d2I3bjR5bzhScjI4LVNQNUxQS1Y1dmJIbTFVZUd3X2tQcFdVNk9XZFJTWkFSSjZlUkk0Rk1zNkh0d01QSVM5ZmZXb3VZMjU1R2YzbHpOTTFKMnNFU1VyeGpRZmJyZTBOekZTdkFaMHBPWkpiUQ?oc=5",
+    "https://news.google.com/rss/articles/CBMioAFBVV95cUxQOUlBcEVnaEpVeFAyOGh2cmtJZm5LTHFwOHExUG1BOTI4c24xNElkOFkxc0RLMkdCMDhWU3BsaW4yb3BHandGSGZOMWxvN1ZiSFdkQ1p6cXp6VFVLeV96MU14RzBkOF9fNlhzVFlxLXV0bGY2VDBPLUFianV4ZENQd0VOQjhwRmM0LUlTOUJHV0cya3FueUNIczNxcExHVFRE?oc=5",
+    "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNc2hoYk9fUzl5WnZDY3pwOU9JM3F0X1d1LTVnN05JOWRXM0pwZHl2UWZVM1N2MVN6UlFxbVlMMmJFRk81YVV0THR0dFpLU3dvc19KUkcyc0VzVW92RHBra0FZN2JmMmlLY1NnTVA1ZVpfSk1aNUdFVVRHa2hPQjdyT1JER0VnWkpmODR2NHFrSy1DeGFtYUM0SzQtUkN1US1vZzFDYXJ0MXl6Zy0wNGg0bVdWTWltNFBqeTJ6dEh3R3lTVGdtUTQwWFg1YnRnMTFKYmR6VVlqdHBQLUFtTkpqZVhhcFljUVVTQXdtd0Rn?oc=5"
+   ]
+  },
+  {
+   "id": "gold-up",
+   "date": "2026-11-06",
+   "theme": "Commodities",
+   "headline": "U.S. Treasury yields dip; gold poised for largest weekly gain since August",
+   "summary": "Signal: higher gold prices. 14 reports from Investing.com India, Businesskorea, ASHARQ AL-AWSAT English and 10 more. Related: “Gold Rebounds Above $4,100 as Dollar Weakens and Treasury Yields Fall”. New in the last 24 hours.",
+   "rationale": "India is one of the largest gold importers, so dearer gold widens the trade deficit and cools jewellery demand, while lifting gold-loan collateral values.",
+   "horizon": "weeks",
+   "confidence": "high",
+   "industries": [
+    {
+     "id": "financials",
+     "score": 1,
+     "why": "Gold-loan collateral worth more"
+    },
+    {
+     "id": "consumer",
+     "score": -1,
+     "why": "Jewellery demand softens"
+    }
+   ],
+   "economies": [
+    {
+     "id": "fiscal",
+     "score": -1,
+     "why": "Gold imports widen the trade gap"
+    }
+   ],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMipAFBVV95cUxPNHg1VXVfR2J2YVRBVUVMSEhQTW1vd0pTd3l1QldtWGtOQTdKbm44VHZCNnM2WjBzT0txcmxkQlFZeElvVGpXN0cwT3dLNW5URE1TbzdsaXB0aGNGTjNwZ3lJeWFPRmlJZ1VGU05QS2M4TUJIemkzWm5Vam9xWndGclhUUS05b1BfNk9VODNQRWd4R1lGWnU4bXZNNXk3VmVYa0pZZQ?oc=5",
+    "https://news.google.com/rss/articles/CBMidEFVX3lxTE15dVJGYnRRM0VMVjdrRXdFelhnZUpoeGFGQ1U1cFlBRnNJV3R6RWtMd2pVZW9aRzVkMVNVSW9LR3Jpb2tWLVcteWZIRXE1MGlWYVBmUDJsVklETXJGMmRPTTF4V09CSHBqdEIteVhVSWk1M3pI?oc=5",
+    "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBWajdMdGc2WXc2bjc0Tmtod0JXdV8zbVpKTlcxMUJBQWp4dmc2Q0dRRUJMUTZrclIzb0RmMjNKU3dfaHMxdkQ5c1ZOai1FTHJOSkw2bTJjX21KTDNQUjF4R3FR?oc=5"
+   ]
+  },
+  {
+   "id": "yields-down-india",
+   "date": "2026-11-05",
+   "theme": "Rates & bonds",
+   "headline": "Govt bond yields retreat from day’s lows on profit booking; rupee ends up",
+   "summary": "Signal: falling Indian bond yields (India). 1 report from Livemint. Ongoing: also reported on 3 of the previous 7 days (first 30 Oct).",
+   "rationale": "Lower G-Sec yields cut borrowing costs and lift the value of banks' bond holdings.",
+   "horizon": "weeks",
+   "confidence": "medium",
+   "industries": [
+    {
+     "id": "financials",
+     "score": 1,
+     "why": "Gains on bond portfolios"
+    },
+    {
+     "id": "realestate",
+     "score": 1,
+     "why": "Funding costs ease"
     }
    ],
    "economies": [
     {
      "id": "bonds",
      "score": 2,
-     "why": "Yields fall further"
+     "why": "G-Sec yields falling"
+    },
+    {
+     "id": "equities",
+     "score": 1,
+     "why": "Lower discount rates"
     }
    ],
    "sources": [
-    "https://businessupturn.com/finance/money-market/india-bond-yields-fall-across-the-curve-as-oil-eases-10-year-slips-to-7-258-5-year-and-30-year-drop-7-bps/",
-    "https://aninews.in/news/business/indias-10-year-bond-yield-may-remain-elevated-at-725-735-in-november-report20261104110946/"
+    "https://news.google.com/rss/articles/CBMizwFBVV95cUxPZVpZMnVNOUlPUjJ5eWRMajBnc0lkZTNKcnBsWjNXeF9ncEVNS2xfaDVhLU1ya3BDeVNDTGM1bmptaXR1c1VLb0ZTZXdzcFNDV1FhVzJTM1lyR2oxbm43enIzRmJDSUN1QXBwWmxtXzVEcEJTcEVfQjgtSE4zZmxsSzdSQWtJRTY3TXJJYXptNDU0d0tsWENJdjVYdGlsSVp0WDJLaGphb3ZtTzU5d1YtVlZzQUZ5V3JRLXgwb3VISmZUaDdiRDVrZlAxR3JIdGvSAdQBQVVfeXFMUGFwUFpvOVV4TDBsbEdnZzU5TXFZazVCajYtb3F1OGFJSkxNOUFnWDczR2QybUdsa3d6dHdpMWF5NW1CbjJwajQ1Q3BVa3hQSFZEdGVjZm5fbWhUc29WeE4wcG8ycFV0ak84RS1reHBBQVRldXhHTFlUY0VGeVVPS3laYk1BM3BLaUZ6M2l2b3RmeEV3bkxKenVobjZLak8xNXBmYS1YbTJNYllQWmtiVUt5SloxTHNJeWd5Sk9uZUJ2b01NbzZqQTIxRWVFamh4bHVncVc?oc=5"
    ]
   },
   {
-   "id": "no-strikes",
-   "date": "2026-11-04",
-   "theme": "Energy & geopolitics",
-   "headline": "US president says no immediate plans to strike Iran and talks are 'getting everything we want'",
-   "summary": "He agreed the war hurt Republicans by raising fuel prices; Qatari mediators push a draft to restart direct talks. Advisers urge letting the blockade work. Easing escalation risk.",
-   "rationale": "Lower odds of new strikes reduce the oil risk premium that has weighed on Indian markets for months.",
+   "id": "inflation-up-india",
+   "date": "2026-11-05",
+   "theme": "Growth data",
+   "headline": "India’s retail inflation rises to 4.45% in July, food inflation at 5.52%",
+   "summary": "Signal: firmer Indian inflation (India). 2 reports from DD News, India Today. Related: “Republicans Suffer US Midterm Loss as Divide Widens Over Iran War and Inflation - India Today”. Mixed: 1 report points the other way. New in the last 24 hours.",
+   "rationale": "Faster price growth erodes household budgets and makes RBI rate cuts less likely or hikes more likely, lifting bond yields.",
+   "horizon": "weeks",
+   "confidence": "low",
+   "industries": [
+    {
+     "id": "consumer",
+     "score": -1,
+     "why": "Real incomes squeezed"
+    },
+    {
+     "id": "realestate",
+     "score": -1,
+     "why": "Rate cuts pushed back"
+    }
+   ],
+   "economies": [
+    {
+     "id": "inflation",
+     "score": -2,
+     "why": "Price pressure building"
+    },
+    {
+     "id": "bonds",
+     "score": -1,
+     "why": "RBI less likely to ease"
+    },
+    {
+     "id": "equities",
+     "score": -1,
+     "why": "Valuations face higher rates"
+    }
+   ],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMimgFBVV95cUxOSkhxd2NEYmZGcUpnYTY0ck9STV8tbnMwcEZ0Zi1qNHFMVm1IQXNudjBQZ2ZFMGNPXzg5N1lOdTI4XzRCZXdUaTdKb3M2Ql8zdkJKNVZoR2lQUkNTVDJPVXl6OU1RWXNBaml5bmhBbWltRUtiZ1hlWjBBSkxRSEZiRXVZTkJwVlBFLTNVVHNGcW9ob1FrYkp2S1Jn?oc=5",
+    "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQQU5qZW9LQ0kzQnRNOGRBZzBsSE1RY1hsamVhM180aUs0WGMxcmdmRGdwd2t3SERQWlY3dGpZcHRmeGtETlNHekVHM28weEFLZjF4dkRjb3pDRlVHQmFzTjN4TmhBZlhZWGxVYVBNMHB5UmhzNzJvZTNFOE96WTZwYUI3bEYxcFpQSGpyS0I1ME1tX3g2ZWhpMDJ3cXNZZEQ0Vlp3SWhrUDg5dWNBWVZoZk93OHJKUFVCeG1HWkdMWTFOMk1tQ0VzNFJYSmptbjBXam1taDBzS2TSAd4BQVVfeXFMTjdkTkFuWFdjVXRvTlhWZnFpYkZYY3B5YkhRczROWkRVcHMxSC02TVpkNTlHYXU1VjhTZjhYWWtmR0JwQ0l5THZfeC1TU3ZOenczNmtnMS00YmpvRmhmODdmVVNERS13RklhY1NlV2M4V3I5cEZrd1ZNaEFIM2FRNWVwQTByaFFpRWduV0JRLTI4T2tkaFljYjhmbjBSSUtWNjVRcHVaTnl6VlVoaDRnbkNpN3YxNVVWYmlWMFhRVkQ2ZEJ2NVRia1BZTHBYdHhXd1N4QVhlN0JHQl93WGtn?oc=5"
+   ]
+  },
+  {
+   "id": "inflation-up-us",
+   "date": "2026-11-06",
+   "theme": "Growth data",
+   "headline": "El Niño could push U.S. inflation higher in 2027, Federal Reserve Bank analysis finds",
+   "summary": "Signal: hotter US inflation (US). 2 reports from Traders Union, SILive.com. Related: “Federal Reserve backs gradual rate increases as inflation stays above target”. New in the last 24 hours.",
+   "rationale": "Sticky US inflation keeps the Fed tight, strengthening the dollar and drawing money out of Indian assets.",
    "horizon": "weeks",
    "confidence": "medium",
    "industries": [
     {
-     "id": "transport",
-     "score": 1,
-     "why": "Lower war risk"
-    },
-    {
-     "id": "energy",
-     "score": 1,
-     "why": "Supply relief"
+     "id": "financials",
+     "score": -1,
+     "why": "Foreign selling in lenders"
     }
    ],
    "economies": [
     {
-     "id": "equities",
-     "score": 1,
-     "why": "Risk premium falls"
+     "id": "flows",
+     "score": -1,
+     "why": "Higher US rates for longer"
     },
     {
-     "id": "fiscal",
-     "score": 1,
-     "why": "Lower oil outlook"
+     "id": "rupee",
+     "score": -1,
+     "why": "Dollar strengthens"
+    },
+    {
+     "id": "bonds",
+     "score": -1,
+     "why": "US yields lift Indian yields"
     }
    ],
    "sources": [
-    "https://www.ynetnews.com/article/byr2bkl6zx",
-    "https://www.jpost.com/middle-east/iran-news/article-913766"
-   ]
-  },
-  {
-   "id": "dem-congress-india",
-   "date": "2026-11-04",
-   "theme": "Tech cycle",
-   "headline": "Democrats' Congress win raises hopes of relief on H-1B fees and India tariffs",
-   "summary": "Analysts say the result offers limited relief; oil and Russia sanctions remain key risks. Trade deal outlook under review. New.",
-   "rationale": "Any easing of H-1B costs would help IT services firms' US staffing; tariff restraint supports exporters, though Congress cannot change policy quickly.",
-   "horizon": "months",
-   "confidence": "low",
-   "industries": [
-    {
-     "id": "tech",
-     "score": 1,
-     "why": "H-1B relief hopes"
-    }
-   ],
-   "economies": [
-    {
-     "id": "growth",
-     "score": 1,
-     "why": "Possible tariff relief"
-    }
-   ],
-   "sources": [
-    "https://news.google.com/rss/articles/CBMikwFBVV95cUxPLUxfeDI4Qjg0a1c0SDJXUC1MNTlvT2xCZ1RHYkxLdU01cUJrZVdZamF2U3U3QU9xaFdFNkhiOUJldzJDMExCY2dMYjNfcGwwdlM0SjBTc0hYdDZpZFhnU2UyY3JrbTYzVzlFY0wwV1FRV2hLc0NzMko5dXZxVFFRdk1UWHBlbmxhVEM5eUdXVDlTY2M?oc=5",
-    "https://news.google.com/rss/articles/CBMihgJBVV95cUxQQTNvSWg5b1M1RENCR3h0c1liMy1fc3dMN2R5YUhwUE5YZlJxZDBNNkwyOWcyZEs1WFZfWXEwY1pLdTlQRFhyQUVEZmpiRVZibFNjVE1uZHJ6dEpMUzBtaHB6NEgyTXZOZ0ZMdkl2eHZVQ0R2dTVXNFdURjEtR2VqdGxrQTJNZFJpNzdlMVdGNFduajItZlY5WExCb3pGdE9aZkdDdG95QUVTcXI1c19nNTBBRG9YVE1BdGV1MzhvOXNNbmFqbUtQYzB0RUlMczNIS0tpeU0tRlpFMEZ3aDMwSVd5WVB0VUZCS25DVlJCQkN3VF9ZaDJyQ3E0NTlCRkpKdmF1WktR0gGLAkFVX3lxTE1iZWZVaUZ4WkZfbTZ4ZF9DSFJocXRyb0pwRldUYUgxWjR0QTNPUzR0RmNVWnNfQ1c4SG1TaFhPWktLY1ZRUzZCekdPXzN3dVd1OVpXN3luQ0VFWnk4M1c0cFBtM3NiLXAwWmxKWHlaY0V4UTFjT1JhZFpwOUJhSWw4aWxSQUxCaERHNXl6Rk9TWndOWTZqbEkxNzJnbVdRNHM0bDktOGVtVTczSjdUOVN5Q09LZDJvTEg2cEVZMGFyTUl5N0hybU1ZUnBFazZiSExlY21uaFRiZzMxMU9yZk5UWng1MHRPVlg2Rmdka3R5aTNkU2xTbnFkQVlZMV9waGs4ZWlLTXVaeC1QQQ?oc=5"
+    "https://news.google.com/rss/articles/CBMixAFBVV95cUxNSlpiQzBkbTk1OVdMTUtyN1VEV3JhX3hnSVpxM0NJUGNnVlFfM3BjTkkyMWJsc2ljMnNrZW5Qb01lSkM2SmtVYjRmZXJlZzFqLTJFd25jM1RzT1IxcEliaXNRNG8yUzhXd3Bta2JBTzA5SEhSVEpRYWVHakIwWWpTaWpxeWhaUmZfeGRUQ2pJSVd5d1hSakMya21GZ2QyRmZ2MWlYSDBPNUplSTk2MG1ZTHZPUkxhRkkwR1pfRGdoOFFYZWlH?oc=5",
+    "https://news.google.com/rss/articles/CBMimwFBVV95cUxOTDA1MjVIZU9ULVM2Smc2ck04ZndfbnE4NU1aeHQ0LUxuajJNTzdjZDRtYWpqcHNydjFlSUltRkFqc3JsTHE4MXVQWVdzaW9LWDRTU1NOUHlHWGh3Sjk5NzY0am9QT1RLR2ZYLWp6U3RJVmtTLUN6SFV2SWxTSi1ySUNDVXVCeW9KWVoxaC1UWTVVbUtYUFk5eUxMQQ?oc=5"
    ]
   }
  ]
