@@ -1,67 +1,5 @@
 [
  {
-  "day": "2026-10-24",
-  "model": "Claude daily routine",
-  "items": [
-   {
-    "id": "oil-116",
-    "date": "2026-10-23",
-    "theme": "Commodities",
-    "headline": "Brent jumps 3.1% to $116.72, its highest settlement since April, on Houthi attacks across Saudi Arabia",
-    "confidence": "high"
-   },
-   {
-    "id": "hormuz-seven",
-    "date": "2026-10-23",
-    "theme": "Energy & geopolitics",
-    "headline": "Iran says 7 oil tankers were hit in one night in Hormuz; October attacks reach a record",
-    "confidence": "medium"
-   },
-   {
-    "id": "market-fourth",
-    "date": "2026-10-23",
-    "theme": "Commodities",
-    "headline": "Sensex falls for a fourth day to 73,123.83; midcaps drop 2.21% and smallcaps 2.94% as crude tops $114",
-    "confidence": "high"
-   },
-   {
-    "id": "fpi-buy",
-    "date": "2026-10-23",
-    "theme": "Foreign flows",
-    "headline": "Foreign investors buy a net ₹888 crore; domestic funds add ₹3,235 crore",
-    "confidence": "medium"
-   },
-   {
-    "id": "forex-721",
-    "date": "2026-10-23",
-    "theme": "Currencies",
-    "headline": "Forex reserves fall $5.01 billion to $721.02 billion, a sixth straight weekly drop",
-    "confidence": "high"
-   },
-   {
-    "id": "black-sea-sinking",
-    "date": "2026-10-23",
-    "theme": "Monsoon & farm",
-    "headline": "Drone strike sinks a cargo ship in the Black Sea, 1 dead; Ukraine proposes a Turkey–India–Egypt grain corridor",
-    "confidence": "medium"
-   },
-   {
-    "id": "nigeria-lng",
-    "date": "2026-10-23",
-    "theme": "Commodities",
-    "headline": "Nigeria raises LNG exports to India since the Iran war began",
-    "confidence": "medium"
-   },
-   {
-    "id": "fuel-relief",
-    "date": "2026-10-23",
-    "theme": "Commodities",
-    "headline": "Record crude shipping costs keep fuel price relief away for Indian consumers",
-    "confidence": "medium"
-   }
-  ]
- },
- {
   "day": "2026-10-25",
   "model": "Claude daily routine",
   "items": [
@@ -905,6 +843,124 @@
     "date": "2026-11-05",
     "theme": "Commodities",
     "headline": "IEA sees India's gas demand falling 2% in 2026 despite a 10% jump in LNG imports",
+    "confidence": "medium"
+   }
+  ]
+ },
+ {
+  "day": "2026-11-07",
+  "model": "Keyword rules (no AI)",
+  "items": [
+   {
+    "id": "chokepoints-up",
+    "date": "2026-11-07",
+    "theme": "Energy & geopolitics",
+    "headline": "Iran war latest: UN maritime agency condemns Houthi attacks on international shipping",
+    "confidence": "high"
+   },
+   {
+    "id": "fx-rupee-strong",
+    "date": "2026-11-07",
+    "theme": "Currencies",
+    "headline": "Indian Rupee Gains 1.9% in Week as RBI Curbs Dollar Demand",
+    "confidence": "high"
+   },
+   {
+    "id": "rates-up-us",
+    "date": "2026-11-06",
+    "theme": "Monetary policy",
+    "headline": "Fed policymakers consider rate hike after strong jobs report",
+    "confidence": "high"
+   },
+   {
+    "id": "tariffs-down-india",
+    "date": "2026-11-07",
+    "theme": "Trade",
+    "headline": "From luxury cars to SUVs: India opens new import window for British vehicles under trade deal",
+    "confidence": "medium"
+   },
+   {
+    "id": "fpi-up",
+    "date": "2026-11-07",
+    "theme": "Foreign flows",
+    "headline": "India's overseas investment rises faster than foreign inflows, inward FDI-to-ODI ratio falls to 4.2: RBI",
+    "confidence": "medium"
+   },
+   {
+    "id": "oil-down",
+    "date": "2026-11-07",
+    "theme": "Commodities",
+    "headline": "Indian Bond Market Rally Extends as US Treasury Prices Rise and Crude Oil Falls",
+    "confidence": "medium"
+   },
+   {
+    "id": "fx-dollar-strong",
+    "date": "2026-11-07",
+    "theme": "Currencies",
+    "headline": "Dollar index jumps after US payrolls data",
+    "confidence": "high"
+   },
+   {
+    "id": "rates-up-india",
+    "date": "2026-11-06",
+    "theme": "Monetary policy",
+    "headline": "RBI Signals Calibrated Tightening as World Bank Lifts India’s Growth Outlook to 7.1%",
+    "confidence": "low"
+   },
+   {
+    "id": "yields-up-us",
+    "date": "2026-11-07",
+    "theme": "Rates & bonds",
+    "headline": "Treasury Yields Rise on Strong Jobs Data",
+    "confidence": "high"
+   },
+   {
+    "id": "jobs-up-us",
+    "date": "2026-11-06",
+    "theme": "Growth data",
+    "headline": "Blowout October payrolls data sets up Federal Reserve December rate rise",
+    "confidence": "high"
+   },
+   {
+    "id": "monsoon-down",
+    "date": "2026-11-06",
+    "theme": "Monsoon & farm",
+    "headline": "IMD forecasts below normal monsoon in 2026, rainfall to be 95-90 pc of average",
+    "confidence": "medium"
+   },
+   {
+    "id": "metals-up",
+    "date": "2026-11-06",
+    "theme": "Commodities",
+    "headline": "India surpasses combined steel production of the US & Japan; Records remarkable rise in global rankings",
+    "confidence": "low"
+   },
+   {
+    "id": "inflation-up-us",
+    "date": "2026-11-06",
+    "theme": "Growth data",
+    "headline": "US inflation too high; essential to get back to 2%: Fed's Williams",
+    "confidence": "medium"
+   },
+   {
+    "id": "reserves-down-india",
+    "date": "2026-11-07",
+    "theme": "Currencies",
+    "headline": "India's forex reserves fall by $2.69 billion to $717.05 billion as RBI steps in to defend rupee",
+    "confidence": "high"
+   },
+   {
+    "id": "growth-up-india",
+    "date": "2026-11-06",
+    "theme": "Growth data",
+    "headline": "India’s economy likely to grow 7.3% in Q2 FY27: Finance Ministry",
+    "confidence": "medium"
+   },
+   {
+    "id": "growth-up-us",
+    "date": "2026-11-06",
+    "theme": "Growth data",
+    "headline": "US Economy Adds 165,000 Jobs as December Fed Rate Hike Odds Rise",
     "confidence": "medium"
    }
   ]
