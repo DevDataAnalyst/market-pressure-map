@@ -1,6 +1,6 @@
 {
  "updatedAt": "2026-11-11T07:44:09.420Z",
- "assessedAt": "2026-11-11T07:44:23.266Z",
+ "assessedAt": "2026-11-11T07:45:42.328Z",
  "sources": [
   {
    "name": "UN News",
@@ -152,7 +152,27 @@
      "source": "Business Standard",
      "link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPOXNmc1N4MFE0UmxzMGc0dXNkRFJzVmd2ZXJOMWlDdzZMZi1sVmxYdWhMZlFTWXJOQm5WXzdiSW5Kd3RQX1ZZUTR1M092cG8tbXJzMXpCVEJYRzNBSUh0QUo5a0lVRjlJRHJxYl9FWGU0SkxhU2VFWF9ST1hkZjBWTWREZ2w5WHR5YVQ1NW93cFRaMkRvXzFDSXNQbWkxSm12c08tZHVQOC1lMWVLUW1aX2Z0elhuSHRkeDJSM1pYeEQ4VnNWY0ZqSUZSWE44Y3hfc2Z0RWd2U1RyRTVTMGdOeVpWNDJfbTFuc3VvRkpFNnJ1cmp2N1pZ0gH8AUFVX3lxTFBva3JxQl9MTDhpU0ZfdjNCa1I5Vks5RWgxMkRxZ1RVdEtMcmdtZkNiVnFkN3B6VEZXbDc1RnNxZ3VDQ3kwd251V281eHFrZTJXaWNRakllNXBFcmFPR2lKWEsweWtyLVRfVGJ1c0VYeGZ0MHA3X3JZRUM5NWZzVHRjcW1FT3VncFREUVVCd1Z6Nm1vVFdHV0xrOXJHU09oREFkZTRra253bFozSVJPc2cxT1NKci16eXZQa3VNMzVGT1pqNi1QQThfNGNfNHhDNXdmTkItenYwTFJDMUtNZU5yU1ZnY05IbzJ4Y2tnaTFjTk5CNEFVdFNJbG9KUA?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "India presses for safer Black Sea shipping and food corridors",
+    "risk": "elevated",
+    "note": "Food price relief.",
+    "industries": [
+     {
+      "id": "agrifood",
+      "score": 1,
+      "why": "Grain"
+     }
+    ],
+    "economies": [
+     {
+      "id": "inflation",
+      "score": 1,
+      "why": "Food"
+     }
+    ],
+    "at": "2026-11-11T07:45:42.328Z"
+   }
   },
   {
    "id": "crude-oil-prices-surge-after-iran-attack-ships-in-strait-of-",
@@ -185,54 +205,24 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Crude Oil Prices Surge After Iran Attack Ships In Strait of Hormuz",
-    "risk": "high",
-    "note": "Keyword rules read this as higher oil prices.",
+    "headline": "Crude rises after attacks on ships in Hormuz",
+    "risk": "elevated",
+    "note": "Oil rebound.",
     "industries": [
      {
       "id": "transport",
-      "score": -2,
-      "why": "Jet fuel is airlines' biggest cost"
-     },
-     {
-      "id": "energy",
       "score": -1,
-      "why": "Fuel marketers squeezed; upstream gains"
-     },
-     {
-      "id": "autos",
-      "score": -1,
-      "why": "Running costs dent demand"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Paint and packaging inputs costlier"
+      "why": "Fuel"
      }
     ],
     "economies": [
      {
       "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill and subsidies rise"
-     },
-     {
-      "id": "inflation",
       "score": -1,
-      "why": "Fuel feeds into prices"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Margin pressure across sectors"
+      "why": "Oil"
      }
     ],
-    "at": "2026-11-11T07:44:23.266Z"
+    "at": "2026-11-11T07:45:42.328Z"
    }
   },
   {
@@ -272,7 +262,21 @@
      "source": "Anadolu Ajansı",
      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNQ1VoSFdSRFJXX0hfWHh3RWxpaG1qZnZoeExJd0h4eG56M0FTcVM5cDRKSkJ1eG5DRUotNVZ3X0toTWQtdEVRTnVNV29XdUkxMmhldXlrV0FDTHliR0VGM0hIajJRYXMtNjVKdXJCSVZneTgxNGZIWjhFU2FaUGtRcFpSVmJ1NE16b19vOFlkT1hBQnZac1k5WF93czRQZmFDNWZVNG9sa3NTUnJv?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "Iran claims two tankers caught fire in Hormuz",
+    "risk": "high",
+    "note": "Shipping risk.",
+    "industries": [
+     {
+      "id": "transport",
+      "score": -1,
+      "why": "Insurance"
+     }
+    ],
+    "economies": [],
+    "at": "2026-11-11T07:45:42.328Z"
+   }
   },
   {
    "id": "asian-carriers-expand-india-shipping-links-to-southeast-asia",
@@ -301,7 +305,27 @@
    "severity": "high",
    "severityScore": 6,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Asian carriers expand India links to Southeast Asia, East Africa and Red Sea",
+    "risk": "elevated",
+    "note": "More capacity.",
+    "industries": [
+     {
+      "id": "transport",
+      "score": 1,
+      "why": "Shipping capacity"
+     }
+    ],
+    "economies": [
+     {
+      "id": "growth",
+      "score": 1,
+      "why": "Trade links"
+     }
+    ],
+    "at": "2026-11-11T07:45:42.328Z"
+   }
   },
   {
    "id": "eu-to-allocate-60m-for-black-sea-shipping-security-as-india-",
@@ -332,7 +356,15 @@
    "severity": "high",
    "severityScore": 6,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "EU to fund Black Sea shipping security; India offers to mediate",
+    "risk": "watch",
+    "note": "Duplicate.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-11-11T07:45:42.328Z"
+   }
   },
   {
    "id": "eu-pledges-70m-for-black-sea-security-following-deadly-drone",
@@ -372,54 +404,18 @@
     }
    ],
    "assessment": {
-    "headline": "EU pledges €70M for Black Sea security following deadly drone attacks",
-    "risk": "high",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "headline": "EU pledges funds for Black Sea security after drone attacks",
+    "risk": "elevated",
+    "note": "Grain routes.",
     "industries": [
      {
-      "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
-      "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
+      "id": "agrifood",
+      "score": 1,
+      "why": "Grain"
      }
     ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
-      "id": "inflation",
-      "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
-     }
-    ],
-    "at": "2026-11-11T07:44:23.266Z"
+    "economies": [],
+    "at": "2026-11-11T07:45:42.328Z"
    }
   },
   {
@@ -486,7 +482,21 @@
      "source": "The Jakarta Post",
      "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQc01JTHo2NXlFWXdkRFhlc09oWUdsMmttZlRCUmRheGllZndMOF9nOWtYenJwMUszdGE3di1uNGpNN0lib3NlRGRUTzN0UVBsNHl2U2laVjJRTzFDaGgzSmtPUzg4M0twTk9XU0ZoYlUxRXVBSTlFb2JqNWhfVjEwWDZJZ0llcElYTGlnU1QxVFltcVE4bjdWZ0lucDhvRjlYMUR2ai1NQmxPbmZTSHhib09YX2Z1aFl2X3ZOaTk1Tk8zaEduWHVpUXFVSWlQTlF3M2s5cU9vaUxyaEh6NW9ob29DN1UxSmdQYUNPclJmcw?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "India engaging Moscow and Kyiv on Black Sea shipping safety",
+    "risk": "elevated",
+    "note": "Grain and energy exports.",
+    "industries": [
+     {
+      "id": "agrifood",
+      "score": 1,
+      "why": "Grain"
+     }
+    ],
+    "economies": [],
+    "at": "2026-11-11T07:45:42.328Z"
+   }
   },
   {
    "id": "zelenskyy-says-india-ready-to-mediate-on-black-sea-food-corr",
@@ -515,7 +525,15 @@
    "severity": "high",
    "severityScore": 6,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Ukraine says India is ready to mediate on food corridors",
+    "risk": "watch",
+    "note": "Duplicate.",
+    "industries": [],
+    "economies": [],
+    "at": "2026-11-11T07:45:42.328Z"
+   }
   },
   {
    "id": "record-37-ships-attacked-in-strait-of-hormuz-in-october",
@@ -546,54 +564,24 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Record 37 ships attacked in Strait of Hormuz in October",
-    "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "headline": "Record 37 ships attacked in Hormuz in October",
+    "risk": "high",
+    "note": "Risk premium.",
     "industries": [
      {
       "id": "transport",
       "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
-      "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
+      "why": "Attacks"
      }
     ],
     "economies": [
      {
-      "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
       "id": "inflation",
       "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
+      "why": "Freight"
      }
     ],
-    "at": "2026-11-11T07:44:23.266Z"
+    "at": "2026-11-11T07:45:42.328Z"
    }
   },
   {
@@ -626,44 +614,24 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Oil rebounds as Hormuz shipping attacks blunt hopes for Iran truce",
+    "headline": "Oil rebounds as Hormuz attacks blunt truce hopes",
     "risk": "elevated",
-    "note": "Keyword rules read this as shipping lanes reopening.",
+    "note": "Oil bounce.",
     "industries": [
      {
-      "id": "transport",
-      "score": 2,
-      "why": "Shorter routes, lower insurance"
-     },
-     {
       "id": "energy",
-      "score": 1,
-      "why": "Marketers' margins recover"
-     },
-     {
-      "id": "consumer",
-      "score": 1,
-      "why": "Input costs ease"
+      "score": -1,
+      "why": "Costlier crude"
      }
     ],
     "economies": [
      {
       "id": "fiscal",
-      "score": 1,
-      "why": "Import bill eases"
-     },
-     {
-      "id": "inflation",
-      "score": 1,
-      "why": "Fuel and freight costs ease"
-     },
-     {
-      "id": "rupee",
-      "score": 1,
-      "why": "Less dollar demand"
+      "score": -1,
+      "why": "Oil"
      }
     ],
-    "at": "2026-11-11T07:44:23.266Z"
+    "at": "2026-11-11T07:45:42.328Z"
    }
   },
   {
@@ -701,44 +669,18 @@
     }
    ],
    "assessment": {
-    "headline": "Evergreen resumes Suez Canal transits after three years: SCA",
-    "risk": "elevated",
-    "note": "Keyword rules read this as shipping lanes reopening.",
+    "headline": "Container line resumes Suez transits after three years",
+    "risk": "watch",
+    "note": "Older; route reopening.",
     "industries": [
-     {
-      "id": "transport",
-      "score": 2,
-      "why": "Shorter routes, lower insurance"
-     },
-     {
-      "id": "energy",
-      "score": 1,
-      "why": "Marketers' margins recover"
-     },
      {
       "id": "consumer",
       "score": 1,
-      "why": "Input costs ease"
+      "why": "Freight"
      }
     ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": 1,
-      "why": "Import bill eases"
-     },
-     {
-      "id": "inflation",
-      "score": 1,
-      "why": "Fuel and freight costs ease"
-     },
-     {
-      "id": "rupee",
-      "score": 1,
-      "why": "Less dollar demand"
-     }
-    ],
-    "at": "2026-11-11T07:44:23.266Z"
+    "economies": [],
+    "at": "2026-11-11T07:45:42.328Z"
    }
   },
   {
@@ -767,7 +709,21 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Gulf producer ships most Hormuz-route LNG to India",
+    "risk": "elevated",
+    "note": "Gas supply.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": 1,
+      "why": "LNG supply"
+     }
+    ],
+    "economies": [],
+    "at": "2026-11-11T07:45:42.328Z"
+   }
   },
   {
    "id": "red-sea-war-insurance-costs-rise-after-houthi-blockade-sourc",
@@ -807,7 +763,7 @@
      }
     ],
     "economies": [],
-    "at": "2026-11-10T05:45:12.710Z"
+    "at": "2026-11-11T07:45:42.328Z"
    }
   },
   {
@@ -836,7 +792,21 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "India urges safe Hormuz passage, flags seafarer risks",
+    "risk": "elevated",
+    "note": "Crew risk.",
+    "industries": [
+     {
+      "id": "transport",
+      "score": -1,
+      "why": "Crew"
+     }
+    ],
+    "economies": [],
+    "at": "2026-11-11T07:45:42.328Z"
+   }
   },
   {
    "id": "economic-sanctions-working-effectively-no-need-for-major-com",
@@ -865,7 +835,27 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "US says sanctions are working; no need for major combat against Iran",
+    "risk": "elevated",
+    "note": "Lower strike risk.",
+    "industries": [
+     {
+      "id": "transport",
+      "score": 1,
+      "why": "Lower war risk"
+     }
+    ],
+    "economies": [
+     {
+      "id": "fiscal",
+      "score": 1,
+      "why": "Oil"
+     }
+    ],
+    "at": "2026-11-11T07:45:42.328Z"
+   }
   },
   {
    "id": "india-demands-unimpeded-hormuz-shipping-pledges-full-support",
@@ -892,7 +882,21 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "India demands unimpeded Hormuz shipping, backs detained captain",
+    "risk": "elevated",
+    "note": "Crew and passage.",
+    "industries": [
+     {
+      "id": "transport",
+      "score": -1,
+      "why": "Crew"
+     }
+    ],
+    "economies": [],
+    "at": "2026-11-11T07:45:42.328Z"
+   }
   },
   {
    "id": "india-reiterates-safe-passage-through-hormuz-amid-rising-att",
@@ -976,7 +980,21 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "US wants to sell Venezuelan oil to India",
+    "risk": "elevated",
+    "note": "Sourcing option.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": 1,
+      "why": "Sourcing"
+     }
+    ],
+    "economies": [],
+    "at": "2026-11-11T07:45:42.328Z"
+   }
   },
   {
    "id": "india-eyes-investment-in-rosatom-lithium-projects-despite-u-",
@@ -1007,7 +1025,21 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "India eyes lithium projects with a Russian state firm despite US sanctions",
+    "risk": "watch",
+    "note": "Sanctions risk.",
+    "industries": [
+     {
+      "id": "materials",
+      "score": 1,
+      "why": "Lithium supply"
+     }
+    ],
+    "economies": [],
+    "at": "2026-11-11T07:45:42.328Z"
+   }
   },
   {
    "id": "strait-of-hormuz-lng-traffic-reaches-highest-level-since-ira",
@@ -1043,7 +1075,27 @@
      "source": "gasworld",
      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPOTZrVGplbXVORkswbHo5bzhGcGRSekZlMmE4eWQzZ1RIR05hNk9EMXV4Q01lYUZPOVVNYlUxWEpuR016cFFMYzVWUVFpd1c0eVh2a2tvR0pGOEVuZ0lPVWdVX2dRUmhqWHBoWVNnbjE3ek5OSzNBREhkSjM0OW1HY0dwOUpfYjNkelE4b2sxTDNQYjBITld0TlRYdXdXbkluQ3ZMbkExVURhd0JPR3BpTm1UVzNwU1Zy?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "Hormuz LNG traffic highest since the war began",
+    "risk": "elevated",
+    "note": "Gas supply.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": 1,
+      "why": "LNG"
+     }
+    ],
+    "economies": [
+     {
+      "id": "inflation",
+      "score": 1,
+      "why": "Supply"
+     }
+    ],
+    "at": "2026-11-11T07:45:42.328Z"
+   }
   },
   {
    "id": "indian-anti-dumping-duties-put-nepal-s-jute-industry-under-p",
@@ -1072,7 +1124,21 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Indian anti-dumping duties pressure Nepal's jute industry",
+    "risk": "watch",
+    "note": "Trade remedy.",
+    "industries": [
+     {
+      "id": "materials",
+      "score": 1,
+      "why": "Protection"
+     }
+    ],
+    "economies": [],
+    "at": "2026-11-11T07:45:42.328Z"
+   }
   },
   {
    "id": "france-accuses-iran-of-cyberattack-on-700-supermarkets-seeks",
@@ -1200,54 +1266,18 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Strait of Hormuz Shipping Risks Push Oil Prices Up From Two-Month Lows",
+    "headline": "Hormuz shipping risks push oil up from two-month lows",
     "risk": "elevated",
-    "note": "Keyword rules read this as lower oil prices.",
-    "industries": [
-     {
-      "id": "transport",
-      "score": 2,
-      "why": "Jet fuel costs fall"
-     },
-     {
-      "id": "energy",
-      "score": 1,
-      "why": "Fuel marketers' margins recover"
-     },
-     {
-      "id": "autos",
-      "score": 1,
-      "why": "Cheaper running costs"
-     },
-     {
-      "id": "consumer",
-      "score": 1,
-      "why": "Input costs ease"
-     }
-    ],
+    "note": "Oil bounce.",
+    "industries": [],
     "economies": [
      {
       "id": "fiscal",
-      "score": 2,
-      "why": "Oil import bill shrinks"
-     },
-     {
-      "id": "inflation",
-      "score": 1,
-      "why": "Fuel prices ease"
-     },
-     {
-      "id": "rupee",
-      "score": 1,
-      "why": "Less dollar demand"
-     },
-     {
-      "id": "equities",
-      "score": 1,
-      "why": "Margins improve"
+      "score": -1,
+      "why": "Oil"
      }
     ],
-    "at": "2026-11-11T07:44:23.266Z"
+    "at": "2026-11-11T07:45:42.328Z"
    }
   },
   {
@@ -1275,7 +1305,21 @@
    "severity": "elevated",
    "severityScore": 4,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "India recommends anti-dumping duties on Malaysian and Thai rubber gloves",
+    "risk": "watch",
+    "note": "Protects glove makers.",
+    "industries": [
+     {
+      "id": "healthcare",
+      "score": 1,
+      "why": "Duty protection"
+     }
+    ],
+    "economies": [],
+    "at": "2026-11-11T07:45:42.328Z"
+   }
   },
   {
    "id": "indian-garment-manufacturers-reduce-reliance-on-us-after-tar",
@@ -1308,7 +1352,27 @@
      "source": "Business Standard",
      "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPdWRKUW9Tdk1DT3c4eFNGX25Hc0huTlhwdTdLeEJDSUJlSWF2bkREdVB6WmZPM2o4Z2JFYkZ1aWhzTGpET1UzMUhXbUllVS1aYTNtc2lNd25oLWUxTzlvN1BzTVVDS2hEd1VNUlhOYXFEa3ozUG5GVExDekdZbzZRdGxqelVlVEllN1J2ODgzZ0pESUlKaG5iamVEZ1FBQkVCQ24zeE83NXJOM2pZbTMwcHVyU1JFRjRPUVlSOWVDTXFWTVJqZTlpYlE5QzlFUEU3S0hITVlGc9IB3AFBVV95cUxPSWRVVHdlRGJmSjk5RHh5WEpRNVptNjB3VUJva2gzQjlQWlZ2TDh4dGxHWGlVejNQUXI5X0hjMXVsOGhwMmRWbGhITlB5RzBoeG5EejNxOXFXdHo2am5iZmZoR0paOEJsTlFyRE1xYlc4cnBRenhzVkpKNUF1SWh0UHlONThvMnBwbnVwdV9uNER1WDVkQ1A2TV93cDk0ZE9FbHhlR1dBa0lxUGZ5Tkdad3hWSHFhX25XRVVKc1o4ZmdfSm81VDJVZ1VQM3RELVRsWEJ5djlVc3JzRDlQ?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "Indian garment makers cut reliance on US after tariffs",
+    "risk": "elevated",
+    "note": "Export diversification.",
+    "industries": [
+     {
+      "id": "consumer",
+      "score": -1,
+      "why": "US tariff hit"
+     }
+    ],
+    "economies": [
+     {
+      "id": "growth",
+      "score": -1,
+      "why": "Export shift costs"
+     }
+    ],
+    "at": "2026-11-11T07:45:42.328Z"
+   }
   },
   {
    "id": "ukmto-reports-tanker-incident-in-strait-of-hormuz",
@@ -1341,7 +1405,21 @@
      "source": "thechronicle.com.ph",
      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPdVA4b2Iyblc3R3VUaTV2TmtrWmFZcHB4UGhfNVBiYVdad0l1ODJYSGp4bDJsOUFsSXR3TVhjQUhMbWgtZlplWENMSVVHX2ZfWk1tNHN2X1UybWhHVU1ZZjc4aFI5R29ZbmN3UFl6QURnN3BMU1AyZDNYWm5rWWQ2N3kybHpRclhac0owVjZzQ0dOTHVMbWc?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "UK agency reports tanker incident in Hormuz",
+    "risk": "elevated",
+    "note": "Shipping risk.",
+    "industries": [
+     {
+      "id": "transport",
+      "score": -1,
+      "why": "Insurance"
+     }
+    ],
+    "economies": [],
+    "at": "2026-11-11T07:45:42.328Z"
+   }
   },
   {
    "id": "red-sea-crosetto-urges-eu-countries-to-strengthen-the-aspide",
