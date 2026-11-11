@@ -295,6 +295,60 @@ details.rest[open] > summary { margin-bottom: 12px; }
 .share-row a { color: var(--accent); font-weight: 600; }
 .feedlist { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 13px; color: var(--muted); }
 .feedlist a { color: var(--ink-2); }
+
+/* Today's read, world view and analysis */
+.points { margin: 0; padding-left: 18px; display: grid; gap: 6px; color: var(--ink-2); max-width: 95ch; }
+.points b { color: var(--ink); font-weight: 600; }
+.points .linkbtn { font-size: inherit; text-align: left; }
+.kpi .big { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.minibars { width: 100%; height: 34px; display: block; margin-top: 4px; }
+.two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 28px; align-items: start; }
+@media (max-width: 900px) { .two { grid-template-columns: minmax(0, 1fr); } }
+.sub { display: grid; gap: 8px; min-width: 0; align-content: start; }
+.sub h3 { font-size: 1.02rem; font-weight: 700; font-stretch: 92%; }
+.row .subnote { display: block; font: 400 11.5px/1.25 var(--font-data); color: var(--muted); margin-top: 2px; }
+@media (min-width: 521px) { .rows.wide .row { grid-template-columns: minmax(9rem, 17rem) minmax(0, 1fr) 3.4rem; } }
+.worldmap { width: 100%; height: auto; display: block; }
+.worldmap .land { fill: var(--sunk); stroke: var(--surface); stroke-width: .7; }
+.worldmap .borders { fill: none; stroke: var(--surface); stroke-width: .45; opacity: .75; pointer-events: none; }
+.worldmap .region, .worldmap .pin { cursor: pointer; outline: none; }
+.worldmap .region:hover .land, .worldmap .region:focus-visible .land { stroke: var(--ink-2); stroke-width: 1.3; }
+.worldmap .region[aria-pressed="true"] .land { stroke: var(--ink); stroke-width: 1.8; }
+.worldmap .maplabel { font: 500 10.5px var(--font-data); fill: var(--ink); text-anchor: middle; pointer-events: none; paint-order: stroke; stroke: var(--surface); stroke-width: 3px; stroke-linejoin: round; }
+.worldmap .maplabel .n { font-weight: 600; }
+.worldmap .maplabel.quiet { fill: var(--muted); }
+@media (max-width: 640px) { .worldmap .maplabel { display: none; } }
+.worldmap .pin .dot { fill: var(--risk-watch); stroke: var(--surface); stroke-width: 2; }
+.worldmap .pin.high .dot { fill: var(--risk-high); } .worldmap .pin.elevated .dot { fill: var(--risk-elev); }
+.worldmap .pin.none .dot { fill: var(--surface); stroke: var(--risk-watch); stroke-width: 1.5; }
+.worldmap .pin text { font: 600 9px var(--font-data); fill: #15202b; text-anchor: middle; pointer-events: none; }
+.worldmap .pin:hover .dot, .worldmap .pin:focus-visible .dot, .worldmap .pin[aria-pressed="true"] .dot { stroke: var(--ink); }
+.maplegend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12.5px; color: var(--muted); align-items: center; }
+.maplegend span { display: inline-flex; align-items: center; gap: 6px; }
+.maplegend .ramp { width: 84px; height: 10px; border-radius: 3px; background: linear-gradient(90deg, var(--head), var(--sunk) 50%, var(--tail)); }
+.maplegend .pd { width: 11px; height: 11px; border-radius: 50%; background: var(--risk-watch); display: inline-block; }
+.maplegend .pd.high { background: var(--risk-high); } .maplegend .pd.elevated { background: var(--risk-elev); }
+.regionpanel { display: grid; gap: 16px; border-top: 1px solid var(--line); padding-top: 14px; min-width: 0; scroll-margin-top: 12px; }
+.regionpanel .rhead { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 16px; }
+.regionpanel h3 { font-size: 1.2rem; font-weight: 750; font-stretch: 88%; }
+.evlist { display: grid; gap: 0; }
+.ev { display: grid; grid-template-columns: 3.1rem minmax(0, 1fr); gap: 10px; align-items: baseline; padding: 8px 0; border-top: 1px solid var(--line); }
+.ev:first-child { border-top: 0; }
+.ev .linkbtn { color: var(--ink); font: 600 14.5px/1.35 var(--font-body); text-align: left; text-decoration-color: var(--line); }
+.ev .linkbtn:hover { text-decoration-color: var(--accent); }
+.ev p { font-size: 13px; color: var(--muted); }
+.spots { display: flex; flex-wrap: wrap; gap: 8px; }
+.spotbtn { display: inline-flex; align-items: center; gap: 7px; border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 5px 12px; font-size: 13px; cursor: pointer; }
+.spotbtn:hover { border-color: var(--accent); }
+.hm { border-collapse: separate; border-spacing: 2px; width: 100%; min-width: 760px; font-size: 13px; }
+.hm th, .hm td { border: 0; padding: 0; }
+.hm thead th { font: 500 11px var(--font-data); color: var(--muted); text-align: center; padding: 2px 0 4px; white-space: nowrap; }
+.hm tbody th { text-align: left; padding: 2px 8px 2px 0; white-space: nowrap; position: sticky; left: 0; background: var(--surface); z-index: 1; }
+.hm tbody th .linkbtn { color: var(--ink); font-weight: 600; }
+.hm tr.grp th { font: 500 11.5px var(--font-data); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding-top: 10px; }
+.hm td span { display: block; min-width: 40px; padding: 5px 0; text-align: center; border-radius: 4px; background: var(--sunk); font: 500 11.5px var(--font-data); font-variant-numeric: tabular-nums; }
+.hm td span.z { color: var(--muted); }
+.hm td.today span { box-shadow: inset 0 0 0 1.5px var(--ink-2); }
 </style>
 </head>
 <body>
@@ -322,15 +376,42 @@ details.rest[open] > summary { margin-bottom: 12px; }
       <p>Each story is scored from <span class="num">−3</span> (strong headwind) to <span class="num">+3</span> (strong tailwind) for every sector and market gauge it touches. The map adds those scores, counting high-confidence calls at <span class="num">1.0</span>, medium at <span class="num">0.7</span> and low at <span class="num">0.4</span>.</p>
       <p>Sectors follow the main Indian market sector groups. Market gauges track how news reaches Indian markets: equities, the rupee, government bond yields, inflation, the fiscal and trade balance, foreign investor flows and growth. A positive gauge score is good for Indian markets: a stronger rupee, falling bond yields, easing inflation, foreign inflows. Foreign news is included only when it reaches India, through oil and gas, US rates and the dollar, trade, metal or food prices. Stories are written without company names, so the map shows sector-level pressure only.</p>
       <p>Each day a free job reads the latest market headlines and intelligence signals and matches them to event rules, such as "oil prices rise", "RBI cuts rates", "FPIs sell" or "weak monsoon". Each rule carries a reviewed set of exposures. Headlines on the same event are grouped into one story, and confidence rises with the number of separate reports. When the optional Claude routine runs, Claude writes and scores the stories itself instead.</p>
+      <p>The world map places each story and signal by the countries and sea routes its text names; a story that names none counts as India. A region's shading adds up the gauge scores of its stories, weighted by confidence. Signals are counted as events but do not change the shading. "Today's read" and the analysis panel are calculated from the same scores: total pressure is the sum of the seven gauges, conviction is the share of all scores that comes from high-confidence stories, and trends use one reading per day.</p>
       <p>Scores are a structured judgement about direction and size over each story's horizon. They are not price targets or investment advice.</p>
     </div>
   </details>
+
+  <section class="panel" id="brief" aria-labelledby="briefTitle">
+    <div class="panel-head">
+      <div style="display:grid;gap:4px">
+        <span class="eyebrow">Analysis</span>
+        <h2 id="briefTitle">Today's read</h2>
+      </div>
+    </div>
+    <div id="briefBody"><p class="status">Loading the latest scan…</p></div>
+  </section>
 
   <section class="verdicts" id="verdicts" aria-label="Headline verdicts">
     <div class="verdict"><span class="eyebrow">Strongest tailwind</span><div class="skel" style="width:70%"></div></div>
     <div class="verdict"><span class="eyebrow">Strongest headwind</span><div class="skel" style="width:60%"></div></div>
     <div class="verdict"><span class="eyebrow">Strongest gauge</span><div class="skel" style="width:55%"></div></div>
     <div class="verdict"><span class="eyebrow">Weakest gauge</span><div class="skel" style="width:65%"></div></div>
+  </section>
+
+  <section class="panel" id="world" aria-labelledby="worldTitle">
+    <div class="panel-head">
+      <div style="display:grid;gap:4px">
+        <span class="eyebrow">World view</span>
+        <h2 id="worldTitle">Where the news is coming from</h2>
+      </div>
+      <div class="maplegend">
+        <span>Headwind <i class="ramp" aria-hidden="true"></i> Tailwind</span>
+        <span><i class="pd high" aria-hidden="true"></i>High</span><span><i class="pd elevated" aria-hidden="true"></i>Elevated</span><span><i class="pd" aria-hidden="true"></i>Watch</span>
+      </div>
+    </div>
+    <p class="status" style="max-width:95ch">Select a region or a numbered pin to see its events. Shading is the net pressure on Indian markets from today's stories tied to that region. The four pins are shipping chokepoints; the number counts their stories and signals, and the colour is the highest risk among them.</p>
+    <div id="mapBox"><p class="status">Loading the map…</p></div>
+    <div class="regionpanel" id="regionPanel" tabindex="-1"></div>
   </section>
 
   <section class="gauges">
@@ -354,6 +435,17 @@ details.rest[open] > summary { margin-bottom: 12px; }
       <div class="panel-foot"><span>Net weighted score · select a row for details</span><button class="linkbtn" type="button" data-table="eco">Show as table</button></div>
       <div class="tablewrap" id="ecoTable" hidden></div>
     </div>
+  </section>
+
+  <section class="panel" id="analysis" aria-labelledby="anTitle">
+    <div class="panel-head">
+      <div style="display:grid;gap:4px">
+        <span class="eyebrow">Analysis</span>
+        <h2 id="anTitle">What changed and what is driving it</h2>
+      </div>
+      <div class="legend"><span><i class="sw h"></i>Headwind</span><span><i class="sw t"></i>Tailwind</span></div>
+    </div>
+    <div id="anBody" style="display:grid;gap:24px;min-width:0"><p class="status">Loading scores…</p></div>
   </section>
 
   <section class="panel" aria-labelledby="mxTitle">
@@ -481,7 +573,7 @@ const CONF = { high: 1, medium: 0.7, low: 0.4 };
 const IND = Object.fromEntries(INDUSTRIES.map(x => [x.id, x]));
 const ECO = Object.fromEntries(ECONOMIES.map(x => [x.id, x]));
 
-const state = { scan: null, history: [], scanStatus: "loading", osint: null, osintStatus: "loading", sig: { cat: null, risk: "all", region: "all", shown: 12, mine: true }, filter: null, theme: null, tables: { ind: false, eco: false }, mxAll: false };
+const state = { scan: null, history: [], scanStatus: "loading", osint: null, osintStatus: "loading", sig: { cat: null, risk: "all", region: "all", shown: 12, mine: true }, filter: null, theme: null, tables: { ind: false, eco: false }, mxAll: false, world: null, worldStatus: "loading", memory: [], place: null, placeShown: 5 };
 
 const $ = id => document.getElementById(id);
 function el(tag, attrs, ...kids) {
@@ -984,6 +1076,9 @@ function renderAll() {
     renderVerdicts(ind, eco); renderGauge("ind", ind, IND); renderGauge("eco", eco, ECO);
   }
   renderLens(ind, eco);
+  renderBrief(ind, eco);
+  renderMap();
+  renderAnalysis(ind, eco);
   if (state.scanStatus !== "ready") {
     const note = state.scanStatus === "loading" ? "Loading scores…" : "Scores appear once a scan is loaded.";
     for (const k of ["ind", "eco"]) $(k + "Rows").replaceChildren(el("p", { class: "status", text: note }));
@@ -1238,6 +1333,7 @@ function openDrill(kind, id) {
       el("div", { class: "kpi" }, el("b", { text: d === null ? "—" : signed(d) }), el("span", { text: "Change over 24 hours" })),
       el("div", { class: "kpi" }, el("b", { text: signed(r.pos) }), el("span", { text: "From tailwinds" })),
       el("div", { class: "kpi" }, el("b", { text: signed(r.neg) }), el("span", { text: "From headwinds" }))),
+    trendKpis(kind, id, r.net),
     sec("Trend over the last 7 days", sparkline(kind, id)),
     sec(kind === "ind" ? "Where the pressure lands, by gauge" : "Which sectors carry it",
       cross.length ? el("div", { class: "mini" }, ...cross.map(c => {
@@ -1257,6 +1353,18 @@ function openDrill(kind, id) {
       askReady && el("button", { class: "btn primary", type: "button", text: `Ask the desk about ${def.short}`, onclick: () => askAbout(`What is driving pressure on ${def.label} right now, and what should I watch next?`) }))
   ], isSector ? sectorHash(id) : `${kind}-${id}`);
   document.title = isSector ? `${def.label}: ${word(r.net).toLowerCase()} · Market Pressure Map` : `${def.label} · Market Pressure Map`;
+}
+// Where today's reading sits against the last two weeks.
+function trendKpis(kind, id, net) {
+  const vals = dayPoints().map(p => Number(p[kind][id]) || 0);
+  if (vals.length < 3) return null;
+  const week = vals.slice(-7), avg = Math.round(week.reduce((s, v) => s + v, 0) / week.length * 10) / 10;
+  const run = streak(kind, id, net);
+  return el("div", { class: "kpis" },
+    el("div", { class: "kpi" }, el("b", { text: signed(avg) }), el("span", { text: `Average over ${week.length} days` })),
+    el("div", { class: "kpi" }, el("b", { text: signed(Math.max(...vals)) }), el("span", { text: `Highest in ${vals.length} days` })),
+    el("div", { class: "kpi" }, el("b", { text: signed(Math.min(...vals)) }), el("span", { text: `Lowest in ${vals.length} days` })),
+    el("div", { class: "kpi" }, el("b", { text: run ? plural(run, "day") : "—" }), el("span", { text: run ? `In a row as a ${net > 0 ? "tailwind" : "headwind"}` : "No run: today reads mixed" })));
 }
 function shareRow(id) {
   const slug = SECTOR_SLUGS[id], url = `${location.origin}/sector/${slug}`;
@@ -1301,11 +1409,406 @@ function openPair(indId, ecoId) {
   ], `pair-${indId}-${ecoId}`);
 }
 function openFromHash() {
+  const rm = /^#region-([a-z]+)$/.exec(location.hash);
+  if (rm) { if (PLACE[rm[1]]) { selectPlace(rm[1], false); $("world").scrollIntoView({ block: "start" }); } return; }
   const sm = /^#sector=([a-z-]+)$/.exec(location.hash);
   if (sm) { const id = SLUG_TO_SECTOR[sm[1]] || (IND[sm[1]] ? sm[1] : null); if (id && state.scanStatus === "ready") openDrill("ind", id); return; }
   const m = /^#(ind|eco)-([a-z]+)$/.exec(location.hash) || /^#pair-([a-z]+)-([a-z]+)$/.exec(location.hash);
   if (!m || state.scanStatus !== "ready") return;
   if (location.hash.startsWith("#pair-")) openPair(m[1], m[2]); else openDrill(m[1], m[2]);
+}
+
+/* ---------- one reading per day, from the scan history ---------- */
+function dayPoints() {
+  const by = new Map();
+  for (const h of state.history) if (h && typeof h.at === "string" && h.ind && h.eco) by.set(h.at.slice(0, 10), h);
+  return [...by.entries()].sort((a, b) => a[0].localeCompare(b[0])).slice(-14).map(([day, h]) => ({ day, ind: h.ind, eco: h.eco }));
+}
+// The reading taken about a day before the current scan (the same one the 24-hour change uses).
+function prevPoint() {
+  if (!state.scan) return null;
+  const now = Date.parse(state.scan.scannedAt);
+  let best = null;
+  for (const e of state.history) { const t = Date.parse(e.at); if (now - t >= 20 * 3600e3 && now - t <= 30 * 3600e3) best = e; }
+  return best;
+}
+const sgn = v => v >= 1 ? 1 : v <= -1 ? -1 : 0;
+// Days in a row (today included) that a sector or gauge has stayed a tailwind (+1 or more) or a headwind (−1 or less).
+function streak(kind, id, net) {
+  const s = sgn(net); if (!s || !state.scan) return 0;
+  const today = state.scan.scannedAt.slice(0, 10);
+  let n = 1;
+  for (const p of dayPoints().filter(p => p.day < today).reverse()) { if (sgn(Number(p[kind][id]) || 0) === s) n++; else break; }
+  return n;
+}
+// A strip of small bars, one per day. Values below zero hang under the baseline.
+function miniBars(pts, label, fill) {
+  const bw = 10, gap = 2, H = 34, W = Math.max(1, pts.length * (bw + gap) - gap);
+  const max = Math.max(1, ...pts.map(p => Math.abs(p.v)));
+  const hasNeg = pts.some(p => p.v < 0);
+  const base = hasNeg ? H / 2 : H - 1, room = hasNeg ? H / 2 - 1 : H - 2;
+  const svg = svgEl("svg", { viewBox: `0 0 ${W} ${H}`, class: "minibars", role: "img", "aria-label": label, preserveAspectRatio: "none" });
+  svg.append(svgEl("line", { x1: 0, x2: W, y1: base, y2: base, stroke: "var(--zero)", "stroke-width": 1 }));
+  pts.forEach((p, i) => {
+    if (!p.v) return;
+    const h = Math.max(1.5, Math.abs(p.v) / max * room);
+    const r = svgEl("rect", { x: i * (bw + gap), width: bw, y: p.v > 0 ? base - h : base, height: h, rx: 1.5, fill: fill || (p.v > 0 ? "var(--tail)" : "var(--head)") });
+    const t = svgEl("title"); t.textContent = `${p.label}: ${p.text}`; r.append(t); svg.append(r);
+  });
+  return svg;
+}
+const gotoWire = () => $("wireTitle").scrollIntoView({ behavior: reduceMotion() ? "auto" : "smooth", block: "start" });
+
+/* ---------- world view: place each story and signal by the countries and sea routes it names ---------- */
+const rx = (list, flags = "i") => new RegExp("\\b(" + list + ")\\b", flags);
+// Region shapes come from world.json (scripts/build-world.mjs groups the countries); names and keywords live here.
+const REGIONS = [
+  { id: "india", label: "India", short: "India", at: [79, 22] },
+  { id: "southasia", label: "South Asia neighbours", short: "S Asia", at: [67.5, 33.5], kw: rx("pakistan\\w*|bangladesh\\w*|sri lanka\\w*|nepal\\w*|bhutan|afghan\\w*|taliban|maldives|islamabad|dhaka|colombo|kabul") },
+  { id: "gulf", label: "Gulf and West Asia", short: "Gulf", at: [46, 33.5], kwCase: rx("UAE", ""),
+    kw: rx("iran\\w*|tehran|irgc|iraq\\w*|saudi|riyadh|emirates|abu dhabi|dubai|qatar\\w*|doha|kuwait\\w*|oman\\w*|bahrain|yemen\\w*|houthis?|israel\\w*|gaza|hormuz|persian gulf|gulf(?! of mexico)|west asia|middle east|mideast|opec\\+?|turk(ey|ish)|türkiye|syria\\w*|leban\\w+|qeshm|red sea") },
+  { id: "russia", label: "Russia, Black Sea and Central Asia", short: "Russia", at: [92, 61], kw: rx("russia\\w*|moscow|putin|ukrain\\w+|kyiv|zelensk\\w+|black sea|belarus|kazakh\\w*|crimea") },
+  { id: "europe", label: "Europe", short: "Europe", at: [11, 49], kwCase: rx("EU|UK|ECB|NATO", ""),
+    kw: rx("europe\\w*|eurozone|britain|british|london|german\\w*|france|french|netherlands|dutch|ital(y|ian)|spain|poland|romania\\w*|bulgaria\\w*|gree(ce|k)|brussels|scot(ch|land|tish)") },
+  { id: "namerica", label: "United States and North America", short: "N America", at: [-100, 44], kwCase: rx("US|USA|Fed|FOMC|Dow|Nasdaq", ""),
+    kw: rx("united states|america\\w*|washington|white house|federal reserve|us treasur\\w+|treasury yields|wall street|trump|congress|democrats?|republicans?|midterms?|h-1b|canad\\w+|mexic\\w+|centcom|pentagon") },
+  { id: "china", label: "China and East Asia", short: "E Asia", at: [104, 35], kw: rx("chin(a|ese)|beijing|yuan|taiwan\\w*|japan\\w*|yen|korea\\w*|hong kong") },
+  { id: "seasia", label: "Southeast Asia and Oceania", short: "SE Asia", at: [134, -24], kw: rx("asean|indonesia\\w*|malaysia\\w*|vietnam\\w*|thai(land)?|philippine\\w*|singapore|myanmar|australia\\w*|new zealand|malacca|south china sea") },
+  { id: "africa", label: "Africa", short: "Africa", at: [20, 6], kw: rx("africa\\w*|egypt\\w*|suez|nigeria\\w*|somalia|djibouti|sudan|libya\\w*|ethiopia|eritrea|kenya|sahel") },
+  { id: "latam", label: "Latin America", short: "L America", at: [-58, -12], kw: rx("venezuela\\w*|brazil\\w*|argentin\\w+|latin america|chile|colombia\\w*|peru|panama|cuba") }
+];
+// Shipping chokepoints get their own pin. Their events also count towards the region they sit in.
+const HOTSPOTS = [
+  { id: "hormuz", label: "Strait of Hormuz", region: "gulf", at: [56.4, 26.6], kw: rx("hormuz|persian gulf|gulf of oman|qeshm|khasab") },
+  { id: "redsea", label: "Red Sea and Bab al-Mandab", region: "gulf", at: [40.5, 16.5], kw: rx("red sea|bab[ -]al[ -]mandab|houthis?") },
+  { id: "suez", label: "Suez Canal", region: "africa", at: [32.5, 30.3], kw: rx("suez") },
+  { id: "blacksea", label: "Black Sea", region: "russia", at: [34.5, 43.4], kw: rx("black sea|bosphorus") }
+];
+const PLACE = Object.fromEntries([...REGIONS.map(r => [r.id, { ...r, kind: "region" }]), ...HOTSPOTS.map(h => [h.id, { ...h, kind: "spot" }])]);
+// Words that mark a domestic story even when it also names a foreign place.
+const INDIA_KW = rx("rbi|reserve bank of india|sensex|nifty|rupee|g-?secs?|sebi|gst|mpc|cpi|wpi|iip|monsoon|kharif|rabi|fpis?|fiis?|foreign (portfolio )?investors|fiscal deficit|forex reserves|muhurat|mumbai|new delhi|andhra|gujarat|visakhapatnam|kerala|odisha|petrol|diesel|lpg");
+function geoTags(text, places) {
+  const t = text + " " + (places || []).join(" ");
+  const regions = new Set(), spots = [];
+  for (const h of HOTSPOTS) if (h.kw.test(t)) { spots.push(h.id); regions.add(h.region); }
+  for (const r of REGIONS) if ((r.kw && r.kw.test(t)) || (r.kwCase && r.kwCase.test(t))) regions.add(r.id);
+  if (!regions.size || INDIA_KW.test(t)) regions.add("india");
+  return [...regions, ...spots];
+}
+// A story's pull on Indian markets: its gauge scores (its sector scores if it has none), weighted by confidence.
+const storyNet = it => Math.round(weight(it) * (it.economies.length ? it.economies : it.industries).reduce((s, x) => s + x.score, 0) * 10) / 10;
+let geoCache = { key: null, val: null };
+function geoStats() {
+  const key = (state.scan ? state.scan.scannedAt : "") + "|" + (state.osint ? state.osint.updatedAt + state.osint.assessedAt : "");
+  if (geoCache.key === key) return geoCache.val;
+  const S = Object.fromEntries(Object.keys(PLACE).map(id => [id, { id, stories: [], signals: [], net: 0, high: 0, risk: null }]));
+  for (const it of activeItems()) for (const id of geoTags(it.headline + " " + it.summary)) { S[id].stories.push(it); S[id].net += storyNet(it); }
+  for (const s of (state.osint ? state.osint.signals : [])) {
+    const risk = sigRisk(s);
+    for (const id of geoTags(sigTitle(s) + " " + s.title, s.places)) {
+      const r = S[id]; r.signals.push(s);
+      if (risk === "high") r.high++;
+      if (!r.risk || RISK_RANK[risk] > RISK_RANK[r.risk]) r.risk = risk;
+    }
+  }
+  for (const r of Object.values(S)) {
+    r.net = Math.round(r.net * 10) / 10; r.events = r.stories.length + r.signals.length;
+    r.stories.sort((a, b) => Math.abs(storyNet(b)) - Math.abs(storyNet(a)));
+    r.signals.sort((a, b) => RISK_RANK[sigRisk(b)] - RISK_RANK[sigRisk(a)]);
+  }
+  geoCache = { key, val: S };
+  return S;
+}
+const plural = (n, one, many) => `${n} ${n === 1 ? one : many || one + "s"}`;
+const placeCounts = st => [st.stories.length ? plural(st.stories.length, "story", "stories") : null,
+  st.signals.length ? plural(st.signals.length, "signal") + (st.high ? `, ${st.high} high-risk` : "") : null].filter(Boolean).join(" · ") || "No events today";
+// Equal Earth projection, matching the one world.json was drawn with.
+function project([lon, lat]) {
+  const w = state.world, M = Math.sqrt(3) / 2;
+  let l = (lon + w.rotate) * Math.PI / 180;
+  while (l > Math.PI) l -= 2 * Math.PI; while (l < -Math.PI) l += 2 * Math.PI;
+  const th = Math.asin(M * Math.sin(lat * Math.PI / 180)), t2 = th * th, t6 = t2 * t2 * t2;
+  const x = l * Math.cos(th) / (M * (1.340264 - 3 * 0.081106 * t2 + t6 * (7 * 0.000893 + 9 * 0.003796 * t2)));
+  const y = th * (1.340264 - 0.081106 * t2 + t6 * (0.000893 + 0.003796 * t2));
+  return [w.tx + w.k * x, w.ty - w.k * y];
+}
+function selectPlace(id, scroll = true) {
+  state.place = PLACE[id] ? id : null; state.placeShown = 5;
+  renderMap();
+  try { history.replaceState(null, "", state.place ? "#region-" + state.place : location.pathname + location.search); } catch {}
+  if (scroll) { const p = $("regionPanel"); p.scrollIntoView({ behavior: reduceMotion() ? "auto" : "smooth", block: "nearest" }); p.focus({ preventScroll: true }); }
+}
+function placeTip(e, def, st) {
+  const top = st.stories[0] ? st.stories[0].headline : st.signals[0] ? sigTitle(st.signals[0]) : null;
+  tip.replaceChildren(el("b", { text: def.label }),
+    st.stories.length ? el("span", { class: "tn", text: `${signed(st.net)} net · ${word(st.net)}` }) : null,
+    el("span", { class: "tn", text: placeCounts(st) }),
+    top ? el("span", { text: "Top event: " + top }) : null);
+  tip.hidden = false; moveTip(e);
+}
+function wirePlace(node, def, st) {
+  node.setAttribute("role", "button"); node.setAttribute("tabindex", "0");
+  node.setAttribute("aria-pressed", state.place === def.id ? "true" : "false");
+  node.setAttribute("aria-label", `${def.label}: ${st.stories.length ? `${signed(st.net)} net, ${word(st.net)}, ` : ""}${placeCounts(st)}. Show events.`);
+  node.addEventListener("click", () => selectPlace(def.id));
+  node.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); selectPlace(def.id); } });
+  node.addEventListener("mouseenter", e => placeTip(e, def, st));
+  node.addEventListener("mousemove", moveTip);
+  node.addEventListener("mouseleave", () => { tip.hidden = true; });
+}
+function renderMap() {
+  const box = $("mapBox");
+  renderRegionPanel();
+  if (!state.world) {
+    box.replaceChildren(el("p", { class: "status", text: state.worldStatus === "loading" ? "Loading the map…" : "The map couldn't load. The regions are listed below." }));
+    return;
+  }
+  const S = geoStats(), w = state.world;
+  const max = Math.max(1, ...REGIONS.map(r => Math.abs(S[r.id].net)));
+  const svg = svgEl("svg", { viewBox: `0 0 ${w.w} ${w.h}`, class: "worldmap", role: "group", "aria-label": "World map. Select a region or a chokepoint pin to list its events." });
+  // The selected region is drawn last so its outline sits on top of its neighbours.
+  for (const r of [...REGIONS].sort((a, b) => (a.id === state.place) - (b.id === state.place))) {
+    if (!w.regions[r.id]) continue;
+    const st = S[r.id], g = svgEl("g", { class: "region" }), p = svgEl("path", { class: "land", d: w.regions[r.id] });
+    if (st.stories.length && st.net) p.style.fill = `color-mix(in oklab, var(${st.net > 0 ? "--tail" : "--head"}) ${Math.round(22 + 58 * Math.min(1, Math.abs(st.net) / max))}%, var(--sunk))`;
+    g.append(p); wirePlace(g, PLACE[r.id], st); svg.append(g);
+  }
+  svg.append(svgEl("path", { class: "borders", d: w.borders }));
+  for (const r of REGIONS) {
+    const st = S[r.id], [x, y] = project(r.at);
+    const t = svgEl("text", { class: "maplabel" + (st.events ? "" : " quiet"), x: x.toFixed(1), y: y.toFixed(1) });
+    t.textContent = r.short;
+    if (st.events) { const n = svgEl("tspan", { class: "n", dx: 4 }); n.textContent = st.events; t.append(n); }
+    svg.append(t);
+  }
+  // Pins keep a readable size on narrow screens, where the map is drawn small.
+  const unit = w.w / Math.max(280, box.clientWidth || w.w), rad = Math.min(17, Math.max(8.5, 7 * unit));
+  for (const h of HOTSPOTS) {
+    const st = S[h.id], [x, y] = project(h.at);
+    const g = svgEl("g", { class: "pin " + (st.events ? st.risk || "watch" : "none"), transform: `translate(${x.toFixed(1)},${y.toFixed(1)})` });
+    g.append(svgEl("circle", { r: rad + 5, fill: "transparent" }), svgEl("circle", { class: "dot", r: rad }));
+    if (st.events) { const t = svgEl("text", { y: (rad * 0.36).toFixed(1), style: `font-size:${(rad * 1.08).toFixed(1)}px` }); t.textContent = st.events > 99 ? "99+" : st.events; g.append(t); }
+    wirePlace(g, PLACE[h.id], st); svg.append(g);
+  }
+  box.replaceChildren(svg);
+}
+let mapResize = 0;
+addEventListener("resize", () => { cancelAnimationFrame(mapResize); mapResize = requestAnimationFrame(() => { if (state.world) renderMap(); }); });
+
+// Headlines per day that name this place, from the 14-day story memory.
+function placeActivity(id) {
+  return state.memory.map(d => ({ label: fmtDate(d.day), v: d.items.filter(h => geoTags(h).includes(id)).length })).map(p => ({ ...p, text: plural(p.v, "headline") }));
+}
+function netChips(stories) {
+  const chips = [];
+  for (const kind of ["ind", "eco"]) {
+    const k = KIND[kind];
+    for (const r of totals(stories, k.key, kind === "ind" ? INDUSTRIES : ECONOMIES).filter(r => r.n && r.net).sort((a, b) => Math.abs(b.net) - Math.abs(a.net)).slice(0, 4))
+      chips.push(el("button", { class: "chip " + (r.net > 0 ? "pos" : "neg"), type: "button", title: `${k.defs[r.id].label}: ${signed(r.net)} from these stories. Open details.`, onclick: () => openDrill(kind, r.id) }, el("b", { text: signed(r.net) }), k.defs[r.id].short));
+  }
+  return chips;
+}
+function storyEvent(it) {
+  const v = storyNet(it);
+  return el("div", { class: "ev" },
+    el("span", { class: "pill" + (v > 0 ? " pos" : v < 0 ? " neg" : ""), title: "Net score across the market gauges, weighted by confidence", text: signed(v) }),
+    el("div", { style: "display:grid;gap:3px;min-width:0" },
+      el("button", { class: "linkbtn", type: "button", text: it.headline, title: "Open this story in the wire", onclick: () => jumpToStory(it) }),
+      el("p", { text: [it.theme, it.date && fmtDate(it.date), `${it.confidence} confidence`, `horizon: ${it.horizon}`].filter(Boolean).join(" · ") }),
+      it.rationale ? el("p", { style: "color:var(--ink-2)", text: it.rationale }) : null));
+}
+function renderRegionPanel() {
+  const box = $("regionPanel");
+  if (state.scanStatus !== "ready" && !state.osint) { box.replaceChildren(el("p", { class: "status", text: "Events appear once the latest scan has loaded." })); return; }
+  const S = geoStats();
+  const def = PLACE[state.place];
+  if (!def) {
+    const active = REGIONS.map(r => ({ r, st: S[r.id] })).filter(x => x.st.events).sort((a, b) => Math.abs(b.st.net) - Math.abs(a.st.net) || b.st.events - a.st.events);
+    const quiet = REGIONS.filter(r => !S[r.id].events);
+    const max = Math.max(1, ...active.map(x => Math.abs(x.st.net)));
+    box.replaceChildren(
+      el("div", { class: "two" },
+        el("div", { class: "sub" }, el("h3", { text: "Regions, ranked by pressure on Indian markets" }),
+          active.length ? el("div", { class: "rows wide" }, ...active.map(({ r, st }) => {
+            const pct = Math.min(50, Math.abs(st.net) / max * 50);
+            return el("button", { class: "row", type: "button", onclick: () => selectPlace(r.id), "aria-label": `${r.label}: ${st.stories.length ? signed(st.net) + " net, " : ""}${placeCounts(st)}. Show events.` },
+              el("span", { class: "lab" }, r.label, el("span", { class: "subnote", text: placeCounts(st) })),
+              el("span", { class: "track" }, st.net ? el("span", { class: "bar " + (st.net > 0 ? "pos" : "neg"), style: `width:calc(${pct}% - 1px)` }) : null),
+              el("span", { class: "v", text: st.stories.length ? signed(st.net) : "—" }));
+          })) : el("p", { class: "status", text: "No events have been placed yet." })),
+        el("div", { class: "sub" }, el("h3", { text: "Shipping chokepoints" }),
+          el("div", { class: "spots" }, ...HOTSPOTS.map(h => { const st = S[h.id];
+            return el("button", { class: "spotbtn", type: "button", onclick: () => selectPlace(h.id) }, el("span", { class: "risk " + (st.events ? st.risk || "watch" : "watch") }, el("i", { "aria-hidden": "true" })), h.label, el("span", { class: "num", style: "color:var(--muted)", text: st.events ? plural(st.events, "event") : "quiet" })); })),
+          el("p", { class: "status", text: "A dash means the region has signals but no scored story today, so there is no net score." + (quiet.length ? ` Quiet today: ${quiet.map(r => r.label).join(", ")}.` : "") })))
+    );
+    return;
+  }
+  const st = S[def.id], isSpot = def.kind === "spot";
+  const sectors = totals(st.stories, "industries", INDUSTRIES).filter(r => r.n && r.net).sort((a, b) => Math.abs(b.net) - Math.abs(a.net));
+  const gauges = totals(st.stories, "economies", ECONOMIES).filter(r => r.n && r.net).sort((a, b) => Math.abs(b.net) - Math.abs(a.net));
+  const via = [sectors[0] && `${IND[sectors[0].id].short} (${signed(sectors[0].net)})`, gauges[0] && `${ECO[gauges[0].id].short} (${signed(gauges[0].net)})`].filter(Boolean);
+  const read = st.stories.length
+    ? `Today's stories tied to ${isSpot ? "the " + def.label : def.label} add up to ${st.net >= 1 ? "a tailwind" : st.net <= -1 ? "a headwind" : "a mixed reading"} for Indian markets (${signed(st.net)})${via.length ? `, mainly through ${via.join(" and ")}` : ""}.`
+    : st.signals.length ? `No scored story is tied to ${isSpot ? "the " + def.label : def.label} today. ${plural(st.signals.length, "signal")} ${st.signals.length === 1 ? "is" : "are"} being watched${st.high ? `, ${st.high} at high risk` : ""}.`
+    : `Nothing in today's scan or signals feed is tied to ${isSpot ? "the " + def.label : def.label}.`;
+  const act = placeActivity(def.id), days = act.filter(p => p.v).length;
+  const chips = netChips(st.stories);
+  box.replaceChildren(
+    el("div", { class: "rhead" },
+      el("div", { style: "display:grid;gap:4px;min-width:0" }, el("span", { class: "eyebrow", text: isSpot ? `Chokepoint · part of ${PLACE[def.region].label}` : "Region" }), el("h3", { text: def.label })),
+      el("button", { class: "btn ghost", type: "button", text: "All regions", onclick: () => selectPlace(null, false) })),
+    el("p", { class: "exposure", text: read }),
+    el("div", { class: "kpis" },
+      el("div", { class: "kpi" }, el("b", { text: st.stories.length ? signed(st.net) : "—" }), el("span", { text: st.stories.length ? `Net pressure · ${word(st.net)}` : "Net pressure" })),
+      el("div", { class: "kpi" }, el("b", { text: String(st.stories.length) }), el("span", { text: st.stories.length === 1 ? "Story today" : "Stories today" })),
+      el("div", { class: "kpi" }, el("b", { text: String(st.signals.length) }), el("span", { text: "Intelligence signals" })),
+      el("div", { class: "kpi" }, el("b", { text: String(st.high) }), el("span", { text: "At high risk" }))),
+    el("div", { class: "two" },
+      el("div", { class: "sub" }, el("h3", { text: "Sectors and gauges these stories move" }),
+        chips.length ? el("div", { class: "chips" }, ...chips) : el("p", { class: "status", text: "No scored stories here today." })),
+      el("div", { class: "sub" }, el("h3", { text: "In the headlines, last 14 days" }),
+        act.length ? [miniBars(act, `Headlines naming ${def.label} on each of the last ${act.length} days`, "var(--ink-2)"), el("p", { class: "status", text: `Named in the day's stories on ${days} of the last ${act.length} days${act.length ? `, ${plural(act[act.length - 1].v, "headline")} in the latest scan` : ""}.` })]
+          : el("p", { class: "status", text: "Earlier days appear here once the story memory has loaded." }))),
+    el("div", { class: "two" },
+      el("div", { class: "sub" }, el("h3", { text: `Stories (${st.stories.length})` }),
+        st.stories.length ? el("div", { class: "evlist" }, ...st.stories.map(storyEvent)) : el("p", { class: "status", text: "No stories in today's scan." })),
+      el("div", { class: "sub" }, el("h3", { text: `Signals (${st.signals.length})` }),
+        st.signals.length ? el("div", { class: "sig-list" }, ...st.signals.slice(0, state.placeShown).map(s => signalCard(s, true))) : el("p", { class: "status", text: "No current signals." }),
+        st.signals.length > state.placeShown ? el("div", null, el("button", { class: "btn ghost", type: "button", text: `Show more signals (${st.signals.length - state.placeShown} more)`, onclick: () => { state.placeShown += 8; renderRegionPanel(); } })) : null))
+  );
+}
+
+/* ---------- today's read ---------- */
+const allScores = it => [...it.industries, ...it.economies];
+function renderBrief(ind, eco) {
+  const box = $("briefBody");
+  const items = activeItems();
+  if (state.scanStatus !== "ready" || !items.length) { box.replaceChildren(el("p", { class: "status", text: state.scanStatus === "loading" ? "Loading the latest scan…" : "The read appears once a scan is loaded." })); return; }
+  const r1 = v => Math.round(v * 10) / 10, pctOf = (a, b) => b ? Math.round(a / b * 100) : 0;
+  // Total pressure: the seven gauges added up, and the same sum a day earlier.
+  const total = r1(eco.reduce((s, r) => s + r.net, 0)), avg = total / ECONOMIES.length;
+  const prev = prevPoint(), prevTotal = prev ? r1(ECONOMIES.reduce((s, e) => s + (Number(prev.eco[e.id]) || 0), 0)) : null;
+  const tail = ind.filter(r => r.net >= 1), head = ind.filter(r => r.net <= -1);
+  // Each story's share of everything scored today (absolute scores, weighted by confidence).
+  const contrib = items.map(it => ({ it, a: weight(it) * allScores(it).reduce((s, x) => s + Math.abs(x.score), 0) })).sort((a, b) => b.a - a.a);
+  const gross = contrib.reduce((s, c) => s + c.a, 0);
+  const conviction = pctOf(contrib.filter(c => c.it.confidence === "high").reduce((s, c) => s + c.a, 0), gross);
+  const topShare = pctOf(contrib[0].a, gross);
+  const trend = dayPoints().map(p => { const v = r1(ECONOMIES.reduce((s, e) => s + (Number(p.eco[e.id]) || 0), 0)); return { label: fmtDate(p.day), v, text: signed(v) }; });
+
+  const all = [...ind.map(r => ({ ...r, kind: "ind" })), ...eco.map(r => ({ ...r, kind: "eco" }))];
+  const name = r => KIND[r.kind].defs[r.id].label;
+  const open = r => el("button", { class: "linkbtn", type: "button", text: name(r), onclick: () => openDrill(r.kind, r.id) });
+  const pts = [];
+  pts.push(el("li", null, el("b", { text: "Biggest driver. " }), el("button", { class: "linkbtn", type: "button", text: contrib[0].it.headline, onclick: () => jumpToStory(contrib[0].it) }),
+    ` carries ${topShare}% of everything scored today.` + (topShare >= 35 ? " The reading leans heavily on this one story and would shift if it reversed." : "")));
+  const themes = new Map();
+  for (const c of contrib) { const t = themes.get(c.it.theme) || { a: 0, v: 0, n: 0 }; t.a += c.a; t.n++; t.v += weight(c.it) * allScores(c.it).reduce((s, x) => s + x.score, 0); themes.set(c.it.theme, t); }
+  const [tName, tVal] = [...themes.entries()].sort((a, b) => b[1].a - a[1].a)[0];
+  pts.push(el("li", null, el("b", { text: "Main theme. " }), `${tName} accounts for ${pctOf(tVal.a, gross)}% of today's scores across ${plural(tVal.n, "story", "stories")}, a net ${tVal.v >= 1 ? "tailwind" : tVal.v <= -1 ? "headwind" : "wash"} (${signed(r1(tVal.v))}).`));
+  if (prev) {
+    const mv = all.map(r => ({ r, d: delta24(r.kind, r.id, r.net) })).filter(x => x.d);
+    const up = [...mv].sort((a, b) => b.d - a.d)[0], down = [...mv].sort((a, b) => a.d - b.d)[0];
+    const part = x => [open(x.r), ` ${signed(x.d)} (now ${signed(x.r.net)})`];
+    const moves = [up && up.d > 0 ? part(up) : null, down && down.d < 0 ? part(down) : null].filter(Boolean);
+    if (moves.length) pts.push(el("li", null, el("b", { text: "Biggest moves since yesterday. " }), ...moves.flatMap((m, i) => i ? ["; ", ...m] : m), "."));
+    const flips = all.filter(r => sgn(r.net) && sgn(Number(prev[r.kind][r.id]) || 0) === -sgn(r.net));
+    if (flips.length) pts.push(el("li", null, el("b", { text: "Turned. " }), ...flips.slice(0, 3).flatMap((r, i) => [i ? "; " : "", open(r), ` went from ${r.net > 0 ? "headwind to tailwind" : "tailwind to headwind"}`]), "."));
+  }
+  const runs = all.map(r => ({ r, n: streak(r.kind, r.id, r.net) })).filter(x => x.n >= 3).sort((a, b) => b.n - a.n);
+  if (runs.length) pts.push(el("li", null, el("b", { text: "Longest runs. " }), ...runs.slice(0, 2).flatMap((x, i) => [i ? "; " : "", open(x.r), ` has been a ${x.r.net > 0 ? "tailwind" : "headwind"} for ${x.n} days running`]), "."));
+  const S = geoStats();
+  const abroad = REGIONS.filter(r => r.id !== "india" && S[r.id].stories.length).sort((a, b) => Math.abs(S[b.id].net) - Math.abs(S[a.id].net))[0];
+  if (abroad) { const st = S[abroad.id];
+    pts.push(el("li", null, el("b", { text: "From abroad. " }), "The most pressure comes from ", el("button", { class: "linkbtn", type: "button", text: abroad.label, onclick: () => selectPlace(abroad.id) }),
+      `: ${signed(st.net)} net across ${plural(st.stories.length, "story", "stories")}` + (st.signals.length ? `, with ${plural(st.signals.length, "signal")} being watched${st.high ? ` (${st.high} high-risk)` : ""}.` : "."))); }
+  const torn = all.filter(r => r.pos >= 1 && r.neg <= -1).sort((a, b) => Math.min(b.pos, -b.neg) - Math.min(a.pos, -a.neg))[0];
+  if (torn) pts.push(el("li", null, el("b", { text: "Pulled both ways. " }), open(torn), ` has ${signed(r1(torn.pos))} from tailwinds against ${signed(r1(torn.neg))} from headwinds, so its net of ${signed(torn.net)} hides a contest.`));
+  const swing = items.filter(it => it.confidence === "low" && allScores(it).some(x => Math.abs(x.score) >= 2));
+  if (swing.length) pts.push(el("li", null, el("b", { text: "Could swing it. " }), `${plural(swing.length, "low-confidence story", "low-confidence stories")} with a large score: `, ...swing.slice(0, 2).flatMap((it, i) => [i ? "; " : "", el("button", { class: "linkbtn", type: "button", text: it.headline, onclick: () => jumpToStory(it) })]), "."));
+
+  const lensV = avg >= 1 ? "Strong tailwind" : avg >= 0.3 ? "Tailwind" : avg > -0.3 ? "Mixed" : avg > -1 ? "Headwind" : "Strong headwind";
+  box.replaceChildren(el("div", { style: "display:grid;gap:14px" },
+    el("div", { class: "kpis" },
+      el("div", { class: "kpi" }, el("div", { class: "big" }, el("b", { text: signed(total) }), el("span", { text: lensV })),
+        el("span", { text: "Total pressure across the seven gauges" + (prevTotal !== null ? ` · ${signed(r1(total - prevTotal))} on yesterday` : "") }),
+        trend.length > 2 ? miniBars(trend, `Total pressure on each of the last ${trend.length} days, latest ${signed(total)}`) : null),
+      el("div", { class: "kpi" }, el("b", { text: `${tail.length} of ${ind.length}` }), el("span", { text: `Sectors under a tailwind · ${head.length} under a headwind, ${ind.length - tail.length - head.length} mixed or quiet` })),
+      el("div", { class: "kpi" }, el("b", { text: conviction + "%" }), el("span", { text: "Conviction: share of today's scores from high-confidence stories" })),
+      el("div", { class: "kpi" }, el("b", { text: topShare + "%" }), el("span", { text: `Concentration: share from the biggest of ${items.length} stories` }))),
+    el("ul", { class: "points" }, ...pts)));
+}
+
+/* ---------- analysis: movers, themes, 14-day heatmap, contested calls ---------- */
+function renderAnalysis(ind, eco) {
+  const box = $("anBody");
+  const items = activeItems();
+  if (state.scanStatus !== "ready" || !items.length) { box.replaceChildren(el("p", { class: "status", text: state.scanStatus === "loading" ? "Loading scores…" : "Analysis appears once a scan is loaded." })); return; }
+  const r1 = v => Math.round(v * 10) / 10;
+  const all = [...ind.map(r => ({ ...r, kind: "ind" })), ...eco.map(r => ({ ...r, kind: "eco" }))];
+  // Movers: change against the reading a day earlier.
+  const mv = all.map(r => ({ r, d: delta24(r.kind, r.id, r.net) })).filter(x => x.d).sort((a, b) => Math.abs(b.d) - Math.abs(a.d)).slice(0, 8);
+  const mmax = Math.max(1, ...mv.map(x => Math.abs(x.d)));
+  const movers = el("div", { class: "sub" }, el("h3", { text: "Biggest changes in 24 hours" }),
+    mv.length ? el("div", { class: "rows wide" }, ...mv.map(({ r, d }) => {
+      const k = KIND[r.kind], pct = Math.min(50, Math.abs(d) / mmax * 50);
+      return el("button", { class: "row" + (r.kind === "ind" && personal() && isMine(r.id) ? " mine" : ""), type: "button", "aria-haspopup": "dialog", onclick: () => openDrill(r.kind, r.id),
+        "aria-label": `${k.defs[r.id].label}: changed ${signed(d)} in 24 hours, now ${signed(r.net)}. Open details.` },
+        el("span", { class: "lab" }, k.defs[r.id].label, el("span", { class: "subnote", text: `${k.noun} · now ${signed(r.net)}, ${word(r.net).toLowerCase()}` })),
+        el("span", { class: "track" }, el("span", { class: "bar " + (d > 0 ? "pos" : "neg"), style: `width:calc(${pct}% - 1px)` })),
+        el("span", { class: "v", text: signed(d) }));
+    })) : el("p", { class: "status", text: prevPoint() ? "Nothing has moved since yesterday's reading." : "Changes appear once there is a reading from a day earlier." }));
+  // Themes: tailwind and headwind scores each theme contributes.
+  const th = new Map();
+  for (const it of items) { const t = th.get(it.theme) || { theme: it.theme, pos: 0, neg: 0, n: 0 }; t.n++; for (const x of allScores(it)) { const v = x.score * weight(it); if (v > 0) t.pos += v; else t.neg += v; } th.set(it.theme, t); }
+  const tl = [...th.values()].sort((a, b) => (b.pos - b.neg) - (a.pos - a.neg));
+  const tmax = Math.max(1, ...tl.map(t => Math.max(t.pos, -t.neg)));
+  const themes = el("div", { class: "sub" }, el("h3", { text: "Where the pressure comes from, by theme" }),
+    el("div", { class: "rows wide" }, ...tl.map(t => el("button", { class: "row", type: "button", title: "Show these stories in the wire", onclick: () => { state.theme = t.theme; state.filter = null; renderAll(); gotoWire(); },
+      "aria-label": `${t.theme}: ${plural(t.n, "story", "stories")}, tailwinds ${signed(r1(t.pos))}, headwinds ${signed(r1(t.neg))}. Show these stories.` },
+      el("span", { class: "lab" }, t.theme, el("span", { class: "subnote", text: `${plural(t.n, "story", "stories")} · ${signed(r1(t.pos))} / ${signed(r1(t.neg))}` })),
+      el("span", { class: "track" }, t.neg ? el("span", { class: "bar neg", style: `width:calc(${Math.min(50, -t.neg / tmax * 50)}% - 1px)` }) : null, t.pos ? el("span", { class: "bar pos", style: `width:calc(${Math.min(50, t.pos / tmax * 50)}% - 1px)` }) : null),
+      el("span", { class: "v", text: signed(r1(t.pos + t.neg)) })))),
+    el("p", { class: "status", text: "Each bar adds the sector and gauge scores of a theme's stories: headwinds to the left, tailwinds to the right, net on the far right." }));
+  // Heatmap: one column per day.
+  const pts = dayPoints();
+  let heat;
+  if (pts.length < 3) heat = el("p", { class: "status", text: "A day-by-day grid appears here after a few daily scans." });
+  else {
+    const today = state.scan.scannedAt.slice(0, 10);
+    const hmax = Math.max(1, ...pts.flatMap(p => [...Object.values(p.ind), ...Object.values(p.eco)].map(v => Math.abs(Number(v) || 0))));
+    const rowFor = (kind, d) => el("tr", null,
+      el("th", { scope: "row" }, el("button", { class: "linkbtn", type: "button", text: d.short, title: d.label + ": open details", onclick: () => openDrill(kind, d.id) })),
+      ...pts.map(p => { const v = Number(p[kind][d.id]) || 0;
+        const span = el("span", { class: v ? "" : "z", text: v ? signed(v) : "·", "data-tip": `${d.label} · ${fmtDate(p.day)}`, "data-val": v ? `${signed(v)} · ${word(v)}` : "No scored stories" });
+        if (v) span.style.background = `color-mix(in oklab, var(${v > 0 ? "--tail" : "--head"}) ${Math.round(14 + 56 * Math.min(1, Math.abs(v) / hmax))}%, var(--surface))`;
+        return el("td", { class: p.day === today ? "today" : null }, span); }));
+    const table = el("table", { class: "hm" },
+      el("thead", null, el("tr", null, el("th", null), ...pts.map(p => el("th", { scope: "col", text: fmtDate(p.day) })))),
+      el("tbody", null,
+        el("tr", { class: "grp" }, el("th", { colspan: pts.length + 1, scope: "colgroup", text: "Market gauges" })), ...ECONOMIES.map(d => rowFor("eco", d)),
+        el("tr", { class: "grp" }, el("th", { colspan: pts.length + 1, scope: "colgroup", text: "Sectors" })), ...INDUSTRIES.map(d => rowFor("ind", d))));
+    table.addEventListener("mousemove", e => { const s = e.target.closest("span[data-tip]"); if (!s) { tip.hidden = true; return; }
+      tip.replaceChildren(el("b", { text: s.dataset.tip }), el("span", { class: "tn", text: s.dataset.val })); tip.hidden = false; moveTip(e); });
+    table.addEventListener("mouseleave", () => { tip.hidden = true; });
+    heat = el("div", { class: "tablewrap" }, table);
+    // On narrow screens the grid scrolls sideways; start at the latest days.
+    requestAnimationFrame(() => { heat.scrollLeft = heat.scrollWidth; });
+  }
+  const heatSec = el("div", { class: "sub" }, el("h3", { text: `Net score by day, last ${pts.length} days` }),
+    el("p", { class: "status", text: "Read along a row to see how long a tailwind or headwind has lasted, and down a column to see how broad a day's move was. Today is outlined. Select a name for its details." }), heat);
+  // Contested readings and low-confidence stories with large scores.
+  const torn = all.filter(r => r.pos >= 1 && r.neg <= -1).sort((a, b) => Math.min(b.pos, -b.neg) - Math.min(a.pos, -a.neg)).slice(0, 5);
+  const swing = items.filter(it => it.confidence === "low" && allScores(it).some(x => Math.abs(x.score) >= 2)).slice(0, 5);
+  const tornSec = el("div", { class: "sub" }, el("h3", { text: "Pulled both ways" }),
+    torn.length ? el("div", { class: "evlist" }, ...torn.map(r => el("div", { class: "ev" }, el("span", { class: "pill" + (r.net > 0 ? " pos" : r.net < 0 ? " neg" : ""), text: signed(r.net) }),
+      el("div", { style: "display:grid;gap:3px;min-width:0" }, el("button", { class: "linkbtn", type: "button", text: KIND[r.kind].defs[r.id].label, onclick: () => openDrill(r.kind, r.id) }),
+        el("p", { text: `${signed(r1(r.pos))} from tailwinds against ${signed(r1(r.neg))} from headwinds across ${plural(r.n, "story", "stories")}. The net figure hides a contest.` })))))
+      : el("p", { class: "status", text: "No sector or gauge has strong scores on both sides today, so the net figures are a fair summary." }));
+  const swingSec = el("div", { class: "sub" }, el("h3", { text: "Low-confidence stories that could swing the reading" }),
+    swing.length ? el("div", { class: "evlist" }, ...swing.map(storyEvent))
+      : el("p", { class: "status", text: "No low-confidence story carries a score of 2 or more today." }));
+  box.replaceChildren(el("div", { class: "two" }, movers, themes), heatSec, el("div", { class: "two" }, tornSec, swingSec));
 }
 
 /* ---------- ask the desk ---------- */
@@ -1410,8 +1913,31 @@ async function loadOsint() {
   }
   return true;
 }
+// The map outline never changes, so it loads once. The story memory is re-read with every scan.
+async function loadExtras() {
+  let changed = false;
+  if (!state.world) {
+    try {
+      const res = await fetch("world.json");
+      if (!res.ok) throw new Error("world " + res.status);
+      const w = await res.json();
+      if (!w || typeof w.regions !== "object" || !Number.isFinite(w.k)) throw new Error("world shape");
+      state.world = w; state.worldStatus = "ready";
+    } catch { state.worldStatus = "error"; }
+    changed = true;
+  }
+  try {
+    const res = await fetch("data/memory.json", { cache: "no-store" });
+    const m = res.ok ? await res.json() : [];
+    const days = (Array.isArray(m) ? m : []).filter(d => d && typeof d.day === "string" && Array.isArray(d.items)).slice(-14)
+      .map(d => ({ day: d.day.slice(0, 10), items: d.items.map(i => i && typeof i.headline === "string" ? i.headline.slice(0, 220) : "").filter(Boolean) }));
+    if (JSON.stringify(days) !== JSON.stringify(state.memory)) { state.memory = days; changed = true; }
+  } catch {}
+  return changed;
+}
 async function load() {
   const osintChanged = loadOsint();
+  const extrasChanged = loadExtras();
   let scanChanged = true;
   try {
     const [scanRes, histRes] = await Promise.all([fetch("data/scan.json", { cache: "no-store" }), fetch("data/history.json", { cache: "no-store" })]);
@@ -1429,7 +1955,8 @@ async function load() {
   } catch {
     if (state.scanStatus !== "ready") state.scanStatus = "error";
   }
-  if (scanChanged || (await osintChanged)) renderAll(); else renderHeader();
+  const [o, x] = await Promise.all([osintChanged, extrasChanged]);
+  if (scanChanged || o || x) renderAll(); else renderHeader();
   if (firstLoad) { firstLoad = false; openFromHash(); }
 }
 window.addEventListener("hashchange", openFromHash);
