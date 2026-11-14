@@ -1,6 +1,6 @@
 {
- "updatedAt": "2026-11-13T05:44:00.946Z",
- "assessedAt": "2026-11-13T05:44:14.287Z",
+ "updatedAt": "2026-11-14T05:45:17.638Z",
+ "assessedAt": "2026-11-14T05:45:31.827Z",
  "sources": [
   {
    "name": "UN News",
@@ -54,7 +54,7 @@
    "name": "US EIA",
    "type": "Official",
    "ok": true,
-   "count": 26
+   "count": 27
   },
   {
    "name": "USGS earthquakes",
@@ -66,7 +66,7 @@
    "name": "Google News searches",
    "type": "Media monitor",
    "ok": true,
-   "count": 106
+   "count": 117
   },
   {
    "name": "GDELT",
@@ -111,91 +111,12 @@
  ],
  "signals": [
   {
-   "id": "23-indians-killed-in-west-asia-conflict-five-dead-in-black-s",
-   "title": "23 Indians Killed in West Asia Conflict, Five Dead in Black Sea Shipping Attacks",
-   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNT2tKUWdGZHpTaTdJWEcxaXhJVFRPLXR1cjJybjZvUk5XOHZNa0xzVDZ5MTBHdG5KYkVqZDBIVzlHVzF2T3pUTUJ6Qk1zY1BLb2tETFVrY1gxRmtlaVVBNGluUEM4ZlRjSVZQa3VHQ093NmlzMFNKRTRPUU1CVDBJMUNvYV81U0RqYzZsdmFzNW5CcHpqT3ZuLUNGUlhMNUFOUlBtRHRrU0VLSjN2?oc=5",
-   "source": "INDIA New England News",
+   "id": "irgc-announces-explosion-of-two-oil-tankers-in-strait-of-hor",
+   "title": "IRGC Announces Explosion of Two Oil Tankers in Strait of Hormuz Due to Naval Mines",
+   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPdXNnR3dWR0FqMXVYU2kyVWI3OGZtd194LS1WbG91Rlp5UEdqVE1rd1hOMlNmZzhoeklTSHZIRjdKc0ZVNU8ta0xTeW5NZTJQQXhjaFJIcGxUZlhWVVhfYl82SXBvY21fVUF5WUxtWmEzUG92RmFpeUFXTXQ0eXhZV1JpeFpPbXNLeE91ZFNlc05JZ1o5T2VQUlI4dEh1QjdPTFZ2T1JsWQ?oc=5",
+   "source": "Daily Beirut",
    "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T18:43:15.000Z",
-   "category": "shipping",
-   "categories": [
-    "conflict",
-    "shipping"
-   ],
-   "places": [
-    "Black Sea"
-   ],
-   "industries": [
-    "transport",
-    "energy",
-    "consumer"
-   ],
-   "countries": [
-    "india"
-   ],
-   "economies": [],
-   "severity": "high",
-   "severityScore": 7,
-   "reports": 1,
-   "also": [],
-   "assessment": {
-    "headline": "23 Indians Killed in West Asia Conflict, Five Dead in Black Sea Shipping Attacks",
-    "risk": "high",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
-    "industries": [
-     {
-      "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
-      "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
-     }
-    ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
-      "id": "inflation",
-      "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
-     }
-    ],
-    "at": "2026-11-13T05:44:14.287Z"
-   }
-  },
-  {
-   "id": "video-us-iran-war-4-oil-tankers-hit-by-explosions-in-strait-",
-   "title": "Video | US Iran War | 4 Oil Tankers Hit By Explosions In Strait Of Hormuz, Iran Says Ships Ignored Warnings",
-   "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOeUphc0NDZVQyMDZTNVVQOGZ0VDVRYmphNTRnQlFGcWt6NTh0b1dpVDRMekl6aEgxS1lrV2MzeXZsN2tQejNFZDVNY1dOOEhUQkdEaDREZVpMOV9SdkZlS1NhcDVxMnMzZmI1RFhsTkd0SWtfNFJzaktSOE9RcWR3TkV6UmloVlgydkt6T0hNZWhzX3RuNFYzVmNxRlc1YVZQd19qV2x1T2JlQzVzNE9EMVR1emU4TEZCdXUzWFVDRmprR0MtaGt6NVZKbw?oc=5",
-   "source": "NDTV",
-   "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-13T02:51:32.000Z",
+   "published": "2026-11-14T05:32:25.000Z",
    "category": "shipping",
    "categories": [
     "conflict",
@@ -203,7 +124,6 @@
     "energy"
    ],
    "places": [
-    "Iran",
     "Strait of Hormuz"
    ],
    "industries": [
@@ -212,72 +132,84 @@
     "consumer"
    ],
    "countries": [
-    "us",
     "gulf"
    ],
    "economies": [],
    "severity": "high",
-   "severityScore": 6,
-   "reports": 2,
+   "severityScore": 7,
+   "reports": 5,
    "also": [
     {
-     "source": "Gulf Today",
-     "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPek5CbTZoS0RhckVnZXJtbDJpQVFxQXZUSkViaDlpSlVnckJmNjJ2ZlYyRjgwMXZtU2RwLWdhWHNQZF92YjJqNU9jdFhldmtkZFplSVJvSGNNaG1MTnNKWHEzRHdSVmNUcFJReWZ2VWZaY0kybU9UcnZEYklGZzA2MHhBbU9KakhYLVIwN1hsc01sb0lIbXZzSnc3b1V5Nncz?oc=5"
+     "source": "Gujarat Samachar",
+     "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQTFo3U3FKQWZSM29yZ3VkX2VYV3JmOHZFU2F3ZGxuM05IT2tMclNoUEtrWmZoZmIxeHhIU0swS1NfVlRKeE1IcWFObFZPRlYxMXpDOTd6X3FPbjRyYl9WV2hDUlB1RE9aUDFpSHNrb0xxdjFoUXBoTkxiTmxFZkZ2SkRMUzhJZDNqc1RWbWFkU1lBV3lvVjlldEVPeHN6Z3NOU3ptdURCYlNRRUJtalB1eDF1VnBGU3lYX2s0WDktanBiaXA1UGQ0ZzlFSmdsWmlKNjA0TzJtQlNTcG92T0pNRlBOU19rSW5JZm4yaF9yLXk?oc=5"
+    },
+    {
+     "source": "Mathrubhumi English",
+     "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQeGtTN3lHd3pYWmFOU0VEQmpsUVhFTDhMTkV6aHdwNVVENzJMRTJGNXBJbXRDOTE3NThNZE1JZjh6aGdiVFdEcGtPR282ZDR3UFZ2NEppMld4dXQ5MFYwNUxBdE1vYzlzemFnRnU5a2k4MTRkNy1zQTU0dkFWTWVKMGJfaVdNTzU5aUQ2SUtMMC1iYzRPUlozaG9XM3JIS2JYNDBLUNIBqgFBVV95cUxQc0gzeThUX0U5bzVaTnBzemlfdXRGeThGVmtDREpjaTBMXzhhQm0zNk95NEtwbU52alpCaHIteEFNMThMVVBhZ29nSU4xYndNVVk3RlkteUxnazhaMENpekZvWll1ZkRsbUg1amhFM1hYcTdRS1BmX3ljLUZIenU2bFV0VW5Yd3JMR1owcFNSN3VTOExNSW0yaXpwUWtnOElQSkFDUXZuREhiZw?oc=5"
+    },
+    {
+     "source": "The Economic Times",
+     "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPVFkzNUJrNXhGU3BHYjM0bXNuSzc2cnM3TUVPamFMcHljcWlhdTg2U0tGYWtSblVXRGRBSl9zeDJDUEdEZFpiNTM3TFRNVi05bEZtNlE3NWhxN1N3UEZCcWpFdktQbWl2RW9KNjBTMjB0cWJzLUhYUWQ2QXh0T0piQmdGU1gyN0pic29jcTBlR1IxUDkxREZLd0NlMUxBYTlhSWNhaHZweUktYVBGSW9NQm9ZUlZUQkxpclpsMEdkMGlya1V0R2dMSlZETTZ1M3hnY3ZxY1RJbUgwaW5mMkQtYks0Z9IB6AFBVV95cUxQTllHOGxfQ2h1OExJcG1ZZEU2RHdXektjRFVvRmkwUWtuTzJYNDhiREhUd0cxeHM5OUxCeGc2ZFNzUjdJcnRhamgySXZoYWE0eUEtM3JpREFfXzc5c1VhTlNndXQ4SnpPdVVOcUhVZF9jcl9saXplMzlidnpwX1R0NWp4eVZZVEQxdmJINFhfeWgzTGlkWFIxSEtwb3NsTG5neGV6Y0tFei1NaDVBRXBldU85WXBQcnJaVVVYYW9aTWpBMVB0QWJGQU5DV2x2ejNzMzdWalBzU3JubUQ4NDFDZTEtT0ZWakRn?oc=5"
+    },
+    {
+     "source": "TheReport.live",
+     "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNRm9JVWd4YWVTMU00bzI2d0ZiNEFUZ3d1YWtQU2FFQnpGdnNKWmo5eUoyWE0zdHdaSkNqaWZ0TkNXZllPdnpSNlkzamNsakFXVTJsaXYyblJiRWZtSlpBSWRTYi1TUUhjWnpaT3JPbUFsYVI5a0tvM2lSV09NQmJBbExGR1A1cEZrLXJjOG5uSGRHYjBQajBENkJRbUQtTHY2R2hhMUo1SnZaZnJVYzlRRQ?oc=5"
     }
    ]
   },
   {
-   "id": "the-black-sea-has-become-the-world-s-deadliest-shipping-rout",
-   "title": "The Black Sea Has Become the World's Deadliest Shipping Route",
-   "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5JNkUtNDVXTDhrOVNfejdQcGpJel9yaU1tQzFocjVXMG0yRUpaTEQ4bVZ6LS1ZSUF3Z2JUSlZma3dYTWtfblN1MW5JQdIBS0FVX3lxTE5JNkUtNDVXTDhrOVNfejdQcGpJel9yaU1tQzFocjVXMG0yRUpaTEQ4bVZ6LS1ZSUF3Z2JUSlZma3dYTWtfblN1MW5JQQ?oc=5",
-   "source": "Наша Ніва",
+   "id": "iranian-guards-say-lng-tanker-hit-mine-in-strait-of-hormuz-a",
+   "title": "Iranian Guards Say LNG Tanker Hit Mine In Strait Of Hormuz After Using ‘Unauthorised’ Route",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQQ0tqREJKaGdDampSdWppaUtMRi1ISEt5Vy1SdnhUdVk5TFRLanliTHJQS1l4eTQxdXZ4dnN6eVMzNHJJaFhCRU5ZaW9JUTU3U21PcDBjd0RFTTBSNnctdXFxZ3k0cnBpWTdMbVpIX0J4RUo4X1p5S1AtMmpzdWtCVXBTUmNzZHVhSlVfZDlqY9IBnAFBVV95cUxQODVQdWFCSm55Um5fYWw5Sm9uOXJYamRwTmZYcjNuQUFTTEVveEd4NDRRaEFJcWN5THAweWNVN1pJQmZEeERVNVJ4OXNyRTR6SGQ0bXVRZjVjVEYxdElrbEdpRVlKRUx3c1RDZFdOMmx5NFB1b0NLVFd4S3UtSjJJcUJhdkFNS2c1SW9NSGdacFRucHVIWUM1anZCZC0?oc=5",
+   "source": "Outlook India",
    "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T20:09:43.000Z",
+   "published": "2026-11-13T15:03:51.000Z",
    "category": "shipping",
    "categories": [
-    "shipping"
+    "shipping",
+    "energy"
    ],
    "places": [
-    "Black Sea"
+    "Strait of Hormuz"
    ],
    "industries": [
     "transport",
     "energy",
     "consumer"
    ],
-   "countries": [],
+   "countries": [
+    "india",
+    "gulf"
+   ],
    "economies": [],
    "severity": "high",
-   "severityScore": 6,
-   "reports": 4,
+   "severityScore": 7,
+   "reports": 3,
    "also": [
     {
-     "source": "Kyiv Post",
-     "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1CRndTdmViWjJIamJrMnNLMmpSVWhrQUhfYXBVOE1XTzhmN1ZIUnVKanpOaVpFR0lfOGswRG9BSTJteTAxT0RyM2Z5VQ?oc=5"
+     "source": "Newser",
+     "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNWTVRLVlfRVc2eEZKRENnbFZDdVJOMXhyMkRZRHUxTVo1UERlWXMyaGNRdlZDM1JCanBSRUFZRS1ydENzc1F1WXhtcHNteHNCVnF0c3hySk8xWjhRQ1FZWnYyMFdycDRJV2xrQ0lnUEdHMU1ya0l5b2t1N2tTdnZYQ2EtdlRtVXZBaTJ4QjBjWHBudjQzR25sNw?oc=5"
     },
     {
-     "source": "The Moscow Times",
-     "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNLWthdzB5bXQ3alVsWHdZSTc3VFY0UjhpcDVmVXY5WUF5R3dXME5WdmNmTmo1dWl6akhab0IwblFzWXdoZDVaX3N4WTZaVUZ1ampJSkluRkE1c1Mtb0k3Z2YzNG1VLUVBVmRUY0pxTG9BOFprV00xNXh0NjRXeGpwc1k3Y2JwTHEwOWI5dXRYYXB2SE1zMWtrQ0tpaVFIMVpkVDdMZmZFeGR3Q1RSZXFoVzNzbFlWVjg?oc=5"
-    },
-    {
-     "source": "NDTV Profit",
-     "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQT29vZmwyVnhqQ2tYazFmQUhMOHk5akFxTHkwd01tMkU2MkZJeTRGdEFXam5BR3FHWXRxYlZrVDdjSWJaaDJQVExOb1FHa3BJSFZjMkJuaWZteklxQ1pSQ2RYVXItOWhjXy1rVFJ1dEpGay1HWXFZemFSZ25VWF93VkVTTGhwZFctczY1T0xJemVMSi0yWWJLVmRmbnc4RUVmcnFuQmxR?oc=5"
+     "source": "Sada Elbalad English",
+     "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOMnFRd1ZPZjF5dmJpTVd4MW5jVlZSenRTU3Zad1NxYWJEMWRsNW1GYnRWeHlwdU5KRFkwTXNDZUJvUHhRRFp3SzRTU09Yd1BmTWZzVG9oYjMtNXhOdnlsWThudGFyZEVmSTFyODl4dGZ0VzVJOEhwOElOS1QwVjdOcFJXTlY5WjZrck1KZ2RkbVBoUQ?oc=5"
     }
    ]
   },
   {
-   "id": "india-bound-tankers-account-for-one-in-five-hormuz-transits-",
-   "title": "India-bound tankers account for one in five Hormuz transits as Russian oil imports plunge",
-   "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPT2o1NG5hWkdvS0NkTUFUYXktRDVEamZUaXU2QTNkNFRWY2VBNnRVY3NTTzJDQjJyR1dXUGhEN0FHNjF6V3d2anlkYnVtaGx0M1VGbmh6UWlWblJ3cUFNSXJ2V09yaFl5d0Y4TndlZmx5VlRLTXpjSExwN3MybDhnakhybmNrNzkyV1hwcGpPLU5uOHNiYmhTSVgtYkxyYlNtWnFjdTc5Unk3MzZ0S2lscHM5bHVxWUNMeXQ3QllPNzcwYlV0cUlCdW9FMklfb0hsaXViUnpVaw?oc=5",
-   "source": "TradeWinds News",
+   "id": "imo-chief-calls-for-enforcement-of-maritime-rules-in-strait-",
+   "title": "IMO Chief calls for enforcement of maritime rules in Strait of Hormuz after 25 seafarers die in 133 incidents",
+   "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxON3EzTWV1N1J1bk9DenlIdHFKYVNVeU8wazczVDhqYWtwRFhjX25KWFZkZm5COFNlVEs5U3BlWFd2dmJmdl9RN3N5dWZwUWFvaVFaZmFxelU1RDNKWk5GT0taeUpDa3ZUUERZRGY1VFBXakNFcEJXdlRzQV9GNVF0TnJ5dlI5alpzTUZJX0dsaGxLUUFzZ0o3VlVCajludEIwM1NzWnlWLVBJY1pUZ3RYTG1vNU5VZWN3SzJXOTMwRml6dlNpXzVtYlM2V0Y2UFdfVVdMZnZJdGRVMUd4eHV2QXNDWQ?oc=5",
+   "source": "India Shipping News",
    "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T13:18:21.000Z",
+   "published": "2026-11-14T04:07:45.000Z",
    "category": "shipping",
    "categories": [
-    "shipping",
-    "energy"
+    "shipping"
    ],
-   "places": [],
+   "places": [
+    "Strait of Hormuz"
+   ],
    "industries": [
     "transport",
     "energy",
@@ -290,82 +222,39 @@
    "economies": [],
    "severity": "high",
    "severityScore": 6,
-   "reports": 2,
-   "also": [
-    {
-     "source": "Daily Pioneer",
-     "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQNGhFOFN2U2cybzhXUk1jSXJ6bWx1cnctX2lScWRkZmstMGp2UE5LMGQxVzljTjNBVUhTeE1kOTRNTG1MaURMV2s2Q0dtQmg2dnlLSmtkem1OQUNVMkxWRjExTmp5VGM0bzZYcUZqSDNsNFNDTnBtSmJvWUp3RUpYLXFKRzQwQ05xMjIyemVWVVBuY0V20gGUAUFVX3lxTFA0aEU4U3ZTZzJvOFdSTWNJcnptbHVydy1faVJxZGRmay0wanZQTkswZDFXOWNOM0FVSFN4TWQ5NE1MbUxpRExXazZDR21CaDZ2eUtKa2R6bU5BQ1UyTFZGMTFOanlUYzRvNlhxRmpIM2w0U0NOcG1KYm9ZSndFSlgtcUpHNDBDTnEyMjJ6ZVZVUG5jRXY?oc=5"
-    }
-   ]
+   "reports": 1,
+   "also": []
   },
   {
-   "id": "trump-threatens-to-double-tariffs-on-mexico-over-migrant-inv",
-   "title": "Trump threatens to double tariffs on Mexico over 'migrant invasion' at US border",
-   "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOXzVWdmduQlBnejNXLV85dWREb0JHSmk0ZFgwbmV4aEl4WVBlZUxMNVVTV3VxelM1MGNFSG8yb2p3anlFOUlxRUNxc2hFY1NOMlBFZFJaMTZOQ2NmdUhnQ0NhaVhDVTNWcFRTZ1phYTlsNlRwOWVNSUc3VGgweHoyQmM4c2pGWi10bWlvWkJuV3Mtb3dqQmU0V0lhUUZMQ0dRc2ViRG5jTVgtQ2kxWUdtbjFxRHc0VlNDV0padmR6Vk5UZHJ5YWkzNEx1VVBYYjBEeHYtTzJBdWxyY20xbHNsUdIB5gFBVV95cUxNSVh5X1NRRzc4WGRmTDlnMjJwTlhYemZSUFNyZ1pjTlNwY3pfWmhnQ0tsVmlHVklTbTJjY0l3QVNwMVl0bDZqVzIwWHE1WmNMQTd2TjFpNThQUzBCZkxxdW5rMk9PNUY4UXZobjhiNWh4Uks4R3A3SEpVZHlZbGV0TjZlOGNSWVRxS2RjaGdHeWM3Qm5rSE11RlhUdE5CV0ZEVHFsN1VHME9WZGpzZU9Wa2lpcUdtS0pmQnNJaFlVSFNJVm9zYUVWOVVjamNpbFlvbjB3d0E3YmttNzRXSTJ1VmdOYV9sUQ?oc=5",
-   "source": "India Today",
+   "id": "oil-tanker-attacks-black-sea-aid-and-a-record-ebola-surge-sh",
+   "title": "Oil Tanker Attacks, Black Sea Aid, and a Record Ebola Surge Shape Global Headlines",
+   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNVWpGb1VBZ3VCbTJQOHlSSFlwX0lrLXZJcTVDcjNlLS1BcHExMEZYd2ROOWxOeXpRam5xVWlpSUJiOGZfelN4Y0k2SXJHREtwZk91Zk8zZTZRMzhmdXZKcjBUVXp5YkMwOElxMVF1bVVPdDJ5aHJjLXN5eG51c1JQSTUwblp6QjB5S0t1dy03NnA0OWRxVGkwVmt1ZDdmbVE4YjJINQ?oc=5",
+   "source": "News Talk Florida",
    "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T12:51:51.000Z",
-   "category": "conflict",
-   "categories": [
-    "conflict",
-    "sanctions"
-   ],
-   "places": [
-    "Mexico"
-   ],
-   "industries": [
-    "energy",
-    "transport",
-    "industrials"
-   ],
-   "countries": [
-    "us",
-    "india"
-   ],
-   "economies": [],
-   "severity": "high",
-   "severityScore": 6,
-   "reports": 3,
-   "also": [
-    {
-     "source": "The Hawk",
-     "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQUV9jMDNIVW9tQjZ0Nk5hUnNfMTVhNHRWWTd5Y1ZYYmFwVml0aVhwalJoNFhjVjFBYzdxOVhHblE1YXh4NW1qaTRiNnkzYm9fSUJLVWRjVF9CMUk5NzFaSTJVWUhRQjFJZVpmbzJtbHE0Sl81SUNGM3VsNTRObk1ZaGxfSTFpaEQtLXc?oc=5"
-    },
-    {
-     "source": "The Tribune",
-     "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNNEhnbEIzSklEbmY5cVl0M0NUR1RTZUtfRmY0ZS11QnRLU2xVZTVzTnRrV0R0VGVRSHlGNDJxdkhaMEIzTjZvWjBYUW1mQ3NvR20tSjItQnhUQU5nenNoNzBkVjAtNUNDeFhQRExQT1dsOURMVVRBRWFFMy1nZXd4VGxhOXBtM19BUDZMazZDdWp3QTQwTExJVmJSYXctQVlfR0FsckE4U3hURWpRWmZDaTdheE5RaXE0V29qZ1FzaGNka0tQX1AwZTd0SHZpaWNXMFZR0gHTAUFVX3lxTE00SGdsQjNKSURuZjlxWXQzQ1RHVFNlS19GZjRlLXVCdEtTbFVlNXNOdGtXRHRUZVFIeUY0MnF2SFowQjNONm9aMFhRbWZDc29HbS1KMi1CeFRBTmd6c2g3MGRWMC01Q0N4WFBETFBPV2w5RExVVEFFYUUzLWdld3hUbGE5cG0zX0FQNkxrNkN1andBNDBMTElWYlJhdy1BWV9HQWxyQThTeFRFalFaZkNpN2F4TlFpcTRXb2pnUXNoY2RrS1BfUDBlN3RIdmlpY1cwVlE?oc=5"
-    }
-   ]
-  },
-  {
-   "id": "china-says-us-using-spy-claims-to-justify-technology-blockad",
-   "title": "China says US using spy claims to justify technology 'blockade'",
-   "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPdy1yRmsweWl0VFdqMlFrcFFUc3M4M2d4anQ1b3h3MXFmRFAzYW5jRWdGeEpiUEpBTDRaMTA3NElfaDg5RzNFVlNMZERhUS0wdGhDQkUyZ0JlQVF6LUk0UVVJNUgxN1JFVVFwOVlrVHd4Ml9PRWxuZnFCUGI5NGo3ejFEcVJUbVBjdXRRdzFQcUtIRURiVUJ5V1phb21DZUUyVVNBNk9Kc1NCcUcwcDJ5NnluemRTOVZFYXRLUXlNWdIBvwFBVV95cUxPdy1yRmsweWl0VFdqMlFrcFFUc3M4M2d4anQ1b3h3MXFmRFAzYW5jRWdGeEpiUEpBTDRaMTA3NElfaDg5RzNFVlNMZERhUS0wdGhDQkUyZ0JlQVF6LUk0UVVJNUgxN1JFVVFwOVlrVHd4Ml9PRWxuZnFCUGI5NGo3ejFEcVJUbVBjdXRRdzFQcUtIRURiVUJ5V1phb21DZUUyVVNBNk9Kc1NCcUcwcDJ5NnluemRTOVZFYXRLUXlNWQ?oc=5",
-   "source": "The New Indian Express",
-   "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T09:36:00.000Z",
+   "published": "2026-11-13T14:25:05.000Z",
    "category": "shipping",
    "categories": [
-    "shipping"
+    "conflict",
+    "shipping",
+    "energy"
    ],
-   "places": [],
+   "places": [
+    "Black Sea"
+   ],
    "industries": [
     "transport",
     "energy",
-    "consumer"
+    "consumer",
+    "healthcare"
    ],
-   "countries": [
-    "us",
-    "china",
-    "india"
-   ],
+   "countries": [],
    "economies": [],
    "severity": "high",
    "severityScore": 6,
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "China says US using spy claims to justify technology 'blockade'",
+    "headline": "Oil Tanker Attacks, Black Sea Aid, and a Record Ebola Surge Shape Global Headlines",
     "risk": "high",
     "note": "Keyword rules read this as shipping chokepoint disruption.",
     "industries": [
@@ -412,23 +301,21 @@
       "why": "Risk premium on Indian assets"
      }
     ],
-    "at": "2026-11-13T05:44:14.287Z"
+    "at": "2026-11-14T05:45:31.827Z"
    }
   },
   {
-   "id": "india-s-crude-oil-imports-from-russia-hit-record-high-in-oct",
-   "title": "India’s crude oil imports from Russia hit record high in October; Jamnagar refinery biggest importer",
-   "link": "https://news.google.com/rss/articles/CBMikgJBVV95cUxOVk1NMEVnYklveFFLUzRtN0tZNmFMb1JWdFRwekhoamFHTHpESXpXMTR0OTNTWTVvbUQyMkp3enozMFVsRmRhODQ0TlNlT2o4bzlJRWlaT3BYa0hmODk4N2QybTE4WmwtN0NUcnZYNDZkZC13YU1kN1FnZm45R1NQcTZ3LWJSUTFNYnM0TlNDQWpDNk4xUWpHUFRuREhZTFlxcjhCX1UwdWs1Y1JXS3JISE44NUdPOUJrckJRcHJjX1NIZU9QeTdSTUpxcjB0anFwZVRZdWR2UzVXX3ZTZHNyQUpGTnlRa1RMXzI5VEVmVWZLb2VGcUtRZXB6NE1jQ05ZbmUxeGVVVVU0OVROSGZPRERn0gGXAkFVX3lxTE1xVTh4SWNPdEVuclYtR0ZTcWZqdlNfM2x3NUs4RVl5Q3JCZ1pGUW0tdTJzb215UkFBd1dxa2lWZDlzbG5GWmxiclZCbnFoY3dnelVWZjlqcDBPLTdSYzY4cnJxakJmS1Z6dXYwb1FOOFdPYWZDWnVqclplRk9FQkpJWW9ta1lNSEFnUVoxQUNKTkpMV2tSdVl1bVpVMVpDd1pUN29FQnI4RklCM3dpclYyRmRleWlSUklLWnZDaE9IcDdqdEd3bGxmbFZEOVFFQkpxWEdZVjEtZnVDaTV6Vzl3MUctWWJzYkNidW5GVTFfRXo2bzZSQS15NGlLeTJpMDJBR2VOakJ2aEFGd3p3SHJ0YjYyX1Nhbw?oc=5",
-   "source": "The Times of India",
+   "id": "india-s-record-russian-oil-bill-is-about-price-not-loyalty",
+   "title": "India's record Russian oil bill is about price, not loyalty",
+   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOWmZJTjlZTjJHSzNITE12Uy1kMkJWZ3YweWhhdm43b2tIMjd6cTJWNXpQZWtsNUdNeGZoa2o4NkRkam5lVnFhaGM1RlNmSElHdk1IX0lucFFKY3NYWmpuaXc0REJmSTJZSDdUbWdVUEViZjB0SjdFekhJQWNOZElyaXRpeUMzLUotYnE3X1Blc1pWZkF1OEFDREdMMnJMYmxpaDFyalhZbU5SbUtBZkZBMEdlaFRrdw?oc=5",
+   "source": "TradingView",
    "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T09:24:00.000Z",
+   "published": "2026-11-13T10:49:05.000Z",
    "category": "energy",
    "categories": [
     "energy"
    ],
-   "places": [
-    "Russia"
-   ],
+   "places": [],
    "industries": [
     "energy",
     "materials",
@@ -440,34 +327,40 @@
    "economies": [],
    "severity": "high",
    "severityScore": 6,
-   "reports": 2,
+   "reports": 3,
    "also": [
     {
-     "source": "Upstox",
-     "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQeUpmcFNNbVQxTnVtZDRBZW5BbXN3dFJqY2JLV2tQa1FpY2c1d3V0Ul9IS3FWT1NkUXZudzRzQzQzOXluZ0dxM1UtdG1ZeXBTTjlCUHJCVVNwUzJzeVNMV1FiU1UtOW5fbkc4NThyNWNhVkFsTTJ6ZUJnYWowTlZXcGo1WUJyRF9uSHNYZ0NXWXdMYWxSMm9KSHh1WDk2eHY4UEtsWUxRNDdKUzdLT3NWU216LXQwTl9UMWtERGMyVEdhSkxIS2I3OWhPX3k0MmpWQWtuSnpDcmpZblQ1dHF6dw?oc=5"
+     "source": "Big News Network.com",
+     "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNYkl4U2wzYkpqX29EZVpmYlh6ZDNxU3ZSVzJKTVBYeXVERFZsVDdjdV80a3BmbGZXZUJlQkUzMHhkbTV3MjYyRURDWWVkRkhtUWY1R19KYmFqV01NM1ZWZ2R6TlJVU2xoajAxWmNjSEJaU3NLZkhaVms3Tmg5b3RIX0NxT2VmT01zMENnTDJsMjllTzNqazRfcW5KdlBTci1LN0pqUzdaY2taVDQ?oc=5"
+    },
+    {
+     "source": "The Hitavada",
+     "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNaFVZeDZKWDVEdVNwMDE4Zmh2Wkl0MWQwajJDUDNxcTkxMWU4M25kYXNXR3VjOVBGSXNPUzNQOE5hRkQ1NzVMLUtERld5U0RPTC1JSlNvNVhkeFZzVWZpOUx6Y3lCdFZEU1VhTHNTNHY1MTNMWVJtYl9DcDZHZUk5YVdEYU9FVm1EQkMwUHJ6X1R6Um5zWlAyY3ZzcjJLQW9objZ3Z2F4YnRiZ2NoczM5SQ?oc=5"
     }
    ]
   },
   {
-   "id": "saudi-tanker-with-indian-seafarers-attacked-in-hormuz-strait",
-   "title": "Saudi tanker with Indian seafarers attacked in Hormuz Strait",
-   "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNVkhGZkE5NTFyWG1ROUVWc19YX0JxVGlEMEh0T0NRTkVTY1dLYVZmc1k3N0hrOFo2TXpZSzVRd0U3Sm1uYTVkTnYxZGhIcDNFOGpCQXhZM01hdnBqNmVybjE4d1kzTHAwaFFzMmtWc0FabTNCM3llLVE2RlMzdWp1dHdSRGlHbmR6NzB2cnFRcTR3MzZHVFR3T2ZfaW1iS25GTGc?oc=5",
-   "source": "India Shipping News",
+   "id": "un-raises-alarm-over-surge-in-maritime-attacks-calls-for-saf",
+   "title": "UN raises alarm over surge in maritime attacks, calls for safe passage through Strait of Hormuz, Red Sea",
+   "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQODNnNWNmLTFNS0EyaVpEc0s0cWpGNUFKTDI3N1JUOGxDblkzaEFYUVdFYy1GT1B0UUdhOFFySUNVdDd4ZXN6U18wYkRrZkVYTWc3M0J0bnl6UWxuWUxTRHNDMXJZTDlOVVJaTWE4ZGVTOXR1MTZoMkZUanh5MFRUTVRTcUM0bnA3SGpRN2dSd29kUUlxa3NJV2JuOGlBSkwxSnZmbHcwbXNsZGxhMDJHU29UbHRYamtJdThFeXgtX1Z6aHVWRUZrR1ZfOA?oc=5",
+   "source": "thechronicle.com.ph",
    "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-13T03:53:50.000Z",
+   "published": "2026-11-14T05:34:46.000Z",
    "category": "shipping",
    "categories": [
     "conflict",
     "shipping"
    ],
-   "places": [],
+   "places": [
+    "Red Sea",
+    "Strait of Hormuz"
+   ],
    "industries": [
     "transport",
     "energy",
     "consumer"
    ],
    "countries": [
-    "india",
     "gulf"
    ],
    "economies": [],
@@ -476,85 +369,86 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Saudi tanker with Indian seafarers attacked in Hormuz Strait",
+    "headline": "UN raises alarm over surge in maritime attacks, calls for safe passage through Strait of Hormuz, Red Sea",
     "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "note": "Keyword rules read this as shipping lanes reopening.",
     "industries": [
      {
       "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
+      "score": 2,
+      "why": "Shorter routes, lower insurance"
      },
      {
       "id": "energy",
-      "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
+      "score": 1,
+      "why": "Marketers' margins recover"
      },
      {
       "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
+      "score": 1,
+      "why": "Input costs ease"
      }
     ],
     "economies": [
      {
       "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
+      "score": 1,
+      "why": "Import bill eases"
      },
      {
       "id": "inflation",
-      "score": -1,
-      "why": "Fuel and freight costs"
+      "score": 1,
+      "why": "Fuel and freight costs ease"
      },
      {
       "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
+      "score": 1,
+      "why": "Less dollar demand"
      }
     ],
-    "at": "2026-11-13T05:44:14.287Z"
+    "at": "2026-11-14T05:45:31.827Z"
    }
   },
   {
-   "id": "gulf-crude-overtakes-russian-oil-in-india-as-moscow-pitches-",
-   "title": "Gulf Crude Overtakes Russian Oil in India as Moscow Pitches Diesel to Brazil.",
-   "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQaGJGZWNtaTM0UzFUb185UnJpd2JvZ24wb3E0LUcyOE1rZ0VhTnlxZGtpdXBOel9weVJHQnhBb2hPRFdOU1dQWHNZZmFlYXRHMDRxNE9UQzh3bWcxN3QyYnhfR3RfcDlXbGRFMjNHMzhPcVExSWdyb1o5VDJ5ZGxqWXNlbjZtWlBhcFhYM1ljaWFXdHpqMHlPN2Vn0gGiAUFVX3lxTE5SQzFrWHUzNFl5VWZLbjRDYV9sUEZJeEJkTjdtZlNxczhSejBaUVE4VmF0RlRKd3NIa3FLNzVGc2NhcXBJcDBHdXJtbjRuZDl3U1FKM3gwRjNGUG1Vb0dNbU5SQ1ZIQVBXVFpPTHFIVl9ubDYxLVNxOE5ZUjgxdmtmdGM5SHpscUFzUGN1S2ZYWUg0UE1MaFlIZU5GcWFENkxXdw?oc=5",
-   "source": "Ukraine Business News",
+   "id": "us-promises-india-trade-tariff-edge-over-rivals",
+   "title": "US promises India trade tariff edge over rivals",
+   "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQeUUzenZVRTVXQ2hEeVg0LTNqRW5qakxrN0NCQmJ3Q0dRY05idmYtNkdFbWNfSzlRZ0hEY2diNG1UZFU5c1d2cEFmQS1XN3lYQTNJYlRRUFhidGlFYTFzSldzaG5rVlA0eTJQZUhwbzhSS3djN2ctamhYNWVid3hDWUlJbG9BZHgteE1wOXZjUDAtektILTg1RkxldFlnZm_SAawBQVVfeXFMTy1LbFh5Y1M4b3FFYnI5OU1zb1N4UHpQUWRQbE9iN1oyS2tGWW1HWEo1MElTOE1Wd1d0cUZPcDl4WTdtRm1vQlRYNE1tRDFqUW9lV3FmcWM1Vmx2bGZZa1hwUFZ5NGpNYnFmR1R3VHc5YW9COXAyR1dUQzNWQWxkaU1RbDhWS3plZEdtQ01vM2tjNlNPNXFSNXhCcm9Pd3Q2LTd4N1F4dFRWUUFXdA?oc=5",
+   "source": "The New Indian Express",
    "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T23:39:18.000Z",
-   "category": "energy",
+   "published": "2026-11-14T02:31:00.000Z",
+   "category": "sanctions",
    "categories": [
-    "energy"
+    "sanctions"
    ],
-   "places": [
-    "Ukraine",
-    "Brazil"
-   ],
+   "places": [],
    "industries": [
-    "energy",
-    "materials",
-    "transport"
+    "industrials",
+    "tech",
+    "autos",
+    "agrifood"
    ],
    "countries": [
-    "india",
-    "gulf"
+    "us",
+    "india"
    ],
    "economies": [],
    "severity": "elevated",
    "severityScore": 5,
-   "reports": 1,
-   "also": []
+   "reports": 4,
+   "also": [
+    {
+     "source": "WWD",
+     "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNLWNyT0tJcktwT0wxdFNuNjkyS3lnZ2NrRTJ4ajZCMnVFYy15blpxYVR6NUUxQ2tJOWJNdG5ERVlDN2xoWWpEQUtNVHRONFFnS2RfaDVQMVE3VjdBZmdGNUVRZFl3UDdOaFhPZXR5ZE1MVXQ4dFd0WWhtb2I5dTZ4Uk95LS1nNDZwVlI2eFdFZ0FfZ2RETlZwS3NwM1lCZw?oc=5"
+    },
+    {
+     "source": "MLQ.ai",
+     "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOMFVKYlZrLUZFcXNBZG9PYjhxVWlPbVBYUE81RGQ4REN3N1VydjVFb19nMVdoQWdQNDR5ZTN2TVdNWHBScm5uMWU4ZG93aGd5aUw0cS1NS0NiZnRqQjhxbGNMNnRsdmFtS2JxTEM4SXlpbzhLTy0tLUFFZDRoalgtT3doT2VBdHhOdkhhS1dpYUxpNG1weHd3Y3NCcEtuUmE3RmxrMzY0UWJuSnZTdzhURWgtdw?oc=5"
+    },
+    {
+     "source": "Quartz India",
+     "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE55RGNjcWJLUGZhQVZ3ZHRDVEJKMkhWTFBFZUZkSXlGUzJzaWtEVjhEQTZHSnF5RWFMU1Q2M21zcHZnSVdrT09NZmRXTDNkMEk3WWxIWVlRdUluMG9oS2gtSXlnX2RHNWNnTXFRZTFn?oc=5"
+    }
+   ]
   },
   {
    "id": "red-sea-war-insurance-costs-rise-after-houthi-blockade-sourc",
@@ -562,7 +456,7 @@
    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxON0NERGpwbGs2bFVWUG04cXBHQkd5NEptTkFmLW5lSnBwdko0UEVNMnpFUkd2UFBVVGJzUmpCX1hmbWtyNnlYWmp4Wm1aVkRGZHhHT082a29fSlduT0VncmQ4RFhRR0kzMU9McmR4NzFfZk5BR3lScEpoTDZ6cko2QlZTeGNackZSeDdPRVd1TDZOQzl5LVFVSzRydWpuQQ?oc=5",
    "source": "EnergyNow.com",
    "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T15:49:26.000Z",
+   "published": "2026-11-13T22:28:54.000Z",
    "category": "shipping",
    "categories": [
     "conflict",
@@ -630,31 +524,30 @@
       "why": "Risk premium on Indian assets"
      }
     ],
-    "at": "2026-11-13T05:44:14.287Z"
+    "at": "2026-11-14T05:45:31.827Z"
    }
   },
   {
-   "id": "kashmir-was-is-and-will-be-india-s-farooq-abdullah-urges-pak",
-   "title": "'Kashmir Was, Is And Will Be India's': Farooq Abdullah Urges Pakistan To End Terrorism",
-   "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOZFQ4b0ZvdHhhc2Qyc25pUUp3bEp3azJoMENucFFUSEpVY3hBTHUwSzhjX2cyODV6SGh2eVFldnlwNEplQWg2TzFHa0E4c09BWHp3VklKd2dkV0E3ZERlZUdkbmI1eTNnWkFvbW81dzVMcnNSbEJ6SlJqQlJ5RWhBVVk1M1pKTkZweFhjMU9WZW1nd1JhX0RWajN3T1NaSDZncmRtbWx4MG44OThRR3VfMFdGXzBBODIyd25WbVR4Qm92Q1VwSThzQndDblRrbHpDZ3kzYlNjbGFIckRNc2Z2TThhZkNiY3p10gHuAUFVX3lxTE45ZUhNUDBTbXlDNE91QzllUHd5LVZ4LW9UTThwRUZpYzNtVmlVc04tQ3dwMF9OZVVuNVB1NXRpZm14VGZEbVc4TEVvM2FWOUstTDh3TC1IeWJyR3lEMWFzQ1AtZUlHWTZmRDM3SjkzZkYxQXVRNkRfY3ZfNXM0T0s4WDB5UFpxNWUzTlAwR0ozRF9uOHZ2UHRRR0hRMllORVdzTWxNYVZNZUswSk1PYzFTUGQ3TldFcmdyOGRwUkt3TzhtNUFIb3pXcEExUnJHcUk2QU1SZzZSZERZdkVRZ21vbmNvSmNuekFRVVY0LWc?oc=5",
-   "source": "The Times of India",
+   "id": "how-a-houthi-blockade-in-the-red-sea-tightens-iran-s-grip-on",
+   "title": "How a Houthi Blockade in the Red Sea Tightens Iran’s Grip on Global Energy Supplies",
+   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNcEJndXMtbHRQb1Q1YnhKMk1vdGtSUG5GWGdDZHRMOUFwbVVDM3V0OHVCTzVhemt2clNmZFFTUjRKa05kdFNLYUNrTU9fQ1dHQnpCLWJ5YzFqazJESlhBOGtCU1F0MlVaVHBzbG5Bcmx3b1ZNS0E3X2pkNTF5TXVIUC1KMVJqNUNHZThmNF83T05jUHN5QzFlMmU1SzBpMkJQVWdUSFJlbGNXUVgxdGJ3cFN1dw?oc=5",
+   "source": "EnergyNow.com",
    "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T15:26:16.000Z",
-   "category": "conflict",
+   "published": "2026-11-13T22:13:06.000Z",
+   "category": "shipping",
    "categories": [
-    "conflict"
+    "shipping"
    ],
    "places": [
-    "Pakistan"
+    "Iran",
+    "Red Sea"
    ],
    "industries": [
-    "energy",
     "transport",
-    "industrials"
+    "energy",
+    "consumer"
    ],
-   "countries": [
-    "india"
-   ],
+   "countries": [],
    "economies": [],
    "severity": "elevated",
    "severityScore": 5,
@@ -662,69 +555,66 @@
    "also": []
   },
   {
-   "id": "oil-tanker-explosion-reported-again-in-strait-of-hormuz-inte",
-   "title": "Oil Tanker Explosion Reported Again in Strait of Hormuz; International Crude Prices Spike Intraday",
-   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5qbVdGQ3EyTnVfODNvb2FJWWNNSElCdzI3N0F2WDFHcnp3NWpfSXZkSmhJczFBQ0dZZTE3aTMtRENKR0FtTV9Ybm9rYUI5VnExX080NGZwQkpUSU1KUHQ3OXFkNkhkR1J6ZjNRaExQSzhSQXM1LXc?oc=5",
-   "source": "BigGo Finance",
+   "id": "pletenchuk-on-the-black-sea-blockade-the-russians-have-shot-",
+   "title": "Pletenchuk on the Black Sea blockade: The Russians have shot themselves in the foot",
+   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxORWRVUExnQ04zRVlFbnhQSFZ2THA0QU5NTDlxM0RzRlgzcEJUN3BLX3YzazBDV3poUV85MjJQMWdQRWhLYWlfOV9QZXJ5T3UwQjJBc2s4SV9oOVgxeHY3OHZPcV9LWXNsLTVtR2haOUoyLUo4eURJWXJQTFFBaklFdEtrcHBablFrRUI5cVRpSlRxYUZCcXpPN2RGdXdxSXhPVkdoSFkxcTVXTjBnTGRDa0JyTkdLSDjSAbwBQVVfeXFMTklPOVNEaDlVaWJpUElTaU4yUW8wTTczcTFXZ2lPZGxqTUtjby1TSXlqRjBQOGtLX09QVmw3LWVKeFlNcmM2VEZCMC1zTTBYb25JRW9MTWxnRllMUjBSYU1wY3lsSEdOMXduMWJheTBuY28yN0lKVHNnOXBiMTFGb3E1anZ0VzhuTE96dGxqM1JCTUVlanlubkVTRE1raVk5b1RtY0dETDhVWDd0NFFMN3NNeGY5VzlmeXl0X0Q?oc=5",
+   "source": "LIGA.net",
    "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T14:55:00.000Z",
+   "published": "2026-11-13T20:45:00.000Z",
    "category": "shipping",
    "categories": [
-    "shipping",
-    "energy"
+    "shipping"
    ],
    "places": [
-    "Strait of Hormuz"
+    "Black Sea"
    ],
    "industries": [
     "transport",
     "energy",
     "consumer"
    ],
-   "countries": [
-    "gulf"
-   ],
+   "countries": [],
    "economies": [],
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Oil Tanker Explosion Reported Again in Strait of Hormuz; International Crude Prices Spike Intraday",
+    "headline": "Pletenchuk on the Black Sea blockade: The Russians have shot themselves in the foot",
     "risk": "elevated",
-    "note": "Keyword rules read this as higher oil prices.",
+    "note": "Keyword rules read this as shipping chokepoint disruption.",
     "industries": [
      {
       "id": "transport",
       "score": -2,
-      "why": "Jet fuel is airlines' biggest cost"
+      "why": "Freight, insurance and fuel costs rise"
      },
      {
       "id": "energy",
       "score": -1,
-      "why": "Fuel marketers squeezed; upstream gains"
+      "why": "Fuel marketers' margins squeezed"
      },
      {
-      "id": "autos",
+      "id": "materials",
       "score": -1,
-      "why": "Running costs dent demand"
+      "why": "Crude-linked inputs costlier"
      },
      {
       "id": "consumer",
       "score": -1,
-      "why": "Paint and packaging inputs costlier"
+      "why": "Imported inputs costlier"
      }
     ],
     "economies": [
      {
       "id": "fiscal",
       "score": -2,
-      "why": "Oil import bill and subsidies rise"
+      "why": "Oil import bill swells"
      },
      {
       "id": "inflation",
       "score": -1,
-      "why": "Fuel feeds into prices"
+      "why": "Fuel and freight costs"
      },
      {
       "id": "rupee",
@@ -734,24 +624,59 @@
      {
       "id": "equities",
       "score": -1,
-      "why": "Margin pressure across sectors"
+      "why": "Risk premium on Indian assets"
      }
     ],
-    "at": "2026-11-13T05:44:14.287Z"
+    "at": "2026-11-14T05:45:31.827Z"
    }
   },
   {
-   "id": "oil-prices-slip-as-strait-of-hormuz-attacks-offset-higher-op",
-   "title": "Oil Prices Slip as Strait of Hormuz Attacks Offset Higher OPEC+ Output, Treasury Yields Rise",
-   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOZ0dySU9mWEYxM2dnbW0xZ0RkWDY0UUtDdjFpdTlmM1IyMkNtRXZQaGVwa1YyWWI2eDFWN3ZVNFF5SzFCb2pzYmNpYllicXVvWGJIaWxEUGRZSUpCU3hQYm1Fay1CNndHU1ViNXBBaUZjRllxMmpyMkRiVGtFWUc1NDJPNjNiXzY1dnFjeTFIeFN4TmpxUjJjdDZWS25IUDZFZElLRFBraGVvaHB1dXcwS2xRYXc1Zw?oc=5",
-   "source": "Tekedia",
+   "id": "us-assures-india-of-below-peer-tariffs-in-trade-deal-talks",
+   "title": "US assures India of below-peer tariffs in trade deal talks",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOYVB1YnZ3UE5TZEwySWg0cWlTRzAxekNwTW1DeU83WXIxbWc3bHlscmdnUk93amJoSmxWU0F1MGFTM19PSFRVMG5IZmFzUXJISDRXU3l6Q3hIOUp1MEYwY0JSc1loZXJjMlVDV2pkdlV1MEN0UG5pcVpsWUlNa0NFY1ZvUXlSeGdWRnlnT3Y4SQ?oc=5",
+   "source": "Briefs Finance",
    "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T14:19:20.000Z",
+   "published": "2026-11-13T20:00:00.000Z",
+   "category": "sanctions",
+   "categories": [
+    "sanctions"
+   ],
+   "places": [],
+   "industries": [
+    "industrials",
+    "tech",
+    "autos",
+    "agrifood"
+   ],
+   "countries": [
+    "us",
+    "india"
+   ],
+   "economies": [],
+   "severity": "elevated",
+   "severityScore": 5,
+   "reports": 3,
+   "also": [
+    {
+     "source": "Business Today",
+     "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxORnFfWWxoMWRtM296Sy1UX3c3WlNxam43M1dmMUloSTZsNS1VMFJyUWRSZy03UHZKSXdtWHBlMWp1Mzh3MkxCWmxhYllfYzFvdDNTUHRRQUhxejh2VkRmaFBab0RMM2lkSExKRWdPOUp2RjFRaU5FdTZmT0M3UndrcDYwdkpHZ0ttQ2JNMGdieWRVV0pmMUkwMHRoNENJTXRybjlYNGo0M3B5NmNnc2tnX1pDdHFKVFZDTnJ1dXRPcUZGS3dSNmlTMVRPTUIwRWY0cm05MHZlNU9VV2JfbWfSAeMBQVVfeXFMT25FYmRWRGNTTHhDYTJLLXk3dVluNXlPRXA0dEtiTDJJWDZyU0J6NVM2bm9DNXVGSXhnUWtxbFVZX0owVlVwZ2JadnVxZ0l0M2ZYYXRDdVlPNVBGcnhlaXJWR21oN0pod1pMWGFYSU1WSERPaVJEUTRhM3JjZHphaTRiakhoa3V4MFFNWWlNa2ZiQzVZUUk3eTlVU3VhR3NJVDI0ekVoT1ZhOE5ZU0twVmpHRUt5Yl9iZjR0Zlo1TU5ZV2ZrMmdDS3FXTkstLWRFZ0tKM3QxRHRKQ0N3SW9pOG9Fd1U?oc=5"
+    },
+    {
+     "source": "Bloomberg.com",
+     "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPZXRZZUtRRWtLbDQ3ZHF3b01VSXJUUlRFbzEzSktxR0ZiM2g3ZmNMYVlzSW5fUGJ6eVN0bVVkR0Jkc1g0dkNKMlpQTHZ3VWM3V2cyQ1kxaVNESUpfTFM0dXZUeWVJX3dGaG9zTmk4U2lfLXVCWE9tNmxFMDNOOTM3VmhHbUNHUlNtY2FseXBtZzdXekVWZ3JSQ09vLUFROTlsUnN5M214RHlSQQ?oc=5"
+    }
+   ]
+  },
+  {
+   "id": "strait-of-hormuz-traffic-dips-amid-plunge-in-outbound-transi",
+   "title": "Strait of Hormuz traffic dips amid plunge in outbound transits",
+   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQVU95djFNbWRZbnVoR3FrelRCTDRRUkJFd1hwWGV6NjdjN2Fnbk9Xb285YUVTaVNrU0otWUxEZEVYV0EteFdPSm9pNUplS0k3S3RrR04yN082NHhyV3JETVY1dTAxS2NmMXJFdDUtUkc1VVVZT083WEdwTlVwYXZMeHdwc2dCVWZXWUNxZm5KZmZOQXJKWFlpMVBvU0FtWXZyQjdGTDJMS0lzbF9sWlptRzdGUQ?oc=5",
+   "source": "TradeWinds News",
+   "sourceType": "Media monitor (Google News)",
+   "published": "2026-11-13T19:17:06.000Z",
    "category": "shipping",
    "categories": [
-    "conflict",
-    "shipping",
-    "energy"
+    "shipping"
    ],
    "places": [
     "Strait of Hormuz"
@@ -770,63 +695,143 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Oil Prices Slip as Strait of Hormuz Attacks Offset Higher OPEC+ Output, Treasury Yields Rise",
+    "headline": "Strait of Hormuz traffic dips amid plunge in outbound transits",
     "risk": "elevated",
-    "note": "Keyword rules read this as lower oil prices.",
+    "note": "Keyword rules read this as shipping chokepoint disruption.",
     "industries": [
      {
       "id": "transport",
-      "score": 2,
-      "why": "Jet fuel costs fall"
+      "score": -2,
+      "why": "Freight, insurance and fuel costs rise"
      },
      {
       "id": "energy",
-      "score": 1,
-      "why": "Fuel marketers' margins recover"
+      "score": -1,
+      "why": "Fuel marketers' margins squeezed"
      },
      {
-      "id": "autos",
-      "score": 1,
-      "why": "Cheaper running costs"
+      "id": "materials",
+      "score": -1,
+      "why": "Crude-linked inputs costlier"
      },
      {
       "id": "consumer",
-      "score": 1,
-      "why": "Input costs ease"
+      "score": -1,
+      "why": "Imported inputs costlier"
      }
     ],
     "economies": [
      {
       "id": "fiscal",
-      "score": 2,
-      "why": "Oil import bill shrinks"
+      "score": -2,
+      "why": "Oil import bill swells"
      },
      {
       "id": "inflation",
-      "score": 1,
-      "why": "Fuel prices ease"
+      "score": -1,
+      "why": "Fuel and freight costs"
      },
      {
       "id": "rupee",
-      "score": 1,
-      "why": "Less dollar demand"
+      "score": -1,
+      "why": "Importers' dollar demand rises"
      },
      {
       "id": "equities",
-      "score": 1,
-      "why": "Margins improve"
+      "score": -1,
+      "why": "Risk premium on Indian assets"
      }
     ],
-    "at": "2026-11-13T05:44:14.287Z"
+    "at": "2026-11-14T05:45:31.827Z"
    }
   },
   {
-   "id": "pakistan-conducts-first-flight-test-of-fa-az-air-to-air-miss",
-   "title": "Pakistan Conducts First Flight Test of Fa’az Air-to-Air Missile; What It Means for India’s Astra Advantage",
-   "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNT04yeWNveElQNFVWc3dEY2M5NG1yRnMzVmRSeFBxS2ZkUTRXY1dGRHlJVDFjTk5ET0VvMTRuMDhuQk1jSllkVDFOQ2NQOGJFVnBER2E5WXN0OHJBZjN5MzFXM3plQlo3djdTOXEyMzZVWVVRRHdiN0FBMFF1aXRFeUh1OWZMRzZaUFdKMkU4TlVIOWV3Q3N6XzlvU2g2RWU2YzVNV3VnUUlJMjQxZnEwQ1FpSVU3Sk9JeEdaUkduTU1PQUJiUjdzeDRjRHRJNHhMYTVj?oc=5",
-   "source": "Defence.in",
+   "id": "us-centcom-iran-naval-blockade-strait-of-hormuz-open-commerc",
+   "title": "us-centcom-iran-naval-blockade-strait-of-hormuz-open-commercial-shipping-2026 Archives",
+   "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOSFAtYW9KYzN3Rk5CckoxdDJkM1FfM29HdUVzLUtXdklnQmxDdnVOMmdlMmRwZW45RElUU19NakVObHhhNFItOVZKRUtreklmaDc3M3NBMXRwdHZhd0lwc0pRZ3B0djJHenFLNlIxVHdweWs4TUNpMHhzZ1hlQkxRbHNvZ1lTd2k2a3pPVVFaMktlYlRQQmxZS0hJcXBqRWJzN1hWeFRn?oc=5",
+   "source": "TV ONE USA",
    "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T13:04:19.000Z",
+   "published": "2026-11-13T18:14:32.000Z",
+   "category": "shipping",
+   "categories": [
+    "conflict",
+    "shipping"
+   ],
+   "places": [
+    "Iran"
+   ],
+   "industries": [
+    "transport",
+    "energy",
+    "consumer"
+   ],
+   "countries": [
+    "us",
+    "gulf"
+   ],
+   "economies": [],
+   "severity": "elevated",
+   "severityScore": 5,
+   "reports": 1,
+   "also": [],
+   "assessment": {
+    "headline": "us-centcom-iran-naval-blockade-strait-of-hormuz-open-commercial-shipping-2026 Archives",
+    "risk": "elevated",
+    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "industries": [
+     {
+      "id": "transport",
+      "score": -2,
+      "why": "Freight, insurance and fuel costs rise"
+     },
+     {
+      "id": "energy",
+      "score": -1,
+      "why": "Fuel marketers' margins squeezed"
+     },
+     {
+      "id": "materials",
+      "score": -1,
+      "why": "Crude-linked inputs costlier"
+     },
+     {
+      "id": "consumer",
+      "score": -1,
+      "why": "Imported inputs costlier"
+     }
+    ],
+    "economies": [
+     {
+      "id": "fiscal",
+      "score": -2,
+      "why": "Oil import bill swells"
+     },
+     {
+      "id": "inflation",
+      "score": -1,
+      "why": "Fuel and freight costs"
+     },
+     {
+      "id": "rupee",
+      "score": -1,
+      "why": "Importers' dollar demand rises"
+     },
+     {
+      "id": "equities",
+      "score": -1,
+      "why": "Risk premium on Indian assets"
+     }
+    ],
+    "at": "2026-11-14T05:45:31.827Z"
+   }
+  },
+  {
+   "id": "india-condemns-pakistan-s-barbaric-cowardly-airstrike-on-kab",
+   "title": "India condemns Pakistan’s ‘barbaric, cowardly’ airstrike on Kabul hospital",
+   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQcnJBNkV6MFZNbTZ6enNxM2g1RGJNcjFQazA3VEhBTWZyNzhhZEZfVnA3QWFFRFJrQmswOFB3XzVlM0Ewbjg0QUF3UVd3NC1wNlBTaElxbU9LczllRHZ4S0JHTmxUWTRmTU4tWldJNEJNQVEwY3NFRWZTbm9MbS1zYWJUSlpsVEFvM0Rsamk5VEZNWTFTRUliXzUwdno?oc=5",
+   "source": "DD News",
+   "sourceType": "Media monitor (Google News)",
+   "published": "2026-11-13T18:08:30.000Z",
    "category": "conflict",
    "categories": [
     "conflict"
@@ -849,72 +854,53 @@
    "also": []
   },
   {
-   "id": "europe-s-critical-mineral-russia-s-war-industry-the-irish-ex",
-   "title": "Europe's Critical Mineral, Russia's War Industry: The Irish Exports At The Centre Of A Sanctions Row",
-   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPazVKckJzSHdkS2VqNFN3bTN3dlBTR201ZUNBdVpoSExObGUyQ0EzSUdaSTdybWF0aEdsRUdRMlRCY0dJVkUyTURldmdrbTk3WDljTERfVDFzUE5CSWVPNGRBc3dXcTc5YjBRRkw4OGg2eGt6YUF5QTdCSUpNbUV0Q2puNElIV1kxaVgzUzhhZ1lKR200RWxKUDJmRFBYWXNSa3RGcnJMZmE?oc=5",
-   "source": "Outlook India",
+   "id": "black-sea-war-risk-reshapes-global-wheat-market",
+   "title": "Black Sea war risk reshapes global wheat market",
+   "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOWFdXbDA5ZjAxenBLRmVTYXFUazd3eGxjM3JKWEw2QzJ5aWUzazk0c2FoX3dUZGdBVUQ5M1BEckpxT2FNUjNJOWwzSjREcm92TEQzSl9wbnFHOTdPeG9SYWlrYXktekZiTXFpLWJCVlNXUG1JbXhhb3JpbEZQZDFoaS1MS2JQU1ZnSGZQbVFVWVFIcVVET1E?oc=5",
+   "source": "CMB News",
    "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T11:52:58.000Z",
+   "published": "2026-11-13T12:19:56.000Z",
+   "category": "shipping",
+   "categories": [
+    "conflict",
+    "shipping",
+    "food"
+   ],
+   "places": [
+    "Black Sea"
+   ],
+   "industries": [
+    "transport",
+    "energy",
+    "consumer",
+    "agrifood"
+   ],
+   "countries": [],
+   "economies": [],
+   "severity": "elevated",
+   "severityScore": 5,
+   "reports": 1,
+   "also": []
+  },
+  {
+   "id": "gulf-crude-overtakes-russian-oil-in-india-for-first-time-sin",
+   "title": "Gulf crude overtakes Russian oil in India for first time since Iran war",
+   "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNOG5YbmNLa1NQUnUtd0tYQXNTV0V0WDYta180Y3pWTkZaTFA0dmFrQ2txdlI5cFJFNVdoT0RSVDJibjlnQW9ZbFo0aWFEcEg0QnNpYmx2VXEtMkpYa0c2U0Vrd0xON3Niclo5SGNvX2hPYmZEYkJ4NFYtZDltSC05SzhpM1RSalVrUC1qMk9DV0Y0THZRS2lFWDRhRmhTRktiQ2tsRUlFN3NNalBENS1OZUMwX0ZfOUhRV1dCYnYwZjk5SEdTdEIw?oc=5",
+   "source": "TradingView",
+   "sourceType": "Media monitor (Google News)",
+   "published": "2026-11-13T10:49:04.000Z",
    "category": "conflict",
    "categories": [
     "conflict",
-    "sanctions"
+    "energy"
    ],
    "places": [
-    "Russia"
+    "Iran"
    ],
    "industries": [
     "energy",
     "transport",
     "industrials"
-   ],
-   "countries": [
-    "india"
-   ],
-   "economies": [],
-   "severity": "elevated",
-   "severityScore": 5,
-   "reports": 1,
-   "also": [],
-   "assessment": {
-    "headline": "Europe's Critical Mineral, Russia's War Industry: The Irish Exports At The Centre Of A Sanctions Row",
-    "risk": "elevated",
-    "note": "Keyword rules read this as tighter energy sanctions.",
-    "industries": [
-     {
-      "id": "energy",
-      "score": -1,
-      "why": "Refiners lose discounted crude"
-     }
-    ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": -1,
-      "why": "Costlier replacement barrels"
-     }
-    ],
-    "at": "2026-11-13T05:44:14.287Z"
-   }
-  },
-  {
-   "id": "india-imported-more-oil-from-the-persian-gulf-than-from-russ",
-   "title": "India imported more oil from the Persian Gulf than from Russia in early November — OilPrice",
-   "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNQ2pPWHU3N1JPZ3A4UG05aUF2RDRrOXJQbVdTcGVqZEdUVGZlQ2FkV0VqSnIzNTRPeDlqLTl4ZktCdEw5Y1NRdlMwOElRVF9IVGlDRDBBZVBZdC1sOUtSbno1MmJjV0dzYmdGdDQ4dGhIbFVrdHMxdmllMUZQdUozaVNwS2RfZ0lqNE9aMkdxYmVBc1ZudGNPUk53WTV5OFc2OVVxTUkwQ2ZOT1ZkcE90TTdGMkI3dzNjX2xxOVJEVXBXeUhSSWFF?oc=5",
-   "source": "UA.NEWS",
-   "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T11:41:01.000Z",
-   "category": "energy",
-   "categories": [
-    "energy"
-   ],
-   "places": [
-    "Russia"
-   ],
-   "industries": [
-    "energy",
-    "materials",
-    "transport"
    ],
    "countries": [
     "india",
@@ -927,36 +913,33 @@
    "also": []
   },
   {
-   "id": "oil-settles-3-higher-on-attacks-on-saudi-energy-sites-strait",
-   "title": "Oil settles $3 higher on attacks on Saudi energy sites, Strait of Hormuz disruptions",
-   "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQVTRGWGlDdDRzN2lNQ1Z4Snplb0xVd1BwV3hKYkJldE1zdWxjUWowNE1fMXl2aTBNUVpQUmpFN1IzVnpybi1RaXhUd0RlR202WG13N0o3aWtpcDdYSnRZc2xXVFF4NGVzaGlwV2tjUklaai1uWlE1UkFZQS11aE9XLVN0MXAyWm1mYkFFV09MZ005ZlpHdmpGVlJfbWQ1bkw0UG9NQmh1XzhheXJnWTcwN3dzTkpUM0R3ck9RWm93?oc=5",
-   "source": "The Globe and Mail",
+   "id": "black-sea-war-risk-insurance-premiums-surge-to-20-of-vessel-",
+   "title": "Black Sea war risk insurance premiums surge to 20% of vessel value",
+   "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE50ek5DdUJhcVUyNXg5dlZpSHRkYVBERTNxelFrdm1UaVE1ZVNqMDdkRXFOaVFfWGNCM0hobGxvNzQ1emttVGtuM244R0tmbzNHZjUtS3R6M0h2TXNOYnlmSnE5ZzR2dnRCdkFGZXh2OTRwVVIyTDJVeHdB?oc=5",
+   "source": "Beinsure",
    "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T10:07:32.000Z",
+   "published": "2026-11-13T10:29:29.000Z",
    "category": "shipping",
    "categories": [
     "conflict",
-    "shipping",
-    "energy"
+    "shipping"
    ],
    "places": [
-    "Strait of Hormuz"
+    "Black Sea"
    ],
    "industries": [
     "transport",
     "energy",
     "consumer"
    ],
-   "countries": [
-    "gulf"
-   ],
+   "countries": [],
    "economies": [],
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Oil settles $3 higher on attacks on Saudi energy sites, Strait of Hormuz disruptions",
+    "headline": "Black Sea war risk insurance premiums surge to 20% of vessel value",
     "risk": "elevated",
     "note": "Keyword rules read this as shipping chokepoint disruption.",
     "industries": [
@@ -1003,29 +986,30 @@
       "why": "Risk premium on Indian assets"
      }
     ],
-    "at": "2026-11-13T05:44:14.287Z"
+    "at": "2026-11-14T05:45:31.827Z"
    }
   },
   {
-   "id": "everllence-two-stroke-dual-fuel-lng-technology-selected-for-",
-   "title": "Everllence two-stroke dual-fuel LNG technology selected for Indian chemical tankers project",
-   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQOVRNUC1RaHQ0X1VvVEtEUGhLNVMxQW9JVzhhT1dzZDlXS3FCTHVEVGt1bjN0czVGSWFQYmVkaXczdjdJd2NjVU9kVzd2Tk9BNjNwMjY1ZjNFSW1QUnV6eHNPR1JjRmliMVVaNmpmcWJMWmhRTllXRnFteUk3NVpWSTBzZ29uZGE3VGMtYy1VOHNrUEJibi1SVVRjdk1ZdXo0bHBRTzlfMmpCRmxWbEQ4VUs3ajZJZU5iemsw?oc=5",
-   "source": "ship.energy",
+   "id": "worse-than-hormuz-black-sea-becomes-worlds-deadliest-shippin",
+   "title": "Worse than Hormuz: Black Sea becomes worlds' deadliest shipping route, says WSJ",
+   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQMERKazJjVEN5V00taXJsVFM0RjVBd0NmR0tmenhvYVlRWXBoTV9PdmstdTJkallCOEhKS19CWFJsbldYZ21pSVNtY25vdTNfaFYyVzJEZWlMV3JyX0QxbGQ4b2JzVHBWeFg0czlRMXZtaHdXaUZRcXNWMmJxS1pLUkdRUl9BaW1zbnl0cGRGb3BRc3p4RGpaRg?oc=5",
+   "source": "TVP World",
    "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T09:42:47.000Z",
+   "published": "2026-11-13T09:41:00.000Z",
    "category": "shipping",
    "categories": [
-    "shipping",
-    "energy"
+    "shipping"
    ],
-   "places": [],
+   "places": [
+    "Black Sea"
+   ],
    "industries": [
     "transport",
     "energy",
     "consumer"
    ],
    "countries": [
-    "india"
+    "gulf"
    ],
    "economies": [],
    "severity": "elevated",
@@ -1034,15 +1018,74 @@
    "also": []
   },
   {
-   "id": "oil-tankers-on-fire-in-strait-of-hormuz-iran-claims-two-more",
-   "title": "Oil Tankers On Fire In Strait Of Hormuz: Iran Claims Two More Ships Hit Naval Mines, Blames Unauthorised Routes",
-   "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPUjNVVGx1RkhLODBjdFNkT3RFbWZGOE14NlpTalJKdG16UmlyRU1BUnRNWjlNRUMyVzFfdHpuY2lHRHZ6VU1tMnAtOGZyOGI5Y2JMOTJqSVVrYXo5Tzd5ZFdrZ1VpN3VCRFV4ZzQyMHY3cGhNYlM4ZFJCUWVMZkhxbkNlU01GRnQ0c1hQYy1EVlFqQTd2WGlyQTg0NWpqdTFGQUlUUTBOTVF1NFBMVHZ3TWtWWlN0TF9rRGxaY1ZwbDZzczhsU00teE1DamhxVUY3UmJtUmFpWl92MHQyUG45TVdkN1pEdl9KLVHSAe8BQVVfeXFMTk91NVdEMVF2S3M4ZE9LdFB6b3lpSVcwZDRDNTdMWmpINmZEcmtpamgtMGJOZ3JfQjF0dlc4U3FUSDZoaDRtM3pJRlBkUVFsTkJRNU41VUlMeHMtVDVrV2FYdXJsclVSblJ3dlRNbHZRS3JmMk5HUEl2YlI4R2dQaXNYUjVtRHJQamdfSHI4cTU4ZFo3Zkp3MlRTNE10Rm9jZ1Y3dDZOdzctZ2JUMk83emJoT05KZGN1cDh5MExudHdhdDBfRGstd1lyZUVWemd5czFvVjZacGZMc2thanFBTEtKYXMxQ1BOaDFQdjVQTEU?oc=5",
-   "source": "The Sunday Guardian",
+   "id": "lng-tanker-reportedly-hits-naval-mine-explodes-in-strait-of-",
+   "title": "LNG tanker reportedly hits naval mine, explodes in Strait of Hormuz",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9VSWNqTFJZNHo0NDlJNFRnd1pBWXBDV0h1MVVnckYzSDRVRVFhSlRWODZjUmJZYW1oQ2N5VnJYRHN2NkwwWEVPMFFodTJUU2x0NEk4VUR5TWV5U1VrX2RSS0hVMWk3T1UwT1E?oc=5",
+   "source": "Daijiworld",
    "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T07:00:01.000Z",
+   "published": "2026-11-13T09:09:55.000Z",
    "category": "shipping",
    "categories": [
     "conflict",
+    "shipping",
+    "energy"
+   ],
+   "places": [
+    "Strait of Hormuz"
+   ],
+   "industries": [
+    "transport",
+    "energy",
+    "consumer"
+   ],
+   "countries": [
+    "gulf"
+   ],
+   "economies": [],
+   "severity": "elevated",
+   "severityScore": 5,
+   "reports": 1,
+   "also": []
+  },
+  {
+   "id": "iran-says-tanker-carrying-lng-hit-mine-suffered-explosion-in",
+   "title": "Iran says tanker carrying LNG hit mine, suffered explosion in Hormuz",
+   "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPU2hLUFNkMDBmb09LckF1QU1iZmVFdjA2WVVDODEzSDE4YkRMb1ljNjRrQnZYcVlaRmFKZGIyeHc2SEg1OG02YVF5VVNtTUdEdXVDOHczbzQteFo3RzQzVHNiSDRZVDFpX1pSVlJpMmRPRVhPQnAxT1BXSWN0SnE2RUN1YXNuSl9fUTRvcTQ5RGtOLVhBUVRlWkUyQmxxUW1aelJnbmVqYjZIc3BqaDlPMERxLWRweE1TbzRyVk1seXZKR05XQmVOXzV30gHKAUFVX3lxTE9TaEtQU2QwMGZvT0tyQXVBTWJmZUV2MDZZVUM4MTNIMThiRExvWWM2NGtCdlhxWVpGYUpkYjJ4dzZISDU4bTZhUXlVU21NR0R1dUM4dzNvNC14WjdHNDNUc2JINFlUMWlfWlJWUmkyZE9FWE9CcDFPUFdJY3RKcTZFQ3Vhc25KX19RNG9xNDlEa04tWEFRVGVaRTJCbHFRbVp6UmduZWpiNkhzcGpoOU8wRHEtZHB4TVNvNHJWTWx5dkpHTldCZU5fNXc?oc=5",
+   "source": "Devdiscourse",
+   "sourceType": "Media monitor (Google News)",
+   "published": "2026-11-13T06:58:00.000Z",
+   "category": "shipping",
+   "categories": [
+    "shipping",
+    "energy"
+   ],
+   "places": [
+    "Iran"
+   ],
+   "industries": [
+    "transport",
+    "energy",
+    "consumer",
+    "autos"
+   ],
+   "countries": [
+    "gulf"
+   ],
+   "economies": [],
+   "severity": "elevated",
+   "severityScore": 5,
+   "reports": 1,
+   "also": []
+  },
+  {
+   "id": "two-oil-tankers-explode-after-hitting-mines-in-strait-of-hor",
+   "title": "Two oil tankers explode after hitting mines in Strait of Hormuz, Iran claims",
+   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQc2tDUWNJaWdCRlY1ckFoZ1dBX094NEVFd1dKRnpKa193Z0t4N3RzaUozOHJ1dGsyT2pKS0RkTFBkUmctSU1ScnpkUVF2Qy1EUk1JcnFXcjNWWXJYLTNodHBOYUdybW8zOHp2c3VFWlpzcFVLdGVoRmNtbVN5ZFJCeWJIUEZFUW5ZVDlDOWlGVlRlbmlZYnh0cTg1eFAwbmkwYXotTDJ1eXpab3Rwa3d1Q0VYdw?oc=5",
+   "source": "Aaj English TV",
+   "sourceType": "Media monitor (Google News)",
+   "published": "2026-11-14T04:46:38.000Z",
+   "category": "shipping",
+   "categories": [
     "shipping",
     "energy"
    ],
@@ -1060,71 +1103,21 @@
    ],
    "economies": [],
    "severity": "elevated",
-   "severityScore": 5,
+   "severityScore": 4,
    "reports": 1,
-   "also": [],
-   "assessment": {
-    "headline": "Oil Tankers On Fire In Strait Of Hormuz: Iran Claims Two More Ships Hit Naval Mines, Blames Unauthorised Routes",
-    "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
-    "industries": [
-     {
-      "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
-      "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
-     }
-    ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
-      "id": "inflation",
-      "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
-     }
-    ],
-    "at": "2026-11-13T05:44:14.287Z"
-   }
+   "also": []
   },
   {
-   "id": "strait-of-hormuz-watch-negotiations-uncertain-as-vessel-atta",
-   "title": "Strait of Hormuz Watch: Negotiations Uncertain as Vessel Attacks Continue",
-   "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQMzdGVkRCRkxtektNWVpJYUlyU2dMRFBSeVNxOVNsaHlDblpiblVTQ2d1SWotMmhUSk52YlNoalZKaGJkV1N4LUdjbXFFLVN4dk9JX1dYYnhZbHU1anY4QjBMNFF4N1JpVHNHNGUxcjk0YzRfSHFjWExic3NLTFFiVUhRVVhZaW1iZEt4eldXVFBfMnlaSmw0T1BMMnhfOGM2WmpROTF0OTZuc2t1Z1llRklEaVRwQ3FPT0tPdGo4Z052c3ZvQTMyVnRrVk9xM1JKRGJsUjhVMA?oc=5",
-   "source": "IndustryWeek",
+   "id": "charted-oil-trade-through-the-strait-of-hormuz-by-country-vi",
+   "title": "CHARTED: Oil Trade Through the Strait of Hormuz by Country – Visual Capitalist",
+   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQeU1tdWFDbEwyc2R5ZEFYN3Y4Q3czZEZKX2ZMWUZWUjVDaHljOVZXY1dTX1h1LXFMSlNJcGtad1VURWhBaHFPWm5nNmY5YzJDX1B1RU1ISDFKWEs1US1TNkptS3lIYXVyWUZsdUM4OTFzRk8zOU1abWE5M3IwV0dtX2VqWlhBUW5mbERvOVVoU2EyR25PQk5qbk9PNXBfbmZ3NTFlR1hXVVZNUQ?oc=5",
+   "source": "EnergyNow.com",
    "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-13T03:47:45.000Z",
+   "published": "2026-11-13T22:41:33.000Z",
    "category": "shipping",
    "categories": [
-    "conflict",
-    "shipping"
+    "shipping",
+    "energy"
    ],
    "places": [
     "Strait of Hormuz"
@@ -1141,9 +1134,39 @@
    "severity": "elevated",
    "severityScore": 4,
    "reports": 1,
+   "also": []
+  },
+  {
+   "id": "un-warns-of-rising-maritime-attacks-urges-restoration-of-saf",
+   "title": "UN warns of rising maritime attacks, urges restoration of safe navigation in Strait of Hormuz, Red Sea",
+   "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxORXBOSTNNcGJ3aGFhOXFCN1g2cElXaHNXQWo3TDBUaVQtZGFvREY3YW1fdDdFdkRhSUFoLWE2ZFN1QzZkOEwxZ0wtVk1TanRmaTdfa2NYbmZiWTZrS2E4b3V3OWVDeU1YbFktcE5ua2ZoSk96ZEQ5UmVORWVDOE1zc0hueldnbG50ZUg3Mnh1a1l1QTd1SUw2MXUxa3JtdDRVN01sejFnZ1daR21mY3R5UWRJbDB1emUtaVl4WUFMaXRxY1FNdGVvSHRVSDlaTGs3UGRYQmktaUc?oc=5",
+   "source": "Anadolu Ajansı",
+   "sourceType": "Media monitor (Google News)",
+   "published": "2026-11-13T22:37:42.000Z",
+   "category": "shipping",
+   "categories": [
+    "conflict",
+    "shipping"
+   ],
+   "places": [
+    "Red Sea",
+    "Strait of Hormuz"
+   ],
+   "industries": [
+    "transport",
+    "energy",
+    "consumer"
+   ],
+   "countries": [
+    "gulf"
+   ],
+   "economies": [],
+   "severity": "elevated",
+   "severityScore": 4,
+   "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Strait of Hormuz Watch: Negotiations Uncertain as Vessel Attacks Continue",
+    "headline": "UN warns of rising maritime attacks, urges restoration of safe navigation in Strait of Hormuz, Red Sea",
     "risk": "elevated",
     "note": "Keyword rules read this as shipping chokepoint disruption.",
     "industries": [
@@ -1190,16 +1213,364 @@
       "why": "Risk premium on Indian assets"
      }
     ],
-    "at": "2026-11-13T05:44:14.287Z"
+    "at": "2026-11-14T05:45:31.827Z"
    }
   },
   {
-   "id": "sunil-mittal-bats-for-mobile-tariff-hikes-says-rs-10-12-a-da",
-   "title": "Sunil Mittal bats for mobile tariff hikes, says Rs 10-12 a day affordable",
-   "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPVnZ5UWpXYThxaXJJbThBYTNlUnBHbWV0ZWFzckF3dEQ1MmJCREY5UjlRVjdEWVFzOWpvYmlFLUtuQU50SXpEUDFuY0pwM0Y4WGNYYldMekdNQUUteHhja1ZfclZQdnhtd1VqTXgzUTUxaVJUamxiN1BIa1B6cDJyMFB4UEhDU05xQURjdVpUMjRfbjBOTWJLYmFnUm1QN1JiMDNsemRTcmdLd1Q5OWQ5aVFCcXBGZE1OV3BUZGNZellNZzNPNmFuSWs1cDPSAcwBQVVfeXFMT1Z2eVFqV2E4cWlySW04QWEzZVJwR21ldGVhc3JBd3RENTJiQkRGOVI5UVY3RFlRczlqb2JpRS1LbkFOdEl6RFAxbmNKcDNGOFhjWGJXTHpHTUFFLXh4Y2tWX3JWUHZ4bXdVak14M1E1MWlSVGpsYjdQSGtQenAycjBQeFBIQ1NOcUFEY3VaVDI0X24wTk1iS2JhZ1JtUDdSYjAzbHpkU3JnS3dUOTlkOWlRQnFwRmRNTldwVGRjWXpZTWczTzZhbklrNXAz?oc=5",
-   "source": "Fortune India",
+   "id": "oil-supply-to-overtake-demand-in-dec-quarter-iea",
+   "title": "Oil supply to overtake demand in Dec quarter: IEA",
+   "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPaGxJdndTOGFkTEI0cTVPVV9kSmVOQ0MxTWUxTnNsRkhneWhnUGRicFo3VngtYk8xV0M2bXk0ZFM4NnBiYkFFWmZZczNod0NRZ3ZSUGUwVF91dHVwa0tMemhRM2lncEZ4ZkFOOEZtdlpseXVqTUM5U1ZoX25VTlp2VlhIN2h4NlNaR0RlQ2dDYnVLbUFHN0RqOXJvX3k0a2xva25WV0EwLUZFRjZYT3JDSUQ5ZXBoMW9sVG1scDFFeG50SVFpemF0TWJmajFKS2vSAdQBQVVfeXFMTy1qdm1GWjVCMVZFOC1zWU92YVN5d1I4Mi1ibm5NUTg5VWFMSmpPc0NPMWxyQzQ5ZkJlVHpLNkNSTnFlMTY0c2VIMnBrRmFnRVMya0lHYnN5YkF3OGRpWnVySTVzZzY2TVZnMlJYa0JJc2xmVldyTUFHNHpGN1AyOFFQb3VESzdkNTJDUk5rLTlKSm9NV0QxSkRuRnlMNHVIbldDbm5uUGdWLUxxLVIxdE1ZNFZiZEFnRW9sLThONDBBaGlPNlBEWl9CSEZRTDBCQW9JYUs?oc=5",
+   "source": "The Times of India",
    "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-13T02:47:55.000Z",
+   "published": "2026-11-13T22:16:00.000Z",
+   "category": "energy",
+   "categories": [
+    "energy"
+   ],
+   "places": [],
+   "industries": [
+    "energy",
+    "materials",
+    "transport"
+   ],
+   "countries": [
+    "india"
+   ],
+   "economies": [],
+   "severity": "elevated",
+   "severityScore": 4,
+   "reports": 2,
+   "also": [
+    {
+     "source": "Dhaka Tribune",
+     "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOOGM3QXJCM1M4Q0g3dEZ6UjJpUm5hcTREemx6ZUFfLTFVZHc3Qy1WOTNpS2FnVDAyS0hXOTBEYVFMMFl6amd6dTdON0tycXJidUgwZFdiVXZlTlpzejJuc2g1VGRTbHF1UXZ5VmdtRUZSVVdUSTRLTnZpTF9RVFFnWDF2d2lfWW5DNXNibWc5Umhza3dFWmdybnVvMThEa0ZFY0hYStIBpAFBVV95cUxOOGM3QXJCM1M4Q0g3dEZ6UjJpUm5hcTREemx6ZUFfLTFVZHc3Qy1WOTNpS2FnVDAyS0hXOTBEYVFMMFl6amd6dTdON0tycXJidUgwZFdiVXZlTlpzejJuc2g1VGRTbHF1UXZ5VmdtRUZSVVdUSTRLTnZpTF9RVFFnWDF2d2lfWW5DNXNibWc5Umhza3dFWmdybnVvMThEa0ZFY0hYSg?oc=5"
+    }
+   ]
+  },
+  {
+   "id": "western-powers-were-unable-to-secure-shipping-in-the-red-sea",
+   "title": "Western Powers Were Unable to Secure Shipping in the Red Sea. Hormuz Will Be Harder",
+   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPdGFfa0NjcXIzYzUwUUdia1pneXhDUHRtRTkwYlprSDh5Q2d1bVhXejB2TXVsMGtHSG5sWDgweHlRemI1NE4tZjNqNEM5UHplZnRtdVRZWW1PWWwzM0VkeGpfVFhqY3FiTzJvbEZENC1tN2pOWV9DblJQa2tFUnk3cTlKSkNGSTlvVzd1V3N6QkxnMmpqWVNMR2RYZXFYSDlhTklNMC1LZTN0YVVfOERDR1M0QQ?oc=5",
+   "source": "EnergyNow.com",
+   "sourceType": "Media monitor (Google News)",
+   "published": "2026-11-13T21:50:58.000Z",
+   "category": "shipping",
+   "categories": [
+    "shipping"
+   ],
+   "places": [
+    "Red Sea"
+   ],
+   "industries": [
+    "transport",
+    "energy",
+    "consumer"
+   ],
+   "countries": [
+    "gulf"
+   ],
+   "economies": [],
+   "severity": "elevated",
+   "severityScore": 4,
+   "reports": 1,
+   "also": []
+  },
+  {
+   "id": "trump-says-us-to-help-ships-stranded-in-strait-of-hormuz-as-",
+   "title": "Trump Says US to Help Ships Stranded in Strait of Hormuz as Tanker Hit by Projectiles",
+   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPQ0ZPSDRpSmU5SUpYLUtkeU1xX2Q4elhxNDRuR3VYRkxKWVJVbk1Vem4tY3d3Z29YNG91cElsZHBNRXo2ZGNYeERsV0hJMFJpaWZnNXVsUmNISUJFdTg0OVQ0QjBBWExQVVVMaUVEZFZlYlY3V1BXbHBKNVgwbTRMT1BBYzhhM3N0bGJUYUptNTNDSGhyU1Y1UXgzMDA1YnZNQzludjUxaEk1NWtUWGE0MWltajJXSzg?oc=5",
+   "source": "EnergyNow.com",
+   "sourceType": "Media monitor (Google News)",
+   "published": "2026-11-13T21:46:59.000Z",
+   "category": "shipping",
+   "categories": [
+    "shipping"
+   ],
+   "places": [
+    "Strait of Hormuz"
+   ],
+   "industries": [
+    "transport",
+    "energy",
+    "consumer"
+   ],
+   "countries": [
+    "us",
+    "gulf"
+   ],
+   "economies": [],
+   "severity": "elevated",
+   "severityScore": 4,
+   "reports": 1,
+   "also": [],
+   "assessment": {
+    "headline": "Trump Says US to Help Ships Stranded in Strait of Hormuz as Tanker Hit by Projectiles",
+    "risk": "elevated",
+    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "industries": [
+     {
+      "id": "transport",
+      "score": -2,
+      "why": "Freight, insurance and fuel costs rise"
+     },
+     {
+      "id": "energy",
+      "score": -1,
+      "why": "Fuel marketers' margins squeezed"
+     },
+     {
+      "id": "materials",
+      "score": -1,
+      "why": "Crude-linked inputs costlier"
+     },
+     {
+      "id": "consumer",
+      "score": -1,
+      "why": "Imported inputs costlier"
+     }
+    ],
+    "economies": [
+     {
+      "id": "fiscal",
+      "score": -2,
+      "why": "Oil import bill swells"
+     },
+     {
+      "id": "inflation",
+      "score": -1,
+      "why": "Fuel and freight costs"
+     },
+     {
+      "id": "rupee",
+      "score": -1,
+      "why": "Importers' dollar demand rises"
+     },
+     {
+      "id": "equities",
+      "score": -1,
+      "why": "Risk premium on Indian assets"
+     }
+    ],
+    "at": "2026-11-14T05:45:31.827Z"
+   }
+  },
+  {
+   "id": "iran-says-deal-on-strait-of-hormuz-is-close-but-will-not-ope",
+   "title": "Iran Says Deal on Strait of Hormuz is Close But Will Not Open the Waterway by Itself",
+   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNYlVMcFlqcUlsZm1YaXlHOFFCQ0Q5cDRNbXBUUGl1d1FTQVB2Y2NWUWQ0Y3dTWnVXRnZ2MEhVa2FzQ0xicW1LQWdCcll4Tl9VRS00blhiMVJoY0x3S2RyLXlXR0cza0s4aXRRNnozZllMWVFoVG5oYVl1dV9PMXdUekZTcExwWlZMVnNsbHVObVN1R0x0blQwTVEwMFR1Wl9BUFg2TWxrREliSU1kR0I3bG9idlNEdw?oc=5",
+   "source": "EnergyNow.com",
+   "sourceType": "Media monitor (Google News)",
+   "published": "2026-11-13T21:46:00.000Z",
+   "category": "shipping",
+   "categories": [
+    "shipping"
+   ],
+   "places": [
+    "Iran",
+    "Strait of Hormuz"
+   ],
+   "industries": [
+    "transport",
+    "energy",
+    "consumer"
+   ],
+   "countries": [
+    "gulf"
+   ],
+   "economies": [],
+   "severity": "elevated",
+   "severityScore": 4,
+   "reports": 1,
+   "also": [],
+   "assessment": {
+    "headline": "Iran Says Deal on Strait of Hormuz is Close But Will Not Open the Waterway by Itself",
+    "risk": "elevated",
+    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "industries": [
+     {
+      "id": "transport",
+      "score": -2,
+      "why": "Freight, insurance and fuel costs rise"
+     },
+     {
+      "id": "energy",
+      "score": -1,
+      "why": "Fuel marketers' margins squeezed"
+     },
+     {
+      "id": "materials",
+      "score": -1,
+      "why": "Crude-linked inputs costlier"
+     },
+     {
+      "id": "consumer",
+      "score": -1,
+      "why": "Imported inputs costlier"
+     }
+    ],
+    "economies": [
+     {
+      "id": "fiscal",
+      "score": -2,
+      "why": "Oil import bill swells"
+     },
+     {
+      "id": "inflation",
+      "score": -1,
+      "why": "Fuel and freight costs"
+     },
+     {
+      "id": "rupee",
+      "score": -1,
+      "why": "Importers' dollar demand rises"
+     },
+     {
+      "id": "equities",
+      "score": -1,
+      "why": "Risk premium on Indian assets"
+     }
+    ],
+    "at": "2026-11-14T05:45:31.827Z"
+   }
+  },
+  {
+   "id": "aditya-alumina-refinery-launch-livestock-management-entrepre",
+   "title": "Aditya Alumina Refinery launch Livestock Management Entrepreneurship Training",
+   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNNzY2TXZtQnVVVE9yZ3F6NzBIUnQwTi0yRENBQlcxRDdLRUYtUExXWVB1SVVuaGFRbkFVSi1rYWMycFRveVJFQUlGTjR4U21xdkVxMHFEbGRKbXlnWDFiZk9ENFVRZ2diZmNfeS0xaERJTGlhOThzMXpmSEJ0eTZua1BxY0ZXalhEdWxSQmVYMXFVS2xUMDFWdEFtZTZfZnJBX1dPbk9vTGxBOEMtLXVzZkdxU1hQQQ?oc=5",
+   "source": "India Whispers",
+   "sourceType": "Media monitor (Google News)",
+   "published": "2026-11-13T20:39:39.000Z",
+   "category": "energy",
+   "categories": [
+    "energy"
+   ],
+   "places": [],
+   "industries": [
+    "energy",
+    "materials",
+    "transport"
+   ],
+   "countries": [
+    "india"
+   ],
+   "economies": [],
+   "severity": "elevated",
+   "severityScore": 4,
+   "reports": 1,
+   "also": []
+  },
+  {
+   "id": "more-ships-change-course-in-the-red-sea-after-houthi-threats",
+   "title": "More Ships Change Course in the Red Sea After Houthi Threats, Shipping Data Shows",
+   "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNNm4xcEVDa201dEJsd2R6VFdHRWhIVU9TOWlIZFVWQWtZaHJmdmIzRTgzTFhSV0RuM0RHdXE0ekpQYk96dlMtUnZvdWVqdFRVODBWajAtcE4tV2pBQVUxUHdjWm50dE1Hb0FibWF2aTNsVEdOR3VTUm03Q3o2NDRGc295d1l6eUNpLVFhMHl5SHBHNjdMT1hNbzNINXdmOW84ZnA3Wm5UdmdfUEg0MlVTUQ?oc=5",
+   "source": "EnergyNow.com",
+   "sourceType": "Media monitor (Google News)",
+   "published": "2026-11-13T19:34:54.000Z",
+   "category": "shipping",
+   "categories": [
+    "shipping"
+   ],
+   "places": [
+    "Red Sea"
+   ],
+   "industries": [
+    "transport",
+    "energy",
+    "consumer"
+   ],
+   "countries": [],
+   "economies": [],
+   "severity": "elevated",
+   "severityScore": 4,
+   "reports": 1,
+   "also": [],
+   "assessment": {
+    "headline": "More Ships Change Course in the Red Sea After Houthi Threats, Shipping Data Shows",
+    "risk": "elevated",
+    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "industries": [
+     {
+      "id": "transport",
+      "score": -2,
+      "why": "Freight, insurance and fuel costs rise"
+     },
+     {
+      "id": "energy",
+      "score": -1,
+      "why": "Fuel marketers' margins squeezed"
+     },
+     {
+      "id": "materials",
+      "score": -1,
+      "why": "Crude-linked inputs costlier"
+     },
+     {
+      "id": "consumer",
+      "score": -1,
+      "why": "Imported inputs costlier"
+     }
+    ],
+    "economies": [
+     {
+      "id": "fiscal",
+      "score": -2,
+      "why": "Oil import bill swells"
+     },
+     {
+      "id": "inflation",
+      "score": -1,
+      "why": "Fuel and freight costs"
+     },
+     {
+      "id": "rupee",
+      "score": -1,
+      "why": "Importers' dollar demand rises"
+     },
+     {
+      "id": "equities",
+      "score": -1,
+      "why": "Risk premium on Indian assets"
+     }
+    ],
+    "at": "2026-11-14T05:45:31.827Z"
+   }
+  },
+  {
+   "id": "the-crisis-in-the-strait-of-hormuz-forced-iraq-to-take-this-",
+   "title": "The crisis in the Strait of Hormuz forced Iraq to take this step",
+   "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPY3Y4QTVTUHNRUVVYVTB0eG5JMUtNYVRybUk5NzI2RHRTNFZWV1hJNE1fa0ZVOVRmZzAwbG9DRDI1VlVFTDhOMGhBODZ6ajh6ZFRYTXE0VVZvUGJydko4YjltRmUzYjZqOWFVeEljRExYT1JKcGFXUjVNYkRoSU11RFM1ekd3b1VKMXktZEdUN3RqYXpYci05bG9hYw?oc=5",
+   "source": "TodayPress.tv",
+   "sourceType": "Media monitor (Google News)",
+   "published": "2026-11-13T18:20:00.000Z",
+   "category": "shipping",
+   "categories": [
+    "shipping"
+   ],
+   "places": [
+    "Iraq",
+    "Strait of Hormuz"
+   ],
+   "industries": [
+    "transport",
+    "energy",
+    "consumer"
+   ],
+   "countries": [
+    "gulf"
+   ],
+   "economies": [],
+   "severity": "elevated",
+   "severityScore": 4,
+   "reports": 1,
+   "also": []
+  },
+  {
+   "id": "iaf-officer-accused-of-spying-court-seeks-update-on-prosecut",
+   "title": "IAF officer accused of spying: Court seeks update on prosecution sanctions",
+   "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQYnlzYlNxSlRJVGwyZ2plZ3hsdHh0dTgyUFdoLW5PU1JGR2laeTRlY1dRVkxzVTc4OXNSSTg0ZUl3TVA4ck9IdUZodUtjUllyLUN3Q2p3TUxLcnNwbnlLUHpoWlJYekUzUGpGbUNGV0VjVl9JOERiNUNOQnduSXh0WV9hLVhDbWdGSWFqMjM1MnFBVS1ZNDIxd1RtaVdPYm1KMFNvQkU2eHIybE0zR3AyOUstNFJhVnhyVFRqamxHVzBKSk1NUWIzZXB4VXJ1cnNMVkhIaXdsNUN2YU5vbE9N0gHkAUFVX3lxTE5rZGdYb1JHenBhRTQxV2ZzNDZmZ0pnM24xSjlGRnRETmh3Z09seEdJRUpZcnJJTzdGc0plQmM4c19GS094dlVSN1ZRZUV2dWFkeXNOdTVzYm9YdWtMWGxGdlViQTdrdUVaSDhERm5neU1CSUdvRXJ1cy13V2lsaUFydE5ObHNoR19pMUk1VHBYcWQwdmZTaUUzM1RCbkZEMGR3Z3AxaWdrcnJOaDZPcGlCTmRWTHRfTnJhX0lIOERZakFoTlJ2ZVRSNHpuT0V6OVk2TjgzVjc2MnJNaHFGaWpUQVJlag?oc=5",
+   "source": "The Times of India",
+   "sourceType": "Media monitor (Google News)",
+   "published": "2026-11-13T18:10:00.000Z",
    "category": "sanctions",
    "categories": [
     "sanctions"
@@ -1221,185 +1592,28 @@
    "also": []
   },
   {
-   "id": "iran-strikes-oman-island-destroys-navigation-systems-as-tehr",
-   "title": "Iran strikes Oman island, destroys navigation systems as Tehran targets key maritime infrastructure in Strait of Hormuz",
-   "link": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOU0JMVVlzMjdZTW1WbTVVaWdVaTFuZG1GdjdEUGlaam9hWEtyS1FjM25ZN0RmZFNyQzBHMS1nVlJtLWRsMGRRZWU1dW92TGtLYXZkNmdUWkFZWmVqYmFlUlBLa0VkMW4zQVh5c0VkUjBNU29CakhNNUpOWk5ZX2FJNEtiSEk1SUVaOEdpYlA1RVB5YUhwQjVaczktTlFDTFprNkZ1WmhnM1FGdmdSUS1CMDEwUmlTcDdWREhGTmFmMUE1OVl0RGxpdFpwYU1aMU1TR1J5VXhrMGZpeXJqbVZtczdsT1JESHF0ZV81U0VsYUVtUXM1amI2NzFVQjF2eUxRRXJZ0gGIAkFVX3lxTFBLTW50QjF5Nm1zNjhreFRaZGNibDlHV0wxZWstZjVRWmZyMHdLcl9VVVpLTFE4YUFqS3NjVUxvR2dVT24waks1U3FwaXpveURyelhkeFI1UWdJbkw1RTFwNkpkUzhZTHZob3BHa3QxdGl6TWtvdXlicWpwN2N0ZHlURmtTRlNJV1JPVEhFWnJkamlDVjdsamxXcjA5SjBYckVBN2g0T0h3R0tOZm1YS3EyRDI0UFB6S3lSdktuT2gtZTFwckF0Q1NaZnBvemJMcE5CTnR3LWM4TDM0Vk54akVsUlYzZGdURUlkcDVVdi1hRUFBQ3VxTnZES2tOX1d6bnU4N2RzVFJiZQ?oc=5",
-   "source": "Organiser",
+   "id": "indian-captain-ajay-pant-pleads-not-guilty-in-uk-russian-oil",
+   "title": "Indian captain Ajay Pant pleads not guilty in UK Russian oil sanctions case",
+   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNQUtfN1pyTmZjN1d2ZV9pLTk2dXBSQ2kybkVRaXllUnhYXzV2c09nazh6NklaTWJiaXZuWlZMUlJRa1N3UzNCemVJNkxuNzFYNzYycm5XMV94YWRWMEdONTNkT0NNMFFqTVdpNm05SFlwbEZJaVdQQnVkenl4UzBlTGEtcGlkNmV0UGJaWTFDT01INUx0Zjc2Yy1NSTUzRU91Rjdfc3JIdFl4dUNpVUHSAbABQVVfeXFMTmthSWVwUGJ0RDBDVWtXbkdiQWx0Y2RyUjUyN1Y1MHRSY3luRzRueXRkWTRVN0JEaW9VMHZyNzQ1UUxhODYwUFAweXVMcF9yVGxwRmJ3cDg2NXY4U3pTbmFHUGhjN2RwYVYwWWlTQk14dU1KbmpESThtZ2tBYUpvYnVUTkJfOUpyM2d0NTl2QkdrUzZOYmROd0JjVmVVNnh2WlJ2OGNGQldTeGFoVGo2ODU?oc=5",
+   "source": "Rediff",
    "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-13T01:36:13.000Z",
-   "category": "shipping",
+   "published": "2026-11-13T18:07:58.000Z",
+   "category": "sanctions",
    "categories": [
-    "shipping"
-   ],
-   "places": [
-    "Iran",
-    "Strait of Hormuz"
-   ],
-   "industries": [
-    "transport",
-    "energy",
-    "consumer"
-   ],
-   "countries": [
-    "gulf"
-   ],
-   "economies": [],
-   "severity": "elevated",
-   "severityScore": 4,
-   "reports": 1,
-   "also": [],
-   "assessment": {
-    "headline": "Iran strikes Oman island, destroys navigation systems as Tehran targets key maritime infrastructure in Strait of Hormuz",
-    "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
-    "industries": [
-     {
-      "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
-      "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
-     }
-    ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
-      "id": "inflation",
-      "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
-     }
-    ],
-    "at": "2026-11-13T05:44:14.287Z"
-   }
-  },
-  {
-   "id": "iran-insists-on-right-to-control-shipping-in-strait-of-hormu",
-   "title": "Iran Insists on Right to Control Shipping in Strait of Hormuz After Ship Hit Near Oman",
-   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOcjdvckcxSzBldll4QlRBaWF6dVBYR1RNMzVDUDVpQzZ4VVhfWktPd2FlT0otWGpRRnVfQnVjbzR2TVVJRVhuWDBmNElfQl81d0k5bnBqblFQbzFSelg5VWFXRGR4UXNjQzdLelI4RHNWdzA2a1ZlalppRWlONnQyX1M5eVpFelk3MWlpWDlBZnJ6bXdDQk5NY2R3TTVablh1ZXRfT2czZDZkN002a1BKM2FleWoyOTg?oc=5",
-   "source": "EnergyNow",
-   "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T23:13:32.000Z",
-   "category": "shipping",
-   "categories": [
-    "shipping"
-   ],
-   "places": [
-    "Iran",
-    "Strait of Hormuz"
-   ],
-   "industries": [
-    "transport",
-    "energy",
-    "consumer"
-   ],
-   "countries": [
-    "gulf"
-   ],
-   "economies": [],
-   "severity": "elevated",
-   "severityScore": 4,
-   "reports": 1,
-   "also": [],
-   "assessment": {
-    "headline": "Iran Insists on Right to Control Shipping in Strait of Hormuz After Ship Hit Near Oman",
-    "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
-    "industries": [
-     {
-      "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
-      "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
-     }
-    ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
-      "id": "inflation",
-      "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
-     }
-    ],
-    "at": "2026-11-13T05:44:14.287Z"
-   }
-  },
-  {
-   "id": "charted-oil-trade-through-the-strait-of-hormuz-by-country-vi",
-   "title": "CHARTED: Oil Trade Through the Strait of Hormuz by Country – Visual Capitalist",
-   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQeU1tdWFDbEwyc2R5ZEFYN3Y4Q3czZEZKX2ZMWUZWUjVDaHljOVZXY1dTX1h1LXFMSlNJcGtad1VURWhBaHFPWm5nNmY5YzJDX1B1RU1ISDFKWEs1US1TNkptS3lIYXVyWUZsdUM4OTFzRk8zOU1abWE5M3IwV0dtX2VqWlhBUW5mbERvOVVoU2EyR25PQk5qbk9PNXBfbmZ3NTFlR1hXVVZNUQ?oc=5",
-   "source": "EnergyNow.com",
-   "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T22:50:31.000Z",
-   "category": "shipping",
-   "categories": [
-    "shipping",
+    "sanctions",
     "energy"
    ],
-   "places": [
-    "Strait of Hormuz"
-   ],
+   "places": [],
    "industries": [
-    "transport",
-    "energy",
-    "consumer"
+    "industrials",
+    "tech",
+    "autos",
+    "agrifood",
+    "energy"
    ],
    "countries": [
-    "gulf"
+    "india",
+    "uk"
    ],
    "economies": [],
    "severity": "elevated",
@@ -1408,15 +1622,39 @@
    "also": []
   },
   {
-   "id": "three-tankers-attacked-in-two-days-in-strait-of-hormuz-crisi",
-   "title": "Three Tankers Attacked in Two Days in Strait of Hormuz Crisis",
-   "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOd3ZmT2VzcEduUGhEWlEzMmhhazZlODNWcDhSVWpONTA2OXZqZXNWNERaaHJ3T0ZteE9lRXRxbDFnS3hueGZwbkMtZXdoZDFndUs0NnFFc1IwNXp0aDNSdm1McGlybmszUi04ZE1QRjNpOWw2dXozODVab0N5WXRVRHZSM195bzFaMEk3SEg2bWdON3FiWWRuRHFBSWMxbHJEUkE?oc=5",
-   "source": "The Maritime Executive",
+   "id": "reserve-bank-of-india-imposes-monetary-penalty-on-one-mobikw",
+   "title": "Reserve Bank of India imposes monetary penalty on One Mobikwik Systems Limited",
+   "link": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63973",
+   "source": "RBI",
+   "sourceType": "Central bank",
+   "published": "2026-11-13T17:30:00.000Z",
+   "category": "policy",
+   "categories": [
+    "policy"
+   ],
+   "places": [],
+   "industries": [
+    "financials",
+    "realestate"
+   ],
+   "countries": [
+    "india"
+   ],
+   "economies": [],
+   "severity": "elevated",
+   "severityScore": 4,
+   "reports": 1,
+   "also": []
+  },
+  {
+   "id": "strait-of-hormuz-security-sustained-threats-raise-the-stakes",
+   "title": "Strait of Hormuz security: sustained threats raise the stakes for commercial shipping",
+   "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQR0wtMkJDd2FNd2lPUTcwUHY0MC1OTFFCd054YzRsWjBQUUdqaDNUWUhFNGdpODJ3YjQtNHBSZ09kay1YZXQyV1A2YlU2M1VYc2JGeFQ1MTA5ZjRFUHVwYURqNWROLWQ4T3VaeGxOSjRad3UzRElRaTNJelBNYlIzdV9rMHFWUDhLQ2VjSmFLU01ReFZFOXFSNi1oR2E0aV9UR1hjSEdsZFJ6c2Y3OERkZmNSdTZYQVRsY19YNHN6aFhieHp3d0t6OEp30gHKAUFVX3lxTFBHTC0yQkN3YU13aU9RNzBQdjQwLU5MUUJ3TnhjNGxaMFBRR2poM1RZSEU0Z2k4MndiNC00cFJnT2RrLVhldDJXUDZiVTYzVVhzYkZ4VDUxMDlmNEVQdXBhRGo1ZE4tZDhPdVp4bE5KNFp3dTNESVFpM0l6UE1iUjN1X2swcVZQOEtDZWNKYUtTTVF4VkU5cVI2LWhHYTRpX1RHWGNIR2xkUnpzZjc4RGRmY1J1NlhBVGxjX1g0c3poWGJ4end3S3o4Snc?oc=5",
+   "source": "Channel 16 Maritime Risk Intelligence",
    "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T20:39:00.000Z",
+   "published": "2026-11-13T16:19:35.000Z",
    "category": "shipping",
    "categories": [
-    "conflict",
     "shipping"
    ],
    "places": [
@@ -1436,7 +1674,7 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Three Tankers Attacked in Two Days in Strait of Hormuz Crisis",
+    "headline": "Strait of Hormuz security: sustained threats raise the stakes for commercial shipping",
     "risk": "elevated",
     "note": "Keyword rules read this as shipping chokepoint disruption.",
     "industries": [
@@ -1483,31 +1721,28 @@
       "why": "Risk premium on Indian assets"
      }
     ],
-    "at": "2026-11-13T05:44:14.287Z"
+    "at": "2026-11-14T05:45:31.827Z"
    }
   },
   {
-   "id": "ships-seeking-to-cross-the-strait-of-hormuz-have-been-under-",
-   "title": "Ships Seeking to Cross The Strait of Hormuz Have Been Under Fire. Now Oil Spills Are Visible From Space.",
-   "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxObC1hckNudHdRTHFjbzBSQXlFYk9aMFJRRzhncFBpN1VCYmhUSlBmWFdsaS1mYlByaFFaWU11YkJmdWIyZkZEaHVvTnpEOXFBS1FqRFhtcDMxTEE4ekdjQnZkXzMzMTRQTlV4MnNBcFItRGtGUG12ekdqU1RsYkRfYmJ6RVMwWkZGcVNfNWRYUVFjcjRT?oc=5",
-   "source": "Yahoo",
+   "id": "strategic-disaster-looms-if-india-s-pulse-edible-oil-supply-",
+   "title": "‘Strategic disaster’ looms if India’s pulse, edible oil supply is hit, says NITI Aayog vice-chairman",
+   "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNdVA1TjFJYVFhMFQ5cER1eUNMUDRRc1pTc1NvZGd3cnA5SF8tdUpkMG1wMmZkMmlILTFxWmlwenVrY01xb0dvLVJTamxqazl1aFZTYzhyZ3FNMkNXS3R6MS1YaTN5LS11UFczVWpjekp6czlDbWdVb2xNaFZ3dFZFeDVISTZreEZ6SVJpUTY1ZjJIbjIzNG83aXZsZnNJVXRBUG9wUW91eU8zNFgzdTVKU1FUX0tOOTd4cUc0UkVHb2ZGb09Td3hBQkQ5UlVfMUYxUXgwM1J5YWd3ZWNk0gHiAUFVX3lxTE50MkpiMWkwdnNqN05jOGNwd3otOWFNZThfdnVqTmNoOElWYUVrOWhmcV9KT0c1MGdmN0pPd3EzWC1rdlota2lrM3QzdXc4UTlON2xIeHk2T09IOHZubnhtTWJaOG1lQmUxNERmbnhZcTdCV1BvX0lUcElHME5HNnNDT1R0REZnY3NoaEcxNWM4NUtYZERkLXNUQ01SWDFSTG5WSm5zcFFoYUpkTDdUTXpNRFFJcWY3cVV3eUtfT2lxUnFCTnBNcWJrUXVRSTZONFV5SXR1V0hGRl9jRV81VTVDWkE?oc=5",
+   "source": "Telegraph India",
    "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T20:15:48.000Z",
-   "category": "shipping",
+   "published": "2026-11-13T16:16:46.000Z",
+   "category": "energy",
    "categories": [
-    "shipping",
     "energy"
    ],
-   "places": [
-    "Strait of Hormuz"
-   ],
+   "places": [],
    "industries": [
-    "transport",
     "energy",
-    "consumer"
+    "materials",
+    "transport"
    ],
    "countries": [
-    "gulf"
+    "india"
    ],
    "economies": [],
    "severity": "elevated",
@@ -1516,26 +1751,24 @@
    "also": []
   },
   {
-   "id": "oil-prices-rise-1-barrel-as-disruptions-continue-in-strait-o",
-   "title": "Oil Prices Rise $1/Barrel As Disruptions Continue in Strait of Hormuz",
-   "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE95RXFDc1JpeDBTa3BEcDJmWDNTdkRrRzJ6ZGxFUmhRakVGVTNFclIxWkZkVWs0eGR1aGM3RFJ6eXpiYTR4RlhXN1ZuRGpuMVBzLU5ldmVLRFV1RWM2MkQ3QkVSLWYzQWpWUWNkQnpScDVFT3l0ZTRvTnZ2MHBCZw?oc=5",
-   "source": "MarineLink",
+   "id": "opec-oil-output-rebounds-by-2-04-million-barrels-per-day-in-",
+   "title": "OPEC+ oil output rebounds by 2.04 million barrels per day in October: Implications for India’s chemical se..",
+   "link": "https://news.google.com/rss/articles/CBMizgJBVV95cUxQeFRRcDBZVk9POUZQMWVpLUZpOVJiRlRXMWFmLTFfZWp3cjlVb1cweXIxQ1pyQVFCZ2NVZ1hjQ0NfT2xGTWcwVmFPSW9WMFFoaTdfV2JVZGtLdlRNd2ttX2lldTBaU3BkeFhfcHhxR1B6UC05MGp1SzR2RVBsOWRkWlg4cFpOR0puVmdRRWZ4QUNSVEFyOVFKbUlIWkszR3lMRFUxdkdEZkZQRlFyQl8yLXJWNE95QmFrYkpqUURCSjFhYjFCRkpMUm1lMmYyRXpxNWR4OW9sd2RibXk1aUVDNEdsdzd4WmNzanBHSUpBUHh4ZExNRXh5NTRmekhaaml4YXpZcUVBNkt6S1Q0cDBraE95Q18zazlSVUdIYmlTWGY2M3FZelZBN0J3dnJKS2E1aWowRkJzdEpweUpnd2FDNTk1Q29CMnBpTzh0NVVR0gGcAkFVX3lxTE1QQjNPcUNGdHN6UE5Ocmhka3RyeGRnUDhxcFNYbW5wZGtycHJTUGZETkJXN1ZkWWJvd1ZrWTBlT3NPRWFGLW9uRkpZR2N3SFkzeGpQU1dPaFJSSTNIUlFjcHB4TEhiUHNyMV95M0h2cjk3cDNYbUNrSTBHWWd6TEJxY2NFcU5SeXZoTkhIbDhGMGZLSjYyaU16Vks5Z3hnNEs0ZnZYSEhEdlpnanlkR0pFbW0tWHh3TzZ1VTZfUGtxZW1JLUs4ZFI2R2RGY1djM2ZwSldFVGczNERuUzJnUG9GN2laR0RUaEpFX1RzV1V3V1pkTGw4Nnd1ZGRRQlFLajNZZkl3VllLejU5aTRBd2pxbDFfN1JmbVo2UDFa?oc=5",
+   "source": "Indiatimes",
    "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T18:46:06.000Z",
-   "category": "shipping",
+   "published": "2026-11-13T15:45:59.000Z",
+   "category": "energy",
    "categories": [
-    "shipping",
     "energy"
    ],
-   "places": [
-    "Strait of Hormuz"
-   ],
+   "places": [],
    "industries": [
-    "transport",
     "energy",
-    "consumer"
+    "materials",
+    "transport"
    ],
    "countries": [
+    "india",
     "gulf"
    ],
    "economies": [],
@@ -1544,7 +1777,7 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Oil Prices Rise $1/Barrel As Disruptions Continue in Strait of Hormuz",
+    "headline": "OPEC+ oil output rebounds by 2.04 million barrels per day in October: Implications for India’s chemical se..",
     "risk": "elevated",
     "note": "Keyword rules read this as higher oil prices.",
     "industries": [
@@ -1591,54 +1824,22 @@
       "why": "Margin pressure across sectors"
      }
     ],
-    "at": "2026-11-13T05:44:14.287Z"
+    "at": "2026-11-14T05:45:31.827Z"
    }
   },
   {
-   "id": "india-mobile-tariffs-should-rise-towards-rs-350-per-user-a-m",
-   "title": "India mobile tariffs should rise towards Rs 350 per user a month, says Sunil Bharti Mittal",
-   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPZ0F3MmlZNWNQcHp2Q2tLd3gxM1NoT1g3Q1Q1RmVTUzZKR0V4aTNoOGtLMTNNLW5nVWhtakxHUENaXzNGbXMzMXByNHkwS0ZiZ0N6ZkdjX0kxc2ZvX0pBYXBTNE9zUmVrNWdhVlo1Wko0ZDVCbFkwb0hJNGJXR1FyUFN6X1NTdVQ0akRyRHVmQThqS1JQZGNOamRDaDNzUnNJUWxGY2tvbWlpT3Za?oc=5",
-   "source": "Goodreturns",
+   "id": "blood-in-the-black-sea-what-can-turkey-do",
+   "title": "Blood in the Black Sea: What Can Turkey Do?",
+   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1udjIzRTF5Uk10MzFySHBVYzk2bG40WHBOcVpjeXJDRmZlbjRnMm1iQ1ZPSkdWenJjcmJ1bGdBeW5MbHpCT3Z1dTlBM1o1OHcxTWk1TGZYOTZpR0VkM0NMYjVTNDAyUmxMVjdzYnpLbTdkRGtjRkE?oc=5",
+   "source": "Center for European Policy Analysis (CEPA)",
    "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T18:03:01.000Z",
-   "category": "sanctions",
-   "categories": [
-    "sanctions"
-   ],
-   "places": [],
-   "industries": [
-    "industrials",
-    "tech",
-    "autos",
-    "agrifood"
-   ],
-   "countries": [
-    "india"
-   ],
-   "economies": [],
-   "severity": "elevated",
-   "severityScore": 4,
-   "reports": 2,
-   "also": [
-    {
-     "source": "Business Today",
-     "link": "https://news.google.com/rss/articles/CBMiigJBVV95cUxONllDZTE1bGFXaGpPWWR0UVRZaHI1WWF6X3A1cXhmdnIwNDI2NnAzN3FFY1o2Q0poY3dUWU50Z0FPOXphVVFGTEgzX1hlYkNLRUxsR2dEd09TVmtNNDVOMERTTnlLdTVEUFZWcUZiVGhHUWhmdmJ4WDJOWGZtZkdJNkhreDB1ZDRYMXBGQUhuOHZER1hKTGtTbkpDMGlBQVluWEVqbURoTVBhcGgtcjlmaGFZWmNzMlNtcjF4dE9MU1piRHprUFdkVGx4R3lQUWN6dzFjeXZuTXhQeUFrT3pSb3prRHFfSzlFUTgtZk9DVmV1QUJPWGtpMF9tM25OZnFTLWt4TkJFYXBUd9IBjwJBVV95cUxOTkl5b1Z6X3UzcTc1a0JMM3RHVmpib1ZScXhiZXhWb3JrNWNKVFNaSlZBaUtNREx4WWgzWnNUejZEaDJRUWplTkNkNlgtNmgySnlqMGhaODR6bTZzZEdmT3lxUFBreC1wa2FfbDUxZV9wemUzRGZDWFZjWWZXLXFuZ3paNngxeUxzMnN4c0R2ektvRHlMaFV5bWJMUEZhREZmalA5ZzFVa3dkUWF3N0ZkTDJWZnRuQW1MNHJ5TzFSTE5mWmtyeFFHeVl0cE9ZVlE1bEFvb21Icmgwa2VuRVkyRnZjX2l2cExnVGtoME1fSDZpVzgtV2RkOGJMel9IUWkyQjRUT2pCaEEzWlJleld3?oc=5"
-    }
-   ]
-  },
-  {
-   "id": "hull-underwriters-face-exposure-on-black-sea-coasts-as-russi",
-   "title": "Hull underwriters face exposure on Black Sea coasts as Russia continues vessel strikes",
-   "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPUkNGM0l0bzk4LTAzbzVSUklZV09pV21ncWEwMGlfTmZob0pCX2p1NnBuS1JXelZoTW55RWZyTmNkVmVEUHRYYmVuWXhDcXdNblplSjZJUVFidl8zYVE1N3dOTy1WSVNLaTdMZnF4eUFYR01URkJJMTdZSWxWSmNKY3gwR3kwYnkycVAyeU9laDhhZ016Z1JiOFFYUDFvMmEzdmYwdEo0WnpUVTh3LUhDbk4xck1iS2pyRU1leDFhNTJOQWFYVC1lTmpDZXpzd21HR1pCNXBBbw?oc=5",
-   "source": "TradeWinds News",
-   "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T17:40:42.000Z",
+   "published": "2026-11-13T14:46:51.000Z",
    "category": "shipping",
    "categories": [
     "shipping"
    ],
    "places": [
-    "Russia",
+    "Turkey",
     "Black Sea"
    ],
    "industries": [
@@ -1651,65 +1852,15 @@
    "severity": "elevated",
    "severityScore": 4,
    "reports": 1,
-   "also": [],
-   "assessment": {
-    "headline": "Hull underwriters face exposure on Black Sea coasts as Russia continues vessel strikes",
-    "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
-    "industries": [
-     {
-      "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
-      "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
-     }
-    ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
-      "id": "inflation",
-      "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
-     }
-    ],
-    "at": "2026-11-13T05:44:14.287Z"
-   }
+   "also": []
   },
   {
-   "id": "ship-struck-by-projectile-in-strait-of-hormuz",
-   "title": "Ship Struck by Projectile in Strait of Hormuz",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5uUFBRdmZLUHFjZlFoeUd1QndHeWZIRzlVMkRKdWhsaE42ZFRzYldCYWlXMkI5TW05Skh5OXhyQm9OMVdKMTRJUVJSNVQzY3ky?oc=5",
-   "source": "JFeed",
+   "id": "gulf-states-16-billion-railway-to-bypass-strait-of-hormuz-di",
+   "title": "Gulf States’ $16 Billion Railway To Bypass Strait of Hormuz Disruptions",
+   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPX0hPU0xZeW1HSDNnRUd5dG5QdURBd28wQWdxT001QXRvWDFCdld0dHc0RmN4YS1udTJVYzhSQ0xtX0twelJZVEVmd1hjUXJHQTBwRDZrTmpWR19aVVo3a25SWkVlQ3V6aEFPU1UtYVQ2eElmaWpjRjlHeV95cUZabHhrMDdDNkY3WUNsMmstVlppaGtOMS1RVjBpMGw1dnc2a09VSWU5WXBXVlk?oc=5",
+   "source": "The Media Line",
    "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T17:15:52.000Z",
+   "published": "2026-11-13T14:36:28.000Z",
    "category": "shipping",
    "categories": [
     "shipping"
@@ -1731,7 +1882,7 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Ship Struck by Projectile in Strait of Hormuz",
+    "headline": "Gulf States’ $16 Billion Railway To Bypass Strait of Hormuz Disruptions",
     "risk": "elevated",
     "note": "Keyword rules read this as shipping chokepoint disruption.",
     "industries": [
@@ -1778,28 +1929,32 @@
       "why": "Risk premium on Indian assets"
      }
     ],
-    "at": "2026-11-13T05:44:14.287Z"
+    "at": "2026-11-14T05:45:31.827Z"
    }
   },
   {
-   "id": "congressman-elect-amish-shah-calls-for-tariff-rollbacks-acti",
-   "title": "Congressman-Elect Amish Shah Calls for Tariff Rollbacks, Action Against Anti-Indian Hate",
-   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPZUllald1bmM0eXFkYW9NSkU5UWJyR0lnbHVxS2g4QjlHTTNwc3dSLXlsZHFrUzFRbzZDR3ZvWkJIYWg0WlJkQVR6dlkwU24wUEFHRnVDeE9aUUkydnpDLWJhRnhJNmJUX3JaUmF6a1ROcFM0ZUpNdjdpelkxaWREcC1fbzFTUmdybHI1bC1YSm1KUV8xbkNnOTFMcVFJTDQ4STlUd2d1bENPUVhYR3hrMC0yNlJUQWs?oc=5",
-   "source": "INDIA New England News",
+   "id": "india-launches-anti-dumping-probe-on-aluminium-products-from",
+   "title": "India Launches Anti-Dumping Probe on Aluminium Products from China, Malaysia, Thailand, and Vietnam",
+   "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQb2NxMGhWOFBmVkQwUElHLWp4ZmNwRllSa0RLQ3hrN1JuRndPQ2pCRlhUNUtkZ2JBUmw3ZHpyMG94YlhNYW9pRVdldl9jekhxVUVuYTVyR0Y0Zm1CV1AzTmpjQktUY2RaaDBtXy1lNXQ1YnlYbXRldnVyVERpTXBjaXI4eUdTcUhxWDkzY0xrd3VieWpDczF2cV9OSTRRQ2tIai1jczIxZTg2R0hDNUFXaHFhYXNYSENST25qNklqSmtBZWx2alNXYVpqbW43N2M3NHlidU4wekhtTWZWNmlOa3Z3YlZEOFNHOG13REFCdEVQZmQ2YlVkOVNtTjNoTUJ4?oc=5",
+   "source": "Shanghai Metals Market",
    "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T16:25:25.000Z",
+   "published": "2026-11-13T13:48:00.000Z",
    "category": "sanctions",
    "categories": [
     "sanctions"
    ],
-   "places": [],
+   "places": [
+    "Vietnam"
+   ],
    "industries": [
     "industrials",
     "tech",
     "autos",
-    "agrifood"
+    "agrifood",
+    "materials"
    ],
    "countries": [
+    "china",
     "india"
    ],
    "economies": [],
@@ -1809,12 +1964,42 @@
    "also": []
   },
   {
-   "id": "the-black-sea-drone-war-why-no-navy-can-protect-shipping",
-   "title": "The Black Sea Drone War: Why No Navy Can Protect Shipping",
-   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPYi12SEhjdjRaN3ZwdV9JVERHTGZHaWFKX2RpaWlDdG5NQjZlZV9sVFNkM3pUS3JydHY5MkZRXzFnU1cyV0JkcG1kNlRRcWdoZVhxeWc1dG1xQy1TdEhPbHZlYWQtNWVjQVJBcDZlcGJxY1ZQU1JuWmNqX3NjYkhScDMtcnF1aFZ6TE1wOFYxcW0wRVV5aHBuaw?oc=5",
-   "source": "Geopolitical Monitor",
+   "id": "can-china-and-india-remain-competitive-in-brazil-s-crop-prot",
+   "title": "Can China and India Remain Competitive in Brazil's Crop Protection Market With 35% Tariffs?",
+   "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPQUF2VlZjVXNhSU9PZU1ONGFsR1Z5WnJ2U1BHSmZxSDVHMXFtVlVKd2VkaXpyeG5Hekw0NFF4Y2V4bmtqeW9NN0NCc3UzNzg3QnFUMHc4OG1WeDRULUtQS2tROUFEdDBZYVluS3VlblFQQzBCS2R2MDVaMXFwWUdRa3V0ME5mRW9MR3FCM0hwd2FiQQ?oc=5",
+   "source": "AgroLatam",
    "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T15:54:51.000Z",
+   "published": "2026-11-13T12:45:00.000Z",
+   "category": "sanctions",
+   "categories": [
+    "sanctions"
+   ],
+   "places": [
+    "Brazil"
+   ],
+   "industries": [
+    "industrials",
+    "tech",
+    "autos",
+    "agrifood"
+   ],
+   "countries": [
+    "china",
+    "india"
+   ],
+   "economies": [],
+   "severity": "elevated",
+   "severityScore": 4,
+   "reports": 1,
+   "also": []
+  },
+  {
+   "id": "black-sea-drone-war-disrupts-barley-exports-and-logistics",
+   "title": "Black Sea Drone War Disrupts Barley Exports and Logistics",
+   "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQaS1palNIU281blRXa3c1cHF0LVRMeXE2dnZtZk1HVTQ3WjB2RDR5OFNwSnpIdERMSU94QnhlNERaSDNHbkdLTDcyM3NuaGRnWHNOMURrVUhFZTZ4V1R4Z0FXSEtuVDBzVkpSdE1hSk9OcGs2MGh4WEZjU0RhdDBMWUs3VENTX2NDajFhSXRucUstRGRrMmc?oc=5",
+   "source": "CMB News",
+   "sourceType": "Media monitor (Google News)",
+   "published": "2026-11-13T12:20:07.000Z",
    "category": "shipping",
    "categories": [
     "conflict",
@@ -1835,7 +2020,7 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "The Black Sea Drone War: Why No Navy Can Protect Shipping",
+    "headline": "Black Sea Drone War Disrupts Barley Exports and Logistics",
     "risk": "elevated",
     "note": "Keyword rules read this as shipping chokepoint disruption.",
     "industries": [
@@ -1882,267 +2067,123 @@
       "why": "Risk premium on Indian assets"
      }
     ],
-    "at": "2026-11-13T05:44:14.287Z"
+    "at": "2026-11-14T05:45:31.827Z"
    }
   },
   {
-   "id": "stopping-anti-india-hate-reclaiming-tariff-powers-priorities",
-   "title": "Stopping anti-India hate, reclaiming tariff powers priorities: Congressman-elect Amish Shah",
-   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNVUI4NkM0Mm1JZEpZODBzRXFSdXBFRWpsdWlxcm4xekFDUThwcnJmTFdmTEdnS2RQZ3ZuRnZ0NW5VQ1NuXzc2YlFUYkZrVzJxc2hnYXdteEJsMGJvdmpveVJyX0dCUEt5ZWRDeER3cmhtVkxPUEpURklnQk0tTTdvSGotYVk4blRpbDZwNkcyb0pxU2RRcVEtNGtDc0puQTRwT1hZelBvTkZOcmNBYjNBaVJsVzNPbjhG?oc=5",
-   "source": "News India Times",
+   "id": "pakistan-military-reports-it-killed-74-terrorists-during-rai",
+   "title": "Pakistan military reports it killed 74 ‘terrorists’ during raids",
+   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNWXpva3R3Y3pWcXJ1SmlXZ3dVYjkzWkY2MVdzWmo1TWdOM2I5UlUyb2NBVXpnYlZBT0ZMV29zUi1takJoVGUyWTcxZDc2dTZEdVR3RzgxQkI4b01zU0YzQ0dlRU9ibzlxSXNPdlJYY2I4ZUNWQjI5NTNVY1JCcEhiSW9sMGZzTC03Skptc3pmWm5CQUdqSE9lajUyNzdLLUl2Qng0NldCVdIBrAFBVV95cUxPMnplZlVqNFZOd21xQ1k4TWNXTHMxcU9vMVdTVlF1WXhFTEQwRWlrMTlPb01YQjdwTk1Ma1FKTnJnMGR2Z181M09xQ2I0a25ETnhRVllWUks2dzd0aXVhTDEwZkpkQjBRekt2YTgyLXlRX1NVd0pwbEx6NVpmQVNyTUo0SDJ6d0swRno2RFVWbnRndTBDWU5JRGxFTG9BZlYxZEw2M05BLUFEYVY5?oc=5",
+   "source": "Al Jazeera",
    "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T15:50:27.000Z",
-   "category": "sanctions",
-   "categories": [
-    "sanctions"
-   ],
-   "places": [],
-   "industries": [
-    "industrials",
-    "tech",
-    "autos",
-    "agrifood"
-   ],
-   "countries": [
-    "india"
-   ],
-   "economies": [],
-   "severity": "elevated",
-   "severityScore": 4,
-   "reports": 1,
-   "also": []
-  },
-  {
-   "id": "evergreen-builds-suez-canal-momentum-after-transit",
-   "title": "Evergreen Builds Suez Canal Momentum After Transit",
-   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxObEpzZXpyV2VvR1paNC12Qkp0MWcxeGxsamE4bXNKM0JwUG1xS3gwU0ZDeWFvLTJGM2s4UVp1blY2TmRJU1lIYllsanlsT0lBaWhYcUxsSHU2NUpqNzVVUEZiRFo4c0lBMU9NV2pUNW1LaUh6OGhVdlAwYldFSWtSc0RoODZ6TW1JLVgtZ29uYmdadVVpUENMd0x6SWs?oc=5",
-   "source": "Supply Chain Digital Magazine",
-   "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T15:11:02.000Z",
-   "category": "shipping",
-   "categories": [
-    "shipping"
-   ],
-   "places": [
-    "Suez Canal"
-   ],
-   "industries": [
-    "transport",
-    "energy",
-    "consumer"
-   ],
-   "countries": [],
-   "economies": [],
-   "severity": "elevated",
-   "severityScore": 4,
-   "reports": 1,
-   "also": []
-  },
-  {
-   "id": "dindigul-youth-missing-on-cargo-ship-in-strait-of-hormuz-for",
-   "title": "Dindigul Youth Missing On Cargo Ship In Strait Of Hormuz For Six Months; Family Seeks GoI Help",
-   "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQR05YN3dWMHlXT2VSbEV4djAwTHRpVy1ramdjRE9QT1ZFLXlLRXUtV0RKMngxUlBoc05LMVpfS1lfTm82VzBlUnNJYUQwMVE3WHlkb2FkajN0WEhQVXg0UDQ4ZHFUNjVEcHlCb0RxUUZwbm9jYUpnZzJWcHJrMFpmSE5zUjcyd2M3OEN1WnVtblNoamVETFVQYUtvNElYb0U3S0d4MWlVdUlHdXAtLVBwWUVvSWp2QUkzSGQ5YmNhQTBmbEVjNXl6U1JmZEZrY3k2YUhFcmI0bzhUcWR3c3pjUEpqZVfSAeoBQVVfeXFMUEFrSkxOUlVjQWh1VEJvMlpNUTFFWHIyeXdKcVR6RmRwU1pBd1dPMmRRRHd4WHNyVHN1enExaS0xT0FFb2ZlTGdYdXdxWEprZThwQ2ExM3RoS2taUVBNODhOazh5Ujg4Y3JJdkFHcmpfUEdTd3gyY3JEdFBaWEl0QU5sRlh4YjMwbnR3UlpsSm9hdDNVVFJkTHBJYXQwaWo2UmJ0UmVuaFZZUWdVTkpHVGtaYlVxM2s1NjdfWjNWcXdmZzQ3a1U1Q2lyLVpEMEVtaklFaGVUZWE1Qnk5M010cGlVWTlOTDU5Rktn?oc=5",
-   "source": "ETV Bharat",
-   "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T14:49:12.000Z",
-   "category": "shipping",
-   "categories": [
-    "shipping"
-   ],
-   "places": [
-    "Strait of Hormuz"
-   ],
-   "industries": [
-    "transport",
-    "energy",
-    "consumer",
-    "autos"
-   ],
-   "countries": [
-    "gulf"
-   ],
-   "economies": [],
-   "severity": "elevated",
-   "severityScore": 4,
-   "reports": 1,
-   "also": []
-  },
-  {
-   "id": "romania-is-proposing-the-creation-of-a-shipping-corridor-bet",
-   "title": "Romania is proposing the creation of a shipping corridor between the Black Sea and the Baltic Sea",
-   "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQd1g0Ri1qNUxXZ2Z2aVV2WUEzUGlGTmc0Y0taNmtFUVVrSVRlbXNrSUFQNTktODBIbDE1YnJGbnhDYllvRVZwWWN3dUIyUThMbDBKbTd4WVhkSzdGT2NmbWJLSEpUclNoN1ZuUkxueDV6Z0pfMkoyMFJwWjlzNzIxSDc0TnU5c0dtWXJZM0NobjJDZ2RhNkZWb05vMHRHN0hHT1Q0ODhSQThaWWVSOUNMYmE1V3BFdnpaZzIydkc1Unk4Wmk0YlBr?oc=5",
-   "source": "logos-pres.md",
-   "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T13:34:09.000Z",
-   "category": "shipping",
-   "categories": [
-    "shipping"
-   ],
-   "places": [
-    "Black Sea"
-   ],
-   "industries": [
-    "transport",
-    "energy",
-    "consumer"
-   ],
-   "countries": [],
-   "economies": [],
-   "severity": "elevated",
-   "severityScore": 4,
-   "reports": 1,
-   "also": []
-  },
-  {
-   "id": "india-cuts-tariffs-on-new-zealand-wine-from-150-to-50-under-",
-   "title": "India cuts tariffs on New Zealand wine from 150% to 50% under a new trade deal",
-   "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPUHdvcUJKLWlmdDM1V3dvMWhTWE53a09GbDFZODNVNE1IQndLNWFIek1xSW1EUy1YWHU4dUdLWUZXWnU5TWZzdEt1RVZTRmVVTDVhb0tIOHVZN0N4bVBfMXNyZVlibW9NZFRPTkZhTlhSMEFQUGljdzl6ZjhBdkxTOVk5dDNZQi03UWo2NDg5dXY3WGRKbVFTN0tEZGlpY3NZSEU5anhmdXlDdXQ0UXc1SldNN0lVQ2R1djVWc043SlfSAcYBQVVfeXFMTW1LWGhNbzZsdjBJbmtNZkxsbmpxSWhvbTltYmI3V082eW5VazZwdkN3Vk1Kc0xQVFA5UmtqYzdoU19HLXpOcTd2Nldnc2ZNVE9HemVhY3padWJPRnQzc0Z6dURaQUdXa1FiUUtUOHEtYmJpSmlLbGdQNWdoVTNyb3ItMGtQOXA5Wkd1VUc2WDVGUXlvM1RyR0ZSWE5CbXZkcTFNMW5USjRaN3htUTR6NWdxVkQtY2hOLTdUY2xrbEJDWV9Pc0ZR?oc=5",
-   "source": "Vinetur",
-   "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T13:23:29.000Z",
-   "category": "sanctions",
-   "categories": [
-    "sanctions"
-   ],
-   "places": [],
-   "industries": [
-    "industrials",
-    "tech",
-    "autos",
-    "agrifood"
-   ],
-   "countries": [
-    "india"
-   ],
-   "economies": [],
-   "severity": "elevated",
-   "severityScore": 4,
-   "reports": 1,
-   "also": []
-  },
-  {
-   "id": "yemen-s-houthis-iran-s-proxy-on-the-red-sea",
-   "title": "Yemen’s Houthis: Iran’s proxy on the Red Sea",
-   "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPelFINWxJNmxIcVd1ODJQeGd6YVBLR00yeGZYZDk0YlMzYlA4di12dXdBTWhXUWc2Z1ZzRWxPUTFRdXVqZVIxcktKalMtZnlpbFJrMHVkcTdPTWtSQlFib2pNWGpRRWp3anRMUWRUQkJMUHdja2lIRFFjTEhHTkViTkVVRWdsMG1iYXc?oc=5",
-   "source": "Arab News",
-   "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T13:16:43.000Z",
-   "category": "shipping",
-   "categories": [
-    "shipping"
-   ],
-   "places": [
-    "Iran",
-    "Yemen",
-    "Red Sea"
-   ],
-   "industries": [
-    "transport",
-    "energy",
-    "consumer"
-   ],
-   "countries": [],
-   "economies": [],
-   "severity": "elevated",
-   "severityScore": 4,
-   "reports": 1,
-   "also": []
-  },
-  {
-   "id": "iran-says-2-oil-tankers-carrying-4-million-barrels-caught-fi",
-   "title": "Iran says 2 oil tankers carrying 4 million barrels caught fire in Strait of Hormuz",
-   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOMUtKeDBQNmtLTVBqWjNiUE9VWWhScGFkR2xZSi1ZdHh6OXNnZUxZdElpYnoyZjFxa1k0aTZkTVNuZ0lrdGxhT2dSWXUwQUhoNDJPV2pnbXlna3pVMEhXN1RqcmliR0dCMDV3eS1FVGZYUHB4NjEyNW1DXzlKVUdfVHpCcm9nMTJ5TzVHQWNGeVBPSVJYblZrYWRDXzU2cVpnU2xYa0VaYnpMd3hPcXBPc1dwUdIBuAFBVV95cUxQU1hMVG9xV0pEczdGaHlwRzI3T0JSRzFwcUJQMktCclc4aFRKOXNYUzR1QWtfYm5fbkF6Z2RTZ28xV1BualkwTGhOZGtWYjFmaEFkVXB3YWVOdjJBUUwyc3hIMFhxQnoxWEdYTHVxTlBpbEdKWFV1Y2NhbFZ1TWl3M0FoNk83OXNkWExsYXQ2a2NPNS1ScHFNeDBSd3d5NWJ5dkFrQTlQVERZcTJxRDlBeVo5d1luekZ4?oc=5",
-   "source": "The Times of Israel",
-   "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T13:08:54.000Z",
-   "category": "shipping",
-   "categories": [
-    "shipping",
-    "energy"
-   ],
-   "places": [
-    "Israel",
-    "Iran",
-    "Strait of Hormuz"
-   ],
-   "industries": [
-    "transport",
-    "energy",
-    "consumer",
-    "autos"
-   ],
-   "countries": [
-    "gulf"
-   ],
-   "economies": [],
-   "severity": "elevated",
-   "severityScore": 4,
-   "reports": 1,
-   "also": []
-  },
-  {
-   "id": "stop-them-or-tariffs-will-be-doubled-trump-warns-mexico-as-1",
-   "title": "‘Stop them or tariffs will be doubled’: Trump warns Mexico as 1,500 migrants head towards US",
-   "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQdGxmalJmeVhqU3Z0VUhsNnBJNUhMNWdCZzRPU2wxdEx3aURPOElMa21GY2x1X09uRjR6SHhqMHg3QkNpNF82S1VKbHpNZmNta1ExdXRZcGhCclV6TUZrb2FCbTUzMnJFZXJiOW4xSzloZ1Q3ZzNKdTNobXVDWGJxSXZMV3NNNVNDVVpHNlcycEhjWURHU1hTdE83V3BjTzNUMXFDYjdtQTBpVUJ6YWhmZS1lWm5uak5FaHNvN3BiaEI0emEtV1pRVG9fLVRjMXVpeVZ0YUZzLUZkZEJMRTd6ZUFhZmlJZ2JISVE3Q3EzVTXSAfYBQVVfeXFMT2V4VGIzc3c1OHlheGZSdV9iSkVMcTAwSGhlcm8wM1FVWk9GZmRtS1pOOEVEemV0S2Z2RkhrSHI2dDFFSEdpV2VHd1JGSE1iaXEwYUVVcm1LS0t0RlNxYVU5MjJFQmpOam44R0xCQjd3V05oY1d3QzI4dVBGcl82OXdQcmpRRW9uNnVjSnBRejIwWnFFOEhuUnRqdHZSdE43bUgwQkNOeFpYT3RUdVZ3VzUxWU5rY1J5QVFia0lLOU5GYmdsajdld25jUm84c1h4aGZ4MnhONGk1VThSa010YVFVYXpQNW5SUVgyLTMyOC15cG5ha1V3?oc=5",
-   "source": "The Times of India",
-   "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T13:04:00.000Z",
+   "published": "2026-11-13T12:03:29.000Z",
    "category": "conflict",
    "categories": [
-    "conflict",
-    "sanctions"
+    "conflict"
    ],
    "places": [
-    "Mexico"
+    "Pakistan"
    ],
    "industries": [
     "energy",
     "transport",
     "industrials"
    ],
+   "countries": [],
+   "economies": [],
+   "severity": "elevated",
+   "severityScore": 4,
+   "reports": 1,
+   "also": []
+  },
+  {
+   "id": "security-council-live-fragile-gulf-calm-tested-as-threats-to",
+   "title": "Security Council LIVE: Fragile Gulf calm tested as threats to Hormuz shipping mount",
+   "link": "https://news.un.org/feed/view/en/story/2026/11/1168804",
+   "source": "UN News",
+   "sourceType": "Intergovernmental",
+   "published": "2026-11-13T12:00:00.000Z",
+   "category": "shipping",
+   "categories": [
+    "shipping"
+   ],
+   "places": [
+    "Iran",
+    "Strait of Hormuz"
+   ],
+   "industries": [
+    "transport",
+    "energy",
+    "consumer",
+    "autos"
+   ],
    "countries": [
     "us",
-    "india"
+    "gulf"
    ],
    "economies": [],
    "severity": "elevated",
    "severityScore": 4,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Security Council LIVE: Fragile Gulf calm tested as threats to Hormuz shipping mount",
+    "risk": "elevated",
+    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "industries": [
+     {
+      "id": "transport",
+      "score": -2,
+      "why": "Freight, insurance and fuel costs rise"
+     },
+     {
+      "id": "energy",
+      "score": -1,
+      "why": "Fuel marketers' margins squeezed"
+     },
+     {
+      "id": "materials",
+      "score": -1,
+      "why": "Crude-linked inputs costlier"
+     },
+     {
+      "id": "consumer",
+      "score": -1,
+      "why": "Imported inputs costlier"
+     }
+    ],
+    "economies": [
+     {
+      "id": "fiscal",
+      "score": -2,
+      "why": "Oil import bill swells"
+     },
+     {
+      "id": "inflation",
+      "score": -1,
+      "why": "Fuel and freight costs"
+     },
+     {
+      "id": "rupee",
+      "score": -1,
+      "why": "Importers' dollar demand rises"
+     },
+     {
+      "id": "equities",
+      "score": -1,
+      "why": "Risk premium on Indian assets"
+     }
+    ],
+    "at": "2026-11-14T05:45:31.827Z"
+   }
   },
   {
-   "id": "world-rising-prices-cap-india-s-thirst-for-russian-oil",
-   "title": "World: Rising prices cap India's thirst for Russian oil",
-   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQMVAtaHkyYWJvN0ZSR0syaE9seXFuazRadEU4TDVyNk14bXJ6LUROTlloNHpoN2NraC1WNllhV0M1eWFCaktiajh4TTJDWlp1TWNZZW85UlhUQTNYdFRCampZZlhETHhjRm1XRi1PRlZyZ25qOE1XV01kYU84QUtKd1BJVjVFeGxYOWNRWVo0MEJWZWpsTDRvUFlIcXBxaHNTOUFubE5mc1I?oc=5",
-   "source": "NewVision.co.ug",
+   "id": "us-has-assured-india-comparative-edge-under-trade-deal-says-",
+   "title": "US has assured India comparative edge under trade deal, says official",
+   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPTWpMcDBPQTY1YVlRTXJDd2NkUEhnbFNRMHlzLTZDRFYxYWp3Mjg1N2NMRVZYR2xvWDJYU0x4UGl2bng5OXpPUG5RVmFQRm5VWU9hcHBKbVpuX3hORFZKbE9tZVZiSFNnODh0UHphV3RuUjZnNktxakh1YWZ1bmVwblJ6akpocGFaSzJJTXRsOTJIdnhabmVFaWhqYWs0NEYwZTJyTlJ4X3NkeVY4XzM4Mm00WFFEN25aZmlXRdIBwwFBVV95cUxQS0J4eXd5WlJEREFJZHFsMXBOSmRWR2d0dXZ3OHdXdzZLUGpaQ1ZhYUZuWEVFNjgzVlctbEdtMXY1VTgtUHQ2c0NmQ1BYMlhxXzBDNVltNnR1UG5NSlRKblk1Y3lsN0hhczRmZDRKdEs2OVdneV9sNnZuSHNGSkd1SVF2cVVXbExRS1RtYlhXOTZET203RGxSYk5vZ3hObjhUaUtLeDJnc0tDSE5lZFhPTHQxcHNacG9kTDBlZDFxT0huMGs?oc=5",
+   "source": "The Indian Express",
    "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T13:00:05.000Z",
-   "category": "energy",
-   "categories": [
-    "energy"
-   ],
-   "places": [],
-   "industries": [
-    "energy",
-    "materials",
-    "transport"
-   ],
-   "countries": [
-    "india"
-   ],
-   "economies": [],
-   "severity": "elevated",
-   "severityScore": 4,
-   "reports": 1,
-   "also": []
-  },
-  {
-   "id": "amish-shah-pledges-to-fight-anti-indian-hate-and-roll-back-t",
-   "title": "Amish Shah pledges to fight anti-Indian hate and roll back tariffs as he enters US Congress",
-   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOTUQyTFRfa2JscVdoSS1UMWhjY0JGdDBtTkM3TGt2QTZBcklETWozZlhfdl9iQnA1OUl3bzA3OEdINk5GUWZjSUcyMDRsZ3NqeG1mYTZ4ckYwMTdBSGVpT0wxcG4xcnFhNUZmUXVLS0V0X1RPR25iNTVIMks2dm8wM2ZGSjhVLTV2U0RzbUJ3Mmo4Wk1QQjdsdThxVUlyTnpHUkRyVHlyV0RMTlRhSnVVRnhDRVNrU0p5Nk5pVw?oc=5",
-   "source": "India Weekly",
-   "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T12:53:29.000Z",
+   "published": "2026-11-13T11:53:25.000Z",
    "category": "sanctions",
    "categories": [
     "sanctions"
@@ -2161,178 +2202,44 @@
    "economies": [],
    "severity": "elevated",
    "severityScore": 4,
-   "reports": 2,
-   "also": [
-    {
-     "source": "New India Abroad",
-     "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNZldjd3RRbURCdHpnSFZkM3hLLVNVaWhPY042dE1qSmJWamhVS3FQcmF3eTdRY1ZXWkVDNDRPU1pQbTAza0ZHMTE0MzEwTnlIeml2bWQxc1BwNkg4Q1lJV2ZnVE5odTVlaGlBS3JVZEp6MUhEMFd4T3duZERSVmUxWGxkWW5QWm5tZXhaSE93?oc=5"
-    }
-   ]
-  },
-  {
-   "id": "black-sea-shipping-attacks-kill-seafarers-disrupt-trade",
-   "title": "Black Sea Shipping Attacks Kill Seafarers, Disrupt Trade",
-   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOTmdzYmo2bzJtOUV6bFRiUEhDUk5rcVFueThqME0yOUVPZ2NKZERfSTRHR0syU1VmZXpfSVVpb3FidF9RVng0Ul9SODlreERicHh1OU1BODVPVkVjU0dWV2l4TV9sRFhlbXFlNVoxM2NPTGF0MjFrZ0xJMGFqX1lQWGhwQWw4aWR0M2JrWE5GbjROUU5GLTkyZ1hXOS1Hd0xRWXdv?oc=5",
-   "source": "WSJ",
-   "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T11:55:00.000Z",
-   "category": "shipping",
-   "categories": [
-    "conflict",
-    "shipping"
-   ],
-   "places": [
-    "Black Sea"
-   ],
-   "industries": [
-    "transport",
-    "energy",
-    "consumer"
-   ],
-   "countries": [],
-   "economies": [],
-   "severity": "elevated",
-   "severityScore": 4,
    "reports": 1,
-   "also": [],
-   "assessment": {
-    "headline": "Black Sea Shipping Attacks Kill Seafarers, Disrupt Trade",
-    "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
-    "industries": [
-     {
-      "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
-      "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
-     }
-    ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
-      "id": "inflation",
-      "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
-     }
-    ],
-    "at": "2026-11-13T05:44:14.287Z"
-   }
+   "also": []
   },
   {
-   "id": "iran-claims-fresh-vlcc-strike-as-strait-of-hormuz-attacks-hi",
-   "title": "Iran claims fresh VLCC strike as Strait of Hormuz attacks hit 50 ships in 45 days",
-   "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNMVdtWVV0MDNGOGhQTkVGSks2M1hvSW0tZjhMYmNSQjNFT0FXVHRyZnE1LUZ6RDV5c3F5cDRHNEFmWGoxNUtzRWJVbHlSUUo0VGg4emRuNUhaekRGM2RGdXpnZzJTR243MEdHLUhrSGlPbTdYb0RyZlBtWUhMczR2YXJLNi0zdmtha0JRa0lndFU2WmZrMjJfY2VaMW1sa1o2NG40S05neE50VDl4NEQzb1lVNV9xY21KLWJ3YzlGR0JtZkE?oc=5",
-   "source": "TradeWinds News",
+   "id": "in-major-breakthrough-u-s-assures-india-of-comparative-tarif",
+   "title": "In major breakthrough, U.S. assures India of comparative tariff advantage over its competitors",
+   "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPcnNfUWxOV3FjT2FhV3dSWGtnWHk5aVJaWU9CSHVSSVhtRHMwRDEtUGIwVm1oSGtLd29qRzZ0anphYm1DRVNxMVFDdElWbUpZUmV1THFBNDJaWHFtMWJXUFhiRmxRamVndXZfVjdhejJsem9kVUJxMVRiR2ltOXVXVExhczl3cExEeHpFdGhoenRad1J4N0laRHM1UjVvUGlLVFZvbGV2M2ZrSV9URWZJMm91ZTJuS1E2SXBIakwyU2RuYWNyOUZnUElxdEhKZU9EdlM5UUxkUmtGek9jWWlvekpTQlTSAesBQVVfeXFMTmlWR2RtU2hGRE1NUFNhOVlrbFk1d3FTRjIwY2dUUjVWbVZzbVZXSERtbmxoTXFwTUR3RHFlRFJMUXZqWENDM1E5MjlYWVR1bVNiTS15b3hhMWtIWW5Qak5pTkFnWnhrcDBxVTBuQldPb1VTNTJldzZCa0o1a0RoM2ZoVzFrakhkOFdWZFZPVUlOUU1mQnh2ck9CM0ZqTjVYQ0FWbkxFeFlCQzZxSk82WEduZVVUb0hRSnRVLWdHVUx3ZzhsSWlpNERqdDFYZmNTajlsSnRWRGlSWjcxTGNTWE9kUG53dTg1cXA5RQ?oc=5",
+   "source": "The Hindu",
    "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T11:44:50.000Z",
-   "category": "shipping",
+   "published": "2026-11-13T11:48:46.000Z",
+   "category": "sanctions",
    "categories": [
-    "conflict",
-    "shipping"
+    "sanctions"
    ],
-   "places": [
-    "Iran",
-    "Strait of Hormuz"
-   ],
+   "places": [],
    "industries": [
-    "transport",
-    "energy",
-    "consumer"
+    "industrials",
+    "tech",
+    "autos",
+    "agrifood"
    ],
    "countries": [
-    "gulf"
+    "us",
+    "india"
    ],
    "economies": [],
    "severity": "elevated",
    "severityScore": 4,
    "reports": 1,
-   "also": [],
-   "assessment": {
-    "headline": "Iran claims fresh VLCC strike as Strait of Hormuz attacks hit 50 ships in 45 days",
-    "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
-    "industries": [
-     {
-      "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
-      "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
-     }
-    ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
-      "id": "inflation",
-      "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
-     }
-    ],
-    "at": "2026-11-13T05:44:14.287Z"
-   }
+   "also": []
   },
   {
-   "id": "black-sea-shipping-slump-raises-barley-export-risks",
-   "title": "Black Sea Shipping Slump Raises Barley Export Risks",
-   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPTmlTYmRNRVFSTEF0aFozRklJQXljYy1DTGxNN0pUOHRJTHRaMmZWSVptY1pIYTROSThrazVwNHlOUk1NcXhDZU5nR2RSTkdtMDAzdk1YalZSVjNBazBqX05YS3hTSXZzd3M5UHZCTkxVR0VfYW55bFVTakFOSDBfT1FjVFlJb2xUTklLc0xZVFpqeGE1dU1EV3V0WXg?oc=5",
-   "source": "CMB News",
+   "id": "lack-of-black-sea-shipping-agreement-causes-little-market-co",
+   "title": "Lack of Black Sea shipping agreement causes little market concern amid active Argentine exports",
+   "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPMjdweEVyLXl6TVZXRk40UmxKN3piTzA1N3YyQ0tyM3RVcm04Z2dqdDgtcDdOQjR5OHVEejQzdkU4SDVJaUI1STJzQlRnU3ZqZTFRS2NIdWk2Ym1JQ1ZIblV5ZndVOEhuZWRKZm9zX0k1OHhVVVF1OTNRQ2FSRUZ0YVg5YW1ZcEZXem9iYTBVYnJnel81eXhxWVlQWERPbDlidEpWVGI1T210Q1VwNXh6bl9naUszXzZhbF81bUdRdmgyeS1vc2hYTEs0RQ?oc=5",
+   "source": "UkrAgroConsult",
    "sourceType": "Media monitor (Google News)",
-   "published": "2026-11-12T11:28:14.000Z",
+   "published": "2026-11-13T11:27:43.000Z",
    "category": "shipping",
    "categories": [
     "shipping"
@@ -2351,6 +2258,85 @@
    "severityScore": 4,
    "reports": 1,
    "also": []
+  },
+  {
+   "id": "strait-of-hormuz-new-gas-carrier-incident-reported-amid-risi",
+   "title": "Strait of Hormuz: New gas carrier incident reported amid rising security threats",
+   "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQN0l3Yl9DWUs2amN6UFdKV08xV2tvVXpsTS0wRGJneHFHbWJwVWUzMWU2QV9YWWFWYWVkVHV6TUJNcXMtQ1B2eWdkZnh2U3RMMllvTmREc1pVMHp5WGhKQXh3NktWNXpoX1VQalJlc3lXdXdYZnRkcU9iWnBqWFVFeUxQVXFONmJPVmpIVlJpVnVZamEwb1ZHUVhsSjhqeEF2cTNDUHBB?oc=5",
+   "source": "safety4sea",
+   "sourceType": "Media monitor (Google News)",
+   "published": "2026-11-13T11:06:54.000Z",
+   "category": "shipping",
+   "categories": [
+    "shipping"
+   ],
+   "places": [
+    "Strait of Hormuz"
+   ],
+   "industries": [
+    "transport",
+    "energy",
+    "consumer",
+    "autos"
+   ],
+   "countries": [
+    "gulf"
+   ],
+   "economies": [],
+   "severity": "elevated",
+   "severityScore": 4,
+   "reports": 1,
+   "also": [],
+   "assessment": {
+    "headline": "Strait of Hormuz: New gas carrier incident reported amid rising security threats",
+    "risk": "elevated",
+    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "industries": [
+     {
+      "id": "transport",
+      "score": -2,
+      "why": "Freight, insurance and fuel costs rise"
+     },
+     {
+      "id": "energy",
+      "score": -1,
+      "why": "Fuel marketers' margins squeezed"
+     },
+     {
+      "id": "materials",
+      "score": -1,
+      "why": "Crude-linked inputs costlier"
+     },
+     {
+      "id": "consumer",
+      "score": -1,
+      "why": "Imported inputs costlier"
+     }
+    ],
+    "economies": [
+     {
+      "id": "fiscal",
+      "score": -2,
+      "why": "Oil import bill swells"
+     },
+     {
+      "id": "inflation",
+      "score": -1,
+      "why": "Fuel and freight costs"
+     },
+     {
+      "id": "rupee",
+      "score": -1,
+      "why": "Importers' dollar demand rises"
+     },
+     {
+      "id": "equities",
+      "score": -1,
+      "why": "Risk premium on Indian assets"
+     }
+    ],
+    "at": "2026-11-14T05:45:31.827Z"
+   }
   },
   {
    "id": "how-the-war-in-iran-could-escalate",
@@ -2375,55 +2361,6 @@
    "economies": [],
    "severity": "elevated",
    "severityScore": 4,
-   "reports": 1,
-   "also": []
-  },
-  {
-   "id": "rbi-to-conduct-3-day-variable-rate-reverse-repo-vrrr-auction",
-   "title": "RBI to conduct 3-day Variable Rate Reverse Repo (VRRR) auction under LAF on November 13, 2026",
-   "link": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63965",
-   "source": "RBI",
-   "sourceType": "Central bank",
-   "published": "2026-11-12T19:05:00.000Z",
-   "category": "policy",
-   "categories": [
-    "policy"
-   ],
-   "places": [],
-   "industries": [
-    "financials",
-    "realestate"
-   ],
-   "countries": [
-    "india"
-   ],
-   "economies": [],
-   "severity": "watch",
-   "severityScore": 2,
-   "reports": 2,
-   "also": []
-  },
-  {
-   "id": "eia-forecasts-alaskan-crude-oil-production-to-grow-13-in-202",
-   "title": "EIA forecasts Alaskan crude oil production to grow 13% in 2027",
-   "link": "https://www.eia.gov/todayinenergy/detail.php?id=68444",
-   "source": "US EIA",
-   "sourceType": "Official",
-   "published": "2026-11-12T14:00:00.000Z",
-   "category": "energy",
-   "categories": [
-    "energy"
-   ],
-   "places": [],
-   "industries": [
-    "energy",
-    "materials",
-    "transport"
-   ],
-   "countries": [],
-   "economies": [],
-   "severity": "watch",
-   "severityScore": 2,
    "reports": 1,
    "also": []
   }
