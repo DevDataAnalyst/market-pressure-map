@@ -1,6 +1,6 @@
 {
  "updatedAt": "2026-11-15T05:43:41.639Z",
- "assessedAt": "2026-11-15T05:43:55.234Z",
+ "assessedAt": "2026-11-15T05:45:25.880Z",
  "sources": [
   {
    "name": "UN News",
@@ -152,7 +152,37 @@
      "source": "TheReport.live",
      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNRm9JVWd4YWVTMU00bzI2d0ZiNEFUZ3d1YWtQU2FFQnpGdnNKWmo5eUoyWE0zdHdaSkNqaWZ0TkNXZllPdnpSNlkzamNsakFXVTJsaXYyblJiRWZtSlpBSWRTYi1TUUhjWnpaT3JPbUFsYVI5a0tvM2lSV09NQmJBbExGR1A1cEZrLXJjOG5uSGRHYjBQajBENkJRbUQtTHY2R2hhMUo1SnZaZnJVYzlRRQ?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "Iran says three oil tankers caught fire after striking mines in Hormuz",
+    "risk": "high",
+    "note": "Third ship added to mine claims; escalating risk on India's main crude route.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": -2,
+      "why": "Supply risk"
+     },
+     {
+      "id": "transport",
+      "score": -2,
+      "why": "Insurance, crew"
+     }
+    ],
+    "economies": [
+     {
+      "id": "fiscal",
+      "score": -1,
+      "why": "Import bill"
+     },
+     {
+      "id": "inflation",
+      "score": -1,
+      "why": "Fuel costs"
+     }
+    ],
+    "at": "2026-11-15T05:45:25.880Z"
+   }
   },
   {
    "id": "india-us-trade-deal-in-final-stage-remaining-concerns-mostly",
@@ -193,7 +223,37 @@
      "source": "https://streamlinefeed.co.ke/",
      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOX2lSVk1sbkFPMUxKTHdrdWw0czlIZzR4cGRFT3huRl9fU0ZhZmxWOXo2WmkxYnhDZDAzU2h0QjVmbUNDY3NINlRndUpOS2VXSDZuRmdTQldzYmI5ODE2WTZUSE5YQ2lLYWhfYjJKNkFsTUU1c05zOVRIVDRxSjVxTkczZVRYelFqbDBCSms3UQ?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "India-US trade deal in final stage; remaining concerns mostly on US side",
+    "risk": "elevated",
+    "note": "Progress toward a first tranche; positive for exporters.",
+    "industries": [
+     {
+      "id": "industrials",
+      "score": 1,
+      "why": "Exports"
+     },
+     {
+      "id": "consumer",
+      "score": 1,
+      "why": "Textiles"
+     }
+    ],
+    "economies": [
+     {
+      "id": "growth",
+      "score": 1,
+      "why": "Export upside"
+     },
+     {
+      "id": "flows",
+      "score": 1,
+      "why": "Clarity"
+     }
+    ],
+    "at": "2026-11-15T05:45:25.880Z"
+   }
   },
   {
    "id": "us-vows-india-lower-tariffs-than-rivals",
@@ -238,7 +298,27 @@
      "source": "News18",
      "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQQ3Nfc0xlQlg4SEN4OG1HZVUwTjhhSzgyejlXRE8yVzdxR3YtaHg1YkpvMk5sY252Ni0ybEo3VGlTcWNPWHdGcFZIdnlBQnZIYXZBZ1BzRFFnaWlJRHlzdV9URzNTbUw0aHJzb3dRUEU0Ui11YXdvNzVqcW1XVWNXVThzQkNSNXExT2Vpbkc1V2hFbWJMYTl1VVkzRTdKZUVWajhzSnNkRDA0akdQMEdObkRlWUI1ZUMxVjRFSTZ0UnNfMmM4ZndTVk5UcVdhQThSSDN5cWY0RWo3UdIB3wFBVV95cUxOaGpYRDVOUU8weGwtZkltSXlrTWxEM0U2S25sWjR1VzhRLUM2RGVnLUhScUNuSUVZT2o4ZDFvNlBRNFF6LUNtSWVXdjZ4Yl9pQU5wZm5uU2xZbHZ5M3JnMm1pN3l5REMyT3dfbGExNWRlMDdZbEJTX0tWdWNMZ1NvaFFlWmI5TXhQQ3A4X3JwbVptdGVySHloYzRZUHdRd1ZvOVdkajBDTW5aSnhqZndNSGQ1eDRjWUdXeWRzeENBZ3JLdnc5NzFwS05Ybk9DaERfWUM0R3NLWGZ4V0pIcmJn?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "US vows India lower tariffs than rivals",
+    "risk": "elevated",
+    "note": "Ongoing from Friday; relative tariff edge for Indian exporters.",
+    "industries": [
+     {
+      "id": "industrials",
+      "score": 1,
+      "why": "Exports"
+     }
+    ],
+    "economies": [
+     {
+      "id": "growth",
+      "score": 1,
+      "why": "Export upside"
+     }
+    ],
+    "at": "2026-11-15T05:45:25.880Z"
+   }
   },
   {
    "id": "iran-says-oil-trade-negotiations-with-india-continuing-despi",
@@ -269,7 +349,21 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Iran says oil trade talks with India continue despite sanctions",
+    "risk": "elevated",
+    "note": "Possible discounted supply, but sanctions risk makes outcome uncertain.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": 1,
+      "why": "Potential discounted crude"
+     }
+    ],
+    "economies": [],
+    "at": "2026-11-15T05:45:25.880Z"
+   }
   },
   {
    "id": "pakistan-says-minister-to-make-rare-india-visit-for-regional",
@@ -297,7 +391,21 @@
    "severity": "elevated",
    "severityScore": 5,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Pakistan says minister to make rare India visit for regional talks",
+    "risk": "watch",
+    "note": "Mild easing of regional tension; no direct market channel.",
+    "industries": [],
+    "economies": [
+     {
+      "id": "equities",
+      "score": 1,
+      "why": "Lower risk premium"
+     }
+    ],
+    "at": "2026-11-15T05:45:25.880Z"
+   }
   },
   {
    "id": "us-israel-iran-war-latest-live-updates-25-seafarers-killed-1",
@@ -334,7 +442,21 @@
      "source": "Al Jazeera",
      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNdjB0S19BOXR1ZW1EU3dLRnNLUmYzb3YwZmFiQ0s2U25IdHZlQ1hTX1FYSTB2TjU3Q0h0UzBpTkRkMHdOUm5yRGhQVHdzTWJEdXNfWlMzc2RwRzRQMVk3MVdFMG5nLXd4MS04TWFkZTJocW9rVGdXMXEtelN6M3lMRjhUYVhHT290VkdQVkxObnpSTnFWNXNjS1FPc29aR25BM0lz0gGoAUFVX3lxTFBuVVc1SlJVcngxX0pBcGcwMnR3T0hOREcxVkdDSWVjb3JRdzZ1LURoVlVZRW5zblpialpwSEx1MFBGaWQ2T09WVGRMY1cySWdDc0Q2MVNDX0tlM1JtLUppbEZmcm9LaEg1VDVTdFV6a0VTYXV4eGFmX09GeGVWbWJSZlREY09kUXN4VEJKaDM5NXhNamQ3eVQxdjREam9Fc0lVZWlUSDJ6Uw?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "25 seafarers killed in 136 maritime incidents in Hormuz, live updates say",
+    "risk": "elevated",
+    "note": "Ongoing toll; crew and insurance risk.",
+    "industries": [
+     {
+      "id": "transport",
+      "score": -1,
+      "why": "Crew, insurance"
+     }
+    ],
+    "economies": [],
+    "at": "2026-11-15T05:45:25.880Z"
+   }
   },
   {
    "id": "jaishankar-says-india-has-strengthened-military-presence-alo",
@@ -366,7 +488,27 @@
      "source": "Deccan Herald",
      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOaW8xOWZQdjlSenVpTjBQMUdtRS13ZEFkUWgyMHFFdWxYZlVPQ2Q0MXh3bkd6YWtCZ3VpcG5ueTBIUlNlV1VzQ1o5NWNHS2lnZmM1NVgzSm4tTUdEd0hNeVdYVUFqcHVFOGJzVVpIeDE3b3RfX0U3NVVBNzFvS1I2X2VqRURSMDExUjRSbVFsamhIeUpEOEpNNFRaN2k3VlFzNTUyS1RmM0JWeTROc2U3WUZpLVJVbU04STg4bV96UGNWazF4aS1KVExaekk1VVo1ZGVNbEl4NDFWSmY5TmtJZ1ZxWWMzbTluM3hvQ0NmYUN0QQ?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "India has strengthened military presence along China border, minister says",
+    "risk": "watch",
+    "note": "Supports defence spending; adds fiscal demand.",
+    "industries": [
+     {
+      "id": "industrials",
+      "score": 1,
+      "why": "Defence orders"
+     }
+    ],
+    "economies": [
+     {
+      "id": "fiscal",
+      "score": -1,
+      "why": "Outlay"
+     }
+    ],
+    "at": "2026-11-15T05:45:25.880Z"
+   }
   },
   {
    "id": "eu-targets-2027-opening-for-black-sea-security-hub-after-shi",
@@ -398,53 +540,17 @@
    "also": [],
    "assessment": {
     "headline": "EU targets 2027 opening for Black Sea security hub after ship attacks",
-    "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "risk": "watch",
+    "note": "Long-dated relief for grain and oil routes.",
     "industries": [
      {
-      "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
-      "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
+      "id": "agrifood",
+      "score": 1,
+      "why": "Safer grain route later"
      }
     ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
-      "id": "inflation",
-      "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
-     }
-    ],
-    "at": "2026-11-15T05:43:55.234Z"
+    "economies": [],
+    "at": "2026-11-15T05:45:25.880Z"
    }
   },
   {
@@ -481,54 +587,24 @@
     }
    ],
    "assessment": {
-    "headline": "Iran's Revolutionary Guard says gas tanker struck mine in Strait of Hormuz",
+    "headline": "Iran's Guards say gas tanker struck mine in Hormuz",
     "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "note": "Ongoing from Friday; LNG supply risk.",
     "industries": [
-     {
-      "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
      {
       "id": "energy",
       "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
+      "why": "LNG supply"
      }
     ],
     "economies": [
      {
-      "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
       "id": "inflation",
       "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
+      "why": "Gas costs"
      }
     ],
-    "at": "2026-11-15T05:43:55.234Z"
+    "at": "2026-11-15T05:45:25.880Z"
    }
   },
   {
@@ -557,54 +633,29 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Three commercial ships struck by drones near Romania's Black Sea coast over two days",
+    "headline": "Three commercial ships struck by drones near Romania's Black Sea coast",
     "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "note": "Raises freight and insurance on grain, sunflower oil and fertiliser cargoes.",
     "industries": [
      {
       "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
+      "score": -1,
+      "why": "Insurance"
      },
      {
-      "id": "energy",
+      "id": "agrifood",
       "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
+      "why": "Import costs"
      }
     ],
     "economies": [
      {
-      "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
       "id": "inflation",
       "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
+      "why": "Edible oil"
      }
     ],
-    "at": "2026-11-15T05:43:55.234Z"
+    "at": "2026-11-15T05:45:25.880Z"
    }
   },
   {
@@ -668,54 +719,18 @@
    "reports": 1,
    "also": [],
    "assessment": {
-    "headline": "Iran reports tanker fire after mine strike as Strait of Hormuz tensions mount",
+    "headline": "Iran reports tanker fire after mine strike as Hormuz tensions mount",
     "risk": "elevated",
-    "note": "Keyword rules read this as shipping chokepoint disruption.",
+    "note": "Same mine reports; shipping risk.",
     "industries": [
      {
       "id": "transport",
-      "score": -2,
-      "why": "Freight, insurance and fuel costs rise"
-     },
-     {
-      "id": "energy",
       "score": -1,
-      "why": "Fuel marketers' margins squeezed"
-     },
-     {
-      "id": "materials",
-      "score": -1,
-      "why": "Crude-linked inputs costlier"
-     },
-     {
-      "id": "consumer",
-      "score": -1,
-      "why": "Imported inputs costlier"
+      "why": "Shipping risk"
      }
     ],
-    "economies": [
-     {
-      "id": "fiscal",
-      "score": -2,
-      "why": "Oil import bill swells"
-     },
-     {
-      "id": "inflation",
-      "score": -1,
-      "why": "Fuel and freight costs"
-     },
-     {
-      "id": "rupee",
-      "score": -1,
-      "why": "Importers' dollar demand rises"
-     },
-     {
-      "id": "equities",
-      "score": -1,
-      "why": "Risk premium on Indian assets"
-     }
-    ],
-    "at": "2026-11-15T05:43:55.234Z"
+    "economies": [],
+    "at": "2026-11-15T05:45:25.880Z"
    }
   },
   {
@@ -854,7 +869,27 @@
    "severity": "elevated",
    "severityScore": 4,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "UN urges US and Iran to allow fertiliser shipments through Hormuz",
+    "risk": "elevated",
+    "note": "Fertiliser supply at risk in the rabi season; subsidy pressure.",
+    "industries": [
+     {
+      "id": "agrifood",
+      "score": -1,
+      "why": "Fertiliser supply"
+     }
+    ],
+    "economies": [
+     {
+      "id": "fiscal",
+      "score": -1,
+      "why": "Subsidy"
+     }
+    ],
+    "at": "2026-11-15T05:45:25.880Z"
+   }
   },
   {
    "id": "no-direct-military-threat-but-mild-negative-impact-on-indian",
@@ -909,7 +944,21 @@
    "severity": "elevated",
    "severityScore": 4,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "US offers India favourable tariffs in trade agreement",
+    "risk": "elevated",
+    "note": "Duplicate of the tariff assurance.",
+    "industries": [
+     {
+      "id": "industrials",
+      "score": 1,
+      "why": "Exports"
+     }
+    ],
+    "economies": [],
+    "at": "2026-11-15T05:45:25.880Z"
+   }
   },
   {
    "id": "india-no-longer-a-democracy-rahul-gandhi-s-all-out-attack-on",
@@ -994,7 +1043,21 @@
    "severity": "elevated",
    "severityScore": 4,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Oil and LNG tankers exit Hormuz, heading for Pakistan and China",
+    "risk": "elevated",
+    "note": "Some cargoes still move despite mine claims; partial relief.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": 1,
+      "why": "Flows continue"
+     }
+    ],
+    "economies": [],
+    "at": "2026-11-15T05:45:25.880Z"
+   }
   },
   {
    "id": "saudis-plan-assault-on-houthis-to-break-red-sea-chokehold",
@@ -1105,7 +1168,27 @@
      "source": "The Daily Jagran",
      "link": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxPV0xzd29pSHJvbmpreFFtV2JCUkUwS0NnVUtRNzZNTmp2WUpROVVPeExTcVJla1Q1YTFoLUlmQzBMc2xyZDJKSHdMYWgwbEZjMWxaaHBkWTc2Wmg4N2oxVHVUd3RNd3pZaXZod2RYbVB4ZjRVaUEzLXBnanZfV1BLUGxzY1BhUFJkdzdfMVlaOWt0a2JuVnR2ZHlqYjREUHFjalZnRWtPU29ZakZOYWxVeWR0Y3hLcXV2WjJyWHc0Ykl3Q0lTd0VOaEFWSWc2TU9BX01PWHN1cHJpcE9FU2p1NHc1NDA5MDhHVnBDeUlqZ2J3M182Y09jc0E1VlYzQdIBhAJBVV95cUxNcDNoc1d4Zlk1S2gtQ3BkWXYyQWJseW1VdFZ5LUZWYXVoakQxdUM3dG5PbFhubWJNcVZFLUxUNkJQc2VyZFVSZGl0Rms4d25Bcm1rSFNjMG1VYlROcUZzWmdpY2k5VF9vM1FpcDFGTExNckFUd1pMWmJISDlyRkdQODhyNklZaWNDYjFLalY5dUhlcDBzMGJRNHBrOERNeWF0X3hWMGpqOGUzcEtYYkE1azVJR2NZSlQyN0tvNkxWVDlyeHBXRDNQWG8tSmZaRFBYZ3VmRFJkaGk3aWZsaHNMWThWWkZFWXNYTVFiVnBOSWpEUXJCMzhlclJPUGdGU0pyWUtQeQ?oc=5"
     }
-   ]
+   ],
+   "assessment": {
+    "headline": "'Bulk of issues' sorted in India-US trade deal, foreign minister says",
+    "risk": "elevated",
+    "note": "Same development; supports export sentiment.",
+    "industries": [
+     {
+      "id": "consumer",
+      "score": 1,
+      "why": "Textiles"
+     }
+    ],
+    "economies": [
+     {
+      "id": "equities",
+      "score": 1,
+      "why": "Sentiment"
+     }
+    ],
+    "at": "2026-11-15T05:45:25.880Z"
+   }
   },
   {
    "id": "more-ships-change-course-in-the-red-sea-after-houthi-threats",
@@ -1135,7 +1218,7 @@
    "assessment": {
     "headline": "More ships change course in the Red Sea after Houthi threats",
     "risk": "elevated",
-    "note": "Longer voyages lift freight costs.",
+    "note": "Ongoing; longer voyages lift freight.",
     "industries": [
      {
       "id": "transport",
@@ -1144,7 +1227,7 @@
      }
     ],
     "economies": [],
-    "at": "2026-11-14T05:47:32.002Z"
+    "at": "2026-11-15T05:45:25.880Z"
    }
   },
   {
@@ -1172,7 +1255,21 @@
    "severity": "elevated",
    "severityScore": 4,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Venezuela's oil exports top 1 million bpd for first time in six months",
+    "risk": "watch",
+    "note": "Extra heavy crude supply is an alternative for Indian refiners.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": 1,
+      "why": "Alternative supply"
+     }
+    ],
+    "economies": [],
+    "at": "2026-11-15T05:45:25.880Z"
+   }
   },
   {
    "id": "bypass-the-strait-of-hormuz-why-that-s-not-so-easy",
@@ -1228,7 +1325,27 @@
    "severity": "elevated",
    "severityScore": 4,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Hormuz shipping traffic remains far below pre-conflict levels",
+    "risk": "elevated",
+    "note": "Ongoing constraint on Gulf supply to India.",
+    "industries": [
+     {
+      "id": "energy",
+      "score": -1,
+      "why": "Constrained supply"
+     }
+    ],
+    "economies": [
+     {
+      "id": "fiscal",
+      "score": -1,
+      "why": "Costlier imports"
+     }
+    ],
+    "at": "2026-11-15T05:45:25.880Z"
+   }
   },
   {
    "id": "bpcl-kochi-refinery-hosts-india-s-first-national-analytical-",
@@ -1287,7 +1404,27 @@
    "severity": "elevated",
    "severityScore": 4,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "India needs more troops on 'more alive' China border, minister says",
+    "risk": "watch",
+    "note": "Long-term defence spending signal.",
+    "industries": [
+     {
+      "id": "industrials",
+      "score": 1,
+      "why": "Defence orders"
+     }
+    ],
+    "economies": [
+     {
+      "id": "fiscal",
+      "score": -1,
+      "why": "Outlay"
+     }
+    ],
+    "at": "2026-11-15T05:45:25.880Z"
+   }
   },
   {
    "id": "india-us-trade-deal-nearing-finish-line-may-be-sealed-soon-j",
@@ -1315,7 +1452,21 @@
    "severity": "elevated",
    "severityScore": 4,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "India-US trade deal nearing finish line, may be sealed soon",
+    "risk": "elevated",
+    "note": "Same development.",
+    "industries": [
+     {
+      "id": "industrials",
+      "score": 1,
+      "why": "Exports"
+     }
+    ],
+    "economies": [],
+    "at": "2026-11-15T05:45:25.880Z"
+   }
   },
   {
    "id": "exclusive-chinese-military-aircraft-breaches-indian-airspace",
@@ -1342,7 +1493,27 @@
    "severity": "elevated",
    "severityScore": 4,
    "reports": 1,
-   "also": []
+   "also": [],
+   "assessment": {
+    "headline": "Chinese military aircraft reportedly breaches Indian airspace over Sikkim",
+    "risk": "elevated",
+    "note": "Single report; border risk premium if confirmed.",
+    "industries": [
+     {
+      "id": "industrials",
+      "score": 1,
+      "why": "Defence"
+     }
+    ],
+    "economies": [
+     {
+      "id": "equities",
+      "score": -1,
+      "why": "Risk premium"
+     }
+    ],
+    "at": "2026-11-15T05:45:25.880Z"
+   }
   },
   {
    "id": "un-warns-of-rising-maritime-attacks-urges-restoration-of-saf",
