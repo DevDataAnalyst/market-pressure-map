@@ -1,67 +1,5 @@
 [
  {
-  "day": "2026-11-02",
-  "model": "Claude daily routine",
-  "items": [
-   {
-    "id": "gst-oct",
-    "date": "2026-11-01",
-    "theme": "Fiscal",
-    "headline": "GST collections jump 22.9% to ₹2.31 lakh crore in October, fastest growth in over four years",
-    "confidence": "high"
-   },
-   {
-    "id": "pmi-oct",
-    "date": "2026-11-02",
-    "theme": "Growth data",
-    "headline": "Manufacturing PMI eases to 54.7 in October from 55.1, below the 54.9 flash; export orders at six-month high",
-    "confidence": "high"
-   },
-   {
-    "id": "pv-record",
-    "date": "2026-11-01",
-    "theme": "Growth data",
-    "headline": "Passenger vehicle dispatches cross a record 5 lakh in October, up about 12–15% from 4.6 lakh",
-    "confidence": "medium"
-   },
-   {
-    "id": "oil-mon",
-    "date": "2026-11-02",
-    "theme": "Commodities",
-    "headline": "Brent falls up to 3% to about $110–112 in Asia as Iran–Qatar talks continue; OPEC+ holds December output",
-    "confidence": "medium"
-   },
-   {
-    "id": "iran-midterm",
-    "date": "2026-11-01",
-    "theme": "Energy & geopolitics",
-    "headline": "US says no decision on Iran strikes before the 3 November vote; Israel reportedly urges strikes right after",
-    "confidence": "low"
-   },
-   {
-    "id": "rupee-nov2",
-    "date": "2026-11-02",
-    "theme": "Currencies",
-    "headline": "Rupee slips 21 paise to 94.97 per dollar in early trade as the dollar strengthens",
-    "confidence": "medium"
-   },
-   {
-    "id": "lng-tanker-indians",
-    "date": "2026-11-01",
-    "theme": "Energy & geopolitics",
-    "headline": "Qatari LNG tanker with six Indians aboard attacked near Hormuz; crew safe",
-    "confidence": "medium"
-   },
-   {
-    "id": "oil-imports-56",
-    "date": "2026-11-01",
-    "theme": "Commodities",
-    "headline": "India's oil imports hit a record 5.6 million barrels a day",
-    "confidence": "medium"
-   }
-  ]
- },
- {
   "day": "2026-11-03",
   "model": "Claude daily routine",
   "items": [
@@ -1066,6 +1004,124 @@
     "date": "2026-11-14",
     "theme": "Energy & geopolitics",
     "headline": "Foreign minister calls China border 'more alive' and says India needs more troops there long term",
+    "confidence": "low"
+   }
+  ]
+ },
+ {
+  "day": "2026-11-16",
+  "model": "Keyword rules (no AI)",
+  "items": [
+   {
+    "id": "tariffs-down-india",
+    "date": "2026-11-16",
+    "theme": "Trade",
+    "headline": "India, Egypt To Work On Terms Of Reference For Potential Trade Pact",
+    "confidence": "high"
+   },
+   {
+    "id": "rates-up-us",
+    "date": "2026-11-16",
+    "theme": "Monetary policy",
+    "headline": "Yen Slumps as Fed Rate-Hike Bets Boost Dollar",
+    "confidence": "high"
+   },
+   {
+    "id": "chokepoints-up",
+    "date": "2026-11-16",
+    "theme": "Energy & geopolitics",
+    "headline": "US-Israel-Iran War Latest News: Energy Tanker Reportedly Attacked Near Strait of Hormuz, Raising Concerns Over Security of Global Oil Route",
+    "confidence": "high"
+   },
+   {
+    "id": "fpi-up",
+    "date": "2026-11-16",
+    "theme": "Foreign flows",
+    "headline": "Indian Rupee moves little as foreign inflows offsets hawkish Fed sentiment | FXStreet",
+    "confidence": "high"
+   },
+   {
+    "id": "oil-down",
+    "date": "2026-11-16",
+    "theme": "Commodities",
+    "headline": "Iran says supertanker carrying 2 million barrels of oil sinks after 2 ships hit mines in Strait of Hormuz",
+    "confidence": "medium"
+   },
+   {
+    "id": "rates-up-india",
+    "date": "2026-11-16",
+    "theme": "Monetary policy",
+    "headline": "RBI may raise interest rates to 6.25%, but this time the pain could be greater for India",
+    "confidence": "medium"
+   },
+   {
+    "id": "fx-rupee-strong",
+    "date": "2026-11-16",
+    "theme": "Currencies",
+    "headline": "Indian rupee snaps rising streak on hawkish Fed",
+    "confidence": "medium"
+   },
+   {
+    "id": "fx-dollar-strong",
+    "date": "2026-11-16",
+    "theme": "Currencies",
+    "headline": "The US dollar moves higher as Treasury yields extend their gains",
+    "confidence": "medium"
+   },
+   {
+    "id": "yields-up-us",
+    "date": "2026-11-16",
+    "theme": "Rates & bonds",
+    "headline": "Asian Bond Yields Rise on Growing Expectations for Fed Rate Hike",
+    "confidence": "medium"
+   },
+   {
+    "id": "gold-down",
+    "date": "2026-11-16",
+    "theme": "Commodities",
+    "headline": "Gold stays near YTD low as USD gains support from Fed rate hike bets and Middle East tensions",
+    "confidence": "high"
+   },
+   {
+    "id": "food-up-india",
+    "date": "2026-11-16",
+    "theme": "Commodities",
+    "headline": "Rising food prices push India's inflation above RBI comfort zone",
+    "confidence": "medium"
+   },
+   {
+    "id": "inflation-up-india",
+    "date": "2026-11-16",
+    "theme": "Growth data",
+    "headline": "As inflation stays elevated, RBI's Dec repo rate increase appears certain",
+    "confidence": "medium"
+   },
+   {
+    "id": "metals-down",
+    "date": "2026-11-16",
+    "theme": "Commodities",
+    "headline": "Silver Falls Below $50: Hawkish Fed Bets, Rising Yields And Dollar Trigger Fresh Selloff",
+    "confidence": "medium"
+   },
+   {
+    "id": "inflation-up-us",
+    "date": "2026-11-16",
+    "theme": "Growth data",
+    "headline": "Hotter October inflation and a 6.5% producer-price surge put a December Fed hike fully on the table",
+    "confidence": "low"
+   },
+   {
+    "id": "tariffs-up-global",
+    "date": "2026-11-15",
+    "theme": "Trade",
+    "headline": "Trade war in focus at ASEAN summit ahead of Trump arrival",
+    "confidence": "low"
+   },
+   {
+    "id": "growth-up-india",
+    "date": "2026-11-15",
+    "theme": "Growth data",
+    "headline": "India's Exports Soar to Record $50B in Oct, Driven by Policy",
     "confidence": "low"
    }
   ]
