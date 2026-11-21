@@ -3,11 +3,12 @@ name: Daily refresh
 on:
   # Once a day. GitHub sometimes delays or drops scheduled runs, so later times act as
   # backups: each run skips itself if the feed and scan were refreshed in the last 20 hours.
-  schedule:
-    - cron: "17 5 * * *"
-    - cron: "47 8 * * *"
-    - cron: "17 13 * * *"
-    - cron: "47 18 * * *"
+  # PAUSED: scheduled runs are switched off. To resume, uncomment the five lines below.
+  # schedule:
+  #   - cron: "17 5 * * *"
+  #   - cron: "47 8 * * *"
+  #   - cron: "17 13 * * *"
+  #   - cron: "47 18 * * *"
   workflow_dispatch:
     inputs:
       test_rule_scan:
